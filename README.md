@@ -1,0 +1,2 @@
+# PyCharm
+Python Projects
