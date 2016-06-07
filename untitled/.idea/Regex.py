@@ -20,7 +20,6 @@ if match:
 
 intro ="My name is Brian, I shall soon conquer this sad blue rock called Earth"
 print re.sub("Brian","Lusina The Great",intro) #to replace Brian in intro with Lusina The Great
-
 #Metacharacters
 print("This shall display use of metacharacters")
 write = r"wr.te"

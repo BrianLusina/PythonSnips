@@ -1,3 +1,4 @@
+line = "================================================================================================================"
 """
 Input: Array of elements
 ["h","o","l","a"]
@@ -75,3 +76,71 @@ now= datetime.now()
 print now.day
 #returns the current day of the week as an integer e.g Monday is 0
 print now.weekday()
+print line
+
+"""
+There is a bus moving in the city, and it takes and drop some people in each bus stop.
+
+You are provided a list (or array in JS) of integer array. Each integer array has two items which represent number of people get into bus (The first item) and number of people get off the bus (The second item).
+
+The first integer array has 0 number in the second item, since the bus is empty in the first bus stop.
+
+Your task is to return number of people in the bus after the last bus station. Take a look on the test cases :)
+
+Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
+"""
+def number(bus_stops):
+    return sum([i[0]-i[1] for i in bus_stops])
+
+print("Testing for number(n) function")
+print(number([[10,0],[3,5],[5,8]]) == 5)
+print(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]) ==17)
+print(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]) ==21)
+print line
+
+
+"""
+A Narcissistic Number is a number which is the sum of its own digits, each raised to the power of the number of digits.
+
+For example, take 153 (3 digits):
+
+    1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+and 1634 (4 digits):
+
+    1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
+The Challenge:
+
+Your code must return true or false depending upon whether the given number is a Narcissistic number.
+
+Error checking for text strings or other invalid inputs is not required, only valid integers will be passed into the function.
+"""
+def narcissistic(value):
+    l = len(str(value)) #length of number
+    return sum([pow(int(i), l) for i in str(value)]) == value
+
+
+print "Testing for narcissistic(v) function"
+print (narcissistic(7)== True) # '7 is narcissistic');
+print(narcissistic(371)== True) #'371 is narcissistic');
+print(narcissistic(122)== False) #'122 is not narcissistic')
+print(narcissistic(4887)== False) #'4887 is not narcissistic')
+print line
+
+
+"""
+Your goal in this kata is to implement an difference function, which subtracts one list from another.
+It should remove all values from list a, which are present in list b.
+array_diff([1,2],[1]) == [2]
+If a value is present in b, all of its occurrences must be removed from the other:
+array_diff([1,2,2,2,3],[2]) == [1,3]
+"""
+def array_diff(a, b):
+    return [x for x in a if x not in b]
+
+print(array_diff([1,2], [1])== [2])#, "a was [1,2], b was [1], expected [2]")
+print(array_diff([1,2,2], [2])== [1])#, "a was [1,2,2], b was [2], expected [1]")
+print(array_diff([], [1,2])== [])#, "a was [], b was [1,2], expected []")
+
+print(array_diff([1,2,2], [1])== [2,2])#, "a was [1,2,2], b was [1], expected [2,2]")
+print(array_diff([1,2,2], [])== [1,2,2])#, "a was [1,2,2], b was [], expected [1,2,2]")
+print line
