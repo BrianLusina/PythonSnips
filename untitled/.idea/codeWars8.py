@@ -247,3 +247,5 @@ print (validPhoneNumber("(098) 123 4567") == False)
 print(validPhoneNumber("(1a3) 456-7890")== False)
 print(validPhoneNumber("(123) 456-7fg0")==False)
 print(validPhoneNumber("(12c) 4th6-7890")== False)
+print line
+

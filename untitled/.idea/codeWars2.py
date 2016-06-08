@@ -106,12 +106,9 @@ For example, take 153 (3 digits):
 
     1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
 and 1634 (4 digits):
-
     1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
 The Challenge:
-
 Your code must return true or false depending upon whether the given number is a Narcissistic number.
-
 Error checking for text strings or other invalid inputs is not required, only valid integers will be passed into the function.
 """
 def narcissistic(value):
@@ -144,3 +141,36 @@ print(array_diff([], [1,2])== [])#, "a was [], b was [1,2], expected []")
 print(array_diff([1,2,2], [1])== [2,2])#, "a was [1,2,2], b was [1], expected [2,2]")
 print(array_diff([1,2,2], [])== [1,2,2])#, "a was [1,2,2], b was [], expected [1,2,2]")
 print line
+
+"""
+In English and programming, groups can be made using symbols such as "()" and "{}" that change meaning. However, these groups must be closed in the correct order to maintain correct syntax.
+
+Your job in this kata will be to make a program that checks a string for correct grouping. For instance, the following groups are done correctly:
+
+({})
+[[]()]
+[{()}]
+The next are done incorrectly
+{(})
+([]
+[])
+A correct string cannot close groups in the wrong order, open a group but fail to close it, or close a group before it is opened.
+Your function will take an input string that may contain any of the symbols "()" "{}" or "[]" to create groups.
+It should return True if the string is empty or otherwise grouped correctly, or False if it is grouped incorrectly.
+"""
+from collections import Counter
+import re
+def group_check(s):
+    pass
+
+
+print "Testing for group_check(s) function"
+print "Actual:",group_check("()"),"Expected:",True, "Test Passed:",group_check("()") == True
+print "Actual:",group_check("({"),"Expected:",False, "Test Passed:",group_check("({") == False
+print line
+
+d={"(":")","{":"}","[":"]","\"":"\""}
+test = "()"
+count = Counter(test)
+print count
+m =count.items()
