@@ -178,3 +178,11 @@ def count_vegetables(s):
     return res
 
 print count_vegetables("potato potato tofu kales kales tomatoes celery cucumber cucumber cucumber")
+
+
+def add_Extra(lst):
+    return lst.append(1)
+
+print add_Extra([1,2])
+p = [1,2] + [1]
+print p
