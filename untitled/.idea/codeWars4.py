@@ -272,33 +272,68 @@ cO = ['Stockholm', 'Berlin', 'Chicago']
 citiesToConsider = [x for x in cO if x not in cV]
 print citiesToConsider
 print line
+
 """
-I always thought that my old friend John was rather richer than he looked, but I never knew exactly how much money he actually had. One day (as I was plying him with questions) he said: "Imagine I have between m and n Zloty (or did he say Quetzal? I can't remember!)
+Given few numbers, you need to print out the digits that are not being used.
 
-If I were to buy 9 cars costing c each, I'd only have 1 Zlotty (or was it Meticals?) left.
+Example:
 
-And if I were to buy 7 boats at b each, I'd only have 2 Ringglets (or was it Zlotty?) left.
+unused_digits(12, 34, 56, 78) # "09"
+unused_digits(2015, 8, 26) # "3479"
+Note:
 
-Could you tell me in each possible case:
+Result string should be sorted
+The test case won't pass Integer with leading zero
+"""
+def unused_digits(*args):
+    m = sorted("".join([str(a) for a in args]))
+    res = [str(i) for i in range(0,10) if str(i) not in m]
+    return "".join(res)
 
-how much money f he could possibly have
-the cost c of a car
-the cost b of a boat?
-So, I will have a better idea about his fortune. Note that if m-n is big enough, you might have a lot of possible answers.
+print unused_digits(12, 34, 56, 78), "09"
+print unused_digits(2015, 8, 26), "3479"
+print unused_digits(276, 575), "013489"
+print unused_digits(643), "0125789"
+print unused_digits(864, 896, 744), "01235"
+print line
 
-Each answer will be given as ["M: f", "B: b", "C: c"] and all the answers as [ ["M: f", "B: b", "C: c"] ... ]. M stands for "Money", B for boats, C for cars.
+"""
+Input:
 
-m and n are positive or null integers with m <= n or m >= n, m and n inclusive.
+a string strng
+an array of strings arr
+Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
 
+a boolean true if all rotations of strng are included in arr
+false otherwise
 Examples:
 
-howmuch(1, 100) => [["M: 37", "B: 5", "C: 4"], ["M: 100", "B: 14", "C: 11"]]
-howmuch(1000, 1100) => [["M: 1045", "B: 149", "C: 116"]]
-howmuch(10000, 9950) => [["M: 9991", "B: 1427", "C: 1110"]]
-howmuch(0, 200) => [["M: 37", "B: 5", "C: 4"], ["M: 100", "B: 14", "C: 11"], ["M: 163", "B: 23", "C: 18"]]
-Explanation of howmuch(1, 100):
+contain_all_rots(
+  "bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]) -> true
 
-In the first answer his possible fortune is 37 so if he buys 7 boats each worth 5 it remains 37 - 7 * 5 = 2, if he buys 9 cars worth 4 each it remains 37 - 9 * 4 = 1. The same with f = 100: 100 - 7 * 14 = 2 and 100 - 9 * 11 = 1.
+contain_all_rots(
+  "Ajylvpy", ["Ajylvpy", "ylvpyAj", "jylvpyA", "lvpyAjy", "pyAjylv", "vpyAjyl", "ipywee"]) -> false)
+Note:
+
+Though not correct in a mathematical sense
+
+we will consider that there are no rotations of strng == ""
+and for any array arr: contain_all_rots("", arr) --> true
 """
-def howmuch(m, n):
-    pass
+from itertools import permutations
+def contain_all_rots(strng, arr):
+    #find all permutations of the string and store results in a list
+    perms = ["".join(i) for i in list(permutations(strng))]
+    #check through each item in list and check if each is in the arr
+    if strng == "": return True
+    for i in arr:
+        temp = strng +i
+        if temp.count(i) > 0:
+
+    #return all(x in perms for x in arr) and any(x in perms for x in arr)
+
+print (contain_all_rots("", []), True)
+print(contain_all_rots("", ["bsjq", "qbsj"]), True)
+print(contain_all_rots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]), True)
+print(contain_all_rots("XjYABhR", ["TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", "hRXjYAB", "jYABhRX", "XjYABhR", "ABhRXjY"]), False)
+print line

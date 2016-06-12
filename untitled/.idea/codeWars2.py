@@ -174,3 +174,44 @@ test = "()"
 count = Counter(test)
 print count
 m =count.items()
+print line
+"""
+A variation of determining leap years, assuming only integers are used and years can be negative and positive.
+
+Write a function which will return the days in the year and the year entered in a string. For example 2000, entered as an integer, will return as a string 2000 has 366 days
+
+There are a few assumptions we will accept the year 0, even though there is no year 0 in the Gregorian Calendar.
+
+Also the basic rule for validating a leap year are as follows
+
+Most years that can be divided evenly by 4 are leap years.
+
+Exception: Century years are NOT leap years UNLESS they can be evenly divided by 400.
+
+So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
+"""
+def year_days(year):
+    if year == 0: return str(year) + " has 366 days"
+    elif year< 0:
+        if -year%4 == 0:
+            return str(year) + " has 366 days"
+        else:
+            return str(year) + " has 365 days"
+    else:
+        if year%4 == 0:
+            return str(year) + " has 366 days"
+        else:
+            return str(year) + " has 365 days"
+
+
+print year_days(0),year_days(0) == '0 has 366 days'
+print year_days(-64),year_days(-64) == '-64 has 366 days'
+print year_days(2016),year_days(2016)=='2016 has 366 days'
+print year_days(1974),year_days(1974)=='1974 has 365 days'
+print year_days(-10),year_days(-10)== '-10 has 365 days'
+print year_days(666),year_days(666)== '666 has 365 days'
+print year_days(1857),year_days(1857)== '1857 has 365 days'
+print year_days(2000),year_days(2000)== '2000 has 366 days'
+print year_days(-300),year_days(-300)== '-300 has 365 days'
+print year_days(-1),year_days(-1)== '-1 has 365 days'
+print line
