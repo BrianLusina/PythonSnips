@@ -326,11 +326,7 @@ def contain_all_rots(strng, arr):
     perms = ["".join(i) for i in list(permutations(strng))]
     #check through each item in list and check if each is in the arr
     if strng == "": return True
-    for i in arr:
-        temp = strng +i
-        if temp.count(i) > 0:
-
-    #return all(x in perms for x in arr) and any(x in perms for x in arr)
+    return all(x in perms for x in arr) and any(x in perms for x in arr)
 
 print (contain_all_rots("", []), True)
 print(contain_all_rots("", ["bsjq", "qbsj"]), True)

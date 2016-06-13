@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-line = "****************************************************************************************************************"
+line = "************************************************************************************************"
 """
 wallpaper(4, 3.5, 3) should return "ten"
 
@@ -173,5 +173,76 @@ print i_or_f('1e1')#, True)
 print i_or_f('1E-1')#, True)
 print i_or_f('1e+1')#, True)
 """
+print line
 
+"""
+Sum of 'n' Numbers
+
+sum_of_n (or SequenceSum.sumOfN in Java, SequenceSum.SumOfN in C#) takes an integer n and returns a List (an Array in Java/C#) of length abs(n) + 1. The List/Array contains the numbers in the arithmetic series produced by taking the sum of the consecutive integer numbers from 0 to n inclusive.
+
+n can also be 0 or a negative value.
+Wikipedia reference for abs value is available here.
+
+Example:
+
+5 -> [0, 1, 3, 6, 10, 15]
+
+-5 -> [0, -1, -3, -6, -10, -15]
+
+7 -> [0, 1, 3, 6, 10, 15, 21, 28]
+"""
+class Test(object):
+    def __init__(self, n):
+        self.n = n
+
+    @staticmethod
+    def test_function(actual, expected):
+        print "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected)
+
+
+def sum_of_n(n):
+    count, result = 0, []
+    while count < abs(n) + 1:
+        result.append(sum(range(count+1)))
+        count+=1
+    if n<0:
+        result = [-i for i in result]
+    return result
+
+print "Testing for sum_of_n(n) function"
+Test.test_function(sum_of_n(3), [0, 1, 3, 6])
+Test.test_function(sum_of_n(1), [0, 1])
+Test.test_function(sum_of_n(0), [0])
+Test.test_function(sum_of_n(-4), [0, -1, -3, -6, -10])
+print line
+"""
+Description:
+
+Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased.
+
+The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. Words will be separated by a single space(' ').
+
+Examples:
+
+toWeirdCase( "String" );//=> returns "StRiNg"
+toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
+"""
+def caser(s):
+    res = ""
+    for i in list(enumerate(s)):
+        if i[0] % 2 == 0:
+            res += i[1].upper()
+        else:res+=i[1].lower()
+    return res
+
+def to_weird_case(strng):
+    res, lst = [],strng.split(" ")
+    for x in lst:
+        res.append(caser(x))
+    return " ".join(res)
+
+Test.test_function(to_weird_case('This'), 'ThIs')
+Test.test_function(to_weird_case('is'), 'Is')
+Test.test_function(to_weird_case('test'), 'TeSt')
+Test.test_function(to_weird_case("This is a test"),"ThIs Is A TeSt")
 print line
