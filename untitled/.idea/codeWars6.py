@@ -1,4 +1,12 @@
 line = "----------------------------------------------------------------------------------------------------------------"
+class Test(object):
+    def __init__(self,n):
+        self.n = n
+
+    @staticmethod
+    def test_function(actual,expected):
+        print "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected)
+
 """
 For a variable, x, that may have different values, the geometric mean is defined as:
 gm = nthRoot(x1x2x3....xn)
@@ -132,3 +140,61 @@ print make_valley([19, 19, 18, 14, 12, 11, 9, 7, 4])# [19, 18, 12, 9, 4, 7, 11, 
 print make_valley([19, 8, 6])# [19, 6, 8])
 print make_valley([19, 17, 16, 15, 13, 8, 5, 5, 4, 4, 4])# [19, 16, 13, 5, 4, 4, 4, 5, 8, 15, 17])
 print line
+"""
+You and your best friend Stripes have just landed your first high school jobs! You'll be delivering newspapers to your neighbourhood on weekends. For your services you'll be charging a set price depending on the quantity of the newspaper bundles.
+
+The cost of deliveries is:
+
+$3.85 for 40 newspapers
+$1.93 for 20
+$0.97 for 10
+$0.49 for 5
+$0.10 for 1
+Stripes is taking care of the footwork doing door-to-door drops and your job is to take care of the finances. What you'll be doing is providing the cheapest possible quotes for your services.
+
+Write a function that's passed an integer representing the amount of newspapers and returns the cheapest price. The returned number must be rounded to two decimal places.
+"""
+def cheapest_quote(n):
+    bundles = [(40, 3.85), (20, 1.93), (10, 0.97), (5, 0.49), (1, 0.10)]
+    total = 0
+    for x,y in bundles:
+        total += (n // x) * y
+        n = n % x
+    return round(total,2)
+
+
+Test.test_function(cheapest_quote(1), 0.10)
+Test.test_function(cheapest_quote(5), 0.49)
+Test.test_function(cheapest_quote(10), 0.97)
+Test.test_function(cheapest_quote(20), 1.93)
+Test.test_function(cheapest_quote(40), 3.85)
+Test.test_function(cheapest_quote(41), 3.95)
+Test.test_function(cheapest_quote(80), 7.70)
+Test.test_function(cheapest_quote(26), 2.52)
+Test.test_function(cheapest_quote(0), 0.0)
+Test.test_function(cheapest_quote(499), 48.06)
+Test.test_function(cheapest_quote(28677),  2760.19)
+
+print line
+
+"""
+Description:
+
+Welcome. In this kata you are required to, given a string, replace every letter with its position in the alphabet. If anything in the text isn't a letter, ignore it and don't return it. a being 1, b being 2, etc. As an example:
+
+alphabet_position("The sunset sets at twelve o' clock.")
+Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (As a string.)
+"""
+import string
+def alphabet_position(text):
+    s =list(string.ascii_lowercase)
+    return " ".join([str(s.index(x)+1) for x in text.lower() if x in string.ascii_lowercase])
+
+
+Test.test_function(alphabet_position("The sunset sets at twelve o' clock."), "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11")
+Test.test_function(alphabet_position("The narwhal bacons at midnight."), "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20")
+Test.test_function(alphabet_position("1"), "")
+
+s = string.ascii_lowercase
+lst = list(s)
+print lst.index("a")
