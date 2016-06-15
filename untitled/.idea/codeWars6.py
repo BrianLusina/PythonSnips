@@ -198,3 +198,55 @@ Test.test_function(alphabet_position("1"), "")
 s = string.ascii_lowercase
 lst = list(s)
 print lst.index("a")
+print line
+"""
+Error Handling is very important in coding and seems to be overlooked or not implemented properly.
+
+Task
+
+Your task is to implement a function which takes a string as input and return an object containing the properties vowels and consonants. The vowels property must contain the total count of vowels {a,e,i,o,u}, and the total count of consonants {a,..,z} - {a,e,i,o,u}. Handle invalid input and don't forget to return valid ones.
+
+Input
+
+The input is any random string. You must then discern what are vowels and what are consonants and sum for each category their total occurrences in an object. However you could also receive inputs that are not strings. If this happens then you must return an object with a vowels and consonants total of 0 because the input was NOT a string. Refer to the Example section for a more visual representation of which inputs you could receive and the outputs expected. :)
+
+Example:
+
+Input: get_count('test')
+Output: {vowels:1,consonants:3}
+
+Input: get_count('tEst')
+Output: {vowels:1,consonants:3}
+
+Input get_count('    ')
+Output: {vowels:0,consonants:0}
+
+Input get_count()
+Output: {vowels:0,consonants:0}
+C#
+
+A Counter class has been put in the preloaded section taking two parameters Vowels and Consonants this must be the Object you return!
+"""
+
+def get_count(words=""):
+    vowels, consonants =list("aeiou"), list("bcdfghjklmnpqrstvwxyz")
+    try:
+        if not isinstance(words,str) or words == None:
+            return dict(vowels=0, consonants=0)
+        else:
+            words = words.lower()
+            return dict(vowels=sum(words.count(c) for c in vowels), consonants=sum(words.count(c) for c in consonants))
+    except TypeError:
+        return dict(vowels=vow, consonants=cons)
+
+Test.test_function(get_count('Test'),{"vowels":1,"consonants":3})
+Test.test_function(get_count('Here is some text'),{"vowels":6,"consonants":8})
+Test.test_function(get_count('To be a Codewarrior or not to be'),{"vowels":12,"consonants":13})
+Test.test_function(get_count('To Kata or not to Kata'),{"vowels":8,"consonants":9})
+Test.test_function(get_count('aeiou'),{"vowels":5,"consonants":0})
+Test.test_function(get_count('TEst'),{"vowels":1,"consonants":3})
+Test.test_function(get_count('HEre Is sOme text'),{"vowels":6,"consonants":8})
+Test.test_function(get_count(['To Kata or not to Kata']),{"vowels":0,"consonants":0})
+Test.test_function(get_count(None),{"vowels":0,"consonants":0})
+Test.test_function(get_count(),{"vowels":0,"consonants":0})
+print line
