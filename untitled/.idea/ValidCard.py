@@ -35,33 +35,15 @@ class ValidCard(object):
 
     @staticmethod
     def valid_card(card):
-        newC = card.replace(' ', '') #replace all whitespace and convert to string
-        li = [int(y) for y in newC] #sum of all the digits
-
-        for i in newC[::-2]:
-            x = int(i)
-            if x * 2 > 9:
-                (x * 2) - 9
-                if sum(li) % 10 == 0:
-                    return True
-                else:
-                    return False
-
+        return not sum([d if i & 1 else d % 5 * 2 + d / 5 for i, d in enumerate(map(int, card.replace(" ", "")))]) % 10
 
 Test.test_function(ValidCard.valid_card("5457 6238 9823 4311"), True)
 Test.test_function(ValidCard.valid_card("8895 6238 9323 4311"), False)
 Test.test_function(ValidCard.valid_card("5457 6238 5568 4311"), False)
 Test.test_function(ValidCard.valid_card("5457 6238 9323 4311"), False)
-Test.test_function(ValidCard.valid_card("2222 2222 2222 2224"), True)
 Test.test_function(ValidCard.valid_card("5457 1125 9323 4311"), False)
-Test.test_function(ValidCard.valid_card("1252 6238 9323 4311"), False)
-Test.test_function(ValidCard.valid_card("9999 9999 9999 9995"), True)
 Test.test_function(ValidCard.valid_card("0000 0300 0000 0000"), False)
-Test.test_function(ValidCard.valid_card("4444 4444 4444 4448"), True)
-Test.test_function(ValidCard.valid_card("5457 6238 9323 1252"), False)
 Test.test_function(ValidCard.valid_card("5457 6238 1251 4311"), False)
-Test.test_function(ValidCard.valid_card("3333 3333 3333 3331"), True)
-Test.test_function(ValidCard.valid_card("6666 6666 6666 6664"), True)
 Test.test_function(ValidCard.valid_card("5457 6238 0254 4311"), False)
 Test.test_function(ValidCard.valid_card("0000 0000 0000 0000"), True)
 Test.test_function(ValidCard.valid_card("5457 1111 9323 4311"), False)
@@ -70,26 +52,16 @@ Test.test_function(ValidCard.valid_card("1145 6238 9323 4311"), False)
 Test.test_function(ValidCard.valid_card("8888 8888 8888 8888"), True)
 Test.test_function(ValidCard.valid_card("0025 2521 9323 4311"), False)
 Test.test_function(ValidCard.valid_card("5457 6238 9323 4311"), False)
-Test.test_function(ValidCard.valid_card("1111 1111 1111 1117"), True)
-Test.test_function(ValidCard.valid_card("1234 5678 9012 3452"), True)
 Test.test_function(ValidCard.valid_card("5458 4444 9323 4311"), False)
 Test.test_function(ValidCard.valid_card("5457 6238 3333 4311"), False)
 Test.test_function(ValidCard.valid_card("0123 4567 8901 2345"), False)
+Test.test_function(ValidCard.valid_card("2222 2222 2222 2224"), True)
+Test.test_function(ValidCard.valid_card("1252 6238 9323 4311"), False)
+Test.test_function(ValidCard.valid_card("9999 9999 9999 9995"), True)
+Test.test_function(ValidCard.valid_card("4444 4444 4444 4448"), True)
+Test.test_function(ValidCard.valid_card("5457 6238 9323 1252"), False)
 Test.test_function(ValidCard.valid_card("5555 5555 5555 5557"), True)
-
-card = "5457 6238 9823 4311"
-mCard = card.replace(" ", "")
-intCard = [int(y) for y in mCard]
-
-print "New Card",mCard, "Digits sum",sum(intCard)
-print "Every 2nd Digit", intCard[::-2]
-
-doubler = (2).__mul__
-sub9 = (9).__sub__
-sumDig = lambda x:x-9
-
-intCard[::-2] = map(doubler,intCard[::-2])
-print intCard
-intCard[::-2] = map(sumDig,intCard[::-2])
-
-print intCard
+Test.test_function(ValidCard.valid_card("1234 5678 9012 3452"), True)
+Test.test_function(ValidCard.valid_card("1111 1111 1111 1117"), True)
+Test.test_function(ValidCard.valid_card("3333 3333 3333 3331"), True)
+Test.test_function(ValidCard.valid_card("6666 6666 6666 6664"), True)

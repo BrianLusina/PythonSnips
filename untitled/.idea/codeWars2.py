@@ -191,18 +191,10 @@ Exception: Century years are NOT leap years UNLESS they can be evenly divided by
 So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
 """
 def year_days(year):
-    if year == 0: return str(year) + " has 366 days"
-    elif year< 0:
-        if -year%4 == 0:
-            return str(year) + " has 366 days"
-        else:
-            return str(year) + " has 365 days"
-    else:
-        if year%4 == 0:
-            return str(year) + " has 366 days"
-        else:
-            return str(year) + " has 365 days"
-
+    days = 365
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+        days += 1
+    return "%d has %d days" % (year, days)
 
 print year_days(0),year_days(0) == '0 has 366 days'
 print year_days(-64),year_days(-64) == '-64 has 366 days'
@@ -237,5 +229,4 @@ class Ghost(object):
 
 ghost = Ghost
 print ghost.color()
-
 print line

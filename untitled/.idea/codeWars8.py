@@ -150,17 +150,17 @@ pattern(11):
 Hint: Use \n in string to jump to next line
 """
 def pattern(n):
-    if n < 1:
-        return ""
+    if n < 1:return ""
     else:
         m = [i for i in range(1, n + 1)]
-
+    return list(reversed(m))
 
 print("Testing pattern(n) function")
-print(pattern(1) == "1")
-print(pattern(2) == "21\n2")
-print(pattern(5) == "54321\n5432\n543\n54\n5")
-print(line)
+print pattern(1)# == "1")
+print pattern(2)# == "21\n2")
+print pattern(5)# == "54321\n5432\n543\n54\n5")
+print '\n'.join(['5'] + [str(i) + str((i-1)) + str(i-2) for i in reversed(xrange(1, 5 + 1))])
+print line
 
 n=[range(1,i+1) for i in range(1, 5 + 1)]
 print(n)

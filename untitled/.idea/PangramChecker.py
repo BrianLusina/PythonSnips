@@ -18,3 +18,31 @@ class Pangram:
 
 print "TESTING FOR pangram(s) function"
 print Pangram.is_pangram("The quick brown fox jumps over the lazy dog")
+
+"""Longest Palindrome
+
+Find the length of the longest substring in the given string s that is the same in reverse.
+
+As an example, if the input was “I like racecars that go fast”, the substring (racecar) length would be 7.
+
+If the length of the input string is 0, return value must be 0.
+
+Example:
+
+"a" -> 1
+"aab" -> 2
+"abcde" -> 1
+"zzbaabcd" -> 4
+"" -> 0"""
+def longest_palindrome (s):
+	if s == "":
+		return 0
+	else:
+		newList = s.split()
+		palindromeList = []
+		for i in newList:
+			length = len(i)
+			if i[0:length] == i[::-1]:
+				palindromeList = palindromeList.append()
+				for n in palindromeList:
+					len(n)
