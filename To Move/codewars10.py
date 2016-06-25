@@ -48,5 +48,28 @@ Input: 1254859723 Output: 9875543221
 
 """
 def Descending_Order(num):
-    return int("".join(sorted(list(str(num)),key=int,reverse = True)))        
+    return int("".join(sorted(list(str(num)),key=int,reverse = True)))
 
+import math
+def get_middle(s):
+    mid = int(math.floor(len(s) / 2))
+    return s[mid - 1 : mid + 1] if len(s) % 2 == 0 else s[mid:len(s)-mid]
+
+print(get_middle("test"),"es")
+print(get_middle("testing"),"t")
+print(get_middle("middle"),"dd")
+print(get_middle("A"),"A")
+print(get_middle("of"),"of")
+s="Hello"
+mid = math.floor(len(s) / 2)
+print(mid)
+print("testing"[3:4])
+
+print("""""")
+def find_next_power(val, pw):
+    n = math.floor(math.pow(val, 1/pw)) + 1
+    return int(math.pow(n, pw))
+round
+print(find_next_power(12385, 3), 13824)
+print(find_next_power(1245678, 5), 1419857)
+print(find_next_power(1245678, 6), 1771561)

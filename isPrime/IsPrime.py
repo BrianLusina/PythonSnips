@@ -10,6 +10,7 @@ isPrime(5)
 Assumptions
 You can assume you will be given an integer input.
 You can not assume that the integer will be only positive. You may be given negative numbers.
+
 """
 from math import sqrt
 from itertools import count,islice
@@ -29,9 +30,35 @@ class Test(object):
 
     @staticmethod
     def test_function(actual, expected):
-        print "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected)
+        print("Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected))
 
 
 Test.test_function(PrimeCheck.is_prime(0), False)#, '0 is not prime')
 Test.test_function(PrimeCheck.is_prime(1), False)#, '1 is not prime')
 Test.test_function(PrimeCheck.is_prime(2), True)#, '2 is prime')
+
+"""
+Find the number of divisors of a positive integer n.
+
+Example:
+
+divisors(4) -> 3 -- 1, 2, 4
+divisors(5) -> 2 -- 1, 5
+divisors(12) -> 6 -- 1, 2, 3, 4, 6, 12
+divisors(30) -> 8 -- 1, 2, 3, 5, 6, 10, 15, 30
+
+from math import sqrt
+from itertools import count,islice
+def divisors(n):
+    is_prime =  lambda num: num > 1 and all(num % i for i in islice(count(2), int(sqrt(num) - 1)))
+    return len([1, n]) if is_prime(n) else len([x for x in range(1, n+1) if n % x == 0])
+
+"""
+
+def divisors(n):
+    return len([1, n]) if PrimeCheck.is_prime(n) else len([x for x in range(1, n+1) if n % x == 0])
+
+Test.test_function(divisors(4), 3)
+Test.test_function(divisors(5), 2)
+Test.test_function(divisors(12), 6)
+Test.test_function(divisors(30), 8)
