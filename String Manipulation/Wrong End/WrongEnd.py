@@ -20,11 +20,10 @@ class Test(object):
 
     @staticmethod
     def test_function(actual,expected):
-        return "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected)
+        print("Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected))
 
-
-print Test.test_function(WrongEnd.fix_the_meerkat(["tail", "body", "head"]), ["head", "body", "tail"])
-print Test.test_function(WrongEnd.fix_the_meerkat(["tails", "body", "heads"]), ["heads", "body", "tails"])
-print Test.test_function(WrongEnd.fix_the_meerkat(["bottom", "middle", "top"]), ["top", "middle", "bottom"])
-print Test.test_function(WrongEnd.fix_the_meerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"])
-print Test.test_function(WrongEnd.fix_the_meerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"])
+Test.test_function(WrongEnd.fix_the_meerkat(["tail", "body", "head"]), ["head", "body", "tail"])
+Test.test_function(WrongEnd.fix_the_meerkat(["tails", "body", "heads"]), ["heads", "body", "tails"])
+Test.test_function(WrongEnd.fix_the_meerkat(["bottom", "middle", "top"]), ["top", "middle", "bottom"])
+Test.test_function(WrongEnd.fix_the_meerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"])
+Test.test_function(WrongEnd.fix_the_meerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"])

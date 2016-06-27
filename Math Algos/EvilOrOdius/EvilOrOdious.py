@@ -25,13 +25,13 @@ class Test(object):
 
     @staticmethod
     def test_function(actual,expected):
-        return "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected: " + str(expected)
+        print("Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected: " + str(expected))
 
 
-print Test.test_function(EvilOrOdious.evil(1),"It's Odious!")
-print Test.test_function(EvilOrOdious.evil(2),"It's Odious!")
-print Test.test_function(EvilOrOdious.evil(3),"It's Evil!")
+Test.test_function(EvilOrOdious.evil(1),"It's Odious!")
+Test.test_function(EvilOrOdious.evil(2),"It's Odious!")
+Test.test_function(EvilOrOdious.evil(3),"It's Evil!")
 
-print bin(3)
-print "{0:b}".format(3)
-print type("{0:b}".format(42))
+bin(3)
+"{0:b}".format(3)
+type("{0:b}".format(42))

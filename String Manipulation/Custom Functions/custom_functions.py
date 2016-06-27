@@ -1,30 +1,13 @@
 def digit_sum(n):
-    #function to sum all the digits of a number
-    #convert the number into a string
+    # function to sum all the digits of a number
+    # convert the number into a string
     stringConvert = str(n)
-    total = 0
-    #loop through each string and convert it into an integer
-    for i in stringConvert:
-        x = int(i)
-        total += x
-    #return the total
-    return total
+    return sum([int(i) for i in stringConvert])
+
 
 def factorial(x):
-    #function that returns the factorial of a non-negative number
-    if x == 0 or x == 1:
-        return 1
-    else:
-        return x * factorial(x-1)
-
-def is_prime(x):
-    if x < 2:
-        return False
-    for n in range(2, (x-1)):
-        if x % n == 0:
-            return False    
-    else:
-        return True
+    # function that returns the factorial of a non-negative number
+    return 1 if x == 0 or x == 1 else x * factorial(x-1)
 
 def reverse(text):
     #function to reverse text in a string e.g abc becomes cba
@@ -74,20 +57,13 @@ def censor(text,word):
 
 """Function that counts the number of times an item appears in a list"""
 def count(sequence,item):
-    found = 0
-    for n in sequence:
-        if n == item:
-            found += 1
-    return found
+    m = [n for n in sequence if n == item]
+    return len(m)
 
 
 """takes in a list of numbers, removes all odd numbers in the list, and returns the result."""
 def purify(l):
-    result = []
-    for i in l:
-        if i % 2 == 0:
-            result.append(i)
-    return result
+    return [i for i in l if i % 2 == 0]
 
 
 """returns the product of all the items in a list"""
@@ -101,19 +77,3 @@ def product(l):
 """that takes in a list and removes elements of the list that are the same."""
 def remove_duplicates(myList):
     return list(set(myList))
-
-
-"""func to find median in a list"""
-def median(lst):
-    sortList = sorted(lst)
-    med = 0
-    if len(sortList) == 1:
-        med = sortList[0]
-    elif len(sortList)%2 == 0:
-        fMidIndex = len(sortList)/2
-        sMidIndex = fMidIndex - 1
-        med = (sortList[fMidIndex] + sortList[sMidIndex]) / 2.0
-    elif len(sortList)%2 != 0:
-        fMidIndex = (len(sortList)/2)
-        med = sortList[fMidIndex]
-    return med    
