@@ -1,11 +1,22 @@
-"""
+import unittest
+import re
 
 """
-import unittest
+Create a counter variable to count each word function encounters
+create a regular expression to check for non words and words hated
+ "a", "the", "on", "at", "of", "upon", "in" "as",
+"""
 
 
 def word_count(s):
-    # count words, which s contains
+    counter = 0
+    words = r"\W+|^(a)$|^(as)$|^(at)$|^(of)$|^(in)$|^(on)$|^(the)$|^(upon)$"
+    count = len(re.findall(words, s))
+    for x in s.split():
+        print(x, re.findall(pattern=r"[a-zA-Z]", string=x))
+        if not re.match(words, x):
+            counter += 1
+    return counter
 
 
 class WordCountTests(unittest.TestCase):
@@ -20,6 +31,7 @@ class WordCountTests(unittest.TestCase):
 
     def test4(self):
         self.assertEqual(word_count("Slow-moving user6463 has been here"), 6)
+
     def test5(self):
         self.assertEqual(word_count("%^&abc!@# wer45tre"), 3)
 
