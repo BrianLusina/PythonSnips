@@ -20,7 +20,7 @@ class Test(object):
 
     @staticmethod
     def test_function(actual,expected):
-        print "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected)
+        print("Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected))
 
 def tribonacci(sig,n):
     res = sig
@@ -44,7 +44,7 @@ Test.test_function(tribonacci([3,2,1],10),[3,2,1,6,9,16,31,56,103,190])
 Test.test_function(tribonacci([1,1,1],1),[1])
 Test.test_function(tribonacci([300,200,100],0),[])
 Test.test_function(tribonacci([0.5,0.5,0.5],30),[0.5,0.5,0.5,1.5,2.5,4.5,8.5,15.5,28.5,52.5,96.5,177.5,326.5,600.5,1104.5,2031.5,3736.5,6872.5,12640.5,23249.5,42762.5,78652.5,144664.5,266079.5,489396.5,900140.5,1655616.5,3045153.5,5600910.5,10301680.5])
-print line
+print(line)
 """
 The Fibonacci numbers are the numbers in the following integer sequence (Fn):
 
@@ -71,6 +71,8 @@ The Fibonacci numbers are the numbers in the following integer sequence (Fn):
  Note: Not useful here but we can tell how to choose the number n up to which to go: we can use the "golden ratio" phi which is (1 + sqrt(5))/2 knowing that F(n) is asymptotic to: phi^n / sqrt(5). That gives a possible upper bound to n.
 """
 from math import sqrt
+
+
 def fibonacci(n):
     c, fib = 0, [0, 1]
     if n<1: return n
@@ -82,23 +84,24 @@ def fibonacci(n):
             if n <= next:break
     return fib
 
+
 def productFib(prod):
     phi = (1 + sqrt(5)) / 2
     pass
 
 Test.test_function(productFib(4895), [55, 89, True])
 Test.test_function(productFib(5895), [89, 144, False])
-print line
-print fibonacci(56)
+print(line)
+print(fibonacci(56))
 fibStr = [str(x) for x in fibonacci(56)]
 golden = (1+sqrt(5))/(2*sqrt(5))
 phi = (1 + sqrt(5)) / 2
 fn = (phi**56)/sqrt(5)
-print phi
-print golden
+print(phi)
+print(golden)
 
 gratio=[fibonacci(21)[i] / float(fibonacci(21)[i-1]) for i in range(2,len(fibonacci(21)))]
-print gratio
+print(gratio)
 
 """
 If you have completed the Tribonacci sequence kata, you would know by now that mister Fibonacci has at least a bigger brother. If not, give it a quick look to get how things work.
