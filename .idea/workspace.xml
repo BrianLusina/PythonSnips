@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iterators/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iterators/multiiter.py" afterPath="$PROJECT_DIR$/iterators/multiiter.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,18 +60,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iterators/README.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor relative-caret-position="504">
+                <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiiter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iterators/multiiter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,8 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/untitled/.idea/codeWars5.py" />
-        <option value="$PROJECT_DIR$/untitled/.idea/codeWars6.py" />
         <option value="$PROJECT_DIR$/untitled/.idea/ModFour.py" />
         <option value="$PROJECT_DIR$/untitled/.idea/codeWars7.py" />
         <option value="$PROJECT_DIR$/untitled/.idea/LinkedLists.py" />
@@ -144,6 +151,8 @@
         <option value="$PROJECT_DIR$/Regex/word_count.py" />
         <option value="$PROJECT_DIR$/Lists/README.md" />
         <option value="$PROJECT_DIR$/Lists/repeat_sum.py" />
+        <option value="$PROJECT_DIR$/iterators/README.md" />
+        <option value="$PROJECT_DIR$/iterators/multiiter.py" />
       </list>
     </option>
   </component>
@@ -752,7 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/codewars Day 2.py" />
     <entry file="file://$PROJECT_DIR$/untitled/.idea/codewars9.py" />
     <entry file="file://$PROJECT_DIR$/untitled/.idea/Classroom.py" />
     <entry file="file://$PROJECT_DIR$/untitled/.idea/custom_functions.py" />
@@ -1062,11 +1070,19 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <first_editor relative-caret-position="504">
+            <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iterators/multiiter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
