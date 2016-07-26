@@ -6,8 +6,12 @@ PSEUDO CODE:
 """
 
 
-def multiiter(*params):
-    yield None
+def multiiter(*args):
+    print(args)
+    for x, y in args:
+        for a in range(x):
+            for b in range(y):
+                yield (a, b)
 
 
 class Tests(unittest.TestCase):
