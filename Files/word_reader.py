@@ -9,9 +9,11 @@ class WordData(object):
     @staticmethod
     def words(w):
         count = 0
-        d = {w:count}
-        file = open("", "r")
-        if w in file.readlines():
-            c = d.get(w)
-            c += 1
-        print(d)
+        file = open("datafile.txt", "r")
+        for x in file.readlines():
+            print(x)
+            if w in x:
+                count += 1
+        print(w + " has a count of " + str(count))
+
+WordData.words("est")
