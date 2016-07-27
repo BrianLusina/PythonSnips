@@ -1,4 +1,3 @@
-from collections import Counter
 import unittest
 
 lst1 = [(2, 'tofu'),
