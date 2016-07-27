@@ -23,3 +23,19 @@ A JSON file looks like so:
 ]
 ```
 json_files is a Python file demonstrating the use and creation of JSON files in Python. Objective is to obtain
+
+## JSON Stats
+
+Class to check stats of the JSON file, check the count for genders
+Returns the count for male, female in a list, with each list containing data for each gender, e.g
+```python
+[[Males: 46],[Females:54]]
+```
+
+## Word Reader
+
+TASK : File based database
+      Search...
+     - User should be able to search for words in a paragraph/text
+     - Search results should be displayed in the terminal 
+     - Add the results and display the total number in terminal

@@ -4,7 +4,8 @@ import json
 class JSON_Stats(object):
     """
     Class to check stats of the JSON file, check the count for genders
-    Returns the count for male, female
+    Returns the count for male, female in a list, with each list containing data for each gender, e.g
+    [[Males: 46],[Females:54]]
     """
     @staticmethod
     def stats():
@@ -18,6 +19,6 @@ class JSON_Stats(object):
                 male_count += 1
             elif x.get('gender') == "Female":
                 female_count += 1
-        print([["Males:", male_count], ["Females:", female_count]])
+        print([["Males", male_count], ["Females", female_count]])
 
 JSON_Stats.stats()
