@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/String Manipulation/count_vegetables.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Math Algos/Xbonacci/Xbonacci.py" afterPath="$PROJECT_DIR$/Math Algos/Xbonacci/Xbonacci.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/denumerate.py" afterPath="$PROJECT_DIR$/String Manipulation/denumerate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iterators/README.md" afterPath="$PROJECT_DIR$/iterators/README.md" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +24,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Xbonacci.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Math Algos/Xbonacci/Xbonacci.py">
+      <file leaf-file-name="count_vegetables.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/String Manipulation/count_vegetables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="22" column="145" selection-start-line="22" selection-start-column="145" selection-end-line="22" selection-end-column="145" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fibonacci.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iterators/README.md">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="293">
+                <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -61,8 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/untitled/.idea/codeWars8.py" />
-        <option value="$PROJECT_DIR$/untitled/.idea/Xbonacci.py" />
         <option value="$PROJECT_DIR$/untitled/.idea/ValidCard.py" />
         <option value="$PROJECT_DIR$/untitled/.idea/codeWars2.py" />
         <option value="$PROJECT_DIR$/untitled/.idea/codeWars.py" />
@@ -106,12 +109,14 @@
         <option value="$PROJECT_DIR$/Regex/word_count.py" />
         <option value="$PROJECT_DIR$/Lists/README.md" />
         <option value="$PROJECT_DIR$/Lists/repeat_sum.py" />
-        <option value="$PROJECT_DIR$/iterators/README.md" />
         <option value="$PROJECT_DIR$/iterators/multiiter.py" />
         <option value="$PROJECT_DIR$/String Manipulation/README.md" />
         <option value="$PROJECT_DIR$/String Manipulation/denumerate.py" />
         <option value="$PROJECT_DIR$/Math Algos/Xbonacci/Xbonacci.py" />
         <option value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
+        <option value="$PROJECT_DIR$/To Move/codeWars4.py" />
+        <option value="$PROJECT_DIR$/String Manipulation/count_vegetables.py" />
+        <option value="$PROJECT_DIR$/iterators/README.md" />
       </list>
     </option>
   </component>
@@ -146,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -342,7 +348,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -376,18 +381,18 @@
       <recent name="$PROJECT_DIR$/Math Algos/convertToMixedNumeral" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest Test.test1">
-    <configuration default="false" name="Unittests in multiiter (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in fibonacci (1)">
+    <configuration default="false" name="Unittests in fibonacci (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/iterators" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Math Algos/Xbonacci" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iterators/multiiter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -399,41 +404,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="interact" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Interact" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Interact/interact.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="fibonacci" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Math Algos/Xbonacci" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in Test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest Test.test5" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -445,9 +416,9 @@
       <module name="PycharmProjects" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
       <option name="CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="" />
+      <option name="METHOD_NAME" value="test5" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -455,7 +426,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest Test.test1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in fibonacci" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -466,10 +437,54 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PycharmProjects" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
-      <option name="CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in fibonacci (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Math Algos/Xbonacci" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in fibonacci (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Math Algos/Xbonacci" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -612,19 +627,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in multiiter (2)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.interact" />
-      <item index="2" class="java.lang.String" itemvalue="Python.fibonacci" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in Test" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Test.test1" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest Test.test5" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci (4)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest Test.test1" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in Test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.fibonacci" />
-        <item index="3" class="java.lang.String" itemvalue="Python.interact" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in multiiter (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci (4)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest Test.test5" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in fibonacci (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -653,35 +668,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_Test_test1 - 2016.07.26 at 23h 15m 45s.xml">
-      <configuration name="Unittest Test.test1" configurationId="tests" />
+    <history-entry file="Unittest_Test_test2 - 2016.07.26 at 23h 21m 13s.xml">
+      <configuration name="Unittest Test.test2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_Test_test1 - 2016.07.26 at 23h 16m 02s.xml">
-      <configuration name="Unittest Test.test1" configurationId="tests" />
+    <history-entry file="Unittest_Test_test2 - 2016.07.26 at 23h 22m 28s.xml">
+      <configuration name="Unittest Test.test2" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2016.07.26 at 23h 15m 25s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittest_Test_test5 - 2016.07.26 at 23h 27m 03s.xml">
+      <configuration name="Unittest Test.test5" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_multiiter - 2016.07.26 at 06h 57m 37s.xml">
-      <configuration name="Unittests in multiiter" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci - 2016.07.26 at 23h 21m 19s.xml">
+      <configuration name="Unittests in fibonacci" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_multiiter_(1) - 2016.07.26 at 07h 02m 27s.xml">
-      <configuration name="Unittests in multiiter (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci - 2016.07.26 at 23h 27m 53s.xml">
+      <configuration name="Unittests in fibonacci" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_multiiter_(2) - 2016.07.26 at 07h 02m 58s.xml">
-      <configuration name="Unittests in multiiter (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci_(1) - 2016.07.26 at 23h 23m 55s.xml">
+      <configuration name="Unittests in fibonacci (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_repeat_sum - 2016.07.26 at 06h 17m 55s.xml">
-      <configuration name="Unittests in repeat_sum" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci_(1) - 2016.07.26 at 23h 30m 52s.xml">
+      <configuration name="Unittests in fibonacci (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_repeat_sum_(1) - 2016.07.26 at 06h 19m 11s.xml">
-      <configuration name="Unittests in repeat_sum (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci_(2) - 2016.07.26 at 23h 24m 04s.xml">
+      <configuration name="Unittests in fibonacci (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_repeat_sum_(2) - 2016.07.26 at 06h 19m 27s.xml">
-      <configuration name="Unittests in repeat_sum (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci_(3) - 2016.07.26 at 23h 25m 44s.xml">
+      <configuration name="Unittests in fibonacci (3)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_repeat_sum_(3) - 2016.07.26 at 06h 21m 21s.xml">
-      <configuration name="Unittests in repeat_sum (3)" configurationId="tests" />
+    <history-entry file="Unittests_in_fibonacci_(4) - 2016.07.26 at 23h 30m 24s.xml">
+      <configuration name="Unittests in fibonacci (4)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -702,19 +717,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="165" y="152" width="1101" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -742,17 +757,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/PangramChecker.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/Longest word.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/regex.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/Regex.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/WrongEnd.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/sum of numbers.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/simple game.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/binary.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/LeapYear.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/codewars10.py" />
-    <entry file="file://$PROJECT_DIR$/untitled/.idea/IsPrime.py" />
     <entry file="file://$PROJECT_DIR$/Math Algos/convert_test.py" />
     <entry file="file://$PROJECT_DIR$/Math Algos/convertToMixedNumeral/convert_improper_fraction.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1026,19 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iterators/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="504">
-            <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iterators/multiiter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1070,23 +1061,124 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Math Algos/Xbonacci/Xbonacci.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="22" column="145" selection-start-line="22" selection-start-column="145" selection-end-line="22" selection-end-column="145" />
+        <state relative-caret-position="810">
+          <caret line="45" column="115" selection-start-line="45" selection-start-column="115" selection-end-line="45" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="89" column="44" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="79" column="13" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="85" column="135" selection-start-line="85" selection-start-column="133" selection-end-line="85" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codeWars8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="16" column="157" selection-start-line="16" selection-start-column="155" selection-end-line="16" selection-end-column="157" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codewars9.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/To Move/codewars10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="106" selection-start-line="1" selection-start-column="104" selection-end-line="1" selection-end-column="106" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Math Algos/Xbonacci/fibonacci.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        <state relative-caret-position="22">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/String Manipulation/count_vegetables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iterators/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="293">
+            <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
