@@ -14,6 +14,7 @@ class UserData(object):
     if the input is an integer, obtain user id
     loop through each line
     """
+
     @staticmethod
     def obtain_id():
         json_data = open("User_Data.json", "r")
@@ -25,16 +26,18 @@ class UserData(object):
             # pprint(data)
             for x in data:
                 if x.get('id') == user_id:
-                    print("User Found...\n" +
-                          "---" * 10+"\n" +
+                    print("---" * 10 + "\n" +
+                          "User Found...\n" +
+                          "---" * 10 + "\n" +
                           "ID: " + str(x.get('id')) + "\n" +
                           "First Name: " + x.get('first_name') + "\n" +
                           "Last Name: " + x.get("last_name") + "\n" +
                           "Gender: " + x.get('gender') + "\n" +
                           "Email: " + x.get('email') + "\n" +
-                           "---" * 10
+                          "---" * 10
                           )
         else:
             print("Please enter a valid id")
+
 
 UserData.obtain_id()
