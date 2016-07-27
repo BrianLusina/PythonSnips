@@ -12,4 +12,14 @@ These are a series of Python file access methods
 
 ## JSON files
 
-json_files is a Python file demonstrating the use and creation of JSON files in Python
+A JSON file looks like so:
+```json
+[
+{"id":1,"first_name":"Karen","last_name":"Wheeler","email":"kwheeler0@ameblo.jp","gender":"Female"},
+{"id":2,"first_name":"Larry","last_name":"Morales","email":"lmorales1@phpbb.com","gender":"Male"},
+{"id":3,"first_name":"Rose","last_name":"Lane","email":"rlane2@census.gov","gender":"Female"},
+{"id":4,"first_name":"Cheryl","last_name":"Frazier","email":"cfrazier3@lulu.com","gender":"Female"},
+...
+]
+```
+json_files is a Python file demonstrating the use and creation of JSON files in Python. Objective is to obtain
