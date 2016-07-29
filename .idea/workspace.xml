@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Math Algos/isPrime/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Math Algos/reduce fraction/Readme.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/DigitCount/digit_count.py" afterPath="$PROJECT_DIR$/Math Algos/digit_count.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/EvilOrOdius/EvilOrOdious.py" afterPath="$PROJECT_DIR$/Math Algos/EvilOrOdious.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/Median/median.py" afterPath="$PROJECT_DIR$/Math Algos/median.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/Perfect Squares/perfectSquares.py" afterPath="$PROJECT_DIR$/Math Algos/perfectSquares.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/Visible Cubes/VisibleCubes.py" afterPath="$PROJECT_DIR$/Math Algos/VisibleCubes.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/convertToMixedNumeral/Readme.md" afterPath="$PROJECT_DIR$/Math Algos/Readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/convertToMixedNumeral/convert_improper_fraction.py" afterPath="$PROJECT_DIR$/Math Algos/convert_improper_fraction.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/isPrime/IsPrime.py" afterPath="$PROJECT_DIR$/Math Algos/IsPrime.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Math Algos/reduce fraction/reduce_fraction.py" afterPath="$PROJECT_DIR$/Math Algos/reduce_fraction.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Math Algos/vampire_numbers.py" afterPath="$PROJECT_DIR$/Math Algos/vampire_numbers.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,8 +46,8 @@
       <file leaf-file-name="vampire_numbers.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Math Algos/vampire_numbers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,10 +132,10 @@
         <option value="$PROJECT_DIR$/String Manipulation/README.md" />
         <option value="$PROJECT_DIR$/String Manipulation/time_correct.py" />
         <option value="$PROJECT_DIR$/To Move/codewars9.py" />
-        <option value="$PROJECT_DIR$/Math Algos/vampire_numbers.py" />
         <option value="$PROJECT_DIR$/Math Algos/reduce fraction/Readme.md" />
         <option value="$PROJECT_DIR$/Math Algos/isPrime/Readme.md" />
         <option value="$PROJECT_DIR$/Math Algos/Readme.md" />
+        <option value="$PROJECT_DIR$/Math Algos/vampire_numbers.py" />
       </list>
     </option>
   </component>
@@ -1201,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Math Algos/vampire_numbers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
