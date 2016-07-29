@@ -1,14 +1,19 @@
-def tribonacci(sig,n):
-    res = sig
-    c = 0
-    if n == 0: return []
-    elif n in range(1,4): return sig[0:n]
-    while c <= n:
-        next = res[c]+ res[c+1] + res[c+2]
-        res.append(next)
-        c += 1
-        if len(res) == n:break
-    return res
+class Tribonacci(object):
+    @staticmethod
+    def tribonacci(sig, n):
+        res = sig
+        c = 0
+        if n == 0: return []
+        elif n in range(1, 4):
+            return sig[0:n]
+        while c <= n:
+            next = res[c]+ res[c+1] + res[c+2]
+            res.append(next)
+            c += 1
+            if len(res) == n:
+                break
+        return res
+
 
 Test.test_function(tribonacci([1,1,1],10),[1,1,1,3,5,9,17,31,57,105])
 Test.test_function(tribonacci([0,0,1],10),[0,0,1,1,2,4,7,13,24,44])
