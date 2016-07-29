@@ -4,4 +4,3 @@ print("Welcome to Tribonacci!\nToday we shall get a tribonacci sequence. We will
 user_input = input("Your number for today?")
 
 print(tribonacci(user_input))
-
