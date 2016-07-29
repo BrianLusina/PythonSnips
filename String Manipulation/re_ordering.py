@@ -12,12 +12,24 @@ BASIC_TESTS = [
      'Amabel is an older name than annabel and a lot more distinctive')
 ]
 
+"""
+Split the string into a list,
+loop through the list, then loop through each word checking if any letter is capital
+if so, obtain the index of the word insert it at the beginning and remove it from old position
+"""
+
+
 def re_ordering(s):
+    k, reorder = s.split(), ""
+    for x in k:
+        for y in x:
+            if y.isupper():
+                ind = k.index(x)
+                k.insert(0, k.pop(ind))
+    return " ".join(k)
 
 
 class Test(unittest.TestCase):
-
-
     def test1(self):
         for input_str, result in BASIC_TESTS:
-            self.assertEquals(re_ordering(input_str), result)
+            self.assertEquals(result, re_ordering(input_str))
