@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/String Manipulation/order_please.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hashes/rna_to_protein.py" afterPath="$PROJECT_DIR$/Hashes/rna_to_protein.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/README.md" afterPath="$PROJECT_DIR$/String Manipulation/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/order_please.py" afterPath="$PROJECT_DIR$/String Manipulation/order_please.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,9 +41,11 @@
       <file leaf-file-name="order_please.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/String Manipulation/order_please.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="215">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +121,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-744" />
+    <option name="x" value="1431" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -225,7 +225,7 @@
     <property name="SearchEverywhereHistoryKey" value="binary&#9;FILE&#9;file:///home/lusinabrian/Software/Projects/PycharmProjects/untitled/.idea/binary.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last.edited.regexp" value="MOB" />
+    <property name="last.edited.regexp" value="is2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -236,52 +236,18 @@
       <recent name="$PROJECT_DIR$/String Manipulation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in rna_to_protein">
-    <configuration default="false" name="TribFrom_User" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ModulesDemo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ModulesDemo/TribFrom_User.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="tribonacciModule" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ModulesDemo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ModulesDemo/tribonacciModule.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in rna_to_protein" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in order_please (4)">
+    <configuration default="false" name="Unittests in order_please" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hashes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hashes/rna_to_protein.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/order_please.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -293,17 +259,17 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in rna_to_protein (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in order_please (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hashes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hashes/rna_to_protein.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/order_please.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -315,17 +281,61 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in rna_to_protein (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in order_please (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hashes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hashes/rna_to_protein.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/order_please.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in order_please (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/order_please.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in order_please (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/order_please.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -472,19 +482,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.TribFrom_User" />
-      <item index="1" class="java.lang.String" itemvalue="Python.tribonacciModule" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in rna_to_protein" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in rna_to_protein (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in rna_to_protein (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in order_please" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (4)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in rna_to_protein" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in rna_to_protein (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in rna_to_protein (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.TribFrom_User" />
-        <item index="4" class="java.lang.String" itemvalue="Python.tribonacciModule" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (4)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (3)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in order_please (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in order_please" />
       </list>
     </recent_temporary>
   </component>
@@ -513,35 +523,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_re_ordering_(3) - 2016.07.29 at 05h 41m 15s.xml">
-      <configuration name="Unittests in re_ordering (3)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please - 2016.07.30 at 23h 04m 15s.xml">
+      <configuration name="Unittests in order_please" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_re_ordering_(4) - 2016.07.29 at 05h 39m 07s.xml">
-      <configuration name="Unittests in re_ordering (4)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(1) - 2016.07.30 at 22h 50m 00s.xml">
+      <configuration name="Unittests in order_please (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_re_ordering_(4) - 2016.07.29 at 05h 46m 35s.xml">
-      <configuration name="Unittests in re_ordering (4)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(1) - 2016.07.30 at 23h 04m 43s.xml">
+      <configuration name="Unittests in order_please (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_re_ordering_(5) - 2016.07.29 at 05h 39m 36s.xml">
-      <configuration name="Unittests in re_ordering (5)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(2) - 2016.07.30 at 22h 53m 01s.xml">
+      <configuration name="Unittests in order_please (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_re_ordering_(5) - 2016.07.29 at 05h 46m 51s.xml">
-      <configuration name="Unittests in re_ordering (5)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(2) - 2016.07.30 at 23h 05m 51s.xml">
+      <configuration name="Unittests in order_please (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_rna_to_protein - 2016.07.30 at 20h 59m 22s.xml">
-      <configuration name="Unittests in rna_to_protein" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(3) - 2016.07.30 at 22h 54m 53s.xml">
+      <configuration name="Unittests in order_please (3)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_rna_to_protein - 2016.07.30 at 21h 03m 23s.xml">
-      <configuration name="Unittests in rna_to_protein" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(3) - 2016.07.30 at 23h 06m 34s.xml">
+      <configuration name="Unittests in order_please (3)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_rna_to_protein_(1) - 2016.07.30 at 21h 01m 57s.xml">
-      <configuration name="Unittests in rna_to_protein (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(4) - 2016.07.30 at 22h 55m 03s.xml">
+      <configuration name="Unittests in order_please (4)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_rna_to_protein_(2) - 2016.07.30 at 21h 02m 18s.xml">
-      <configuration name="Unittests in rna_to_protein (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(4) - 2016.07.30 at 23h 08m 04s.xml">
+      <configuration name="Unittests in order_please (4)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_vampire_numbers - 2016.07.29 at 06h 39m 47s.xml">
-      <configuration name="Unittests in vampire_numbers" configurationId="tests" />
+    <history-entry file="Unittests_in_order_please_(5) - 2016.07.30 at 22h 59m 17s.xml">
+      <configuration name="Unittests in order_please (5)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -554,7 +564,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-744" width="1301" height="744" extended-state="6" />
+    <frame x="1431" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17449139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -562,9 +572,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -923,9 +933,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/String Manipulation/order_please.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="215">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
