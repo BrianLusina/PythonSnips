@@ -1,8 +1,3 @@
-"""
-
-"""
-
-
 def tribonacci(n):
     print("Hold on, crunching numbers...\n"+"**"*10)
     c, res = 0, [0, 1, 1]
