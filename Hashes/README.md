@@ -7,8 +7,10 @@ The central dogma of molecular biology is that DNA is transcribed into RNA, whic
 Protein sequences are easily visualized in much the same way that DNA and RNA are, as large strings of letters. An important thing to note is that the 'Stop' codons do not encode for a specific amino acid. Their only function is to stop translation of the protein, as such they are not incorporated into the polypeptide chain. 'Stop' codons should not be in the final protein sequence. To save a you a lot of unnecessary (and boring) typing the keys and values for your amino acid dictionary are provided.
 
 Given a string of RNA, create a funciton which translates the RNA into its protein sequence. Note: the test cases will always produce a valid string.
-
+```python
 protein('UGCGAUGAAUGGGCUCGCUCC') returns 'CDEWARS'
+```
+
 Included as test cases is a real world example! The last example test case encodes for a protein called green fluorescent protein; once spliced into the genome of another organism, proteins like GFP allow biologists to visualize cellular processes!
 
 Amino Acid Dictionary
@@ -57,5 +59,5 @@ Amino Acid Dictionary
     'UAA':'Stop', 'UGA':'Stop', 'UAG':'Stop'
 ```
 
-> Tags: **FUNDAMENTALS** **HASHES** **DATA STRUCTURES**
+> **FUNDAMENTALS**, **HASHES**, **DATA STRUCTURES**
 

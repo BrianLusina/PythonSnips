@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hashes/README.md" afterPath="$PROJECT_DIR$/Hashes/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hashes/rna_to_protein.py" afterPath="$PROJECT_DIR$/Hashes/rna_to_protein.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
@@ -25,8 +26,8 @@
       <file leaf-file-name="rna_to_protein.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hashes/rna_to_protein.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="34" column="1040" selection-start-line="34" selection-start-column="1040" selection-end-line="34" selection-end-column="1040" />
+            <state relative-caret-position="216">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,8 +40,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="36">
-                <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <first_editor relative-caret-position="468">
+                <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -120,7 +121,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="-744" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -223,6 +224,7 @@
     <property name="SearchEverywhereHistoryKey" value="binary&#9;FILE&#9;file:///home/lusinabrian/Software/Projects/PycharmProjects/untitled/.idea/binary.py" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="last.edited.regexp" value="MOB" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -551,7 +553,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-744" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17449139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -912,8 +914,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="36">
-            <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <first_editor relative-caret-position="468">
+            <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
             <folding />
           </first_editor>
           <second_editor />
@@ -922,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hashes/rna_to_protein.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="34" column="1040" selection-start-line="34" selection-start-column="1040" selection-end-line="34" selection-end-column="1040" />
+        <state relative-caret-position="216">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
