@@ -47,14 +47,19 @@ AMINO_DICT = {
 
 """
 Split the string into parts of 3,
-perform a for loop, checking through each key in dictionary, checking if the parts of three are in the key,
- if so, add to a string and continue the search
+obtain all the keys in dictionary and check if the splits are in the keys, if so, obtain the values add to a string and continue the search
 """
 
 
 def protein(rna):
     prot_result = ""
     rna_splits = re.split(r'([A-Z]{3})', rna)
+    for x in rna_splits:
+        if x in AMINO_DICT.keys():
+            prot_result += AMINO_DICT.get(x)
+            if AMINO_DICT.get(x) in ['UAA', 'UGA', 'UAG']:
+                break
+    return prot_result.replace("Stop", "")
 
 
 class RnaTest(unittest.TestCase):
