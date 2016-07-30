@@ -1,4 +1,5 @@
-import unittest, re
+import unittest
+import re
 
 AMINO_DICT = {
     # Phenylalanine
