@@ -1,7 +1,9 @@
 import unittest
 
+
 def chromosoneCheck(sperm):
-    #Your code here
+    return "Congratulations! You're going to have a daughter." if sperm == "XX" else "Congratulations! You're going to have a son."
+
 
 class Tests(unittest.TestCase):
     def test1(self):
