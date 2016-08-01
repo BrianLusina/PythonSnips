@@ -50,10 +50,7 @@ class UserData(object):
      """
     @staticmethod
     def stats():
-        json_data = open("User_Data.json", "r")
         male_count, female_count = 0, 0
-        with json_data as data_file:
-            data = json.load(data_file)
 
         for x in data:
             if x.get('gender') == "Male":
@@ -66,7 +63,8 @@ class UserData(object):
     Problem description: Sort through a JSON file, checking for the first name
     store the first names in a list
     sort the list of first names
-    for each name in the sorted data, find the rest of the data
+    for each name in the sorted data, loop through each dictionary obtaining first names, store in a list
+    find the rest of the data
     """
     @staticmethod
     def data_sorter():
@@ -81,6 +79,7 @@ class UserData(object):
 
         return sorted_data
 
-# UserData.obtain_id()
-# UserData.stats()
-print(UserData.data_sorter())
+
+UserData.obtain_id()
+UserData.stats()
+pprint(UserData.data_sorter())
