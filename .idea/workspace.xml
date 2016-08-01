@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/lusinabrian.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/lusinabrian.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/isogram.py" afterPath="$PROJECT_DIR$/String Manipulation/isogram.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/String Manipulation/chromosome_check.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/README.md" afterPath="$PROJECT_DIR$/String Manipulation/README.md" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +26,13 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/String Manipulation/README.md">
-          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="239">
-                <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <first_editor relative-caret-position="113">
+                <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -39,14 +40,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="isogram.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="isogram.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/String Manipulation/isogram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="378">
               <caret line="19" column="154" selection-start-line="19" selection-start-column="154" selection-end-line="19" selection-end-column="154" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chromosome_check.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/String Manipulation/chromosome_check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/String Manipulation/StringBasics/mumbling.py" />
         <option value="$PROJECT_DIR$/Math Algos/DigitCount/digit_count.py" />
         <option value="$PROJECT_DIR$/String Manipulation/NameScore/Readme.md" />
         <option value="$PROJECT_DIR$/String Manipulation/NameScore/Name_score.py" />
@@ -116,8 +126,9 @@
         <option value="$PROJECT_DIR$/Hashes/README.md" />
         <option value="$PROJECT_DIR$/Hashes/rna_to_protein.py" />
         <option value="$PROJECT_DIR$/String Manipulation/order_please.py" />
-        <option value="$PROJECT_DIR$/String Manipulation/README.md" />
         <option value="$PROJECT_DIR$/String Manipulation/isogram.py" />
+        <option value="$PROJECT_DIR$/String Manipulation/README.md" />
+        <option value="$PROJECT_DIR$/String Manipulation/chromosome_check.py" />
       </list>
     </option>
   </component>
@@ -573,9 +584,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -613,13 +624,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iterators/multiiter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/String Manipulation/denumerate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -913,27 +917,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/String Manipulation/isogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="19" column="154" selection-start-line="19" selection-start-column="154" selection-end-line="19" selection-end-column="154" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/String Manipulation/README.md">
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="239">
-            <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <first_editor relative-caret-position="113">
+            <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/String Manipulation/isogram.py">
+    <entry file="file://$PROJECT_DIR$/String Manipulation/chromosome_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="154" selection-start-line="19" selection-start-column="154" selection-end-line="19" selection-end-column="154" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
