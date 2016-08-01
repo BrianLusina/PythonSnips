@@ -51,10 +51,8 @@ class UserData(object):
     """
     @staticmethod
     def data_sorter():
-        firsts = []
         sorted_data = []
-        for user in data:
-            firsts.append(user.get('first_name'))
+        firsts = [user.get('first_name') for user in data]
 
         sort_names = sorted(firsts)
         for name in sort_names:
