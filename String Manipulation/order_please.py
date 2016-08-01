@@ -17,6 +17,7 @@ def order(sentence):
         for x in sent_li:
             for i in x[indx]:
                 if i.isdigit():
+                    pass
         indx += 1
     return res
 
