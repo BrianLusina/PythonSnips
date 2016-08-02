@@ -71,13 +71,22 @@ class UserData(object):
         sorted_data = []
         firsts = [user.get('first_name') for user in data]
 
-        sort_names = sorted(firsts)
-        for name in sort_names:
-            for user in data:
-                if user.get("first_name") == name:
-                    sorted_data.append(user)
+        user_request = input("Reverse Data?(y/n)")
+        if user_request == "y" or user_request == "Y":
+            sort_names = sorted(firsts, reverse=True)
+            for name in sort_names:
+                for user in data:
+                    if user.get("first_name") == name:
+                        sorted_data.append(user)
+            return sorted_data
+        else:
+            sort_names = sorted(firsts)
+            for name in sort_names:
+                for user in data:
+                    if user.get("first_name") == name:
+                        sorted_data.append(user)
 
-        return sorted_data
+            return sorted_data
 
 
 UserData.obtain_id()

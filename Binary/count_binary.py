@@ -1,22 +1,22 @@
 import unittest
 
 
-def countBits(n):
+def count_bits(n):
     return '{0:b}'.format(n).count("1")
 
 
 class Tests(unittest.TestCase):
     def Test2(self):
-        self.assertEqual(countBits(0), 0) 
+        self.assertEqual(count_bits(0), 0) 
 
     def Test3(self):
-        self.assertEqual(countBits(4), 1) 
+        self.assertEqual(count_bits(4), 1) 
 
     def Test4(self):
-        self.assertEqual(countBits(7), 3) 
+        self.assertEqual(count_bits(7), 3) 
 
     def Test5(self):
-        self.assertEqual(countBits(9), 2) 
+        self.assertEqual(count_bits(9), 2) 
 
     def Test6(self):
-        self.assertEqual(countBits(10), 2) 
+        self.assertEqual(count_bits(10), 2) 
