@@ -84,3 +84,16 @@ digits 6, 1, and 2 are present in both the product and multiplicands
 110 is not a vampire number since there are three 1's in the
 multiplicands, but only two 1's in the product
 Create a function that can receive two 'fangs' and determine if the product of the two is a valid vampire number.
+
+## FizzBuzz
+
+Task
+Write a program that prints the integers from   1   to   100   (inclusive).
+
+But:
+
+  for multiples of three,   print   Fizz     (instead of the number)
+  for multiples of five,   print   Buzz     (instead of the number)
+  for multiples of both three and five,   print   FizzBuzz     (instead of the number)
+
+The   FizzBuzz   problem was presented as the lowest level of comprehension required to illustrate adequacy.
