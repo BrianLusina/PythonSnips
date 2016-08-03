@@ -1,15 +1,44 @@
-"""
-Task
-Write a program that prints the integers from   1   to   100   (inclusive).
+from itertools import cycle, izip, count, islice
 
 
-But:
+class FizzBuzz(object):
+    def __init__(self, endpoint):
+        self.endpoint = endpoint
 
-  for multiples of three,   print   Fizz     (instead of the number)
-  for multiples of five,   print   Buzz     (instead of the number)
-  for multiples of both three and five,   print   FizzBuzz     (instead of the number)
+    def simple_fizz(self):
+        out = []
+        for i in range(1, self.endpoint + 1):
+            if i % 15 == 0:
+                out.append("FizzBuzz")
+            elif i % 3 == 0:
+                out.append("Fizz")
+            elif i % 5 == 0:
+                out.append("Buzz")
+            else:
+                out.append(i)
+        return out
 
-The   FizzBuzz   problem was presented as the lowest level of comprehension required to illustrate adequacy.
+    """
+    Using String concatenation
+    """
+    def string_concat(self):
+        return ["Fizz" * (i % 3 == 0) + "Buzz" * (i % 5 == 0) or i for i in range(1, self.endpoint)]
 
+    def string_concat_2(self):
+        return [i % 3 // 2 * 'Fizz' + i % 5 // 4 * 'Buzz' or i + 1 for i in range(self.endpoint)]
 
-"""
+    """
+    You can also create a lazy, unbounded sequence by using generator expressions:
+    """
+    def lazy(self):
+        fizzes = cycle([""] * 2 + ["Fizz"])
+        buzzes = cycle([""] * 4 + ["Buzz"])
+        both = (f + b for f, b in izip(fizzes, buzzes))
+        out = []
+        # if the string is "", yield the number
+        # otherwise yield the string
+        fizzbuzz = (word or n for word, n in izip(both, count(1)))
+
+        # print the first 100
+        for i in islice(fizzbuzz, 100):
+            out.append(i)
