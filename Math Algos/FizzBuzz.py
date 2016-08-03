@@ -1,4 +1,4 @@
-from itertools import cycle, izip, count, islice
+# from itertools import cycle, zip, count, islice
 
 
 class FizzBuzz(object):
@@ -30,6 +30,7 @@ class FizzBuzz(object):
     """
     You can also create a lazy, unbounded sequence by using generator expressions:
     """
+    """
     def lazy(self):
         fizzes = cycle([""] * 2 + ["Fizz"])
         buzzes = cycle([""] * 4 + ["Buzz"])
@@ -40,5 +41,9 @@ class FizzBuzz(object):
         fizzbuzz = (word or n for word, n in izip(both, count(1)))
 
         # print the first 100
-        for i in islice(fizzbuzz, 100):
+        for i in islice(fizzbuzz, self.endpoint):
             out.append(i)
+    """
+
+fizzy = FizzBuzz(10)
+print(fizzy.simple_fizz())
