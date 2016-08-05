@@ -1,4 +1,5 @@
 # from itertools import cycle, zip, count, islice
+import unittest
 
 
 class FizzBuzz(object):
@@ -45,5 +46,9 @@ class FizzBuzz(object):
             out.append(i)
     """
 
+"""
+TESTS
+Tests for the fizzbuzz challenges
+"""
 fizzy = FizzBuzz(10)
 print(fizzy.simple_fizz())

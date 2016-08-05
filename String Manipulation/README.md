@@ -192,3 +192,11 @@ name_that_number(99)  # returns "ninety nine"
 ```
 
 Words should be seperated by only spaces and not hyphens. No need to validate parameters, they will always be in the range [0, 99]. Make sure that the returned String has no leading of trailing spaces. Good luck!
+
+## Swappie
+
+Using python, have the function SwapCase(str) take the str parameter and swap the case of each character.
+For example: if str is "Hello World" the output should be hELLO wORLD.
+Let numbers and symbols stay the way they are.
+
+NB do not use the swapcase python method.
