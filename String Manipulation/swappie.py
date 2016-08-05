@@ -23,7 +23,7 @@ class Swap(object):
 
     # using map
     def swappie_three(self):
-        print("Using map function")
+        print("Using map function and inbuilt function")
         return "".join(map(str.swapcase, self.str_input))
 
     # using lambda
