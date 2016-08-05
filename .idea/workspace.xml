@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/swappie.py" afterPath="$PROJECT_DIR$/String Manipulation/swappie.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
@@ -50,8 +49,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="293">
-                <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+              <first_editor relative-caret-position="108">
+                <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="201" selection-end-column="41" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -62,25 +61,9 @@
       <file leaf-file-name="swappie.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/String Manipulation/swappie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="1278">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Math Algos/Readme.md">
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1782">
-                <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -309,29 +292,7 @@
       <recent name="$PROJECT_DIR$/String Manipulation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest Tests.test1 (1)">
-    <configuration default="false" name="Unittest Tests.test1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/swappie.py" />
-      <option name="CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittest Tests.test3">
     <configuration default="false" name="Unittests in swappie" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -347,28 +308,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest Tests.test2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/swappie.py" />
-      <option name="CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -398,7 +337,51 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest Tests.test1 (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in swappie (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/swappie.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in swappie (5)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String Manipulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/swappie.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest Tests.test3" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -410,7 +393,7 @@
       <module name="PycharmProjects" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String Manipulation/swappie.py" />
       <option name="CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -555,19 +538,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test1" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in swappie" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test2" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test1 (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in swappie" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (4)" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (5)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test3" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test1 (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test2" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in swappie" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test1" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test3" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (5)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (4)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in swappie (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in swappie" />
       </list>
     </recent_temporary>
   </component>
@@ -596,35 +579,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_Tests_test1 - 2016.08.05 at 09h 22m 37s.xml">
-      <configuration name="Unittest Tests.test1" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittest_Tests_test1_(1) - 2016.08.05 at 09h 30m 24s.xml">
       <configuration name="Unittest Tests.test1 (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_Tests_test2 - 2016.08.05 at 09h 24m 42s.xml">
-      <configuration name="Unittest Tests.test2" configurationId="tests" />
+    <history-entry file="Unittest_Tests_test3 - 2016.08.05 at 10h 04m 13s.xml">
+      <configuration name="Unittest Tests.test3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_name_that_number_(1) - 2016.08.03 at 06h 40m 25s.xml">
-      <configuration name="Unittests in name_that_number (1)" configurationId="tests" />
+    <history-entry file="Unittest_Tests_test8 - 2016.08.05 at 09h 57m 31s.xml">
+      <configuration name="Unittest Tests.test8" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_name_that_number_(2) - 2016.08.03 at 06h 42m 26s.xml">
-      <configuration name="Unittests in name_that_number (2)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_name_that_number_(3) - 2016.08.03 at 06h 44m 07s.xml">
-      <configuration name="Unittests in name_that_number (3)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_name_that_number_(4) - 2016.08.03 at 06h 44m 40s.xml">
-      <configuration name="Unittests in name_that_number (4)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_pattern - 2016.08.03 at 06h 11m 22s.xml">
-      <configuration name="Unittests in pattern" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_swappie - 2016.08.05 at 09h 23m 54s.xml">
+    <history-entry file="Unittests_in_swappie - 2016.08.05 at 09h 38m 39s.xml">
       <configuration name="Unittests in swappie" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_swappie_(1) - 2016.08.05 at 09h 24m 53s.xml">
+    <history-entry file="Unittests_in_swappie - 2016.08.05 at 09h 58m 36s.xml">
+      <configuration name="Unittests in swappie" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_swappie_(1) - 2016.08.05 at 09h 59m 21s.xml">
       <configuration name="Unittests in swappie (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_swappie_(2) - 2016.08.05 at 09h 58m 06s.xml">
+      <configuration name="Unittests in swappie (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_swappie_(3) - 2016.08.05 at 09h 58m 24s.xml">
+      <configuration name="Unittests in swappie (3)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_swappie_(4) - 2016.08.05 at 10h 01m 41s.xml">
+      <configuration name="Unittests in swappie (4)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_swappie_(5) - 2016.08.05 at 10h 02m 14s.xml">
+      <configuration name="Unittests in swappie (5)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -645,7 +628,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1011,25 +994,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Math Algos/FizzBuzz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Math Algos/Readme.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1782">
+          <first_editor relative-caret-position="234">
             <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Math Algos/FizzBuzz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,8 +1022,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="293">
-            <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <first_editor relative-caret-position="108">
+            <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="201" selection-end-column="41" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1049,8 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/String Manipulation/swappie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="1278">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
