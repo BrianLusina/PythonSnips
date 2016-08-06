@@ -97,3 +97,9 @@ But:
   for multiples of both three and five,   print   FizzBuzz     (instead of the number)
 
 The   FizzBuzz   problem was presented as the lowest level of comprehension required to illustrate adequacy.
+
+## Divisble by 7, not by 5
+
+Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
+between 2000 and 3200 (both included).
+The numbers obtained should be printed in a comma-separated sequence on a single line.
