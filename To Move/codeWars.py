@@ -1,12 +1,3 @@
-"Class to test truths of functions"
-class Test(object):
-    def __init__(self,n):
-        self.n = n
-
-    @staticmethod
-    def test_function(actual,expected):
-        print "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(actual) + " failed, expected " + str(expected)
-
 line="---------------------------------------------------------------------------"
 print line
 """
@@ -45,35 +36,6 @@ print(sc("sonfather"), "")
 print(sc("DONKEYmonkey"), "ONKEYonkey") 
 print(sc("monkeyDONKEY"), "onkeyONKEY") 
 print(sc("BANAna"), "ANAna")
-print line
-
-"""
-Zebulan has worked hard to write all his python code in strict compliance to PEP8 rules. In this kata, you are a mischevious hacker that has set out to sabatoge all his good code.
-
-Your job is to take PEP8 compatible function names and convert them to camelCase. For example:
-
-zebulansNightmare('camel_case') == 'camelCase'
-zebulansNightmare('zebulans_nightmare') == 'zebulansNightmare'
-zebulansNightmare('get_string') == 'getString'
-zebulansNightmare('convert_to_uppercase') == 'convertToUppercase'
-zebulansNightmare('main') == 'main'
-"""
-def zebulansNightmare(functionName):
-    #replace the underscore with a space to create separate words and split them into a list
-    fn = functionName.replace("_"," ").split()
-    fLet=""
-    #add first element to a new list
-    out = [fn[0]]
-    #take only the 2nd and consecutive elements
-    for i in fn[1:]:
-        #capitalize the first letter only of each word
-        fLet = i.title()
-        #add each new word to the list
-        out.append(fLet)
-    #return this new list
-    return "".join(out)
-print line
-print zebulansNightmare("goto_next_kata")
 print line
 
 """
