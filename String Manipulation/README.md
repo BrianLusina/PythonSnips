@@ -269,3 +269,16 @@ A pangram is a sentence that contains every single letter of the alphabet at lea
 Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
 Alternatively
+
+## Accum
+
+This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+``` python
+accum("abcd") --> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") --> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") --> "C-Ww-Aaa-Tttt"
+```
+
+> The parameter of accum is a string which includes only letters from a..z and A..Z.
