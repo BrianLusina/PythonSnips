@@ -5,12 +5,7 @@ def digit_sum(n):
     return sum([int(i) for i in stringConvert])
 
 
-"""returns the product of all the items in a list"""
-def product(l):
-    result = 1
-    for i in l:
-         result = result * i
-    return result
+
 
 
 """that takes in a list and removes elements of the list that are the same."""

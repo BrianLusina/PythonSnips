@@ -59,3 +59,7 @@ Function that counts the number of times an item appears in a list
 
 takes in a list of numbers, removes all odd numbers in the list, and returns the result.
 
+## Product
+
+Returns the product of all the items in a list
+
