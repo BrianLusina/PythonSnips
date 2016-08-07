@@ -1,42 +1,4 @@
 line="---------------------------------------------------------------------------"
-print line
-"""
-This is the simple version of Shortest Code series. If you need some challenges, please try the challenge version
-Task:
-Every uppercase letter is Father, The corresponding lowercase letters is the Son.
-Give you a string s, If the father and son both exist, keep them.
-If it is a separate existence, delete them. Return the result.
-For example:
-sc("Aab") should return "Aa"
-sc("AabBc") should return "AabB"
-sc("AaaaAaab") should return "AaaaAaa"(father can have a lot of son)
-sc("aAAAaAAb") should return "aAAAaAA"(son also can have a lot of father ;-)
-"""
-from collections import Counter
-import string
-
-def sc(s):
-    ret=[]
-    for c in s:
-        if c.isupper():
-            if chr(ord(c)+32) in s:
-                ret.append(c)
-        elif c.islower():
-            if chr(ord(c)-32) in s:
-                ret.append(c)
-    return ''.join(ret)
-
-import test
-print(sc("Aab"), "Aa")
-print(sc("AabBc"), "AabB")
-print(sc("SONson"), "SONson")
-print(sc("FfAaTtHhEeRr"), "FfAaTtHhEeRr")  
-print(sc("SONsonfather"), "SONson")  
-print(sc("sonfather"), "")
-print(sc("DONKEYmonkey"), "ONKEYonkey") 
-print(sc("monkeyDONKEY"), "onkeyONKEY") 
-print(sc("BANAna"), "ANAna")
-print line
 
 """
 Write a function that rearranges an interger into its largest possible value.
