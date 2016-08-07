@@ -5,11 +5,6 @@ def digit_sum(n):
     return sum([int(i) for i in stringConvert])
 
 
-"""takes in a list of numbers, removes all odd numbers in the list, and returns the result."""
-def purify(l):
-    return [i for i in l if i % 2 == 0]
-
-
 """returns the product of all the items in a list"""
 def product(l):
     result = 1

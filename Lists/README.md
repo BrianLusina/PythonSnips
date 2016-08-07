@@ -54,3 +54,8 @@ Note: In case of input data being supplied to the question, it should be assumed
 ## Counter
 
 Function that counts the number of times an item appears in a list
+
+## Purify
+
+takes in a list of numbers, removes all odd numbers in the list, and returns the result.
+
