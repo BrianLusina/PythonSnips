@@ -63,3 +63,7 @@ takes in a list of numbers, removes all odd numbers in the list, and returns the
 
 Returns the product of all the items in a list
 
+## Remove Duplicates
+
+Function that takes in a list and removes elements of the list that are the same
+
