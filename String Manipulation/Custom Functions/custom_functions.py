@@ -5,12 +5,6 @@ def digit_sum(n):
     return sum([int(i) for i in stringConvert])
 
 
-"""Function that counts the number of times an item appears in a list"""
-def count(sequence,item):
-    m = [n for n in sequence if n == item]
-    return len(m)
-
-
 """takes in a list of numbers, removes all odd numbers in the list, and returns the result."""
 def purify(l):
     return [i for i in l if i % 2 == 0]

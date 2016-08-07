@@ -50,3 +50,7 @@ Then, the output of the program should be:
 
 Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
+
+## Counter
+
+Function that counts the number of times an item appears in a list
