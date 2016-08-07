@@ -218,3 +218,7 @@ Remove all vowels from a text
 ## Scrabble Score
 
 Function that takes word input and returns equivalent scrabble score
+
+## Censor
+
+Function that takes a word,searches for it in text and replaces it with asterisks similar in number to the length of the word

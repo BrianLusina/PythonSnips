@@ -5,21 +5,6 @@ def digit_sum(n):
     return sum([int(i) for i in stringConvert])
 
 
-"""Function that takes a word,searches for it in text and replaces it with asterisks similar in number to the length of the word"""
-def censor(text,word):
-    stringList = text.split()
-    newList = []
-    newSent = ""
-    for w in stringList:
-        if w == word:
-            newList.append("*" * len(word))
-        else:
-            newList.append(w)
-
-        newSent = " ".join(newList)
-    return newSent
-
-
 """Function that counts the number of times an item appears in a list"""
 def count(sequence,item):
     m = [n for n in sequence if n == item]
