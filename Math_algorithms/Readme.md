@@ -146,3 +146,15 @@ For example, given N = 13, the sequence is [1, 3, 6, 13], because . . . :
  13 = 2*6 +1
 Write a function that returns this sequence given a number N. Try generating the elements of the resulting list in ascending order, i.e.,
 without resorting to a list reversal or prependig the elements to a list.
+
+## Super Size
+
+Write a function that rearranges an interger into its largest possible value.
+
+``` python
+super_size(123456) # 654321
+super_size(105)    # 510
+super_size(12)     # 21
+```
+
+If the argument passed through is single digit or is already the maximum possible integer, your function should simply return it.
