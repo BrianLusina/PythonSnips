@@ -291,3 +291,11 @@ You're at the zoo... all the meerkats look weird. Something has gone terribly wr
 Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
 
 Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics - simples!
+
+## XOXO
+
+being passed and return the string true if there is an equal number of x's and o's,
+because you cannot recieve an uneven number of hugs and kisses :-)
+otherwise return the string false. Only these two letters will be entered in the string,
+no punctuation or numbers.
+For example: if str is "xooxxxxooxo" then the output should return false because there are 6 x's and 5 o's.
