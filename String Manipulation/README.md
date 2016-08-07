@@ -210,3 +210,7 @@ Also please include simple test function to test the class methods.
 
 Hints:
 Use __init__ method to construct some parameters
+
+## AntiVowel
+
+Remove all vowels from a text

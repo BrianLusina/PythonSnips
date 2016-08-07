@@ -5,25 +5,6 @@ def digit_sum(n):
     return sum([int(i) for i in stringConvert])
 
 
-def factorial(x):
-    # function that returns the factorial of a non-negative number
-    return 1 if x == 0 or x == 1 else x * factorial(x-1)
-
-def reverse(text):
-    #function to reverse text in a string e.g abc becomes cba
-    rev= ""
-    count=1
-    #for i in range(len(text)):
-    while count <= len(text):
-         rev += text[len(text)-count]
-         count+=1
-    return rev        
-
-def anti_vowel(text):
-	#function to remove all vowels from a text
-    vowels={'a','e','i','o','u','A','E','I','O','U'}
-    vtext=''.join(letter for letter in text if letter not in vowels)
-    return vtext
 
 score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
          "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
