@@ -214,3 +214,7 @@ Use __init__ method to construct some parameters
 ## AntiVowel
 
 Remove all vowels from a text
+
+## Scrabble Score
+
+Function that takes word input and returns equivalent scrabble score
