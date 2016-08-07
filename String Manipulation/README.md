@@ -200,3 +200,13 @@ For example: if str is "Hello World" the output should be hELLO wORLD.
 Let numbers and symbols stay the way they are.
 
 NB do not use the swapcase python method.
+
+## reverse
+
+Define a class which has at least two methods:
+getString: to get a string from console input
+printString: to print the string in upper case.
+Also please include simple test function to test the class methods.
+
+Hints:
+Use __init__ method to construct some parameters

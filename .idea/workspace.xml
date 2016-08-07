@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/class_reverse/reverse.py" afterPath="$PROJECT_DIR$/String Manipulation/reverse.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/100+ Python challenging programming exercises.md" afterPath="$PROJECT_DIR$/100+ Python challenging programming exercises.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/README.md" afterPath="$PROJECT_DIR$/String Manipulation/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String Manipulation/reverse.py" afterPath="$PROJECT_DIR$/String Manipulation/reverse.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,22 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lists/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="257">
-                <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list_to_tuple.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lists/list_to_tuple.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,10 +36,26 @@
       <file leaf-file-name="reverse.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/String Manipulation/reverse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="260">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/String Manipulation/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="311">
+                <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownFxPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -76,7 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/To Move/codeWars.py" />
         <option value="$PROJECT_DIR$/iterators/README.md" />
         <option value="$PROJECT_DIR$/String Manipulation/count_vegetables.py" />
         <option value="$PROJECT_DIR$/user_file.py" />
@@ -118,7 +116,6 @@
         <option value="$PROJECT_DIR$/String Manipulation/pattern.py" />
         <option value="$PROJECT_DIR$/String Manipulation/name_that_number.py" />
         <option value="$PROJECT_DIR$/Math Algos/FizzBuzz.py" />
-        <option value="$PROJECT_DIR$/String Manipulation/README.md" />
         <option value="$PROJECT_DIR$/String Manipulation/swappie.py" />
         <option value="$PROJECT_DIR$/Math Algos/divisible_by7_not_5.py" />
         <option value="$PROJECT_DIR$/Math Algos/Readme.md" />
@@ -127,6 +124,8 @@
         <option value="$PROJECT_DIR$/Hashes/square_climber.py" />
         <option value="$PROJECT_DIR$/Lists/README.md" />
         <option value="$PROJECT_DIR$/Lists/list_to_tuple.py" />
+        <option value="$PROJECT_DIR$/String Manipulation/README.md" />
+        <option value="$PROJECT_DIR$/String Manipulation/reverse.py" />
       </list>
     </option>
   </component>
@@ -593,7 +592,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-744" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17449139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -602,7 +601,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -895,20 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/String Manipulation/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="3618">
-            <caret line="201" column="41" selection-start-line="201" selection-start-column="41" selection-end-line="201" selection-end-column="41" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/100+ Python challenging programming exercises.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1029,10 +1014,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/String Manipulation/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="311">
+            <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/String Manipulation/reverse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>
