@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Math Algos/Q_formula.py" afterPath="$PROJECT_DIR$/Math Algos/Q_formula.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lists/2D_Array.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/100+ Python challenging programming exercises.md" afterPath="$PROJECT_DIR$/100+ Python challenging programming exercises.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lists/README.md" afterPath="$PROJECT_DIR$/Lists/README.md" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,22 +25,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Q_formula.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Math Algos/Q_formula.py">
+      <file leaf-file-name="2D_Array.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lists/2D_Array.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Math Algos/Readme.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lists/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="73">
-                <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="34" />
+              <first_editor relative-caret-position="77">
+                <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -64,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/String Manipulation/count_vegetables.py" />
         <option value="$PROJECT_DIR$/user_file.py" />
         <option value="$PROJECT_DIR$/Files/user_file.py" />
         <option value="$PROJECT_DIR$/Files/user.txt" />
@@ -109,18 +111,19 @@
         <option value="$PROJECT_DIR$/Math Algos/factorial.py" />
         <option value="$PROJECT_DIR$/Hashes/README.md" />
         <option value="$PROJECT_DIR$/Hashes/square_climber.py" />
-        <option value="$PROJECT_DIR$/Lists/README.md" />
         <option value="$PROJECT_DIR$/Lists/list_to_tuple.py" />
         <option value="$PROJECT_DIR$/String Manipulation/README.md" />
         <option value="$PROJECT_DIR$/String Manipulation/reverse.py" />
         <option value="$PROJECT_DIR$/Math Algos/Readme.md" />
         <option value="$PROJECT_DIR$/Math Algos/Q_formula.py" />
+        <option value="$PROJECT_DIR$/Lists/2D_Array.py" />
+        <option value="$PROJECT_DIR$/Lists/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-744" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -580,7 +583,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="-744" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17449139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -628,13 +631,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/To Move/codeWars4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="112" column="4" selection-start-line="112" selection-start-column="2" selection-end-line="112" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/To Move/codeWars5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -960,20 +956,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lists/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="257">
-            <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/String Manipulation/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1024,6 +1006,28 @@
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lists/2D_Array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lists/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="77">
+            <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
