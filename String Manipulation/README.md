@@ -299,3 +299,14 @@ because you cannot recieve an uneven number of hugs and kisses :-)
 otherwise return the string false. Only these two letters will be entered in the string,
 no punctuation or numbers.
 For example: if str is "xooxxxxooxo" then the output should return false because there are 6 x's and 5 o's.
+
+## Paren Matcher
+
+Write a function that return whether or not the input string has balanced parantheses
+Balanced:
+'((()))'
+'(()())'
+
+2 Not balanced:
+'((()'
+'())('
