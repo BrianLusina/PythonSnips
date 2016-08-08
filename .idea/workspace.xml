@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Time/gigasecond.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Time/README.md" afterPath="$PROJECT_DIR$/Time/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Time/gigasecond.py" afterPath="$PROJECT_DIR$/Time/gigasecond.py" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,10 +67,10 @@
       <file leaf-file-name="gigasecond.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Time/gigasecond.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="323">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -334,7 +332,7 @@
       <recent name="$PROJECT_DIR$/Math Algos" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest Tests.test5">
+  <component name="RunManager" selected="Python tests.Unittests in gigasecond">
     <configuration default="false" name="Unittests in xoxo" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -350,28 +348,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest Tests.test1 (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String_Manipulation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String_Manipulation/xoxo.py" />
-      <option name="CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -438,6 +414,28 @@
       <option name="METHOD_NAME" value="test5" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in gigasecond" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Time" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PycharmProjects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Time/gigasecond.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -581,18 +579,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test1 (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test4" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test5" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test4" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test5" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in gigasecond" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test5" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test4" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test1 (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in gigasecond" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test5" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test4" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in xoxo" />
       </list>
     </recent_temporary>
   </component>
@@ -621,9 +619,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_Tests_test1 - 2016.08.08 at 08h 42m 23s.xml">
-      <configuration name="Unittest Tests.test1" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittest_Tests_test1_(1) - 2016.08.08 at 08h 58m 12s.xml">
       <configuration name="Unittest Tests.test1 (1)" configurationId="tests" />
     </history-entry>
@@ -633,8 +628,11 @@
     <history-entry file="Unittest_Tests_test5 - 2016.08.08 at 09h 03m 39s.xml">
       <configuration name="Unittest Tests.test5" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_xoxo - 2016.08.08 at 08h 56m 32s.xml">
-      <configuration name="Unittests in xoxo" configurationId="tests" />
+    <history-entry file="Unittests_in_gigasecond - 2016.08.08 at 09h 32m 22s.xml">
+      <configuration name="Unittests in gigasecond" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_gigasecond - 2016.08.08 at 09h 33m 20s.xml">
+      <configuration name="Unittests in gigasecond" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_xoxo - 2016.08.08 at 08h 57m 18s.xml">
       <configuration name="Unittests in xoxo" configurationId="tests" />
@@ -671,9 +669,9 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35913312" sideWeight="0.4968701" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35913312" sideWeight="0.4968701" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1049,10 +1047,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Time/gigasecond.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
