@@ -1,5 +1,6 @@
 from datetime import timedelta, datetime
 import unittest
+import calendar
 
 
 class Gigasecond(object):
@@ -8,6 +9,10 @@ class Gigasecond(object):
 
     def add_gigasecond(self):
         return self.birthday + timedelta(seconds=10 ** 9)
+
+    def get_date(self):
+        date = self.add_gigasecond()
+        return [str(date.date()), calendar.day_name[date.weekday()], str((date - datetime.today()).days) + " days left"]
 
 
 class Tests(unittest.TestCase):
@@ -22,7 +27,7 @@ class Tests(unittest.TestCase):
     def test_3(self):
         giga = Gigasecond(datetime(1959, 7, 19))
         self.assertEqual(
-            datetime(1991, 3, 27, 1, 46, 40),giga.add_gigasecond())
+            datetime(1991, 3, 27, 1, 46, 40), giga.add_gigasecond())
 
     def test_4(self):
         giga = Gigasecond(datetime(2015, 1, 24, 22, 0, 0))
@@ -40,3 +45,11 @@ class Tests(unittest.TestCase):
 
         self.assertEqual(
             your_gigasecond, giga.add_gigasecond())
+
+    def test_6(self):
+        giga = Gigasecond(datetime(1988, 5, 15))
+        self.assertEqual(["2020-01-22", "Wednesday", "1764 days left"], giga.get_date())
+
+    def test_7(self):
+        giga = Gigasecond(datetime(2015, 2, 17))
+        self.assertEqual(["2046-10-26", "Friday", "11538 days left"], giga.get_date())

@@ -11,5 +11,8 @@ class Functions(object):
 def create_iterator(func, n):
     c = 0
     while c < n:
-        func
+        func *= func
         c += 1
+    return func
+
+print(create_iterator(Functions.get_double(5), 3))
