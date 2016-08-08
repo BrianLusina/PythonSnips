@@ -1,3 +1,15 @@
+class Functions(object):
+    """
+    Class of random functions to be called by iterator
+    """
+    # returns the double of a number
+    @staticmethod
+    def get_double(number):
+        return number * 2
+
+
 def create_iterator(func, n):
-  # TODO: Write code here to return a function
-  # that executes *func*, *n* times on a supplied input
+    c = 0
+    while c < n:
+        func
+        c += 1
