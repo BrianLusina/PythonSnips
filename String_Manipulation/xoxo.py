@@ -11,13 +11,12 @@ def xoxo(stringer):
     stringer = stringer.lower()
     if stringer.find("x") != -1 and stringer.find("o") != -1:
         return stringer.count("x") == stringer.count("o")
-    else:
-        return False
+    return False
 
 
 def xoxo_reg(stringer):
-    X = re.findall(r"(o)+(x)(o)+|(x)+(o)(x)+", stringer, re.IGNORECASE)
-    O = re.findall(r"(x)+(o)(x)+", stringer, re.IGNORECASE)
+    X = re.findall(r'(o)(x)(o)', stringer, re.IGNORECASE)
+    O = re.findall(r"^o$", stringer, re.IGNORECASE)
     return len(X) == len(O)
 
 
