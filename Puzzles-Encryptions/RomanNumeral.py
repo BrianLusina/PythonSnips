@@ -7,6 +7,8 @@ class RomanNumeral(object):
     the Keys will be ones, tens and hundreds and thousands
     :translate_roman_numeral checks if the roman numeral is in dictionary, retuns the value
     if not, loops through the dictionary, checking each string
+
+    :translate_roman_numeral_2, uses a ROMAN_LIST to loop through each value and number and checks
     """
     ROMANS = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10,
               "XX": 20, "XXX": 30,"XL": 40, "L": 50, "LX": 60, "LXX": 70, "LXXX": 80, "XC": 90,
@@ -39,7 +41,38 @@ class RomanNumeral(object):
                 if num_str.startswith(letter):
                     num_str = num_str[1:]
                     arabic_no += value
-            return arabic_no
+        return arabic_no
+
+    def translate_roman_numeral_v3(self):
+        if type(self.number) != type(""):
+            raise TypeError("expected string, got %s" % type(self.number))
+        else:
+            num = self.number
+            nums = ['M', 'D', 'C', 'L', 'X', 'V', 'I']
+            ints = [1000, 500, 100, 50, 10, 5, 1]
+            places = []
+            for c in num:
+                if not c in nums:
+                    raise ValueError("input is not a valid roman numeral: %s" % self.number)
+            for i in range(len(num)):
+                c = num[i]
+                value = ints[nums.index(c)]
+                # If the next place holds a larger number, this value is negative.
+                try:
+                    nextvalue = ints[nums.index(num[i + 1])]
+                    if nextvalue > value:
+                        value *= -1
+                except IndexError:
+                    # there is no next place.
+                    pass
+                places.append(value)
+            sum = 0
+            for n in places: sum += n
+                # Easiest test for validity...
+                if int_to_roman(sum) == input:
+                    return sum
+                else:
+                    raise ValueError('input is not a valid roman numeral: %s' % self.number)
 
 
 class RomanTests(unittest.TestCase):
@@ -62,5 +95,4 @@ class RomanTests(unittest.TestCase):
     def test_64(self):
         roman = RomanNumeral("LXIV")
         self.assertEqual(roman.translate_roman_numeral(), 64)
-
 
