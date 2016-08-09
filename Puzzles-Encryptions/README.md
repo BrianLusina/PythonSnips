@@ -90,3 +90,19 @@ Once you run this program, the variable a will have a random integer that the co
 
 Bonus:
 Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
+
+## Roman Numeral
+
+Given a roman numeral as input, write a function that converts the roman numeral to a number and outputs it.
+ Example:
+```python 
+translateRomanNumeral("LX") # 60
+```
+
+When a smaller numeral appears before a larger one, it becomes a subtractive operation. You can assume only one smaller numeral may appear in front of larger one.
+Ex:
+```python
+translateRomanNumeral("IV") # 4
+```
+You should return `nil` on invalid input.
+

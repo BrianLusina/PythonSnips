@@ -15,8 +15,13 @@ class PeteTalk(object):
         self.speech = speech
         self.ok_words = ok_words
 
+    """
+    splits the string at these punctuation marks [".","!","?"]
+    :returns hashed speech
+    """
     def pete_talk(self):
         speech, ok = self.speech, self.ok_words
+        re.split(r'\.+|,+|!+|\?+', speech)
 
 
 class Tests(unittest.TestCase):
