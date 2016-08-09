@@ -25,3 +25,7 @@ Notes: Assume the data is input by console.
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 Use list and .join
+
+## HexToDec
+
+Write function hexToDec which converts hex number (given as a string) to decimal number.
