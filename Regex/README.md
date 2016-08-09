@@ -30,13 +30,12 @@ Example Output 2
 
 ## Pete Talk
 
-Our friendly friend Pete is really a nice person, but he tends to be rather... Inappropriate.
-
-And possibly loud, if given enough ethanol and free rein, so we ask you to write a function that should take its not always "clean" speech and cover as much as possible of it, in order not to offend some more sensible spirits.
+Write a function that should take its not always "clean" speech and cover as much as possible of it, in order not to offend some more sensible spirits.
 
 For example, given an input like
-
+```python
 What the hell am I doing here? And where is my wallet? PETE SMASH!
+```
 You are expected to turn it into something like:
 
 ```python
@@ -48,7 +47,5 @@ In case you didn't figure out the rules yet: any words longer than 2 characters 
 Conversely, you need to be sure that the start of each sentence has a capitalized word at the beginning. Sentences are divided by the aforementioned punctuation marks.
 
 Finally, the function will take an additional parameter consisting of an array/list of allowed words which are not to be replaced.
-
-Extra cookies if you can do it all in some efficient way and/or using our dear regexes ;)
 
 > ALGORITHMS REGULAR EXPRESSIONS DECLARATIVE PROGRAMMING ADVANCED LANGUAGE FEATURES FUNDAMENTALS STRINGS
