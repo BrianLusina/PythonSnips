@@ -28,7 +28,7 @@ Example Output 2
 
 112
 
-## Pete's Inap
+## Pete Talk
 
 Our friendly friend Pete is really a nice person, but he tends to be rather... Inappropriate.
 
