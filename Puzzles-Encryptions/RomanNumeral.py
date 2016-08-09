@@ -1,5 +1,19 @@
 import unittest
-
+class Numerals(object):
+    @staticmethod
+    def int_to_roman(number):
+        if type(number) != type(1):
+            raise TypeError("expected integer, got %s" % type(number))
+        if not 0 < number < 4000:
+            raise ValueError("Argument must be between 1 and 3999")
+        ints = (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
+        nums = ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
+        result = ""
+        for i in range(len(ints)):
+            count = int(number/ ints[i])
+            result += nums[i] * count
+            number -= ints[i] * count
+        return result
 
 class RomanNumeral(object):
     """
@@ -67,12 +81,14 @@ class RomanNumeral(object):
                     pass
                 places.append(value)
             sum = 0
-            for n in places: sum += n
-                # Easiest test for validity...
-                if int_to_roman(sum) == input:
-                    return sum
-                else:
-                    raise ValueError('input is not a valid roman numeral: %s' % self.number)
+
+            # Easiest test for validity...
+            for n in places:
+                sum += n
+            if Numerals.int_to_roman(sum) == input:
+                return sum
+            else:
+                raise ValueError('input is not a valid roman numeral: %s' % self.number)
 
 
 class RomanTests(unittest.TestCase):
