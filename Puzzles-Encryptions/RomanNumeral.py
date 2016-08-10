@@ -1,4 +1,6 @@
 import unittest
+
+
 class Numerals(object):
     @staticmethod
     def int_to_roman(number):
@@ -14,6 +16,7 @@ class Numerals(object):
             result += nums[i] * count
             number -= ints[i] * count
         return result
+
 
 class RomanNumeral(object):
     """
