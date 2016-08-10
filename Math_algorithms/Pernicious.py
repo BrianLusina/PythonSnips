@@ -11,15 +11,22 @@ class Pernicious(object):
     def __init__(self, number):
         self.number = number
 
-    # long
+    # long method
     def is_pernicious(self):
         primes = []
-        if self.number <= 1:
+        if self.number <= 2:
             return "No pernicious numbers"
-        for x in range(3, int(self.number + 1)):
+        for x in range(3, int(self.number) + 1):
             if Pernicious.is_prime(sum([int(i) for i in '{0:b}'.format(x)])):
                 primes.append(x)
         return primes
+
+    # using ternary and lambda
+    def is_pernicious_v2(self):
+        m = lambda i: '{0:b}'.format(i)
+        if self.number <= 1:
+            return "No pernicious numbers"
+        return [x for x in range(3, int(self.number) + 1) if Pernicious.is_prime(sum([int(y) for y in m(x)]))]
 
     @staticmethod
     def is_prime(num):
@@ -71,3 +78,7 @@ class PerniciousTests(unittest.TestCase):
         self.assertEqual(pern.is_pernicious(),
                          [3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 24, 25, 26, 28, 31, 33, 34, 35, 36,
                           37, 38, 40, 41, 42])
+
+    def test_10(self):
+        pern = Pernicious(2)
+        self.assertEqual(pern.is_pernicious(), "No pernicious numbers")
