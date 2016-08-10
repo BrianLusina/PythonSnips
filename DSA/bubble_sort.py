@@ -15,7 +15,7 @@ class BubbleSort(object):
         self.list_sort = list_sort
 
     def bubbly_ascend(self):
-        for p_num in range(len(self.list_sort)-1, 0, 1):
+        for p_num in range(len(self.list_sort)-1, 0, -1):
             for x in range(p_num):
                 if self.list_sort[x] > self.list_sort[x + 1]:
                     temp = self.list_sort[x]
@@ -24,7 +24,7 @@ class BubbleSort(object):
         return self.list_sort
 
     def bubbly_descend(self):
-        for p_num in range(len(self.list_sort) - 1, 0, 1):
+        for p_num in range(len(self.list_sort) - 1, 0, -1):
             for x in range(p_num):
                 if self.list_sort[x] < self.list_sort[x + 1]:
                     temp = self.list_sort[x]
@@ -34,6 +34,10 @@ class BubbleSort(object):
 
 
 class Tests(unittest.TestCase):
-    def test(self):
+    def test_1(self):
         bubbles = BubbleSort([54, 26, 93, 17, 77, 31, 44, 55, 20])
         self.assertEqual(bubbles.bubbly_ascend(), sorted([54, 26, 93, 17, 77, 31, 44, 55, 20]))
+
+    def test_2(self):
+        bubbles = BubbleSort([54, 26, 93, 17, 77, 31, 44, 55, 20])
+        self.assertEqual(bubbles.bubbly_descend(), sorted([54, 26, 93, 17, 77, 31, 44, 55, 20], reverse=True))
