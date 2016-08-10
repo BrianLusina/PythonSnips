@@ -28,6 +28,11 @@ class Pernicious(object):
             return "No pernicious numbers"
         return [x for x in range(3, int(self.number) + 1) if Pernicious.is_prime(sum([int(y) for y in m(x)]))]
 
+    def is_pernicious_v3(self):
+        return [x for x in range(int(self.number) + 1) if
+                bin(x).count("1") in [2, 3, 5, 7, 11, 13]] or "No pernicious numbers"
+
+
     @staticmethod
     def is_prime(num):
         return num > 1 and all(num % i for i in islice(count(2), int(sqrt(num) - 1)))
