@@ -11,13 +11,15 @@ def is_prime(x):
     else:
         return True
 """
+
+
 class PrimeCheck():
     def __init__(self):
         pass
 
     @staticmethod
     def is_prime(num):
-        return num > 1 and all(num%i for i in islice(count(2),int(sqrt(num)-1)))
+        return num > 1 and all(num % i for i in islice(count(2), int(sqrt(num)-1)))
 
 
 class Test(object):

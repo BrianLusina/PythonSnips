@@ -1,11 +1,29 @@
 import unittest
+from math import sqrt
+from itertools import count, islice
 
 
 class Pernicious(object):
+    """
+    get the range of the number from 3 to the number, converting each to binary
+    for
+    """
     def __init__(self, number):
         self.number = number
 
+    # long
     def is_pernicious(self):
+        primes = []
+        if self.number <= 1:
+            return "No pernicious numbers"
+        for x in range(3, int(self.number + 1)):
+            if Pernicious.is_prime(sum([int(i) for i in '{0:b}'.format(x)])):
+                primes.append(x)
+        return primes
+
+    @staticmethod
+    def is_prime(num):
+        return num > 1 and all(num % i for i in islice(count(2), int(sqrt(num) - 1)))
 
 
 class PerniciousTests(unittest.TestCase):
