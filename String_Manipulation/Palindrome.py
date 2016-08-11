@@ -63,7 +63,7 @@ class Tests(unittest.TestCase):
         if randint(0, 1000):
             test_case = randint(0, 10000000)
         else:
-            test_case = "".join(choice(ascii_letters) for i in range(randint(1, 1000)))
+            test_case = "".join(choice(ascii_letters) for _ in range(randint(1, 1000)))
             if randint(0, 1000):
                 test_case = "%s%s" % (test_case, test_case[::-1])
 
