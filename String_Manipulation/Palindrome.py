@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
+from random import choice, randint
+from string import ascii_letters
 
 
 class Palindrome(object):
@@ -8,7 +10,7 @@ class Palindrome(object):
 
     @staticmethod
     def is_palindrome(a):
-        return a == a[::-1]
+        return str(a) == str(a)[::-1]
 
     @staticmethod
     def longest_palindrome(s):
@@ -39,7 +41,39 @@ class Tests(unittest.TestCase):
         self.assertEqual(Palindrome.longest_palindrome("aab"), 2)
 
     def test_5(self):
-        self.assertEqual(  Palindrome.longest_palindrome("abcdefghba"), 1)
+        self.assertEqual(Palindrome.longest_palindrome("abcdefghba"), 1)
 
     def test_6(self):
         self.assertEqual(Palindrome.longest_palindrome("baablkj12345432133d"), 9)
+
+    def test_7(self):
+        self.assertEqual(Palindrome.is_palindrome("anna"), True)
+
+    def test_8(self):
+        self.assertEqual(Palindrome.is_palindrome("walter"), False)
+
+    def test_9(self):
+        self.assertEqual(Palindrome.is_palindrome(12321), True)
+
+    def test_10(self):
+        self.assertEqual(Palindrome.is_palindrome(123456), False)
+
+    @staticmethod
+    def generate_test_case():
+        if randint(0, 1000):
+            test_case = randint(0, 10000000)
+        else:
+            test_case = "".join(choice(ascii_letters) for i in range(randint(1, 1000)))
+            if randint(0, 1000):
+                test_case = "%s%s" % (test_case, test_case[::-1])
+
+        return test_case
+
+    @staticmethod
+    def reference(s):
+        return str(s) == str(s)[::-1]
+
+    def test_11(self):
+        for _ in range(100):
+            test_case = Tests.generate_test_case()
+            self.assertEqual(Palindrome.is_palindrome(test_case), self.reference(test_case))
