@@ -15,52 +15,6 @@ Solution
 
 3.	Questions
 #----------------------------------------#
-Question 11
-Level 2
-
-Question:
-Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
-Example:
-0100,0011,1010,1001
-Then the output should be:
-1010
-Notes: Assume the data is input by console.
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
-
-Solution:
-value = []
-items=[x for x in raw_input().split(',')]
-for p in items:
-    intp = int(p, 2)
-    if not intp%5:
-        value.append(p)
-
-print ','.join(value)
-#----------------------------------------#
-
-#----------------------------------------#
-Question 12
-Level 2
-
-Question:
-Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.
-The numbers obtained should be printed in a comma-separated sequence on a single line.
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
-
-Solution:
-values = []
-for i in range(1000, 3001):
-    s = str(i)
-    if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
-        values.append(s)
-print ",".join(values)
-#----------------------------------------#
-
-#----------------------------------------#
 Question 13
 Level 2
 
@@ -168,7 +122,7 @@ Question:
 Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log format is shown as following:
 D 100
 W 200
-¡­
+ï¿½ï¿½
 D means deposit while W means withdrawal.
 Suppose the following input is supplied to the program:
 D 300
@@ -311,13 +265,13 @@ for i in reverse(100):
 Question 21
 Level 3
 
-Question£º
+Questionï¿½ï¿½
 A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. The trace of robot movement is shown as the following:
 UP 5
 DOWN 3
 LEFT 3
 RIGHT 2
-¡­
+ï¿½ï¿½
 The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence of movement and original point. If the distance is a float, then just print the nearest integer.
 Example:
 If the following tuples are given as input to the program:
