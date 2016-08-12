@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba104ea3-6555-4ed8-8fa5-e6d94c4c91ca" name="Default" comment="Update gitignore">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/String_Manipulation/WordSearch.py" afterPath="$PROJECT_DIR$/String_Manipulation/WordSearch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Search/README.md" afterPath="$PROJECT_DIR$/Data_Search/README.md" />
     </list>
     <ignored path="PycharmProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,44 +23,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="100+ Python challenging programming exercises.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/100+ Python challenging programming exercises.md">
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="-90">
-                <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordSearch.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/String_Manipulation/WordSearch.py">
+      <file leaf-file-name="domestictrade.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Data_Search/domestic_trade/domestictrade.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/String_Manipulation/README.md">
+        <entry file="file://$PROJECT_DIR$/Data_Search/README.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="291">
-                <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
+              <first_editor relative-caret-position="270">
+                <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TRANS.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data_Search/domestic_trade/TRANS.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,9 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Math Algos/DigitSum.py" />
-        <option value="$PROJECT_DIR$/Math Algos/Readme.md" />
-        <option value="$PROJECT_DIR$/String Manipulation/LongestWord/Longest word.py" />
         <option value="$PROJECT_DIR$/String Manipulation/Longest word.py" />
         <option value="$PROJECT_DIR$/String Manipulation/NameScore/Readme.md" />
         <option value="$PROJECT_DIR$/String Manipulation/Name_score.py" />
@@ -136,11 +130,14 @@
         <option value="$PROJECT_DIR$/Math_algorithms/PopulationGrowth.py" />
         <option value="$PROJECT_DIR$/String_Manipulation/README.md" />
         <option value="$PROJECT_DIR$/String_Manipulation/WordSearch.py" />
+        <option value="$PROJECT_DIR$/Data_Search/domestic_trade/domestrictrade_tests.py" />
+        <option value="$PROJECT_DIR$/Data_Search/README.md" />
+        <option value="$PROJECT_DIR$/Data_Search/domestic_trade/domestictrade.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1431" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
@@ -195,7 +192,25 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="String_Manipulation">
+            <PATH_ELEMENT USER_OBJECT="Data_Search">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Python-Snippets">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Data_Search">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="domestic_trade">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -237,115 +252,22 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in WordSearch">
-    <configuration default="false" name="Unittest Tests.test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.domestictrade">
+    <configuration default="false" name="domestictrade" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String_Manipulation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data_Search/domestic_trade" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String_Manipulation/LetterDigitCount.py" />
-      <option name="CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in PopulationGrowth" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Math_algorithms" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Math_algorithms/PopulationGrowth.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in WordSearch" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String_Manipulation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String_Manipulation/WordSearch.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in WordSearch (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String_Manipulation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String_Manipulation/WordSearch.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in WordSearch (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/String_Manipulation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PycharmProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/String_Manipulation/WordSearch.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data_Search/domestic_trade/domestictrade.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -482,20 +404,12 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in PopulationGrowth" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in WordSearch" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in WordSearch (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in WordSearch (2)" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.domestictrade" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in WordSearch" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in WordSearch (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in WordSearch (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in PopulationGrowth" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Tests.test" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.domestictrade" />
       </list>
     </recent_temporary>
   </component>
@@ -538,35 +452,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 34m 54s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 35m 27s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 36m 16s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 36m 25s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 37m 43s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 37m 19s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 39m 58s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 39m 41s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 40m 09s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 44m 20s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 40m 49s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 44m 41s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 41m 51s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 45m 01s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch - 2016.08.12 at 06h 43m 51s.xml">
-      <configuration name="Unittests in WordSearch" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 45m 51s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch_(1) - 2016.08.12 at 06h 37m 12s.xml">
-      <configuration name="Unittests in WordSearch (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 45m 58s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_WordSearch_(2) - 2016.08.12 at 06h 38m 33s.xml">
-      <configuration name="Unittests in WordSearch (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_domestictrade - 2016.08.12 at 09h 46m 38s.xml">
+      <configuration name="Unittests in domestictrade" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -579,15 +493,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17527387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5031299" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3142415" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39473686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35913312" sideWeight="0.4968701" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -598,7 +513,6 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="165" y="152" width="1101" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -632,29 +546,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/String_Manipulation/Accum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/String_Manipulation/get_user_id.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/String_Manipulation/WrongEnd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/String Manipulation/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/xoxo/xoxo.py" />
     <entry file="file://$PROJECT_DIR$/Puzzles-Encryptions/password.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -996,20 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/String_Manipulation/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="291">
-            <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/String_Manipulation/LetterDigitCount.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1018,11 +895,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/String_Manipulation/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="57">
+            <caret line="421" column="0" selection-start-line="421" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/String_Manipulation/WordSearch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Search/json_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Search/domestic_trade/domestrictrade_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Search/domestic_trade/TRANS.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Search/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Search/domestic_trade/domestictrade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
