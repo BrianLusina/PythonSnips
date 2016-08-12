@@ -2,7 +2,7 @@ import unittest
 
 
 def word_search(query, seq):
-    return None
+    return [x for x in seq if query.lower() in x.lower()] or [str(None)]
 
 
 class WordTests(unittest.TestCase):
