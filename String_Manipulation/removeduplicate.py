@@ -3,7 +3,11 @@ import time
 
 
 def remove_duplicate(strin):
-    return set(strin)
+    out = ""
+    for x in strin:
+        if x not in out:
+            out += x
+    return out
 
 
 class DuplicateTests(unittest.TestCase):
@@ -12,6 +16,7 @@ class DuplicateTests(unittest.TestCase):
 
     def tearDown(self):
         t = time.time() - self.startTime
+        print("%s: %.3f" % (self.id(), t))
 
     def test_1(self):
         time.sleep(1)
