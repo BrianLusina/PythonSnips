@@ -2,12 +2,20 @@ import unittest
 import time
 
 
-def remove_duplicate(strin):
-    out = ""
-    for x in strin:
-        if x not in out:
-            out += x
-    return out
+class RemoveDuplicate(object):
+    """
+    loop through characters in string and check if it is not in output string
+    if not, add to output string, return the string.
+    """
+    def __init__(self, strin):
+        self.strin = strin
+
+    def remove_duplicate(self):
+        out = ""
+        for x in self.strin.lower():
+            if x not in out:
+                out += x
+        return out
 
 
 class DuplicateTests(unittest.TestCase):
@@ -20,7 +28,14 @@ class DuplicateTests(unittest.TestCase):
 
     def test_1(self):
         time.sleep(1)
-        self.assertEqual("tre avsl", remove_duplicate("tree traversal"))
+        rem = RemoveDuplicate("tree traversal")
+        self.assertEqual("tre avsl", rem.remove_duplicate())
+
+    def test_2(self):
+        time.sleep(2)
+        rem = RemoveDuplicate("Duplicate duplicate")
+        self.assertEqual("duplicate ", rem.remove_duplicate())
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(DuplicateTests)
