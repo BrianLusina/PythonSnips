@@ -28,8 +28,9 @@ class MaxProd(object):
     def max_product_fast(self):
         first = max(self.array)
         second = max(n for n in self.array if n != first)
-        return first *  second
+        return first * second
 
+    # fastest solution
     def max_product_fastest(self):
         x = heapq.nlargest(2, self.array)
         return x[0] * x[1]

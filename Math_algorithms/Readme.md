@@ -244,10 +244,28 @@ Passing [2, 6, 3] should return 18, the product of [6, 3].
 
 > Disclaimer: Mr. Roll will only accept solutions that are faster than his, which has a running time O(nlogn).
 
-```javascript
+``` python
 maxProduct([2, 1, 5, 0, 4, 3])              // 20
 maxProduct([7, 8, 9])                       // 72
 maxProduct([33, 231, 454, 11, 9, 99, 57])   // 104874
 ```
 
 > FUNDAMENTALS ARRAYS ALGORITHMS LOOPS CONTROL FLOW BASIC LANGUAGE FEATURES SORTING
+
+## Triangle Odd
+
+Given the triangle of consecutive odd numbers:
+
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+...
+Calculate the row sums of this triangle from the row index (starting at index 1) e.g.:
+``` python
+row_sum_odd_numbers(1); # 1
+row_sum_odd_numbers(2); # 3 + 5 = 8
+```
+
+> FUNDAMENTALS ARRAYS LISTS DATA STRUCTURES NUMBERS ARITHMETIC MATHEMATICS ALGORITHMS
