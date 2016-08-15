@@ -450,3 +450,9 @@ title_case('a clash of KINGS', 'a an the of') # should return: 'A Clash of Kings
 title_case('THE WIND IN THE WILLOWS', 'The In') # should return: 'The Wind in the Willows'
 title_case('the quick brown fox') # should return: 'The Quick Brown Fox'
 ```
+
+## Remove Duplicate
+
+Remove duplicate characters in a given string keeping only the first occurrences.
+For example, if the input is ‘tree traversal’
+the output will be "tre avsl".
