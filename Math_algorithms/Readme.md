@@ -131,8 +131,17 @@ If the output received is in decimal form, it should be rounded off to its neare
 In case of input data being supplied to the question, it should be assumed to be a console input. 
 
 ## DigitCount
+Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer. Square all numbers k (0 <= k <= n) between 0 and n. Count the numbers of digits d used in the writing of all the k**2. Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
 
-Function to sum all the digits of a number convert the number into a string
+Examples:
+
+n = 10, d = 1, the k*k are 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+We are using the digit 1 in 1, 16, 81, 100. The total count is then 4.
+
+nb_dig(25, 1):
+the numbers of interest are
+1, 4, 9, 10, 11, 12, 13, 14, 19, 21 which squared are 1, 16, 81, 100, 121, 144, 169, 196, 361, 441
+so there are 11 digits `1` for the squares of numbers between 0 and 25.
 
 ## Climb Sequence
 
@@ -269,3 +278,8 @@ row_sum_odd_numbers(2); # 3 + 5 = 8
 ```
 
 > FUNDAMENTALS ARRAYS LISTS DATA STRUCTURES NUMBERS ARITHMETIC MATHEMATICS ALGORITHMS
+
+## Make Larger Number
+
+Given a number whose digits are unique, find the next larger number that can be formed with those digits.
+For example: 241 will output 421, 27 will output 72 and 68734 will output 87643
