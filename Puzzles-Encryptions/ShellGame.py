@@ -1,12 +1,17 @@
 import unittest
 import time
 
+
 class ShellGame(object):
     def __init__(self, start, swaps):
         self.start = start
         self.swaps = swaps
 
     def find_the_ball(self):
+        if len(self.swaps) == 0:
+            return self.start
+        else:
+
 
 
 class ShellGameTests(unittest.TestCase):
@@ -26,6 +31,11 @@ class ShellGameTests(unittest.TestCase):
         time.sleep(2)
         shell = ShellGame(0,[(0, 1), (2, 1), (0, 1)])
         self.assertEqual(2, shell.find_the_ball(),"Find the ball in position 2")
+
+    def test_3(self):
+        time.sleep(3)
+        shell = ShellGame(4, [[0, 9], [9, 3], [3, 7], [7, 8], [8, 2], [4, 5]])
+        self.assertEqual(5, shell.find_the_ball(), "Nope! Expected 5.")
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(ShellGameTests)
