@@ -11,7 +11,10 @@ class ShellGame(object):
         if len(self.swaps) == 0:
             return self.start
         else:
-
+            for pos in self.swaps:
+                for x in pos:
+                    self.start = x
+        return self.start
 
 
 class ShellGameTests(unittest.TestCase):
@@ -29,8 +32,8 @@ class ShellGameTests(unittest.TestCase):
 
     def test_2(self):
         time.sleep(2)
-        shell = ShellGame(0,[(0, 1), (2, 1), (0, 1)])
-        self.assertEqual(2, shell.find_the_ball(),"Find the ball in position 2")
+        shell = ShellGame(0, [(0, 1), (2, 1), (0, 1)])
+        self.assertEqual(2, shell.find_the_ball(), "Find the ball in position 2")
 
     def test_3(self):
         time.sleep(3)
