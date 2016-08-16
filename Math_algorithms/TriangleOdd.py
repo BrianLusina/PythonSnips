@@ -1,8 +1,11 @@
 import unittest
 import time
+from math import pow
+
 
 def row_sum_odd_numbers(n):
-    #your code here
+    return n ** 3
+
 
 class TriangleTests(unittest.TestCase):
     def setUp(self):
