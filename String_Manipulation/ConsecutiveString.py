@@ -17,6 +17,16 @@ class ConsecutiveString(object):
         return result
 
 
+def longest_consec(starr, k):
+    result = ""
+    if 0 < k <= len(starr):
+        for index in range(len(starr) - k + 1):
+            s = ''.join(starr[index:index + k])
+            if len(s) > len(result):
+                result = s
+
+    return result
+
 class ConsecutiveTests(unittest.TestCase):
     def test_1(self):
         long_con = ConsecutiveString(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
