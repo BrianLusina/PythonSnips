@@ -456,3 +456,16 @@ title_case('the quick brown fox') # should return: 'The Quick Brown Fox'
 Remove duplicate characters in a given string keeping only the first occurrences.
 For example, if the input is ‘tree traversal’
 the output will be "tre avsl".
+
+## Consecutive String
+
+You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+
+Example:
+
+```python
+longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
+```
+
+n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
+

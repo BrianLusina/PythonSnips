@@ -63,11 +63,11 @@ class Tests(unittest.TestCase):
         self.assertEqual(72, mk.make_larger_v2())
 
     def test_7(self):
-        time.sleep(3)
+        time.sleep(7)
         mk = MakeLarger(68734)
         self.assertEqual(87643, mk.make_larger_v2())
 
     def test_8(self):
-        time.sleep(4)
+        time.sleep(8)
         mk = MakeLarger(1)
         self.assertEqual(1, mk.make_larger_v2())
