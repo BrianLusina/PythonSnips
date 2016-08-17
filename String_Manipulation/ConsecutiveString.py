@@ -6,11 +6,20 @@ class ConsecutiveString(object):
         self.k = k
 
     def longest_consec(self):
+        result = ""
+
+        if 0 < self.k <= len(self.starr):
+            for index in range(len(self.starr) - self.k + 1):
+                s = ''.join(self.starr[index:index + self.k])
+                if len(s) > len(result):
+                    result = s
+
+        return result
 
 
 class ConsecutiveTests(unittest.TestCase):
     def test_1(self):
-        long_con =  ConsecutiveString(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+        long_con = ConsecutiveString(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
         self.assertEqual("abigailtheta", long_con.longest_consec())
 
     def test_2(self):
