@@ -1,18 +1,3 @@
-Problem template
-
-#----------------------------------------#
-Question
-Hints
-Solution
-
-#----------------------------------------#
-
-Solution:
-values = raw_input()
-numbers = [x for x in values.split(",") if int(x)%2!=0]
-print ",".join(numbers)
-#----------------------------------------#
-
 Question 17
 Level 2
 
@@ -20,7 +5,6 @@ Question:
 Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log format is shown as following:
 D 100
 W 200
-��
 D means deposit while W means withdrawal.
 Suppose the following input is supplied to the program:
 D 300
