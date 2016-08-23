@@ -50,4 +50,3 @@ class Tests(unittest.TestCase):
     def test4(self):
         press = KeyPress("i 8 2 Many mandazi 4 brekky")
         self.assertEqual(45, press.presses())
-
