@@ -1,5 +1,5 @@
 def mod7(n):
-    for x in range(n+1):
+    for x in range(1, n+1):
         if x % 7 == 0:
             yield x
 
