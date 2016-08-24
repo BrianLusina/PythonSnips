@@ -3,7 +3,7 @@
 Features a bunch of Python snippets on real life simulations.
 
 
-## Robot movement
+## Robot mover
 
 A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. The trace of robot movement is shown as the following:
 UP 5
