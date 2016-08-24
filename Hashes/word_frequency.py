@@ -1,9 +1,14 @@
+import unittest
+
+
 def frequency(sentence):
-    freq = {}
+    freq, out = {}, ""
     for word in sentence.split():
         freq[word] = freq.get(word, 0) + 1
-    words = freq.keys()
-    sorted(words)
 
-    for w in words:
-        print("%s:%d" % (w,freq[w]))
+    return " ".join(["%s:%d" % (w, freq[w]) for w in sorted(freq)])
+
+
+class FreqTests(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual("2:2  3.:1 3?:1 New:1 Python:5 Read:1 and:1 between:1 choosing:1 or:2 to:1", frequency("New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3"))
