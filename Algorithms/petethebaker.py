@@ -12,12 +12,13 @@ def cakes(recipe, available):
     if len(recipe) > len(available):
         return cake_count
     else:
-        for x in recipe:
-            if x in available:
-                available[x] -= recipe[x]
-                print(available)
-                cake_count += 1
-    return cake_count - 1
+        if all(x for x in available if x in recipe):
+            for x, y in list(tuple(recipe.items())):
+                if x in available:
+                    available[x] -= recipe[x]
+                    print(available)
+                    cake_count += 1
+    return cake_count
 
 
 class CakeTests(unittest.TestCase):
