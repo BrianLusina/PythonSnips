@@ -10,6 +10,7 @@ class KeyPress(object):
      :returns key count, how many presses are made on the keypad
      :arg takes in a phrase
     """
+
     def __init__(self, phrase):
         self.phrase = phrase
 
@@ -32,6 +33,17 @@ class KeyPress(object):
                     # add 1, as indexes start from 0
                     key_count += curr_list.index(letter) + 1
         return key_count
+
+    def presses_v2(self):
+        BUTTONS = ['1', 'abc2', 'def3',
+                   'ghi4', 'jkl5', 'mno6',
+                   'pqrs7', 'tuv8', 'wxyz9',
+                   '*', ' 0', '#']
+        return sum(1 + button.find(c) for c in self.phrase.lower() for button in BUTTONS if c in button)
+
+    # using lambda expression
+    presses_v3 = lambda s: sum((c in b) * (1 + b.find(c)) for c in s.lower() for b in
+                               '1,abc2,def3,ghi4,jkl5,mno6,pqrs7,tuv8,wxyz9,*, 0,#'.split(","))
 
 
 class Tests(unittest.TestCase):
