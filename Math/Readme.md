@@ -304,5 +304,14 @@ Hints:
 Use filter() to filter some elements in a list.
 Use lambda to define anonymous functions.
 
+## Map Squares
+
+Write a program which can map() to make a list whose elements are square of elements
+
+Hints:
+
+Use map() to generate a list.
+Use lambda to define anonymous functions.
+
 
 
