@@ -494,3 +494,9 @@ Examples:
 Non-string inputs should be converted to strings.
 
 Return an array of arrays containing pairs of distinct indices that form palindromes. Pairs should be reutrned in the order they appear in the original list.
+
+## PIG LATIN
+
+Move the first letter of each word to the end of it, then add 'ay' to the end of the word.
+
+pig_it('Pig latin is cool') # igPay atinlay siay oolcay
