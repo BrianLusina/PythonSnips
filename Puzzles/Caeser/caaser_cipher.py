@@ -1,5 +1,5 @@
 
-class CaesarCipher(object):
+class CaesarCipherV1(object):
     """
     cipher: takes in string and numing number
     :returns the cipher as per the numing number

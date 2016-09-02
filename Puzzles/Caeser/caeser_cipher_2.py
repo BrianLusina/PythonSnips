@@ -1,7 +1,7 @@
 import string
 
 
-class CaesarCipher:
+class CaesarCipherV2:
     """ Encrypt and decrypt messages using Caesar Cipher. Specify
         the number of letters to shift ( key ). All alphabetical
         characters will be encrypted and decrypted using key.
