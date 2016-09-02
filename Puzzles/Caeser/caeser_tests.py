@@ -1,5 +1,5 @@
 import unittest
-from Puzzles import CaesersCipher
+from Puzzles import Caeser
 
 
 class MyTestCase(unittest.TestCase):
