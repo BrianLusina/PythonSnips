@@ -1,9 +1,11 @@
-from pprint import pprint
-from WeatherForecastMailer import data_miner
+from WeatherForecastMailer import data_miner, smtp, weather
 
 
 def main():
     emails = data_miner.read_emails()
-    pprint(emails)
+    schedule = data_miner.get_schedule()
+    forecast = weather.current_weather
+
+    smtp.send_emails(emails=emails, schedule=schedule, forecast=forecast)
 
 main()

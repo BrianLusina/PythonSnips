@@ -62,6 +62,3 @@ def extension_checker():
             json_files.append(file)
 
     return txt_files, json_files
-
-print(read_emails())
-print(get_schedule())
