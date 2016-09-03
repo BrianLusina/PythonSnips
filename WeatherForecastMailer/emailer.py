@@ -1,3 +1,7 @@
+import os
+import fnmatch
+
+
 def read_emails():
     """
     Store the emails file in a variable email_file and read each line splitting the line and storing the key,value into
@@ -16,3 +20,19 @@ def read_emails():
     return emails
 
 
+def extension_checker(path):
+    """
+    Retrieves the files from the path specified. This is used to fetch the emails and schedules
+    :param path of the files to retrieve date from
+    :return: a tuple list with all the files
+    """
+    txt_files, json_files = [], []
+    for file in os.listdir(path=path):
+        if fnmatch.fnmatch(file, '*.txt'):
+            txt_files.append(file)
+        if fnmatch.fnmatch(file, '*.json'):
+            json_files.append(file)
+
+    return txt_files, json_files
+
+print(extension_checker('files/'))
