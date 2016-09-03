@@ -17,12 +17,14 @@ The sent data will be the schedule for the day and the current weather forecast 
     [{u'repository': {u'open_issues': 0, u'url': 'https://github.com/...
     ```
     The request module comes with its own inbuilt json method which makes it easier to retrieve JSON data.
-+ **API key from openweather.org.** This is necessary especially considering that you will need to make API requests to openweather. This key will be used for all API requests. Signing up is [free]()    
++ **API key from openweather.org.** This is necessary especially considering that you will need to make API requests to openweather. This key will be used for all API requests. Signing up is [free](https://openweathermap.org/)    
 + **Text file (or JSON) with email addresses**, they do not have to be hundreds of them, just enough for testing.
 + **Text file (or JSON) with schedules**. These could be schedules of any kind you like.
 
 
 ### Project breakdown and structure
+I have broken down this project to simple individual Python files, text and JSON files. It is recommended you break it down even more Pythonically. Also hide any API keys, APP ids and secrets in a separate file and import them into your Python script that will run the main method. Do not push this file to Github or any VCS you use. This should be kept secret. To do this, add a *.gitignore* file to your project and include the name that will contain all your scripts in here. This *.gitignore* file will be pushed to github
+
    1. __init__.py
         This is just an empty file notifying Python that this is a Python Package
    

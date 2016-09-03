@@ -1,5 +1,8 @@
 from pprint import pprint
 import requests
+from WeatherForecastMailer import constants
+
+key = constants.open_weather_key
 
 
 def read_emails():
