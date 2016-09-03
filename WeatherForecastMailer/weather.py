@@ -22,9 +22,3 @@ def get_current_weather_forecast(town):
              + " and min of " + temp_min
     return output
 
-
-def main():
-    print(get_current_weather_forecast(town="Nairobi"))
-
-
-main()
