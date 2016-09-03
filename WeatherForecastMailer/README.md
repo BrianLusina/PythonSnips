@@ -43,7 +43,10 @@ I have broken down this project to simple individual Python files, text and JSON
 
    3. weather.py
         Reads the JSON response from OpenWeather API. 
-       
+   
+   4. smtp.py
+        This script is responsible for reading the SMTP settings for sending emails to the emails in our email.txt or email.json files
+    
 ### Goal
 
 Automate emailing such that we do not need to hardcode the email addresses or the overall function
@@ -61,16 +64,17 @@ This reads the email text file by opening it in `r` read mode and storing the fi
 
 This is used to retrieve the schedule from a text file. The schedule will be used to send the emails. The same operation used in `read_emails()` function is applied here, with the only differnce being that the sperator used is `-`
     
-+ __get_current_weather_forecast()__:
++ __get_current_weather_forecast(town)__:
    
    This obtains the current weather forecast of a particular place using the OpenWeather API.
    An example request of current weather in London, UK
    ``` python
-   def get_current_weather_forecast():
-        url = current_weather + "q=London,uk&" + key
+   def get_current_weather_forecast(town):
+        url = current_weather + "q="+town"+"YOUR_KEY"
         weather_req = requests.get(url=url)
         response = weather_req.json()
         return response
+   print(get_current_weather_forecast("London")
    ```
    The `requests.get(url)` returns an object which we use to get the JSON data, which is simply a dictionary in Python. 
    
