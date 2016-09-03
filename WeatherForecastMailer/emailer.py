@@ -3,7 +3,7 @@ import requests
 from WeatherForecastMailer import constants
 
 key = constants.open_weather_key
-
+current_weather = constants.base_url
 
 def read_emails():
     """
@@ -38,6 +38,13 @@ def get_schedule():
         print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
 
     return schedules
+
+
+def get_current_weather_forecast():
+    url = current_weather+ ""+key
+    weather_req = requests.get(url=url)
+    response = weather_req.json()
+    return response
 
 
 def main():
