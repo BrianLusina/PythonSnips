@@ -1,0 +1,1 @@
+This is a weather mailer built in Python :snake: Project is to send weather details to a customer list which has emails. The sent data will be the schedule for the day and the current weather forecast for the day
