@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def read_emails():
     """
     Store the emails file in a variable email_file and read each line splitting the line and storing the key,value into
@@ -19,8 +16,3 @@ def read_emails():
     return emails
 
 
-def main():
-    emails = read_emails()
-    pprint(emails)
-
-main()
