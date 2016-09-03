@@ -40,7 +40,10 @@ I have broken down this project to simple individual Python files, text and JSON
    
    2. emailer.py
         This is the file that reads the emails from a text file or a JSON file
-        
+
+   3. weather.py
+        Reads the JSON response from OpenWeather API. 
+       
 ### Goal
 
 Automate emailing such that we do not need to hardcode the email addresses or the overall function
