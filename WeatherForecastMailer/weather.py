@@ -24,7 +24,7 @@ def get_current_weather_forecast(town):
 
 
 def main():
-    print(get_current_weather_forecast(town="London"))
+    print(get_current_weather_forecast(town="Nairobi"))
 
 
 main()

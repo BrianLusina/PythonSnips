@@ -1,4 +1,5 @@
 import smtplib
+from WeatherForecastMailer import constants
 
 
 def send_emails(emails, schedule, forecast):
@@ -18,8 +19,8 @@ def send_emails(emails, schedule, forecast):
     server.starttls()
 
     # login
-    from_email = input("Email address? ")
-    password = input("What is your password? ")
+    from_email = constants.email_sender
+    password = constants.password
 
     # login to server
     server.login(user=from_email, password=password)
