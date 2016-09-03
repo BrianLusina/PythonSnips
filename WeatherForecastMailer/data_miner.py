@@ -17,12 +17,10 @@ def get_schedule():
         if sched_file.endswith("txt"):
             try:
                 schedule_file = open('files/'+sched_file, 'r')
-                for lines in schedule_file:
-                    (schedule, time) = lines.split("-")
-                    schedules[schedule] = time.strip()
+                sched = schedule_file.read()
             except FileNotFoundError as err:
                 print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
-    return schedules
+    return sched
 
 
 def read_emails():
@@ -36,10 +34,10 @@ def read_emails():
         for file in file_lists:
             if file.startswith('emails'):
                 email_list.append(file)
-    for sched_file in email_list:
-        if sched_file.endswith("txt"):
+    for email_file in email_list:
+        if email_file.endswith("txt"):
             try:
-                schedule_file = open('files/'+sched_file, 'r')
+                schedule_file = open('files/'+email_file, 'r')
                 for lines in schedule_file:
                     (schedule, time) = lines.split(",")
                     emails[schedule] = time.strip()
@@ -62,3 +60,4 @@ def extension_checker():
             json_files.append(file)
 
     return txt_files, json_files
+
