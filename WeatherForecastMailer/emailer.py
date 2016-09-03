@@ -41,7 +41,7 @@ def get_schedule():
 
 
 def get_current_weather_forecast():
-    url = current_weather+ ""+key
+    url = current_weather + "q=London,uk&" + key
     weather_req = requests.get(url=url)
     response = weather_req.json()
     return response
@@ -53,5 +53,7 @@ def main():
 
     schedule = get_schedule()
     pprint(schedule)
+
+    pprint(get_current_weather_forecast())
 
 main()

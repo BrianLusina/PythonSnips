@@ -60,5 +60,41 @@ This is used to retrieve the schedule from a text file. The schedule will be use
     
 + __get_current_weather_forecast()__:
    
-   This obtains the current weather forecast of a particular place using the OpenWeather API. 
-
+   This obtains the current weather forecast of a particular place using the OpenWeather API.
+   An example request of current weather in London, UK
+   ``` python
+   def get_current_weather_forecast():
+        url = current_weather + "q=London,uk&" + key
+        weather_req = requests.get(url=url)
+        response = weather_req.json()
+        return response
+   ```
+   The `requests.get(url)` returns an object which we use to get the JSON data, which is simply a dictionary in Python. 
+   
+   Output:
+   ``` python
+   {'base': 'cmc stations',
+    'clouds': {'all': 88},
+    'cod': 200,
+    'coord': {'lat': 51.51, 'lon': -0.13},
+    'dt': 1472907620,
+    'id': 2643743,
+    'main': {'humidity': 64,
+          'pressure': 1015,
+          'temp': 292.34,
+          'temp_max': 293.71,
+          'temp_min': 291.15},
+    'name': 'London',
+    'sys': {'country': 'GB',
+         'id': 5091,
+         'message': 0.004,
+         'sunrise': 1472879861,
+         'sunset': 1472928021,
+         'type': 1},
+    'weather': [{'description': 'light rain',
+              'icon': '10d',
+              'id': 500,
+              'main': 'Rain'}],
+    'wind': {'deg': 210, 'gust': 11.8, 'speed': 6.7}}
+   ```
+   
