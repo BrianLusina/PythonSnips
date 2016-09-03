@@ -42,8 +42,9 @@ I have broken down this project to simple individual Python files, text and JSON
    1. __init__.py
         This is just an empty file notifying Python that this is a Python Package
    
-   2. emailer.py
+   2. data_miner.py
         This is the file that reads the emails from a text file or a JSON file
+        Also reads the schedule from a schedule.txt or schedule.json
 
    3. weather.py
         Reads the JSON response from OpenWeather API. 

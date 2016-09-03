@@ -1,9 +1,9 @@
 from pprint import pprint
-from WeatherForecastMailer import emailer
+from WeatherForecastMailer import data_miner
 
 
 def main():
-    emails = emailer.read_emails()
+    emails = data_miner.read_emails()
     pprint(emails)
 
 main()

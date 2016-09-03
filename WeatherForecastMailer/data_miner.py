@@ -4,19 +4,26 @@ import fnmatch
 
 def get_schedule():
     """
-     a tuple, this tuple can then be used to populate the dictionary
+    a tuple, this tuple can then be used to populate the dictionary
     :return: the list of emails
     """
-    schedules = {}
-    try:
-        schedule_file = open('files/schedule.txt', 'r')
-        for lines in schedule_file:
-            (schedule, time) = lines.split("-")
-            schedules[schedule] = time.strip()
-    except FileNotFoundError as err:
-        print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
-
+    schedules, schedule_list = {}, []
+    for file_lists in extension_checker():
+        for file in file_lists:
+            if file.startswith('schedule'):
+                schedule_list.append(file)
+    # check if file is a txt file
+    for sched_file in schedule_list:
+        if sched_file.endswith("txt"):
+            try:
+                schedule_file = open('files/'+sched_file, 'r')
+                for lines in schedule_file:
+                    (schedule, time) = lines.split("-")
+                    schedules[schedule] = time.strip()
+            except FileNotFoundError as err:
+                print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
     return schedules
+
 
 def read_emails():
     """
@@ -24,26 +31,31 @@ def read_emails():
      a tuple, this tuple can then be used to populate the dictionary
     :return: the list of emails
     """
-    emails = {}
-    try:
-        email_file = open('files/emails.txt', 'r+')
-        for lines in email_file:
-            (email, name) = lines.split(",")
-            emails[email] = name.strip()
-    except FileNotFoundError as err:
-        print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
-
+    emails, email_list = {}, []
+    for file_lists in extension_checker():
+        for file in file_lists:
+            if file.startswith('emails'):
+                email_list.append(file)
+    for sched_file in email_list:
+        if sched_file.endswith("txt"):
+            try:
+                schedule_file = open('files/'+sched_file, 'r')
+                for lines in schedule_file:
+                    (schedule, time) = lines.split(",")
+                    emails[schedule] = time.strip()
+            except FileNotFoundError as err:
+                print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
     return emails
 
 
-def extension_checker(path):
+def extension_checker():
     """
     Retrieves the files from the path specified. This is used to fetch the emails and schedules
     :param path of the files to retrieve date from
     :return: a tuple list with all the files
     """
     txt_files, json_files = [], []
-    for file in os.listdir(path=path):
+    for file in os.listdir(path='files/'):
         if fnmatch.fnmatch(file, '*.txt'):
             txt_files.append(file)
         if fnmatch.fnmatch(file, '*.json'):
@@ -51,4 +63,5 @@ def extension_checker(path):
 
     return txt_files, json_files
 
-print(extension_checker('files/'))
+print(read_emails())
+print(get_schedule())
