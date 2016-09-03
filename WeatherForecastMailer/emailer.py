@@ -9,7 +9,7 @@ def read_emails():
     """
     emails = {}
     try:
-        email_file = open('emails.txt', 'r+')
+        email_file = open('files/emails.txt', 'r+')
         for lines in email_file:
             (email, name) = lines.split(",")
             emails[email] = name.strip()
@@ -26,7 +26,7 @@ def get_schedule():
     """
     schedules = {}
     try:
-        schedule_file = open('schedule.txt', 'r')
+        schedule_file = open('files/schedule.txt', 'r')
         for lines in schedule_file:
             (schedule, time) = lines.split("-")
             schedules[schedule] = time.strip()
