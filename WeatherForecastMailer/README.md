@@ -3,8 +3,24 @@ The sent data will be the schedule for the day and the current weather forecast 
 
 ## Project Requirements
 
-+ Ensure you have Python installed, preferably Python 3+
-+ Text file with email addresses, they do not have to be hundreds of them
++ Ensure you have **Python** installed, preferably Python 3+
++ **requests** module which will enable us to make http requests, This can be install using `pip` a Python package manager
+    ```bash
+    pip install requests
+    ```
+    The request module retrieves data in JSON, which makes it easier to parse the data received.
+    An example of making a JSON request:
+    ``` python
+    >>> import requests
+    >>> r = requests.get('https://api.github.com/events')
+    >>> r.json()
+    [{u'repository': {u'open_issues': 0, u'url': 'https://github.com/...
+    ```
+    The request module comes with its own inbuilt json method which makes it easier to retrieve JSON data.
++ **API key from openweather.org.** This is necessary especially considering that you will need to make API requests to openweather. This key will be used for all API requests. Signing up is [free]()    
++ **Text file (or JSON) with email addresses**, they do not have to be hundreds of them, just enough for testing.
++ **Text file (or JSON) with schedules**. These could be schedules of any kind you like.
+
 
 ### Project breakdown and structure
    1. __init__.py

@@ -1,4 +1,5 @@
 from pprint import pprint
+import requests
 
 
 def read_emails():
