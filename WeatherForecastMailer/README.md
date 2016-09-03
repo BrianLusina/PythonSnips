@@ -4,6 +4,7 @@ The sent data will be the schedule for the day and the current weather forecast 
 ## Project Requirements
 
 + Ensure you have **Python** installed, preferably Python 3+
+
 + **requests** module which will enable us to make http requests, This can be install using `pip` a Python package manager
     ```bash
     pip install requests
@@ -17,6 +18,7 @@ The sent data will be the schedule for the day and the current weather forecast 
     [{u'repository': {u'open_issues': 0, u'url': 'https://github.com/...
     ```
     The request module comes with its own inbuilt json method which makes it easier to retrieve JSON data.
+    
 + **API key from openweather.org.** This is necessary especially considering that you will need to make API requests to openweather. This key will be used for all API requests. Signing up is [free](https://openweathermap.org/). 
 An example JSON response from openweather API is as follows:
 
@@ -26,7 +28,9 @@ An example JSON response from openweather API is as follows:
     RESPONSE
     `{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
     "base":"cmc stations","main":{"temp":292.47,"pressure":1015,"humidity":64,"temp_min":291.15,"temp_max":293.71}, "wind":{"speed":6.7,"deg":210,"gust":11.8},"clouds":{"all":88},"dt":1472908819,"sys":{"type":1,"id":5091,"message":0    .0054,"country":"GB","sunrise":1472879862,"sunset":1472928019},"id":2643743,"name":"London","cod":200}`
-
+    
++ **Simple Mail Transfer Protocol, smtplib** which will be used to send emails. This is a library that has been built into Python and will not need installing using pip.
+ 
 + **Text file (or JSON) with email addresses**, they do not have to be hundreds of them, just enough for testing.
 + **Text file (or JSON) with schedules**. These could be schedules of any kind you like.
 
@@ -105,3 +109,13 @@ This is used to retrieve the schedule from a text file. The schedule will be use
     'wind': {'deg': 210, 'gust': 11.8, 'speed': 6.7}}
    ```
    
++ __send_emails(emails, schedule, forecasts)__
+    
+    This function allows sending the emails attaching the schedule and the forecasts. This will use the `smtp` module in Python and will use the TCL protocol to send the emails just to make it more secure.
+    
+    To send the emails you will need to either:
+    
+    1. Turn on setting *Allow Less Secure Apps* in your Google Account
+        Go to *Setting* then scroll down to find **Allow Less secure apps** and turn it on. This is necessary as Google have security protocols to secure your Gmail account. **Yaay Google!**.
+    
+    2. Create an app specific password in the event that you do not like option above. Click [here](https://support.google.com/accounts/answer/185833?hl=en) for more details.
