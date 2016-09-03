@@ -1,9 +1,5 @@
 from pprint import pprint
-import requests
-from WeatherForecastMailer import constants
 
-key = constants.open_weather_key
-current_weather = constants.base_url
 
 def read_emails():
     """
@@ -40,20 +36,11 @@ def get_schedule():
     return schedules
 
 
-def get_current_weather_forecast():
-    url = current_weather + "q=London,uk&" + key
-    weather_req = requests.get(url=url)
-    response = weather_req.json()
-    return response
-
-
 def main():
     emails = read_emails()
     pprint(emails)
 
     schedule = get_schedule()
     pprint(schedule)
-
-    pprint(get_current_weather_forecast())
 
 main()
