@@ -1,5 +1,12 @@
+from itertools import cycle
+
+
 def replicate_iter(times, data):
-    pass
+    if not isinstance(times, int):
+        raise ValueError
+    for item in cycle(data):
+        for _ in range(times):
+            yield(item)
 
 
 def replicate_recur(times, data):
@@ -10,3 +17,6 @@ def replicate_recur(times, data):
         m.append(data)
         return m
 
+
+result = replicate_iter(3, 5)
+print([result], [5, 5, 5])

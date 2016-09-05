@@ -1,5 +1,13 @@
 import unittest
-from iterators import RecurIter
+from itertools import cycle
+
+
+def replicate_iter(times, data):
+    if not isinstance(times, int):
+        raise ValueError
+    for item in cycle(data):
+        for _ in range(times):
+            yield(item)
 
 
 def replicate_recur(times, data):
