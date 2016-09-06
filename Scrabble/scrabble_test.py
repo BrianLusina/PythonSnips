@@ -6,7 +6,7 @@ from Scrabble import scrabble
 class WordTest(unittest.TestCase):
     def test_invalid_word_scores_zero(self):
         self.assertEqual(0, scrabble.score(''))
-        self.assertEqual(0, scrabble.core(' \t\n'))
+        self.assertEqual(0, scrabble.score(' \t\n'))
         self.assertEqual(0, scrabble.score('hous3'))
         self.assertEqual(0, scrabble.score('wo rd'))
 
