@@ -31,3 +31,11 @@ np_mat + np_mat
 np_baseball is coded for you; it's again a 2D Numpy array with 3 columns representing height, weight and age.
 
 ##2D Statistics 
+
+You now know how to use Numpy functions to a get a better feeling for your data. It basically comes down to importing Numpy and then calling several simple functions on the Numpy arrays:
+
+import numpy as np
+x = [1, 4, 8, 10, 12]
+np.mean(x)
+np.median(x)
+The baseball data is available as a 2D Numpy array with 3 columns (height, weight, age) and 1015 rows. The name of this Numpy array is np_baseball. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called outliers.
