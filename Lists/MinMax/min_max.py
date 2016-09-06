@@ -1,2 +1,2 @@
 def min_max(lst):
-  pass
+    return [min(lst), max(lst)]
