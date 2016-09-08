@@ -9,6 +9,7 @@ def order(sentence):
                 if char.isdigit():
                     digit = int(char)
                     print("Before:", word_list)
+                    removed = word_list.pop(c)
                     print("After:", word_list)
                     word_list.insert(digit-1, word)
                     c += 1
