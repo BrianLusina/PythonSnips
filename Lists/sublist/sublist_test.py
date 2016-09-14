@@ -34,7 +34,7 @@ def contains(l1, l2):
 
 class MyTestCase(unittest.TestCase):
     def test_unique_return_vals(self):
-        self.assertEqual(4, len(set([SUBLIST, SUPERLIST, EQUAL, UNEQUAL])))
+        self.assertEqual(4, len({SUBLIST, SUPERLIST, EQUAL, UNEQUAL}))
 
     def test_empty_lists(self):
         self.assertEqual(EQUAL, check_lists([], []))
