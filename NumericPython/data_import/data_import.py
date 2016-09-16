@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 # loads files
 # np.loadtxt()
@@ -9,3 +10,10 @@ import numpy as np
 There is also another function np.recfromcsv() that behaves similarly to np.genfromtxt(), except that its default
 dtype is None
 """
+# Assign the filename: file
+file = open('TRANS.csv', "r")
+
+# Read the file into a DataFrame: df
+df = pd.read_csv(file)
+
+print(df.head())
