@@ -352,3 +352,13 @@ Most years that can be divided evenly by 4 are leap years.
 Exception: Century years are NOT leap years UNLESS they can be evenly divided by 400.
 
 So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
+
+## Sum To Me
+
+Make a program that will take an int (x) and give you the summation of all numbers from 1 up to x included. 
+If the given input is not an integer, return "Error 404".
+
+Examples:
+
+summation(25)==325
+summation(2.56)=="Invalid Value"

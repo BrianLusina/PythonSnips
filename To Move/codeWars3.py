@@ -1,23 +1,4 @@
 """
-Make a program that will take an int (x) and give you the summation of all numbers from 1 up to x included. If the given input is not an integer, return "Error 404".
-
-Examples:
-
-summation(25)==325
-summation(2.56)=="Invalid Value"
-"""
-
-
-def summation(x):
-    return sum(range(1, x + 1)) if isinstance(x, int) else "Error 404"
-
-
-print("Actual:", summation(10), "Expected:", 55, summation(10) == 55)
-print(summation(5) == 15)
-print(summation("538") == "Error 404")
-print(summation(67.9) == "Error 404")
-
-"""
 using n as a parameter in the calling function pattern, where n should be a natural number; complete the codes to get the pattern (take the help of examples). There is no newline in the end (after the pattern ends).
 
 Examples
