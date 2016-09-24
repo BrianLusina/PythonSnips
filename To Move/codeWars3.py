@@ -1,37 +1,3 @@
-"""
-Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
-
-Your task is to write a function maskify, which changes all but the last four characters into '#'.
-
-Examples
-
-maskify("4556364607935616") == "############5616"
-maskify(     "64607935616") ==      "#######5616"
-maskify(               "1") ==                "1"
-maskify(                "") ==                 ""
-
-# "What was the name of your first pet?"
-maskify("Skippy")                                   == "##ippy"
-maskify("Nananananananananananananananana Batman!") == "####################################man!"
-
-"""
-import re
-
-
-def maskify(cc):
-    return cc if len(cc) <= 4 else re.sub(r'.', r'#', cc[:-4]) + cc[len(cc) - 4:]
-
-
-print "Testing for maskify(cc) function"
-print "Actual:", maskify("4556364607935616"), "Expected:", "############5616", maskify(
-    "4556364607935616") == "############5616"
-print maskify("64607935616") == "#######5616"
-print maskify("1") == "1"
-print maskify("") == ""
-print maskify("Skippy") == "##ippy"
-print maskify("Nananananananananananananananana Batman!") == "####################################man!"
-print maskify("123")
-
 greek_alphabet = (
 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi',
 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega')
