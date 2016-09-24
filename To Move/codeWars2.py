@@ -1,12 +1,4 @@
 line = "================================================================================================================"
-"""
-Input: Array of elements
-["h","o","l","a"]
-Output: String with comma delimited elements of the array in th same order.
-"h,o,l,a"
-"""
-def print_array(arr):
-    return ",".join([str(i) for i in arr])
 
 """
 Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised

@@ -74,3 +74,11 @@ Suppose the following input is supplied to the program:
 1,2,3,4,5,6,7,8,9
 Then, the output should be:
 1,3,5,7,9
+
+## Print array
+
+Input: Array of elements
+["h","o","l","a"]
+Output: String with comma delimited elements of the array in th same order.
+"h,o,l,a"
+
