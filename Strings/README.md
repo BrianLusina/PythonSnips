@@ -500,3 +500,9 @@ Return an array of arrays containing pairs of distinct indices that form palindr
 Move the first letter of each word to the end of it, then add 'ay' to the end of the word.
 
 pig_it('Pig latin is cool') # igPay atinlay siay oolcay
+
+## Uni Total
+
+You'll be given a string, and have to return the total of all the unicode characters as an int. Should be able to handle any characters sent at it.
+examples:
+uniTotal("a") == 97 uniTotal("aaa") == 291

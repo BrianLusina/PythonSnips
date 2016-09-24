@@ -1,26 +1,4 @@
 """
-You'll be given a string, and have to return the total of all the unicode characters as an int. Should be able to handle any characters sent at it.
-examples:
-uniTotal("a") == 97 uniTotal("aaa") == 291
-"""
-
-
-def uni_total(string):
-    return sum([ord(i) for i in string])
-
-
-print uni_total("a")  # 97)
-print uni_total("b")  # 98)
-print uni_total("c")  # 99)
-print uni_total("")  # 0)
-print uni_total("aaa")  # , 291)
-print uni_total("abc")  # 294)
-print uni_total("Mary Had A Little Lamb")  # ,1873)
-print uni_total("Mary had a little lamb")  # ,2001)
-print uni_total("CodeWars rocks")  # 1370)
-print uni_total("And so does Strive")  # ,1661)
-
-"""
 Write a module Converter that can take ASCII text and convert it to hexadecimal. The class should also be able to take hexadecimal and convert it to ASCII text.
 
 Example
