@@ -1,39 +1,4 @@
 """
-using n as a parameter in the calling function pattern, where n should be a natural number; complete the codes to get the pattern (take the help of examples). There is no newline in the end (after the pattern ends).
-
-Examples
-
-pattern(3):
-
-1
-1*2
-1**3
-pattern(10):
-
-1
-1*2
-1**3
-1***4
-1****5
-1*****6
-1******7
-1*******8
-1********9
-1*********10
-"""
-
-
-def pattern(n):
-    return '\n'.join(['1'] + ['1' + '*' * (i - 1) + str(i) for i in xrange(2, n + 1)])
-
-
-print("Testing for pattern(n) function")
-print("Actual:", pattern(3), "Expected:", "1\n1*2\n1**3")
-print("Actual:", pattern(7), "Expected:", "1\n1*2\n1**3\n1***4\n1****5\n1*****6\n1******7")
-print("Actual:", pattern(20), "Expected:",
-      "1\n1*2\n1**3\n1***4\n1****5\n1*****6\n1******7\n1*******8\n1********9\n1*********10\n1**********11\n1***********12\n1************13\n1*************14\n1**************15\n1***************16\n1****************17\n1*****************18\n1******************19\n1*******************20")
-
-"""
 Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
 
 Your task is to write a function maskify, which changes all but the last four characters into '#'.
