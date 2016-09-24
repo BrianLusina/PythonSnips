@@ -506,3 +506,11 @@ pig_it('Pig latin is cool') # igPay atinlay siay oolcay
 You'll be given a string, and have to return the total of all the unicode characters as an int. Should be able to handle any characters sent at it.
 examples:
 uniTotal("a") == 97 uniTotal("aaa") == 291
+
+## seven ate 9
+
+Write a function that removes each 9 that it is in between 7s.
+
+seven_ate9('79712312') => '7712312'
+seven_ate9('79797') => '777'
+Input: String Output: String
