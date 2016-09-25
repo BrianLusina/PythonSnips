@@ -1,15 +1,3 @@
-Print a unicode string "hello world".
-
-Hints:
-
-Use u'strings' format to define unicode string.
-
-Solution:
-
-unicodeString = u"hello world!"
-print unicodeString
-
-#----------------------------------------#
 Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
 
 Hints:
