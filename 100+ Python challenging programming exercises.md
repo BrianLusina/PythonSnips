@@ -1,29 +1,3 @@
-Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
-
-Hints:
-
-Use unicode() function to convert.
-
-Solution:
-
-s = raw_input()
-u = unicode( s ,"utf-8")
-print u
-
-#----------------------------------------#
-Question:
-
-Write a special comment to indicate a Python source code file is in unicode.
-
-Hints:
-
-Solution:
-
-# -*- coding: utf-8 -*-
-
-#----------------------------------------#
-Question:
-
 Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console (n>0).
 
 Example:
