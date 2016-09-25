@@ -1,37 +1,3 @@
-Please raise a RuntimeError exception.
-
-Hints:
-
-Use raise() to raise an exception.
-
-Solution:
-
-raise RuntimeError('something wrong')
-
-
-
-#----------------------------------------#
-Write a function to compute 5/0 and use try/except to catch the exceptions.
-
-Hints:
-
-Use try/except to catch exceptions.
-
-Solution:
-
-def throws():
-    return 5/0
-
-try:
-    throws()
-except ZeroDivisionError:
-    print "division by zero!"
-except Exception, err:
-    print 'Caught an exception'
-finally:
-    print 'In finally block for cleanup'
-
-
 #----------------------------------------#
 Define a custom exception class which takes a string message as attribute.
 
