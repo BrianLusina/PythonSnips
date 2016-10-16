@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from pandas_datareader import data as web
+from sklearn import linear_model
 
 
 class ScikitBacktest(object):
