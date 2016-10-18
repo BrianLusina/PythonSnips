@@ -1,6 +1,5 @@
 from WeatherForecastMailer import data_miner, smtp, weather
 
-
 def main():
     emails = data_miner.read_emails()
     schedule = data_miner.get_schedule()
