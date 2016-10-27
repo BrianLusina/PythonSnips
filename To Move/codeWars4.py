@@ -1,4 +1,3 @@
-line = "-----------------------------------------------------------------------------------------------------------"
 """
 ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 If the function is passed a valid PIN string, return true, else return false.
@@ -15,6 +14,8 @@ def validate_pin(pin):
         return False
 
 print((validate_pin("1")))
+
+
 
 """
 The discussion gets heated and you are cannot risk favoring either of them as this might damage your political standing with either of the two clans the samurai generals belong to. Thus, the only thing left to do is find what the common ground of what they are saying is.
