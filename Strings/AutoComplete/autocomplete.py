@@ -10,6 +10,6 @@ def autocomplete(input_, dictionary):
     new_input = "".join([let for let in input_ if let.isalpha()])
 
     for word in dictionary:
-        if word.startswith(new_input) or word.startswith(new_input.upper()):
+        if word.startswith(new_input) or word.startswith(new_input.title()):
             res.append(word)
     return res[0:5]
