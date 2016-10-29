@@ -1,9 +1,16 @@
 import re
 
 
-def autocorrect(input_):
-    return re.sub(
-        '^(u|U)$|^(U|u)\s+([a-zA-Z0-9])+$|^[a-zA-Z]+\s+(u|U)$|^((Y|y)(o|O)(u))$|^((Y|y)(o|O)(u)*)\s+[a-zA-Z0-9]*$|^[a-zA-Z0-9]+\s+((Y|y)(o|O)(u)*)$',
-        repl="your sister",
-        string=input_,
-        count=1)
+def auto_correct(input_):
+    res = []
+    for word in input_.split(" "):
+        res.append(re.sub('^(u|U)$|(^((Y|y)(o|O)(u)*)$)',
+                          repl="your sister",
+                          string=word,
+                          count=1))
+    return " ".join(res)
+
+
+print(auto_correct("I miss you!"))
+
+
