@@ -14,3 +14,6 @@ class AutocorrectTests(unittest.TestCase):
 
     def test_four(self):
         self.assertEqual(autocorrect("youtube"), "youtube")
+
+    def test_five(self):
+        self.assertEqual("I miss your sister!", autocorrect("I miss you!"))
