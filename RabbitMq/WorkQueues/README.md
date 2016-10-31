@@ -37,3 +37,5 @@ python worker.py
 [x] Received 'Fourth message....'
 ```
 
+
+Read more [here](https://www.rabbitmq.com/tutorials/tutorial-two-python.html) on message acknowkledgement, durability and fair dispatch
