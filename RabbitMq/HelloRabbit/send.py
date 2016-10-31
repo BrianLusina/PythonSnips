@@ -16,7 +16,7 @@ channel.queue_declare(queue="hello")
 # it allows us to specify to exactly which queue the message will go
 # This queue name needs to be identified by the *routing* key parameter
 channel.basic_publish(exchange="",
-                      routing='hello',
+                      routing_key='hello',
                       body="Hello world!")
 print("[x] Sent 'Hello World' ")
 
