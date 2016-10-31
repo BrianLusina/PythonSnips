@@ -24,5 +24,19 @@ Sample RabbitMQ messaging client as an introduction to using RabbitMQ
 2. `recieve.py` will recieve the messages from the queue
     Will start by establishing a connection to RabbitMQ and declaring a similar queue. The queue is declared again as one can never know from where the message will be coming from. Declaring the queue again will not create another queue, but rather will refer to the same queue in `send.py`. 
     To check a list of queues use `sudo rabbitmqctl list_queues`
-
     
+    A callback needs to be defined, this callback will be called whenever a message is received. It will be called by the Pika library
+    ``` python
+    def callback(ch, method, properties, body):
+        print("[*] Recieved message %r: " % r)
+    ```
+    
+    You will need to tell RabbitMQ that this particular callback fn should receive messages from our queue
+
+    `channel.basic_consume(callback, queue="hello", no_ack=True)`
+    
+    After that, start a never ending loop awaiting for a message to come in.
+    `channel.start_consuming()`
+    
+
+
