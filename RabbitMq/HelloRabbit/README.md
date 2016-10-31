@@ -20,4 +20,9 @@ Sample RabbitMQ messaging client as an introduction to using RabbitMQ
     The server is started as a daemon by default when the RabbitMQ server package is installed.
     Note: The server is set up to run as system user rabbitmq. 
     If you change the location of the Mnesia database or the logs, you must ensure the files are owned by this user (and also update the environment variables).
+
+2. `recieve.py` will recieve the messages from the queue
+    Will start by establishing a connection to RabbitMQ and declaring a similar queue. The queue is declared again as one can never know from where the message will be coming from. Declaring the queue again will not create another queue, but rather will refer to the same queue in `send.py`. 
+    To check a list of queues use `sudo rabbitmqctl list_queues`
+
     
