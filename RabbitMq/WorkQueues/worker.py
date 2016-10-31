@@ -13,9 +13,10 @@ def callback(ch, method, properies, body):
     print("[X] Recieved %r" % body)
     time.sleep(body.count(b'.'))
     print("[X] Done.")
+    ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
-channel.basic_consume(callback, queue="task_queue", no_ack=True)
+channel.basic_consume(callback, queue="task_queue")
 
 # wait for data and run callbacks when necessary
 print("[*] Waiting for messages, Press CTRL + C to quit")
