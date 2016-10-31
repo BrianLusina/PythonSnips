@@ -20,5 +20,3 @@ channel.basic_consume(callback, queue="task_queue", no_ack=True)
 # wait for data and run callbacks when necessary
 print("[*] Waiting for messages, Press CTRL + C to quit")
 channel.start_consuming()
-
-

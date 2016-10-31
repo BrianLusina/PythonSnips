@@ -7,3 +7,33 @@ The task is sent as a message to the queue, which will be popped by a worker pro
 
 2. `worker.py`
     Will take a second of work for every dot in the message body it will recieve from `new_task.py`. It will pop messages from the queue and perform the task
+    Multiple workers can be opened and tasks will be divided up among the open workers
+    
+To run the program, run the `worker.py` in seperate consoles and publish messages from `new_tasks.py` from another console
+
+Console 1
+``` bash
+python new_task First message.
+python new_task second message..
+python new_task third message...
+python new_task fourth message....
+python new_task fifth message.....
+```
+
+Console 2
+``` bash
+python worker.py
+[*] Waiting for messages, Press CTRL + C to quit
+[X] Received 'First message.'
+[x] Received 'Third message...'
+[x] Received 'Fifth message.....'
+```
+
+Console 3
+``` bash
+python worker.py
+[*] Waiting for messages, Press CTRL + C to quit
+[x] Received 'Second message..'
+[x] Received 'Fourth message....'
+```
+
