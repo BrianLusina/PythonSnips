@@ -15,7 +15,7 @@ def callback(ch, method, properies, body):
     print("[X] Done.")
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
-
+channel.basic_qos(prefetch_count=1)
 channel.basic_consume(callback, queue="task_queue")
 
 # wait for data and run callbacks when necessary
