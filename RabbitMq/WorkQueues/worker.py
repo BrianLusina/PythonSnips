@@ -5,7 +5,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 
 channel = connection.channel()
 
-channel.queue_declare(queue="task_queue")
+channel.queue_declare(queue="task_queue", durable=True)
 
 
 # callback that will handle the task recieved from the queue
