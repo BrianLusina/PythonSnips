@@ -10,7 +10,7 @@ channel = connection.channel()
 
 # create a queue to which the message will be delivered
 
-channel.queue_declare(queue="hello")
+channel.queue_declare(queue="hello", durable=True)
 
 # creating a default exchange identified by an empty string
 # it allows us to specify to exactly which queue the message will go

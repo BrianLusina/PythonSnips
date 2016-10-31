@@ -6,7 +6,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
 # make sure the queue exists
-channel.queue_declare(queue="hello")
+channel.queue_declare(queue="hello", durable=True)
 
 
 # subscribe a callback function to a queue. Whenever we receive a message, this callback will be called by the

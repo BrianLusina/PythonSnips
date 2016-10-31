@@ -1,0 +1,1 @@
+Small program the delivers the same message to different workers using RabbitMQ
