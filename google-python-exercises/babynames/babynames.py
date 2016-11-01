@@ -40,11 +40,30 @@ def extract_names(filename):
         match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)
         if not match:
             print("error, no match")
-        # prints the year
+        # store the year in a list
         res.append(match.group(1))
         # <td>1</td><td>Michael</td><td>Jessica</td>
-        names = re.findall("<td>([0-9]+)</td><td>([a-zA-Z]+)</td><td>([a-zA-Z]+)</td>", text)
-        print(names)
+        name_tuples = re.findall("<td>([0-9]+)</td><td>([a-zA-Z]+)</td><td>([a-zA-Z]+)</td>", text)
+        # print(name_tuples)
+
+        # unpack the tuple into a dictionary
+        rank_dict = {}
+        for rank, boy_name, girl_name in name_tuples:
+            if boy_name not in rank_dict:
+                rank_dict[boy_name] = rank
+            if girl_name not in rank_dict:
+                rank_dict[girl_name] = rank
+        # print(rank_dict)
+        # sort the dictionary alphabetically
+        sorted_dict = sorted(rank_dict.keys())
+        # print(sorted_dict)
+
+        # match the names to their rank/values
+        for name in sorted_dict:
+            res.append(name + " " + rank_dict[name])
+            
+        print(res)
+
     return
 
 
