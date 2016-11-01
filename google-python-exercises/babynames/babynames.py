@@ -33,15 +33,18 @@ def extract_names(filename):
     followed by the name-rank strings in alphabetical order.
     ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
     """
-
+    res = []
     baby_html = open(filename, "r")
     with baby_html as baby_data:
         text = baby_data.read()
         match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)
         if not match:
             print("error, no match")
-        print(match.group(1))
-
+        # prints the year
+        res.append(match.group(1))
+        # <td>1</td><td>Michael</td><td>Jessica</td>
+        names = re.findall("<td>([0-9]+)</td><td>([a-zA-Z]+)</td><td>([a-zA-Z]+)</td>", text)
+        print(names)
     return
 
 
