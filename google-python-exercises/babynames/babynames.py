@@ -28,34 +28,44 @@ Suggested milestones for incremental development:
 
 
 def extract_names(filename):
-  """
-  Given a file name for baby.html, returns a list starting with the year string
-  followed by the name-rank strings in alphabetical order.
-  ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
-  """
-  # +++your code here+++
-  return
+    """
+    Given a file name for baby.html, returns a list starting with the year string
+    followed by the name-rank strings in alphabetical order.
+    ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
+    """
+
+    baby_html = open(filename, "r")
+    with baby_html as baby_data:
+        text = baby_data.read()
+        match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)
+        if not match:
+            print("error, no match")
+        print(match.group(1))
+
+    return
 
 
 def main():
-  # This command-line parsing code is provided.
-  # Make a list of command line arguments, omitting the [0] element
-  # which is the script itself.
-  args = sys.argv[1:]
+    # This command-line parsing code is provided.
+    # Make a list of command line arguments, omitting the [0] element
+    # which is the script itself.
+    args = sys.argv[1:]
+    extract_names('baby1990.html')
 
-  if not args:
-    print('usage: [--summaryfile] file [file ...]')
-    sys.exit(1)
+    if not args:
+        print('usage: [--summaryfile] file [file ...]')
+        sys.exit(1)
 
-  # Notice the summary flag and remove it from args if it is present.
-  summary = False
-  if args[0] == '--summaryfile':
-    summary = True
-    del args[0]
+    # Notice the summary flag and remove it from args if it is present.
+    summary = False
+    if args[0] == '--summaryfile':
+        summary = True
+        del args[0]
 
-  # +++your code here+++
-  # For each filename, get the names, then either print the text output
-  # or write it to a summary file
-  
+        # +++your code here+++
+        # For each filename, get the names, then either print the text output
+        # or write it to a summary file
+
+
 if __name__ == '__main__':
-  main()
+    main()
