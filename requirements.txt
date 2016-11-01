@@ -1,8 +1,11 @@
+cycler==0.10.0
 httplib2==0.9.2
+matplotlib==1.5.3
 numpy==1.11.2
 pandas==0.19.0
 pandas-datareader==0.2.1
 pika==0.10.0
+pyparsing==2.1.10
 PySocks==1.5.7
 python-dateutil==2.5.3
 pytz==2016.7
