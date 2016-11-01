@@ -1,5 +1,8 @@
 import sys
 import re
+import os
+import fnmatch
+import glob
 
 """Baby Names exercise
 
@@ -39,7 +42,8 @@ def extract_names(filename):
         text = baby_data.read()
         match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)
         if not match:
-            print("error, no match")
+            sys.stderr.write("Year not found")
+            sys.exit(1)
         # store the year in a list
         res.append(match.group(1))
         # <td>1</td><td>Michael</td><td>Jessica</td>
@@ -61,33 +65,54 @@ def extract_names(filename):
         # match the names to their rank/values
         for name in sorted_dict:
             res.append(name + " " + rank_dict[name])
-            
-        print(res)
 
-    return
+        # print(res)
+
+    return res
 
 
 def main():
-    # This command-line parsing code is provided.
-    # Make a list of command line arguments, omitting the [0] element
-    # which is the script itself.
-    args = sys.argv[1:]
-    extract_names('baby1990.html')
+    """
+    This command-line parsing code is provided.
+    Make a list of command line arguments, omitting the [0] element
+    which is the script itself.
 
-    if not args:
-        print('usage: [--summaryfile] file [file ...]')
-        sys.exit(1)
+    :return:
+    """
 
-    # Notice the summary flag and remove it from args if it is present.
-    summary = False
-    if args[0] == '--summaryfile':
-        summary = True
-        del args[0]
+    # args = sys.argv[1:]
+    #
+    # if not args:
+    #     print('usage: [--summaryfile] file [file ...]')
+    #     sys.exit(1)
+    #
+    # # Notice the summary flag and remove it from args if it is present.
+    # summary = False
+    # if args[0] == '--summaryfile':
+    #     summary = True
+    #     del args[0]
 
-        # +++your code here+++
-        # For each filename, get the names, then either print the text output
-        # or write it to a summary file
+    # +++your code here+++
+    # For each filename, get the names, then either print the text output
+    # or write it to a summary file
+    # os.listdir(path="")
+    files = [file for file in glob.glob("*.html") if fnmatch.fnmatch(file, "*.html")]
+    for file in files:
+        out = extract_names(file)
 
+        text = "\n".join(out)
+        outf = open(file + '.summary', 'w')
+        outf.write(text + '\n')
+        outf.close()
+
+        # if true, prints data to a summary file
+        # if summary:
+        #     outf = open(file + '.summary', 'w')
+        #     outf.write(text + '\n')
+        #     outf.close()
+        # else:
+        #     print(text)
+    return outf
 
 if __name__ == '__main__':
     main()
