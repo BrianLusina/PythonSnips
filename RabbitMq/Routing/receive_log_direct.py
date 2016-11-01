@@ -10,7 +10,7 @@ channel.exchange_declare(exchange='direct_logs', type='direct')
 
 # declare a queue, and give it a random name
 result = channel.queue_declare(exclusive=True)
-queue_name = result.method.name
+queue_name = result.method.queue
 
 severities = sys.argv[1:]
 
@@ -26,7 +26,7 @@ print("[*] Waiting for logs, press CTRL + C to quit")
 
 # callback method to be handled by the channel
 def callback(ch, method, properties, body):
-    print("[X] Recieved: %r:%r" % (method.routing_key, body))
+    print("[X] Received: %r:%r" % (method.routing_key, body))
 
 channel.basic_consume(callback, queue=queue_name, no_ack=True)
 
