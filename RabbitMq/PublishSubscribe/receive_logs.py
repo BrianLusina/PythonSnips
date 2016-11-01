@@ -19,7 +19,7 @@ print("[X] Waiting for logs. To exit press CTRL + C")
 
 
 def callback(ch, method, properties, body):
-    print("[X] Recieved log: %r" % body)
+    print("[X] Received log: %r" % body)
 
 
 channel.basic_consume(callback, queue=queue_name, no_ack=True)
