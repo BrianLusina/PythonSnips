@@ -95,13 +95,15 @@ def main():
     # +++your code here+++
     # For each filename, get the names, then either print the text output
     # or write it to a summary file
-    # os.listdir(path="")
-    files = [file for file in glob.glob("*.html") if fnmatch.fnmatch(file, "*.html")]
+    # glob.glob("*.html")
+    files = [file for file in os.listdir(path=".") if fnmatch.fnmatch(file, "*.html")]
+
     for file in files:
         out = extract_names(file)
 
         text = "\n".join(out)
-        outf = open(file + '.summary', 'w')
+
+        outf = open(file[0: len(file)-5] + '.summary', 'w')
         outf.write(text + '\n')
         outf.close()
 
@@ -112,7 +114,7 @@ def main():
         #     outf.close()
         # else:
         #     print(text)
-    return outf
+    return
 
 if __name__ == '__main__':
     main()
