@@ -1,0 +1,1 @@
+Listening to messages based on a pattern with RabbitMQ
