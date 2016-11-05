@@ -1,12 +1,9 @@
 import unittest
 from random import randint
-from clock_in_mirror.clock_in_mirror import what_is_the_time
+from clock_in_mirror import what_is_the_time
 
 
 class ClockTestCases(unittest.TestCase):
-    def test_1(self):
-        self.assertEqual(True, False)
-
     def test_2(self):
         self.assertEqual(what_is_the_time("06:35"), "05:25", "didn't work for '06:35'")
 
