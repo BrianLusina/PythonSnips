@@ -1,7 +1,7 @@
 from collections import Counter
 import unittest
 
-from luhn import Luhn
+from luhn.luhn import Luhn
 
 
 class LuhnTests(unittest.TestCase):
