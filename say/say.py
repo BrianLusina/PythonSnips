@@ -49,7 +49,7 @@ def say(number, recurse=False):
     if number < thousands:
         if number % 100 == 0:
             return ones_teens[number // 100] + ' hundred'
-        return ones_teens[number // 100] + ' hundred ' + say(number % 100, True)
+        return ones_teens[number // 100] + ' hundred and ' + say(number % 100, True)
 
     if number < millions:
         if number % thousands == 0:

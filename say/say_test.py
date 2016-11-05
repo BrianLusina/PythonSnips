@@ -65,8 +65,5 @@ class SayTest(unittest.TestCase):
                          "one hundred and twenty-three",
                          say(987654321123))
 
-    def test_301(self):
-        self.assertEqual("three hundred and one", say(301))
-
 if __name__ == '__main__':
     unittest.main()
