@@ -1,0 +1,1 @@
+Refer to [This article](https://medium.freecodecamp.com/a-gentle-introduction-to-data-structures-how-queues-work-f8b871938e64#.tn3wjml0b) for an explanation 
