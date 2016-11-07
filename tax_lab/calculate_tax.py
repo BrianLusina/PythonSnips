@@ -29,8 +29,11 @@ def calculate_tax(people_sal):
                 # subtract the diff from salary
                 people_sal[person] -= diff
 
+                print(people_sal[person])
                 # check if person salary is still valid
-                if people_sal[person] == 0:
+                if people_sal[person] >= 0:
+                    continue
+                else:
                     break
     return result
 
