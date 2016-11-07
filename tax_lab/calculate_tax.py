@@ -6,7 +6,8 @@ TAX_RATES = {0: range(0, 1001), 10: range(1000, 10001), 15: range(10000, 20201),
 def calculate_tax(people_sal):
     for tax in TAX_RATES:
         diff = max(TAX_RATES[tax]) - min(TAX_RATES[tax])
-        print(diff)
+        rate = (tax / 100) * diff
+        print(diff, rate)
 
 print(calculate_tax({
     "Alex": 0,
