@@ -1,6 +1,9 @@
-TAX_RATES = {0: range(0, 1001), 10: range(1000, 10001), 15: range(10000, 20201), 20: range(20200, 30751),
-             25: range(30750, 50001)}
-#, 30: 50000
+TAX_RATES = {0 / 100: range(0, 1001), 10 / 100: range(1000, 10001), 15 / 100: range(10000, 20201),
+             20 / 100: range(20200, 30751),
+             25 / 100: range(30750, 50001)}
+
+
+# , 30: 50000
 
 
 def calculate_tax(people_sal):
@@ -10,37 +13,42 @@ def calculate_tax(people_sal):
     :param people_sal:
     :return:
     """
-    # total variable for tax
     result = {}
     # for each key-value pair in TAX_RATES, calculate the rate
-    for tax in TAX_RATES:
-        for person in people_sal:
-            # check if salary is greater than current max
-            if people_sal[person] > max(TAX_RATES[tax]):
-                diff = max(TAX_RATES[tax]) - min(TAX_RATES[tax])
-                rate = (tax / 100) * diff
-
-                # check if key is in dict
-                if person in result:
-                    result[person] += rate
-                else:
-                    result[person] = rate
-
-                # subtract the diff from salary
-                people_sal[person] -= diff
-
-                print(people_sal[person])
-                # check if person salary is still valid
-                if people_sal[person] >= 0:
-                    continue
-                else:
-                    break
+    for tax_rate, band in TAX_RATES.items():
+        diff = max(band) - min(band)
+        for person, salary in people_sal.items():
+            # check if the salary is greater than max possible in band
+            if salary > max(band):
+                rate = tax_rate * diff
+                results(person, result, rate)
+                salary -= diff
+                # remaining salary
+            elif salary < max(band):
+                rate = (salary - min(band)) * tax_rate
+                results(person, result, rate)
+                break
     return result
 
+
+def results(person, result, rate):
+    """
+    Checks if the current person is in the dict, if not adds them with their current rate
+    if they are, adds the current rate to the current person
+    :param person: the current person
+    :param result: the output result
+    :param rate: the current tax rate
+    :return: the resulting dict
+    """
+    if person in result:
+        result[person] += int(rate)
+    else:
+        result[person] = int(rate)
+    return result
+
+
 print(calculate_tax({
-    "Alex": 0,
-    "James": 2490,
-    "Kinuthia": 15352.5
+    "James": 20500,
+    "Alex": 500,
+    "Kinuthia": 70000
 }))
-
-
