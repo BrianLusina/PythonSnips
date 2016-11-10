@@ -18,6 +18,8 @@ def calculate_tax(people_sal):
     for tax_rate, band in TAX_RATES.items():
         diff = max(band) - min(band)
         for person, salary in people_sal.items():
+            if salary > 50000:
+                salary *= 0.3
             # check if the salary is greater than max possible in band
             if salary > max(band):
                 rate = tax_rate * diff
