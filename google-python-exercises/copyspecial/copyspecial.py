@@ -5,6 +5,22 @@ import shutil
 import subprocess
 
 
+def get_special_paths(directory):
+    for file in os.listdir(directory):
+        if re.match('\w*(__[a-zA-Z0-9]*__)\.\w*|(__[a-zA-Z0-9]*__)|(__[a-zA-Z0-9]*__)\.\w*', file):
+            return os.path.abspath(directory)
+    pass
+
+
+def copy_to(paths, directory):
+    for p in paths:
+        shutil.copy(p, directory)
+
+
+def zip_to(paths, zippath):
+    pass
+
+
 def main():
     # This basic command line argument parsing code is provided.
     # Add code to call your functions below.
