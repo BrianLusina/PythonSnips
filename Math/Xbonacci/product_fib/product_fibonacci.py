@@ -1,19 +1,19 @@
-from math import sqrt
-
-
 def productFib(prod):
-    phi = (1 + sqrt(5)) / 2
-    pass
+    fib, res, indx = [0, 1], [], 0
+    for _ in fib:
+        if fib[indx] * fib[indx + 1] == prod:
+            res = [fib[indx], fib[indx + 1], True]
+            break
+        if fib[indx] * fib[indx + 1] > prod:
+            res = [fib[indx], fib[indx + 1], False]
+            break
+        fib.append(fib[indx] + fib[indx + 1])
+        indx += 1
+    return res
 
-# Test.test_function(productFib(4895), [55, 89, True])
-# Test.test_function(productFib(5895), [89, 144, False])
-print(fibonacci(56))
-fibStr = [str(x) for x in fibonacci(56)]
-golden = (1+sqrt(5))/(2*sqrt(5))
-phi = (1 + sqrt(5)) / 2
-fn = (phi**56)/sqrt(5)
-print(phi)
-print(golden)
 
-gratio=[fibonacci(21)[i] / float(fibonacci(21)[i-1]) for i in range(2,len(fibonacci(21)))]
-print(gratio)
+def productFib_v2(prod):
+    a, b = 0, 1
+    while prod > a * b:
+        a, b = b, a + b
+    return [a, b, prod == a * b]
