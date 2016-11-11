@@ -35,7 +35,17 @@ def copy_to(paths, to_dir):
 
 
 def zip_to(paths, zippath):
-    pass
+    cmd = 'zip -j ' + zippath + ' ' + ' '.join(paths)
+    print("Command I'm going to do:" + cmd)
+    try:
+        (status, output) = subprocess.getstatusoutput(cmd)
+    except NameError:
+        (status, output) = commands.getstatusoutput(cmd)
+    # If command had a problem (status is non-zero),
+    # print( its output to stderr and exit.
+    if status:
+        sys.stderr.write(output)
+        sys.exit(1)
 
 
 def main():
@@ -65,6 +75,24 @@ def main():
     if len(args) == 0:
         print("error: must specify one or more dirs")
         sys.exit(1)
+
+    # +++your code here+++
+    # Call your functions
+    # LAB(begin solution)
+
+    # Gather all the special files
+    paths = []
+    for dirname in args:
+        paths.extend(get_special_paths(dirname))
+
+    if todir:
+        copy_to(paths, todir)
+    elif tozip:
+        zip_to(paths, tozip)
+    else:
+        print('\n'.join(paths))
+        # LAB(end solution)
+
 
 
 if __name__ == "__main__":

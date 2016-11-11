@@ -38,7 +38,10 @@ def zip_to(paths, zipfile):
     """Zip up all of the given files into a new zip file with the given name."""
     cmd = 'zip -j ' + zipfile + ' ' + ' '.join(paths)
     print("Command I'm going to do:" + cmd)
-    (status, output) = commands.getstatusoutput(cmd)
+    try:
+        (status, output) = subprocess.getstatusoutput(cmd)
+    except NameError:
+        (status, output) = commands.getstatusoutput(cmd)
     # If command had a problem (status is non-zero),
     # print( its output to stderr and exit.
     if status:
