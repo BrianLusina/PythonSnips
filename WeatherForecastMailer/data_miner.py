@@ -43,6 +43,7 @@ def read_emails():
                     emails[schedule] = time.strip()
             except FileNotFoundError as err:
                 print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
+            schedule_file.close()
     return emails
 
 

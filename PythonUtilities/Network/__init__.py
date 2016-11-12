@@ -4,7 +4,6 @@ from urllib.request import urlretrieve
 
 
 class Network(object):
-
     def __init__(self, url):
         """
         Attributes:
@@ -21,7 +20,7 @@ class Network(object):
             self.ufile = request.urlopen(self.url)
             self.text = self.ufile.read()
             self.info = self.ufile.info()
-            self.getType = self.ufile.gettype()
+            # self.getType = self.info.gettype()
             self.base_url = self.ufile.geturl()
             self.build_url = urljoin(base=self.base_url, url=self.url)
         except IOError:
@@ -34,3 +33,7 @@ class Network(object):
         :return: downloaded file object
         """
         return urlretrieve(self.url, filename)
+
+    def __repr__(self):
+        return "<NetFile: %r>, Text: %r, Info: %r, Base Url: %r" % (
+            self.ufile, self.text, self.info,  self.base_url)
