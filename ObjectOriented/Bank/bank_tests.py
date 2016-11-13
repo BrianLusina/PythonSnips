@@ -1,9 +1,10 @@
 import unittest
+from ObjectOriented.Bank import current_account, savings_account, BankAccount
 
 
 class CurrentAccountTestCases(unittest.TestCase):
     def setUp(self):
-        self.ca = CurrentAccount()
+        self.ca = current_account.CurrentAccount()
 
     def tearDown(self):
         del self.ca
@@ -27,7 +28,7 @@ class CurrentAccountTestCases(unittest.TestCase):
 
 class SavingsAccountTestCases(unittest.TestCase):
     def setUp(self):
-        self.sa = SavingsAccount()
+        self.sa = savings_account.SavingsAccount()
 
     def tearDown(self):
         del self.sa
