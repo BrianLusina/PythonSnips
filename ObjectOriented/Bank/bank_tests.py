@@ -32,10 +32,14 @@ class CurrentAccountTestCases(unittest.TestCase):
                          msg="Cannot withdraw beyond the current account balance")
 
     def test_current_account_cant_withdraw_negative_cash_amounts(self):
-        self.ca.withdraw(-100)
-        self.assertEqual("Invalid withdraw amount",
+        message = self.ca.withdraw(-100)
+        self.assertEqual(message,
                          "Invalid withdraw amount",
                          msg="Invalid withdraw amount, can't withdraw negative amounts")
+
+    def test_current_account_handles_invalid_inputs(self):
+        message = self.ca.deposit("deposit")
+        self.assertEqual(message, "Invalid deposit amount", msg="Can not add a string to a a number")
 
 
 class SavingsAccountTestCases(unittest.TestCase):
