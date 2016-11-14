@@ -24,3 +24,8 @@ def get_length_of_missing_array(array_of_arrays):
         except IndexError:
             break
     return m
+
+
+def get_length_of_missing_array_2(a):
+    lns = a and all(a) and list(map(len, a))
+    return bool(lns) and sum(range(min(lns), max(lns) + 1)) - sum(lns)
