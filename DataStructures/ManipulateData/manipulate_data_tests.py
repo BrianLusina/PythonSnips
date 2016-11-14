@@ -12,5 +12,5 @@ class ManipulateDataTestCases(unittest.TestCase):
         self.assertEqual(result, [4, 0], msg='Invalid output')
 
     def test_returns_correct_ouptut_with_negatives(self):
-        result = manipulate_data([1, -9, 2, 3, 4, -5]);
+        result = manipulate_data([1, -9, 2, 3, 4, -5])
         self.assertEqual(result, [4, -14], msg='Invalid output')
