@@ -1,4 +1,5 @@
 import unittest
+from RecursionLab.ReplicateIter.replicate import replicate_iter, replicate_recur
 
 
 class ReplicateIterTestCases(unittest.TestCase):
