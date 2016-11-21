@@ -1,24 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-wallpaper(4, 3.5, 3) should return "ten"
-
-Notes:
-
-all rolls (even with incomplete width) are put edge to edge
-0 <= l, w, h (floating numbers), it can happens that w x h x l is zero
-the integer r (number of rolls) will always be less or equal to 20
 """
-def wallpaper(l, w, h):
-    wallArea = 2*((l*h)+(w*h))
-    wallPaperArea = .52*(10*1.15)
-    papers = wallArea/wallPaperArea
-    return papers
-
-print wallpaper(6.3, 4.5, 3.29) #"sixteen"
-print wallpaper(7.8, 2.9, 3.29) #"sixteen"
-print wallpaper(6.3, 5.8, 3.13) #"seventeen"
-print wallpaper(6.1, 6.7, 2.81) #"sixteen"
-
 
 
 """
