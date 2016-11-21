@@ -1,34 +1,4 @@
 """
-The discussion gets heated and you are cannot risk favoring either of them as this might damage your political standing with either of the two clans the samurai generals belong to. Thus, the only thing left to do is find what the common ground of what they are saying is.
-
-Compare the proposals using the function commonGround(string a, string b) that outputs a string containing the words in string a that also occur in string b.
-
-Each word in the reflting string shall occur once, and the order of the words follow the order of the first occurence of each word in the second string.
-If they are saying nothing in common, kill both samurai and blame a ninja. (output "death")
-"""
-
-
-def common_ground(s1, s2):
-    lst = []
-    for w in s2.split():
-        if w in s1.split() and w not in lst:
-            lst.append(w)
-    return ' '.join(lst) if lst else "death"
-
-
-print("Test Cases")
-print(common_ground("eat chicken", "eat chicken and rice")) #'eat chicken')
-print(common_ground("eat a burger and drink a coke", "drink a coke"))# 'drink a coke')
-print(common_ground("aa bb", "aa bb cc"))# "aa bb")
-print(common_ground("aa bb cc", "bb cc"))# 'bb cc')
-print(common_ground("", "cc dd")) # 'death')
-print(common_ground("", ""))#, 'death')
-print(common_ground("aa bb", "")) # 'death')
-print(common_ground("i like turtles", "what are you talking about"))#'death')
-print(common_ground("aa bb", "cc dd"))# 'death')
-print(common_ground("aa bb cc", "bb cc bb aa"))#'bb cc aa')
-
-"""
 You are the judge at a competitive eating competition and you need to choose a winner!
 
 There are three foods at the competition and each type of food is worth a different amount of points. Points are as follows:
