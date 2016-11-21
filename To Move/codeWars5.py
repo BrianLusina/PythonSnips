@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-line = "************************************************************************************************"
 """
 wallpaper(4, 3.5, 3) should return "ten"
 
@@ -20,34 +18,8 @@ print wallpaper(6.3, 4.5, 3.29) #"sixteen"
 print wallpaper(7.8, 2.9, 3.29) #"sixteen"
 print wallpaper(6.3, 5.8, 3.13) #"seventeen"
 print wallpaper(6.1, 6.7, 2.81) #"sixteen"
-print line
-
-"""
-┌───┬───┬───┐
-│ 1 │ 2 │ 3 │
-├───┼───┼───┤
-│ 4 │ 5 │ 6 │
-├───┼───┼───┤
-│ 7 │ 8 │ 9 │
-└───┼───┼───┘
-    │ 0 │
-    └───┘
-Detective, we're hot on their trail! We have a big pile of encoded messages here to use as evidence, but it would take way too long to decode by hand. Could you write a program to do this for us?
-
-Write a funciton called decode(). Given an encoded string, return the actual phone number in string form. Don't worry about input validation, parenthesies, or hyphens.
-"""
-def decode(string):
-    d = {1:9, 2:8, 3:7, 4:6, 5:0,9:1, 8:2, 7:3, 6:4, 0:5}
-    m = [str(d.get(int(i))) for i in string]
-    return "".join(m)
 
 
-print decode("4103432323")# "6957678787")
-print decode("4103438970")# "6957672135")
-print decode("4104305768")# "6956750342")
-print decode("4102204351")# "6958856709")
-print decode("4107056043")# "6953504567")
-print line
 
 """
 In some scripting languages like PHP, there exists a logical operator (e.g. &&, ||, and, or, etc.) called the "Exclusive Or" (hence the name of this Kata). The exclusive or evaluates two booleans. It then returns true if exactly one of the two expressions are true, false otherwise. For example:
@@ -77,7 +49,7 @@ print xor(xor(True, False), xor(False, False)) #True)
 print xor(xor(True, False), xor(True, False)) #False)
 print xor(xor(True, True), xor(True, False)) #True)
 print xor(xor(True, xor(True, True)), xor(xor(True, True), False)) #True)
-print line
+
 
 
 """
@@ -147,7 +119,7 @@ print int_to_english(15) #'fifteen', "'fifteen' expected")
 print int_to_english(47) #'forty seven' or int_to_english(47) == 'forty-seven', "'forty seven' or 'forty-seven' expected")
 print int_to_english(536) #== 'five hundred thirty six' or int_to_english(536) == 'five hundred and thirty-six', "'five hundred thirty six' or 'five hundred and thirty-six' expected")
 print int_to_english(12356) #== 'twelve thousand three hundred fifty six' or int_to_english(12356) == 'twelve thousand three hundred and fifty-six', "'twelve thousand three hundred fifty six' or 'twelve thousand three hundred and fifty-six' expected")
-print line
+
 
 """
 Write a function that verifies provided argument is either an integer or a floating-point number, returning true if it is or false otherwise.
@@ -173,7 +145,7 @@ print i_or_f('1e1')#, True)
 print i_or_f('1E-1')#, True)
 print i_or_f('1e+1')#, True)
 """
-print line
+
 
 """
 Sum of 'n' Numbers
@@ -214,7 +186,7 @@ Test.test_function(sum_of_n(3), [0, 1, 3, 6])
 Test.test_function(sum_of_n(1), [0, 1])
 Test.test_function(sum_of_n(0), [0])
 Test.test_function(sum_of_n(-4), [0, -1, -3, -6, -10])
-print line
+
 """
 Description:
 
@@ -245,4 +217,3 @@ Test.test_function(to_weird_case('This'), 'ThIs')
 Test.test_function(to_weird_case('is'), 'Is')
 Test.test_function(to_weird_case('test'), 'TeSt')
 Test.test_function(to_weird_case("This is a test"),"ThIs Is A TeSt")
-print line
