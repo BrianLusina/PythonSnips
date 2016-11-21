@@ -4,6 +4,29 @@ Repository for some of my simple [Python](https://www.python.org/ "Python") func
 
 Each directory and/or python package has a readme for more information about the Python program
 
+Clone the repo
+```
+git clone 
+
+```
+
+Activate a virtual env
+```
+virtualenv venv
+```
+
+or activate a virtual env with Python 3.+(this is recommended as most snippets run on Python3)
+```
+virtualenv -p python3 venv
+```
+
+install the requirements
+```
+pip install -r requirements.txt
+```
+
+Enjoy!
+
 ## Special file (documenter)
 
 I call this special because it prints out the documentation for Python built in functions
