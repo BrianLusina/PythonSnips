@@ -1,23 +1,4 @@
 """
-ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
-If the function is passed a valid PIN string, return true, else return false.
-eg:
-
-validate_pin("1234") == True
-validate_pin("12345") == False
-validate_pin("a234") == False
-"""
-def validate_pin(pin):
-    if pin.isdigit() and (len(pin) == 4 or len(pin) == 6):
-        return True
-    else:
-        return False
-
-print((validate_pin("1")))
-
-
-
-"""
 The discussion gets heated and you are cannot risk favoring either of them as this might damage your political standing with either of the two clans the samurai generals belong to. Thus, the only thing left to do is find what the common ground of what they are saying is.
 
 Compare the proposals using the function commonGround(string a, string b) that outputs a string containing the words in string a that also occur in string b.
