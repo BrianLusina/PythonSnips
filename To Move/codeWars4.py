@@ -34,7 +34,7 @@ def common_ground(s1, s2):
             lst.append(w)
     return ' '.join(lst) if lst else "death"
 
-print line
+
 print("Test Cases")
 print(common_ground("eat chicken", "eat chicken and rice")) #'eat chicken')
 print(common_ground("eat a burger and drink a coke", "drink a coke"))# 'drink a coke')
@@ -82,7 +82,7 @@ def scoreboard(lst):
 
         return newlist
 
-print line
+
 print(scoreboard([{"name": "Billy The Beast", "chickenwings": 17 , "hamburgers": 7, "hotdogs": 8},
                   {"name": "Habanero Hillary", "chickenwings": 5 , "hamburgers": 17, "hotdogs": 11},
                   {"name": "Joey Jaws", "chickenwings": 8, "hamburgers": 8, "hotdogs": 15},
@@ -128,14 +128,14 @@ It should assume that all numbers are not signed and written in base 10
 def my_parse_int(string):
     return int(string) if string.replace(" ","").isdigit() else "NaN"
 
-print line
+
 print(my_parse_int("1")) #1
 print(my_parse_int("  1 ")) #1
 print(my_parse_int("08")) #8
 print(my_parse_int("5 friends"))# "NaN"
 print(my_parse_int("16.5")) #"NaN"
 
-print line
+
 
 """
 You get an array of numbers, return the sum of all of the positives ones.
@@ -151,7 +151,7 @@ print(positive_sum([1,-2,3,4,5]))#13
 print(positive_sum([-1,2,3,4,-5]))#9
 print(positive_sum([]))#0
 print(positive_sum([-1,-2,-3,-4,-5]))#0
-print line
+
 
 """
 
@@ -203,7 +203,7 @@ def sale_hotdogs(n):
     elif n>=5 and n<10: return n*95
     elif n>=10: return n*90
 
-print line
+
 print sale_hotdogs(0)#0)
 print sale_hotdogs(1)#100)
 print sale_hotdogs(2)#200)
@@ -248,7 +248,7 @@ def conference_picker(citVisited, citOffered):
     else:
         return citiesToConsider[0]
 
-print line
+
 print conference_picker([], ['Philadelphia', 'Osaka', 'Tokyo', 'Melbourne']) # 'Philadelphia',
 print conference_picker([], ['Brussels', 'Madrid', 'London']) # 'Brussels',
 print conference_picker([], ['Sydney', 'Tokyo']) # 'Sydney',
@@ -272,7 +272,7 @@ cO = ['Stockholm', 'Berlin', 'Chicago']
 
 citiesToConsider = [x for x in cO if x not in cV]
 print citiesToConsider
-print line
+
 
 """
 Given few numbers, you need to print out the digits that are not being used.
@@ -296,41 +296,3 @@ print unused_digits(2015, 8, 26), "3479"
 print unused_digits(276, 575), "013489"
 print unused_digits(643), "0125789"
 print unused_digits(864, 896, 744), "01235"
-print line
-
-"""
-Input:
-
-a string strng
-an array of strings arr
-Output of function contain_all_rots(strng, arr) (or containAllRots or contain-all-rots):
-
-a boolean true if all rotations of strng are included in arr
-false otherwise
-Examples:
-
-contain_all_rots(
-  "bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]) -> true
-
-contain_all_rots(
-  "Ajylvpy", ["Ajylvpy", "ylvpyAj", "jylvpyA", "lvpyAjy", "pyAjylv", "vpyAjyl", "ipywee"]) -> false)
-Note:
-
-Though not correct in a mathematical sense
-
-we will consider that there are no rotations of strng == ""
-and for any array arr: contain_all_rots("", arr) --> true
-"""
-from itertools import permutations
-def contain_all_rots(strng, arr):
-    #find all permutations of the string and store results in a list
-    perms = ["".join(i) for i in list(permutations(strng))]
-    #check through each item in list and check if each is in the arr
-    if strng == "": return True
-    return all(x in perms for x in arr) and any(x in perms for x in arr)
-
-print (contain_all_rots("", []), True)
-print(contain_all_rots("", ["bsjq", "qbsj"]), True)
-print(contain_all_rots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]), True)
-print(contain_all_rots("XjYABhR", ["TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", "hRXjYAB", "jYABhRX", "XjYABhR", "ABhRXjY"]), False)
-print line
