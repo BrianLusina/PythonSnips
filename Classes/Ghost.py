@@ -9,4 +9,4 @@ class Ghost(object):
 
 
 ghost = Ghost
-print ghost.color()
+print(ghost.color())
