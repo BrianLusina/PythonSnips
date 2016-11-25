@@ -1,6 +1,5 @@
 from abc import ABCMeta, abstractmethod
 from sys import exit
-from random import randint
 
 
 class Scene(object):
@@ -9,8 +8,11 @@ class Scene(object):
 
     @abstractmethod
     def enter(self):
-        print("This is not yet implemented, subclass it and run again")
-        exit()
+        """
+        Enter method to every scene
+        :return:
+        """
+        pass
 
 
 class Engine(object):
@@ -46,13 +48,4 @@ class Map(object):
     @abstractmethod
     def opening_scene(self):
         pass
-
-
-class EscapePod(Scene):
-    def enter(self):
-        pass
-
-a_map = Map('central_corridor')
-a_game = Engine(a_map)
-a_game.play()
 
