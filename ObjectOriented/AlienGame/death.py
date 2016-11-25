@@ -1,4 +1,5 @@
 from ObjectOriented.AlienGame import Scene
+from random import randint
 
 
 class Death(Scene):
@@ -11,4 +12,5 @@ class Death(Scene):
     ]
 
     def enter(self):
+        print(self.__quips[randint(0, len(self.__quips) - 1)])
         pass

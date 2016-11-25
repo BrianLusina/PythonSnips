@@ -48,12 +48,6 @@ class Map(object):
         pass
 
 
-
-class CentralCorridor(Scene):
-    def enter(self):
-        pass
-
-
 class TheBridge(Scene):
     def enter(self):
         pass
