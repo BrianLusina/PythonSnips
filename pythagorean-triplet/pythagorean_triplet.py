@@ -59,3 +59,11 @@ def triplets_in_range(mini, maxi):
             if c * c == a * a + b * b and mini <= c <= maxi:
                 res.update([(a,b, c,)])
     return res
+
+
+def main():
+    cProfile.run('is_prime(1000)')
+
+
+if __name__ == "__main__":
+    main()
