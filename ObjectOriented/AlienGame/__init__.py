@@ -39,7 +39,7 @@ class Map(object):
     __metaclass__ = ABCMeta
 
     def __init__(self, start_scene):
-        pass
+        self.start_scene = start_scene
 
     @abstractmethod
     def next_scene(self, scene_name):
