@@ -5,6 +5,7 @@ from ObjectOriented.AlienGame.thebridge import TheBridge
 from ObjectOriented.AlienGame.escape_pod import EscapePod
 from ObjectOriented.AlienGame.death import Death
 from ObjectOriented.AlienGame.finished import Finished
+from ObjectOriented.AlienGame.engine import EngineX
 
 
 class StartGame(Map):
@@ -24,3 +25,7 @@ class StartGame(Map):
 
     def opening_scene(self):
         return self.next_scene(self.start_scene)
+
+a_map = Map('central_corridor')
+a_game = EngineX(a_map)
+a_game.play()
