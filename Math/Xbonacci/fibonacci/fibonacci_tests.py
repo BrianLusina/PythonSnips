@@ -1,4 +1,6 @@
 import unittest
+from Math.Xbonacci.fibonacci.fibonacci import fib, fib_memo
+from timeit import timeit
 
 
 class MyTestCase(unittest.TestCase):
