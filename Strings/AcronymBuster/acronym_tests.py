@@ -4,13 +4,13 @@ from Strings.AcronymBuster.acronym import acronym_buster
 
 class MyTestCase(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(acronym_buster("BRB I need to go into a KPI meeting before EOP"), "BRB is an acronym. I do "
+        self.assertEqual(acronym_buster("BRB I need to go into a KPI meeting before EOD"), "BRB is an acronym. I do "
                                                                                            "not like acronyms. Please"
                                                                                            " remove them from your "
                                                                                            "email.")
 
     def test_2(self):
-        self.assertEqual(acronym_buster("I am IAM so will be OOO until EOP"), "I am in a meeting so will be out of "
+        self.assertEqual(acronym_buster("I am IAM so will be OOO until EOD"), "I am in a meeting so will be out of "
                                                                               "office until the end of the day")
 
     def test_3(self):
@@ -29,13 +29,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(acronym_buster("KPI"), "Key performance indicators")
 
     def test_7(self):
-        self.assertEqual(acronym_buster("EOP"), "The end of the day")
+        self.assertEqual(acronym_buster("EOD"), "The end of the day")
 
     def test_8(self):
         self.assertEqual(acronym_buster("TBD"), "To be decided")
 
     def test_9(self):
-        self.assertEqual(acronym_buster("TBD by EOP"), "To be decided by the end of the day")
+        self.assertEqual(acronym_buster("TBD by EOD"), "To be decided by the end of the day")
 
     def test_10(self):
         self.assertEqual(acronym_buster("BRB I am OOO"), "BRB is an acronym. I do not like acronyms. Please remove "
@@ -87,7 +87,7 @@ class MyTestCase(unittest.TestCase):
                                                                            "performance indicators on track")
 
     def test_24(self):
-        self.assertEqual(acronym_buster("The advert needs a CTA. NRN before EOP."), "The advert needs a call to "
+        self.assertEqual(acronym_buster("The advert needs a CTA. NRN before EOD."), "The advert needs a call to "
                                                                                     "action. No reply necessary "
                                                                                     "before the end of the day.")
 
