@@ -29,14 +29,13 @@ def acronym_buster(message):
             word_new = re.sub("([A-Z]{3,})", ACRONYMS[word], word)
             res.append(word_new)
             result.append(word_new)
-        if re.match("[A-Z]{3,}", word) and word not in ACRONYMS.keys():
-            forbiden.append(word)
+        elif re.match("[A-Z]{3,}", word) and word not in ACRONYMS.keys():
+            return word + " is an acronym. I do not like acronyms. Please remove them from your email."
         else:
             res.append(word)
-    return " ".join(res) if len(result) > 0 else forbiden[0] + " is an acronym. I do not like acronyms." \
-                                                               " Please remove them from your email."
-
+    return " ".join(res).capitalize()
 
 # acronym_buster("I am IAM so will be OOO until EOD")
 # "SMB is an acronym. I do not like acronyms. Please remove them from your email.
 print(acronym_buster("We're looking at SMB on SM DMs today"))
+print(acronym_buster("WAH"), "Work at home")
