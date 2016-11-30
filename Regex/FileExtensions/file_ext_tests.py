@@ -1,7 +1,8 @@
 import unittest
+from Regex.FileExtensions.file_ext import is_audio, is_img
 
 
-class MyTestCase(unittest.TestCase):
+class FileExtTests(unittest.TestCase):
     def test_1(self):
         self.assertEqual(is_audio("Nothing Else Matters.mp3"), False)
 
