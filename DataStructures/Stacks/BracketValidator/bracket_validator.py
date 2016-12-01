@@ -19,9 +19,9 @@ def count(paren):
 
 def is_valid(code):
     openers_to_closers_map = {
-        '(' : ')',
-        '{' : '}',
-        '[' : ']'
+        '(': ')',
+        '{': '}',
+        '[': ']'
     }
 
     openers = frozenset(openers_to_closers_map.keys())
@@ -33,9 +33,11 @@ def is_valid(code):
         if char in openers:
             openers_stack.append(char)
         elif char in closers:
+            # check if stack is empty
             if not openers_stack:
                 return False
             else:
+                # remove the opener and store in variable
                 last_unclosed_opener = openers_stack.pop()
 
                 # if this closer doesn't correspond to the most recently
