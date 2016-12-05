@@ -7,4 +7,3 @@ def is_triangle_number(number):
     if x - int(x) > 0:
     	return False
     return True
-#return n * (n+1) / 2
