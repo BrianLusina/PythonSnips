@@ -1,4 +1,10 @@
+from math import sqrt
+
 def is_triangle_number(number):
-    if number == 1 or number == 0:
-        return True
-    return False
+    if not isinstance(number, int):
+        return False
+    x = (sqrt(8*number + 1) - 1) / 2
+    if x - int(x) > 0:
+    	return False
+    return True
+#return n * (n+1) / 2

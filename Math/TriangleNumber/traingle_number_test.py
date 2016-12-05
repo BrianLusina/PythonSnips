@@ -3,6 +3,9 @@ from Math.TriangleNumber.triangle_number import is_triangle_number
 
 
 class TriangleNumberTests(unittest.TestCase):
+    """
+    Triangle Number test cases
+    """
     def test_1(self):
         self.assertEqual(is_triangle_number(3), True, "Expected True for input 3.  Got ".join(str(is_triangle_number(3))).join("."))
 
