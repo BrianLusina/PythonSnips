@@ -1,2 +1,5 @@
 def i_or_f(arr):
-    # Your code here (and maybe somewhere else? Hint, hint)
+    try:
+        return isinstance(float(arr), float) or isinstance(int(arr), int)
+    except ValueError:
+        return False
