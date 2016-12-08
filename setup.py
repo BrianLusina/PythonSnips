@@ -15,10 +15,7 @@ setup(
     author='Brian Lusina (@brianlusina)',
     author_email='lusinabrian@gmail.com',
     url='https://github.com/BrianLusina/Python_Snippets',
-    packages=['pysnips', 'tests', 'pyowm.caches', 'pyowm.commons',
-              'pyowm.exceptions', 'pyowm.utils', 'pyowm.webapi25',
-              'pyowm.webapi25.cityids', 'pyowm.webapi25.xsd',
-              'tests.unit', 'tests.functional'],
+    packages=['pysnips', 'tests', ],
     install_requires=['nose', "nose2", "pytest"],
     long_description=open("README.md").read(),
     classifiers=[
