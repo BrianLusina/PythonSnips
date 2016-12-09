@@ -1,6 +1,6 @@
 import unittest
 
-from beer_song import song, verse
+from pysnips.BeerSong.beer_song import song, verse
 
 
 class BeerTest(unittest.TestCase):

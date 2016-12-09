@@ -1,6 +1,3 @@
-message = 'find you will pain only go you recordings security the into if'
-
-
 def reverse_words(message):
 
     message_list = list(message)
@@ -17,7 +14,7 @@ def reverse_words(message):
     # as we look for the /end/ of the current word
     current_word_start_index = 0
 
-    for i in xrange(len(message_list) + 1):
+    for i in range(len(message_list) + 1):
 
         # found the end of the current word!
         if (i == len(message_list)) or (message_list[i] == ' '):
@@ -44,6 +41,3 @@ def reverse_characters(message_list, front_index, back_index):
         back_index  -= 1
 
     return message_list
-
-print(reverse_words(message))
-# returns: 'if into the security recordings you go only pain will you find'
