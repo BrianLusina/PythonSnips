@@ -1,0 +1,1 @@
+Sample message queueing programs with RabbitMQ
