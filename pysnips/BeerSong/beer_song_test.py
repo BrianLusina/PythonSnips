@@ -5,6 +5,7 @@ from pysnips.BeerSong.beer_song import song, verse
 
 class BeerTest(unittest.TestCase):
     def test_a_verse(self):
+        self.maxDiff = None
         self.assertEqual(
             verse(8),
             "8 bottles of beer on the wall, 8 bottles of beer.\n"
@@ -13,6 +14,7 @@ class BeerTest(unittest.TestCase):
         )
 
     def test_verse_1(self):
+        self.maxDiff = None
         self.assertEqual(
             verse(1),
             "1 bottle of beer on the wall, 1 bottle of beer.\n"
@@ -21,6 +23,7 @@ class BeerTest(unittest.TestCase):
         )
 
     def test_verse_2(self):
+        self.maxDiff = None
         self.assertEqual(
             verse(2),
             "2 bottles of beer on the wall, 2 bottles of beer.\n"
@@ -28,6 +31,7 @@ class BeerTest(unittest.TestCase):
         )
 
     def test_verse_0(self):
+        self.maxDiff = None
         self.assertEqual(
             verse(0),
             "No more bottles of beer on the wall, no more bottles of beer.\n"
@@ -36,6 +40,7 @@ class BeerTest(unittest.TestCase):
         )
 
     def test_songing_several_verses(self):
+        self.maxDiff = None
         self.assertEqual(
             song(8, 6),
             "8 bottles of beer on the wall, 8 bottles of beer.\n"
@@ -50,6 +55,7 @@ class BeerTest(unittest.TestCase):
         )
 
     def test_song_all_the_rest_of_the_verses(self):
+        self.maxDiff = None
         self.assertEqual(
             song(3),
             "3 bottles of beer on the wall, 3 bottles of beer.\n"
