@@ -35,9 +35,9 @@ def _bottles(number):
 
 def _action(number):
     if number == 0:
-        return "Go to the store and buy some more"
+        return "Go to the store and buy some more, "
     else:
-        return "Take {} down and pass it around".format("one" if number > 1 else "it")
+        return "Take {} down and pass it around, ".format("one" if number > 1 else "it")
 
 
 def _next_bottle(number):
