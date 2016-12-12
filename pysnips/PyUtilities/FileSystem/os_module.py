@@ -1,5 +1,5 @@
 from pprint import pprint
-from PythonUtilities.FileSystem import MyFileSystem
+from pysnips.PyUtilities.FileSystem import MyFileSystem
 
 # fetch the file names in current directory
 # 1 (.) dot refers to the current directory, 2 dots (..) takes it a directory higher

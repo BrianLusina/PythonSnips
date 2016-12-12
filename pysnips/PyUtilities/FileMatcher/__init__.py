@@ -25,7 +25,13 @@ class FileMatcher(object):
         """
         # lists all file names including directories and files
         filenames = os.listdir(self.dir)
-        return [file for file in filenames if not os.path.isdir(file)]
+        # return only files
+        # return [file for file in filenames if os.path.isfile(file)]
+        file_dict = {}
+        for file in filenames:
+            if os.path.isfile(file):
+                file_dict[file] =  os.path.abspath(file)
+        return file_dict
 
     def get_dirs_in_destination(self):
         """
@@ -36,8 +42,10 @@ class FileMatcher(object):
         # list all the files in the destination directory
         dirnames = os.listdir(self.destination)
         directories = {}
-        for dir in dirnames:
-            if os.path.isdir(dir) and dir not in directories:
-                directories[dir] = os.path.abspath(dir)
+        for dir_ in dirnames:
+            if os.path.isdir(dir_):
+                directories[dir_] = os.path.abspath(dir_)
 
         return directories
+
+
