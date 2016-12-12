@@ -1,7 +1,5 @@
 from pysnips.PyUtilities.FileMatcher import FileMatcher
 from pprint import pprint
 
-file_matcher = FileMatcher("..", "..")
+file_matcher = FileMatcher("", "/home/lusinabrian/Projects/TEST")
 
-pprint(file_matcher.get_dirs_in_destination())
-pprint(file_matcher.list_files_in_dir())
