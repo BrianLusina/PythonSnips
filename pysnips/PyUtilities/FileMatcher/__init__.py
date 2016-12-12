@@ -1,5 +1,6 @@
 import os
 import shutil
+import re
 
 
 class FileMatcher(object):
@@ -30,7 +31,7 @@ class FileMatcher(object):
         file_dict = {}
         for file in filenames:
             if os.path.isfile(file):
-                file_dict[file] =  os.path.abspath(file)
+                file_dict[file[:file.index(".")]] = os.path.abspath(file)
         return file_dict
 
     def get_dirs_in_destination(self):
@@ -47,5 +48,19 @@ class FileMatcher(object):
                 directories[dir_] = os.path.abspath(dir_)
 
         return directories
+
+    def make_copy_to_dest(self):
+        """
+        Makes a copy of the files to the matching directories
+        get file names and check if they match with the directory names
+        if the keys match in names, then copy the file to the destination
+        :return:
+        """
+        for dir_name in self.get_dirs_in_destination().keys():
+            for file in self.list_files_in_dir().keys():
+                if dir_name.lower() == file:
+                    # copy the file to the directory
+                    shutil.move(self.list_files_in_dir()[file], self.get_dirs_in_destination()[dir_name])
+        
 
 
