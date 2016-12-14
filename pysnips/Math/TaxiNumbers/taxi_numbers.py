@@ -7,4 +7,4 @@ sum2cubs = defaultdict(set)
 
 for c1, c2 in product(cube2n, cube2n):
     if c1 >= c2: sum2cubes[c1 + c2].add((cube2n[c1], cube2n[c2]))
-    
+
