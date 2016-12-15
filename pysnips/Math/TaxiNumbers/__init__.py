@@ -10,22 +10,22 @@ def cubesum():
             heappush(h, (n**3 + 1, n, 1))
             n += 1
 
-        (s, x, y) = heappop(h)
-        yield((s, x, y))
-        y += 1
-        if y < x:
-            heappush(h, (x**3, y**3, x, y))
+        (s, a, b) = heappop(h)
+        yield((s, a, b))
+        b += 1
+        if b < a:
+            heappush(h, (a ** 3, b ** 3, a, b))
 
 
 def taxis():
     out =[(0, 0, 0)]
-    for x in cubesum():
-        if x[0] == out[-1][0]:
-            out.append(x)
+    for s in cubesum():
+        if s[0] == out[-1][0]:
+            out.append(s)
         else:
             if len(out) > 1:
                 yield out
-                out = [x]
+                out = [s]
 
 
 n = 0
