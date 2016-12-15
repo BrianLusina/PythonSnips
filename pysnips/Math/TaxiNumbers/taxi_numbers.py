@@ -1,10 +1,24 @@
-from collections import defaultdict
-from itertools import product
-from pprint import pprint
+cubes, crev = [x**3 for x in range(1, 1201)], {}
+# for cube root lookup
+for x, x3 in enumerate(cubes):
+    crev[x3] = x+1
 
-cube2n = {x**3:x, for x in range(1, 1201)}
-sum2cubs = defaultdict(set)
+sums = sorted(x+y for x in cubes for y in cubes if y < x)
 
-for c1, c2 in product(cube2n, cube2n):
-    if c1 >= c2: sum2cubes[c1 + c2].add((cube2n[c1], cube2n[c2]))
+idx = 0
+for i in range(1, len(sums) - 1):
+    if sums[i - 1] != sums[i] and sums[i] == sums[i + 1]:
+        idx += 1
+        if 25 < idx < 2000 or idx > 2006:
+            continue
 
+        n, p = sums[i], []
+
+        for x in cubes:
+            if n - x < x:
+                break
+            if n - x in crev:
+                p.append((crev[x], crev[n - x]))
+        print("%4d: %10d" % (idx, n))
+        for x in p:
+            print(" = %4d^3 + %4d^3" % x)
