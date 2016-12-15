@@ -16,3 +16,22 @@ def cubesum():
         if y < x:
             heappush(h, (x**3, y**3, x, y))
 
+
+def taxis():
+    out =[(0, 0, 0)]
+    for x in cubesum():
+        if x[0] == out[-1][0]:
+            out.append(x)
+        else:
+            if len(out) > 1:
+                yield out
+                out = [x]
+
+
+n = 0
+for x in taxis():
+    n += 1
+    if n >= 2006:
+        break
+    if n <= 25 or n >= 2000:
+        print(n, x)
