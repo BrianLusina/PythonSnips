@@ -1,9 +1,3 @@
-# Regex
-
-These are a series of Regular Expression programs showing how regular expressions can be used to solve particular problems
-
-## Word Count
-
 Kate likes to count words in text blocks. By words she means continuous sequences of alphabetic characters. Here are examples:
 
 Hello there, little user5453 374 ())$. I’d been using my sphere as a stool. Slow-moving target 839342 was hit by OMGd-63 or K4mp. contains "words" ['Hello', 'there', 'little', 'user', 'I', 'd', 'been', 'using', 'my','sphere', 'as', 'a', 'stool', 'Slow', 'moving', 'target', 'was', 'hit', 'by', 'OMGd', 'or', 'K', 'mp']
