@@ -1,13 +1,13 @@
 import unittest
-from Regex.AutocorrectPrank.autocorrect import auto_correct
+from pysnips.regex.autocorrect_prank.autocorrect import auto_correct
 
 
 class AutocorrectTests(unittest.TestCase):
     def test_one(self):
-        self.assertEqual( "your sister", auto_correct("u"))
+        self.assertEqual("your sister", auto_correct("u"))
 
     def test_two(self):
-        self.assertEqual( "your sister", auto_correct("you"))
+        self.assertEqual("your sister", auto_correct("you"))
 
     def test_three(self):
         self.assertEqual("your sister", auto_correct("Youuuuu"))

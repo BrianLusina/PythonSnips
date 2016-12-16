@@ -1,5 +1,5 @@
 import unittest
-from pysnips.Strings.alternate_case import to_alternating_case
+from pysnips.strings.alternate_case import to_alternating_case
 
 
 class AlternateCaseTest(unittest.TestCase):
