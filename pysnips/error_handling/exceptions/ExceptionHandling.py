@@ -23,7 +23,7 @@ The Except block can handle multiple errors as well
 """
 try:
     print("Hello!")
-    print "Nick"/0
+    print("Nick"/0)
 except ZeroDivisionError:
     print("Someone divided something by zero")
 except (ValueError,TypeError):
@@ -39,7 +39,7 @@ except (ValueError,TypeError):
 """
 try:
     print("Hello!")
-    print "Nick"/0
+    print("Nick"/0)
 except:
     print ("You can't divide your name by zero!")
 
@@ -53,7 +53,7 @@ finally statement shall run no matter what error occurs. Placed at the bottom of
         code
 """
 try:
-    print 800/0
+    print(800/0)
 except ZeroDivisionError:
     print("Damn! divided by zero again! Quit that!")
 finally:
