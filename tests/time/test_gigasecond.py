@@ -1,7 +1,7 @@
 from datetime import datetime
 import unittest
 
-from gigasecond import add_gigasecond
+from pysnips.Time.gigasecond import add_gigasecond, Gigasecond
 
 
 class GigasecondTest(unittest.TestCase):
@@ -44,6 +44,15 @@ class GigasecondTest(unittest.TestCase):
             your_gigasecond,
             add_gigasecond(your_birthday)
         )
+
+    def test_6(self):
+        giga = Gigasecond(datetime(1988, 5, 15))
+        self.assertEqual(["2020-01-22", "Wednesday", "1764 days left"], giga.get_date())
+
+    def test_7(self):
+        giga = Gigasecond(datetime(2015, 2, 17))
+        self.assertEqual(["2046-10-26", "Friday", "11538 days left"], giga.get_date())
+
 
 if __name__ == '__main__':
     unittest.main()
