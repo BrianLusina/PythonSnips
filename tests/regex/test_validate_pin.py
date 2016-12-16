@@ -1,4 +1,4 @@
-from Regex.ValidatePin import validate_pin
+from pysnips.regex.validate_pin import validate_pin
 import unittest
 
 
