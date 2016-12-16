@@ -1,6 +1,6 @@
 import unittest
 from random import randint
-from clock_in_mirror import what_is_the_time
+from pysnips.time.clock_in_mirror import what_is_the_time
 
 
 class ClockTestCases(unittest.TestCase):

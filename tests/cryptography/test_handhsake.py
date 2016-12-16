@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.Cryptography.secret_handshake import handshake, code
+from pysnips.cryptography.secret_handshake import handshake, code
 
 
 class HandshakeTest(unittest.TestCase):

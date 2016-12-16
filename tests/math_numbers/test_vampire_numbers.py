@@ -1,5 +1,5 @@
 import unittest
-from Math.vampire_numbers.vampire_numbers import vampire_test
+from pysnips.math_numbers.vampire_numbers.vampire_numbers import vampire_test
 
 
 class VampireTestCases(unittest.TestCase):

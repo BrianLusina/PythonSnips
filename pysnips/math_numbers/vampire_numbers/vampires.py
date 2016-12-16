@@ -38,7 +38,6 @@ def fact(n):
     [(2, 3), (3, 1), (5, 2)]
     >>> fact(1000)
     [(2, 3), (5, 3)]
-    >>>
     """
     res = fac(n)
     return [(c, res.count(c)) for c in set(res)]
