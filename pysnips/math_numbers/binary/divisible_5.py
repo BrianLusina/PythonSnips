@@ -1,7 +1,4 @@
-import unittest
-
-
-class Divisible_5(object):
+class Divisible5(object):
     def __init__(self, binary_lst):
         self.binary_lst = binary_lst
 
@@ -14,13 +11,3 @@ class Divisible_5(object):
             if int(x, 2) % 5 == 0:
                 lst.append(x)
         return ",".join(lst)
-
-
-class Tests(unittest.TestCase):
-    def test1(self):
-        que = Divisible_5("0100,0011,1010,1001")
-        self.assertEqual("1010", que.div_five())
-
-    def test2(self):
-        que = Divisible_5("0100,0011,1010,1001")
-        self.assertEqual("1010", que.div_five_tw0())
