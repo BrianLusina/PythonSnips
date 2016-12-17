@@ -36,20 +36,6 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 tuple() method can convert list to tuple
 
-## 2D Array
-
-Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
-Note: i=0,1.., X-1; j=0,1,..,Y-1.
-Example
-Suppose the following inputs are given to the program:
-3,5
-Then, the output of the program should be:
-```python
-[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]] 
-```
-
-Hints:
-Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
 ## Counter
 
@@ -94,10 +80,3 @@ Your task is to return number of people in the bus after the last bus station. T
 
 Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
 
-## Array Diff
-
-Your goal in this kata is to implement an difference function, which subtracts one list from another.
-It should remove all values from list a, which are present in list b.
-array_diff([1,2],[1]) == [2]
-If a value is present in b, all of its occurrences must be removed from the other:
-array_diff([1,2,2,2,3],[2]) == [1,3]

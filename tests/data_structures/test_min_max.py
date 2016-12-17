@@ -1,4 +1,5 @@
 import unittest
+from data_structures.lists.min_max import min_max
 
 
 class MyTestCase(unittest.TestCase):

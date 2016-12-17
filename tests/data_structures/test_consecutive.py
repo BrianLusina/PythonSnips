@@ -1,8 +1,8 @@
 import unittest
-from Lists import Consecutive
+from data_structures.lists.consecutive import consecutive
 
 
-class MyTestCase(unittest.TestCase):
+class ConsecutiveTestCase(unittest.TestCase):
     def test_1(self):
         self.assertEqual(consecutive([4, 8, 6]), 2)
 

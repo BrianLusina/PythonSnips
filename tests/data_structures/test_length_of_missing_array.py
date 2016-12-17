@@ -1,5 +1,5 @@
 import unittest
-from Lists.missing_array.length_of_missing_array import get_length_of_missing_array
+from data_structures.lists.missing_array import get_length_of_missing_array
 
 tests = (
     ([[1, 2], [4, 5, 1, 1], [1], [5, 6, 7, 8, 9]], 3),
