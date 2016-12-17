@@ -1,5 +1,5 @@
 import unittest
-from DataStructures.Stacks.BracketValidator.bracket_validator import count, is_valid
+from data_structures.stacks.bracket_validator import count, is_valid
 
 
 class BracketsTestCase(unittest.TestCase):

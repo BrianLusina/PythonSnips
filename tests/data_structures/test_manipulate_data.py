@@ -1,5 +1,5 @@
 import unittest
-from DataStructures.ManipulateData.manipulate_data import manipulate_data
+from data_structures.manipulate_data import manipulate_data
 
 
 class ManipulateDataTestCases(unittest.TestCase):

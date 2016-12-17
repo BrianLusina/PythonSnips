@@ -1,4 +1,4 @@
-from interview_cake.kth_to_last_node import LinkedListNode
+from data_structures.linked_lists.kth_to_last_node import LinkedListNode
 
 a = LinkedListNode("angel food")
 b = LinkedListNode("Bundt")
