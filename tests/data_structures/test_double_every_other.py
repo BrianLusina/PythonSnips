@@ -1,13 +1,5 @@
-from operator import __mul__
 import unittest
-
-
-# lst[1::2] = [__mul__(x, 2) for x in lst[1::2]]
-
-
-def double_every_other(lst):
-    lst[1::2] = [x * 2 for x in lst[1::2]]
-    return lst
+from data_structures.lists.double_every_other import double_every_other
 
 
 class DoubleTests(unittest.TestCase):
