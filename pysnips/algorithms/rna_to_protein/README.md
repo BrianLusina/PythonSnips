@@ -1,5 +1,3 @@
-# HASHES
-
 ## RNA to Protein sequence translation
 
 The central dogma of molecular biology is that DNA is transcribed into RNA, which is then tranlsated into protein. RNA, like DNA, is a long strand of nucleic acids held together by a sugar backbone (ribose in this case). Each segment of three bases is called a codon. Molecular machines called ribosomes translate the RNA codons into amino acid chains, called polypeptides which are then folded into a protein.
@@ -60,66 +58,3 @@ Amino Acid Dictionary
 ```
 
 > **FUNDAMENTALS**, **HASHES**, **DATA STRUCTURES**
-
-## Square climber
-
-With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
-Suppose the following input is supplied to the program:
-8
-Then, the output should be:
-```python
-{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
-```
-Hints:
-> In case of input data being supplied to the question, it should be assumed to be a console input.
-
-## Tuple Sorter
-
-You are required to write a program to sort the (name, age, height) tuples by ascending order where name is string, age and height are numbers. The tuples are input by console. The sort criteria is:
-1: Sort based on name;
-2: Then sort based on age;
-3: Then sort by score.
-The priority is that name > age > score.
-If the following tuples are given as input to the program:
-Tom,19,80
-John,20,90
-Jony,17,91
-Jony,17,93
-Json,21,85
-Then, the output of the program should be:
-[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
-
-## Word Frequency
-
-Write a program to compute the frequency of the words from the input. The output should output after sorting the key alphanumerically. 
-Suppose the following input is supplied to the program:
-New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
-Then, the output should be:
-2:2
-3.:1
-3?:1
-New:1
-Python:5
-Read:1
-and:1
-between:1
-choosing:1
-or:2
-to:1
-
-Hints
-In case of input data being supplied to the question, it should be assumed to be a console input.
-
-## Dictionary Square Keys
-
-Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the values only.
-
-Hints:
-
-Use dict[key]=value pattern to put entry into a dictionary.
-Use ** operator to get power of a number.
-Use range() for loops.
-Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.

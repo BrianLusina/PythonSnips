@@ -1,6 +1,6 @@
 import unittest
 
-from flatten_array import flatten
+from data_structures.lists.flatten_array import flatten
 
 
 class FlattenArrayTests(unittest.TestCase):

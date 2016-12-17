@@ -5,5 +5,3 @@ def tower_builder(n_floors):
         m.append(i * '{:^6}'.format('*'))
         space -= 1
     return m
-
-print(tower_builder(3))

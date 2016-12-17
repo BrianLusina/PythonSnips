@@ -1,4 +1,4 @@
-from data_structures.linked_lists.kth_to_last_node import LinkedListNode
+from data_structures.lists.linked_lists import LinkedListNode
 
 a = LinkedListNode("angel food")
 b = LinkedListNode("Bundt")
