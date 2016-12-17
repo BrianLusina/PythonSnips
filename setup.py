@@ -12,7 +12,7 @@ setup(
     name='PySnips',
     version=constants.PYSNIPS_VERSION,
     description='A Python library containing small Python algorithms',
-    author='Brian Lusina (@brianlusina)',
+    author='Brian Lusina (@BrianLusina)',
     author_email='lusinabrian@gmail.com',
     url='https://github.com/BrianLusina/Python_Snippets',
     packages=['pysnips', 'tests', ],
