@@ -1,6 +1,6 @@
 import unittest
 
-from twelve_days import sing, verse, verses
+from strings_words.twelve_days import sing, verse, verses
 
 
 class TwelveDaysTests(unittest.TestCase):
