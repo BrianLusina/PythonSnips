@@ -18,30 +18,7 @@ Input example:
 Returns
 'monty'
 
-## Count vegetables
 
-Help Suzuki count his vegetables....
-
-Suzuki is the master monk of his monastery so it is up to him to ensure the kitchen is operating at full capacity to feed his students and the villagers that come for lunch on a daily basis.
-
-This week there was a problem with his deliveries and all the vegetables became mixed up. There are two important aspects of cooking in his kitchen, it must be done in harmony and nothing can be wasted. Since the monks are a record keeping people the first order of business is to sort the mixed up vegetables and then count them to ensure there is enough to feed all the students and villagers.
-
-You will be given a string with the following vegetables:
-
-"cabbage", "carrot", "celery", "cucumber", "mushroom", "onion", "pepper", "potato", "tofu", "turnip"
-Return a list of tuples with the count of each vegetable in descending order. If there are any non vegetables mixed in discard them. If the count of two vegetables is the same sort in descending alphabetical order.
-``` python
-(119, "pepper"),
-(114, "carrot"),
-(113, "turnip"),
-(102, "onion"),
-(101, "tofu"),
-(100, "cabbage"),
-(93, "mushroom"),
-(90, "cucumber"),
-(88, "potato"),
-(80, "celery")
-```
 
 ## ReOrdering
 
@@ -105,16 +82,6 @@ is_isogram("Dermatoglyphics" ) == true
 is_isogram("aba" ) == false
 is_isogram("moOse" ) == false # -- ignore letter case
 ```
-
-## Chromosome Check
-
-The male gametes or sperm cells in humans and other mammals are heterogametic and contain one of two types of sex chromosomes. They are either X or Y. The female gametes or eggs however, contain only the X sex chromosome and are homogametic.
-
-The sperm cell determines the sex of an individual in this case. If a sperm cell containing an X chromosome fertilizes an egg, the resulting zygote will be XX or female. If the sperm cell contains a Y chromosome, then the resulting zygote will be XY or male.
-
-Determine if the sex of the offspring will be male or female based on the X or Y chromosome present in the male's sperm.
-
-If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";
 
 ##Time Degrees
 
@@ -211,17 +178,11 @@ Also please include simple test function to test the class methods.
 Hints:
 Use __init__ method to construct some parameters
 
-## AntiVowel
-
-Remove all vowels from a text
 
 ## Scrabble Score
 
 Function that takes word input and returns equivalent scrabble score
 
-## Censor
-
-Function that takes a word,searches for it in text and replaces it with asterisks similar in number to the length of the word
 
 ## Longest Word
 
@@ -270,18 +231,6 @@ Given a string, detect whether or not it is a pangram. Return True if it is, Fal
 
 Alternatively
 
-## Accum
-
-This time no story, no theory. The examples below show you how to write function accum:
-
-Examples:
-``` python
-accum("abcd") --> "A-Bb-Ccc-Dddd"
-accum("RqaEzty") --> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-accum("cwAt") --> "C-Ww-Aaa-Tttt"
-```
-
-> The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 
 ## Wrong End
@@ -326,20 +275,6 @@ zebulansNightmare('main') == 'main'
 ```
 
 
-## Father Son
-
-This is the simple version of Shortest Code series. If you need some challenges, please try the challenge version
-Task:
-Every uppercase letter is Father, The corresponding lowercase letters is the Son.
-Give you a string s, If the father and son both exist, keep them.
-If it is a separate existence, delete them. Return the result.
-For example:
-``` python
-sc("Aab") should return "Aa"
-sc("AabBc") should return "AabB"
-sc("AaaaAaab") should return "AaaaAaa"(father can have a lot of son)
-sc("aAAAaAAb") should return "aAAAaAA"(son also can have a lot of father ;-)
-```
 
 
 ## LineUp Students
@@ -388,22 +323,6 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 We use set container to remove duplicated data automatically and then use sorted() to sort the data.
 
-## Duplicate Encoder
-
-The goal of this exercise is to convert a string to a new string where each character in the new string is '(' if that character appears only once in the original string, or ')' if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
-
-Examples:
-``` python
-"din" => "((("
-
-"recede" => "()()()"
-
-"Success" => ")())())"
-
-"(( @" => "))(("
-```
-Tags
-> FUNDAMENTALS STRINGS ARRAYS
 
 ## Letter Digit Count
 
@@ -456,30 +375,6 @@ title_case('the quick brown fox') # should return: 'The Quick Brown Fox'
 Remove duplicate characters in a given string keeping only the first occurrences.
 For example, if the input is ‘tree traversal’
 the output will be "tre avsl".
-
-## Consecutive String
-
-You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
-
-Example:
-
-```python
-longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
-```
-
-n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
-
-## Caps Counter
-
-Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
-Suppose the following input is supplied to the program:
-Hello world!
-Then, the output should be:
-UPPER CASE 1
-LOWER CASE 9
-
-Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
 
 ## Palindrome Pairs
 
