@@ -1,20 +1,8 @@
 import unittest
-
-"""
-PSEUDO CODE:
-
-"""
+from generators_iterators.iterators.multiiter import multiiter
 
 
-def multiiter(*args):
-    print(args)
-    for x, y in args:
-        for a in range(x):
-            for b in range(y):
-                yield (a, b)
-
-
-class Tests(unittest.TestCase):
+class MultiIterTests(unittest.TestCase):
     def test1(self):
         self.assertEquals(list(multiiter(0)), [])
 

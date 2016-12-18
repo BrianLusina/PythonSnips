@@ -16,7 +16,3 @@ def replicate_recur(times, data):
         m = replicate_recur(times-1, data)
         m.append(data)
         return m
-
-
-result = replicate_iter(3, 5)
-print([result], [5, 5, 5])

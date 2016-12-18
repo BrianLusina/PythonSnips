@@ -1,22 +1,5 @@
 import unittest
-from itertools import cycle
-
-
-def replicate_iter(times, data):
-    if not isinstance(times, int):
-        raise ValueError
-    for item in cycle(data):
-        for _ in range(times):
-            yield(item)
-
-
-def replicate_recur(times, data):
-    if times == 0 or times == 1:
-        return [data]
-    else:
-        m = replicate_recur(times-1, data)
-        m.append(data)
-        return m
+from generators_iterators.iterators.recur_iter import replicate_iter, replicate_recur
 
 
 class ReplicateIterTestCases(unittest.TestCase):

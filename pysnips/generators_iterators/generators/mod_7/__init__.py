@@ -3,5 +3,4 @@ def mod7(n):
         if x % 7 == 0:
             yield x
 
-
 print(list(mod7(50)))
