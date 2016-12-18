@@ -1,13 +1,5 @@
 import unittest
-
-
-def sum_same(num, times):
-    c, total = 1, 0
-    while c <= times:
-        n = str(num) * c
-        total += int(n)
-        c += 1
-    return total
+from math_numbers.sum_same import sum_same
 
 
 class SumSameDigTests(unittest.TestCase):

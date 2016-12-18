@@ -1,0 +1,15 @@
+from math import pi
+from object_oriented.shape import Shape
+
+
+class Circle(Shape):
+    def __init__(self, radius):
+        super().__init__()
+        self.radius = radius
+
+    def area(self):
+        return pow(self.radius, 2) * pi * 2
+
+aCircle = Circle(2)
+print(aCircle.area())
+
