@@ -36,3 +36,16 @@ except:
 assert 5 * 2 == 12
 temp = -29
 assert (temp >= 0), "It's too damn cold!"
+
+
+def throws():
+    return 5/0
+
+try:
+    throws()
+except ZeroDivisionError:
+    print("division by zero!")
+except Exception as err:
+    print('Caught an exception')
+finally:
+    print('In finally block for cleanup')

@@ -1,4 +1,4 @@
-class MyError(Exception):
+class PySnipsError(Exception):
     """
     My own exception class
     Attributes:
@@ -7,3 +7,8 @@ class MyError(Exception):
 
     def __init__(self, msg):
         self.msg = msg
+
+    @staticmethod
+    def __new__(*args, **kwargs):
+        return super().__new__(*args, **kwargs)
+
