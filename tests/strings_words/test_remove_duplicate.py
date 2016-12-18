@@ -5,10 +5,10 @@ from strings_words.remove_duplicate import RemoveDuplicate, RemoveDupSort
 
 class DuplicateTests(unittest.TestCase):
     def setUp(self):
-        self.startTime = time.time()
+        self.start_time = time.time()
 
     def tearDown(self):
-        t = time.time() - self.startTime
+        t = time.time() - self.start_time
         print("%s: %.3f" % (self.id(), t))
 
     def test_1(self):
