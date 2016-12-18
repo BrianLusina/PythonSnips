@@ -21,3 +21,7 @@ def translate(words):
             head, tail = split_initial_consonant_sound(w)
             res.append(tail + head + "ay")
     return " ".join(res)
+
+
+def pig_it(text):
+    return " ".join(x.replace(x[0], "") + x[0] + "ay" for x in text.split(" ") if re.match('\w+', x))
