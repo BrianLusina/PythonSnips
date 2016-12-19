@@ -56,4 +56,4 @@ sudo apt-get -y install git
 
 echo ">>> Installing Anaconda"
 wget http://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-bash Anaconda3-4.2.0-Linux-x86_64
+bash -y Anaconda3-4.2.0-Linux-x86_64
