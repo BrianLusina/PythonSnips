@@ -1,7 +1,6 @@
 # Python Snippets
    
-Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets. The sample functions and classes are within directories, some are within categories like *math* and *string manipulation* and others are within directories of their own.
-
+Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets.
 Each directory and/or python package has a readme for more information about the Python program
 
 Clone the repo
@@ -25,9 +24,32 @@ install the requirements
 pip install -r requirements.txt
 ```
 
-Enjoy!
+## Using Vagrant
 
-## Special file (documenter)
+You will see a vagrant file with all the settings already configured. This will include the provisioning shell script.
+
+Make sure you have [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads?replytocom=98578) already installed in your machine.
+
+Simply run:
+
+``` sh
+$ vagrant up
+```
+> This will start up the virtual machine
+
+Login into the machine
+
+``` sh
+$ vagrant ssh
+```
+> This will log you into the machine
+
+That is it, you can then activate the virtual environment as before.
+
+
+**Enjoy!**
+
+### Special file (documenter)
 
 I call this special because it prints out the documentation for Python built in functions
 Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. But Python has a built-in document function for every built-in functions.
