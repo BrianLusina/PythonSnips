@@ -2,19 +2,20 @@
 
 Write a program that, given a word and a list of possible anagrams, selects the correct sublist.
 
-Given `"listen"` and a list of candidates like `"enlists" "google"
-"inlets" "banana"` the program should return a list containing
-`"inlets"`.
-
-### Submitting Exercises
-
-Note that, when trying to submit an exercise, make sure the solution is in the `exercism/python/<exerciseName>` directory.
-
-For example, if you're submitting `bob.py` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/python/bob/bob.py`.
+Given `"listen"` and a list of candidates like `"enlists" "google" "inlets" "banana"`
+the program should return a list containing `"inlets"`.
 
 
-For more detailed information about running tests, code style and linting,
-please see the [help page](http://exercism.io/languages/python).
+## Anagram Count
+
+Write a function that accepts two parameters, a parent and a child string.
+Determine how many times the child string - or an anagram of the child string - appears in the parent string.
+There is a solution which can be done in near instant time.
+
+``` python
+f('AdnBndAndBdaBn', 'dAn') // 4 ("Adn", "ndA", "dAn", "And")
+f('AbrAcadAbRa', 'cAda') // 2
+```
 
 ## Source
 
