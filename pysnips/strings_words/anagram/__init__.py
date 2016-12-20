@@ -58,12 +58,21 @@ class Anagrams(object):
         child_slice = len(child)
         anagram = self.hash_string(child)
 
+        # if the child is longer than the parent, return 0, it does not make sense
         if len(child) > len(parent):
             return 0
+
+        # if the child and the parent are exactly the same, return 1
         if child == parent:
             return 1
+        # if the child's length is the same as the parent length AND the child and parent are not the same
+        # check if it is an anagram
+        if len(child) == len(parent) and child != parent:
+            if self.is_anagram(child, parent):
+                return 1
+            else:
+                return 0
         for i in range(0, len(parent) - child_slice):
-            
             if self.hash_string(parent[i: i + child_slice]) == anagram:
                 count += 1
         return count
