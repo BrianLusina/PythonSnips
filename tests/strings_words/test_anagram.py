@@ -82,6 +82,7 @@ class AnagramTests(unittest.TestCase):
     def test_child_anagrams(self):
         self.assertEqual(self.anagram.anagram_count('AbrAcadAbRa', 'cAda'), 2)
 
+    def test_child_anagrams_2(self):
         self.assertEqual(self.anagram.anagram_count('AdnBndAndBdaBn', 'dAn'), 4)
 
     def test_should_not_fail_with_larger_child(self):

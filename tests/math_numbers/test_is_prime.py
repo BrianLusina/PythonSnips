@@ -1,16 +1,16 @@
 import unittest
-from math_numbers.is_prime import PrimeCheck, divisors
+from math_numbers.is_prime import is_prime, divisors
 
 
 class PrimeTests(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(PrimeCheck.is_prime(0), False, "0 is not prime")
+        self.assertEqual(is_prime(0), False, "0 is not prime")
 
     def test_2(self):
-        self.assertEqual(PrimeCheck.is_prime(1), False, "1 is not prime")
+        self.assertEqual(is_prime(1), False, "1 is not prime")
 
     def test_3(self):
-        self.assertEqual(PrimeCheck.is_prime(2), True, "2 is prime")
+        self.assertEqual(is_prime(2), True, "2 is prime")
 
 
 class DivisorTests(unittest.TestCase):

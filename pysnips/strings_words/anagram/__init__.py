@@ -1,4 +1,6 @@
 from string import ascii_letters
+from math_numbers.is_prime import is_prime
+from functools import reduce
 
 
 class Anagrams(object):
@@ -46,8 +48,40 @@ class Anagrams(object):
     def anagram_count(self, parent: str, child: str) -> int:
         """
         Counts the number of times the anagram of a child string appears in a parent string
+        Obtains the length of the child string and slices the parent string by that length,
+        checks if the slices are anagrams and increases the count variable.
+        If the child string is longer than parent, string, it returns a 0 automatically
         :return:  Number of times a child anagram string appears in a parent string
         :rtype int
         """
+        count = 0
+        child_slice = len(child)
+        anagram = self.hash_string(child)
 
-        pass
+        if len(child) > len(parent):
+            return 0
+        if child == parent:
+            return 1
+        for i in range(0, len(parent) - child_slice):
+            
+            if self.hash_string(parent[i: i + child_slice]) == anagram:
+                count += 1
+        return count
+
+    def hash_string(self, word):
+        """
+        Map ascii letters to prime numbers, then hashes the string
+        :return: The character map for each letter to corresponding prime number
+        :rtype int
+        """
+        # prime number length will depend on ascii_letters length
+        char_map = {}
+        count = 0
+        for num in range(2, (ord(ascii_letters[25]) * 2)):
+            # check if prime
+            if is_prime(num):
+                if len(char_map) == 52:
+                    break
+                char_map[ascii_letters[count]] = num
+                count += 1
+        return reduce(lambda memo, char: memo * char_map[char], word, 1)
