@@ -1,12 +1,12 @@
-from urllib.request import urlretrieve
+from data_science.data_download import DataDownload
 import pandas as pd
-import numpy as np
 from matplotlib import pyplot as plt
 
 # store the url in a variable for retrieval
 wine_url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
 
-urlretrieve(wine_url, "red_wine.csv")
+red_wine = DataDownload(wine_url, "red_wine.csv")
+red_wine.download()
 
 # Read file into a DataFrame and print its head
 df = pd.read_csv('red_wine.csv', sep=';')
