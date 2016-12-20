@@ -4,11 +4,16 @@ from functools import reduce
 
 
 class Anagrams(object):
+    """
+    Anagram class to detect anagrams for letters
+    """
+
     def __init__(self):
         pass
 
     def detect_anagrams(self, word, word_list):
-        """check to see that each character in the first string actually occurs in the second. If it is possible to
+        """
+        check to see that each character in the first string actually occurs in the second. If it is possible to
         “checkoff” each character, then the two strings must be anagrams.
         Checking off a character will be accomplished by replacing it with the special Python value None.
         However, since strings in Python are immutable, the first step in
@@ -23,6 +28,13 @@ class Anagrams(object):
         return res
 
     def is_anagram(self, s1, s2):
+        """
+        Check if s1 is an anagram of s2
+        :param s1: String to check
+        :param s2: string to compare to
+        :return: Whether the strings are anagrams
+        :rtype: bool
+        """
         a_list = list(s2)
         pos1 = 0
         flag = True
@@ -58,13 +70,14 @@ class Anagrams(object):
         child_slice = len(child)
         anagram = self.hash_string(child)
 
-        # if the child is longer than the parent, return 0, it does not make sense
+        # if the child is longer than the parent, return 0, it does not make sense for child to be > than parent
         if len(child) > len(parent):
             return 0
 
         # if the child and the parent are exactly the same, return 1
         if child == parent:
             return 1
+
         # if the child's length is the same as the parent length AND the child and parent are not the same
         # check if it is an anagram
         if len(child) == len(parent) and child != parent:
@@ -80,6 +93,8 @@ class Anagrams(object):
     def hash_string(self, word):
         """
         Map ascii letters to prime numbers, then hashes the string
+        This is used to check if a parent string has an anagram of a child string.
+        Used because hashes will remain unique and will be easier to check against
         :return: The character map for each letter to corresponding prime number
         :rtype int
         """
