@@ -59,3 +59,4 @@ wget http://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 
 echo ">>> Installing ZSH"
 sudo apt-get -y install zsh
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
