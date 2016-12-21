@@ -1,5 +1,5 @@
 from string import ascii_letters
-from math_numbers.is_prime import is_prime
+from math_numbers.is_prime import is_prime_with_re
 from functools import reduce
 
 
@@ -100,12 +100,25 @@ class Anagrams(object):
         """
         # prime number length will depend on ascii_letters length
         char_map = {}
-        count = 0
-        for num in range(2, (ord(ascii_letters[25]) * 2)):
-            # check if prime
-            if is_prime(num):
-                if len(char_map) == 52:
-                    break
-                char_map[ascii_letters[count]] = num
-                count += 1
+        char_map_zip = zip(ascii_letters, self.generate_primes(len(ascii_letters)))
+        for let, prime in char_map_zip:
+            char_map[let] = prime
         return reduce(lambda memo, char: memo * char_map[char], word, 1)
+
+    def generate_primes(self, length):
+        """
+        Generates the prime numbers based on the length of the ascii characters
+        :param length, Length of the ascii letters list, which is the length of the prime numbers wanted
+        :return: list of prime numbers
+        :rtype: list
+        """
+        # upper bound of search space
+        upper_bound = 100
+        # result list
+        primes = list()
+
+        while len(primes) < length:
+            primes += filter(is_prime_with_re, range(upper_bound - 100, upper_bound))
+            upper_bound += 100
+
+        return primes[:length]

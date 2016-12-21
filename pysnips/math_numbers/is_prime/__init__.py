@@ -30,16 +30,3 @@ def divisors(n):
     return len([1, n]) if is_prime(n) else len([x for x in range(1, n+1) if n % x == 0])
 
 
-# number of primes wanted
-n = 52
-# upper bound of search space
-m = 100
-# result list
-l = list()
-
-while len(l) < n:
-    l += filter(is_prime_with_re, range(m - 100, m))
-    m += 100
-
-print(l[:n])
-

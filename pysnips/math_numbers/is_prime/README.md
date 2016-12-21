@@ -27,3 +27,10 @@ from itertools import count,islice
 def divisors(n):
     is_prime =  lambda num: num > 1 and all(num % i for i in islice(count(2), int(sqrt(num) - 1)))
     return len([1, n]) if is_prime(n) else len([x for x in range(1, n+1) if n % x == 0])
+
+## Testing for prime numbers with Regex
+
+Check this [link](http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/) for more info.
+
+
+
