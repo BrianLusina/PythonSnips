@@ -48,6 +48,9 @@ echo ">>> Installing pip"
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
 
+echo "Installing virtualenv"
+sudo pip install virtualenv
+
 echo ">>> Installing Nginx"
 sudo apt-get install -y nginx
 
