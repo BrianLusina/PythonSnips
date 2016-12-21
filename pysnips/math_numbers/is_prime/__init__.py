@@ -1,6 +1,6 @@
 from math import sqrt
 from itertools import count, islice
-
+import re
 
 def is_prime(num):
     return num > 1 and all(num % i for i in islice(count(2), int(sqrt(num)-1)))
@@ -16,5 +16,30 @@ def is_prime_v2(x):
         return True
 
 
+def is_prime_with_re(num):
+    """
+    Determines a prime number with regular expression
+    :param num: The number to evaluate for primarity
+    :return: True /False
+    :rtype: bool
+    """
+    return re.match(r'^1?$|^(11+?)\1+$', "1" * num) is None
+
+
 def divisors(n):
     return len([1, n]) if is_prime(n) else len([x for x in range(1, n+1) if n % x == 0])
+
+
+# number of primes wanted
+n = 52
+# upper bound of search space
+m = 100
+# result list
+l = list()
+
+while len(l) < n:
+    l += filter(is_prime_with_re, range(m - 100, m))
+    m += 100
+
+print(l[:n])
+
