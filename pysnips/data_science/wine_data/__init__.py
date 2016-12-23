@@ -32,9 +32,11 @@ class RedWineData(object):
         :rtype: list
         """
         file_name = self.download_red_wine()[0]
-        with open(file_name, "r") as f:
-            wines = list(csv.reader(f, delimiter=";"))
-        wines = np.array(wines[1:], dtype=np.float)
+        wines = np.genfromtxt(fname=file_name, delimiter=";", skip_header=1)
+        # alternatively
+        # with open(file_name, "r") as f:
+        #     wines = list(csv.reader(f, delimiter=";"))
+        # wines = np.array(wines[1:], dtype=np.float)
         return wines
 
     def get_shape(self):
