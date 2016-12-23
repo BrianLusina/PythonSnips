@@ -17,6 +17,7 @@ class Node(object):
     def set_data(self, d):
         self.data = d
 
+
 class LinkedList(object):
     def __init__(self, value):
         self.value = value

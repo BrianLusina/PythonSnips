@@ -18,5 +18,7 @@ class DataDownload(object):
         """
         Performs actual file download.
         Retrieves the url and stores the data in file
+        :return a tuple object with the file name and the http object
+        :rtype: tuple
         """
-        urlretrieve(self.url, self.file_name)
+        return urlretrieve(self.url, self.file_name)
