@@ -70,3 +70,30 @@ We keep two pointers to nodes (we'll call these “runners”), both starting at
 If the linked list has a cycle, fast_runner will "lap" (catch up with) slow_runner, and they will momentarily equal each other.
 
 If the list does not have a cycle, fast_runner will reach the end.
+
+### Complexity
+O(n)O(n) time and O(1)O(1) space.
+
+The runtime analysis is a little tricky. The worst case is when we do have a cycle, so we don't return until fast_runner equals slow_runner. But how long will that take?
+
+First, we notice that when both runners are circling around the cycle fast_runner can never skip over slow_runner. Why is this true?
+
+Suppose fast_runner had just skipped over slow_runner. fast_runner would only be 1 node ahead of slow_runner, since their speeds differ by only 1. So we would have something like this:
+
+  [ ] -> [s] -> [f]
+What would the step right before this "skipping step" look like? fast_runner would be 2 nodes back, and slow_runner would be 1 node back. But wait, that means they would be at the same node! So fast_runner didn't skip over slow_runner! (This is a proof by contradiction.)
+
+Since fast_runner can't skip over slow_runner, at most slow_runner will run around the cycle once and fast_runner will run around twice. This gives us a runtime of O(n)O(n).
+
+For space, we store two variables no matter how long the linked list is, which gives us a space cost of O(1)O(1).
+
+### Bonus
+How would you detect the first node in the cycle? Define the first node of the cycle as the one closest to the head of the list.
+Would the program always work if the fast runner moves three steps every time the slow runner moves one step?
+What if instead of a simple linked list, you had a structure where each node could have several "next" nodes? This data structure is called a "directed graph." How would you test if your directed graph had a cycle?
+What We Learned
+Some people have trouble coming up with the "two runners" approach. That's expected—it's somewhat of a blind insight. Even great candidates might need a few hints to get all the way there. And that's fine.
+
+Remember that the coding interview is a dialogue, and sometimes your interviewer expects she'll have to offer some hints along the way.
+
+One of the most impressive things you can do as a candidate is listen to a hint, fully understand it, and take it to its next logical step. Interview Cake gives you lots of opportunities to practice this. Don't be shy about showing lots of hints on our exercises—that's what they're there for!
