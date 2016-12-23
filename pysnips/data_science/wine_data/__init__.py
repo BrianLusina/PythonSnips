@@ -32,12 +32,23 @@ class RedWineData(object):
         :rtype: list
         """
         file_name = self.download_red_wine()[0]
-        wines = np.genfromtxt(fname=file_name, delimiter=";", skip_header=1)
+        wines = np.genfromtxt(fname=file_name, delimiter=";", skip_header=1,dtype=np.float)
         # alternatively
         # with open(file_name, "r") as f:
         #     wines = list(csv.reader(f, delimiter=";"))
         # wines = np.array(wines[1:], dtype=np.float)
         return wines
+
+    def store_data(self):
+        """
+        Stores the data in a cleaner format in a file
+        :return: file name of cleanly stored data
+        """
+        new_file = self.extract_data()
+        store = open("red_wine_clean.txt", "w")
+        store.write(str(new_file))
+        store.close()
+        return store
 
     def get_shape(self):
         """
