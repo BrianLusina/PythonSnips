@@ -85,6 +85,18 @@ class LinkedList(object):
         """
         pass
 
+    def insert_after(self, node_to_insert, current_node):
+        """
+        Inserts a node after a node in the Linked List. First find the node in the LinkedList,
+        Get its successor, store in temp variable and insert this node in the position,
+        get this node's next as the successor of the current node
+        :param node_to_insert: The node to be inserted
+        :param current_node: the current node to look for to perform insertion
+        :return: Node object
+        :rtype: Node
+        """
+        pass
+
     @abstractmethod
     def insert_first(self, node):
         """
