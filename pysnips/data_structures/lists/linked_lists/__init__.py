@@ -165,6 +165,20 @@ class LinkedList(object):
             temp_node = temp_node.get_next()
         print(self.tail.get_data())
 
+    def display_forward(self):
+        """
+        Display the complete list in a forward manner
+        :return:The LinkedList displayed in 'ascending order' or in order of insertion
+        """
+        pass
+
+    def display_backward(self):
+        """
+        Display the complete list in a backward manner
+        :return: The LinkedList displayed in 'descending order', not in the order of insertion
+        """
+        pass
+    
     @abstractmethod
     def __repr__(self):
         """
