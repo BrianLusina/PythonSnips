@@ -7,14 +7,21 @@ myArray = ["Dad", "Mom", "Linda", "Joyce", "Brian", "Mideva", "Lucky", "Fox", "J
 
 # example code
 single_list = SinglyLinkedList()
+double_list = DoublyLinkedList()
 
 for x in range(0, len(myArray)):
     single_list.add(myArray[x])
 
-single_list.display()
+for x in range(0, len(myArray)):
+    double_list.add(myArray[x])
 
-single_list.delete_node("Rabbits")
+# single_list.display()
+double_list.display()
 
-single_list.display()
+# single_list.delete_node("Rabbits")
+double_list.delete_node("Rabbits")
+
+# single_list.display()
+double_list.display()
 
 # double_list.delete_node(double_list.search('b'))

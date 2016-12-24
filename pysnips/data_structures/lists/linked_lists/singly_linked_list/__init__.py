@@ -27,7 +27,7 @@ class SinglyLinkedList(LinkedList):
         :param data:
         :return:
         """
-        node = Node(data, None)
+        node = SingleNode(data, None)
         if self.head is None:
             self.head = self.tail = node
         else:

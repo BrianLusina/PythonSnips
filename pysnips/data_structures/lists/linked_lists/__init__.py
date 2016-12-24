@@ -19,6 +19,15 @@ class Node(object):
         """
         pass
 
+    def has_next(self, node):
+        """
+        Checks if the node has a successor
+        :param node, the node to check in the linked list
+        :return: True or False
+        :rtype: bool
+        """
+        return node.next is None
+
 
 class LinkedList(object):
     """
@@ -62,19 +71,11 @@ class LinkedList(object):
         :return: The last Node elemen
         :rtype: Node
         """
-        last_node = None
-        while not self.has_next(self.value.next):
-            last_node = self.value
-        return last_node
-
-    def has_next(self, node):
-        """
-        Checks if the node has a successor
-        :param node, the node to check in the linked list
-        :return: True or False
-        :rtype: bool
-        """
-        return node.next is None
+        # last_node = None
+        # while not self.has_next(self.value.next):
+        #     last_node = self.value
+        # return last_node
+        pass
 
     def is_empty(self):
         """
@@ -167,15 +168,6 @@ class LinkedList(object):
         :return: Deleted node
         """
         pass
-
-    def build_list(self, array):
-        self.head.set_data(array[0])
-        self.temp = self.head
-        for i in array[1:]:
-            self.temp = self.temp.set_and_return_next()
-            self.temp.set_data(i)
-            self.tail = self.temp
-        return self.head
 
     @abstractmethod
     def display(self):
