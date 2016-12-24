@@ -34,23 +34,6 @@ class LinkedList(object):
         self.head = Node()
         self.next = None
 
-    @abstractmethod
-    def delete(self):
-        """
-        Deletes a node from the beginning of the linked list
-        :return: the deleted node
-        """
-        pass
-
-    @abstractmethod
-    def delete_node(self, node):
-        """
-        Deletes a node element from the LinkedList
-        :param node:
-        :return: Deleted node element
-        :rtype: Node object
-        """
-        pass
 
     @abstractmethod
     def has_next(self, node):
@@ -89,13 +72,64 @@ class LinkedList(object):
         :return: New LinkedList which is reversed
         :rtype: LinkedList object
         """
+        pass
 
     @abstractmethod
-    def insert(self, node):
+    def insert(self, node, pos):
+        """
+        Insert node at a particular position in the list
+        :param node: node to insert
+        :param pos: position to insert the node
+        :return: inserted node in the list along with the predecessor and successor
+        :rtype: Node object
+        """
+        pass
+
+    @abstractmethod
+    def insert_first(self, node):
         """
         Insert a node at the beginning of the list
         :return: Inserted node, its predecessor and successor
         :rtype: LinkedList object
+        """
+        pass
+
+    @abstractmethod
+    def insert_last(self, node):
+        """
+        Inserts the node as the first item in the LinkedList
+        :param node: the node to insert as the head
+        :return: the inserted node element
+        :rtype: Node
+        """
+        pass
+
+    @abstractmethod
+    def delete_first(self):
+        """
+        Deletes a node from the beginning of the linked list
+        :return: the deleted node
+        :rtype: Node
+        """
+        pass
+
+    @abstractmethod
+    def delete_last(self):
+        """
+        Deletes the last node element from the LinkedList
+        :return: Deleted node element
+        :rtype: Node object
+        """
+        pass
+
+    @abstractmethod
+    def delete_node(self, node):
+        """
+        Finds the node from the linked list and deletes it from the LinkedList
+        Moves the node's next to this node's previous link
+        Moves this node's previous link to this node's next link
+        :param node: Node element to be deleted
+        :return: Deleted node
         """
         pass
 

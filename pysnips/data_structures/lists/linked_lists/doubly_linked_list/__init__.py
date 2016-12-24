@@ -1,4 +1,4 @@
-from data_structures.lists.linked_lists import LinkedList
+from data_structures.lists.linked_lists import LinkedList, Node
 
 
 class DoublyLinkedList(LinkedList):
@@ -6,6 +6,10 @@ class DoublyLinkedList(LinkedList):
     Doubly linked list which will implement methods from LinkedList parent class
     Doubly linked lists have nodes which have reference to its predecessor and its successor
     """
+
+    def delete_node(self, node):
+        pass
+
     def __init__(self, value):
         super().__init__(value)
         self.prev = None
@@ -16,8 +20,6 @@ class DoublyLinkedList(LinkedList):
     def search(self, node):
         pass
 
-    def insert(self, node):
-        pass
 
     def has_prev(self, node):
         """
@@ -36,3 +38,10 @@ class DoublyLinkedList(LinkedList):
 
     def has_next(self, node):
         pass
+
+
+    def delete_last(self):
+        """
+        Delete the last item in the
+        :return:
+        """
