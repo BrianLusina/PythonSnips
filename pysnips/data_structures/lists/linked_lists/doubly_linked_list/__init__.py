@@ -1,11 +1,27 @@
 from data_structures.lists.linked_lists import LinkedList, Node
 
 
+class DoubleNode(Node):
+    """
+    Node implementation of DoubleLinkedList
+    """
+
+    def __init__(self, value, prev, next):
+        super().__init__(value, next)
+        self.value = value
+        self.prev = prev
+        self.next = next
+
+    def get_next(self):
+        pass
+
+
 class DoublyLinkedList(LinkedList):
     """
     Doubly linked list which will implement methods from LinkedList parent class
     Doubly linked lists have nodes which have reference to its predecessor and its successor
     """
+
     def __init__(self):
         super().__init__()
 
@@ -80,3 +96,11 @@ class DoublyLinkedList(LinkedList):
             self.head.next.prev = None
             return node
 
+    def display(self):
+        pass
+
+    def display_backward(self):
+        pass
+
+    def display_forward(self):
+        pass

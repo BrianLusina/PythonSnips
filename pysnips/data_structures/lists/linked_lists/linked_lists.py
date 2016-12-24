@@ -6,16 +6,15 @@ from data_structures.lists.linked_lists.singly_linked_list import SinglyLinkedLi
 myArray = ["Dad", "Mom", "Linda", "Joyce", "Brian", "Mideva", "Lucky", "Fox", "Junior", "Coco", "Rabbits"]
 
 # example code
-double_list = DoublyLinkedList()
 single_list = SinglyLinkedList()
-
-for x in range(0, len(myArray)):
-    double_list.add(myArray[x])
 
 for x in range(0, len(myArray)):
     single_list.add(myArray[x])
 
-print(double_list)
-print(single_list)
+single_list.display()
+
+single_list.delete_node("Rabbits")
+
+single_list.display()
 
 # double_list.delete_node(double_list.search('b'))

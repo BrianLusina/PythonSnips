@@ -47,7 +47,6 @@ class SinglyLinkedList(LinkedList):
             # needed for the next iteration
             previous_node = current_node
             current_node = current_node.next
-        return node
 
     def delete_first(self):
         """
@@ -72,15 +71,16 @@ class SinglyLinkedList(LinkedList):
     def insert_first(self, node):
         pass
 
-    def __repr__(self):
-        pass
-
     def insert(self, node, pos):
         pass
 
     def display(self):
-        
-        pass
+        print("Displaying data...")
+        current_node = self.head
+        while current_node is not None:
+            print(current_node.value, ">>>")
+            current_node = current_node.next
+        print(None)
 
     def display_backward(self):
         pass
