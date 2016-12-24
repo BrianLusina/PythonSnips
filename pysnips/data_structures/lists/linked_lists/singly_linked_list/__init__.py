@@ -5,10 +5,15 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
-    def __init__(self, value):
-        super().__init__(value)
+    def __init__(self):
+        self.head = None
 
     def add(self, data):
+        """
+        Add a node to the Linked List
+        :param data:
+        :return:
+        """
         node = Node(data)
         if self.head is None:
             self.head = node

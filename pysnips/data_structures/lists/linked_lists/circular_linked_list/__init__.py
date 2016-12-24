@@ -6,12 +6,11 @@ class CircularLinkedList(LinkedList):
     Implementation of a CircularLinked List
     The last pointer in the list points to the head of the list
     """
-    def __init__(self, value):
+    def __init__(self):
         """
         Creates a CircularLinked List object
-        :param value:
         """
-        super().__init__(value)
+        self.head = None
 
     def delete_last(self):
         pass

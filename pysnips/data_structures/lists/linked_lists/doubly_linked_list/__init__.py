@@ -6,9 +6,8 @@ class DoublyLinkedList(LinkedList):
     Doubly linked list which will implement methods from LinkedList parent class
     Doubly linked lists have nodes which have reference to its predecessor and its successor
     """
-    def __init__(self, value):
-        super().__init__(value)
-        self.prev = None
+    def __init__(self):
+        self.head = None
 
     def has_prev(self, node):
         """
