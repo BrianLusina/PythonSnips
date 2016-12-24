@@ -5,14 +5,19 @@ class Node(object):
     """
     Node object in the Linked List
     """
+    __metaclass__ = ABCMeta
 
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-        self.prev = None
+    def __init__(self, value=None, next=None):
+        self.value = value
+        self.next = next
 
+    @abstractmethod
     def get_next(self):
-        return self.next
+        """
+        Get the next node
+        :return:
+        """
+        pass
 
 
 class LinkedList(object):
@@ -20,6 +25,8 @@ class LinkedList(object):
     The most basic LinkedList from which other types of Linked List will be subclassed
     """
     __metaclass__ = ABCMeta
+    head = None
+    tail = None
 
     def __init__(self):
         self.head = None
@@ -203,7 +210,7 @@ class LinkedList(object):
         p = self.head
         if p is not None:
             while p.next is not None:
-                s += p.data
+                s += p.value
                 p = p.next
-            s += p.data
+            s += p.value
         return s

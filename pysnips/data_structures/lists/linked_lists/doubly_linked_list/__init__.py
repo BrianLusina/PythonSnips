@@ -9,6 +9,20 @@ class DoublyLinkedList(LinkedList):
     def __init__(self):
         super().__init__()
 
+    def add(self, data):
+        """
+        Add a node to the Linked List
+        :param data:
+        :return:
+        """
+        node = Node(data)
+        if self.head is None:
+            self.head = node
+        else:
+            node.next = self.head
+            node.next.prev = node
+            self.head = node
+
     def has_prev(self, node):
         """
         Check if the node has a predecessor

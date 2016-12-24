@@ -1,6 +1,19 @@
 from data_structures.lists.linked_lists import LinkedList, Node
 
 
+class SingleNode(Node):
+    """
+    Node implementation in a single linked list
+    """
+    def __init__(self, value, next):
+        super().__init__(next)
+        self.value = value
+        self.next = next
+
+    def get_next(self):
+        return self.next
+
+
 class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
@@ -15,13 +28,12 @@ class SinglyLinkedList(LinkedList):
         :param data:
         :return:
         """
-        node = Node(data)
+        node = Node(data, None)
         if self.head is None:
-            self.head = node
+            self.head = self.tail = node
         else:
-            node.next = self.head
-            node.next.prev = node
-            self.head = node
+            self.tail.next = node
+        self.tail = node
 
     def delete_last(self):
         pass
