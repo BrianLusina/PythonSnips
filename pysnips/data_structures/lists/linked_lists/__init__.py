@@ -177,17 +177,15 @@ class LinkedList(object):
             self.tail = self.temp
         return self.head
 
+    @abstractmethod
     def display(self):
         """
         Displays the whole of the LinkedList
         :return: LinkedList data structure
         """
-        temp_node = self.head
-        while temp_node != self.tail:
-            print(temp_node.get_data())
-            temp_node = temp_node.get_next()
-        print(self.tail.get_data())
+        pass
 
+    @abstractmethod
     def display_forward(self):
         """
         Display the complete list in a forward manner
@@ -195,6 +193,7 @@ class LinkedList(object):
         """
         pass
 
+    @abstractmethod
     def display_backward(self):
         """
         Display the complete list in a backward manner

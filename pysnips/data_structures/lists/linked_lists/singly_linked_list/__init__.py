@@ -18,7 +18,6 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
-
     def __init__(self):
         super().__init__()
 
@@ -35,6 +34,32 @@ class SinglyLinkedList(LinkedList):
             self.tail.next = node
         self.tail = node
 
+    def delete_node(self, node):
+        current_node = self.head
+        previous_node = None
+        while current_node is not None:
+            if current_node.value == node:
+                # if this is the first node (head)
+                if previous_node is not None:
+                    previous_node.next = current_node.next
+                else:
+                    self.head = current_node.next
+            # needed for the next iteration
+            previous_node = current_node
+            current_node = current_node.next
+        return node
+
+    def delete_first(self):
+        """
+        Since this is a singly linked list, this will have to make the head's next to the position of head
+        :return: deleted node
+        """
+        # store the head node
+        to_del = self.head
+        # replace the head with the next value in the LinkedList
+        self.head = self.head.next
+        return to_del
+
     def delete_last(self):
         pass
 
@@ -50,24 +75,17 @@ class SinglyLinkedList(LinkedList):
     def __repr__(self):
         pass
 
-    def delete_node(self, node):
-        temp = node.prev
-        node.prev.next = node.next
-        node.prev = temp
-        return node
-
-    def delete_first(self):
-        """
-        Since this is a singly linked list, this will have to make the head's next to the position of head
-        :return: deleted node
-        """
-        # store the head node
-        to_del = self.head
-        # replace the head with the next value in the LinkedList
-        self.head = self.head.next
-        return to_del
-
     def insert(self, node, pos):
+        pass
+
+    def display(self):
+        
+        pass
+
+    def display_backward(self):
+        pass
+
+    def display_forward(self):
         pass
 
     def contains_cycle(self):
