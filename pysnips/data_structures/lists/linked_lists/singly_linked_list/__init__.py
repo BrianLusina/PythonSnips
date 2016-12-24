@@ -27,11 +27,18 @@ class SinglyLinkedList(LinkedList):
         pass
 
     def delete_first(self):
-        pass
+        """
+        Since this is a singly linked list, this will have to make the head's next to the position of head
+        :return: deleted node
+        """
+        # store the head node
+        to_del = self.head
+        # replace the head with the next value in the LinkedList
+        self.head = self.head.next
+        return to_del
 
     def insert(self, node, pos):
         pass
-
 
     def delete_node(self, node):
         pass

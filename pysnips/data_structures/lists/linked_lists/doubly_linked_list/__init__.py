@@ -37,11 +37,18 @@ class DoublyLinkedList(LinkedList):
     def __repr__(self):
         pass
 
-    def delete_first(self):
-        pass
-
     def insert(self, node, pos):
         pass
+
+    def delete_first(self):
+        """
+        Since this is a doubly linked list, this will have to move the head's next link's previous link to None
+        :return: deleted node
+
+        """
+        # move the head's next previous link to None
+        self.head.next.prev = None
+        return self.head
 
     def delete_node(self, node):
         """

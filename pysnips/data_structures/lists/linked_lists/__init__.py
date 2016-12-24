@@ -35,6 +35,18 @@ class LinkedList(object):
         self.head = Node()
         self.next = None
 
+    def get_last(self):
+        """
+        Gets the last node in the Linked List. check each node and test if it has a successor
+        if it does, continue checking
+        :return: The last Node elemen
+        :rtype: Node
+        """
+        last_node = None
+        while not self.has_next(self.value.next):
+            last_node = self.value
+        return last_node
+
     def has_next(self, node):
         """
         Checks if the node has a successor
@@ -126,8 +138,6 @@ class LinkedList(object):
         # check if the LinkedList is empty, return None
         if self.is_empty():
             return None
-        self.head = None
-
 
     @abstractmethod
     def delete_last(self):
@@ -136,7 +146,6 @@ class LinkedList(object):
         :return: Deleted node element
         :rtype: Node object
         """
-        pass
 
     @abstractmethod
     def delete_node(self, node):
