@@ -1,4 +1,12 @@
-from data_structures.lists.linked_lists import LinkedList
+from data_structures.lists.linked_lists import LinkedList, Node
+
+
+class CircularNode(Node):
+    def __init__(self):
+        super().__init__()
+
+    def get_next(self):
+        pass
 
 
 class CircularLinkedList(LinkedList):
@@ -6,33 +14,39 @@ class CircularLinkedList(LinkedList):
     Implementation of a CircularLinked List
     The last pointer in the list points to the head of the list
     """
+
     def __init__(self):
-        """
-        Creates a CircularLinked List object
-        """
         super().__init__()
 
-    def delete_last(self):
-        pass
-
-    def insert_last(self, node):
-        pass
-
-    def reverse(self):
-        pass
-
-    def insert_first(self, node):
-        pass
-
-    def __repr__(self):
-        pass
-
-    def delete_first(self):
+    def delete_node(self, node):
         pass
 
     def insert(self, node, pos):
         pass
 
+    def display(self):
+        pass
 
-    def delete_node(self, node):
+    def delete_first(self):
+        pass
+
+    def delete_last(self):
+        pass
+
+    def insert_first(self, node):
+        pass
+
+    def display_backward(self):
+        pass
+
+    def reverse(self):
+        pass
+
+    def insert_last(self, node):
+        pass
+
+    def display_forward(self):
+        pass
+
+    def add(self, data):
         pass
