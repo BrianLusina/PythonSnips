@@ -78,7 +78,6 @@ class LinkedList(object):
         """
         return self.head is None
 
-
     @abstractmethod
     def reverse(self):
         """
@@ -196,10 +195,15 @@ class LinkedList(object):
         """
         pass
 
-    @abstractmethod
-    def __repr__(self):
+    def __str__(self):
         """
-        :return: Human redable string representation of the LinkedList
+        :return: String presentation of LinkedList
         """
-        tail = self.value if not self.has_next(self.value) else None
-        return "head:{}, body, Tail:{}".format(self.head, tail)
+        s = ""
+        p = self.head
+        if p is not None:
+            while p.next is not None:
+                s += p.data
+                p = p.next
+            s += p.data
+        return s

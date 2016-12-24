@@ -48,13 +48,14 @@ class DoublyLinkedList(LinkedList):
 
     def delete_node(self, node):
         """
-        if the node has a successor and predecessor, move the successor's prev link to this node's next link
         :param node: The node to delete
         :return: deleted node
         """
+        # if the node has a successor and predecessor, move the successor's prev link to this node's next link
         if self.has_next(node) and self.has_prev(node):
-            node.next = node.prev.next
-            node.next.prev = node.prev
+            temp = node.prev
+            node.prev.next = node.next
+            node.prev = temp
             return node
         # check if the node has no next, that is it is the last node, move it's prev link to None
         if not self.has_next(node):

@@ -38,6 +38,12 @@ class SinglyLinkedList(LinkedList):
     def __repr__(self):
         pass
 
+    def delete_node(self, node):
+        temp = node.prev
+        node.prev.next = node.next
+        node.prev = temp
+        return node
+
     def delete_first(self):
         """
         Since this is a singly linked list, this will have to make the head's next to the position of head
@@ -50,9 +56,6 @@ class SinglyLinkedList(LinkedList):
         return to_del
 
     def insert(self, node, pos):
-        pass
-
-    def delete_node(self, node):
         pass
 
     def contains_cycle(self):
