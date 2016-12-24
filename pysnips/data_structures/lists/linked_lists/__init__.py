@@ -35,11 +35,20 @@ class LinkedList(object):
         self.next = None
 
     @abstractmethod
-    def delete(self, node):
+    def delete(self):
         """
-        Deletes a node from the linked list
-        :param node
+        Deletes a node from the beginning of the linked list
         :return: the deleted node
+        """
+        pass
+
+    @abstractmethod
+    def delete_node(self, node):
+        """
+        Deletes a node element from the LinkedList
+        :param node:
+        :return: Deleted node element
+        :rtype: Node object
         """
         pass
 
@@ -50,16 +59,6 @@ class LinkedList(object):
         :param node, the node to check in the linked list
         :return: True or False
         :rtype: bool
-        """
-        pass
-
-    @abstractmethod
-    def has_prev(self, node):
-        """
-        Check if the node has a predecessor
-        :param node: the node to check whether it has a predecessor
-        :return: True or False
-         :rtype: bool
         """
         pass
 
@@ -92,10 +91,10 @@ class LinkedList(object):
         """
 
     @abstractmethod
-    def insert(self, node, pos):
+    def insert(self, node):
         """
-        Insert a node at a particular position in the Linked list
-        :return: Inserted node, its predecessor and sucessor
+        Insert a node at the beginning of the list
+        :return: Inserted node, its predecessor and successor
         :rtype: LinkedList object
         """
         pass
@@ -109,7 +108,11 @@ class LinkedList(object):
             self.tail = self.temp
         return self.head
 
-    def print_list(self):
+    def display(self):
+        """
+        Displays the whole of the LinkedList
+        :return: LinkedList data structure
+        """
         temp_node = self.head
         while temp_node != self.tail:
             print(temp_node.get_data())
