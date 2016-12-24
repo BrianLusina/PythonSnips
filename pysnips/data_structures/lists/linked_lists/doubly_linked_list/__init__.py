@@ -10,6 +10,15 @@ class DoublyLinkedList(LinkedList):
         super().__init__(value)
         self.prev = None
 
+    def has_prev(self, node):
+        """
+        Check if the node has a predecessor
+        :param node: the node to check for predecessors
+        :return: True or False, whether the node has a predecessor
+        :rtype: Node object
+        """
+        pass
+
     def delete_last(self):
         pass
 
@@ -34,8 +43,22 @@ class DoublyLinkedList(LinkedList):
     def insert(self, node, pos):
         pass
 
-    def has_next(self, node):
-        pass
-
     def delete_node(self, node):
-        pass
+        """
+        if the node has a successor and predecessor, move the successor's prev link to this node's next link
+        :param node: The node to delete
+        :return: deleted node
+        """
+        if self.has_next(node) and self.has_prev(node):
+            node.next = node.prev.next
+            node.next.prev = node.prev
+            return node
+        # check if the node has no next, that is it is the last node, move it's prev link to None
+        if not self.has_next(node):
+            node.prev.next = None
+            return node
+        # if the node is the head, i.e. has no prev, move this node's next's prev to None
+        if node == self.head:
+            self.head.next.prev = None
+            return node
+

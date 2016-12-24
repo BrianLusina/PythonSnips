@@ -35,7 +35,6 @@ class LinkedList(object):
         self.head = Node()
         self.next = None
 
-    @abstractmethod
     def has_next(self, node):
         """
         Checks if the node has a successor
@@ -43,7 +42,7 @@ class LinkedList(object):
         :return: True or False
         :rtype: bool
         """
-        pass
+        return node.next is None
 
     def is_empty(self):
         """
@@ -119,11 +118,16 @@ class LinkedList(object):
     @abstractmethod
     def delete_first(self):
         """
-        Deletes a node from the beginning of the linked list
+        Deletes a node from the beginning of the linked list, sets the new head to the successor of the deleted
+        head node
         :return: the deleted node
         :rtype: Node
         """
-        pass
+        # check if the LinkedList is empty, return None
+        if self.is_empty():
+            return None
+        self.head = None
+
 
     @abstractmethod
     def delete_last(self):

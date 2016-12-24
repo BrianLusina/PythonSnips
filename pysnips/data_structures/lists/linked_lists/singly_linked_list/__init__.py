@@ -32,8 +32,6 @@ class SinglyLinkedList(LinkedList):
     def insert(self, node, pos):
         pass
 
-    def has_next(self, node):
-        pass
 
     def delete_node(self, node):
         pass
