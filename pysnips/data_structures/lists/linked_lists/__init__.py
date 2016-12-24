@@ -5,6 +5,7 @@ class Node(object):
     """
     Node object in the Linked List
     """
+
     def __init__(self):
         self.data = None
         self.next_node = None
@@ -33,7 +34,6 @@ class LinkedList(object):
         self.value = value
         self.head = Node()
         self.next = None
-
 
     @abstractmethod
     def has_next(self, node):
@@ -178,7 +178,7 @@ class LinkedList(object):
         :return: The LinkedList displayed in 'descending order', not in the order of insertion
         """
         pass
-    
+
     @abstractmethod
     def __repr__(self):
         """
@@ -186,4 +186,3 @@ class LinkedList(object):
         """
         tail = self.value if not self.has_next(self.value) else None
         return "head:{}, body, Tail:{}".format(self.head, tail)
-
