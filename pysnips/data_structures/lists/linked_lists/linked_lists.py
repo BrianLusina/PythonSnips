@@ -1,7 +1,13 @@
 from data_structures.lists.linked_lists import LinkedList
+from data_structures.lists.linked_lists.circular_linked_list import CircularLinkedList
+from data_structures.lists.linked_lists.doubly_linked_list import DoublyLinkedList
+from data_structures.lists.linked_lists.singly_linked_list import SinglyLinkedList
 
-myArray = [3, 5, 4, 6, 2, 6, 7, 8, 9, 10, 21]
+myArray = ["Dad", "Mom", "Linda", "Joyce", "Brian", "Mideva", "Lucky", "Fox", "Junior", "Coco", "Rabbits"]
 
-myList = LinkedList(25)
-myList.build_list(myArray)
-myList.display()
+for x in range(0, len(myArray)):
+    double_list = DoublyLinkedList(myArray[x])
+    double_list.next = myArray[x]
+
+print(double_list)
+

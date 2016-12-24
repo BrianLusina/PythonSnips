@@ -6,22 +6,13 @@ class Node(object):
     Node object in the Linked List
     """
 
-    def __init__(self):
-        self.data = None
-        self.next_node = None
-
-    def set_and_return_next(self):
-        self.next_node = Node()
-        return self.next_node
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
 
     def get_next(self):
-        return self.next_node
-
-    def get_data(self):
-        return self.data
-
-    def set_data(self, d):
-        self.data = d
+        return self.next
 
 
 class LinkedList(object):
@@ -32,8 +23,15 @@ class LinkedList(object):
 
     def __init__(self, value):
         self.value = value
-        self.head = Node()
-        self.next = None
+        self.head = None
+
+    @abstractmethod
+    def add(self, data):
+        """
+        Add a node to the linked list
+        :param data: the node to add to the list
+        """
+        pass
 
     def get_last(self):
         """

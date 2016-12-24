@@ -8,6 +8,15 @@ class SinglyLinkedList(LinkedList):
     def __init__(self, value):
         super().__init__(value)
 
+    def add(self, data):
+        node = Node(data)
+        if self.head is None:
+            self.head = node
+        else:
+            node.next = self.head
+            node.next.prev = node
+            self.head = node
+
     def delete_last(self):
         pass
 
