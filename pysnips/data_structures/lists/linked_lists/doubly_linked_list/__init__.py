@@ -7,7 +7,7 @@ class DoublyLinkedList(LinkedList):
     Doubly linked lists have nodes which have reference to its predecessor and its successor
     """
     def __init__(self):
-        self.head = None
+        super().__init__()
 
     def has_prev(self, node):
         """
@@ -28,9 +28,6 @@ class DoublyLinkedList(LinkedList):
         pass
 
     def insert_first(self, node):
-        pass
-
-    def search(self, node):
         pass
 
     def __repr__(self):

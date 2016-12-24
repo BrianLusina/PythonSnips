@@ -21,6 +21,9 @@ class LinkedList(object):
     """
     __metaclass__ = ABCMeta
 
+    def __init__(self):
+        self.head = None
+
     @abstractmethod
     def add(self, data):
         """
@@ -28,6 +31,22 @@ class LinkedList(object):
         :param data: the node to add to the list
         """
         pass
+
+    def search(self, node):
+        """
+        Search method to search for a node in the LinkedList
+        :param node: the node being sought
+        :return: the node being sought
+        """
+        head = self.head
+        if head is not None:
+            while head.next is not None:
+                if head.data == node:
+                    return head
+                head = head.next
+            if head.data == node:
+                return head
+        return None
 
     def get_last(self):
         """
@@ -59,15 +78,6 @@ class LinkedList(object):
         """
         return self.head is None
 
-    @abstractmethod
-    def search(self, node):
-        """
-        Search through the linked list to find a node
-        :param node, the node to search for in the LinkedList
-        :return: The sought after node if available, return None, if the node does not exist
-         :rtype: LinkedList object or None
-        """
-        pass
 
     @abstractmethod
     def reverse(self):

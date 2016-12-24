@@ -5,8 +5,9 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
+
     def __init__(self):
-        self.head = None
+        super().__init__()
 
     def add(self, data):
         """
@@ -32,9 +33,6 @@ class SinglyLinkedList(LinkedList):
         pass
 
     def insert_first(self, node):
-        pass
-
-    def search(self, node):
         pass
 
     def __repr__(self):

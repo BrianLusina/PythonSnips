@@ -10,7 +10,7 @@ class CircularLinkedList(LinkedList):
         """
         Creates a CircularLinked List object
         """
-        self.head = None
+        super().__init__()
 
     def delete_last(self):
         pass
@@ -22,9 +22,6 @@ class CircularLinkedList(LinkedList):
         pass
 
     def insert_first(self, node):
-        pass
-
-    def search(self, node):
         pass
 
     def __repr__(self):
