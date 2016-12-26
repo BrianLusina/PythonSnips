@@ -47,7 +47,7 @@ class Stack(object):
 
         if self.is_empty():
             raise Exception("Stack is empty, nothing to peek")
-        return self.stack[0]
+        return self.stack[-1]
 
     def is_full(self):
         """
@@ -55,7 +55,7 @@ class Stack(object):
         :return: True Or False
         :rtype: bool
         """
-        return len(self.stack) == self.get_len()
+        return len(self.stack) == self.stack.maxlen
 
     def is_empty(self):
         """
@@ -70,7 +70,7 @@ class Stack(object):
         Gets the current length of the stack
         :return: The length of the stack
         """
-        return self.stack.maxlen
+        return len(self.stack)
 
     def __len__(self):
         return self.stack.maxlen

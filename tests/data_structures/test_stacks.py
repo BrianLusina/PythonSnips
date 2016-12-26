@@ -28,7 +28,21 @@ class StackTestCase(unittest.TestCase):
         stack.push("apples")
         self.assertEqual("apples", stack.peek(), "Expected apples")
 
+    def test_stack_pop(self):
+        stack = Stack(3)
+        stack.push("Chocolate")
+        stack.push("Lollipop")
+        stack.push("Nugget")
+        self.assertEqual("Nugget", stack.pop(), "Expected Nugget")
 
+        self.assertEqual(2, stack.get_len(), "Reduce the length of stack after pop")
+
+    def test_stack_push(self):
+        stack = Stack(5)
+        stack.push("Python")
+        stack.push("Java")
+        stack.push("JavaScript")
+        self.assertEqual("JavaScript", stack.peek(), "Expected last item added to be JavaScript")
 
 if __name__ == '__main__':
     unittest.main()
