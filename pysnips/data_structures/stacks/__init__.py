@@ -25,13 +25,18 @@ class Stack(object):
         if not self.is_empty() and not self.is_full():
             self.stack.appendleft(item)
 
-    def pop(self, item):
+    def pop(self):
         """
-        Removes an item from the stack
-        :param item: The item to remove
-        :return:
+        Removes an item from the stack, check if the stack is empty, raise an error if it is
+        If stack is not empty get the top most item in the stack and store it in a variable
+        Remove the item from the stack and reduce the length of the stack
+        :return: The top most item in the stack
+        :rtype: Stack object
         """
-        pass
+        if self.is_empty():
+            raise IndexError("Stack is empty, add item to stack.")
+        top = self.stack.popleft()
+        return top
 
     def peek(self):
         """
