@@ -36,9 +36,13 @@ class Stack(object):
     def peek(self):
         """
         Get the top data element of the stack without removing it
+        Check if the stack is empty, if the stack is empty raise an error
+        If the stack is full or not empty, return the top most item
         :return: The top data item in the stack
         """
-        pass
+        if self.is_empty():
+            raise IndexError("Stack is empty, nothing to peek")
+        return self.stack[0]
 
     def is_full(self):
         """
