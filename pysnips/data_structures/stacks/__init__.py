@@ -18,12 +18,12 @@ class Stack(object):
         Check if the stack is empty, if it is pushes the element to the stack
         If the stack is full, raises an error
         """
+        if self.is_full():
+            raise OverflowError("Stack is currently full")
         if self.is_empty():
             self.stack.append(item)
-        if self.is_full():
-            raise IndexError("Stack is currently full")
-        if not self.is_empty() and not self.is_full():
-            self.stack.appendleft(item)
+        elif not self.is_empty() and not self.is_full():
+            self.stack.append(item)
 
     def pop(self):
         """
@@ -35,8 +35,7 @@ class Stack(object):
         """
         if self.is_empty():
             raise IndexError("Stack is empty, add item to stack.")
-        top = self.stack.popleft()
-        return top
+        return self.stack.pop()
 
     def peek(self):
         """
@@ -45,8 +44,9 @@ class Stack(object):
         If the stack is full or not empty, return the top most item
         :return: The top data item in the stack
         """
+
         if self.is_empty():
-            raise IndexError("Stack is empty, nothing to peek")
+            raise Exception("Stack is empty, nothing to peek")
         return self.stack[0]
 
     def is_full(self):
@@ -55,7 +55,7 @@ class Stack(object):
         :return: True Or False
         :rtype: bool
         """
-        return len(self.stack) >= self.stack.maxlen
+        return len(self.stack) == self.get_len()
 
     def is_empty(self):
         """
@@ -65,3 +65,15 @@ class Stack(object):
         """
         return len(self.stack) == 0
 
+    def get_len(self):
+        """
+        Gets the current length of the stack
+        :return: The length of the stack
+        """
+        return self.stack.maxlen
+
+    def __len__(self):
+        return self.stack.maxlen
+
+    def __str__(self):
+        return "{}".format(self.stack)
