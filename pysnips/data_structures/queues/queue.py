@@ -1,4 +1,4 @@
-from DataStructures.Queues import Queue, User
+from data_structures.queues import Queue, User
 from pprint import pprint
 
 microsoftQueue = Queue()
