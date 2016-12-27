@@ -36,12 +36,23 @@ class StackTestCase(unittest.TestCase):
 
         self.assertEqual(2, stack.get_len(), "Reduce the length of stack after pop")
 
+    # def test_stack_pop_raises_error_when_empty(self):
+    #     stack = Stack(12)
+    #     self.assertRaises(IndexError, stack.pop(), "Expected an Exception")
+
     def test_stack_push(self):
         stack = Stack(5)
         stack.push("Python")
         stack.push("Java")
         stack.push("JavaScript")
         self.assertEqual("JavaScript", stack.peek(), "Expected last item added to be JavaScript")
+
+    # def test_stack_push_raise_error_when_full(self):
+    #     stack = Stack(3)
+    #     stack.push("Mercedez")
+    #     stack.push("McClaren")
+    #     stack.push("Jeep")
+    #     self.assertRaises(OverflowError, stack.push("Toyota"), "Expected an OverflowError")
 
     def test_push_diff_types(self):
         stack = Stack(5)
@@ -57,7 +68,7 @@ class StackTestCase(unittest.TestCase):
         stack.push(1)
         stack.push(2)
         stack.push(3)
-        self.assertEqual(3, stack.get_max(), "Expected 3 to be returned")
+        self.assertEqual(3, stack.max_stack, "Expected 3 to be returned")
 
     def test_stack_filter_returns_dict(self):
         stack = Stack(5)

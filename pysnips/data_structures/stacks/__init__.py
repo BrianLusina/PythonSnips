@@ -15,8 +15,8 @@ class Stack(object):
         The same applies for min_stack
         """
         self.stack = deque(maxlen=max_size)
-        self.max_stack = deque(maxlen=max_size)
-        self.min_stack = deque(maxlen=max_size)
+        self.max_stack = self.get_max()
+        self.min_stack = self.get_min()
 
     def push(self, item):
         """
@@ -31,9 +31,8 @@ class Stack(object):
             self.stack.append(item)
         elif not self.is_empty() and not self.is_full():
             self.stack.append(item)
-            # filter all the integers and floats from the stack
-            # if self.max_stack.peek() is None or item >= self.max_stack.peek():
-            # self.max_stack.push(item)
+            # filter the stack
+            self.filter_stack()
 
     def pop(self):
         """
@@ -82,23 +81,33 @@ class Stack(object):
         """
         return len(self.stack)
 
-    def get_max(self) -> int or float:
+    def get_max(self):
         """
         Gets the maximum value in a Stack
         :return: the maximum in a Stack
         :rtype: int
         :rtype: float
         """
-        return max(self.stack)
+        try:
+            ints = self.filter_stack().get(int, None)
+            # floats = self.filter_stack().get(float, None)
+            return max(ints) # + floats)
+        except TypeError:
+            return None
 
-    def get_min(self) -> int or float:
+    def get_min(self):
         """
         Gets the minumum value in the stack
         :return: The minimum item in the stack
         :rtype: int
         :rtype: float
         """
-        return min(self.stack)
+        try:
+            ints = self.filter_stack().get(float, None)
+            floats = self.filter_stack().get(float, None)
+            return min(ints + floats)
+        except TypeError:
+            return None
 
     def filter_stack(self):
         """
@@ -111,7 +120,10 @@ class Stack(object):
         if self.is_empty():
             return None
         for item in self.stack:
-            output[type(item)] = item
+            if type(item) not in output:
+                output[type(item)] = [item]
+            else:
+                output[type(item)].append(item)
         return output
 
     def display(self):
