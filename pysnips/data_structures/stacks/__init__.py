@@ -31,9 +31,9 @@ class Stack(object):
             self.stack.append(item)
         elif not self.is_empty() and not self.is_full():
             self.stack.append(item)
-            # check if the all the items are numeric integers/floats
-            if self.max_stack.peek() is None or item >= self.max_stack.peek():
-                self.max_stack.push(item)
+            # filter all the integers and floats from the stack
+            # if self.max_stack.peek() is None or item >= self.max_stack.peek():
+            # self.max_stack.push(item)
 
     def pop(self):
         """
@@ -99,6 +99,28 @@ class Stack(object):
         :rtype: float
         """
         return min(self.stack)
+
+    def filter_stack(self):
+        """
+        Filters the stack and stores the items into respective groups by data types
+        :return: a dictionary with the keys as data types and values as a list of the items in the stack belonging
+        to the group
+        :rtype: dict
+        """
+        output = {}
+        if self.is_empty():
+            return None
+        for item in self.stack:
+            output[type(item)] = item
+        return output
+
+    def display(self):
+        """
+        Displays the whole stack
+        :return: None
+        """
+        # todo: add top and bottom markers
+        print(self.stack)
 
     def __len__(self):
         return self.stack.maxlen

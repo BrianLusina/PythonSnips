@@ -3,7 +3,6 @@ from data_structures.stacks import Stack
 
 
 class StackTestCase(unittest.TestCase):
-
     def test_stack_initialized(self):
         stack = Stack(0)
         self.assertIsInstance(stack, Stack, "Expected an instance of Stack")
@@ -48,7 +47,6 @@ class StackTestCase(unittest.TestCase):
         stack = Stack(5)
         stack.push("Python")
         stack.push(1)
-        stack = Stack(5)
         stack.push(dict(brian="Brian", lusina="Lusina", ombito="Ombito"))
         stack.push((1, 5))
         stack.push(range(5))
@@ -61,6 +59,14 @@ class StackTestCase(unittest.TestCase):
         stack.push(3)
         self.assertEqual(3, stack.get_max(), "Expected 3 to be returned")
 
+    def test_stack_filter_returns_dict(self):
+        stack = Stack(5)
+        stack.push("Python")
+        stack.push(1)
+        stack.push(dict(brian="Brian", lusina="Lusina", ombito="Ombito"))
+        stack.push((1, 5))
+        stack.push(range(5))
+        self.assertIsInstance(stack.filter_stack(), dict, "Expected a filtered dictionary")
 
 
 if __name__ == '__main__':
