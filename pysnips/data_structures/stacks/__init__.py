@@ -5,17 +5,24 @@ class Stack(object):
     """
     Implementation of a Stack data structure
     """
+
     def __init__(self, max_size):
         """
         Creates a new Stack object. Will initialize a stack which will be an empty list
         :param max_size The maximum size of the stack
+        self.max_stack will store the maximum in the stack, only does this for numeric values
+        We use max_stack to keep our max up to date in constant time as we push() and pop():
+        The same applies for min_stack
         """
         self.stack = deque(maxlen=max_size)
+        self.max_stack = deque(maxlen=max_size)
+        self.min_stack = deque(maxlen=max_size)
 
     def push(self, item):
         """
         Storing an element to the top of the stack
         Check if the stack is empty, if it is pushes the element to the stack
+        This will also keep upto date with the maximum value in the stack
         If the stack is full, raises an error
         """
         if self.is_full():
@@ -24,6 +31,9 @@ class Stack(object):
             self.stack.append(item)
         elif not self.is_empty() and not self.is_full():
             self.stack.append(item)
+            # check if the all the items are numeric integers/floats
+            if self.max_stack.peek() is None or item >= self.max_stack.peek():
+                self.max_stack.push(item)
 
     def pop(self):
         """
@@ -71,6 +81,24 @@ class Stack(object):
         :return: The length of the stack
         """
         return len(self.stack)
+
+    def get_max(self) -> int or float:
+        """
+        Gets the maximum value in a Stack
+        :return: the maximum in a Stack
+        :rtype: int
+        :rtype: float
+        """
+        return max(self.stack)
+
+    def get_min(self) -> int or float:
+        """
+        Gets the minumum value in the stack
+        :return: The minimum item in the stack
+        :rtype: int
+        :rtype: float
+        """
+        return min(self.stack)
 
     def __len__(self):
         return self.stack.maxlen

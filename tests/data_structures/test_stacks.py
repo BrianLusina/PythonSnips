@@ -44,5 +44,24 @@ class StackTestCase(unittest.TestCase):
         stack.push("JavaScript")
         self.assertEqual("JavaScript", stack.peek(), "Expected last item added to be JavaScript")
 
+    def test_push_diff_types(self):
+        stack = Stack(5)
+        stack.push("Python")
+        stack.push(1)
+        stack = Stack(5)
+        stack.push(dict(brian="Brian", lusina="Lusina", ombito="Ombito"))
+        stack.push((1, 5))
+        stack.push(range(5))
+        self.assertEqual(range(5), stack.peek(), "Expected last item added to be a range")
+
+    def test_stack_get_max(self):
+        stack = Stack(3)
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        self.assertEqual(3, stack.get_max(), "Expected 3 to be returned")
+
+
+
 if __name__ == '__main__':
     unittest.main()
