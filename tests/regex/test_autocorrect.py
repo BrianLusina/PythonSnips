@@ -1,8 +1,8 @@
 import unittest
-from pysnips.regex.autocorrect_prank.autocorrect import auto_correct
+from pysnips.regex.autocorrect_prank import auto_correct
 
 
-class AutocorrectTests(unittest.TestCase):
+class AutoCorrectTests(unittest.TestCase):
     def test_one(self):
         self.assertEqual("your sister", auto_correct("u"))
 

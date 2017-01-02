@@ -1,7 +1,7 @@
 from datetime import datetime
 import unittest
 
-from pysnips.time.gigasecond import add_gigasecond, Gigasecond
+from pysnips.time_dates.gigasecond import add_gigasecond, Gigasecond
 
 
 class GigasecondTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.wallpaper import wallpaper
+from pysnips.math_numbers.wallpaper import wallpaper
 
 
 class MyTestCase(unittest.TestCase):

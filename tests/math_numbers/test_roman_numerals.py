@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.roman_numeral import RomanNumeral, numeral
+from pysnips.math_numbers.roman_numeral import RomanNumeral, numeral
 
 
 class RomanTests(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from strings_words.auto_complete import autocomplete
+from pysnips.strings_words.auto_complete import autocomplete
 
 dictionary = ['abnormal',
               'arm-wrestling',

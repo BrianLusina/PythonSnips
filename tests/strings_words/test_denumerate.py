@@ -1,5 +1,5 @@
 import unittest
-from strings_words.denumerate import denumerate
+from pysnips.strings_words.denumerate import denumerate
 
 
 class Tests(unittest.TestCase):

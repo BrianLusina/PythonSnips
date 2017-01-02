@@ -1,6 +1,6 @@
 import unittest
 
-from strings_words.anagram import Anagrams
+from pysnips.strings_words.anagram import Anagrams
 
 
 class AnagramTests(unittest.TestCase):

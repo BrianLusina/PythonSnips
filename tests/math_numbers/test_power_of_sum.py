@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.power_of_sum import power_sum_dig_term
+from pysnips.math_numbers.power_of_sum import power_sum_dig_term
 
 
 class PowerSumDigTermTests(unittest.TestCase):

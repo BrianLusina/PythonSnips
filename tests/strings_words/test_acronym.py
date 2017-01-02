@@ -1,5 +1,5 @@
 import unittest
-from strings_words.acronym_buster import acronym_buster
+from pysnips.strings_words.acronym_buster import acronym_buster
 
 
 class MyTestCase(unittest.TestCase):

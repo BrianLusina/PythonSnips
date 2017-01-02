@@ -1,5 +1,5 @@
 import unittest
-from pysnips.regex.file_extensions.file_ext import  is_img, is_audio, is_audio_2, is_img_2
+from pysnips.regex.file_extensions import is_img, is_audio, is_audio_2, is_img_2
 
 
 class FileExtTests(unittest.TestCase):
@@ -44,6 +44,7 @@ class FileExtTests(unittest.TestCase):
 
     def test_14(self):
         self.assertEqual(is_img("transparency.png"), True)
+
 
 if __name__ == '__main__':
     unittest.main()

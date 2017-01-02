@@ -1,5 +1,5 @@
 import unittest
-from object_oriented.bank import current_account, savings_account, BankAccount
+from pysnips.object_oriented.bank import current_account, savings_account, BankAccount
 
 
 class CurrentAccountTestCases(unittest.TestCase):

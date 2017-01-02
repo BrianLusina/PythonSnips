@@ -35,12 +35,11 @@
 
 import unittest
 
-from math_numbers.pythagorean_triplet import (primitive_triplets, triplets_in_range,
-                                 is_triplet)
+from pysnips.math_numbers.pythagorean_triplet import (primitive_triplets, triplets_in_range,
+                                                      is_triplet)
 
 
 class PythagoreanTripletTest(unittest.TestCase):
-
     def test_triplet1(self):
         ans = set([(3, 4, 5)])
         self.assertEqual(ans, primitive_triplets(4))

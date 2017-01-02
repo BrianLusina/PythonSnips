@@ -1,5 +1,5 @@
 import unittest
-from strings_words.consecutive_string import ConsecutiveString
+from pysnips.strings_words.consecutive_string import ConsecutiveString
 
 
 class ConsecutiveTests(unittest.TestCase):

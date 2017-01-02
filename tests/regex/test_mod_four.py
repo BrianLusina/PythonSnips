@@ -1,6 +1,6 @@
 import unittest
 import re
-from regex.mod_four import mod
+from pysnips.regex.mod_four import mod
 
 
 class ModFourTests(unittest.TestCase):

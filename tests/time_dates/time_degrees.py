@@ -1,5 +1,5 @@
 import unittest
-from time_dates.time_degrees import clock_degree
+from pysnips.time_dates.time_degrees import clock_degree
 
 
 class Tests(unittest.TestCase):

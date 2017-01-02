@@ -1,5 +1,5 @@
 import unittest
-from generators_iterators.iterators.recur_iter import replicate_iter, replicate_recur
+from pysnips.generators_iterators.iterators.recur_iter import replicate_iter, replicate_recur
 
 
 class ReplicateIterTestCases(unittest.TestCase):

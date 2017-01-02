@@ -1,4 +1,4 @@
-from math_numbers.visible_cubes import VisibleCubes
+from pysnips.math_numbers.visible_cubes import VisibleCubes
 import unittest
 
 

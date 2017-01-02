@@ -1,5 +1,5 @@
 import unittest
-from pysnips.time.friday_13th import unlucky_days
+from pysnips.time_dates.friday_13th import unlucky_days
 
 
 class UnluckyDaysTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from regex.password_validation import password_validation
+from pysnips.regex.password_validation import password_validation
 
 
 class PassTests(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from time_dates.time_correct import time_correct
+from pysnips.time_dates.time_correct import time_correct
 
 
 class Tests(unittest.TestCase):

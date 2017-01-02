@@ -1,5 +1,5 @@
 import unittest
-from pysnips.regex.custom_username.custom_username import email_parser
+from pysnips.regex.custom_username import email_parser
 
 
 class CustomUsernameTests(unittest.TestCase):

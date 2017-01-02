@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.modified_leap import year_days
+from pysnips.math_numbers.modified_leap import year_days
 
 
 class ModifiedLeapTests(unittest.TestCase):

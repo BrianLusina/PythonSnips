@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 import unittest
 
-from strings_words.bob import hey
+from pysnips.strings_words.bob import hey
 
 
 class BobTests(unittest.TestCase):

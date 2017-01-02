@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.regex.acronym.acronym import abbreviate
+from pysnips.regex.acronym import abbreviate
 
 
 class AcronymTest(unittest.TestCase):

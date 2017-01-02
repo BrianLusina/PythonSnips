@@ -1,4 +1,4 @@
-from strings_words.accum import accum
+from pysnips.strings_words.accum import accum
 import unittest
 
 

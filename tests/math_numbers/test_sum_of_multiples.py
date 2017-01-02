@@ -9,7 +9,7 @@ You can make the following assumptions about the inputs to the
 
 import unittest
 
-from math_numbers.sum_of_multiples import sum_of_multiples
+from pysnips.math_numbers.sum_of_multiples import sum_of_multiples
 
 
 class SumOfMultiplesTest(unittest.TestCase):

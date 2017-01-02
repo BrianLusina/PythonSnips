@@ -1,5 +1,5 @@
 import unittest
-from pysnips.regex.word_count.word_count import word_count
+from pysnips.regex.word_count import word_count
 
 
 class WordCountTests(unittest.TestCase):

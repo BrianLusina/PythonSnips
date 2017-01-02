@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.xbonacci.tribonacci import tribonacci
+from pysnips.math_numbers.xbonacci.tribonacci import tribonacci
 
 
 class Tests(unittest.TestCase):

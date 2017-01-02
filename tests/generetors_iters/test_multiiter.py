@@ -1,5 +1,5 @@
 import unittest
-from generators_iterators.iterators.multiiter import multiiter
+from pysnips.generators_iterators.iterators.multiiter import multiiter
 
 
 class MultiIterTests(unittest.TestCase):

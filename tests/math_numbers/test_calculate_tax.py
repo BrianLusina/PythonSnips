@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from math_numbers.calculate_tax import calculate_tax
+from pysnips.math_numbers.calculate_tax import calculate_tax
 
 
 class CalculateTaxTests(TestCase):

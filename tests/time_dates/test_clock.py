@@ -1,6 +1,6 @@
 import unittest
 
-from time_dates.clock import Clock
+from pysnips.time_dates.clock import Clock
 
 
 class ClockTest(unittest.TestCase):

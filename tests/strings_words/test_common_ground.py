@@ -1,4 +1,4 @@
-from strings_words.common_ground import common_ground
+from pysnips.strings_words.common_ground import common_ground
 import unittest
 
 

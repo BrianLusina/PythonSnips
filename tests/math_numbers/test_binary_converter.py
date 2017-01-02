@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.binary.binary_converter import binary_converter
+from pysnips.math_numbers.binary.binary_converter import binary_converter
 
 
 class BinaryConverterTestCases(unittest.TestCase):

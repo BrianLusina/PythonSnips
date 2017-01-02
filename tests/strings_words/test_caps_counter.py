@@ -1,5 +1,5 @@
 import unittest
-from strings_words.caps_counter import caps_counter
+from pysnips.strings_words.caps_counter import caps_counter
 
 
 class CapsTests(unittest.TestCase):
