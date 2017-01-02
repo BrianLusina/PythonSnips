@@ -1,6 +1,6 @@
-
+# *-coding:utf8-*
 from string import ascii_letters
-from math_numbers.is_prime import is_prime_with_re
+from pysnips.math_numbers.is_prime import is_prime_with_re
 from functools import reduce
 
 
@@ -58,7 +58,7 @@ class Anagrams(object):
 
         return flag
 
-    def anagram_count(self, parent: str, child: str) -> int:
+    def anagram_count(self, parent, child):
         """
         Counts the number of times the anagram of a child string appears in a parent string
         Obtains the length of the child string and slices the parent string by that length,
