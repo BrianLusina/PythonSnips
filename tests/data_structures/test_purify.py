@@ -1,2 +1,2 @@
 import unittest
-from data_structures.lists.purify import purify
+from pysnips.data_structures.lists.purify import purify

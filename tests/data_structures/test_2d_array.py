@@ -1,5 +1,6 @@
 import unittest
-from data_structures.lists.twod_array import TwoDimensions
+from pysnips.data_structures.lists.twod_array import TwoDimensions
+
 
 class Test(unittest.TestCase):
     def test_4_5(self):

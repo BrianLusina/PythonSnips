@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.sort_odd import sort_array
+from pysnips.data_structures.lists.sort_odd import sort_array
 
 
 class SortTestCases(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from data_structures.lists.build_tower import tower_builder
+from pysnips.data_structures.lists.build_tower import tower_builder
 
 
 class MyTestCase(unittest.TestCase):

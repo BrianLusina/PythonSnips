@@ -1,5 +1,5 @@
 import unittest
-from data_structures.tuples.tuple_sorter import sorter
+from pysnips.data_structures.tuples.tuple_sorter import sorter
 
 
 class SorterTests(unittest.TestCase):

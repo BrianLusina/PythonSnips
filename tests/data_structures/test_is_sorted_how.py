@@ -1,6 +1,6 @@
 import unittest
 
-from data_structures.lists.is_sorted_how import is_sorted_and_how
+from pysnips.data_structures.lists.is_sorted_how import is_sorted_and_how
 
 
 class MyTestCase(unittest.TestCase):

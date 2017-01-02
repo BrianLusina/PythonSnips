@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.square_odds import square_odds
+from pysnips.data_structures.lists.square_odds import square_odds
 
 
 class SquareOddTests(unittest.TestCase):

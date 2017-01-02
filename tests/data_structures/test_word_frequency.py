@@ -1,5 +1,5 @@
 import unittest
-from data_structures.dicts.word_frequency import frequency
+from pysnips.data_structures.dicts.word_frequency import frequency
 
 
 class FreqTests(unittest.TestCase):

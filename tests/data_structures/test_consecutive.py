@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.consecutive import consecutive
+from pysnips.data_structures.lists.consecutive import consecutive
 
 
 class ConsecutiveTestCase(unittest.TestCase):

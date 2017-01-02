@@ -1,2 +1,2 @@
 import unittest
-from data_structures.lists.remove_duplicates import RemoveDuplicates
+from pysnips.data_structures.lists.remove_duplicates import RemoveDuplicates

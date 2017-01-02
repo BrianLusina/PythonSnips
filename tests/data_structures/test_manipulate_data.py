@@ -1,5 +1,5 @@
 import unittest
-from data_structures.manipulate_data import manipulate_data
+from pysnips.data_structures.manipulate_data import manipulate_data
 
 
 class ManipulateDataTestCases(unittest.TestCase):

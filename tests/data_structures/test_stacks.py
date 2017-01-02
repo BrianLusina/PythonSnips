@@ -1,5 +1,5 @@
 import unittest
-from data_structures.stacks import Stack
+from pysnips.data_structures.stacks import Stack
 
 
 class StackTestCase(unittest.TestCase):

@@ -6,7 +6,7 @@ message if its length argument doesn't fit the series.
 """
 import unittest
 
-from data_structures.lists.series import slices
+from pysnips.data_structures.lists.series import slices
 
 
 class SeriesTest(unittest.TestCase):

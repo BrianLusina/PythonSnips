@@ -1,6 +1,6 @@
 import unittest
 
-from data_structures.circular_buffer import (
+from pysnips.data_structures.circular_buffer import (
     CircularBuffer,
     BufferFullException,
     BufferEmptyException

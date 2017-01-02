@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.dominator import dominator
+from pysnips.data_structures.lists.dominator import dominator
 
 
 class DominatorTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from data_structures.lists.flatten_array import flatten
+from pysnips.data_structures.lists.flatten_array import flatten
 
 
 class FlattenArrayTests(unittest.TestCase):

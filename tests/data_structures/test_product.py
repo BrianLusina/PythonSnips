@@ -1,2 +1,2 @@
 import unittest
-from data_structures.lists.product import Product
+from pysnips.data_structures.lists.product import Product

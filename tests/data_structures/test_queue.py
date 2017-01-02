@@ -1,1 +1,1 @@
-from data_structures.queues import Queue
+from pysnips.data_structures.queues import Queue

@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.sublist import check_lists, contains, SUBLIST, SUPERLIST, EQUAL, UNEQUAL
+from pysnips.data_structures.lists.sublist import check_lists, contains, SUBLIST, SUPERLIST, EQUAL, UNEQUAL
 
 
 class MyTestCase(unittest.TestCase):

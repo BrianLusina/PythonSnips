@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.double_every_other import double_every_other
+from pysnips.data_structures.lists.double_every_other import double_every_other
 
 
 class DoubleTests(unittest.TestCase):

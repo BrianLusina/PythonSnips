@@ -1,5 +1,5 @@
 import unittest
-from data_structures.stacks.bracket_validator import count, is_valid
+from pysnips.data_structures.stacks.bracket_validator import count, is_valid
 
 
 class BracketsTestCase(unittest.TestCase):

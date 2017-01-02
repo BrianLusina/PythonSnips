@@ -1,5 +1,5 @@
 import unittest
-from data_structures.lists.repeat_sum import repeat_sum
+from pysnips.data_structures.lists.repeat_sum import repeat_sum
 
 
 class Tests(unittest.TestCase):
