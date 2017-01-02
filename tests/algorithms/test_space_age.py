@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.space_age import SpaceAge
+from pysnips.algorithms.space_age import SpaceAge
 
 
 class SpaceAgeTest(unittest.TestCase):

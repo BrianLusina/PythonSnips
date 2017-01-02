@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.say_number import say
+from pysnips.algorithms.say_number import say
 
 
 class SayTest(unittest.TestCase):

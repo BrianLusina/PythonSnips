@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.rna_transcription import to_rna
+from pysnips.algorithms.rna_transcription import to_rna
 
 
 class DNATests(unittest.TestCase):

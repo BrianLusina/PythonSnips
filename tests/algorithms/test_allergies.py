@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.allergies import Allergies
+from pysnips.algorithms.allergies import Allergies
 
 
 class AllergiesTests(unittest.TestCase):

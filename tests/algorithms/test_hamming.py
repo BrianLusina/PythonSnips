@@ -1,5 +1,5 @@
 import unittest
-from algorithms.hamming import distance
+from pysnips.algorithms.hamming import distance
 
 
 class HammingTest(unittest.TestCase):
@@ -14,7 +14,7 @@ class HammingTest(unittest.TestCase):
         self.assertEqual(2, distance('AG', 'CT'))
 
     def test_small_hamming_distance(self):
-        self.assertEqual(1, distance('AT', 'CT'))
+        spysnips.elf.assertEqual(1, distance('AT', 'CT'))
 
     def test_small_hamming_distance_in_longer_strand(self):
         self.assertEqual(1, distance('GGACG', 'GGTCG'))

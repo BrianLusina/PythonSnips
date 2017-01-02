@@ -1,5 +1,5 @@
 import unittest
-from algorithms.etl import transform
+from pysnips.algorithms.etl import transform
 
 
 class TransformTest(unittest.TestCase):

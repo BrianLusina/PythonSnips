@@ -31,5 +31,6 @@ setup(
     },
     keywords='Python snippets and algorithms',
     license='MIT',
-    test_suite='tests'
+    test_suite='tests',
+
 )

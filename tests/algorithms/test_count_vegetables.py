@@ -1,5 +1,5 @@
 import unittest
-from algorithms.count_vegetables import count_vegetables
+from pysnips.algorithms.count_vegetables import count_vegetables
 
 lst1 = [(2, 'tofu'),
         (2, 'potato'),

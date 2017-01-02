@@ -19,7 +19,7 @@ in every month.
 """
 from datetime import date
 import unittest
-from algorithms.meetup import meetup_day
+from pysnips.algorithms.meetup import meetup_day
 
 
 class MeetupTest(unittest.TestCase):

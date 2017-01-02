@@ -1,5 +1,5 @@
 import unittest
-from algorithms.recursion_lab.replicate_iter import replicate_iter, replicate_recur
+from pysnips.algorithms.recursion_lab.replicate_iter import replicate_iter, replicate_recur
 
 
 class ReplicateIterTestCases(unittest.TestCase):

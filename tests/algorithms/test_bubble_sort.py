@@ -1,5 +1,5 @@
 import unittest
-from algorithms.bubble_sort import BubbleSort
+from pysnips.algorithms.bubble_sort import BubbleSort
 
 
 class BubbleSortTests(unittest.TestCase):

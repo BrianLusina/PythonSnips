@@ -1,5 +1,5 @@
 import unittest
-from  algorithms.rna_to_protein import protein
+from pysnips.algorithms.rna_to_protein import protein
 
 
 class RnaTest(unittest.TestCase):
