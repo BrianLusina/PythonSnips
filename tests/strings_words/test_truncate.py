@@ -1,5 +1,5 @@
 import unittest
-from strings_words.truncate_string import truncate_string
+from pysnips.strings_words.truncate_string import truncate_string
 
 
 class MyTestCase(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from strings_words.wrong_end import fix_the_meerkat
+from pysnips.strings_words.wrong_end import fix_the_meerkat
 
 
 class Test(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from strings_words.order_please import order
+from pysnips.strings_words.order_please import order
 
 
 class Tests(unittest.TestCase):

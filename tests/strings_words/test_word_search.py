@@ -1,5 +1,5 @@
 import unittest
-from strings_words.word_search import word_search
+from pysnips.strings_words.word_search import word_search
 
 
 class WordTests(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from strings_words.rake_garden import rake_garden
+from pysnips.strings_words.rake_garden import rake_garden
 
 
 class RakeGardenTests(unittest.TestCase):

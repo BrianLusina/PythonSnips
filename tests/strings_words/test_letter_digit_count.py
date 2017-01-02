@@ -1,5 +1,5 @@
 import unittest
-from strings_words.letter_digit_count import LetterDigitCount
+from pysnips.strings_words.letter_digit_count import LetterDigitCount
 
 
 class Tests(unittest.TestCase):

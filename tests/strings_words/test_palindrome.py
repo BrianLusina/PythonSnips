@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-from strings_words.palindrome import is_palindrome, longest_palindrome
+from pysnips.strings_words.palindrome import is_palindrome, longest_palindrome
 from random import choice, randint
 from string import ascii_letters
 

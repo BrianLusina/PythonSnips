@@ -1,5 +1,5 @@
 import unittest
-from strings_words.palindrome_pairs import palindrome_pairs
+from pysnips.strings_words.palindrome_pairs import palindrome_pairs
 
 
 class PalindromePairsTests(unittest.TestCase):

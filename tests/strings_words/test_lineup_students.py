@@ -1,5 +1,5 @@
 import unittest
-from strings_words.lineup_students import lineup_students
+from pysnips.strings_words.lineup_students import lineup_students
 
 s1 = 'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi'
 

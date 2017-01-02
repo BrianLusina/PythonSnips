@@ -1,5 +1,5 @@
 import unittest
-from strings_words.re_ordering import re_ordering
+from pysnips.strings_words.re_ordering import re_ordering
 
 BASIC_TESTS = [
     ('ming Yao', 'Yao ming'),

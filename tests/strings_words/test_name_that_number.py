@@ -1,5 +1,5 @@
 import unittest
-from strings_words.name_that_number import name_that_number
+from pysnips.strings_words.name_that_number import name_that_number
 
 
 class Tests(unittest.TestCase):

@@ -2,7 +2,7 @@
 
 import unittest
 
-from strings_words.is_pangram import is_pangram
+from pysnips.strings_words.is_pangram import is_pangram
 
 
 class PangramTests(unittest.TestCase):

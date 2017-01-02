@@ -1,5 +1,5 @@
 import unittest
-from strings_words.uni_total import uni_total
+from pysnips.strings_words.uni_total import uni_total
 
 
 class UniTotalTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from strings_words.seven_ate9 import seven_ate9
+from pysnips.strings_words.seven_ate9 import seven_ate9
 
 
 class SevenAte9Tests(unittest.TestCase):

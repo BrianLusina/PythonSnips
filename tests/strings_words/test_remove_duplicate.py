@@ -1,6 +1,6 @@
 import unittest
 import time
-from strings_words.remove_duplicate import RemoveDuplicate, RemoveDupSort
+from pysnips.strings_words.remove_duplicate import RemoveDuplicate, RemoveDupSort
 
 
 class DuplicateTests(unittest.TestCase):

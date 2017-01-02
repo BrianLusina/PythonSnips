@@ -1,4 +1,4 @@
-from strings_words.father_son import sc
+from pysnips.strings_words.father_son import sc
 import unittest
 
 

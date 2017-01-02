@@ -1,5 +1,5 @@
 import unittest
-from strings_words.title_case import title_case
+from pysnips.strings_words.title_case import title_case
 
 
 class TitleTests(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from strings_words.duplicate_encoder import DuplicateEncoder
+from pysnips.strings_words.duplicate_encoder import DuplicateEncoder
 
 
 class Tests(unittest.TestCase):

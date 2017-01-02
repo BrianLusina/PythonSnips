@@ -1,5 +1,5 @@
 import unittest
-from strings_words.swappie import Swap
+from pysnips.strings_words.swappie import Swap
 
 
 class Tests(unittest.TestCase):

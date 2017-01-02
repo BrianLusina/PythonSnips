@@ -1,5 +1,5 @@
 import unittest
-from strings_words.tower_builder import tower_builder
+from pysnips.strings_words.tower_builder import tower_builder
 
 
 class TowerBuilderTests(unittest.TestCase):

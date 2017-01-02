@@ -1,5 +1,5 @@
 import unittest
-from strings_words.how_much_love import how_much_i_love_you
+from pysnips.strings_words.how_much_love import how_much_i_love_you
 
 
 class MyTestCase(unittest.TestCase):

@@ -1,5 +1,6 @@
 import unittest
-from strings_words.greek_comparator import greek_comparator
+from pysnips.strings_words.greek_comparator import greek_comparator
+
 
 class GreekComparator(unittest.TestCase):
     def test_1(self):

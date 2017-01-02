@@ -1,4 +1,4 @@
-from strings.mean import mean
+from pysnips.strings_words.mean import mean
 import unittest
 
 

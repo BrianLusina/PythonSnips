@@ -1,5 +1,5 @@
 import unittest
-from strings_words.xoxo import xoxo, xoxo_reg
+from pysnips.strings_words.xoxo import xoxo, xoxo_reg
 
 
 class Tests(unittest.TestCase):
