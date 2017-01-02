@@ -1,5 +1,5 @@
 import unittest
-from strings_words.is_isogram import is_isogram
+from pysnips.strings_words.is_isogram import is_isogram
 
 
 class Tests(unittest.TestCase):

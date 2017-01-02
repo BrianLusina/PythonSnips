@@ -1,5 +1,5 @@
 import unittest
-from strings_words.pattern import pattern, pattern_2
+from pysnips.strings_words.pattern import pattern, pattern_2
 
 
 class Tests(unittest.TestCase):
