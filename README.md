@@ -48,6 +48,17 @@ That is it, you can then activate the virtual environment as before.
 
 
 **Enjoy!**
+### Running tests
+
+To run tests use `py.test`
+
+``` sh
+$ py.test tests
+```
+> This will run all the tests in the tests directory
+
+To add tests, name your test folders `test_<MODULE_TO_TEST>.py`. This is to enable py.test to detect your tests.
+Place these tests in the `tests` folder.
 
 ### Special file (documenter)
 
