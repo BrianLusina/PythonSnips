@@ -1,6 +1,7 @@
 astroid==1.4.8
 bleach==1.5.0
 cycler==0.10.0
+coverage==4.2
 decorator==4.0.10
 entrypoints==0.2.2
 html5lib==0.9999999
