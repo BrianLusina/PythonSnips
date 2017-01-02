@@ -1,6 +1,6 @@
 import time
 import unittest
-from cryptography.shell_game import ShellGame
+from pysnips.cryptography.shell_game import ShellGame
 
 
 class ShellGameTests(unittest.TestCase):

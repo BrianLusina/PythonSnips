@@ -1,5 +1,5 @@
 import unittest
-from cryptography.key_pad_decode import decode
+from pysnips.cryptography.key_pad_decode import decode
 
 
 class MyTestCase(unittest.TestCase):

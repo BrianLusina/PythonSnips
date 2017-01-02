@@ -1,7 +1,7 @@
 from collections import Counter
 import unittest
 
-from cryptography.luhn import Luhn
+from pysnips.cryptography.luhn import Luhn
 
 
 class LuhnTests(unittest.TestCase):

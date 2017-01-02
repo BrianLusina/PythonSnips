@@ -1,6 +1,6 @@
 import unittest
 
-from cryptography.pig_latin import translate
+from pysnips.cryptography.pig_latin import translate
 
 
 class PigLatinTests(unittest.TestCase):

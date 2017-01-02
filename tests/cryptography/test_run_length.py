@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import unittest
 
-from cryptography.run_length_encoding import encode, decode
+from pysnips.cryptography.run_length_encoding import encode, decode
 
 
 class WordCountTests(unittest.TestCase):

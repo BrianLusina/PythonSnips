@@ -1,6 +1,6 @@
 import unittest
 
-from cryptography.rail_fence_cipher import encode, decode
+from pysnips.cryptography.rail_fence_cipher import encode, decode
 
 
 class RailFenceTests(unittest.TestCase):

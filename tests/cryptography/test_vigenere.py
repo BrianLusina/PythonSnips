@@ -1,5 +1,5 @@
 import unittest
-from cryptography.vigenere_cipher import encode, decode
+from pysnips.cryptography.vigenere_cipher import encode, decode
 
 
 class VigenereTestCase(unittest.TestCase):

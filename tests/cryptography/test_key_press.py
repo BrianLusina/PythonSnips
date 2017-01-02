@@ -1,5 +1,5 @@
 import unittest
-from cryptography.key_press import KeyPress
+from pysnips.cryptography.key_press import KeyPress
 
 
 class Tests(unittest.TestCase):

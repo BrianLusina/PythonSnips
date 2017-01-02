@@ -1,5 +1,5 @@
 import unittest
-from cryptography.maskify import maskify
+from pysnips.cryptography.maskify import maskify
 
 
 class MaskifyTests(unittest.TestCase):
