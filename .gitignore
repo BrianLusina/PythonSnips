@@ -3,6 +3,7 @@ logs
 *.log
 .idea/
 .vagrant/
+.cache/
 # Runtime data
 pids
 *.pid
