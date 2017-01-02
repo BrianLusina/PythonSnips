@@ -1,5 +1,5 @@
 import unittest
-from strings_words.ascii_converter import to_ascii, to_hex
+from pysnips.strings_words.ascii_converter import to_ascii, to_hex
 
 
 class AsciiConverterTest(unittest.TestCase):
