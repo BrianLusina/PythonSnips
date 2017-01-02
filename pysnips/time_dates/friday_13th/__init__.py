@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-def unlucky_days(year: int) -> int:
+def unlucky_days(year):
     """
     Calculate the number of Friday 13 in the year
     :param year: The year to calculate number of Friday 13th
