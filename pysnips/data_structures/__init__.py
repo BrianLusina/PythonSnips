@@ -33,7 +33,7 @@ class DataStructures(object):
             :return: Item at the top of out_stack
             """
             if self.out_stack.get_len() == 0:
-                # move itms from in_stack to out_stack, reversing order
+                # move items from in_stack to out_stack, reversing order
                 while self.in_stack.get_len() > 0:
                     newest_in_stack_item = self.in_stack.pop()
                     self.out_stack.push(newest_in_stack_item)

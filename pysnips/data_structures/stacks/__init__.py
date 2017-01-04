@@ -91,7 +91,7 @@ class Stack(object):
         try:
             ints = self.filter_stack().get(int, None)
             # floats = self.filter_stack().get(float, None)
-            return max(ints) # + floats)
+            return max(ints)  # + floats)
         except TypeError:
             return None
 
@@ -118,7 +118,7 @@ class Stack(object):
         """
         output = {}
         if self.is_empty():
-            return None
+            return {}
         for item in self.stack:
             if type(item) not in output:
                 output[type(item)] = [item]
