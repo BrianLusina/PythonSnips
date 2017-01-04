@@ -28,4 +28,3 @@ class QueueTwoStacksTest(unittest.TestCase):
         queue = DataStructures.QueueTwoStacks(0)
         with self.assertRaises(IndexError):
             queue.dequeue()
-        
