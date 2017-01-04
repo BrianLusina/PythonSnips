@@ -24,29 +24,6 @@ install the requirements
 pip install -r requirements.txt
 ```
 
-## Using Vagrant
-
-You will see a vagrant file with all the settings already configured. This will include the provisioning shell script.
-
-Make sure you have [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads?replytocom=98578) already installed in your machine.
-
-Simply run:
-
-``` sh
-$ vagrant up
-```
-> This will start up the virtual machine
-
-Login into the machine
-
-``` sh
-$ vagrant ssh
-```
-> This will log you into the machine
-
-That is it, you can then activate the virtual environment as before.
-
-
 **Enjoy!**
 ### Running tests
 
