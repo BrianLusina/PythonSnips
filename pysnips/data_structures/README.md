@@ -2,6 +2,7 @@
 
 Snippets involving various Data Structures and Algorithms in Python :snake:.
 
+### QueueTwoStacks
 
-## Bubble Sort
-Bubble sort makes multiple passes through a list. Make it compare adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its proper place. In essence, each item “bubbles” up to the location where it belongs.
+Implement a [queue](./queues/README.md) with 2 [stacks](./stacks/README.md). Your queue should have an enqueue and dequeue function and it should be `FIFO`.
+
