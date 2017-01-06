@@ -1,0 +1,1 @@
+Write a function to flip a coin n times that returns the numbers of times a “heads” was flipped.
