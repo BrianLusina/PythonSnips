@@ -11,3 +11,14 @@ class CharacterCounterTest(unittest.TestCase):
         with self.assertRaises(PySnipsError):
             total_characters(9)
 
+    def test_for_word_list(self):
+        self.assertEqual(12, total_characters(["adios", "bye", "ciao"]), msg="Expected 12")
+
+    def test_for_int_array(self):
+        self.assertEqual(0, total_characters([1,2,3,4,5,6]), "Expected 0")
+
+    def test_for_diff_elements_in_array(self):
+        self.assertEqual(5, total_characters(["Brian", 5, {}, []]), "Expected 5")
+
+    def test_for_one_element_in_array(self):
+        self.assertEqual(10, total_characters(["abcdefghij"]), "Expected count to be 10")

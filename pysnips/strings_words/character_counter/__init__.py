@@ -2,7 +2,7 @@ from pysnips.errors import PySnipsError
 try:
     from functools import reduce
 except ImportError:
-
+    print("No Module named reduce")
 
 
 def total_characters(word_list):
@@ -21,4 +21,11 @@ def total_characters(word_list):
     # create a variable to hold current total
     total_chars = 0
 
-    # reduce the array to
+    # perform a loop to check if each element in word list is a string
+    for x in range(len(word_list)):
+        if isinstance(word_list[x], str):
+            total_chars += len(word_list[x])
+        else:
+            total_chars += 0
+    return total_chars
+
