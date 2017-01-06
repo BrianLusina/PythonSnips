@@ -10,5 +10,7 @@ class CoinFlipTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             coin_flip("5")
 
+    def test_returns_dict(self):
+        self.assertIsInstance(coin_flip(5), dict, "Expected dictionary")
 
 

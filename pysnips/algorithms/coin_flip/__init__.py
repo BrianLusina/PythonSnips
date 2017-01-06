@@ -35,4 +35,3 @@ def coin_flip(n):
         coin_flips += 1
 
     return result
-
