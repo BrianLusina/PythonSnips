@@ -24,3 +24,14 @@ Examples:
 Non-string inputs should be converted to strings.
 
 Return an array of arrays containing pairs of distinct indices that form palindromes. Pairs should be reutrned in the order they appear in the original list.
+
+## Palindrome Products
+
+Write a program that can detect palindrome products in a given range.
+
+A palindromic number reads the same both ways. The largest palindrome
+made from the product of two 2-digit numbers is 9009 = 91 x 99.
+
+### Source
+
+Problem 4 at Project Euler [http://projecteuler.net/problem=4](http://projecteuler.net/problem=4)
