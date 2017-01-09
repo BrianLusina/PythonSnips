@@ -40,14 +40,16 @@ class PalindromeTests(unittest.TestCase):
     def test_10(self):
         self.assertEqual(self.palindrome.is_palindrome(123456), False)
         
-    def test_11(self):
+    def test_palindrome_pairs_1(self):
         self.assertEqual(self.palindrome.palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]])
 
-    def test_12(self):
-        self.assertEqual(self.palindrome.palindrome_pairs(["dog", "cow", "tap", "god", "pat"]), [[0, 3], [2, 4], [3, 0], [4, 2]])
+    def test_palindrome_pairs_2(self):
+        self.assertEqual(self.palindrome.palindrome_pairs(["dog", "cow", "tap", "god", "pat"]),
+                         [[0, 3], [2, 4], [3, 0], [4, 2]])
 
-    def test_13(self):
-        self.assertEqual(self.palindrome.palindrome_pairs(["abcd", "dcba", "lls", "s", "sssll"]), [[0, 1], [1, 0], [2, 4], [3, 2]])
+    def test_palindrome_pairs_3(self):
+        self.assertEqual(self.palindrome.palindrome_pairs(["abcd", "dcba", "lls", "s", "sssll"]),
+                         [[0, 1], [1, 0], [2, 4], [3, 2]])
 
     def test_largest_palindrome_from_single_digit_factors(self):
         value, factors = self.palindrome.largest_palindrome(max_factor=9)

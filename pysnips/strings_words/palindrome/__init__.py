@@ -33,13 +33,16 @@ class Palindrome(object):
         return len(final_str)
 
     def palindrome_pairs(self, words):
+        """
+
+        :param words: list of words to evaludate for palindrome pairs
+        :return: list of lists with each list containing the word indices which form a palindrome
+        """
         m = []
         for x in range(len(words) - 1, 0, -1):
             for i in range(x):
                 if self.is_palindrome(str(words[i]) + str(words[i + 1])):
-                    w1 = words[i]
-                    w2 = words[i + 1]
-                    m.append([words.index(w1), words.index(w2)])
+                    m.append([words.index(words[i]), words.index(words[i + 1])])
         return m
 
     def smallest_palindrome(self, max_factor, min_factor=0):
