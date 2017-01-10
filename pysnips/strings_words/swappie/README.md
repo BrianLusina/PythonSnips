@@ -1,4 +1,3 @@
-
 ## Swappie
 
 Using python, have the function SwapCase(str) take the str parameter and swap the case of each character.
