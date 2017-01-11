@@ -7,17 +7,16 @@ class VampireTestCases(unittest.TestCase):
         self.vampire_numbers = VampireNumbers()
 
     def test_can_generate_first_25_vampire_numbers(self):
-        print('First 15 vampire numbers')
+        print('First 10 vampire numbers')
         count = n = 0
         results = []
-        while count < 15:
+        while count < 10:
             n += 1
             fang_pairs = self.vampire_numbers.vampire(n)
             if fang_pairs:
                 count += 1
                 results.append((n, fang_pairs))
-
-        self.assertEqual(15, len(results), "Expected 1st 25 vampire numbers")
+        self.assertEqual(10, len(results), "Expected 1st 10 vampire numbers")
 
     def test1(self):
         self.assertEqual(self.vampire_numbers.vampire_test(21, 6), True, "Basic: 21 * 6 = 126 should return True")

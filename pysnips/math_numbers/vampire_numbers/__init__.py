@@ -91,12 +91,4 @@ class VampireNumbers(object):
         :return: True /False
         :rtype: bool
         """
-        product_ = x * y
-        if len(str(x) + str(y)) != len(str(product_)):
-            return False
-
-        for i in str(x) + str(y):
-            if i in str(x * y):
-                return True
-            else:
-                return False
+        return sorted(str(x * y)) == sorted(str(x) + str(y))
