@@ -14,11 +14,10 @@ class VampireNumbers(object):
     def prime_factors(self, n):
         """
         return the prime factors for n
-        #>>> prime_factors(600)
+        # >>> prime_factors(600)
         [5, 5, 3, 2, 2, 2]
-        #>>> prime_factors(1000)
+        # >>> prime_factors(1000)
         [5, 5, 5, 2, 2, 2]
-        >>>
         """
         step = lambda x: 1 + x * 4 - (x // 2) * 2
         maxq = int(math.floor(math.sqrt(n)))
@@ -41,16 +40,19 @@ class VampireNumbers(object):
         :rtype: tuple
         :return the prime factors and their multiplicities for n as a tuple with the 1st elment as the prime factor
         the 2nd element the multiplicity, how many times it appears
-        #'>>> prime_factor_count(600)
+        # >>> prime_factor_count(600)
         [(2, 3), (3, 1), (5, 2)]
-        #>>> prime_factor_count(1000)
+        # >>> prime_factor_count(1000)
         [(2, 3), (5, 3)]
         """
         res = self.prime_factors(n)
         return [(c, res.count(c)) for c in set(res)]
 
     def divisors(self, n):
-        """Returns all the divisors of n"""
+        """
+        Returns all the divisors of n
+        """
+
         # Get the prime factor count, store in a list, [(prime_factor, multiplicity), ...]
         factors = self.prime_factor_count(n)
 
@@ -69,6 +71,11 @@ class VampireNumbers(object):
             for power_group in powers)
 
     def vampire(self, n):
+        """
+
+        :param n: number to check if it is a vampire
+        :return: fang pairs for number
+        """
         fang_sets = set(frozenset([d, n // d])
                         for d in self.divisors(n)
                         if (len(str(d)) == len(str(n)) / 2.
@@ -76,29 +83,20 @@ class VampireNumbers(object):
                             and (str(d)[-1] == 0) + (str(n // d)[-1] == 0) <= 1))
         return sorted(tuple(sorted(fangs)) for fangs in fang_sets)
 
-
-if __name__ == '__main__':
-    print('First 25 vampire numbers')
-    count = n = 0
-    while count < 25:
-        n += 1
-        fang_pairs = vampire(n)
-        if fang_pairs:
-            count += 1
-            print('%i: %r' % (n, fang_pairs))
-    print('\nSpecific checks for fangpairs')
-    for n in (16758243290880, 24959017348650, 14593825548650):
-        fangpairs = vampire(n)
-        print('%i: %r' % (n, fangpairs))
-
-
-def vampire_test(x, y):
-    product = x * y
-    if len(str(x) + str(y)) != len(str(product)):
-        return False
-
-    for i in str(x) + str(y):
-        if i in str(x * y):
-            return True
-        else:
+    def vampire_test(self, x, y):
+        """
+        Test whether 2 numbers are vampire numbers
+        :param x: 1st number
+        :param y: 2nd number
+        :return: True /False
+        :rtype: bool
+        """
+        product_ = x * y
+        if len(str(x) + str(y)) != len(str(product_)):
             return False
+
+        for i in str(x) + str(y):
+            if i in str(x * y):
+                return True
+            else:
+                return False
