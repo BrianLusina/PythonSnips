@@ -37,4 +37,3 @@ class Hexadecimal(object):
         :return: decimal equivalent of hexadecimal
         """
         return int(hexadecimal, base=16)
-
