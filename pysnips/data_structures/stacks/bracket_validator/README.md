@@ -1,3 +1,5 @@
+## Bracket Validator
+
 You're working with an intern that keeps coming to you with JavaScript code that won't run because the braces, brackets, and parentheses are off. To save you both some time, you decide to write a braces/brackets/parentheses validator.
 Let's say:
 
@@ -11,7 +13,7 @@ Examples:
 "{ [ ( ] ) }" should return False
 "{ [ }" should return False
 
-## Gotchas
+### Gotchas
 Simply making sure each opener has a corresponding closer is not enough—we must also confirm that they are correctly ordered.
 
 For example, "{ [ ( ] ) }" should return False, even though each opener can be matched to a closer.
@@ -52,7 +54,7 @@ peek() : returns the item on the top of the stack, without removing it.
 is_empty() : returns True if the stack is empty, False otherwise
 !
 
-Solution
+### Solution
 We iterate through our string, making sure that:
 
 each closer corresponds to the most recently seen, unclosed opener

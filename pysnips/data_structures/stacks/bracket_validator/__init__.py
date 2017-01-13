@@ -1,23 +1,4 @@
-def count(paren):
-    stack = []
-    push_chars, pop_chars = "<({[", ">)}]"
-    for c in paren:
-        if c in push_chars:
-            stack.append(c)
-        elif c in pop_chars:
-            if not len(stack):
-                return False
-            else:
-                stack_top = stack.pop()
-                balancing_bracket = push_chars[pop_chars.index(c)]
-                if stack_top != balancing_bracket:
-                    return False
-        else:
-            return False
-    return not len(stack)
-
-
-def is_valid(code):
+def check_brackets_1(code):
     openers_to_closers_map = {
         '(': ')',
         '{': '}',
@@ -46,3 +27,38 @@ def is_valid(code):
                     return False
 
     return openers_stack == []
+
+
+# another version to the solution
+def check_brackets_2(string):
+    counterparts = {')': '(', '}': '{', ']': '['}
+
+    stack = []
+    for char in string:
+        if char in counterparts.values():
+            stack.append(char)
+        elif char in counterparts:
+            if not stack:
+                return False
+            if stack.pop() != counterparts[char]:
+                return False
+    return not stack
+
+
+def check_brackets_3(paren):
+    stack = []
+    push_chars, pop_chars = "<({[", ">)}]"
+    for c in paren:
+        if c in push_chars:
+            stack.append(c)
+        elif c in pop_chars:
+            if not len(stack):
+                return False
+            else:
+                stack_top = stack.pop()
+                balancing_bracket = push_chars[pop_chars.index(c)]
+                if stack_top != balancing_bracket:
+                    return False
+        else:
+            return False
+    return not len(stack)
