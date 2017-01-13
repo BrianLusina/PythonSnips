@@ -1,6 +1,3 @@
-# To avoid trivial solutions, try to solve this problem without the
-# function int(s, base=16)
-
 import unittest
 
 from pysnips.strings_words.hexadecimal import Hexadecimal
