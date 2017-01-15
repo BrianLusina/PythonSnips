@@ -1,13 +1,19 @@
 import unittest
 
-from pysnips.algorithms.minesweeper import board
+from pysnips.algorithms.minesweeper import Minesweeper
 
 
 class MinesweeperTest(unittest.TestCase):
 
     def shortDescription(self):
         return "Tests for Minesweeper"
-
+    
+    def setUp(self):
+        self.minesweeper = Minesweeper()
+    
+    def tearDown(self):
+        self.minesweeper = None
+    
     def test_board1(self):
         inp = ["+------+",
                "| *  * |",
@@ -25,7 +31,7 @@ class MinesweeperTest(unittest.TestCase):
                "|1*22*2|",
                "|111111|",
                "+------+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board2(self):
         inp = ["+-----+",
@@ -42,7 +48,7 @@ class MinesweeperTest(unittest.TestCase):
                "|12*4*|",
                "|1*3*2|",
                "+-----+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board3(self):
         inp = ["+-----+",
@@ -51,7 +57,7 @@ class MinesweeperTest(unittest.TestCase):
         out = ["+-----+",
                "|1*2*1|",
                "+-----+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board4(self):
         inp = ["+-+",
@@ -68,7 +74,7 @@ class MinesweeperTest(unittest.TestCase):
                "|1|",
                "| |",
                "+-+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board5(self):
         inp = ["+-+",
@@ -77,7 +83,7 @@ class MinesweeperTest(unittest.TestCase):
         out = ["+-+",
                "|*|",
                "+-+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board6(self):
         inp = ["+--+",
@@ -88,7 +94,7 @@ class MinesweeperTest(unittest.TestCase):
                "|**|",
                "|**|",
                "+--+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board7(self):
         inp = ["+--+",
@@ -99,7 +105,7 @@ class MinesweeperTest(unittest.TestCase):
                "|**|",
                "|**|",
                "+--+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board8(self):
         inp = ["+---+",
@@ -112,7 +118,7 @@ class MinesweeperTest(unittest.TestCase):
                "|*8*|",
                "|***|",
                "+---+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_board9(self):
         inp = ["+-----+",
@@ -129,7 +135,7 @@ class MinesweeperTest(unittest.TestCase):
                "|111  |",
                "|1*1  |",
                "+-----+"]
-        self.assertEqual(out, board(inp))
+        self.assertEqual(out, self.minesweeper.board(inp))
 
     def test_different_len(self):
         inp = ["+-+",
@@ -137,19 +143,19 @@ class MinesweeperTest(unittest.TestCase):
                "|*  |",
                "|  |",
                "+-+"]
-        self.assertRaises(ValueError, board, inp)
+        self.assertRaises(ValueError, self.minesweeper.board, inp)
 
     def test_faulty_border(self):
         inp = ["+-----+",
                "*   * |",
                "+-- --+"]
-        self.assertRaises(ValueError, board, inp)
+        self.assertRaises(ValueError, self.minesweeper.board, inp)
 
     def test_invalid_char(self):
         inp = ["+-----+",
                "|X  * |",
                "+-----+"]
-        self.assertRaises(ValueError, board, inp)
+        self.assertRaises(ValueError, self.minesweeper.board, inp)
 
 
 if __name__ == '__main__':
