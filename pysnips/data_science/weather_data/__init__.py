@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 class WeatherData(object):
     def __init__(self):
         # open and read the file
