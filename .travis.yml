@@ -7,11 +7,11 @@ python:
   - 3.3
   - 3.4
   - 3.5
-  - nightly
+  - 3.6
 
 matrix:
   allow_failures:
-    - python: nightly
+    - python: 3.6
 
 install:
   - pip install -r requirements-travis.txt
@@ -20,6 +20,10 @@ before_script:
   - flake8 ./pysnips/ --max-line-length=99 --select=E,W
 
 script:
+  - py.test tests
   - ./test/check_pysnips.py
   - ./bin/fetch-configlet
   - ./bin/configlet .
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

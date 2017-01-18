@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/BrianLusina/Python_Snippets.svg?branch=master)](https://travis-ci.org/BrianLusina/Python_Snippets)
+
+[![codecov](https://codecov.io/gh/BrianLusina/Python_Snippets/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/Python_Snippets)
+
 # Python Snippets
    
 Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets.
