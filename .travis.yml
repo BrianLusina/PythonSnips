@@ -16,14 +16,14 @@ matrix:
 install:
   - pip install -r requirements-travis.txt
 
-before_script:
-  - flake8 ./pysnips/ --max-line-length=99 --select=E,W
+# before_script:
+  # - flake8 ./pysnips/ --max-line-length=99 --select=E,W
 
 script:
   - py.test tests
-  - ./test/check_pysnips.py
-  - ./bin/fetch-configlet
-  - ./bin/configlet .
+  #- ./test/check_pysnips.py
+  #- ./bin/fetch-configlet
+  #- ./bin/configlet .
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
