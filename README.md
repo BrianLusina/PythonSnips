@@ -1,3 +1,8 @@
+<h1 align:"center"> Python Snippets</h1>
+
+***
+
+<p align="center">
 [![Build Status](https://travis-ci.org/BrianLusina/Python_Snippets.svg?branch=master)](https://travis-ci.org/BrianLusina/Python_Snippets)
 
 [![codecov](https://codecov.io/gh/BrianLusina/Python_Snippets/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/Python_Snippets)
@@ -5,9 +10,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/11cfc8e125c54bdb833fe19ed9ddad72)](https://www.codacy.com/app/BrianLusina/Python_Snippets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/Python_Snippets&amp;utm_campaign=Badge_Grade)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/11cfc8e125c54bdb833fe19ed9ddad72)](https://www.codacy.com/app/BrianLusina/Python_Snippets?utm_source=github.com&utm_medium=referral&utm_content=BrianLusina/Python_Snippets&utm_campaign=Badge_Coverage)
+</p>
 
-# Python Snippets
-   
+
 Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets.
 Each directory and/or python package has a readme for more information about the Python program
 
@@ -33,6 +38,7 @@ pip install -r requirements.txt
 ```
 
 **Enjoy!**
+
 ### Running tests
 
 To run tests use `py.test`
@@ -45,7 +51,7 @@ $ py.test tests
 To add tests, name your test folders `test_<MODULE_TO_TEST>.py`. This is to enable py.test to detect your tests.
 Place these tests in the `tests` folder.
 
-### Special file (documenter)
+#### Special file (documenter)
 
 I call this special because it prints out the documentation for Python built in functions
 Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. But Python has a built-in document function for every built-in functions.
