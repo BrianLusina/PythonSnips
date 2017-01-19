@@ -21,6 +21,10 @@ install:
 
 script:
   - py.test tests
+  # runs coverage
+  - py.test --cov=pysnips tests/
+  - coverage xml
+  - python-codacy-coverage -r coverage.xml
   #- ./test/check_pysnips.py
   #- ./bin/fetch-configlet
   #- ./bin/configlet .
