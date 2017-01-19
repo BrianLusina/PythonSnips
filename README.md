@@ -2,6 +2,8 @@
 
 [![codecov](https://codecov.io/gh/BrianLusina/Python_Snippets/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/Python_Snippets)
 
+15ea25bb8e9d461f9ec69a5fca3765d6
+
 # Python Snippets
    
 Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets.
