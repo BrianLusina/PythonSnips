@@ -22,7 +22,7 @@ class Stack(object):
         """
         Storing an element to the top of the stack
         Check if the stack is empty, if it is pushes the element to the stack
-        This will also keep upto date with the maximum value in the stack
+        This will also keep up to date with the maximum value in the stack
         If the stack is full, raises an error
         """
         if self.is_full():
@@ -97,7 +97,7 @@ class Stack(object):
 
     def get_min(self):
         """
-        Gets the minumum value in the stack
+        Gets the minimum value in the stack
         :return: The minimum item in the stack
         :rtype: int
         :rtype: float

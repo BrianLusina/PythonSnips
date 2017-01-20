@@ -9,6 +9,8 @@ webbrowser.open("https://github.com/philliphsu/BottomSheetPickers")
 
 class ScikitBacktest(object):
     def __init__(self, sys):
+        self.data = d
+        self.matrix = m
         self.lags = 5
         self.symbol = sys
         self.get_data()
@@ -19,7 +21,6 @@ class ScikitBacktest(object):
         d = pd.DataFrame(d)
         d.columns = [self.symbol]
         d['returns'] = np.log(d / d.shift(1))
-        self.data = d
 
     def select_data(self, start, end):
         d = self.data[(self.data.index >= start) & (self.data.index <= end)].copy()
@@ -33,7 +34,6 @@ class ScikitBacktest(object):
                 m[i] = d[i:]
             else:
                 m[i] = d[i:i - self.lags]
-        self.matrix = m
 
     def fit_model(self, start, end):
         self.get_matrix(start, end)

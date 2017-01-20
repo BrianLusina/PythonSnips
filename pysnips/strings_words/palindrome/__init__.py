@@ -25,7 +25,7 @@ class Palindrome(object):
             return 0
         else:
             for y, item in enumerate(s):
-                for x, item in enumerate(s):
+                for x, item_ in enumerate(s):
                     tr = s[y:x + 1]
                     if self.is_palindrome(tr) and (len(tr) > len(final_str)):
                         final_str = tr

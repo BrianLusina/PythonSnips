@@ -16,7 +16,7 @@ def get_schedule():
     for sched_file in schedule_list:
         if sched_file.endswith("txt"):
             try:
-                schedule_file = open('files/'+sched_file, 'r')
+                schedule_file = open('files/' + sched_file)
                 sched = schedule_file.read()
             except FileNotFoundError as err:
                 print(err, "Oops! File not found, please verify that the file name is correctly spelled.")
@@ -37,7 +37,7 @@ def read_emails():
     for email_file in email_list:
         if email_file.endswith("txt"):
             try:
-                schedule_file = open('files/'+email_file, 'r')
+                schedule_file = open('files/' + email_file)
                 for lines in schedule_file:
                     (schedule, time) = lines.split(",")
                     emails[schedule] = time.strip()
@@ -50,7 +50,6 @@ def read_emails():
 def extension_checker():
     """
     Retrieves the files from the path specified. This is used to fetch the emails and schedules
-    :param path of the files to retrieve date from
     :return: a tuple list with all the files
     """
     txt_files, json_files = [], []

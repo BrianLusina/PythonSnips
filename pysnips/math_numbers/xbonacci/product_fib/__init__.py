@@ -1,5 +1,5 @@
 def productFib(prod):
-    fib, res, indx = [0, 1], [], 0
+    fib, indx = [0, 1], 0
     for _ in fib:
         if fib[indx] * fib[indx + 1] == prod:
             return [fib[indx], fib[indx + 1], True]

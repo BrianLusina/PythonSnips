@@ -30,7 +30,7 @@ def sanitize(s):
         if s < 0:
             return ""
         s = bin(s)[2:]
-    elif set(s) - set(['0', '1']):
+    elif set(s) - {'0', '1'}:
         return ""
     if len(s) > 5:
         raise ValueError('Binary string too long')

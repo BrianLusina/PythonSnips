@@ -20,8 +20,8 @@ def get_special_paths(directory):
 
 def copy_to(paths, to_dir):
     """
+    :param to_dir:
     :param paths: List of paths to copy from
-    :param directory: paths to copy to
     :return:
     """
     # if path does not exist, make the dir

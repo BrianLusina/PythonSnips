@@ -7,10 +7,13 @@ urls = (
 app = web.application(urls, globals())
 
 
+def GET():
+    greeting = "Hello Mortals!"
+    return greeting
+
+
 class Index(object):
-    def GET(self):
-        greeting = "Hello Mortals!"
-        return greeting
+    pass
 
 
 if __name__ == "__main__":

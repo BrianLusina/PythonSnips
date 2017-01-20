@@ -11,8 +11,6 @@ class QueenAttack(object):
     def board(self):
         """
         Draws out a board with the positions of the two queens and places both queens on it
-        :param pos1: Position of W queen
-        :param pos2: Position of B queen
         :return: A well drawn out board with both queens
         :rtype: list
         """
@@ -38,8 +36,6 @@ class QueenAttack(object):
         Checks if either queen can attack the other, this is only possible if they share a diagonal
         or if they share the same path.
 
-        :param pos1: position of white queen
-        :param pos2: position of black queen
         :return: True/ False, if either can attack the other
         :rtype: bool
         """
@@ -65,8 +61,6 @@ class QueenAttack(object):
         This validates the position of both queens.
         If the queens' coordinates are not on the board, a value error is raised.
         If they are both on the same square, a value error is raised as well.
-        :param pos1: position of white queen
-        :param pos2: position of black queen
         :raises: ValueError
         """
         if any(x < 0 or x > 7 for x in self.pos1 + self.pos2):

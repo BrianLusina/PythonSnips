@@ -9,7 +9,7 @@ class WordData(object):
     @staticmethod
     def words(w):
         count = 0
-        file = open("datafile.txt", "r")
+        file = open("datafile.txt")
         for x in file.readlines():
             print(x)
             if w in x:

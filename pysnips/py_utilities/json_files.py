@@ -2,7 +2,7 @@ import json
 from pprint import pprint
 
 # store the json file in a variable
-json_data = open("User_Data.json", "r")
+json_data = open("User_Data.json")
 
 # enter the file, load it into a variable and close the file
 with json_data as data_file:

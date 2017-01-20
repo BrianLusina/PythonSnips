@@ -37,7 +37,7 @@ def extract_names(filename):
     ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
     """
     res = []
-    baby_html = open(filename, "r")
+    baby_html = open(filename)
     with baby_html as baby_data:
         text = baby_data.read()
         match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)

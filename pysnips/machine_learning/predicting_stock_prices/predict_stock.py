@@ -10,7 +10,7 @@ prices = []
 
 
 def get_data(filename):
-    with open(filename, 'r') as csv_file:
+    with open(filename) as csv_file:
         csvFileReader = csv.reader(csv_file)
         next(csvFileReader)
         for row in csvFileReader:

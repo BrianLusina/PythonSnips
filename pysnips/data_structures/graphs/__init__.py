@@ -7,8 +7,10 @@ GRAPH = {"A": ["B", "C"],
          }
 
 
-def find_path(graph, start, end, path=[]):
-    path = path + [start]
+def find_path(graph, start, end, path=None):
+    if path is None:
+        path = []
+    path += [start]
     if start == end:
         return path
     if start not in graph:
@@ -21,8 +23,10 @@ def find_path(graph, start, end, path=[]):
     return None
 
 
-def find_all_paths(graph, start, end, path=[]):
-    path = path + [start]
+def find_all_paths(graph, start, end, path=None):
+    if path is None:
+        path = []
+    path += [start]
     if start == end:
         return [path]
     if start not in graph:
@@ -36,8 +40,10 @@ def find_all_paths(graph, start, end, path=[]):
     return paths
 
 
-def find_shortest_path(graph, start, end, path=[]):
-    path = path + [start]
+def find_shortest_path(graph, start, end, path=None):
+    if path is None:
+        path = []
+    path += [start]
     if start == end:
         return path
     if start not in graph:

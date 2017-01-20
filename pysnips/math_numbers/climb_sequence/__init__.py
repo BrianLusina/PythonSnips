@@ -8,7 +8,7 @@ def climb(n):
         new_l.append(i)
         # i is now even
         if i % 2 == 0:
-            i = i/2
+            i /= 2
             new_l.append(i)
         new_l = list(reversed(new_l))
     # else if n is even
