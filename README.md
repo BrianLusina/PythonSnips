@@ -1,13 +1,9 @@
 ## Python Snippets
 
 [![Build Status](https://travis-ci.org/BrianLusina/Python_Snippets.svg?branch=master)](https://travis-ci.org/BrianLusina/Python_Snippets)
-
 [![codecov](https://codecov.io/gh/BrianLusina/Python_Snippets/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/Python_Snippets)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/11cfc8e125c54bdb833fe19ed9ddad72)](https://www.codacy.com/app/BrianLusina/Python_Snippets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/Python_Snippets&amp;utm_campaign=Badge_Grade)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/11cfc8e125c54bdb833fe19ed9ddad72)](https://www.codacy.com/app/BrianLusina/Python_Snippets?utm_source=github.com&utm_medium=referral&utm_content=BrianLusina/Python_Snippets&utm_campaign=Badge_Coverage)
-
 
 Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets.
 Each directory and/or python package has a readme for more information about the Python program
