@@ -14,17 +14,17 @@ def numeral(arabic):
 class Numerals(object):
     @staticmethod
     def int_to_roman(number):
-        if type(number) != type(1):
+        if not isinstance(number, int):
             raise TypeError("expected integer, got %s" % type(number))
         if not 0 < number < 4000:
             raise ValueError("Argument must be between 1 and 3999")
         ints = (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
         nums = ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
         result = ""
-        for i in range(len(ints)):
-            count = int(number/ ints[i])
-            result += nums[i] * count
-            number -= ints[i] * count
+        for pos, elem in enumerate(ints):
+            count = int(elem / ints[pos])
+            result += nums[pos] * count
+            number -= ints[pos] * count
         return result
 
 
@@ -38,7 +38,7 @@ class RomanNumeral(object):
     :translate_roman_numeral_2, uses a ROMAN_LIST to loop through each value and number and checks
     """
     ROMANS = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10,
-              "XX": 20, "XXX": 30,"XL": 40, "L": 50, "LX": 60, "LXX": 70, "LXXX": 80, "XC": 90,
+              "XX": 20, "XXX": 30, "XL": 40, "L": 50, "LX": 60, "LXX": 70, "LXXX": 80, "XC": 90,
               "C": 100, "CC": 200, "CCC": 300, "CD": 400, "D": 500, "DC": 600, "DCC": 700, "DCCC": 800, "CM": 900,
               "M": 1000, "MM": 2000, "MMM": 3000}
 
@@ -93,13 +93,12 @@ class RomanNumeral(object):
                     # there is no next place.
                     pass
                 places.append(value)
-            sum = 0
+            total = 0
 
             # Easiest test for validity...
             for n in places:
-                sum += n
-            if Numerals.int_to_roman(sum) == input:
-                return sum
+                total += n
+            if Numerals.int_to_roman(total) == input:
+                return total
             else:
                 raise ValueError('input is not a valid roman numeral: %s' % self.number)
-
