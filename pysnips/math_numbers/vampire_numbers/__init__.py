@@ -6,6 +6,17 @@ from itertools import product
 from functools import reduce
 
 
+def vampire_test(x, y):
+    """
+    Test whether 2 numbers are vampire numbers
+    :param x: 1st number
+    :param y: 2nd number
+    :return: True /False
+    :rtype: bool
+    """
+    return sorted(str(x * y)) == sorted(str(x) + str(y))
+
+
 class VampireNumbers(object):
     """
 
@@ -82,13 +93,3 @@ class VampireNumbers(object):
                             and sorted(str(d) + str(n // d)) == sorted(str(n))
                             and (str(d)[-1] == 0) + (str(n // d)[-1] == 0) <= 1))
         return sorted(tuple(sorted(fangs)) for fangs in fang_sets)
-
-    def vampire_test(self, x, y):
-        """
-        Test whether 2 numbers are vampire numbers
-        :param x: 1st number
-        :param y: 2nd number
-        :return: True /False
-        :rtype: bool
-        """
-        return sorted(str(x * y)) == sorted(str(x) + str(y))
