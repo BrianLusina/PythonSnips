@@ -1,6 +1,6 @@
 # *-coding:utf8-*
 from string import ascii_letters
-from pysnips.math_numbers.is_prime import is_prime_with_re
+from pysnips.math_pysnips.is_prime import is_prime_with_re
 from functools import reduce
 
 
