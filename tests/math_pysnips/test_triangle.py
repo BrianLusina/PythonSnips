@@ -1,6 +1,7 @@
 import unittest
 
 from pysnips.math_pysnips.triangle import Triangle, TriangleError
+from math import sqrt
 
 
 class TriangleTests(unittest.TestCase):
@@ -62,6 +63,20 @@ class TriangleTests(unittest.TestCase):
             TriangleError,
             Triangle, 7, 3, 2
         )
+
+    def test_perimeter(self):
+        self.assertEqual(Triangle(2, 2, 2).perimeter(), sum([2, 2, 2]))
+
+    def test_area_equilateral(self):
+        self.assertEqual(Triangle(3, 3, 3).area(), (sqrt(3) * pow(3, 2)) / 4)
+
+    def test_area_isosceles(self):
+        self.assertEqual(Triangle(2, 3, 3).area(), (0.5 * pow(2, 2)) * sqrt((pow(3, 2) / pow(2, 2)) - (1 / 4)))
+
+    def test_area_scalene(self):
+        s = (2 + 3 + 4) / 2
+        area = sqrt(s * (s - 2) * (s - 3) * (s - 4))
+        self.assertEqual(Triangle(2, 3, 4).area(), area)
 
 
 if __name__ == '__main__':

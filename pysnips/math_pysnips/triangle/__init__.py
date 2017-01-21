@@ -1,6 +1,15 @@
+from math import sqrt, pow
+from collections import Counter
+
+
 class Triangle(object):
     """
     A triangle class that returns the kinds of triangles
+    :cvar TYPES: The types of triangles to evaluate. it is a dictionary, therefore the key is the first letter
+    of the type of triangle
+        e stands for equilateral
+        i stands for isosceles triangle
+        s stands for scalene triangle
     """
     # the types of triangles
     TYPES = {
@@ -47,7 +56,7 @@ class Triangle(object):
             x + y <= z,
             x + z <= y,
             y + z <= x
-            ]
+        ]
         )
 
     def kind(self):
@@ -69,6 +78,66 @@ class Triangle(object):
         # no sides are equal
         else:
             return self.TYPES["s"]
+
+    def area(self):
+        """
+        Gets the area of the triangle from the given sides
+        Area of a triangle is calculated as a = 1/2 * b *h
+
+        Equilateral triangle area is calculated as:
+            1/2 * b * h, where the base, b, is any of the sides
+            height, h, is the height which is calculated as h = (sqrt(3) * s) / 2
+            This equates to (sqrt(3) * s^2) / 4
+
+        Isosceles triangle area is calculated as:
+        1/2 a^2 * sqrt( (b^2) / (a^2) - 1/4), where the b is a side with an equal length in another side,
+        while a is the base of the triangle, or the side that does not have an equal length.
+
+        First start by finding the 2 sides that are similar in length, will be stored as b
+        The remaining side will be a(which will be used as the base), which we can then use to calculate the height
+        h = sqrt(b ^ 2 - (1/4 * (a^2)))
+
+        Scalene Triangle area is calculated as:
+        s = (a + b + c) / 2
+        area = sqrt(s * (s - a) * (s - b) * (s - c))
+        Since all the sides are unequal
+
+        :return: The area of the triangle as an integer
+        :rtype: int
+        """
+        s1, s2, s3 = self.sides
+        # if it is an equilateral triangle
+        if self.kind() == self.TYPES["e"]:
+            return (sqrt(3) * pow(s1, 2)) / 4
+
+        # if the triangle is an isosceles triangle
+        if self.kind() == self.TYPES["i"]:
+            side_count = Counter(self.sides).most_common()
+            highest_count = max(x[1] for x in side_count)
+            lowest_count = min(x[1] for x in side_count)
+
+            b, a = 0, 0
+
+            for y in side_count:
+                if y[1] == highest_count:
+                    b = y[0]
+                if y[1] == lowest_count:
+                    a = y[0]
+
+            return (0.5 * pow(a, 2)) * sqrt((pow(b, 2) / pow(a, 2)) - (1 / 4))
+
+        # if the triangle is a scalene triangle
+        if self.kind() == self.TYPES["s"]:
+            s = sum(self.sides) / 2
+            return sqrt(s * (s - s1) * (s - s2) * (s - s3))
+
+    def perimeter(self):
+        """
+        Gets the perimeter of a triangle, perimeter is the sum of all 3 sides of a triangle
+        :return: perimeter of a triangle as an int
+        :rtype: int
+        """
+        return sum(self.sides)
 
 
 class TriangleError(Exception):
