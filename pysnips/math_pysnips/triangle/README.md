@@ -1,8 +1,39 @@
 # Triangle
 
-Write a program that can tell you if a triangle is equilateral, isosceles, or scalene.
+Write a program that can tell you if a triangle is equilateral, isosceles, or scalene and also be able to calculate the area of the triangle and its perimeter
 
-The program should raise an error if the triangle cannot exist.
+You are required to create 3 methods `kind`, `area` and `perimeter`
+
+`kind` should return the kind of triangle either `equilateral`, `scalene` or `isosceles`
+
+``` python
+>>> Triangle(10, 10, 10).kind()
+equilateral
+
+>>> Triangle(3, 4, 4).kind()
+isosceles
+
+>>> Triangle(3, 4, 5).kind()
+scalene
+```
+
+`area` should return the area of the triangle
+
+``` python
+>>> Triangle(3, 3, 3).area()
+4
+```
+
+`perimeter` should return the perimeter of the triangle
+
+``` python
+>>> Triangle(2, 2, 2).perimeter()
+6
+```
+
+## Notes:
+1. round your result when calculating the area of the triangle to the nearest whole number
+2. The program should raise an error if the triangle cannot exist.
 
 ## Hint
 
@@ -26,10 +57,6 @@ it is one dimensional, looks like a straight line, and has no area. Such
 triangles are called degenerate triangles and they belong to the degenerate
 class.
 
-## Dig Deeper
-
-This exercise does not test for degenerate triangles. Feel free to add your own
-tests to check for degenerate triangles.
 
 ## Source
 
