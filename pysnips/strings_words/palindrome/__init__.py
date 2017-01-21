@@ -16,18 +16,20 @@ class Palindrome(object):
     def __init__(self):
         pass
 
-    def is_palindrome(self, a):
+    @staticmethod
+    def is_palindrome(a):
         return str(a) == str(a)[::-1]
 
-    def longest_palindrome(self, s):
+    @staticmethod
+    def longest_palindrome(s):
         s, final_str = s.lower(), ""
         if s == "":
             return 0
         else:
             for y, item in enumerate(s):
-                for x, item_ in enumerate(s):
-                    tr = s[y:x + 1]
-                    if self.is_palindrome(tr) and (len(tr) > len(final_str)):
+                for x, _ in enumerate(s):
+                    tr = s[y: x + 1]
+                    if Palindrome.is_palindrome(tr) and (len(tr) > len(final_str)):
                         final_str = tr
 
         return len(final_str)
