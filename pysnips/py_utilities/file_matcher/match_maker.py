@@ -1,5 +1,4 @@
-from pysnips.PyUtilities.FileMatcher import FileMatcher
-from pprint import pprint
+from pysnips.py_utilities.file_matcher import FileMatcher
 
 file_matcher = FileMatcher("", "/home/lusinabrian/Projects/TEST")
 
