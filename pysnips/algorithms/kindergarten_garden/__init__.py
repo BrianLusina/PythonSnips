@@ -6,9 +6,12 @@ class Garden(object):
     __PLANTS = {"C": "Clover", "G": "Grass",
                 "R": "Radishes", "V": "Violets"}
 
-    def __init__(self, plant_diagram, students=STUDENTS):
+    def __init__(self, plant_diagram, students=None):
         self.plant_diagram = plant_diagram.split()
-        self.students = sorted(students)
+        if students:
+            self.students = sorted(students)
+        else:
+            self.students = self.STUDENTS
 
     def plants(self, student):
         start = self.students.index(student) * 2
