@@ -16,18 +16,12 @@ matrix:
 install:
   - pip install -r requirements-travis.txt
 
-# before_script:
-  # - flake8 ./pysnips/ --max-line-length=99 --select=E,W
-
 script:
   - py.test tests
   # runs coverage
   - py.test --cov=pysnips tests/
   - coverage xml
   - python-codacy-coverage -r coverage.xml
-  #- ./test/check_pysnips.py
-  #- ./bin/fetch-configlet
-  #- ./bin/configlet .
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
