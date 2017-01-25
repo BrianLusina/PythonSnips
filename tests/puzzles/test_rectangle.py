@@ -5,25 +5,30 @@ from pysnips.puzzles.rectangles import count
 
 class WordTest(unittest.TestCase):
     # unit tests
-    def test_zero_area_1(self):
+    @staticmethod
+    def test_zero_area_1():
         assert 0 == count()
 
-    def test_zero_area_2(self):
+    @staticmethod
+    def test_zero_area_2():
         lines = ""
         assert 0 == count(lines)
 
-    def test_empty_area(self):
+    @staticmethod
+    def test_empty_area():
         lines = " "
         assert 0 == count(lines)
 
-    def test_one_rectangle(self):
+    @staticmethod
+    def test_one_rectangle():
         lines = ["+-+",
                  "| |",
                  "+-+",
                  ]
         assert 1 == count(lines)
 
-    def test_two_rectangles_no_shared_parts(self):
+    @staticmethod
+    def test_two_rectangles_no_shared_parts():
         lines = ["  +-+",
                  "  | |",
                  "+-+-+",
@@ -32,7 +37,8 @@ class WordTest(unittest.TestCase):
                  ]
         assert 2 == count(lines)
 
-    def test_five_rectangles_three_regions(self):
+    @staticmethod
+    def test_five_rectangles_three_regions():
         lines = ["  +-+",
                  "  | |",
                  "+-+-+",
@@ -41,7 +47,8 @@ class WordTest(unittest.TestCase):
                  ]
         assert 5 == count(lines)
 
-    def test_incomplete_rectangles(self):
+    @staticmethod
+    def test_incomplete_rectangles():
         lines = ["  +-+",
                  "    |",
                  "+-+-+",
@@ -50,7 +57,8 @@ class WordTest(unittest.TestCase):
                  ]
         assert 1 == count(lines)
 
-    def test_complicated(self):
+    @staticmethod
+    def test_complicated():
         lines = ["+------+----+",
                  "|      |    |",
                  "+---+--+    |",
@@ -59,7 +67,8 @@ class WordTest(unittest.TestCase):
                  ]
         assert 3 == count(lines)
 
-    def test_not_so_complicated(self):
+    @staticmethod
+    def test_not_so_complicated():
         lines = ["+------+----+",
                  "|      |    |",
                  "+------+    |",
