@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.kindergarten_garden import Garden
+from puzzles.kindergarten_garden import Garden
 
 
 class KindergartenGardenTests(unittest.TestCase):

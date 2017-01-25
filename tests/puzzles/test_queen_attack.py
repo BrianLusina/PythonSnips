@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.queen_attack import QueenAttack
+from puzzles.queen_attack import QueenAttack
 
 
 class QueenAttackTest(unittest.TestCase):
