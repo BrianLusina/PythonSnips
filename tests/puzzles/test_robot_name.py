@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from puzzles.robot_name import Robot
+from pysnips.puzzles.robot_name import Robot
 
 
 class RobotTest(unittest.TestCase):

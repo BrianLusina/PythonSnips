@@ -1,6 +1,6 @@
 import unittest
 
-from math_pysnips.triangle.triangle_number import is_triangle_number
+from pysnips.math_pysnips.triangle.triangle_number import is_triangle_number
 
 
 class TriangleNumberTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from puzzles.pete_the_baker import cakes
+from pysnips.puzzles.pete_the_baker import cakes
 
 
 class CakeTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from puzzles.poker import poker
+from pysnips.puzzles.poker import poker
 
 
 class PokerTest(unittest.TestCase):

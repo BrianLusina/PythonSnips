@@ -1,6 +1,6 @@
 import unittest
 
-from puzzles.grains import on_square, total_after
+from pysnips.puzzles.grains import on_square, total_after
 
 
 class GrainsTest(unittest.TestCase):

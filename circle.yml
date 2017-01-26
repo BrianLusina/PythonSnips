@@ -9,3 +9,8 @@ dependencies:
 test:
   override:
     - py.test tests/
+    # runs coverage
+    - py.test --cov=pysnips tests/
+    - coverage xml
+    - python-codacy-coverage -r coverage.xml
+    - codecov
