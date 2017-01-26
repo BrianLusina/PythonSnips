@@ -62,7 +62,6 @@ But we can also relate dd to nn. In a balanced tree, dd is O(\log_{2}(n))O(log
 
 In the worst case, the tree is a straight line of right children from the root where every node in that line also has a left child. The traversal will walk down the line of right children, adding a new left child to nodes at each step. When the traversal hits the rightmost node, nodes will hold half of the nn total nodes in the tree. Half n is O(n)O(n), so our worst case space cost is O(n)O(n).
 
-
 ## What we learn
 
 This is an intro to some tree basics. If this is new to you, don't worry—it can take a few questions for this stuff to come together. We have a few more coming up.
