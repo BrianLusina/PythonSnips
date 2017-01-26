@@ -1,4 +1,4 @@
-def binary_search(arr: list, key: int) -> int:
+def binary_search(arr, key):
     """
     Searches for the key in a list and returns the position of the key in the array.
     If the key can not be found in the list, raise a ValueError

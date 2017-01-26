@@ -16,7 +16,7 @@ setup(
     author_email='lusinabrian@gmail.com',
     url='https://github.com/BrianLusina/Python_Snippets',
     packages=['pysnips', 'tests', ],
-    install_requires=['nose', "nose2", "pytest"],
+    install_requires=open("requirements.txt").readlines(),
     long_description=open("README.md").read(),
     classifiers=[
       "License :: OSI Approved :: MIT License",

@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 Url = 'https://www.codewars.com/users/leaderboard'
 
