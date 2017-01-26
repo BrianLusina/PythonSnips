@@ -44,3 +44,33 @@ Disadvantages
 A BFS on a binary tree generally requires more memory than a DFS.
 ```
 
+## Complexity
+
+O(n) time and O(n)O(n) space.
+
+For time, the worst case is the tree is balanced and we have to iterate over all nn nodes to make sure.
+
+For the space cost, we have two data structures to watch: depths and nodes.
+
+depths will never hold more than three elements, so we can write that off as O(1)O(1).
+
+Because we’re doing a depth first search, nodes will hold at most dd nodes where dd is the depth of the tree (the number of levels in the tree from the root node down to the lowest node). So we could say our space cost is O(d)O(d).
+
+But we can also relate dd to nn. In a balanced tree, dd is O(\log_{2}(n))O(log
+​2
+​​ (n)). And the more unbalanced the tree gets, the closer dd gets to nn.
+
+In the worst case, the tree is a straight line of right children from the root where every node in that line also has a left child. The traversal will walk down the line of right children, adding a new left child to nodes at each step. When the traversal hits the rightmost node, nodes will hold half of the nn total nodes in the tree. Half n is O(n)O(n), so our worst case space cost is O(n)O(n).
+
+
+## What we learn
+
+This is an intro to some tree basics. If this is new to you, don't worry—it can take a few questions for this stuff to come together. We have a few more coming up.
+
+Particular things to note:
+
+Focus on depth-first ↴ vs breadth-first ↴ traversal. You should be very comfortable with the differences between the two and the strengths and weaknesses of each.
+
+You should also be very comfortable coding each of them up.
+
+One tip: Remember that breadth-first uses a queue ↴ and depth-first uses a stack ↴ (could be the call stack or an actual stack object). That's not just a clue about implementation, it also helps with figuring out the differences in behavior. Those differences come from whether we visit nodes in the order we see them (first in, first out) or we visit the last-seen node first (last in, first out).
