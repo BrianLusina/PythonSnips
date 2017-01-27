@@ -7,30 +7,27 @@ from pysnips.data_structures.lists.list_ops import ListOps
 class ListOpsTest(unittest.TestCase):
     def setUp(self):
         self.list_ops = ListOps()
-        
+
     # tests for map
     def test_map_square(self):
         self.assertEqual(
             tuple(self.list_ops.map_clone(
-                lambda x: x**2, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)),
-                (1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
-            )
+                lambda x: x ** 2, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10))),
+            (1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
         )
 
     def test_map_cube(self):
         self.assertEqual(
             tuple(self.list_ops.map_clone(
-                lambda x: x**3, (-1, 2, -3, 4, -5, 6, -7, 8, -9, 10)),
-                (-1, 8, -27, 64, -125, 216, -343, 512, -729, 1000)
-            )
+                lambda x: x ** 3, (-1, 2, -3, 4, -5, 6, -7, 8, -9, 10))),
+            (-1, 8, -27, 64, -125, 216, -343, 512, -729, 1000)
         )
 
     def test_map_absolute(self):
         self.assertEqual(
             tuple(self.list_ops.map_clone(
-                lambda x: abs(x), (-1, 2, -3, 4, -5, 6, -7, 8, -9, 10)),
-                (1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
-            )
+                lambda x: abs(x), (-1, 2, -3, 4, -5, 6, -7, 8, -9, 10))),
+            (1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
         )
 
     def test_map_empty(self):
@@ -46,7 +43,7 @@ class ListOpsTest(unittest.TestCase):
     # tests for filter
     def test_filter_odd(self):
         self.assertEqual(
-            tuple(self.list_ops.filter_clone(lambda x: x % 2 != 0, [1, 2, 3, 4, 5, 6]))
+            tuple(self.list_ops.filter_clone(lambda x: x % 2 != 0, [1, 2, 3, 4, 5, 6])),
             (1, 3, 5)
         )
 
@@ -67,7 +64,7 @@ class ListOpsTest(unittest.TestCase):
         )
 
     def test_reverse_empty(self):
-        self.assertEqual(self.list_ops.reverse(()), [])
+        self.assertEqual(self.list_ops.reverse(()), ())
 
     # tests for append
     def test_append_tuple(self):
