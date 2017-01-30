@@ -7,9 +7,9 @@ cov.start()
 
 def test(cover=False):
     """Run the unit tests."""
-    if cover and not os.environ.get('FLASK_COVERAGE'):
+    if cover and not os.environ.get('COVERAGE'):
         import sys
-        os.environ['FLASK_COVERAGE'] = '1'
+        os.environ['COVERAGE'] = '1'
         os.execvp(sys.executable, [sys.executable] + sys.argv)
 
     import unittest
