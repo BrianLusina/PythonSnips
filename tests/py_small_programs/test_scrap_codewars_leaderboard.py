@@ -2,7 +2,7 @@ import unittest
 from pysnips.py_small_programs.scrapping_codewars_leaderboard import solution
 
 
-class MyTestCase(unittest.TestCase):
+class CamperLeaderBoardTestCases(unittest.TestCase):
     def setUp(self):
         self.leaderboard = solution()
         
