@@ -27,13 +27,13 @@ class CircularLinkedList(LinkedList):
     def display(self):
         pass
 
-    def delete_first(self):
+    def shift(self):
         pass
 
-    def delete_last(self):
+    def pop(self):
         pass
 
-    def insert_first(self, node):
+    def unshift(self, node):
         pass
 
     def display_backward(self):
@@ -48,5 +48,5 @@ class CircularLinkedList(LinkedList):
     def display_forward(self):
         pass
 
-    def add(self, data):
+    def push(self, data):
         pass

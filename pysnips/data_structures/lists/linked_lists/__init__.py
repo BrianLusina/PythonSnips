@@ -41,9 +41,9 @@ class LinkedList(object):
         self.head = None
 
     @abstractmethod
-    def add(self, data):
+    def push(self, data):
         """
-        Add a node to the linked list
+        Add a node to the end of the linked list
         :param data: the node to add to the list
         """
         pass
@@ -120,7 +120,7 @@ class LinkedList(object):
         pass
 
     @abstractmethod
-    def insert_first(self, node):
+    def unshift(self, node):
         """
         Insert a node at the beginning of the list
         :return: Inserted node, its predecessor and successor
@@ -129,17 +129,7 @@ class LinkedList(object):
         pass
 
     @abstractmethod
-    def insert_last(self, node):
-        """
-        Inserts the node as the first item in the LinkedList
-        :param node: the node to insert as the head
-        :return: the inserted node element
-        :rtype: Node
-        """
-        pass
-
-    @abstractmethod
-    def delete_first(self):
+    def shift(self):
         """
         Deletes a node from the beginning of the linked list, sets the new head to the successor of the deleted
         head node
@@ -151,7 +141,7 @@ class LinkedList(object):
             return None
 
     @abstractmethod
-    def delete_last(self):
+    def pop(self):
         """
         Deletes the last node element from the LinkedList
         :return: Deleted node element

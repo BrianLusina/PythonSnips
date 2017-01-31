@@ -10,10 +10,10 @@ double_list = DoublyLinkedList()
 circular_list = CircularLinkedList()
 
 for x in range(0, len(myArray)):
-    single_list.add(myArray[x])
+    single_list.push(myArray[x])
 
 for x in range(0, len(myArray)):
-    double_list.add(myArray[x])
+    double_list.push(myArray[x])
 
 # single_list.display()
 double_list.display()

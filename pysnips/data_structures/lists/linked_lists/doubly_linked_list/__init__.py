@@ -6,38 +6,11 @@ class DoubleNode(Node):
     Node implementation of DoubleLinkedList
     """
 
-    def __init__(self, value, prev, next):
-        super().__init__(value, next)
+    def __init__(self, value, prev_node=None, next_node=None):
+        super().__init__(value, next_node)
         self.value = value
-        self.prev = prev
-        self.next = next
-
-    def get_next(self):
-        pass
-
-    def has_prev(self, node):
-        """
-        Check if the node has a predecessor
-        :param node: the node to check for predecessors
-        :return: True or False, whether the node has a predecessor
-        :rtype: Node object
-        """
-        pass
-
-        # # if the node has a successor and predecessor, move the successor's prev link to this node's next link
-        # if self.has_next(node) and self.has_prev(node):
-        #     temp = node.prev
-        #     node.prev.next = node.next
-        #     node.prev = temp
-        #     return node
-        # # check if the node has no next, that is it is the last node, move it's prev link to None
-        # if not self.has_next(node):
-        #     node.prev.next = None
-        #     return node
-        # # if the node is the head, i.e. has no prev, move this node's next's prev to None
-        # if node == self.head:
-        #     self.head.next.prev = None
-        #     return node
+        self.prev_node = prev_node
+        self.next_node = next_node
 
 
 class DoublyLinkedList(LinkedList):
@@ -49,20 +22,50 @@ class DoublyLinkedList(LinkedList):
     def __init__(self):
         super().__init__()
 
-    def add(self, data):
+    def push(self, data):
         """
-        Add a node to the Linked List
-        :param data:
+        Add a node to the end of Linked List
+        :param data: Data to add
         :return:
         """
-        node = DoubleNode(data, None, None)
-        if self.head is None:
-            self.head = self.tail = node
-        else:
-            node.prev = self.tail
-            node.next = None
-            self.tail.next = node
+        node = DoubleNode(data, prev_node=self.tail)
+        if self.tail:
+            self.tail.next_node = node
+
+        # if the head does not exist, set the head to the node
+        if not self.head:
+            self.head = node
+        self.tail = node
+
+    def pop(self):
+        """
+        Removes the last item from the list and returns it
+        :return: Node at the last position
+        """
+        last_node = self.tail.value
+        self.tail = self.tail.prev_node
+        return last_node
+
+    def shift(self):
+        """
+        Removes value at the front of the doubly linked list
+        :return: deleted node
+        """
+        value = self.head.value
+        self.head = self.head.next_node
+        return value
+
+    def unshift(self, value):
+        """
+        Inserts a value at the front of the doubly linked list
+        :param value: data to add at the front of the list
+        """
+        node = DoubleNode(value, next_node=self.head)
+        if self.head:
+            self.head.prev_node = node
+        if not self.tail:
             self.tail = node
+        self.head = node
 
     def delete_node(self, node):
         """
@@ -83,16 +86,7 @@ class DoublyLinkedList(LinkedList):
 
                 current_node = current_node.next
 
-    def delete_last(self):
-        pass
-
-    def insert_last(self, node):
-        pass
-
     def reverse(self):
-        pass
-
-    def insert_first(self, node):
         pass
 
     def __repr__(self):
@@ -100,16 +94,6 @@ class DoublyLinkedList(LinkedList):
 
     def insert(self, node, pos):
         pass
-
-    def delete_first(self):
-        """
-        Since this is a doubly linked list, this will have to move the head's next link's previous link to None
-        :return: deleted node
-
-        """
-        # move the head's next previous link to None
-        self.head.next.prev = None
-        return self.head
 
     def display(self):
         print("Show list data...")

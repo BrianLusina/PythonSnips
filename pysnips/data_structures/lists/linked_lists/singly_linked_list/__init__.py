@@ -21,7 +21,7 @@ class SinglyLinkedList(LinkedList):
     def __init__(self):
         super().__init__()
 
-    def add(self, data):
+    def push(self, data):
         """
         Add a node to the Linked List
         :param data:
@@ -48,7 +48,7 @@ class SinglyLinkedList(LinkedList):
             previous_node = current_node
             current_node = current_node.next
 
-    def delete_first(self):
+    def shift(self):
         """
         Since this is a singly linked list, this will have to make the head's next to the position of head
         :return: deleted node
@@ -59,16 +59,13 @@ class SinglyLinkedList(LinkedList):
         self.head = self.head.next
         return to_del
 
-    def delete_last(self):
-        pass
-
-    def insert_last(self, node):
+    def pop(self):
         pass
 
     def reverse(self):
         pass
 
-    def insert_first(self, node):
+    def unshift(self, node):
         pass
 
     def insert(self, node, pos):
