@@ -19,10 +19,13 @@ install:
 script:
   - py.test tests
   # runs coverage
-  - py.test --cov=pysnips tests/
-  - coverage xml
+  - coverage run --source pysnips -m py.test tests/
+  # - coverage report
+  - coverage xml -i
+  - coverage html -i
   - python-codacy-coverage -r coverage.xml
   - codecov
+
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

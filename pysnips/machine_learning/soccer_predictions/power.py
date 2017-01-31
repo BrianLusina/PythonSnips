@@ -3,11 +3,10 @@
     on game outcomes.
 """
 
-import numpy as np
 from numpy.linalg import LinAlgError
-import pandas as pd
 
-from pysnips.machine_learning.soccer_predictions.world_cup import world_cup
+from pysnips.machine_learning.soccer_predictions.world_cup import *
+
 
 def _build_team_matrix(data, target_col):
     """ Given a dataframe of games, builds a sparse power matrix.
@@ -37,14 +36,14 @@ def _build_team_matrix(data, target_col):
     current_season = None
     current_discount = 2.0
 
-    for game in xrange(nrows):
+    for game in range(nrows):
         home = data.iloc[game * 2]
         away = data.iloc[game * 2 + 1]
         if home['seasonid'] != current_season:
             # Discount older seasons.
             current_season = home['seasonid']
             current_discount *= 0.6
-            print "New season %s" % (current_season,)
+            print("New season %s" % (current_season,))
 
         home_id = str(home['teamid'])
         away_id = str(away['teamid'])
@@ -69,8 +68,8 @@ def _build_power(games, outcomes, coerce_fn, acc=0.0001, alpha=1.0, snap=True):
         rating and we don't want to get a false specificity.
     """
     outcomes = pd.Series([coerce_fn(val) for val in outcomes])
-    model = world_cup.build_model_logistic(outcomes, games, 
-        acc=acc, alpha=alpha)
+    model = build_model_logistic(outcomes, games,
+                                 acc=acc, alpha=alpha)
 
     # print model.summary()
     params = np.exp(model.params)
@@ -81,17 +80,18 @@ def _build_power(games, outcomes, coerce_fn, acc=0.0001, alpha=1.0, snap=True):
     param_range = max_param - min_param
     if len(params) == 0 or param_range < 0.0001:
         return None
-    
+
     params = params.sub(min_param)
     params = params.div(param_range)
     qqs = np.percentile(params, [20, 40, 60, 80])
-    def _snap(val): 
+
+    def _snap(val):
         """ Snaps a value to a quartile. """
-        for idx in xrange(len(qqs)):
+        for idx in range(len(qqs)):
             if (qqs[idx] > val):
                 return idx * 0.25
         return 1.0
-      
+
     if snap:
         # Snap power data to rough quartiles.
         return params.apply(_snap).to_dict()
@@ -111,8 +111,8 @@ def _get_power_map(competition, competition_data, col, coerce_fn):
     alpha = 0.5
     while True:
         if alpha < 0.1:
-            print "Skipping power ranking for competition %s column %s" % (
-                competition, col)
+            print("Skipping power ranking for competition %s column %s" % (
+                competition, col))
             return {}
         try:
             games = _build_team_matrix(competition_data, col)
@@ -122,14 +122,13 @@ def _get_power_map(competition, competition_data, col, coerce_fn):
                                              alpha, snap=False)
             if not competition_power:
                 alpha /= 2
-                print 'Reducing alpha for %s to %f due lack of range' % (
-                    competition, alpha)
+                print('Reducing alpha for %s to %f due lack of range' % (
+                    competition, alpha))
             else:
                 return competition_power
-        except LinAlgError, err:
-            alpha /= 2  
-            print 'Reducing alpha for %s to %f due to error %s' % (
-                competition, alpha, err)
+        except LinAlgError as err:
+            alpha /= 2
+            print('Reducing alpha for %s to %f due to error %s' % (competition, alpha, err))
 
 
 def add_power(data, power_train_data, cols):
@@ -147,7 +146,7 @@ def add_power(data, power_train_data, cols):
         Returns a data frame that is equivalent to 'data' ammended with
         the power statistics for the primary team in the row.
     """
-   
+
     data = data.copy()
     competitions = data['competitionid'].unique()
     for (col, coerce_fn, final_name) in cols:
@@ -160,11 +159,11 @@ def add_power(data, power_train_data, cols):
 
         names = {}
         power_col = pd.Series(np.zeros(len(data)), data.index)
-        for index in xrange(len(data)):
+        for index in range(len(data)):
             teamid = str(data.iloc[index]['teamid'])
             names[data.iloc[index]['team_name']] = power.get(teamid, 0.5)
             power_col.iloc[index] = power.get(teamid, 0.5)
-        print ['%s: %0.03f' % (x[0], x[1])
-               for x in sorted(names.items(), key=(lambda x: x[1]))]
+        print(['%s: %0.03f' % (x[0], x[1])
+               for x in sorted(names.items(), key=(lambda x: x[1]))])
         data['power_%s' % (final_name)] = power_col
     return data
