@@ -35,7 +35,8 @@ class Minesweeper(object):
                 b[i1][i2] = str(cnt)
         return ["".join(r) for r in b]
 
-    def verify_board(self, inp):
+    @staticmethod
+    def verify_board(inp):
         """
         validates its input and raise a ValueError with a meaningful error message
         if the input turns out to be malformed.

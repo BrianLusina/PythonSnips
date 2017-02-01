@@ -28,7 +28,8 @@ class Anagrams(object):
                     res.append(x)
         return res
 
-    def is_anagram(self, s1, s2):
+    @staticmethod
+    def is_anagram(s1, s2):
         """
         Check if s1 is an anagram of s2
         :param s1: String to check
@@ -106,7 +107,8 @@ class Anagrams(object):
             char_map[let] = prime
         return reduce(lambda memo, char: memo * char_map[char], word, 1)
 
-    def generate_primes(self, length):
+    @staticmethod
+    def generate_primes(length):
         """
         Generates the prime numbers based on the length of the ascii characters
         :param length, Length of the ascii letters list, which is the length of the prime numbers wanted

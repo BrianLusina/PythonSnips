@@ -2,6 +2,7 @@ import sys
 import re
 import os
 import shutil
+
 # Python 2.x/Python 3.x
 try:
     import commands
@@ -92,7 +93,6 @@ def main():
     else:
         print('\n'.join(paths))
         # LAB(end solution)
-
 
 
 if __name__ == "__main__":

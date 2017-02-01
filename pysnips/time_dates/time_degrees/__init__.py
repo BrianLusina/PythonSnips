@@ -4,6 +4,5 @@ store the hour part and minute part into seperate variables
 """
 
 
-def clock_degree(s) :
+def clock_degree(s):
     pass
-

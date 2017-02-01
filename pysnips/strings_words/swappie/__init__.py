@@ -8,7 +8,7 @@ class Swap(object):
         out = ""
         for x in self.str_input:
             if x.islower():
-               out += x.upper()
+                out += x.upper()
             else:
                 out += x.lower()
         return out
@@ -28,4 +28,3 @@ class Swap(object):
         print("using lambda function")
         m = lambda x: x.lower() if x.isupper() else x.upper()
         return m(self.str_input)
-

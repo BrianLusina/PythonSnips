@@ -4,7 +4,8 @@ from random import randint
 
 class LaserWeaponArmory(Scene):
 
-    def enter(self):
+    @staticmethod
+    def enter():
         print("You do a dive roll into the Weapon Armory, crouch and scan the room")
         print("for more Gothons that might be hiding.  It's dead quiet, too quiet.")
         print("You stand up and run to the far side of the room and find the")

@@ -17,4 +17,4 @@ def is_valid_HK_phone_number(number):
 
 
 def has_valid_HK_phone_number(number):
-    return filter(lambda x:x.isdigit(),number)
+    return filter(lambda x: x.isdigit(), number)

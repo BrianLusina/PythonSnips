@@ -8,10 +8,12 @@ class Robot(object):
         self._name = None
         self._past_names = set()
 
-    def letters(self):
+    @staticmethod
+    def letters():
         return "".join(sample(ascii_uppercase, 2))
 
-    def numbers(self):
+    @staticmethod
+    def numbers():
         return "".join(str(x) for x in sample(range(0, 10), 3))
 
     def generate_name(self):

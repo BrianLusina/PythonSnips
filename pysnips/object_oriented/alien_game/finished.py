@@ -3,6 +3,7 @@ from ObjectOriented.AlienGame import Scene
 
 class Finished(Scene):
 
-    def enter(self):
+    @staticmethod
+    def enter():
         print("You won! Good job.")
         return 'finished'

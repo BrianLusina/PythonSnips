@@ -2,7 +2,8 @@ from ObjectOriented.AlienGame import Scene
 
 
 class TheBridge(Scene):
-    def enter(self):
+    @staticmethod
+    def enter():
         print("You burst onto the Bridge with the netron destruct bomb")
         print("under your arm and surprise 5 Gothons who are trying to")
         print("take control of the ship.  Each of them has an even uglier")

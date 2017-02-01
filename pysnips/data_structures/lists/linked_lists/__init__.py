@@ -19,7 +19,8 @@ class Node(object):
         """
         pass
 
-    def has_next(self, node):
+    @staticmethod
+    def has_next(node):
         """
         Checks if the node has a successor
         :param node, the node to check in the linked list
@@ -64,7 +65,8 @@ class LinkedList(object):
                 return head
         return None
 
-    def get_last(self):
+    @staticmethod
+    def get_last():
         """
         Gets the last node in the Linked List. check each node and test if it has a successor
         if it does, continue checking
@@ -107,7 +109,8 @@ class LinkedList(object):
         """
         pass
 
-    def insert_after(self, node_to_insert, current_node):
+    @staticmethod
+    def insert_after(node_to_insert, current_node):
         """
         Inserts a node after a node in the Linked List. First find the node in the LinkedList,
         Get its successor, store in temp variable and insert this node in the position,

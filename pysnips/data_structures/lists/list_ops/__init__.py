@@ -72,7 +72,8 @@ class ListOps(object):
         """
         return reduce(function, xs, acc)
 
-    def flip(self, func):
+    @staticmethod
+    def flip(func):
         """
         Flips a function, creates a new function from the original with the arguments in reversed order
         :param func: the function to flip

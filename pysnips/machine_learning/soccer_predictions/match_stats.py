@@ -136,7 +136,7 @@ SELECT matchid, teamid, SUM(goal) as goals,
     MAX(TIMESTAMP_TO_USEC(timestamp)) as timestamp,
 FROM (%s)
 GROUP BY matchid, teamid
-""" % (_RAW_GOAL_AND_GAME_SUBQUERY)
+""" % _RAW_GOAL_AND_GAME_SUBQUERY
 
 # Compute the number of goals in the game. To do this, we want to subtract off
 # any own goals a team scored against themselves, and add the own goals that a

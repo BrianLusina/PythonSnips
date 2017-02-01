@@ -1,6 +1,6 @@
 def zebulans_nightmare(functionName):
     # replace the underscore with a space to create separate words and split them into a list
-    fn = functionName.replace("_"," ").split()
+    fn = functionName.replace("_", " ").split()
     f_let = ""
     # add first element to a new list
     out = [fn[0]]
@@ -12,5 +12,6 @@ def zebulans_nightmare(functionName):
         out.append(f_let)
     # return this new list
     return "".join(out)
+
 
 print(zebulans_nightmare("goto_next_kata"))

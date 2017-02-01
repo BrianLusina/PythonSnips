@@ -3,7 +3,8 @@ from ObjectOriented.AlienGame import Scene
 
 class CentralCorridor(Scene):
 
-    def enter(self):
+    @staticmethod
+    def enter():
         print("The Gothons of Planet Percal #25 have invaded your ship and destroyed")
         print("your entire crew.  You are the last surviving member and your last")
         print("mission is to get the neutron destruct bomb from the Weapons Armory,")

@@ -6,7 +6,7 @@ def check_lists(list1, list2):
         return EQUAL
     if contains(list1, list2):
         return SUPERLIST
-    if contains(list2,list1):
+    if contains(list2, list1):
         return SUBLIST
     return UNEQUAL
 
@@ -20,7 +20,7 @@ def contains(l1, l2):
         if l1[x] != l2[0]:
             continue
         for i in range(len(l2)):
-            if l1[x+i] != l2[i]:
+            if l1[x + i] != l2[i]:
                 break
         else:
             return True

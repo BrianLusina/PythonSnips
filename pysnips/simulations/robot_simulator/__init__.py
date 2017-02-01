@@ -29,7 +29,8 @@ class Robot(object):
     :advance method moves the robot across the plane based on the robot bearing, adding and subtracting coordinates
     :left_turn, right_turn moves the robot according to the input commands
     """
-    def __init__(self, robot_bearing = NORTH, x_cord = 0, y_cord = 0):
+
+    def __init__(self, robot_bearing=NORTH, x_cord=0, y_cord=0):
         self.compass_points = CompassPoints(robot_bearing)
         self.x_cord = x_cord
         self.y_cord = y_cord

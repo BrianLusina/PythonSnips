@@ -41,7 +41,8 @@ class Queue(object):
     def size(self):
         return self._end - self._start
 
-    def who_left(self, val):
+    @staticmethod
+    def who_left(val):
         """
         Notifies who left queue
         :return: *User* Object

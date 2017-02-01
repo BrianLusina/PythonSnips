@@ -5,9 +5,9 @@ In a singly linked list, the nodes each have one pointer to the next node.
 ``` python
   class LinkedListNode:
 
-    def __init__(self, value):
-        self.value = value
-        self.next  = None
+    def __init__(cls, value):
+        cls.value = value
+        cls.next  = None
 ```
 
 So we could build a singly linked list like this:
@@ -49,10 +49,10 @@ Another type of linked list is a doubly linked list, which has pointers to the n
 ``` python
   class LinkedListNode:
 
-    def __init__(self, value):
-        self.value    = value
-        self.next     = None
-        self.previous = None
+    def __init__(cls, value):
+        cls.value    = value
+        cls.next     = None
+        cls.previous = None
 ```
 
 So we could build a doubly linked list like this:

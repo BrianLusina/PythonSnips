@@ -8,4 +8,4 @@ Define a class named Circle which can be constructed by a radius. The Circle cla
 
 Hints:
 
-Use def methodName(self) to define a method.
+Use def methodName(cls) to define a method.

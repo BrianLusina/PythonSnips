@@ -12,6 +12,7 @@ def rake_garden(garden):
             raked.append(item)
     return " ".join(raked)
 
+
 VALID = {'gravel', 'rock'}
 
 

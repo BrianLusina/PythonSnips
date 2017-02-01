@@ -58,7 +58,8 @@ class WeatherData(object):
             if v == mx_spread:
                 return k, v
 
-    def clean_data(self, mx, mn):
+    @staticmethod
+    def clean_data(mx, mn):
         """
         Cleans the data removing unwanted characters such as +="£$%^&*()_/*-+. from the numbers
         Gets the character that is a digit from the string and adds it to the final clean result

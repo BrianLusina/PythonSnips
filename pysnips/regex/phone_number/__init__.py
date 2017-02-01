@@ -60,7 +60,8 @@ class Phone(object):
             re.sub(r"[^\d]", "", number)
         )
 
-    def _normalize(self, number):
+    @staticmethod
+    def _normalize(number):
         """
         Normalizes the number and checks if the number is valid
         :return: Number if the number follows given rules

@@ -1,5 +1,5 @@
 class Pangram:
-    def __init__(self,s):
+    def __init__(self, s):
         self.s = s
 
     def is_pangram(self):

@@ -3,7 +3,8 @@ from random import randint
 
 
 class EscapePod(Scene):
-    def enter(self):
+    @staticmethod
+    def enter():
         print("You rush through the ship desperately trying to make it to")
         print("the escape pod before the whole ship explodes.  It seems like")
         print("hardly any Gothons are on the ship, so your run is clear of")

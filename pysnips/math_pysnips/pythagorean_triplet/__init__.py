@@ -15,7 +15,7 @@ PRIMES = [num for num in range(2, 1001) if is_prime(num)]
 def factors_powers(num):
     global PRIMES
     if num == 1:
-        return (1, ), (0, )
+        return (1,), (0,)
     factors, powers, idx = [], [], 0
     while num > 1:
         prime = PRIMES[idx]
@@ -57,7 +57,7 @@ def triplets_in_range(mini, maxi):
         for b in range(a + 1, maxi + 1):
             c = int(sqrt(a * a + b * b) + 0.5)
             if c * c == a * a + b * b and mini <= c <= maxi:
-                res.update([(a,b, c,)])
+                res.update([(a, b, c,)])
     return res
 
 

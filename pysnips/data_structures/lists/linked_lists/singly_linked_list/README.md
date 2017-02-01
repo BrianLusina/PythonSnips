@@ -9,9 +9,9 @@ For example:
 ``` python
   class LinkedListNode:
 
-    def __init__(self, value):
-        self.value = value
-        self.next  = None
+    def __init__(cls, value):
+        cls.value = value
+        cls.next  = None
 ```
 
 A cycle occurs when a node’s next points back to a previous node in the list. The linked list is no longer linear with a beginning and end—instead, it cycles through a loop of nodes.

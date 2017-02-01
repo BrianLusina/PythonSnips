@@ -88,7 +88,7 @@ def _build_power(games, outcomes, coerce_fn, acc=0.0001, alpha=1.0, snap=True):
     def _snap(val):
         """ Snaps a value to a quartile. """
         for idx in range(len(qqs)):
-            if (qqs[idx] > val):
+            if qqs[idx] > val:
                 return idx * 0.25
         return 1.0
 
@@ -165,5 +165,5 @@ def add_power(data, power_train_data, cols):
             power_col.iloc[index] = power.get(teamid, 0.5)
         print(['%s: %0.03f' % (x[0], x[1])
                for x in sorted(names.items(), key=(lambda x: x[1]))])
-        data['power_%s' % (final_name)] = power_col
+        data['power_%s' % final_name] = power_col
     return data

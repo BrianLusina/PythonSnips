@@ -10,7 +10,8 @@ class Hexadecimal(object):
     def __init__(self):
         pass
 
-    def hexa_first_principles(self, hexadecimal):
+    @staticmethod
+    def hexa_first_principles(hexadecimal):
         """
         Converts a hexadecimal number represented as a string to its decimal equivalent using first principles
         Checks if the input hexadecimal is not in the hexdigits, raises a value error
@@ -31,7 +32,8 @@ class Hexadecimal(object):
         # converts each number in the hex_list to base 16
         return reduce(lambda x, y: x * 16 + y, sequence=hex_list, initial=0)
 
-    def hex_built_in(self, hexadecimal):
+    @staticmethod
+    def hex_built_in(hexadecimal):
         """
         Ordinary conversion using built ins
         :return: decimal equivalent of hexadecimal

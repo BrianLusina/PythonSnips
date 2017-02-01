@@ -141,6 +141,8 @@ def validate(label, target, predictions, baseline=0.5, compute_auc=False,
           it to be a true or false prediction, respectively.
         compute_auc: If true, will compute the AUC for the predictions. 
           If this is true, predictions must be a probability vector.
+          :param baseline:
+          :param quiet:
     """
 
     if len(target) != len(predictions):

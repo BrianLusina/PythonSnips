@@ -6,6 +6,9 @@ class DoubleNode(Node):
     Node implementation of DoubleLinkedList
     """
 
+    def get_next(self):
+        pass
+
     def __init__(self, value, prev_node=None, next_node=None):
         super().__init__(value, next_node)
         self.value = value
