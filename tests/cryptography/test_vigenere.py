@@ -4,7 +4,7 @@ from pysnips.cryptography.vigenere_cipher import encode, decode
 
 class VigenereTestCase(unittest.TestCase):
     """
-    
+
     """
     # def test_something(self):
     #     self.assertEqual(True, False)
