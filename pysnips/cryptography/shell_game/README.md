@@ -14,7 +14,7 @@ The final swap doesn't affect the position of the ball.
 
 So
 ```python
-find_the_ball(0, [(0, 1), (2, 1), (0, 1)]) == 2
+find_the_ball(0, [(0, 1), (2, 1), (0, 1)]) == 1
 ```
 There aren't necessarily only three cups in this game, but there will be at least two. You can assume all swaps are valid, and involve two distinct indices.
 

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.cryptography.atbash_cipher import encode, decode
+from pysnips.cryptography.atbash_cipher.atbash_cipher_2 import encode, decode
 
 
 class AtbashCipherTest(unittest.TestCase):

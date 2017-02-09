@@ -55,21 +55,8 @@ checksums are a simple sanity-check, not a real in-depth verification of the
 authenticity of some data. It's often a cheap first pass, and can be used to
 quickly discard obviously invalid things.
 
-
-### Submitting Exercises
-
-Note that, when trying to submit an exercise, make sure the solution is in the `exercism/python/<exerciseName>` directory.
-
-For example, if you're submitting `bob.py` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/python/bob/bob.py`.
-
-
-For more detailed information about running tests, code style and linting,
-please see the [help page](http://exercism.io/languages/python).
-
 ## Source
 
 The Luhn Algorithm on Wikipedia [http://en.wikipedia.org/wiki/Luhn_algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm)
 
-## Submitting Incomplete Problems
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
 

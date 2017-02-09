@@ -1,17 +1,19 @@
 class KeyPress(object):
-    """
-    Create the dictionary to store the numbers as keys and the list of strings as values
-    Create a counter variable to store counts whenever a letter is found in the key-value pairing.
-    Convert the input string to uppercase for easier dictionary 'parsing'
-    loop through dictionary keys and loop through the strings, checking if each letter in the string is in the value of the key(list).
-     :returns key count, how many presses are made on the keypad
-     :arg takes in a phrase
-    """
 
     def __init__(self, phrase):
         self.phrase = phrase
 
     def presses(self):
+        """
+        Create the dictionary to store the numbers as keys and the list of strings as values
+        Create a counter variable to store counts whenever a letter is found in the key-value pairing.
+        Convert the input string to uppercase for easier dictionary 'parsing'
+        loop through dictionary keys and loop through the strings,
+        checking if each letter in the string is in the value of the key(list).
+         :returns key count, how many presses are made on the keypad
+         :arg takes in a phrase
+        """
+
         # converts the string to upper, and stores in variable,
         phrase = self.phrase.upper()  # .replace(" ", "")
         # creates a counter variable

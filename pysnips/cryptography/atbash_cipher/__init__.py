@@ -1,10 +1,3 @@
-"""
-:do_filter_join filters the string and joins the result
-:filter_string filter the string to remove invalid characters
-:cipher checks if the character is in the ALPHA, retutns its cipher
-:grouper groups the words into five letters
-"""
-
 import string
 GROUP_SIZE = 5
 ALPHA = string.ascii_lowercase
@@ -20,19 +13,39 @@ def encode(str_to_encode):
 
 
 def do_filter_join(m):
+    """
+    Filters a string and joins the result
+    :param m:
+    :return:
+    """
     return "".join(cipher(x) for x in filter_string(m).lower())
 
 
 def filter_string(filtr):
+    """
+    Filter function to remove invalid characters
+    :param filtr:
+    :return:
+    """
     return "".join(x for x in filtr if x.isalpha())
 
 
 def cipher(char):
+    """
+    Checks if the character is in the cipher an returns its cipher
+    :param char:
+    :return:
+    """
     indx = ALPHA.index(char)
     return CIPHER[indx] if indx >= 0 else char
 
 
 def grouper(txt_to_group):
+    """
+    groups the words into five letters
+    :param txt_to_group:
+    :return:
+    """
     count, grouped = 0, []
     while count < len(txt_to_group):
         if count + GROUP_SIZE <= len(txt_to_group):

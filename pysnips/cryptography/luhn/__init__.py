@@ -4,7 +4,7 @@ class Luhn(object):
 
     def addends(self):
         def transform(val):
-            return (2 * val - 9) if (val > 10) else (2 * val)
+            return (2 * val - 9) if (val > 4) else (2 * val)
         dig = [int(d) for d in str(self.number)]
         return [(transform(x) if (i % 2 == 0) else x)
                 for i, x in enumerate(dig, start=len(dig) % 2)]
@@ -17,5 +17,5 @@ class Luhn(object):
 
     @staticmethod
     def create(num):
-        p = (10 - Luhn(num).checksum()) % 10
+        p = (10 - Luhn(num * 10).checksum()) % 10
         return 10 * num + p
