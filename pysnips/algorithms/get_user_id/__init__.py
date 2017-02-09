@@ -18,7 +18,7 @@ def get_users_ids(phrase):
     phrase = phrase.strip().lower()
 
     # split it into a list by either spaces, or commas
-    phrase = re.split(",|\s", phrase, 1)
+    phrase = re.split(",|\s", phrase)
 
     # create a map to remove all the punctuation characters to empty strings
     translator = str.maketrans("", "", punctuation)
