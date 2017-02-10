@@ -13,7 +13,7 @@ def check_lists(list1, list2):
 
 def contains(l1, l2):
     if not l2:
-        return False
+        return True
     if len(l2) > len(l1):
         return False
     for x in range(len(l1) - len(l2) + 1):

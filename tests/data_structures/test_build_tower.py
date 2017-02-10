@@ -1,5 +1,4 @@
 import unittest
-
 from pysnips.data_structures.lists.build_tower import tower_builder
 
 
@@ -8,22 +7,19 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(tower_builder(1), ['*', ])
 
     def test_2(self):
-        self.assertEqual(tower_builder(1), ['*', ])
-
-    def test_3(self):
         self.assertEqual(tower_builder(2), [' * ', '***'])
 
-    def test_4(self):
+    def test_3(self):
         self.assertEqual(tower_builder(3), ['  *  ', ' *** ', '*****'])
 
-    def test_5(self):
+    def test_6(self):
         self.assertEqual(tower_builder(6), ['     *     ',
-                                                        '    ***    ',
-                                                        '   *****   ',
-                                                        '  *******  ',
-                                                        ' ********* ',
-                                                        '***********'
-                                                        ])
+                                            '    ***    ',
+                                            '   *****   ',
+                                            '  *******  ',
+                                            ' ********* ',
+                                            '***********'
+                                            ])
 
 
 if __name__ == '__main__':

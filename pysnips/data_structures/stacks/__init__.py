@@ -1,6 +1,7 @@
 from collections import deque
 
 
+# todo: review this Stack
 class Stack(object):
     """
     Implementation of a Stack data structure
