@@ -4,7 +4,7 @@ def array_pair_sum(k, array):
     Loops through the array, checking if a pair sums up to the value k
     Returns all pairs that sum up to k
     complexity: O(n^2)
-    :param k: The value to check sum of pairs agains
+    :param k: The value to check sum of pairs against
     :param array: The array of integers to loop through
     :return: The sum of pairs
     :rtype: list
