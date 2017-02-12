@@ -2,6 +2,7 @@ import unittest
 from pysnips.math_pysnips.split_even_numbers import split_all_even_numbers
 
 
+@unittest.skip
 class SplitEvenNumbersTestCase(unittest.TestCase):
     def test_1(self):
         self.assertEquals(split_all_even_numbers([1, 10, 1, 3], 0), [1, 5, 5, 1, 3])
