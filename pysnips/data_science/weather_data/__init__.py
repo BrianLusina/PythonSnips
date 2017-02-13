@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 class WeatherData(object):
     def __init__(self):
         # open and read the file
@@ -28,7 +31,7 @@ class WeatherData(object):
 
         # loop through the data, getting the spread
         # skip the header
-        for x in range(1, len(self.rows[1:])):
+        for x in range(2, len(self.rows[1:])):
             # current row
             row = self.rows[x]
 
@@ -81,6 +84,7 @@ def main():
     weather_data.calculate_spread()
     # print to stdout
     print(weather_data.get_spread())
+
 
 if __name__ == "__main__":
     main()
