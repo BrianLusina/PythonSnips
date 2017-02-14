@@ -4,16 +4,16 @@ from pysnips.regex.autocorrect_prank import auto_correct
 
 class AutoCorrectTests(unittest.TestCase):
     def test_one(self):
-        self.assertEqual("your sister", auto_correct("u"))
+        self.assertEqual(auto_correct("u"), "your sister")
 
     def test_two(self):
-        self.assertEqual("your sister", auto_correct("you"))
+        self.assertEqual(auto_correct("you"), "your sister")
 
     def test_three(self):
-        self.assertEqual("your sister", auto_correct("Youuuuu"))
+        self.assertEqual(auto_correct("Youuuuu"), "your sister")
 
     def test_four(self):
-        self.assertEqual("youtube", auto_correct("youtube"))
+        self.assertEqual(auto_correct("youtube"), "youtube")
 
     def test_five(self):
-        self.assertEqual("I miss your sister!", auto_correct("I miss you!"))
+        self.assertEqual(auto_correct("I miss you!"), "I miss your sister!")

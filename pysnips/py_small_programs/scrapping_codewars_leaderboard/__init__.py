@@ -4,7 +4,7 @@ from urllib.request import urlretrieve
 
 url = 'https://www.codewars.com/users/leaderboard'
 
-
+# todo: find the solution!
 def solution():
     # list to store the leaders
     position = []
