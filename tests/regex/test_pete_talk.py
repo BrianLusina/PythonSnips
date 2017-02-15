@@ -2,9 +2,10 @@ import unittest
 from pysnips.regex.pete_talk import PeteTalk
 
 
-class Tests(unittest.TestCase):
-    def test_desc(self):
-        self.shortDescription()
+@unittest.skip
+class PeteTalkTestCases(unittest.TestCase):
+    def shortDescription(self):
+        return "{} test cases.".format(PeteTalk.__name__)
 
     def test_1(self):
         pete = PeteTalk("I want to punch someone in the face")
