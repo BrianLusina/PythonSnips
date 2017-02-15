@@ -2,6 +2,7 @@ import re
 from string import punctuation
 
 
+# todo: check on this pete talk function
 class PeteTalk(object):
     """
     Rules
