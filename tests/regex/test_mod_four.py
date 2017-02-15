@@ -5,7 +5,7 @@ from pysnips.regex.mod_four import mod
 
 class ModFourTests(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(isinstance(type(mod), type(re.compile(""))), True)
+        self.assertIsInstance(mod(""), type(re.compile("")))
 
     def test_2(self):
         valid_tests = ["[+05620]", "[005624]", "[-05628]", "[005632]", "[555636]", "[+05640]", "[005600]",
@@ -20,4 +20,4 @@ class ModFourTests(unittest.TestCase):
                          "[005623]", "[~24]", "[8.04]",
                          "No, [2014] isn't a multiple of 4..."]
         for test in invalid_tests:
-            self.assertEqual(mod(test) is not None, False)
+            self.assertIsNotNone(mod(test))
