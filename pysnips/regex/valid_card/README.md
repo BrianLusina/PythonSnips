@@ -11,7 +11,7 @@ Don´t worry about wrong inputs, they will always be a string with 4 groups of 4
 
 Examples
 
-         ValidCard.valid_card?("5457 6238 9823 4311") # -> true
-         ValidCard.valid_card?("5457 6238 9323 4311") # -> false
+ValidCard.valid_card?("5457 6238 9823 4311") # -> true
+ValidCard.valid_card?("5457 6238 9323 4311") # -> false
 
 for reference check: https://en.wikipedia.org/wiki/Luhn_algorithm
