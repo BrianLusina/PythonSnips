@@ -12,6 +12,7 @@ number must pass the following test:
 
 - Counting from rightmost digit (which is the check digit) and moving
   left, double the value of every second digit.
+
 - For any digits that thus become 10 or more, subtract 9 from the
   result.
   - 1111 becomes 2121.
