@@ -57,7 +57,7 @@ class MyTestCase(unittest.TestCase):
     def test_is_valid_18(self):
         self.assertEqual(is_valid_HK_phone_number("83680 28968"), False)
 
-    def test_is_valid_19(self):
+    def test_has_valid_0(self):
         self.assertEqual(has_valid_HK_phone_number("Hello, my phone number is 1234 5678"), True)
 
     def test_has_valid_1(self):
