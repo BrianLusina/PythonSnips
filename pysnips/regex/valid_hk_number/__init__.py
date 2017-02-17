@@ -27,6 +27,7 @@ def is_valid_HK_phone_number(number):
             return False
 
 
+# todo has valid regex
 def has_valid_HK_phone_number(number):
     """
     Checks if a hong kong phone number has a valid phone number
@@ -34,10 +35,12 @@ def has_valid_HK_phone_number(number):
     :return: True/False
     :rtype:bool
     """
-    match = re.match("([0-9]+)|([0-9]+\s+)|(\s+[0-9]+)|([0-9]+\s[0-9]+)", number)
+    match = re.match("([0-9]+)|([0-9]+\s+)|(\s+[0-9]+)|([0-9]+\s[0-9]+)\s*|(\w+)\s*([0-9]+\s[0-9]+)",
+                     number)
     print(match)
     if match:
         return is_valid_HK_phone_number(match.group())
+    return False
 
 print(has_valid_HK_phone_number("Hello, my phone number is 1234 5678"), True)
 print(has_valid_HK_phone_number("85748475 is definitely invalid"), False)
