@@ -2,7 +2,7 @@ import unittest
 from pysnips.strings_words.acronym_buster import acronym_buster
 
 
-class MyTestCase(unittest.TestCase):
+class AcronymTestCase(unittest.TestCase):
     def test_1(self):
         self.assertEqual(acronym_buster("BRB I need to go into a KPI meeting before EOD"), "BRB is an acronym. I do "
                                                                                            "not like acronyms. Please"
