@@ -122,18 +122,6 @@ class ClockTest(unittest.TestCase):
         self.assertNotEqual(Clock(14, 37), Clock(15, 37))
 
     def test_clocks_with_hour_overflow(self):
-        self.assertNotEqual(Clock(10, 37), Clock(34, 37))
-
-    def test_clocks_with_hour_overflow_by_several_days(self):
-        self.assertEqual(Clock(3, 11), Clock(99, 11))
-
-    def test_clocks_a_minute_apart(self):
-        self.assertNotEqual(Clock(15, 36), Clock(15, 37))
-
-    def test_clocks_an_hour_apart(self):
-        self.assertNotEqual(Clock(14, 37), Clock(15, 37))
-
-    def test_clocks_with_hour_overflow(self):
         self.assertEqual(Clock(10, 37), Clock(34, 37))
 
     def test_clocks_with_hour_overflow_by_several_days(self):
@@ -168,6 +156,7 @@ class ClockTest(unittest.TestCase):
 
     def test_clocks_with_negative_hours_and_minutes_that_wrap(self):
         self.assertEqual(Clock(18, 7), Clock(-54, -11513))
+
 
 if __name__ == '__main__':
     unittest.main()

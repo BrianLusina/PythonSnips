@@ -24,7 +24,6 @@ class Clock(object):
         self.hour += self.minute // 60
         self.hour %= 24
         self.minute %= 60
-        self.hour += self.minute
         return self
 
 
