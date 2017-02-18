@@ -11,9 +11,5 @@ Some examples:
 "19:99:99" -> "20:40:39"
 "24:01:01" -> "00:01:01"
 
-If the input-string is null or empty return exactly this value! (empty string for C++)
-If the time-string-format is invalid, return null. (empty string for C++)
-
-Have fun coding it and please don't forget to vote and rank this kata! :-)
-
-I have created other katas. Have a look if you like coding and challenges.
+If the input-string is null or empty return exactly this value!
+If the time-string-format is invalid, return null.

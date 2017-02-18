@@ -7,16 +7,30 @@ def time_correct(time_string):
     if time component is not valid, return None
     """
 
-    result = []
-    if time_string is None or len(time_string) < 8:
+    if time_string is None:
         return time_string
-    elif time_string == "":
+    if time_string == "":
         return time_string
+    if len(time_string) < 8:
+        return None
     else:
-        these_times = time_string.split(":")
-        for time_unit in these_times:
-            hour, minute, second = these_times[0], these_times[1], these_times[2]
-            if isinstance(int(hour), int):
-                int(hour) < 24
-            else:
-                return None
+        try:
+            # get the hour, minute and second from the time string
+            hour, minute, second = map(int, time_string.split(":"))
+        except ValueError:
+            return None
+
+        if second >= 60:
+            # if the second is greater than 60 add 1 minute
+            minute += second // 60
+            second %= 60
+
+        # if the minute is greater than 60, add 1 hour and re-set the minutes to the remainder
+        if minute >= 60:
+            hour += minute // 60
+            minute %= 60
+
+        if hour >= 24:
+            hour %= 24
+
+        return "%02d:%02d:%02d" % (hour, minute, second)

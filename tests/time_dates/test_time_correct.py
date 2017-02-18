@@ -28,7 +28,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(time_correct("19:99:99"), "20:40:39")
 
     def test10(self):
-            self.assertEqual(time_correct("24:01:01"), "00:01:01")
+        self.assertEqual(time_correct("24:01:01"), "00:01:01")
 
     def test11(self):
         self.assertEqual(time_correct("52:01:01"), "04:01:01")
