@@ -29,43 +29,52 @@ class AlternateCaseTest(unittest.TestCase):
         self.assertEqual(to_alternating_case(to_alternating_case("Hello World")), "Hello World")
 
     title1 = "altERnaTIng cAsE"
+
+    # title2 becomes ALTerNAtiNG CaSe
     title2 = to_alternating_case(title1)
 
     def test_9(self):
-        self.assertEqual(to_alternating_case(self.title2), "ALTerNAtiNG CaSe")
+        self.assertEqual(to_alternating_case(self.title2), self.title1)
 
+    # title3 becomes altERnaTIng cAsE, back to title1
     title3 = to_alternating_case(title2)
 
     def test_10(self):
-        self.assertEqual(to_alternating_case(self.title3), "altERnaTIng cAsE")
+        self.assertEqual(to_alternating_case(self.title3), "ALTerNAtiNG CaSe")
 
+    # title4 becomes ALTerNAtiNG CaSe
     title4 = to_alternating_case(title3)
 
     def test_11(self):
-        self.assertEqual(to_alternating_case(self.title4), "ALTerNAtiNG CaSe")
+        self.assertEqual(to_alternating_case(self.title4), "altERnaTIng cAsE")
 
+    # title5 becomes altERnaTIng cAsE
     title5 = to_alternating_case(title4)
 
     def test_12(self):
-        self.assertEqual(to_alternating_case(self.title5), "altERnaTIng cAsE")
+        self.assertEqual(to_alternating_case(self.title5), self.title4)
 
     title6 = "altERnaTIng cAsE <=> ALTerNAtiNG CaSe"
+    # title7 becomes "ALTerNAtiNG CaSe <=> altERnaTIng cAsE"
     title7 = to_alternating_case(title6)
 
     def test_13(self):
-        self.assertEqual(to_alternating_case(self.title7), "ALTerNAtiNG CaSe <=> altERnaTIng cAsE")
+        self.assertEqual(to_alternating_case(self.title7), self.title6)
 
+    # title8 changes to title6
     title8 = to_alternating_case(title7)
 
     def test_14(self):
-        self.assertEqual(to_alternating_case(self.title8), "altERnaTIng cAsE <=> ALTerNAtiNG CaSe")
+        self.assertEqual(to_alternating_case(self.title8), self.title7)
 
+    # title9 changes to title7
     title9 = to_alternating_case(title8)
 
     def test_15(self):
-        self.assertEqual(to_alternating_case(self.title9), "ALTerNAtiNG CaSe <=> altERnaTIng cAsE")
+        self.assertEqual(to_alternating_case(self.title9), self.title8)
 
+    # title10 changes to title8
     title10 = to_alternating_case(title9)
 
     def test_16(self):
-        self.assertEqual(to_alternating_case(self.title10), "altERnaTIng cAsE <=> ALTerNAtiNG CaSe")
+        self.assertEqual(to_alternating_case(self.title10), self.title9)
