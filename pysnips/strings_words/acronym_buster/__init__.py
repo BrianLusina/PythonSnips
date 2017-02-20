@@ -1,4 +1,5 @@
 import re
+from functools import reduce
 
 ACRONYMS = {
     'KPI': "key performance indicators",
@@ -12,6 +13,10 @@ ACRONYMS = {
     'SWOT': "strengths, weaknesses, opportunities and threats",
 }
 
+ACRONYM_PATTERN = re.compile(r"\b[A-Z]{3,}\b")
+CAPITAL_PATTERN = re.compile(r"(?:\. |^)([a-z])")
+CAPITAL_FIX = lambda match: "{}".format(match.group(0).upper())
+
 
 def acronym_buster(message):
     """
@@ -20,22 +25,14 @@ def acronym_buster(message):
     if it is, return the first occurrence of the acronym
     else return [acronym] is an acronym. I do not like acronyms. Please remove them from your email.
     :param message: The message to check
-    :return:
+    :return: new string with the acronyms replaced with full words
+    :rtype:str
     """
-    words = message.split()
-    result, res, forbiden = [], [], []
-    for word in words:
-        if re.match("[A-Z]{3,}", word) and word in ACRONYMS.keys():
-            word_new = re.sub("([A-Z]{3,})", ACRONYMS[word], word)
-            res.append(word_new)
-            result.append(word_new)
-        elif re.match("[A-Z]{3,}", word) and word not in ACRONYMS.keys():
-            return word + " is an acronym. I do not like acronyms. Please remove them from your email."
-        else:
-            res.append(word)
-    return " ".join(res).capitalize()
+    message = reduce(lambda msg, item: msg.replace(*item), ACRONYMS.items(), message)
 
-# acronym_buster("I am IAM so will be OOO until EOD")
-# "SMB is an acronym. I do not like acronyms. Please remove them from your email.
-print(acronym_buster("We're looking at SMB on SM DMs today"))
-print(acronym_buster("WAH"), "Work at home")
+    try:
+        # find all matching groups with .finditer using next and get the first acronym that is not allows
+        acronym = next(ACRONYM_PATTERN.finditer(message)).group(0)
+        return "{} is an acronym. I do not like acronyms. Please remove them from your email.".format(acronym)
+    except StopIteration:
+        return CAPITAL_PATTERN.sub(CAPITAL_FIX, message)
