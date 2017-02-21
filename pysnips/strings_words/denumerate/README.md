@@ -1,4 +1,3 @@
-Create a string build variable that will add the strings based on the postions
 ## Denumerate String
 You have to rebuild a string from an enumerated list.
 
