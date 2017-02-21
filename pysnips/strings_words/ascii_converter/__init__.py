@@ -2,8 +2,10 @@ import binascii
 
 
 def to_ascii(h):
-    return bytearray.fromhex(bytes.decode(h)).decode()
+    encoded = str.encode(h)
+    return bytearray.fromhex(bytes.decode(encoded)).decode()
 
 
 def to_hex(s):
-    return binascii.hexlify(str.encode(s))
+    return str(binascii.hexlify(str.encode(s)))
+
