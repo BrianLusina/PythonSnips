@@ -30,7 +30,7 @@ class Hexadecimal(object):
                     for c in hexa]
 
         # converts each number in the hex_list to base 16
-        return reduce(lambda x, y: x * 16 + y, sequence=hex_list, initial=0)
+        return reduce(lambda x, y: x * 16 + y, hex_list, 0)
 
     @staticmethod
     def hex_built_in(hexadecimal):
