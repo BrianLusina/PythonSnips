@@ -19,7 +19,7 @@ class DuplicateTests(unittest.TestCase):
     def test_2(self):
         time.sleep(2)
         rem = RemoveDuplicate("Duplicate duplicate")
-        self.assertEqual("Duplicate ", rem.remove_duplicate())
+        self.assertEqual("duplicate ", rem.remove_duplicate())
 
     def test_3(self):
         time.sleep(3)
@@ -29,7 +29,7 @@ class DuplicateTests(unittest.TestCase):
     def test_4(self):
         time.sleep(4)
         rem = RemoveDuplicate("me and you and them and me")
-        self.assertEqual("me and you th ", rem.remove_duplicate())
+        self.assertEqual("me andyouth", rem.remove_duplicate())
 
     def test_5(self):
         time.sleep(5)
