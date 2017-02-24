@@ -4,6 +4,10 @@ logs
 .idea/
 .vagrant/
 .cache/
+
+# html files
+*.html
+
 # Runtime data
 pids
 *.pid
