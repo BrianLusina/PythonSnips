@@ -41,12 +41,14 @@ class Palindrome(object):
         :param word_list: list of words to evaluate for palindrome pairs
         :return: list of lists with each list containing the word indices which form a palindrome
         """
-        result = []
-        for x in range(len(word_list) - 1, 0, -1):
-            for i in range(x):
-                if self.is_palindrome(str(word_list[i]) + str(word_list[i + 1])):
-                    result.append([word_list.index(word_list[i]), word_list.index(word_list[i + 1])])
-        return result
+        words = [str(word) for word in word_list]
+
+        return[
+            [i, j]
+            for i, word_i in enumerate(words)
+            for j, word_j in enumerate(words)
+            if i != j and self.is_palindrome(word_i + word_j)
+        ]
 
     def smallest_palindrome(self, max_factor, min_factor=0):
         """
