@@ -1,17 +1,17 @@
 import unittest
-from pysnips.strings_words.pattern import pattern, pattern_2
+from pysnips.strings_words.pattern import pattern
 
 
-class Tests(unittest.TestCase):
+class PatternTests(unittest.TestCase):
     def test1(self):
         self.assertEqual(pattern(1), "1")
 
     def test2(self):
-        self.assertEqual(pattern(2), "1\n22")
+        self.assertEqual(pattern(2), "1\n1*2")
 
     def test3(self):
-        self.assertEqual(pattern(5), "1\n22\n333\n4444\n55555")
-        
+        self.assertEqual(pattern(5), "1\n1*2\n1**3\n1***4\n1****5")
+
     def test_4(self):
         self.assertEqual(pattern(3), "1\n1*2\n1**3")
 
