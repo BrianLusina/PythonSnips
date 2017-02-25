@@ -81,7 +81,7 @@ FROM (
    if (x > 70 and outcomeid = 1, 1, 0) as pass_70 
   FROM [%(touch_table)s] WHERE typeid = %(pass)s)
 GROUP BY matchid, teamid
-""" % {'touch_table' : _TOUCH_TABLE,
+""" % {'touch_table': _TOUCH_TABLE,
        'pass': _PASS_ID}
 
 # Subquery that tracks own goals so we can later attribute them to
@@ -92,7 +92,7 @@ FROM [%(touch_table)s]
 WHERE typeid = %(goal)d AND qualifiers.type = %(own_goal)d 
 GROUP BY matchid, teamid
 """ % {'touch_table': _TOUCH_TABLE,
-       'goal': _GOAL_ID, 
+       'goal': _GOAL_ID,
        'own_goal': _OWN_GOAL_QUALIFIER_ID}
 
 # Subquery that credits an own goal to the opposite team.
@@ -126,7 +126,7 @@ FROM (
     timestamp,
   FROM [%(touch_table)s]
   WHERE typeid in (%(goal)d, %(game)d))
-""" % {'goal': _GOAL_ID, 
+""" % {'goal': _GOAL_ID,
        'game': _GAME_ID,
        'touch_table': _TOUCH_TABLE}
 
@@ -235,14 +235,13 @@ ON t.matchid = x.matchid AND t.teamid = x.teamid
        'foul': _FOUL_ID,
        'corner': _CORNER_ID,
        'half': _HALF_ID,
-       'shots':  _SHOT_ID_STRINGS,
+       'shots': _SHOT_ID_STRINGS,
        'card': _CARD_ID,
        'pass_stats': _PASS_STATS,
        'expected_goals': _EXPECTED_GOALS_MATCH,
        'touch_table': _TOUCH_TABLE,
        'match_games': _MATCH_GAMES_TABLE,
        'match_goals': _MATCH_GOALS_TABLE}
-
 
 # Some of the games in the touches table have been ingested twice. If that
 # is the case, scale the game statistics.
@@ -279,27 +278,31 @@ FROM (
 ) GROUP BY matchid
 ) s ON t.matchid = s.matchid
 """ % {
-       'team_game_summary': _TEAM_GAME_SUMMARY,
-       'touches_table': _TOUCH_TABLE}
+    'team_game_summary': _TEAM_GAME_SUMMARY,
+    'touches_table': _TOUCH_TABLE}
+
 
 ###
 ### Public queries / methods
 ###
 
-def team_game_summary_query(): 
+def team_game_summary_query():
     """ Query that returns query statistics for both teams in a game. """
     if _TOUCH_TABLE:
         return _TEAM_GAME_SUMMARY_CORRECTED
     else:
         return GAME_SUMMARY
-  
+
+
 def match_goals_table():
     """ Returns the name of a table with goals scored per match. """
     return _MATCH_GOALS_TABLE
 
+
 def match_games_table():
     """ Returns the name of a table containing basic data about matches. """
     return _MATCH_GAMES_TABLE
+
 
 def get_non_feature_columns():
     """ Returns a list of the columns that are in our features dataframe that
@@ -310,8 +313,9 @@ def get_non_feature_columns():
         same game.
     """
     return ['teamid', 'op_teamid', 'matchid', 'competitionid', 'seasonid',
-            'goals', 'op_goals', 'points', 'timestamp', 'team_name', 
+            'goals', 'op_goals', 'points', 'timestamp', 'team_name',
             'op_team_name']
+
 
 def get_feature_columns(all_cols):
     """ Returns a list of all columns that should be used in prediction
@@ -319,4 +323,3 @@ def get_feature_columns(all_cols):
         features.get_non_feature_column() list).
     """
     return [col for col in all_cols if col not in get_non_feature_columns()]
-

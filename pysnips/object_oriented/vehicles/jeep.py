@@ -4,6 +4,7 @@ from pprint import pprint
 
 class Jeep(car.Car):
     def vehicle_type(self):
+        # noinspection PyCompatibility
         return super().vehicle_type()
 
 

@@ -1,5 +1,7 @@
 from urllib import request
+# noinspection PyCompatibility
 from urllib.parse import urljoin
+# noinspection PyCompatibility
 from urllib.request import urlretrieve
 
 

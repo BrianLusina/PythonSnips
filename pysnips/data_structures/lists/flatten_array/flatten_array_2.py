@@ -1,3 +1,4 @@
+# noinspection PyCompatibility
 from collections.abc import Iterable
 
 

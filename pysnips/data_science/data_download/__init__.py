@@ -1,4 +1,8 @@
-from urllib.request import urlretrieve
+try:
+    # noinspection PyCompatibility
+    from urllib.request import urlretrieve
+except ImportError:
+    from urllib import urlretrieve
 
 
 class DataDownload(object):

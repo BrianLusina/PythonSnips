@@ -3,6 +3,7 @@ from data_structures.lists.linked_lists import LinkedList, Node
 
 class CircularNode(Node):
     def __init__(self):
+        # noinspection PyCompatibility
         super().__init__()
 
     def get_next(self):
@@ -16,6 +17,7 @@ class CircularLinkedList(LinkedList):
     """
 
     def __init__(self):
+        # noinspection PyCompatibility
         super().__init__()
 
     def delete_node(self, node):

@@ -1,5 +1,4 @@
 class KeyPress(object):
-
     def __init__(self, phrase):
         self.phrase = phrase
 
@@ -11,7 +10,6 @@ class KeyPress(object):
         loop through dictionary keys and loop through the strings,
         checking if each letter in the string is in the value of the key(list).
          :returns key count, how many presses are made on the keypad
-         :arg takes in a phrase
         """
 
         # converts the string to upper, and stores in variable,

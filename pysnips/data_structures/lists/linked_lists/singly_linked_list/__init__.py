@@ -6,6 +6,7 @@ class SingleNode(Node):
     Node implementation in a single linked list
     """
     def __init__(self, value, next):
+        # noinspection PyCompatibility
         super().__init__(next)
         self.value = value
         self.next = next
@@ -19,6 +20,7 @@ class SinglyLinkedList(LinkedList):
     Implementation of a SinglyLinked List
     """
     def __init__(self):
+        # noinspection PyCompatibility
         super().__init__()
 
     def push(self, data):

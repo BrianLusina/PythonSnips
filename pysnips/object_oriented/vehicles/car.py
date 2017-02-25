@@ -9,6 +9,7 @@ class Car(Vehicle):
     no_of_seats = 4
 
     def vehicle_type(self):
+        # noinspection PyCompatibility
         super().vehicle_type()
         return "Car"
 

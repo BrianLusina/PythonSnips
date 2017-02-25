@@ -15,7 +15,7 @@ MATCH_GAME_WITH_STATS = """
     WHERE matchid in (
         SELECT matchid FROM (%(stats_table)s) GROUP BY matchid)
     """ % {'match_games': match_stats.match_games_table(),
-           'stats_table': match_stats.team_game_summary_query()}        
+           'stats_table': match_stats.team_game_summary_query()}
 
 # Combines statistics from both teams in a match.
 # For each two records matching the pattern (m, t1, <stats1>) and
@@ -24,7 +24,7 @@ MATCH_GAME_WITH_STATS = """
 # into a single row (m, t1, t2, <stats1>, <stats2>) where all of the
 # t2 field names are decorated with the op_ prefix. For example, teamid becomes
 # op_teamid, and pass_70 becomes op_pass_70.
-_TEAM_GAME_OP_SUMMARY =  """
+_TEAM_GAME_OP_SUMMARY = """
     SELECT cur.matchid as matchid,
       cur.teamid as teamid,
       cur.passes as passes,
@@ -80,7 +80,7 @@ _TEAM_GAME_OP_SUMMARY =  """
       """ % {'team_game_summary': match_stats.team_game_summary_query()}
 
 
-def get_match_history(history_size): 
+def get_match_history(history_size):
     """ For each team t in each game g, computes the N previous game 
         ids where team t played, where N is the history_size (number
         of games of history we use for prediction). The statistics of
@@ -116,11 +116,12 @@ def get_match_history(history_size):
         m1.timestamp >= h.nth_last_match_timestamp AND 
         m1.timestamp <= h.last_match_timestamp 
 
-        """ % {'history_size': history_size, 
+        """ % {'history_size': history_size,
                'match_games_with_stats': MATCH_GAME_WITH_STATS,
                'match_games': match_stats.match_games_table()}
 
-def get_history_query(history_size): 
+
+def get_history_query(history_size):
     """ Computes summary statistics for the N preceeding matches. """
     return """
         SELECT  
@@ -205,6 +206,7 @@ def get_history_query(history_size):
                'match_games': match_stats.match_games_table(),
                'match_history': get_match_history(history_size)}
 
+
 def get_history_query_with_goals(history_size):
     """ Expands the history_query, which summarizes statistics from past games
         with the result of who won the current game. This information will not
@@ -267,7 +269,8 @@ def get_history_query_with_goals(history_size):
         """ % {'history_query': get_history_query(history_size),
                'match_goals': match_stats.match_goals_table()}
 
-def get_wc_history_query(history_size): 
+
+def get_wc_history_query(history_size):
     """ Identical to the history_query (which, remember, does not have
         outcomes) but gets history for world-cup games.
     """
@@ -276,17 +279,20 @@ def get_wc_history_query(history_size):
         ORDER BY timestamp DESC, matchid, is_home 
         """ % {'history_query': get_history_query(history_size)}
 
+
 def get_wc_features(history_size):
     """ Runs a bigquery query that gets the features that can be used
         to predict the world cup.
     """
     return gbq.read_gbq(get_wc_history_query(history_size))
 
+
 def get_features(history_size):
     """ Runs a BigQuery query to get features that can be used to train
          a machine learning model.
     """
     return gbq.read_gbq(get_history_query_with_goals(history_size))
+
 
 def get_game_summaries():
     """ Runs a BigQuery Query that gets game summaries. """

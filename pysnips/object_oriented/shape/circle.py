@@ -4,6 +4,7 @@ from object_oriented.shape import Shape
 
 class Circle(Shape):
     def __init__(self, radius):
+        # noinspection PyCompatibility
         super().__init__()
         self.radius = radius
 

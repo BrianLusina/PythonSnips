@@ -81,7 +81,7 @@ def calculate_tax(people_sal):
                     memo[tax_rate] = band
                 # the tax band is in the memo, but the salary is still greater than 0
                 elif salary > 0:
-                    print("Salary still greater than 0 and", salary, " memo full",memo )
+                    print("Salary still greater than 0 and", salary, " memo full", memo)
     return result
 
 
@@ -89,9 +89,9 @@ def update_results(person, result, tax):
     """
     Checks if the current person is in the dict, if not adds them with their current rate
     if they are, adds the current rate to the current person
+    :param tax:
     :param person: the current person
     :param result: the output result
-    :param rate: the current tax rate
     :return: the resulting dict
     """
     if person in result:

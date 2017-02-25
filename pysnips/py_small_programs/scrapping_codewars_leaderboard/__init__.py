@@ -1,8 +1,9 @@
-from bs4  import BeautifulSoup
+from bs4 import BeautifulSoup
+# noinspection PyCompatibility
 from urllib.request import urlretrieve
 
-
 url = 'https://www.codewars.com/users/leaderboard'
+
 
 # todo: find the solution!
 def solution():
@@ -35,5 +36,6 @@ def solution():
             print(ke)
         position.append(leader)
     return position
+
 
 print(solution())

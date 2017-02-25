@@ -14,7 +14,7 @@ except (ValueError, TypeError):
 try:
     print("Hello!")
     print("Nick" / 0)
-except:
+except TypeError:
     print("You can't divide your name by zero!")
 
 try:
@@ -45,7 +45,7 @@ try:
     throws()
 except ZeroDivisionError:
     print("division by zero!")
-except Exception as err:
+except ZeroDivisionError as err:
     print('Caught an exception')
 finally:
     print('In finally block for cleanup')

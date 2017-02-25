@@ -1,9 +1,8 @@
 def reverse_words(message):
-
     message_list = list(message)
 
     # first we reverse all the characters in the entire message_list
-    reverse_characters(message_list, 0, len(message_list)-1)
+    reverse_characters(message_list, 0, len(message_list) - 1)
     # this gives us the right word order
     # but with each word backwards
 
@@ -18,8 +17,7 @@ def reverse_words(message):
 
         # found the end of the current word!
         if (i == len(message_list)) or (message_list[i] == ' '):
-
-            reverse_characters(message_list, current_word_start_index, i-1)
+            reverse_characters(message_list, current_word_start_index, i - 1)
 
             # if we haven't exhausted the string our
             # next word's start is one character ahead
@@ -29,15 +27,13 @@ def reverse_words(message):
 
 
 def reverse_characters(message_list, front_index, back_index):
-
     # walk towards the middle, from both sides
     while front_index < back_index:
-
         # swap the front char and back char
         message_list[front_index], message_list[back_index] = \
             message_list[back_index], message_list[front_index]
 
         front_index += 1
-        back_index  -= 1
+        back_index -= 1
 
     return message_list

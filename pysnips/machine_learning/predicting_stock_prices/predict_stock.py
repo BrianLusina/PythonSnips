@@ -11,9 +11,9 @@ prices = []
 
 def get_data(filename):
     with open(filename) as csv_file:
-        csvFileReader = csv.reader(csv_file)
-        next(csvFileReader)
-        for row in csvFileReader:
+        csv_file_reader = csv.reader(csv_file)
+        next(csv_file_reader)
+        for row in csv_file_reader:
             dates.append(int(row[0].split('-')[0]))
             prices.append(float(row[1]))
     return
@@ -32,7 +32,7 @@ def predict_prices(dates, prices, x):
 
     plt.scatter(dates, prices, color="black", label="Data")
     plt.plot(dates, svr_rbf.predict(dates), color="red", label="RBF Model")
-    plt.plot(dates,svr_lin.predict(dates), color="green", label="Linear Model")
+    plt.plot(dates, svr_lin.predict(dates), color="green", label="Linear Model")
     plt.plot(dates, svr_poly.predict(dates), color="blue", label="Polynomial Model")
 
     plt.xlabel("Date")
@@ -43,6 +43,7 @@ def predict_prices(dates, prices, x):
     plt.show()
 
     return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_rbf.predict(x)[0]
+
 
 get_data('aapl.csv')
 

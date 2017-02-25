@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+# noinspection PyCompatibility
 from urllib.request import urlretrieve
 
 

@@ -10,6 +10,7 @@ class DoubleNode(Node):
         pass
 
     def __init__(self, value, prev_node=None, next_node=None):
+        # noinspection PyCompatibility
         super().__init__(value, next_node)
         self.value = value
         self.prev_node = prev_node
@@ -23,6 +24,7 @@ class DoublyLinkedList(LinkedList):
     """
 
     def __init__(self):
+        # noinspection PyCompatibility
         super().__init__()
 
     def push(self, data):

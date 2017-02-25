@@ -37,6 +37,7 @@ class Person(Human):
     has_name = True
 
     def __init__(self, name, age, height, country, no_legs, no_hands, no_eyes, no_mouth, nose):
+        # noinspection PyCompatibility
         super().__init__(no_legs, no_hands, no_eyes, no_mouth, nose)
         self.name = name
         self.age = age
@@ -51,6 +52,7 @@ class Students(Person):
 
     def __init__(self, homework, quizzes, tests, name, age, height, country, no_legs, no_hands, no_eyes, no_mouth,
                  nose):
+        # noinspection PyCompatibility
         super().__init__(name, age, height, country, no_legs, no_hands, no_eyes, no_mouth, nose)
         self.homework = homework
         self.quizzes = quizzes

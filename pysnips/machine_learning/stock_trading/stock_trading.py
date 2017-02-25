@@ -20,7 +20,7 @@ class ScikitBacktest(object):
         d = web.DataReader(self.sys, data_source='yahoo')['Adj Close']
         d = pd.DataFrame(d)
         d.columns = [self.symbol]
-        d['returns'] = np.log(d / d.shift(1))
+        d['returns'] = np.log(d / d.shift())
 
     def select_data(self, start, end):
         d = self.data[(self.data.index >= start) & (self.data.index <= end)].copy()

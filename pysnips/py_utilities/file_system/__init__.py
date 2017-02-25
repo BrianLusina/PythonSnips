@@ -58,6 +58,7 @@ class MyFileSystem(object):
         try:
             os.mkdir(dir_name)
         except FileExistsError:
+            # noinspection PyCompatibility
             raise FileExistsError("File already exists")
 
     def make_copy(self, from_path, to_path):
