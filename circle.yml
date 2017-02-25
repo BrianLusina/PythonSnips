@@ -1,4 +1,6 @@
 machine:
+  python:
+    version: 3.5.2
   post:
     - pyenv global 3.5.2
 
@@ -9,6 +11,7 @@ dependencies:
 test:
   override:
     - py.test tests/
+  post:
     # runs coverage
     - coverage run --source pysnips -m py.test tests/
     # - coverage report
@@ -16,3 +19,9 @@ test:
     - coverage html -i
     - python-codacy-coverage -r coverage.xml
     - codecov
+
+#deployment:
+#  production:
+#    branch: master
+#    commands:
+#      - fab deploy

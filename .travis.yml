@@ -23,7 +23,6 @@ script:
   - python-codacy-coverage -r coverage.xml
   - codecov
 
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
