@@ -5,11 +5,11 @@ class SingleNode(Node):
     """
     Node implementation in a single linked list
     """
-    def __init__(self, value, next):
+    def __init__(self, value, next_):
         # noinspection PyCompatibility
-        super().__init__(next)
+        super().__init__(next_)
         self.value = value
-        self.next = next
+        self.next = next_
 
     def get_next(self):
         return self.next
