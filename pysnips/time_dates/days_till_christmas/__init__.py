@@ -4,7 +4,7 @@ from datetime import date
 def days_until_christmas(current_date):
     """
     calculates the number of days until christmas given the day object, which will be the current date
-    :param day: datetime object with the current date
+    :param current_date: datetime object with the current date
     :return: days until christmas
     :rtype: int
     """
