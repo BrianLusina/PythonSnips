@@ -13,4 +13,3 @@ def generate_link(user):
     :rtype: str
     """
     return "http://www.codewars.com/users/" + quote(user)
-
