@@ -1,3 +1,9 @@
+try:
+    from urllib import quote
+except ImportError:
+    from urllib.parse import quote
+
+
 def generate_link(user):
     """
     Generates user links based on the user's name
@@ -6,6 +12,5 @@ def generate_link(user):
     :return: a user generated link
     :rtype: str
     """
-    base_url = "http://www.codewars.com/users/"
-    user = user.replace(" ", "%20")
-    return base_url + user
+    return "http://www.codewars.com/users/" + quote(user)
+
