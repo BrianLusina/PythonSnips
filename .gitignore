@@ -4,6 +4,7 @@ logs
 .idea/
 .vagrant/
 .cache/
+*.db
 
 # html files
 *.html
