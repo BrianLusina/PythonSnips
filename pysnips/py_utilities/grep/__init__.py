@@ -67,14 +67,11 @@ def format_files(matched_lines):
     output = ""
 
     # since we are only interested in the file names, we `dash` out the line number and the lines matched
-    result = [file_name for file_name, _, _ in matched_lines if file_name not in output]
+    for file_name, _, _ in matched_lines:
+        if file_name not in output:
+            output += file_name + "\n"
 
-    return "\n".join(result)
-    # for file_name, _, _ in matched_lines:
-    #     if file_name not in output:
-    #         output += file_name + "\n"
-    #
-    # return output
+    return output
 
 
 def format_lines(matched_lines, files, flags):
@@ -93,7 +90,7 @@ def format_lines(matched_lines, files, flags):
     for file_name, line_number, line in matched_lines:
         line_result = ""
 
-        if len(file_name) > 1:
+        if len(files) > 1:
             line_result += file_name + ":"
 
         if "-n" in flags:
