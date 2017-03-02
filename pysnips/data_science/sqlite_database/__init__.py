@@ -44,9 +44,12 @@ class AccessSimiti(object):
         :return:
         """
 
-simiti = sqlite3.connect("simiti-v2.db")
+        for value in values:
+            v = (str(value))
+            self.cursor.execute("INSERT INTO " + table_name + " VALUES " + v)
+            self.simiti.commit()
+        self.simiti.close()
 
-cursor = simiti.cursor()
 
 value_list = [('784bc244b6053553cb5b3a4f9250ba79', '56b4f14f4ac4272e63ca1a45', 'FlashCards',
                'It is a set of cards bearing information, as words or numbers, on either or both sides, used in classroom drills or in private study.',
@@ -83,9 +86,3 @@ value_list = [('784bc244b6053553cb5b3a4f9250ba79', '56b4f14f4ac4272e63ca1a45', '
               ('1a2015828ee354885afd0c8083170876', '56b4f14f4ac4272e63ca1a45', "Learner's Library",
                'A journey through different stories that provide resourceful information, facts and roles that can be reffered to thereafter in test, exams or even in everyday life circumstances.',
                'package', 'd41d8cd98f00b204e9800998ecf8427e', '1460618542327.0', 1463149315952, 0, '', '')]
-
-for values in value_list:
-    v = (str(values))
-    cursor.execute("INSERT INTO mzigos VALUES " + v)
-    simiti.commit()
-simiti.close()
