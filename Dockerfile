@@ -2,13 +2,13 @@
 FROM alpine:3.1
 
 # Update
-# RUN apk add --update python py-pip
+RUN apk add --update python py-pip
 
 # add
-ADD . /opt/python-snippets
+# ADD . /opt/python-snippets
 
 # Install app dependencies
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Bundle app source
 # COPY . /src/simpleapp.py
