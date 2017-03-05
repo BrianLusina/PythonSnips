@@ -49,7 +49,6 @@ class WordSearch(object):
         :ivar self.height will be the height of thw object, in this case, just the length of the list
         :param puzzle: the puzzle which will be a tuple of words separated by newline characters
         """
-        # todo: raise error, if the puzzle width for each item is uneven
         self.rows = puzzle.split()
         self.width = len(self.rows[0])
         self.height = len(self.rows)
@@ -99,16 +98,3 @@ class WordSearch(object):
             return
         # return the particular letter in the puzzled
         return self.rows[coord_point.y][coord_point.x]
-
-puzzle = ('jefblpepre\n'
-          'camdcimgtc\n'
-          'oivokprjsm\n'
-          'pbwasqroua\n'
-          'rixilelhrs\n'
-          'wolcqlirpc\n'
-          'screeaumgr\n'
-          'alxhpburyi\n'
-          'jalaycalmp\n'
-          'clojurermt')
-example = WordSearch(puzzle)
-print(example.search('clojure'))
