@@ -5,7 +5,7 @@ FROM alpine:3.1
 RUN apk add --update python py-pip
 
 # add
-# ADD . /opt/python-snippets
+ADD requirements.txt .
 
 # Install app dependencies
 RUN pip install -r requirements.txt
@@ -15,3 +15,4 @@ RUN pip install -r requirements.txt
 
 # EXPOSE  8000
 # CMD ["py.test", "tests/"]
+
