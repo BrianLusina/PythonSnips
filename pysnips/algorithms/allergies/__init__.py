@@ -12,8 +12,22 @@ class Allergies(object):
 
     def __init__(self, score):
         self.score = score
-        self.lst = list(allergy for allergy in self.ALLERGY_SCORES if
-                        self.is_allergic_to(allergy))
 
     def is_allergic_to(self, allergen):
+        """
+        Checks if Tom is allergic to this particular allergen. Does a bitwise AND to perform the check
+        :param allergen: the allergen to check for
+        :return: True/False if Tom is allergic
+        :rtype: bool
+        """
         return self.ALLERGY_SCORES[allergen] & self.score
+
+    def allergies(self):
+        """
+        Sorts the list of allergies in alphabetic order and returns them
+        :return: a sorted list of all the allergies
+         :rtype: list
+        """
+        return sorted(list(allergy for allergy in self.ALLERGY_SCORES if
+                           self.is_allergic_to(allergy)))
+
