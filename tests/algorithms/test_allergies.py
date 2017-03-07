@@ -1,4 +1,5 @@
 import unittest
+import random
 from pysnips.algorithms.allergies import Allergies
 
 
@@ -97,9 +98,11 @@ class AllergiesTests(unittest.TestCase):
                                self.is_allergic_to(allergy)))
 
     def test_random_number_input(self):
-        for x in range(255, 2000):
-            self.assertEqual(Allergies(x).allergies(), self.MyAllergies(x).allergies())
+        x = random.randrange(255, 2000)
+        self.assertEqual(Allergies(x).allergies(), self.MyAllergies(x).allergies())
 
+    def test_negative_numbers(self):
+        self.assertEqual(Allergies(-1).allergies(), [])
 
 if __name__ == '__main__':
     unittest.main()
