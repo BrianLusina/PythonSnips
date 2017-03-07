@@ -49,6 +49,16 @@ class AllergiesTests(unittest.TestCase):
     def test_allergic_to_shellfish_at_score_260(self):
         self.assertEqual(Allergies(260).allergies(), ["shellfish"])
 
+    def test_allergic_throws_error(self):
+        self.assertRaises(TypeError, Allergies, "")
+
+    def test_allergic_throws_error_for_non_integer_input(self):
+        self.assertRaises(TypeError, Allergies, 5.2)
+
+    def test_allergic_throws_error_for_none_inputs(self):
+        with self.assertRaises(TypeError):
+            Allergies(None)
+
 
 if __name__ == '__main__':
     unittest.main()

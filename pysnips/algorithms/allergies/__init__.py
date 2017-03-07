@@ -11,6 +11,8 @@ class Allergies(object):
     }
 
     def __init__(self, score):
+        if score is None or not isinstance(score, int):
+            raise TypeError("Score must be an integer")
         self.score = score
 
     def is_allergic_to(self, allergen):

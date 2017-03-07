@@ -37,6 +37,11 @@ True
 ['cats', 'chocolate', 'eggs', 'peanuts', 'pollen', 'shellfish', 'strawberries', 'tomatoes']
 ```
 
+``` python
+>>> Allergies(259).allergies()
+["eggs", "peanuts"]
+```
+
 You will be provided with a class `Allergies` which will have 2 methods
 
 + is_allergic_to
@@ -44,5 +49,10 @@ You will be provided with a class `Allergies` which will have 2 methods
 
 + allergies
   Returns a list of what Tom is allergic to. This list must be sorted alphabetically
+
+Must Dos:
+
+Ensure that your function throws a TypeError for invalid inputs such as None, floats, strings, or any data type
+that is not an integer.
 
 *Hint: Use Bitwise ANDing*
