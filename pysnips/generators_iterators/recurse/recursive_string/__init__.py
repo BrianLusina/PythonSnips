@@ -1,3 +1,4 @@
+# todo: add tests
 def get_permutations(word):
     """
     Gets the permutations of word recursively
