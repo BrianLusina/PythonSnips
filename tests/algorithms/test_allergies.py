@@ -102,7 +102,13 @@ class AllergiesTests(unittest.TestCase):
         self.assertEqual(Allergies(x).allergies(), self.MyAllergies(x).allergies())
 
     def test_negative_numbers(self):
-        self.assertEqual(Allergies(-1).allergies(), [])
+        self.assertEqual(Allergies(-1).allergies(), ['cats', 'chocolate', 'eggs', 'peanuts',
+                                                     'pollen', 'shellfish', 'strawberries', 'tomatoes'])
+
+    def test_random_numbers(self):
+        for x in range(1000, 1500):
+            y = random.choice(range(x, x + 3))
+            self.assertEqual(Allergies(y).allergies(), self.MyAllergies(y).allergies())
 
 if __name__ == '__main__':
     unittest.main()
