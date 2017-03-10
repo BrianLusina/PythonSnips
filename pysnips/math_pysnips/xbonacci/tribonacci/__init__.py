@@ -6,8 +6,8 @@ def tribonacci(sig, n):
     elif n in range(1, 4):
         return sig[0:n]
     while c <= n:
-        next = res[c] + res[c + 1] + res[c + 2]
-        res.append(next)
+        next_ = res[c] + res[c + 1] + res[c + 2]
+        res.append(next_)
         c += 1
         if len(res) == n:
             break
