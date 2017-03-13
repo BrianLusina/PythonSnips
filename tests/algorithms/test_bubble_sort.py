@@ -27,7 +27,6 @@ class BubbleSortTests(unittest.TestCase):
     def test_valid_list_of_ints_and_floats_does_not_throw_error(self):
         bubbles = BubbleSort([12, 3.5, 56, 7.89])
         self.assertListEqual(bubbles.bubbly_ascend(), sorted([12, 3.5, 56, 7.89]))
-        
 
 
 if __name__ == "__main__":
