@@ -26,5 +26,5 @@ def print_logo(thickness, c):
     for i in range(thickness):
         print(((c * (thickness - i - 1)).rjust(thickness) + c + (c * (thickness - i - 1)).ljust(thickness)).rjust(
             thickness * 6))
-        
+
 print_logo(5, "H")
