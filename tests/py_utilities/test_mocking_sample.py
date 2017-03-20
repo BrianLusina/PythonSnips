@@ -1,11 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import unittest
 from pysnips.py_utilities.mocking_sample import RemovalService, UploadService
 import tempfile
 import os
-from mock import patch
+from mock import patch, create_autospec
 
 
 class MockingSampleTestCases(unittest.TestCase):
@@ -87,6 +84,17 @@ class UploadServiceTestCases(unittest.TestCase):
 
         # check that it called the rm method of removal service
         removal_service.rm.assert_called_with("upload file")
+
+    def test_upload_complete_using_mock_instances(self, mock_rm):
+        """>>>> Test upload complete is working using mock instances"""
+        mock_removal_service = create_autospec(RemovalService)
+        upload_service = UploadService(mock_removal_service)
+
+        # call upload complete which should in turn call rm
+        upload_service.upload_complete("uploaded file")
+
+        # test that it called rm
+        mock_removal_service.rm.assert_called_with("uploaded file")
 
 if __name__ == '__main__':
     unittest.main()
