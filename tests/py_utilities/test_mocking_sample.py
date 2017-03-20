@@ -15,7 +15,7 @@ class MockingSampleTestCases(unittest.TestCase):
         with open(self.tmpfilepath, "wb") as file:
             file.write(b"DELETE ME!")
 
-    def test_rm(self,):
+    def test_rm(self, ):
         """>>>> Testing removing a file"""
         RemovalService.rm(self.tmpfilepath)
         # test that the file was actually removed
@@ -46,15 +46,15 @@ class MockingSampleTestCases(unittest.TestCase):
 
         mock_os.remove.assert_called_with("any path")
 
-    @patch("pysnips.py_utilities.mocking_sample.os")
     @patch("pysnips.py_utilities.mocking_sample.os.path")
+    @patch("pysnips.py_utilities.mocking_sample.os")
     def test_rm_after_adding_service_class(self, mock_os, mock_path):
         """>>>> Testing rm function after making it a class method"""
         # instantiate our service
         reference = RemovalService()
 
         # set up the mock
-        mock_path.isfile.return_value =  False
+        mock_path.isfile.return_value = False
 
         reference.rm("any path")
 
@@ -67,7 +67,7 @@ class MockingSampleTestCases(unittest.TestCase):
         reference.rm("any path")
 
         mock_os.remove.assert_called_with("any path")
-        
+
 
 if __name__ == '__main__':
     unittest.main()
