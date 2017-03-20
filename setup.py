@@ -10,7 +10,7 @@ from pysnips import constants
 
 setup(
     name='PySnips',
-    version=constants.PYSNIPS_VERSION,
+    version=constants.__VERSION__,
     description='A Python library containing small Python algorithms',
     author='Brian Lusina (@BrianLusina)',
     author_email='lusinabrian@gmail.com',
@@ -32,5 +32,4 @@ setup(
     keywords='Python snippets and algorithms',
     license='MIT',
     test_suite='tests',
-
 )
