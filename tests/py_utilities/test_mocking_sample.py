@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from pysnips.py_utilities.mocking_sample import RemovalService
+from pysnips.py_utilities.mocking_sample import RemovalService, UploadService
 import tempfile
 import os
 from mock import patch
@@ -68,6 +68,25 @@ class MockingSampleTestCases(unittest.TestCase):
 
         mock_os.remove.assert_called_with("any path")
 
+
+class UploadServiceTestCases(unittest.TestCase):
+    """
+    Tests for the Upload Service
+    """
+    @patch.object(RemovalService, "rm")
+    def test_upload_complete(self, mock_rm):
+        """>>>> Test that the upload is complete"""
+        removal_service = RemovalService()
+        upload_service = UploadService(removal_service)
+
+        # call upload complete which should in turn call "rm"
+        upload_service.upload_complete("upload file")
+
+        # check that the rm method was called
+        mock_rm.assert_called_with("upload file")
+
+        # check that it called the rm method of removal service
+        removal_service.rm.assert_called_with("upload file")
 
 if __name__ == '__main__':
     unittest.main()
