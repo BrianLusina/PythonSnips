@@ -85,6 +85,7 @@ class UploadServiceTestCases(unittest.TestCase):
         # check that it called the rm method of removal service
         removal_service.rm.assert_called_with("upload file")
 
+    @staticmethod
     def test_upload_complete_using_mock_instances(self, mock_rm):
         """>>>> Test upload complete is working using mock instances"""
         mock_removal_service = create_autospec(RemovalService)
