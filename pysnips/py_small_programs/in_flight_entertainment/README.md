@@ -89,3 +89,19 @@ Of course, we need to add some logic to make sure we're not showing users the sa
 But first, we can tighten this up a bit. Instead of two sequential loops, can we do it all in one loop?
 (Done carefully, this will give us protection from showing the same movie twice as well.)
 
+We know users won't watch the same movie twice because we check movie_lengths_seen for matching_second_movie_length before we've put first_movie_length in it!
+
+Complexity
+O(n)O(n) time, and O(n)O(n) space. Note while optimizing runtime we added a bit of space cost.
+
+Bonus
+What if we wanted the movie lengths to sum to something close to the flight length (say, within 20 minutes)?
+What if we wanted to fill the flight length as nicely as possible with any number of movies (not just 2)?
+What if we knew that movie_lengths was sorted? Could we save some space and/or time?
+What We Learned
+The trick was to use a set to access our movies by length, in O(1)O(1) time.
+
+Using hash-based data structures, like dictionaries or sets, is so common in coding challenge solutions, it should always be your first thought.
+Always ask yourself, right from the start: "Can I save time by using a dictionary?"
+
+[Reference](https://www.interviewcake.com/question/python/inflight-entertainment?utm_source=weekly_email&utm_campaign=weekly_email&utm_medium=email)
