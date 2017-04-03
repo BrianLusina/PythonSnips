@@ -3,6 +3,20 @@ from urllib.parse import parse_qs
 
 # todo: python 2.x compatibility import
 
+memory = []
+
+form = '''<!DOCTYPE html>
+  <title>Message Board</title>
+  <form method="POST" action="http://localhost:8000/">
+    <textarea name="message"></textarea>
+    <br>
+    <button type="submit">Post it!</button>
+  </form>
+  <pre>
+  {}
+  </pre>
+'''
+
 
 class ArcHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -14,10 +28,10 @@ class ArcHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         # write the response
-        # self.wfile.write("Hello from Arc Server\n".encode())
+        msg = form.format("\n".join(memory))
 
         # this will return a response with the path back to the client
-        self.wfile.write(self.path[1:].encode())
+        self.wfile.write(msg.encode())
 
     def do_POST(self):
         """
@@ -28,11 +42,16 @@ class ArcHandler(BaseHTTPRequestHandler):
 
         message = parse_qs(data)["message"][0]
 
-        self.send_response(200)
-        self.send_header("Content-type", "text/plain; charset=utf-8")
-        self.end_headers()
+        # escape characters
+        message = message.replace("<", "&lt;")
 
-        self.wfile.write(message.encode())
+        # store in memory
+        memory.append(message)
+
+        # sends a redirect to root page
+        self.send_response(303)
+        self.send_header("Location", "/")
+        self.end_headers()
 
 if __name__ == "__main__":
     server_address = ('', 8000)
