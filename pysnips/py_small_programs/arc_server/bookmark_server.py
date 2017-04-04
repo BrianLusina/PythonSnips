@@ -20,8 +20,9 @@ Simple sample of a url shortening server that gets requests from a client with i
     long URI.
 
 """
-
+import threading
 import requests
+from socketserver import ThreadingMixIn
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, unquote
 
@@ -63,7 +64,17 @@ def check_uri(uri, timeout=5):
         return False
 
 
+class ThreadHTTPServer(ThreadingMixIn, HTTPServer):
+    """
+    Handles concurrency
+    """
+
+
 class Shortener(BaseHTTPRequestHandler):
+    """
+    Addition of ThreadingMixin allows for the handler class to be concurrent
+    """
+
     def do_GET(self):
         """
         Handles GET requests from client, this request will either be for root path /  or for /some-name
@@ -125,11 +136,9 @@ class Shortener(BaseHTTPRequestHandler):
 
             self.wfile.write("{} does not exist".format(longuri).encode())
 
+
 if __name__ == "__main__":
     server_address = ("", 8000)
-    httpd = HTTPServer(server_address=server_address, RequestHandlerClass=Shortener)
+    httpd = ThreadHTTPServer(server_address=server_address, RequestHandlerClass=Shortener)
     print("listening on {}".format(httpd.server_address))
     httpd.serve_forever()
-
-
-
