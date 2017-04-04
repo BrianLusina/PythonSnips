@@ -56,8 +56,11 @@ def check_uri(uri, timeout=5):
     :return: True/False
     :rtype: bool
     """
-    r = requests.get(url=uri, timeout=timeout)
-    return True if r.status_code == 200 else False
+    try:
+        r = requests.get(url=uri, timeout=timeout)
+        return r.status_code == 200
+    except (requests.ConnectTimeout, requests.RequestException):
+        return False
 
 
 class Shortener(BaseHTTPRequestHandler):
@@ -78,7 +81,7 @@ class Shortener(BaseHTTPRequestHandler):
             else:
                 # the name does not exist in memory, send a 404 response
                 self.send_response(404)
-                self.send_header("Content-type", "test/plain; charset=utf-8")
+                self.send_header("Content-type", "text/plain; charset=utf-8")
                 self.end_headers()
 
                 self.wfile.write("I don't know {}".format(name).encode())
@@ -92,6 +95,41 @@ class Shortener(BaseHTTPRequestHandler):
             known = "\n".join("{} : {}".format(key, memory[key]) for key in sorted(memory.keys()))
             self.wfile.write(form.format(known).encode())
 
+    def do_POST(self):
+        """
+        Handles POST requests from client. In this case will get the long uri and short uri and check
+        if the short uri is in memory, perform a request to check if the uri exists and return a response
+        to the client
+        """
+        # DECODE
+        length = int(self.headers.get("Content-length", 0))
+        body = self.rfile.read(length).decode()
+        params = parse_qs(body)
+        longuri = params["longuri"][0]
+        shorturi = params["shorturi"][0]
+
+        if check_uri(longuri):
+            # this uri exists, thus we store it in memory
+            memory[shorturi] = longuri
+
+            # redirect to the root page
+            self.send_response(303)
+            self.send_header("Location", "/")
+            self.end_headers()
+
+        else:
+            # the uri could not be found
+            self.send_response(404)
+            self.send_header("Content-type", "text/plain; charset=utf-8")
+            self.end_headers()
+
+            self.wfile.write("{} does not exist".format(longuri).encode())
+
+if __name__ == "__main__":
+    server_address = ("", 8000)
+    httpd = HTTPServer(server_address=server_address, RequestHandlerClass=Shortener)
+    print("listening on {}".format(httpd.server_address))
+    httpd.serve_forever()
 
 
 
