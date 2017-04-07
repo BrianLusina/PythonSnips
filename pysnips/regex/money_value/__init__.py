@@ -1,6 +1,10 @@
-import re
-
-
 def money_value(s):
-    s = s.strip()
-    m = re.search(r"([0-9]+\.[0-9]+|-[0-9]+\.[0-9]+|-\$\s[0-9]+\.[0-9]+)", s)
+    is_neg = '-' in s
+    result = "".join([x for x in s if x in "0123456789."])
+    if result:
+        result = float(''.join(result))
+    else:
+        result = 0.0
+    if is_neg:
+        result *= -1
+    return result
