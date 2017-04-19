@@ -7,9 +7,9 @@ class Node(object):
     """
     __metaclass__ = ABCMeta
 
-    def __init__(self, value=None, next=None):
+    def __init__(self, value=None, next_=None):
         self.value = value
-        self.next = next
+        self.next = next_
 
     @abstractmethod
     def get_next(self):
@@ -91,10 +91,10 @@ class LinkedList(object):
     @abstractmethod
     def reverse(self):
         """
-        Reverses the linked list, such that the Head points to the last item in the LinkedList and the tail
-        points to its predecessor. The first node becomes the tail
+        Reverses the linked list, such that the Head points to the last item in the 
+        LinkedList and the tail points to its predecessor. The first node becomes the tail
         :return: New LinkedList which is reversed
-        :rtype: LinkedList object
+        :rtype: LinkedList
         """
         pass
 

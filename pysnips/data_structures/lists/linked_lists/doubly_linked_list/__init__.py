@@ -6,15 +6,26 @@ class DoubleNode(Node):
     Node implementation of DoubleLinkedList
     """
 
-    def get_next(self):
-        pass
-
     def __init__(self, value, prev_node=None, next_node=None):
         # noinspection PyCompatibility
         super().__init__(value, next_node)
         self.value = value
         self.prev_node = prev_node
         self.next_node = next_node
+
+    def get_next(self):
+        """
+        Gets the next node
+        :return: the next node
+        """
+        return self.next_node
+
+    def get_previous(self):
+        """
+        gets the previous node
+        :return: previous node 
+        """
+        return self.prev_node
 
 
 class DoublyLinkedList(LinkedList):
@@ -85,17 +96,37 @@ class DoublyLinkedList(LinkedList):
                     current_node.prev.next = current_node.next
                     current_node.next.prev = current_node.prev
                 else:
-                    # otherwise we have no prev (it's None), head is the next one, and prev becomes None
+                    # otherwise we have no prev (it's None), head is the next one, and prev
+                    #  becomes None
                     self.head = current_node.next
                     current_node.next.prev = None
 
                 current_node = current_node.next
 
     def reverse(self):
-        pass
+        """
+        Order of operations is important here. We set the current.next to next before
+        setting previous to current.next
+        :return: a reversed LinkedList
+        :rtype: DoublyLinkedList
+        """
+        current = self.head
+        previous = None
+        next_ = None
 
-    def __repr__(self):
-        pass
+        # do this, until we are at the end of the linked list
+        while current:
+            # copy a pointer to the next element, before we overwrite the current
+            next_ = current.next
+
+            # reverse the next pointer
+            current.next = previous
+
+            # step forward in the list
+            previous = current
+            current = next_
+
+        return previous
 
     def insert(self, node, pos):
         pass
