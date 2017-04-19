@@ -107,6 +107,14 @@ class DoublyLinkedList(LinkedList):
         """
         Order of operations is important here. We set the current.next to next before
         setting previous to current.next
+        We return previous because when we exit, current is None, which means that the last
+        node we visited—previous—was the tail of the original list, and thus the head of
+        our reversed list.
+        
+        Complexity:
+        O(n) time and O(1)O(1) space. We pass over the list only once, and maintain a
+        constant number of variables in memory.
+        
         :return: a reversed LinkedList
         :rtype: DoublyLinkedList
         """
