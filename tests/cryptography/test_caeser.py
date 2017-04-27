@@ -1,10 +1,49 @@
 import unittest
-from pysnips.cryptography.caeser import CaesarCipher
+from pysnips.cryptography.caeser_cipher import CaesarCipher
 
 
-# class CaeserCipherTests(unittest.TestCase):
-#     def test_something(self):
-#         self.assertEqual(True, False)
+class CaeserCipherTests(unittest.TestCase):
+    def test_rotate_a_by_1(self):
+        caeser = CaesarCipher(1)
+        self.assertEqual(caeser.encrypt('a'), 'b')
+
+    def test_rotate_a_by_26(self):
+        caeser = CaesarCipher(26)
+        self.assertEqual(caeser.encrypt('a'), 'a')
+
+    def test_rotate_a_by_0(self):
+        caeser = CaesarCipher(0)
+        self.assertEqual(caeser.encrypt('a'), 'a')
+
+    def test_rotate_m_by_13(self):
+        caeser = CaesarCipher(13)
+        self.assertEqual(caeser.encrypt('m'), 'z')
+
+    def test_rotate_n_by_13_with_wrap_around_alphabet(self):
+        caeser = CaesarCipher(13)
+        self.assertEqual(caeser.encrypt('n'), 'a')
+
+    def test_rotate_capital_letters(self):
+        caeser = CaesarCipher(5)
+        self.assertEqual(caeser.encrypt('OMG'), 'TRL')
+
+    def test_rotate_spaces(self):
+        caeser = CaesarCipher(5)
+        self.assertEqual(caeser.encrypt('O M G'), 'T R L')
+
+    def test_rotate_numbers(self):
+        caeser = CaesarCipher(4)
+        self.assertEqual(caeser.encrypt('Testing 1 2 3 testing'),'Xiwxmrk 1 2 3 xiwxmrk')
+
+    def test_rotate_punctuation(self):
+        caeser = CaesarCipher(21)
+        self.assertEqual(caeser.encrypt("Let's eat, Grandma!"), "Gzo'n zvo, Bmviyhv!")
+
+    def test_rotate_all_letters(self):
+        caeser = CaesarCipher(13)
+        self.assertEqual(caeser.encrypt("The quick brown fox jumps"
+                                     " over the lazy dog."),
+                         "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 
 
 if __name__ == '__main__':
