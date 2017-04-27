@@ -1,4 +1,4 @@
-import string
+from string import ascii_uppercase, ascii_lowercase
 
 
 class CaesarCipher(object):
@@ -17,18 +17,18 @@ class CaesarCipher(object):
         self.key = key % 26
 
         # dict used for encryption - { plaintext letter : cipher_text letter, ... }
-        self.e = dict(zip(string.ascii_lowercase, string.ascii_lowercase[self.key:]
-                          + string.ascii_lowercase[:self.key]))
+        self.e = dict(zip(ascii_lowercase, ascii_lowercase[self.key:]
+                          + ascii_lowercase[:self.key]))
 
-        self.e.update(dict(zip(string.ascii_uppercase, string.ascii_uppercase[self.key:]
-                               + string.ascii_uppercase[:self.key])))
+        self.e.update(dict(zip(ascii_uppercase, ascii_uppercase[self.key:]
+                               + ascii_uppercase[:self.key])))
 
         # dict used for decryption - { cipher_text letter : plaintext letter, ... }
-        self.d = dict(zip(string.ascii_lowercase[self.key:] + string.ascii_lowercase[:self.key],
-                          string.ascii_lowercase))
+        self.d = dict(zip(ascii_lowercase[self.key:] + ascii_lowercase[:self.key],
+                          ascii_lowercase))
 
-        self.d.update(dict(zip(string.ascii_uppercase[self.key:] +
-                               string.ascii_uppercase[:self.key], string.ascii_uppercase)))
+        self.d.update(dict(zip(ascii_uppercase[self.key:] +
+                               ascii_uppercase[:self.key], ascii_uppercase)))
 
     def encrypt(self, plaintext):
         """Converts plaintext to cipher_text.
@@ -51,3 +51,20 @@ class CaesarCipher(object):
         return ''.join([self.d[letter]
                         if letter in self.d else letter
                         for letter in cipher_text])
+
+
+class CaesarCipherV2(object):
+    """
+    This implementation uses maketrans on uppercase letters
+    """
+    def __init__(self, shift):
+        self.alpha = ascii_uppercase
+        self.new_alpha = self.alpha[shift:] + self.alpha[:shift]
+
+    def encode(self, plaintext):
+        t = plaintext.maketrans(self.alpha, self.new_alpha)
+        return plaintext.upper().translate(t)
+
+    def decode(self, cipher_text):
+        t = cipher_text.maketrans(self.new_alpha, self.alpha)
+        return cipher_text.upper().translate(t)
