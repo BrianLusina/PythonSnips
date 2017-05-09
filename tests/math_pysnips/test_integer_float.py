@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.integer_of_float import i_or_f
+from math_numbers.integer_of_float import i_or_f
 
 
 class IntegerFloatTests(unittest.TestCase):

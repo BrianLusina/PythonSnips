@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.climb_sequence import climb
+from math_numbers.climb_sequence import climb
 
 
 class Tests(unittest.TestCase):

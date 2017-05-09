@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.nth_prime import nth_prime
+from math_numbers.nth_prime import nth_prime
 
 
 class NthPrimeTests(unittest.TestCase):

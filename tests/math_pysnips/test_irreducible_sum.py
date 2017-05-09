@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.irreducible_sum import sum_fracts
+from math_numbers.irreducible_sum import sum_fracts
 
 
 class IrreducibleTestCases(unittest.TestCase):

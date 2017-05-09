@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.math_pysnips.prime_factors import prime_factors
+from math_numbers.prime_factors import prime_factors
 
 
 class PrimeFactorsTest(unittest.TestCase):

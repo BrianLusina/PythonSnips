@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.is_prime import is_prime, divisors, is_prime_with_re
+from math_numbers.is_prime import is_prime, divisors, is_prime_with_re
 
 
 class PrimeTests(unittest.TestCase):

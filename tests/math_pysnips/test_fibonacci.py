@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.xbonacci.fibonacci import fib, fib_memo
+from math_numbers.xbonacci.fibonacci import fib, fib_memo
 from timeit import timeit
 
 

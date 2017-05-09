@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.xbonacci.product_fib import productFib
+from math_numbers.xbonacci.product_fib import productFib
 
 
 class MyTestCase(unittest.TestCase):

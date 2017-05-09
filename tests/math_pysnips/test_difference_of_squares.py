@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.math_pysnips.difference_of_squares import difference, square_of_sum, sum_of_squares
+from math_numbers.difference_of_squares import difference, square_of_sum, sum_of_squares
 
 
 class DifferenceOfSquaresTest(unittest.TestCase):

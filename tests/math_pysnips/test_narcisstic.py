@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.narcisstic import narcissistic
+from math_numbers.narcisstic import narcissistic
 
 
 class NarcissticTest(unittest.TestCase):

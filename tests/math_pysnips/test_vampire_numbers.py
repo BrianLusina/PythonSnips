@@ -1,43 +1,24 @@
 import unittest
-from pysnips.math_pysnips.vampire_numbers import VampireNumbers, vampire_test
+from pysnips.math_numbers.vampire_numbers.vampire_numbers import vampire_test
 
 
 class VampireTestCases(unittest.TestCase):
-    def setUp(self):
-        self.vampire_numbers = VampireNumbers()
-
-    def test_can_generate_first_25_vampire_numbers(self):
-        print('First 10 vampire numbers')
-        count = n = 0
-        results = []
-        while count < 10:
-            n += 1
-            fang_pairs = self.vampire_numbers.vampire(n)
-            if fang_pairs:
-                count += 1
-                results.append((n, fang_pairs))
-        self.assertEqual(10, len(results), "Expected 1st 10 vampire numbers")
-
     def test1(self):
         self.assertEqual(vampire_test(21, 6), True, "Basic: 21 * 6 = 126 should return True")
 
     def test2(self):
-        self.assertEqual(vampire_test(204, 615), True, "Basic: 204 * 615 = 125460 should return "
-                                                                            "True")
+        self.assertEqual(vampire_test(204, 615), True, "Basic: 204 * 615 = 125460 should return True")
 
     def test3(self):
-        self.assertEqual(vampire_test(30, -51), True, "One Negative: 30 * -51 = -1530 should "
-                                                                           "return True")
+        self.assertEqual(vampire_test(30, -51), True, "One Negative: 30 * -51 = -1530 should return True")
 
     def test4(self):
-        self.assertEqual(vampire_test(-246, -510), False,
-                         "Double Negatives: -246 * -510 = 125460 should "
-                         "return False (The negative signs aren't present "
-                         "on the product)")
+        self.assertEqual(vampire_test(-246, -510), False, "Double Negatives: -246 * -510 = 125460 should "
+                                                          "return False (The negative signs aren't present "
+                                                          "on the product)")
 
     def test5(self):
-        self.assertEqual(vampire_test(210, 600), True,
-                         "Trailing Zeroes: 210 * 600 = 126000 should return True")
+        self.assertEqual(vampire_test(210, 600), True, "Trailing Zeroes: 210 * 600 = 126000 should return True")
 
     def test6(self):
         self.assertEqual(vampire_test(2947051, 8469153), False, "Should return false")
@@ -53,7 +34,3 @@ class VampireTestCases(unittest.TestCase):
 
     def test10(self):
         self.assertEqual(vampire_test(10, 11), False, "Missing 1, Result is 110")
-
-
-if __name__ == "__main__":
-    unittest.main()

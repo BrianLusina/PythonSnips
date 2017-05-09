@@ -1,6 +1,6 @@
 import unittest
 import time
-from pysnips.math_pysnips.make_larger import MakeLarger
+from math_numbers.make_larger import MakeLarger
 
 
 class Tests(unittest.TestCase):

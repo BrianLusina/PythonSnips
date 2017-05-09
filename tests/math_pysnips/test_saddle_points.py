@@ -7,7 +7,7 @@ irregular.
 """
 import unittest
 
-from pysnips.math_pysnips.saddle_points import saddle_points
+from math_numbers.saddle_points import saddle_points
 
 
 class SaddlePointTest(unittest.TestCase):

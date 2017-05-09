@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.largest_pair import max_product
+from math_numbers.largest_pair import max_product
 
 
 class LargestPairTests(unittest.TestCase):

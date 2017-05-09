@@ -1,5 +1,5 @@
 import unittest
-from pysnips.math_pysnips.sum_same import sum_same
+from math_numbers.sum_same import sum_same
 
 
 class SumSameDigTests(unittest.TestCase):

@@ -7,7 +7,6 @@ class Pernicious(object):
     get the range of the number from 3 to the number, converting each to binary
     for
     """
-
     def __init__(self, number):
         self.number = number
 
@@ -31,6 +30,7 @@ class Pernicious(object):
     def is_pernicious_v3(self):
         return [x for x in range(int(self.number) + 1) if
                 bin(x).count("1") in [2, 3, 5, 7, 11, 13]] or "No pernicious numbers"
+
 
     @staticmethod
     def is_prime(num):

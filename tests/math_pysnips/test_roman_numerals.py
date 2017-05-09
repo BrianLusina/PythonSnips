@@ -1,6 +1,5 @@
 import unittest
-
-from pysnips.math_pysnips.roman_numeral import RomanNumeral
+from math_numbers.roman_numeral import RomanNumeral, numeral
 
 
 class RomanTests(unittest.TestCase):
@@ -20,7 +19,6 @@ class RomanTests(unittest.TestCase):
         roman = RomanNumeral("XVI")
         self.assertEqual(roman.translate_roman_numeral(), 16)
 
-    @unittest.skip("Test fails for unit digits less than 5")
     def test_64(self):
         roman = RomanNumeral("LXIV")
         self.assertEqual(roman.translate_roman_numeral(), 64)
@@ -48,10 +46,9 @@ class RomanTest(unittest.TestCase):
         3000: 'MMM',
     }
 
-    @unittest.skip("")
     def test_numerals(self):
         for arabic, numeral in self.numerals.items():
-            self.assertEqual(numeral, numeral(arabic))
+            self.assertEqual(numeral, roman_numerals.numeral(arabic))
 
 if __name__ == '__main__':
     unittest.main()

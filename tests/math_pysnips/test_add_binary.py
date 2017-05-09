@@ -1,4 +1,4 @@
-from pysnips.math_pysnips.binary.add_binary import add_binary
+from math_numbers.binary.add_binary import add_binary
 import unittest
 
 
