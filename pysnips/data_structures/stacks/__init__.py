@@ -1,8 +1,12 @@
 from collections import deque
+# python 2.x import sanity check
+try:
+    from Queue import LifoQueue
+except ImportError:
+    from queue import LifoQueue
 
 
-# todo: review this Stack
-class Stack(object):
+class Stack(LifoQueue):
     """
     Implementation of a Stack data structure
     """
@@ -15,6 +19,7 @@ class Stack(object):
         We use max_stack to keep our max up to date in constant time as we push() and pop():
         The same applies for min_stack
         """
+        super(Stack, self).__init__()
         self.stack = deque(maxlen=max_size)
         self.max_stack = self.get_max()
         self.min_stack = self.get_min()
