@@ -14,7 +14,7 @@ def fib(a, b, end):
 
 def fib_memo(n):
     """
-    uses memoization to reduce calculations by retrieving what has already been calculcated
+    uses memoization to reduce calculations by retrieving what has already been calculated
     :param n: number
     :return: resulting fibonacci
     """
