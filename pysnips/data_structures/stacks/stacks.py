@@ -1,4 +1,5 @@
 from data_structures.stacks import Stack
+from math import sqrt
 
 stack = Stack(6)
 stack.push("Python")
