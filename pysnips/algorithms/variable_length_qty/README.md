@@ -32,6 +32,31 @@ Here are examples of integers as 32-bit values, and the variable length quantiti
 0FFFFFFF          FF FF FF 7F
 ```
 
-## Source
+## Requirements
+ 
+You are required to create 2 functions:
 
-A poor Splice developer having to implement MIDI encoding/decoding. [https://splice.com](https://splice.com)
+1. encode
+   
+   Encodes the given number
+
+``` bash
+>>> encode([0x3fff])
+[0xff, 0x7f]
+
+>>> encode([0x4000])
+[0x81, 0x80, 0x0]
+
+```
+
+2. decode
+
+   Decodes the number
+
+``` bash
+>>> decode([0x8f, 0xff, 0xff, 0xff, 0x7f]
+[0xffffffff]
+
+>>> decode([0x81, 0x80, 0x80, 0x0] 
+[0x200000]
+```
