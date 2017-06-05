@@ -4,7 +4,7 @@ import re
 def is_email_valid(email):
     """
     Checks if a certain email address follows the given conventional pattern of
-     username@domain.extention
+     username@domain.extension
     :param email: given email address
     :return: True if the given email address is valid, False otherwise
     :rtype: bool
