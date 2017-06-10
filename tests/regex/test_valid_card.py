@@ -2,6 +2,7 @@ from pysnips.regex.valid_card import valid_card
 import unittest
 
 
+#todo: failing tests
 class ValidCardTest(unittest.TestCase):
     def test_1(self):
         self.assertEqual(valid_card("5457 6238 9823 4311"), True)

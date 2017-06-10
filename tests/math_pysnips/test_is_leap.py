@@ -1,6 +1,6 @@
 import unittest
 
-from math_numbers.is_leap import is_leap_year
+from pysnips.math_pysnips.is_leap import is_leap_year
 
 
 class YearTest(unittest.TestCase):

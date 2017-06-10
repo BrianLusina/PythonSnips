@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.digit_count import nb_dig
+from pysnips.math_pysnips.digit_count import nb_dig
 
 
 class DigTest(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_numbers.matrix import Matrix
+from pysnips.math_pysnips.matrix import Matrix
 
 
 class MatrixTest(unittest.TestCase):

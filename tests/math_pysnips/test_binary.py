@@ -6,11 +6,11 @@ function should raise a ValueError with a meaningful error message.
 """
 import unittest
 
-from math_numbers.binary.parse_binary import parse_binary
+from pysnips.math_pysnips.binary.parse_binary import parse_binary
 
 
+# todo: failing tests
 class BinaryTests(unittest.TestCase):
-
     def test_binary_1_is_decimal_1(self):
         self.assertEqual(1, parse_binary("1"))
 

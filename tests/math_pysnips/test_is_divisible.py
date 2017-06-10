@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.is_divisible import is_divisible
+from pysnips.math_pysnips.is_divisible import is_divisible
 
 
 class IsDivisibleTests(unittest.TestCase):

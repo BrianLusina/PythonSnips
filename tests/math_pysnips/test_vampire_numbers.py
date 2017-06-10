@@ -1,7 +1,8 @@
 import unittest
-from pysnips.math_numbers.vampire_numbers.vampire_numbers import vampire_test
+from pysnips.math_pysnips.vampire_numbers.vampire_numbers import vampire_test
 
 
+# todo: failing tests
 class VampireTestCases(unittest.TestCase):
     def test1(self):
         self.assertEqual(vampire_test(21, 6), True, "Basic: 21 * 6 = 126 should return True")

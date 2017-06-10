@@ -1,7 +1,8 @@
 import unittest
-from py_strings_words.palindrome_pairs import palindrome_pairs
+from pysnips.py_strings_words.palindrome_pairs import palindrome_pairs
 
 
+# todo: failing tests
 class PalindromePairsTests(unittest.TestCase):
     def test_one(self):
         self.assertEqual(palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]])

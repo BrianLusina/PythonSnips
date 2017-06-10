@@ -1,6 +1,6 @@
 import unittest
 
-from game_puzzles.scrabble import score
+from pysnips.game_puzzles.scrabble import score
 
 
 class WordTest(unittest.TestCase):

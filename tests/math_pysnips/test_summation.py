@@ -1,4 +1,4 @@
-from math_numbers.summation import summation
+from pysnips.math_pysnips.summation import summation
 import unittest
 
 

@@ -1,8 +1,9 @@
 from unittest import TestCase
 
-from math_numbers.calculate_tax import calculate_tax
+from pysnips.math_pysnips.calculate_tax import calculate_tax
 
 
+# todo: failing tests
 class CalculateTaxTests(TestCase):
     def test_it_calculates_tax_for_one_person(self):
         result = calculate_tax({"James": 20500})

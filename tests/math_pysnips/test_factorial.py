@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.factorial import Factorial
+from pysnips.math_pysnips.factorial import Factorial
 
 
 class Tests(unittest.TestCase):

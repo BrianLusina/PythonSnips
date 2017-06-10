@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.evil_or_odious import evil
+from pysnips.math_pysnips.evil_or_odious import evil
 
 
 class EvilOrOdiousTest(unittest.TestCase):
