@@ -27,6 +27,7 @@ def timing(label: str):
     # we get the final time
     t1 = perf_counter()
 
+
 with timing("Array tests") as total:
     # create the array by passing in a large list
     with timing("Array creation innermul") as inner:
@@ -40,4 +41,3 @@ with timing("Array tests") as total:
 print("Total: [%s]: %.6f s" % total())
 print("\t\tTiming: [%s]: %.6f s" % inner())
 print("\t\tTiming: [%s]: %.6f s" % outer())
-
