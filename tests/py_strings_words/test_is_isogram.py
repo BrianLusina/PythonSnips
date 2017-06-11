@@ -1,6 +1,6 @@
 import unittest
 
-from py_strings_words.isogram import is_isogram
+from pysnips.py_strings_words.isogram import is_isogram
 
 
 class Tests(unittest.TestCase):

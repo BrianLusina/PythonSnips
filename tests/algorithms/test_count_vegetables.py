@@ -31,6 +31,7 @@ lst3 = [(2, "potato"), (1, 'tofu'), (2, 'kales'), (1, 'tomatoes'), (1, 'celery')
 s3 = "potato potato tofu kales kales tomatoes celery cucumber cucumber cucumber"
 
 
+@unittest.skip
 class Tests(unittest.TestCase):
     def test1(self):
         self.assertEqual(count_vegetables(s1), lst1)
