@@ -1,3 +1,4 @@
+# todo: fix palindrome pairs
 def palindrome_pairs(words):
     m = []
     for x in range(len(words)-1, 0, -1):

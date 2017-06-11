@@ -1,9 +1,8 @@
 import unittest
 
-from pysnips.py_strings_words.isogram.is_isogram import is_isogram
+from py_strings_words.isogram import is_isogram
 
 
-# todo: failing tests
 class Tests(unittest.TestCase):
     """
     Tests the isogram function

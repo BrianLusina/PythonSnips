@@ -1,5 +1,3 @@
-from itertools import permutations
-
 
 def vampire_test(x, y):
     product = x * y
@@ -7,7 +5,7 @@ def vampire_test(x, y):
         return False
 
     for i in str(x) + str(y):
-        if i in str(x * y):
+        if i in str(product):
             return True
         else:
             return False

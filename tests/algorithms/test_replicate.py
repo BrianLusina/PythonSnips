@@ -2,7 +2,6 @@ import unittest
 from pysnips.algorithms.recursion_lab.replicate_iter import replicate_iter, replicate_recur
 
 
-# todo: failing tests
 class ReplicateIterTestCases(unittest.TestCase):
     def test_it_returns_a_list_of_replicated_numbers(self):
         result = replicate_iter(3, 5)

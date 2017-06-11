@@ -1,12 +1,10 @@
 def replicate_iter(times, data):
     if (isinstance(data, (float, int, str))) and isinstance(times, int):
+        ls = []
         if times > 0:
-            ls = [data]
-            for i in range(1, times):
+            for i in range(1, times + 1):
                 ls.append(data)
-                return ls
-            else:
-                return []
+        return ls
     else:
         raise ValueError
 

@@ -37,17 +37,22 @@ class RomanNumeral(object):
 
     :translate_roman_numeral_2, uses a ROMAN_LIST to loop through each value and number and checks
     """
-    ROMANS = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10,
-              "XX": 20, "XXX": 30,"XL": 40, "L": 50, "LX": 60, "LXX": 70, "LXXX": 80, "XC": 90,
-              "C": 100, "CC": 200, "CCC": 300, "CD": 400, "D": 500, "DC": 600, "DCC": 700, "DCCC": 800, "CM": 900,
-              "M": 1000, "MM": 2000, "MMM": 3000}
+    ROMANS = {
+        "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10,
+        "XX": 20, "XXX": 30,"XL": 40, "L": 50, "LX": 60, "LXX": 70, "LXXX": 80, "XC": 90,
+        "C": 100, "CC": 200, "CCC": 300, "CD": 400, "D": 500, "DC": 600, "DCC": 700, "DCCC": 800,
+        "CM": 900, "M": 1000, "MM": 2000, "MMM": 3000
+    }
 
-    ROMAN_LIST = [["M", 1000], ["D", 500], ["C", 100], ["XC", 90], ["L", 50], ["X", 10], ["V", 5], ["IV", 4], ["I", 1]]
+    ROMAN_LIST = [
+        ["M", 1000], ["D", 500], ["C", 100], ["XC", 90], ["L", 50], ["X", 10], ["V", 5], ["IV", 4],
+        ["I", 1]
+    ]
 
     def __init__(self, number):
         self.number = number
 
-    # test fails for roman numerals with unit digit being less than 5
+    # todo: test fails for roman numerals with unit digit being less than 5
     def translate_roman_numeral(self):
         arabic_no = 0
         if self.number in self.ROMANS:
