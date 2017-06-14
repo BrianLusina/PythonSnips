@@ -1,0 +1,1 @@
+small demonstration of logging in Python instead of using print() function
