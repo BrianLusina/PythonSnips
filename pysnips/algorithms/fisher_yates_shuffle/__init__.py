@@ -1,4 +1,8 @@
+"""
+Small demonstration on fisher yates algorithm
+"""
 import random
+
 
 def get_random(floor, ceiling):
     """
@@ -7,7 +11,7 @@ def get_random(floor, ceiling):
     """
     return random.randrange(floor, ceiling + 1)
 
-    
+
 def shuffle(the_list):
     """
     Shuffles a list in_place, this means that the input list is destroyed
@@ -29,15 +33,11 @@ def shuffle(the_list):
         # (could also be the item currently in that spot)
         # must be an item AFTER the current item, because the stuff
         # before has all already been placed
-        
+
         random_choice_index = get_random(index_we_are_choosing, last_index_in_list)
 
         # place our random choice in the spot by swapping
         if random_choice_index != index_we_are_choosing:
             the_list[index_we_are_choosing], the_list[random_choice_index] = \
                 the_list[random_choice_index], the_list[index_we_are_choosing]
-
-
-
-    
 
