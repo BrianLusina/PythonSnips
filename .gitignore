@@ -5,7 +5,7 @@ logs
 .vagrant/
 .cache/
 *.db
-
+.vscode/
 # html files
 *.html
 
