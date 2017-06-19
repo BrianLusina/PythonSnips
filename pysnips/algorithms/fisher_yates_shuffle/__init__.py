@@ -25,6 +25,19 @@ def shuffle(the_list):
 
     # walk through the list from beginning to end
     for index_we_are_choosing in range(0, last_index_in_list):
-        #
+        # choose a random not-yet-placed item to place there
+        # (could also be the item currently in that spot)
+        # must be an item AFTER the current item, because the stuff
+        # before has all already been placed
+        
+        random_choice_index = get_random(index_we_are_choosing, last_index_in_list)
+
+        # place our random choice in the spot by swapping
+        if random_choice_index != index_we_are_choosing:
+            the_list[index_we_are_choosing], the_list[random_choice_index] = \
+                the_list[random_choice_index], the_list[index_we_are_choosing]
+
+
+
     
 

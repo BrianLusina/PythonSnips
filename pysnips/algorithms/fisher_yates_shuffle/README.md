@@ -29,3 +29,11 @@ How can we adapt this to be in-place?
 What if we make our new "random" list simply be the front of our input list?
 
 The solution is outlined in the `__init__.py` file
+
+Complexity
+O(n)O(n) time and O(1)O(1) space.
+
+What We Learned
+Don't worry, most interviewers won't expect a candidate to know the Fisher-Yates shuffle algorithm. Instead, they'll be looking for the problem-solving skills to derive the algorithm, perhaps with a couple hints along the way.
+
+They may also be looking for an understanding of why the naive solution is non-uniform (some outcomes are more likely than others). If you had trouble with that part, try walking through it again.
