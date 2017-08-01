@@ -1,6 +1,6 @@
 import unittest
 import time
-from math_numbers.triangle_odd import row_sum_odd_numbers
+from pysnips.math_numbers.triangle_odd import row_sum_odd_numbers
 
 
 class TriangleTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_numbers.perfect_numbers import is_perfect
+from pysnips.math_numbers.perfect_numbers import is_perfect
 
 
 class PerfectNumbersTest(unittest.TestCase):

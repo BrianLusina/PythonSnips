@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-from math_numbers.convert_improper_fraction import convert_to_mixed_numeral
+from pysnips.math_numbers.convert_improper_fraction import convert_to_mixed_numeral
 
 
 class ConvertTests(unittest.TestCase):

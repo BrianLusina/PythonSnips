@@ -19,9 +19,3 @@ test:
     - coverage html -i
     - python-codacy-coverage -r coverage.xml
     - codecov
-
-#deployment:
-#  production:
-#    branch: master
-#    commands:
-#      - fab deploy

@@ -1,6 +1,6 @@
 import unittest
 
-from math_numbers.sieve_of_erastothenese import sieve
+from pysnips.math_numbers.sieve_of_erastothenese import sieve
 
 
 class SieveTest(unittest.TestCase):

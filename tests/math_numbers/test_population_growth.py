@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.population_growth import nb_year
+from pysnips.math_numbers.population_growth import nb_year
 
 
 class Tests(unittest.TestCase):

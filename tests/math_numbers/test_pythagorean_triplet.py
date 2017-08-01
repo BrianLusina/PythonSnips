@@ -35,7 +35,7 @@
 
 import unittest
 
-from math_numbers.pythagorean_triplet import (primitive_triplets, triplets_in_range,
+from pysnips.math_numbers.pythagorean_triplet import (primitive_triplets, triplets_in_range,
                                  is_triplet)
 
 

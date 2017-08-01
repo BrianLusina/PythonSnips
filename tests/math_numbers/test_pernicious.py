@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.pernicious import Pernicious
+from pysnips.math_numbers.pernicious import Pernicious
 
 
 class PerniciousTests(unittest.TestCase):

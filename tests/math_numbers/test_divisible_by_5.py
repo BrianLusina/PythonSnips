@@ -1,6 +1,6 @@
 import unittest
 
-from math_numbers.binary.divisible_by_5.__init__ import Divisible5
+from pysnips.math_numbers.binary.divisible_by_5.__init__ import Divisible5
 
 
 class Tests(unittest.TestCase):

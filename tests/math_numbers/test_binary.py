@@ -6,7 +6,7 @@ function should raise a ValueError with a meaningful error message.
 """
 import unittest
 
-from math_numbers.binary.parse_binary import parse_binary
+from pysnips.math_numbers.binary.parse_binary import parse_binary
 
 
 class BinaryTests(unittest.TestCase):

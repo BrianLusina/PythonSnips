@@ -1,5 +1,5 @@
 import unittest
-from math_numbers.reduce_fraction import  reduce
+from pysnips.math_numbers.reduce_fraction import  reduce
 
 
 class ReduceFractionTestss(unittest.TestCase):
