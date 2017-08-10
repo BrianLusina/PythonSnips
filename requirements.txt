@@ -4,10 +4,13 @@ astroid==1.5.3
 beautifulsoup4==4.5.3
 behave==1.2.5
 bleach==1.5.0
+blessings==1.6
+bpython==0.16
 click==6.7
 codacy-coverage==1.3.6
 codecov==2.0.5
 coverage==4.3.4
+curtsies==0.2.11
 cycler==0.10.0
 decorator==4.0.11
 entrypoints==0.2.2
@@ -17,6 +20,7 @@ ffmpy==0.2.2
 ffprobe==0.5
 fixtures==3.0.0
 fuzzywuzzy==0.15.0
+greenlet==0.4.12
 html5lib==0.9999999
 ipykernel==4.5.2
 ipython==5.1.0
@@ -49,6 +53,7 @@ parse-type==0.3.4
 pbr==2.0.0
 pexpect==4.2.1
 pickleshare==0.7.4
+pkg-resources==0.0.0
 prompt-toolkit==1.0.9
 ptyprocess==0.5.1
 py==1.4.32
@@ -64,6 +69,8 @@ pytz==2016.10
 pyzmq==16.0.2
 qtconsole==4.2.1
 requests==2.12.5
+Rx==1.5.9
+RXPY==0.1.0
 simplegeneric==0.8.1
 six==1.10.0
 sure==1.4.1
