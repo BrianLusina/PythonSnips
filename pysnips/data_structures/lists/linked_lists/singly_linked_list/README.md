@@ -96,4 +96,4 @@ Some people have trouble coming up with the "two runners" approach. That's expec
 
 Remember that the coding interview is a dialogue, and sometimes your interviewer expects she'll have to offer some hints along the way.
 
-One of the most impressive things you can do as a candidate is listen to a hint, fully understand it, and take it to its next logical step. Interview Cake gives you lots of opportunities to practice this. Don't be shy about showing lots of hints on our exercises—that's what they're there for!
+One of the most impressive things you can do as a candidate is listen to a hint, fully understand it, and take it to its next logical step.
