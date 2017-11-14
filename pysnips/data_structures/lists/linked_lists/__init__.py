@@ -186,6 +186,76 @@ class LinkedList(object):
         """
         pass
 
+    def has_cycle(self):
+        """
+        Detects if linked list has cycle, i.e. a node in the linked list points to a node already traversed.
+        Will use Floyd-Cycle Detection algorithm to check for cycles. Will have a fast and slow pointer and check if the fast pointer
+        catches up to the slow pointer. If this happens, there is a cycle. The fast pointer will move at twice the speed of slow pointer
+        :return: True if there is a cycle, False otherwise
+        :rtype: bool
+        """
+        fast_pointer = slow_pointer = self.head
+        while fast_pointer and slow_pointer and fast_pointer.next:
+            fast_pointer = fast_pointer.next.next
+            slow_pointer = slow_pointer.next
+
+            if slow_pointer == fast_pointer:
+                return True
+        return False
+
+    def remove_cycle(self):
+        """
+        Removes cycle if there exists. This will use the same concept as has_cycle method to check if there is a loop and remove the cycle
+        if one is found. 
+        1) Detect Loop using Floyd’s Cycle detection algo and get the pointer to a loop node.
+        2) Count the number of nodes in loop. Let the count be k.
+        3) Fix one pointer to the head and another to kth node from head.
+        4) Move both pointers at the same pace, they will meet at loop starting node.
+        5) Get pointer to the last node of loop and make next of it as NULL.
+        :return: True if the cycle has been removed, False otherwise
+        :rtype: bool
+        """
+        fast_pointer = slow_pointer = self.head
+
+        while fast_pointer and slow_pointer and fast_pointer.next:
+            fast_pointer = fast_pointer.next.next
+            slow_pointer = slow_pointer.next
+        
+            if slow_pointer == fast_pointer:
+                pointer_1 = pointer_2 = slow_pointer
+                
+                # Count the number of nodes in loop
+                k = 1
+                while(pointer_1.next != pointer_2):
+                pointer_1 = pointer_1.next
+                k += 1
+ 
+            # Fix one pointer to head
+            pointer_1 = self.head
+         
+            # And the other pointer to k nodes after head
+            pointer_2 = self.head
+            for i in range(k):
+                pointer_2 = pointer_2.next
+ 
+            # Move both pointers at the same place
+            # they will meet at loop starting node
+            while(pointer_2 != pointer_1):
+                pointer_1 = pointer_1.next
+                pointer_2 = pointer_2.next
+ 
+            # Get pointer to the last node
+            pointer_2 = pointer_2.next
+            while(pointer_2.next != pointer_1):
+                pointer_2 = pointer_2.next
+ 
+            # Set the next node of the loop ending node
+            # to fix the loop
+            pointer_2.next = None
+            return True
+
+        return False
+
     def __str__(self):
         """
         :return: String presentation of LinkedList
