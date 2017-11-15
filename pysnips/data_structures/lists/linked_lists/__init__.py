@@ -227,9 +227,9 @@ class LinkedList(object):
                 # Count the number of nodes in loop
                 k = 1
                 while(pointer_1.next != pointer_2):
-                pointer_1 = pointer_1.next
-                k += 1
- 
+                    pointer_1 = pointer_1.next
+                    k += 1
+
             # Fix one pointer to head
             pointer_1 = self.head
          
