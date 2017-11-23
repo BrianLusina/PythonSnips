@@ -33,6 +33,32 @@ class BinaryTreeNode(object):
         else:
             self.right_child = BinaryTreeNode(value)
 
+    @staticmethod
+    def is_binary_search_tree(value):
+        """
+        Checks if a binary search tree is valid. A value of None is a valid Binary Search Tree
+        :param: value Root node to use to check for validity
+        :rtype: bool
+        :return: Boolean True if valid, False otherwise
+        """
+        if value is None:
+            return True
+
+        stack = [(float("-inf"), value, float("inf"))]
+
+        while stack:
+            mind, node, maxd = stack.pop()
+
+            if not (mind < node.data < maxd):
+                return False
+
+            if node.left is not None:
+                stack.append((mind, node.left, node.data))
+
+            if node.right is not None:
+                stack.append((node.data, node.right, maxd))
+        return True
+
     def search_node(self, value):
         """
         Searches for the given value in a binary search tree. If the value exists in the tree, then True is returned, else false
