@@ -26,7 +26,7 @@ class Block(object):
         This creates a hash for the current block
         """
         return sha256(str(self.index) + str(self.timestamp) +
-                self.previous_hash + dumps(self.data)).hexdigest()
+                self.previous_hash + str(dumps(self.data).encode("utf-8"))).hexdigest()
 
     def __repr__(self):
         return "Block:{} => [Created at: {}, Data: {}, Previous Hash: {}, Hash: {}]".format(self.index, self.timestamp, self.data,
@@ -91,13 +91,14 @@ class BlockChain(object):
 
 if __name__ == "__main__":
     block_chain = BlockChain()
-    block_chain.add_block(Block(1, datetime.now(), {"account": "Anna","amount": 25,"action": "buy"}))
-    block_chain.add_block(Block(2, datetime.now(), {"account": "Joe","amount": 10,"action": "buy"}))
-    block_chain.add_block(Block(3, datetime.now(), {"account": "Katie","amount": 20,"action": "buy"}))
-    block_chain.add_block(Block(4, datetime.now(), {"account": "Ethan","amount": 4,"action": "buy"}))
+    block_chain.add_block(Block(1, datetime.now(), {"account": "Anna", "amount": 25, "action": "buy"}))
+    block_chain.add_block(Block(2, datetime.now(), {"account": "Joe", "amount": 10, "action": "buy"}))
+    block_chain.add_block(Block(3, datetime.now(), {"account": "Katie", "amount": 20, "action": "buy"}))
+    block_chain.add_block(Block(4, datetime.now(), {"account": "Ethan" "amount": 4, "action": "buy"}))
     block_chain.print_block_chain()
     # no tampering in our block chain yet so should be true here
     print("Chain valid? " + str(block_chain.is_chain_valid()))
     # now lets tamper the block chain and see what happens
-    block_chain.chain[1].data = {"account": "Anna","amount": 100,"action": "buy"}
+    block_chain.chain[1].data = {"account": "Anna", "amount": 100, "action": "buy"}
     print("Chain valid? " + str(block_chain.is_chain_valid()))
+
