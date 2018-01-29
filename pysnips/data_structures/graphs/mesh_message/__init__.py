@@ -1,4 +1,5 @@
-import Queue from Queue
+from queue import Queue
+
 
 def shortest_path_(graph, start_node, end_node):
     """
@@ -34,7 +35,7 @@ def shortest_path_(graph, start_node, end_node):
             return reconstruct_path(how_we_reached_nodes, start_node, end_node)
 
         for neighbor in graph[current_node]:
-            if neigbor not in how_we_reached_nodes:
+            if neighbor not in how_we_reached_nodes:
                 how_we_reached_nodes[neighbor] = current_node
                 nodes_to_visit.put(neighbor)
             
