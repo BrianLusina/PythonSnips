@@ -1,13 +1,12 @@
-# todo: fix palindrome pairs
 def palindrome_pairs(words):
-    m = []
-    for x in range(len(words)-1, 0, -1):
-        for i in range(x):
-            if is_palindrome(str(words[i]) + str(words[i+1])):
-                w1 = words[i]
-                w2 = words[i + 1]
-                m.append([words.index(w1), words.index(w2)])
-    return m
+    words = [str(word) for word in words]
+
+    return[
+        [i, j]
+        for i, word_i in enumerate(words)
+        for j, word_j in enumerate(words)
+        if i != j and is_palindrome(word_i + word_j)
+    ]
 
 
 def is_palindrome(a):
