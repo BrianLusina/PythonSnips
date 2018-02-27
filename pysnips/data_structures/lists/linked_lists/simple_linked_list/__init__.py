@@ -15,7 +15,9 @@ class LinkedList(object):
 
     def reversed(self):
         pass
-        
+    
+    def __len__(self):
+        return len(self.data) if self.data else 0
     
 
     
