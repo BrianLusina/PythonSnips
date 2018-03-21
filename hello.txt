@@ -1,0 +1,1 @@
+writing from custom context manager with decoratoralrigh,bye
