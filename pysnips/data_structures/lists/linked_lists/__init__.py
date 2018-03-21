@@ -1,3 +1,4 @@
+# coding=utf-8
 from abc import ABCMeta, abstractmethod
 
 
@@ -235,7 +236,7 @@ class LinkedList(object):
          
             # And the other pointer to k nodes after head
             pointer_2 = self.head
-            for i in range(k):
+            for _ in range(k):
                 pointer_2 = pointer_2.next
  
             # Move both pointers at the same place
