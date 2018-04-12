@@ -19,7 +19,7 @@ CODON_MAP = {
 }
 
 def of_codon(codon):
-    return CODON_MAP[codon]
+    return CODON_MAP.get(codon, None)
 
 def of_rna(strand):
     proteins = []
@@ -27,7 +27,7 @@ def of_rna(strand):
 
     for x in range(0, l, 3):
         rna = strand[x: x + 3]
-        codon = CODON_MAP.get(rna, None)
+        codon = of_codon(rna)
         if codon:
             if codon == "STOP":
                 break
