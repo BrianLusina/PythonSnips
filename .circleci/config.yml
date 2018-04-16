@@ -35,12 +35,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test --cover
-            - coverage run --source pysnips -m py.test tests/
-            - coverage xml -i
-            - coverage html -i
-            - python-codacy-coverage -r coverage.xml
-            - codecov
+            - py.test tests
 
       - store_artifacts:
           path: test-reports
