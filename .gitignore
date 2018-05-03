@@ -6,7 +6,7 @@ logs
 .cache/
 *.db
 .vscode/
-
+.envrc
 # html files
 *.html
 
