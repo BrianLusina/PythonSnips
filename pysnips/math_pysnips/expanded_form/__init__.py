@@ -15,3 +15,16 @@ def expanded_form(num):
         length -= 1
 
     return " + ".join(result)
+
+
+def expanded_form_2(num):
+    """Second implementation of expanded form"""
+    result = []
+    for a in range(len(str(num)) - 1, -1, -1):
+        current = 10 ** a
+        quo, num = divmod(num, current)
+
+        if quo:
+            result.append(str(quo * current))
+
+    return " + ".join(result)
