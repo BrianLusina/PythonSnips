@@ -57,3 +57,4 @@ if __name__ == "__main__":
     build = build_one_two_three()
 
     print(length(build))
+    print(count(build, 3))
