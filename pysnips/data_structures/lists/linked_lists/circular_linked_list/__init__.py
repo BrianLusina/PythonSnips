@@ -1,4 +1,4 @@
-from data_structures.lists.linked_lists import LinkedList, Node
+from pysnips.data_structures.lists.linked_lists import LinkedList, Node
 
 
 class CircularNode(Node):

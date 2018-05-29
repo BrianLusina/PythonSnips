@@ -12,13 +12,12 @@ class Node(object):
         self.value = value
         self.next = next_
 
-    @abstractmethod
     def get_next(self):
         """
         Get the next node
         :return:
         """
-        pass
+        return self.next
 
     @staticmethod
     def has_next(node):
@@ -50,6 +49,21 @@ class LinkedList(object):
         """
         pass
 
+    def __len__(self):
+        """
+        Implements the len() for a linked list. This counts the number of nodes in a Linked List
+        This uses an iterative method to find the length of the LinkedList
+        :return: Number of nodes
+        :rtype: int
+        """
+        temp = self.head
+        count = 0
+
+        while temp:
+            count += 1
+            temp = temp.next
+        return count
+
     def search(self, node):
         """
         Search method to search for a node in the LinkedList
@@ -65,6 +79,23 @@ class LinkedList(object):
             if head.data == node:
                 return head
         return None
+
+    def count(self, data):
+        """
+        Counts the number of occurrences of a data in a LinkedList
+        :param data: Data to count
+        :return:
+        """
+        if self.head is None:
+            return 0
+        else:
+            count_ = 0
+            temp = self.head
+            while temp:
+                if temp.next == data:
+                    count_ += 1
+                temp = temp.next
+            return count_
 
     @staticmethod
     def get_last():

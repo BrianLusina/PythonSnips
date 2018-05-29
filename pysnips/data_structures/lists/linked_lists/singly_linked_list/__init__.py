@@ -1,4 +1,4 @@
-from data_structures.lists.linked_lists import LinkedList, Node
+from pysnips.data_structures.lists.linked_lists import LinkedList, Node
 
 
 class SingleNode(Node):
@@ -10,9 +10,6 @@ class SingleNode(Node):
         super().__init__(next_)
         self.value = value
         self.next = next_
-
-    def get_next(self):
-        return self.next
 
 
 class SinglyLinkedList(LinkedList):
