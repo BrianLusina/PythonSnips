@@ -13,10 +13,11 @@ class BinaryTreeNode(object):
     
     def insert_node(self, value):
         """
-        Inserts a node using a Binary Search approach, where every value insert will be inserted to either the left or right based on whether
-        the value is greater than the root node. if the value is greater than the root node, then the value will be inserted to the right. If 
-        the value is less than the root node, then the insertion will be to the left of the root Node. This will apply for subsequent children of the
-        root node and will be recursive.
+        Inserts a node using a Binary Search approach, where every value insert will be inserted to either the left or
+        right based on whether the value is greater than the root node. if the value is greater than the root node,
+        then the value will be inserted to the right. If  the value is less than the root node, then the insertion
+        will be to the left of the root Node. This will apply for subsequent children of the root node and will
+        be recursive.
         Assumption made here is that value insertions are int type
         :param: value, value to insert
         """
@@ -31,7 +32,7 @@ class BinaryTreeNode(object):
             self.right.insert_node(value)
 
         else:
-            self.right_child = BinaryTreeNode(value)
+            self.right = BinaryTreeNode(value)
 
     @staticmethod
     def is_binary_search_tree(value):
@@ -61,15 +62,16 @@ class BinaryTreeNode(object):
 
     def search_node(self, value):
         """
-        Searches for the given value in a binary search tree. If the value exists in the tree, then True is returned, else false
+        Searches for the given value in a binary search tree. If the value exists in the tree, then True is returned,
+        else false
         :param value the value to search for
         :rtype: bool
         """
         # check if the value is less than the root node and recursively check on the left of the tree
         if value < self.value and self.left:
             return self.left.search_node(value)
-        # check if the current value is greater than the root node and that the right node exist, then proceed to the right
-        # to perform the search
+        # check if the current value is greater than the root node and that the right node exist,
+        # then proceed to the right to perform the search
         if value > self.value and self.right:
             return self.right.search_node(value)
         # if the root node is equal to the value, then return True if they are equal
@@ -77,8 +79,8 @@ class BinaryTreeNode(object):
     
     def delete_node(self, value, parent):
         """
-        Deletes a node from the tree if present and return result of deletion, True if the delete was successful and False if the deletion was
-        unsuccessful, 
+        Deletes a node from the tree if present and return result of deletion, True if the delete was successful and
+        False if the deletion was unsuccessful,
         :param value Value we want to delete from the tree
         :param parent
         :rtype: bool True if the deletion was a success, false otherwise
@@ -145,8 +147,6 @@ class BinaryTreeNode(object):
         else:
             return self.value
 
-
-
     def insert_left(self, value):
         """
         Inserts a new value(node) to the left of the current node and return the newly created node
@@ -167,9 +167,8 @@ class BinaryTreeNode(object):
     def insert_right(self, value):
         """
         Inserts a value to the right of the current node. This will check if the current node has a right child already
-        and insert this node as the new right node of the current node and move the previous node (if not None) to become the
-        new right node of the newly created node.
-        This will then return the newly inserted node value
+        and insert this node as the new right node of the current node and move the previous node (if not None) to
+        become the new right node of the newly created node. This will then return the newly inserted node value
         :param value value used to create a new node
         :rtype: BinaryTreeNode
         """
@@ -183,9 +182,10 @@ class BinaryTreeNode(object):
 
     def pre_order(self):
         """
-        Type of Depth First Traversal (DFS) for binary trees which will start at root node and proceed to the left value and print it until
-        it reaches the leaf(node with no more children) and then backtrack to the node and check if the current node has a right child and print
-        it. This will continue until all nodes have been tracked and printed.
+        Type of Depth First Traversal (DFS) for binary trees which will start at root node and proceed to the left
+        value and print it until it reaches the leaf(node with no more children) and then backtrack to the node and
+        check if the current node has a right child and print it. This will continue until all nodes have been
+        tracked and printed.
         """
         print("Value: {}".format(self.value))
 
@@ -197,10 +197,11 @@ class BinaryTreeNode(object):
 
     def in_order(self):
         """
-        Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree. This type of search will
-        begin at the left node and check if that node has a left child and continually check until that left node is a leaf(has no children)
-        and will then print its value and "bubble up" back to the current node and execute that (in this case print it) and then print the right
-        node. The same procedure is executed for the right side of the tree.
+        Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree.
+        This type of search will begin at the left node and check if that node has a left child and continually check
+        until that left node is a leaf(has no children) and will then print its value and "bubble up" back to the
+        current node and execute that (in this case print it) and then print the right node. The same procedure is
+        executed for the right side of the tree.
         """
         if self.left:
             self.left.in_order()
@@ -212,7 +213,8 @@ class BinaryTreeNode(object):
 
     def post_order(self):
         """
-        Post order is a another kind of Depth First Search (DFS) algorithm that will search the tree from the left first, then the right first before
+        Post order is a another kind of Depth First Search (DFS) algorithm that will search the tree from the left first
+         then the right first before
         then proceeding to the middle last, in this case, the root node
         """
         if self.left:
@@ -243,9 +245,3 @@ class BinaryTreeNode(object):
 
             if current_node.right:
                 queue.put(current_node.right)
-
-
-
-
-
-
