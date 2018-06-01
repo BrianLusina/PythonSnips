@@ -1,0 +1,12 @@
+from unittest import TestCase, main
+from pysnips.math_pysnips.cyclic_primes import find_number_of_cyclic_primes
+
+
+class CyclicPrimesTest(TestCase):
+
+    def test_upto_limit_100(self):
+        self.assertEqual(find_number_of_cyclic_primes(2, 100), 13)
+
+
+if __name__ == "__main__":
+    main()
