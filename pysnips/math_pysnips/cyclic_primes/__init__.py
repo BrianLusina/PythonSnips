@@ -37,3 +37,8 @@ def is_prime_cyclic(prime):
             if not is_prime(number):
                 return False
         return True
+
+
+def rotate(num):
+    n = str(num)
+    return n[1:] + n[:1]
