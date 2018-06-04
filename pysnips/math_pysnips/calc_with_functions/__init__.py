@@ -1,3 +1,6 @@
+import operator
+
+
 def zero(operation=None):
     if operation is None:
         return 0
@@ -58,7 +61,7 @@ def nine(operation=None):
 
 
 def plus(number):
-    pass
+    return operator.add(number())
 
 
 def minus(number):

@@ -12,8 +12,9 @@ def fibonacci(num):
 def memoize(func):
     """
     Custom memo function that will cache results of the function
-    This will take in the func argument and create an inner function that will perform the calculations. This will check the cache 
-    for the result and if the arguments do not exist, the function is called and new result is created and stored
+    This will take in the func argument and create an inner function that will perform the calculations.
+    This will check the cache for the result and if the arguments do not exist, the function is called and new result
+    is created and stored
     :param: func Function to memoize
     :return: function
     :rtype: func
