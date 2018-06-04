@@ -1,6 +1,5 @@
 from ..is_prime import is_prime
 from ..sieve_of_erastothenese import sieve
-from itertools import permutations
 
 
 def find_number_of_cyclic_primes(start, limit):
@@ -30,11 +29,12 @@ def is_prime_cyclic(prime):
         return False
     else:
         # rotate the prime number
-        rotations = permutations(str(prime))
+        number_str = str(prime)
+        rotations = len(number_str) - 1
 
-        for rot in rotations:
-            number = int("".join(rot))
-            if not is_prime(number):
+        for _ in range(rotations):
+            number_str = number_str[-1] + number_str[:-1]
+            if not is_prime(int(number_str)):
                 return False
         return True
 
