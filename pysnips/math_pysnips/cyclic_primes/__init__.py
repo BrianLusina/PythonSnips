@@ -2,12 +2,13 @@ from ..is_prime import is_prime
 from ..sieve_of_erastothenese import sieve
 
 
-def find_number_of_cyclic_primes(start, limit):
+def find_cyclic_primes(start, limit):
     """
-    Find the number of cyclic primes within the range or 0 to the given limit
-    :param limit: Limit to find cyclic primes to
-    :param start: the range to start from
-    :return: Integer with the number of primes within the given range
+    Finds all cyclic primes in a given range
+    :param start: Start of range
+    :param limit: Limit to find the cyclic primes
+    :return: List of all cyclic primes
+    :rtype: list
     """
     all_primes = sieve(limit, start)
     cyclic_primes = []
@@ -16,7 +17,28 @@ def find_number_of_cyclic_primes(start, limit):
         if is_prime_cyclic(prime):
             cyclic_primes.append(prime)
 
-    return len(cyclic_primes)
+    return cyclic_primes
+
+
+def find_number_of_cyclic_primes(start, limit):
+    """
+    Find the number of cyclic primes within the range or 0 to the given limit
+    :param limit: Limit to find cyclic primes to
+    :param start: the range to start from
+    :return: Integer with the number of primes within the given range
+    """
+    return len(find_cyclic_primes(start, limit))
+
+
+def find_sum_of_cyclic_primes(start, limit):
+    """
+    Finds the number of cyclic primes in a given range
+    :param start: Where start is the start of the range
+    :param limit: Limit is the end of the range
+    :return: sum of cyclic primes in a given range
+    :rtype: int
+    """
+    return sum(find_cyclic_primes(start, limit))
 
 
 def is_prime_cyclic(prime):
