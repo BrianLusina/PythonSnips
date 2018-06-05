@@ -37,5 +37,12 @@ class PrimeFactorsTest(unittest.TestCase):
     def test_93819012551(self):
         self.assertEqual([11, 9539, 894119], prime_factors(93819012551))
 
+    def test_13195(self):
+        self.assertEqual([5, 7, 13, 29], prime_factors(13195))
+
+    def test_600851475143(self):
+        self.assertEqual([71, 839, 1471, 6857], prime_factors(600851475143))
+
+
 if __name__ == '__main__':
     unittest.main()
