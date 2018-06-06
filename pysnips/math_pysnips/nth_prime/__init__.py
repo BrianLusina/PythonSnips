@@ -1,5 +1,5 @@
-from math import sqrt
 from itertools import count
+from pysnips.math_pysnips.is_prime import is_prime
 
 
 def nth_prime(n):
@@ -8,20 +8,6 @@ def nth_prime(n):
     """
     known = []
     candidates = primes()
-
-    def is_prime(num):
-        """
-        Checks if num is a prime Number
-        :param num: number to check for primarity
-        :return boolean
-        """
-        m = sqrt(num)
-        for k in known:
-            if k > m:
-                return True
-            elif num % k == 0:
-                return False
-        return True
 
     while len(known) < n:
         x = next(candidates)

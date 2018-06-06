@@ -17,6 +17,9 @@ class NthPrimeTests(unittest.TestCase):
     def test_prime_no_10000(self):
         self.assertEqual(104729, nth_prime(10000))
 
+    def test_10001st_prime(self):
+        self.assertEqual(104743, nth_prime(10001))
+
 
 if __name__ == '__main__':
     unittest.main()
