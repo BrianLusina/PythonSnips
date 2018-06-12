@@ -1,1 +1,0 @@
-Math dealing with triangles

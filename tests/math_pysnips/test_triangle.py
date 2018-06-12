@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.math_pysnips.triangle import Triangle, TriangleError
+from pysnips.math_pysnips.triangles.triangle import Triangle, TriangleError
 from math import sqrt
 
 
