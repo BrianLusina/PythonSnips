@@ -1,26 +1,40 @@
-def sort_array(source_array):
+from collections import deque
+from cProfile import Profile, run
+
+
+def sort_array(arr):
     """
-    loop through array checking for odd and even numbers,
-    if number is odd, look for th next odd number and compare them,
-    if the previous is greater than the next, swap them
-    leave the even numbers in place
-    :param source_array:Array of integers to sort
-    :return: the sorted array
+    Sorts only the odd numbers leaving the even numbers in place
+    :param: arr Array of numbers
+    :return sorted numbers with only the odds sorted by value and evens retain their place
     :rtype: list
     """
+    odds = sorted([x for x in arr if x % 2], reverse=True)
+    return [x if x % 2 == 0 else odds.pop() for x in arr]
 
-    if len(source_array) == 0:
-        return source_array
-    for num in range(len(source_array), -1, -1):
-        for x in range(num):
-            # check if both the current and the next numbers are odd
-            if source_array[x] % 2 != 0 and source_array[x + 1] % 2 != 0:
 
-                # if true, check if the current is greater than the next
-                # swap their positions
-                if source_array[x] > source_array[x + 1]:
-                    curr = source_array[x]
-                    source_array[x] = source_array[x + 1]
-                    source_array[x + 1] = curr
+def sort_array_2(arr):
+    """
+    Another variation of sorting odd numbers and leaving even numbers in place.
+    This uses deque to increases performances on pop operations on the sorted odds array
+    :param: arr Array of numbers
+    :return: List of numbers having only the odd numbers sorted
+    :rtype: list
+    """
+    sorted_odds = deque(sorted(x for x in arr if x % 2))
+    return [x if x % 2 == 0 else sorted_odds.popleft() for x in arr]
 
-    return source_array
+
+if __name__ == "__main__":
+    profile = Profile()
+    source_array = [1, 3, 4, 5, 6, 7, 8, 9, 2, 3, 5, 6, 8, 9, 0]
+    print(f"Sorted array of {source_array} using implementation 2 is {sort_array(source_array)}")
+    print(f"Profile stats for 1st implementation")
+    run("sort_array(source_array)")
+    print(f"{'-' * 100}")
+    print(f"Sorted array of {source_array} using implementation 3 is {sort_array_2(source_array)}")
+    print(f"Profile stats for 2nd implementation")
+    run("sort_array(source_array)")
+
+
+

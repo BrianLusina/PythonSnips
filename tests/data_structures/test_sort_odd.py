@@ -3,8 +3,6 @@ from pysnips.data_structures.lists.sort_odd import sort_array
 
 
 class SortTestCases(unittest.TestCase):
-    # todo: fix failing test
-    @unittest.skip
     def test_one(self):
         self.assertEqual(sort_array([5, 3, 2, 8, 1, 4]), [1, 3, 2, 8, 5, 4])
 
