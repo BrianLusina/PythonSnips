@@ -1,7 +1,10 @@
 """
 Finds the maximum sub-array in an array
 """
-from collections import Iterable
+try:
+    from collections import Iterable
+except ImportError:
+    from collections.abc import Iterable
 try:
     from sys import maxsize as maxint
 except ImportError:
