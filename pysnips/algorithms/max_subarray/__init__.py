@@ -24,6 +24,9 @@ def find_max_sub_array(array):
     if array is None or not isinstance(array, Iterable):
         raise ValueError(f"Expected an iterable instead found {array}")
 
+    if len(array) == 0:
+        return 0
+
     max_so_far = -maxint - 1
     max_ending = 0
 
