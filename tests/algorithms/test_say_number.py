@@ -58,12 +58,16 @@ class SayTest(unittest.TestCase):
     def test_zero(self):
         self.assertEqual("zero", say(0))
 
+    def test_115(self):
+        self.assertEqual("one hundred and fifteen", say(115))
+
     def test_987654321123(self):
         self.assertEqual("nine hundred and eighty-seven billion " +
                          "six hundred and fifty-four million " +
                          "three hundred and twenty-one thousand " +
                          "one hundred and twenty-three",
                          say(987654321123))
+
 
 if __name__ == '__main__':
     unittest.main()
