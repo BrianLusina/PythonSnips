@@ -34,9 +34,9 @@ def say(number, recurse=False):
     thousands, millions, billions, trillions = 1e3, 1e6, 1e9, 1e12
 
     if number < 0:
-        raise AttributeError('number is negative')
+        raise ValueError('number is negative')
     if number >= trillions:
-        raise AttributeError('number is too large: %s' % str(number))
+        raise ValueError('number is too large: %s' % str(number))
 
     if number < 20:
         return ones_teens[number] if not recurse else 'and ' + ones_teens[number]
@@ -50,11 +50,7 @@ def say(number, recurse=False):
         if number % 100 == 0:
             return ones_teens[number // 100] + ' hundred'
 
-        remainder = number % 100
-        if remainder in ones_teens:
-            return ones_teens[number // 100] + ' hundred ' + say(remainder, True)
-
-        return ones_teens[number // 100] + ' hundred and ' + say(remainder, True)
+        return ones_teens[number // 100] + ' hundred and ' + say(number % 100)
 
     if number < millions:
         if number % thousands == 0:

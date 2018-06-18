@@ -5,6 +5,15 @@ from pysnips.algorithms.say_number import say
 
 class SayTest(unittest.TestCase):
 
+    def setUp(self):
+        try:
+            self.assertRaisesRegex
+        except AttributeError:
+            self.assertRaisesRegex = self.assertRaisesRegexp
+
+    def assertRaisesWithMessage(self, exception):
+        return self.assertRaisesRegex(exception, r".+")
+
     def test_one(self):
         self.assertEqual("one", say(1))
 
@@ -48,11 +57,11 @@ class SayTest(unittest.TestCase):
         self.assertEqual("one billion", say(1e9))
 
     def test_number_to_large(self):
-        with self.assertRaises(AttributeError):
+        with self.assertRaisesWithMessage(ValueError):
             say(1e12)
 
     def test_number_negative(self):
-        with self.assertRaises(AttributeError):
+        with self.assertRaisesWithMessage(ValueError):
             say(-42)
 
     def test_zero(self):
@@ -67,6 +76,10 @@ class SayTest(unittest.TestCase):
                          "three hundred and twenty-one thousand " +
                          "one hundred and twenty-three",
                          say(987654321123))
+
+    def test_number_too_large(self):
+        with self.assertRaisesWithMessage(ValueError):
+            say(1e12)
 
 
 if __name__ == '__main__':
