@@ -1,4 +1,4 @@
-from math import factorial as math_factorial
+from math import factorial as math_factorial, sqrt, pi, e
 from functools import wraps
 
 
@@ -20,6 +20,18 @@ def memodict(f):
             ret = self[key] = f(key)
             return ret
     return memodict().__getitem__
+
+
+def stirling_approximation(num):
+    """
+    Uses Stirling approximation to find the factorial of a number. Will NOT return the exact factorial, but an
+    approximation of it
+    :param num: Number to get factorial of
+    :type num int
+    :return: Factorial approximation of num
+    :rtype: float
+    """
+    return sqrt(2 * pi * num) * ((num / e) ** num)
 
 
 # @memoize
