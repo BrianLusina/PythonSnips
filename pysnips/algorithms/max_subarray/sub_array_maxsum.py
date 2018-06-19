@@ -2,8 +2,10 @@ try:
     from collections import Iterable
 except ImportError:
     from collections.abc import Iterable
+from collections import defaultdict
 
 
+# TODO
 def find_sub_arr_maxsum(array):
     """
     Finds the sub array with the maximum value
@@ -28,12 +30,10 @@ def find_sub_arr_maxsum(array):
     if len(array) == 0:
         return [[], 0]
 
-    result = []
-
     current_max = 0
     maximum = 0
 
-    sub_array_dict = dict()
+    sub_array_dict = defaultdict(lambda: [])
 
     for x in range(len(array)):
         maximum = maximum + array[x]
