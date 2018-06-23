@@ -1,37 +1,4 @@
-from pysnips.math_pysnips.perfect_numbers import divisor_generator
-
-
-def is_deficient(n):
-    """
-    Checks if a number is deficient, i.e. has sum of divisors that is less than n
-    Example:
-
-    >>> is_deficient(35)
-    True
-
-    :param n: Number to check for deficiency
-    :type n int
-    :return: True if the sum is less than the number, False otherwise
-    :rtype: bool
-    """
-
-    return sum(divisor_generator(n)) + 1 < n
-
-
-def is_abundant(n):
-    """
-    Checks if a number is abundant, i.e. has sum of divisors that exceed n
-    Example:
-
-    >>> is_abundant(12)
-    True
-
-    :param n: Number to check for abundancy
-    :type n int
-    :return: True if the sum exceeds the number, False otherwise
-    :rtype: bool
-    """
-    return sum(divisor_generator(n)) + 1 > n
+from pysnips.math_pysnips.abundant_numbers import is_abundant
 
 
 def find_sum_cant_be_written(lower_limit, upper_limit):
