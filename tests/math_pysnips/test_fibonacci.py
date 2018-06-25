@@ -1,9 +1,8 @@
 import unittest
-from pysnips.math_pysnips.xbonacci.fibonacci import fib, fib_memo
-from timeit import timeit
+from pysnips.math_pysnips.xbonacci.fibonacci import fib
 
 
-class MyTestCase(unittest.TestCase):
+class FibonacciTestCase(unittest.TestCase):
     def test1(self):
         self.assertEquals(fib(0, 1, 1), [0, 1, 1])
 
