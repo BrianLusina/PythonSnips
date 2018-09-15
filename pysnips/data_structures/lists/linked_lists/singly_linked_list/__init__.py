@@ -68,7 +68,19 @@ class SinglyLinkedList(LinkedList):
         pass
 
     def insert(self, node, pos):
-        pass
+        counter = 1
+        current = self.head
+
+        if pos > 1:
+            while current and counter < pos:
+                if counter == pos - 1:
+                    node.next = current.next
+                    current.next = node
+                current = current.next
+                counter += 1
+        elif pos == 1:
+            node.next = self.head
+            self.head = node
 
     def display(self):
         print("Displaying data...")

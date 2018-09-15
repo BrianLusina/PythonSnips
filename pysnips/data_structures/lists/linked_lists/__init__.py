@@ -111,6 +111,45 @@ class LinkedList(object):
         # return last_node
         pass
 
+    def delete_first(self):
+        """
+        Delete the first node in the linked list
+        :return:
+        """
+        if self.head:
+            deleted_element = self.head
+            temp = deleted_element.next
+            self.head = temp
+            return deleted_element
+        else:
+            return None
+
+    def get_position(self, position):
+        """
+        Returns the current node in the linked list if the current position of the node is equal to the position. Assume
+        counting starts from 1
+        :param position: Used to get the node at the given position
+        :type position int
+        :raises ValueError
+        :return: Node
+        :rtype: Node
+        """
+        if position < 0 or not isinstance(position, int):
+            raise ValueError("Position should be a positive integer")
+        counter = 1
+        current = self.head
+
+        if position == 0 and current is not None:
+            return current
+        if position < 1 and current is None:
+            return None
+        while current and counter <= position:
+            if counter == position:
+                return current
+            current = current.next
+            counter += 1
+        return None
+
     def is_empty(self):
         """
         Check if the linked list is empty, essentially if the linked list's head's successor is None
@@ -136,10 +175,11 @@ class LinkedList(object):
         Insert node at a particular position in the list
         :param node: node to insert
         :param pos: position to insert the node
+        :type pos int
         :return: inserted node in the list along with the predecessor and successor
-        :rtype: Node object
+        :rtype: Node
         """
-        pass
+        raise NotImplementedError()
 
     @staticmethod
     def insert_after(node_to_insert, current_node):
