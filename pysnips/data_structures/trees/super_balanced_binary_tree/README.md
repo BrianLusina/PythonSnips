@@ -6,7 +6,7 @@ A tree is "superbalanced" if the difference between the depths of any two leaf n
 
 is no greater than one.
 
-[Reference](https://www.interviewcake.com/question/python/balanced-binary-tree?utm_source=weekly_email&utm_campaign=weekly_email&utm_medium=email)
+[Reference](https://www.interviewcake.com/question/python/balanced-binary-tree)
 
 We do a depth-first walk through our tree, keeping track of the depth as we go. When we find a leaf, we throw its depth into a list of depths if we haven't seen that depth already.
 

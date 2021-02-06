@@ -18,7 +18,7 @@ Simply making sure each opener has a corresponding closer is not enough—we mus
 
 For example, "{ [ ( ] ) }" should return False, even though each opener can be matched to a closer.
 
-We can do this in O(n)O(n) time and space. One iteration is all we need!
+We can do this in O(n) time and space. One iteration is all we need!
 
 ## Breakdown
 We can use a greedy ↴
@@ -68,7 +68,7 @@ If we see a closer, we check to see if it is the closer for the opener at the to
 If we finish iterating and our stack is empty, we know every opener was properly closed.
 
 ## Complexity
-`O(n)`O(n) time (one iteration through the string), and O(n)O(n) space (in the worst case, all of our characters are openers, so we push them all onto the stack).
+`O(n)` time (one iteration through the string), and O(n) space (in the worst case, all of our characters are openers, so we push them all onto the stack).
 
 ## Bonus
 In Ruby, sometimes expressions are surrounded by vertical bars, "|like this|". Extend your validator to validate vertical bars. Careful: there's no difference between the "opener" and "closer" in this case—they're the same character!
