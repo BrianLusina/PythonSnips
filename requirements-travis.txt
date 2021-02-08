@@ -3,7 +3,7 @@ appdirs==1.4.3
 astroid==1.5.3
 beautifulsoup4==4.5.3
 behave==1.2.5
-bleach==1.5.0
+bleach==3.3.0
 blessings==1.6
 bpython==0.16
 click==6.7
@@ -27,7 +27,7 @@ ipython==5.1.0
 ipython-genutils==0.1.0
 ipywidgets==5.2.2
 isort==4.2.15
-Jinja2==2.9.4
+Jinja2==2.11.3
 jsonschema==2.5.1
 jupyter==1.0.0
 jupyter-client==4.4.0
