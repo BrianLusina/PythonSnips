@@ -23,4 +23,16 @@ def cyclic_rotation(a: list, k: int) -> list:
             output[new_index] = value
     
     return output
-        
+
+def cyclic_rotation_2(nums: list, k: int) -> list:
+    """
+    This modifies the array nums in place though
+    """
+    length = len(nums)
+
+    if length == 0:
+        return nums
+
+    k = k % length
+    nums[:] = nums[length - k:] + nums[:length - k]
+    return nums
