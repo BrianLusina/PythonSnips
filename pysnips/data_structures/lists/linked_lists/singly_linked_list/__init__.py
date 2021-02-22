@@ -62,7 +62,39 @@ class SinglyLinkedList(LinkedList):
         pass
 
     def reverse(self):
-        pass
+        """
+        Uses an iterative approach to reverse this linked list.
+        If the linked list has only 0 or 1 node, then just return the head.
+        If that is not the case, then the iterative approachis best where there are 2 pointers.
+        1. reversed_list: A pointer to already reversed linked list. initialized to head
+        2. list_to_reverse: pointer to the remaining list. intialized to head->next
+
+        we then set the reversed_list->next to None, this then becomes the last node. reversed_list will
+        always point to the head of the newly reversed linked list
+
+        At each iteration, the list_to_do pointer moves forward (until it reaches NULL). 
+        The current node becomes the head of the new reversed linked list and starts pointing to the previous head of the reversed linked list.
+        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at the termination of the loop.
+        """
+        if self.head == None or self.head.next == None:
+            return self.head
+
+        list_to_reverse = self.head.next
+
+        reversed_list = self.head
+        reversed_list.next = None
+
+        while list_to_reverse != None:
+            temp = list_to_reverse
+
+            # move the pointer to the next node
+            list_to_reverse = list_to_reverse.next
+
+            # point the list_to_reverse to the reversed linked list. Making the reversed_list the next node
+            temp.next = reversed_list
+            reversed_list = temp
+
+        return reversed_list
 
     def unshift(self, node):
         pass
