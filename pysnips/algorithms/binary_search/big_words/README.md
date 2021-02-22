@@ -20,7 +20,7 @@ Now I have a list of words that are mostly alphabetical, except they start somew
 Write a function for finding the index of the "rotation point," which is where I started working from the beginning of the dictionary. This list is huge (there are lots of words I don't know) so we want to be efficient here.
 
 Gotchas
-We can get O(\lg{n})O(lgn) time.
+We can get O(lgn) time.
 
 Breakdown
 The list is mostly ordered. We should exploit that fact.
@@ -75,9 +75,9 @@ We keep track of the lower and upper bounds on the rotation point, calling them 
             return ceiling_index
 
 Complexity
-O(\lg{n})O(lgn) time and O(1)O(1) space, just like binary search.
+O(lgn) time and O(1) space, just like binary search.
 
-We're assuming that our word lengths are bound by some constant—if they were bounded by a non-constant ll, each of our string comparisons would cost O(l)O(l), for a total of O(l*\lg{n})O(l∗lgn) runtime.
+We're assuming that our word lengths are bound by some constant—if they were bounded by a non-constant ll, each of our string comparisons would cost O(l), for a total of O(l∗lgn) runtime.
 
 Bonus
 This function assumes that the list is rotated. If it isn't, what index will it return? How can we fix our function to return 0 for an unrotated list?
