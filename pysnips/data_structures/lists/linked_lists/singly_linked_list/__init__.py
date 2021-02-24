@@ -62,7 +62,89 @@ class SinglyLinkedList(LinkedList):
         pass
 
     def reverse(self):
-        pass
+        """
+        Uses an iterative approach to reverse this linked list.
+        If the linked list has only 0 or 1 node, then just return the head.
+        If that is not the case, then the iterative approachis best where there are 2 pointers.
+        1. reversed_list: A pointer to already reversed linked list. initialized to head
+        2. list_to_reverse: pointer to the remaining list. intialized to head->next
+
+        we then set the reversed_list->next to None, this then becomes the last node. reversed_list will
+        always point to the head of the newly reversed linked list
+
+        At each iteration, the list_to_do pointer moves forward (until it reaches NULL). 
+        The current node becomes the head of the new reversed linked list and starts pointing to the previous head of the reversed linked list.
+        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at the termination of the loop.
+        """
+        if self.head == None or self.head.next == None:
+            return self.head
+
+        list_to_reverse = self.head.next
+
+        reversed_list = self.head
+        reversed_list.next = None
+
+        while list_to_reverse != None:
+            temp = list_to_reverse
+
+            # move the pointer to the next node
+            list_to_reverse = list_to_reverse.next
+
+            # point the list_to_reverse to the reversed linked list. Making the reversed_list the next node
+            temp.next = reversed_list
+            reversed_list = temp
+
+        return reversed_list
+
+    def reverse_between(self, left: int, right: int):
+        """
+        Reverse linked list between left & right node positions.
+        This uses the iterative link reversal to reverse a sublist of the linked list between the left & the right 
+        positions in the linked list.
+        This is based on the assumption that we don't have access to the data in the nodes themselves, 
+        but instead we can change the links between the nodes.
+
+        Starting from the node at position left all the way to position right, we reverse the next pointers for 
+        all the nodes in between.
+
+        Ref: https://leetcode.com/problems/reverse-linked-list-ii/solution/
+        
+        Time Complexity: O(N) considering the list consists of N nodes. 
+        We process each of the nodes at most once (we don't process the nodes after the right node from the beginning.
+        
+        Space Complexity: O(1) since we simply adjust some pointers in the original linked list and only use O(1) additional 
+        memory for achieving the final result.
+        """
+        if self.head is None or self.head.next is None:
+            return self.head
+
+        # Move the 2 pointers until they reach the proper starting point in the list
+        current_pointer, previous_pointer = self.head, None
+        
+        while left > 1:
+            previous_pointer = current_pointer
+            current_pointer = current_pointer.next
+            left, right = left - 1, right - 1
+        
+        # The 2 pointers that will fix the final connections
+        tail_pointer, conn_pointer = current_pointer, previous_pointer
+        
+        # iteratively reverse the nodes until right becomes 0
+        while right:
+            third_pointer = current_pointer.next
+            current_pointer.next = previous_pointer
+            previous_pointer = current_pointer
+            current_pointer = third_pointer
+            right -= 1
+        
+        # Adjust the final connections
+        if conn_pointer:
+            conn_pointer.next = previous_pointer
+        else:
+            self.head = previous_pointer
+        
+        tail_pointer.next = current_pointer
+        return self.head
 
     def unshift(self, node):
         pass
