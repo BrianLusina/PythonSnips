@@ -103,7 +103,7 @@ class DoublyLinkedList(LinkedList):
 
                 current_node = current_node.next
 
-    def reverse(self):
+    def reverse(self) -> DoubleNode:
         """
         Order of operations is important here. We set the current.next to next before
         setting previous to current.next
@@ -112,12 +112,16 @@ class DoublyLinkedList(LinkedList):
         our reversed list.
         
         Complexity:
-        O(n) time and O(1)O(1) space. We pass over the list only once, and maintain a
+        O(n) time and O(1) space. We pass over the list only once, and maintain a
         constant number of variables in memory.
         
         :return: a reversed LinkedList
         :rtype: DoublyLinkedList
         """
+
+        if self.head is None:
+            return None
+        
         current = self.head
         previous = None
         next_ = None
@@ -136,7 +140,53 @@ class DoublyLinkedList(LinkedList):
 
         return previous
 
-    def insert(self, node, pos):
+    def insertSorted(self, node: DoubleNode, data: int):
+        """
+        Inserts a node with data value into a sorted DoublyLinked List. The assumption here is that 
+        the double linked list node is already sorted
+        """
+        # if there is no node, return None
+        if node is None:
+            return None
+
+        # if there is no next node, no need to traverse the doubly linked list, therefore return
+        # the node
+        if node.next is None:
+            return node
+        
+        # if at the node the data value is already less than the data we intend to insert we make 
+        # this node the head of the doubly linked list
+        if node.value > data:
+            new_head = DoubleNode(data, next_node=node)
+            node.prev_node = new_head
+            return new_head
+
+        current = node
+
+        while current:
+            next_node = current.next
+
+            # we are at the end of the doubly linked list, so we create a new DoubleNode and make it the tail
+            if next_node is None:
+                new_node = DoubleNode(data, prev_node=current)
+                current.next_node = new_node
+                return node
+
+            # we create a new node and insert it into 2 nodes iff it is less than the next node value and 
+            # less than the previous node value
+            if current.value <= data and next_node.data >= data:
+                new_node = DoubleNode(data, prev_node=current, next_node=next_node)
+                next_node.prev_node = new_node
+                current.next_node = new_node
+                return node
+
+            # move pointer to next node
+            current = next_node
+
+    def insert(self, node: DoubleNode, position: int):
+        """
+        Inserts a node at the specified position in the doubly linked list
+        """
         pass
 
     def display(self):
