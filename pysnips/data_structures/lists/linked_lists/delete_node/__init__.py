@@ -8,10 +8,12 @@ def delete_node(node: Node) -> Node:
     that is "next.next" & we make the value of this node we intend to delete, the value of the node that comes next
 
     If the node to be deleted is None, we simply return None.
+
+    If the node is the tail, then we simply return it
     """
 
-    if node is None:
-        return None
+    if node is None or node.next is None:
+        return node
 
     node.value = node.next.value
     node.next = node.next.next
