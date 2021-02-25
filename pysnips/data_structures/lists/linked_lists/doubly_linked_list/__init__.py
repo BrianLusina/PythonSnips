@@ -145,13 +145,15 @@ class DoublyLinkedList(LinkedList):
         Inserts a node with data value into a sorted DoublyLinked List. The assumption here is that 
         the double linked list node is already sorted
         """
-        # if there is no node, return None
+        # if there is no node, make this node the new head of the list
         if node is None:
-            return None
+            return DoubleNode(data)
 
-        # if there is no next node, no need to traverse the doubly linked list, therefore return
-        # the node
+        # if there is no next node, no need to traverse the doubly linked list, simply create a new
+        # DoubleNode and insert it at the tail
         if node.next is None:
+            new_tail = DoubleNode(data, prev_node = node)
+            node.next = new_tail
             return node
         
         # if at the node the data value is already less than the data we intend to insert we make 
