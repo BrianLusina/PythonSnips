@@ -207,7 +207,23 @@ class DoublyLinkedList(LinkedList):
         """
         Inserts a node at the specified position in the doubly linked list
         """
-        pass
+        if node is None:
+            return node
+
+        curr = node
+
+        if position == 0:
+            node.next = self.head
+            return node
+        
+        while curr is not None:
+            
+            for _ in range(position - 1):
+                curr = curr.next
+            
+            node.next = curr.next
+            curr.next = node
+            return self.head        
 
     def display(self):
         print("Show list data...")
