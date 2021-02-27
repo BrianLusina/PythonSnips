@@ -83,6 +83,24 @@ class DoublyLinkedList(LinkedList):
             self.tail = node
         self.head = node
 
+    def delete_node_at_position(self, position: int) -> DoubleNode:
+        """
+        Deletes a node at the specified position
+        """
+        if self.head is None:
+            return None
+
+        current = self.head
+
+        while current is not None:
+            for _ in range(position):
+                current = current.next
+            
+            current.value = current.next.value
+            current.next = current.next.next
+            current.next.prev_node = current.prev_node
+            return self.head
+
     def delete_node(self, node):
         """
         :param node: The node to delete

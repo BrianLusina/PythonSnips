@@ -33,6 +33,23 @@ class SinglyLinkedList(LinkedList):
             self.tail.next = node
         self.tail = node
 
+    def delete_node_at_position(self, position: int) -> Node:
+        """
+        Deletes a node at the specified position
+        """
+        if self.head is None:
+            return None
+
+        current = self.head
+
+        while current is not None:
+            for _ in range(position):
+                current = current.next
+            
+            current.value = current.next.value
+            current.next = current.next.next
+            return self.head
+
     def delete_node(self, node):
         current_node = self.head
         previous_node = None
