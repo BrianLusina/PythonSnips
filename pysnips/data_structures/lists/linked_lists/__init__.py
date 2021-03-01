@@ -29,7 +29,11 @@ class Node(object):
         """
         return node.next is None
 
-
+    def __str__(self):
+        """
+        Stringify Node
+        """
+        return "%s -> %s" % (self.value, self.next)
 class LinkedList(object):
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
@@ -92,7 +96,7 @@ class LinkedList(object):
             count_ = 0
             temp = self.head
             while temp:
-                if temp.next == data:
+                if temp.value == data:
                     count_ += 1
                 temp = temp.next
             return count_
@@ -328,15 +332,8 @@ class LinkedList(object):
 
         return False
 
-    def __str__(self):
+    def stringify(self, node: Node):
         """
-        :return: String presentation of LinkedList
+        :return: String presentation of LinkedList from the node
         """
-        s = ""
-        p = self.head
-        if p is not None:
-            while p.next is not None:
-                s += p.value
-                p = p.next
-            s += p.value
-        return s
+        return "None" if node is None else f"{str(node.data)} -> {self.stringify(node.next)}"

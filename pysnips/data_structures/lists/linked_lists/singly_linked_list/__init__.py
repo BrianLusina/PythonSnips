@@ -33,10 +33,37 @@ class SinglyLinkedList(LinkedList):
             self.tail.next = node
         self.tail = node
 
+    def get_nth_node(self, position: int) -> Node:
+        """
+        Gets nth node in a linked list given the head of the linked list
+        :raises: ValueError for position less than 0 or position is greater than length of linked list
+        :rtype: Node
+        :returns: None when the head is None & Node
+        """
+        if position < 0:
+            raise ValueError("Position less than 0")        
+        
+        if self.head is None:
+            return None
+        
+        current = self.head
+
+        while current is not None:
+            for _ in range(position):
+                current = current.next
+
+                if current is None:
+                    raise ValueError("Null node encountered")
+
+            return current
+
     def delete_node_at_position(self, position: int) -> Node:
         """
         Deletes a node at the specified position
         """
+        if position < 0:
+            raise ValueError("Position less than 0")        
+        
         if self.head is None:
             return None
 
@@ -45,7 +72,10 @@ class SinglyLinkedList(LinkedList):
         while current is not None:
             for _ in range(position):
                 current = current.next
-            
+                
+                if current is None:
+                    raise ValueError("Invalid position found, reached end of list")
+
             current.value = current.next.value
             current.next = current.next.next
             return self.head
@@ -82,7 +112,7 @@ class SinglyLinkedList(LinkedList):
         """
         Uses an iterative approach to reverse this linked list.
         If the linked list has only 0 or 1 node, then just return the head.
-        If that is not the case, then the iterative approachis best where there are 2 pointers.
+        If that is not the case, then the iterative approach is best where there are 2 pointers.
         1. reversed_list: A pointer to already reversed linked list. initialized to head
         2. list_to_reverse: pointer to the remaining list. intialized to head->next
 
@@ -163,8 +193,11 @@ class SinglyLinkedList(LinkedList):
         tail_pointer.next = current_pointer
         return self.head
 
-    def unshift(self, node):
-        pass
+    def unshift(self, node: Node) -> Node:
+        if self.head:
+            return node
+        node.next = self.head
+        return node
 
     def insert(self, node, pos):
         counter = 1
@@ -214,3 +247,34 @@ class SinglyLinkedList(LinkedList):
 
         # fast runner hit the end of the list
         return False
+
+    def append(self, node: Node) -> Node:
+        """
+        Appends another linked list to this linked list & returns the head of the newly formed linked list
+        if both linked lists are None, return None, if 1 of the linked lists is None, return the one that is
+        not None.
+
+        We have to traverse the linked list to get to the tail and assign the tail node's next node from None to 
+        the linked list we intend to append.
+
+        Complexities:
+        Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
+        Time Complexity = O(n) as we are traversing only 1 linked list
+
+        :param: node Head node of linked list to append
+        :type: Node
+        :rtype: Node
+        """
+        if node is None:
+            return self.head
+        if self.head is None:
+            return node
+
+        current = self.head
+
+        while current.next is not None:
+            current = current.next
+
+        current.next = node
+        return self.head
+

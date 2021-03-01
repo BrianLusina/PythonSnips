@@ -2,7 +2,8 @@ from .. import Node
 
 def insertNodeAtPosition(head: Node, data: int, position: int) -> Node:
     if head is None:
-        return head
+        # make this the new head
+        return Node(data)
 
     curr = head
 
