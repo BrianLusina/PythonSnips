@@ -307,6 +307,28 @@ class DoublyLinkedList(LinkedList):
         node.prev_node = current
         return self.head
 
+    def remove_duplicates(self):
+        """
+        Removes duplicates from linked list
+        """
+
+        if self.head is None or self.head.next_node is None:
+            return self.head
+
+        current = self.head
+        next_ = current.next_node
+        
+        while next_:
+            if next_.value == current.value:
+                current.next_node = current.next_node.next_node
+                current = current.next_node.prev_node
+                next_ = current.next_node
+            else:
+                current = next_
+                next_ = current.next_node
+
+        return self.head
+
     def stringify(self, node: DoubleNode):
         """
         :return: String presentation of DoubleLinkedList from the node

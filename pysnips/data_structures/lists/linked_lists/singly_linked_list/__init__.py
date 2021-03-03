@@ -248,6 +248,27 @@ class SinglyLinkedList(LinkedList):
         # fast runner hit the end of the list
         return False
 
+    def remove_duplicates(self):
+        """
+        Removes duplicates from linked list
+        """
+
+        if self.head is None or self.head.next is None:
+            return self.head
+        
+        current = self.head
+        next_ = self.head.next
+        
+        while current and next_:
+            if next_.value == current.value:
+                current.next = next_.next
+                next_ = next_.next
+            else:
+                current = current.next
+                next_ = next_.next
+
+        return self.head    
+
     def append(self, node: Node) -> Node:
         """
         Appends another linked list to this linked list & returns the head of the newly formed linked list
