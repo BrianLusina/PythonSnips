@@ -1,4 +1,4 @@
-# You have a singly-linked list ↴ and want to check if it contains a cycle.
+# You have a singly-linked list and want to check if it contains a cycle.
 
 A singly-linked list is built with nodes, where each node has:
 
@@ -18,7 +18,7 @@ A cycle occurs when a node’s next points back to a previous node in the list. 
 
 Write a function contains_cycle() that takes the first node in a singly-linked list and returns a boolean indicating whether the list contains a cycle.
 
-Because a cycle could result from the last node linking to the first node, we might need to look at every node before we even see the start of our cycle again. So it seems like we can’t do better than O(n)O(n) runtime.
+Because a cycle could result from the last node linking to the first node, we might need to look at every node before we even see the start of our cycle again. So it seems like we can’t do better than O(n) runtime.
 
 How can we track the nodes we’ve already seen?
 
@@ -29,7 +29,7 @@ If the current node is None we've hit the end of the list. Return False.
 Else throw the current node in our set and keep going.
 What are the time and space costs of this approach? Can we do better?
 
-Our runtime is O(n)O(n), the best we can do. But our space cost is also O(n)O(n). Can we get our space cost down to O(1)O(1) by storing a constant number of nodes?
+Our runtime is O(n), the best we can do. But our space cost is also O(n). Can we get our space cost down to O(1) by storing a constant number of nodes?
 
 Think about a looping list and a linear list. What happens when you traverse one versus the other?
 
@@ -72,7 +72,7 @@ If the linked list has a cycle, fast_runner will "lap" (catch up with) slow_runn
 If the list does not have a cycle, fast_runner will reach the end.
 
 ### Complexity
-O(n)O(n) time and O(1)O(1) space.
+O(n) time and O(1)O(1) space.
 
 The runtime analysis is a little tricky. The worst case is when we do have a cycle, so we don't return until fast_runner equals slow_runner. But how long will that take?
 
