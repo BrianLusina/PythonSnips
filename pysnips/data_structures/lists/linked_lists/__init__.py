@@ -279,6 +279,29 @@ class LinkedList(object):
                 return True
         return False
 
+    def detect_node_with_cycle(self):
+        """
+        Detects the node with a cycle and returns it
+        """
+        if not self.has_cycle():
+            return False
+        else:
+            slow_pointer = fast_pointer = self.head
+
+            while fast_pointer and slow_pointer and fast_pointer.next:
+                fast_pointer = fast_pointer.next.next
+                slow_pointer = slow_pointer.next
+
+                if slow_pointer == fast_pointer:
+                    break
+            else:
+                return None
+        
+            while self.head != slow_pointer:
+                slow_pointer = slow_pointer.next
+                self.head = self.head.next
+            return self.head
+
     def remove_cycle(self):
         """
         Removes cycle if there exists. This will use the same concept as has_cycle method to check if there is a loop and remove the cycle
