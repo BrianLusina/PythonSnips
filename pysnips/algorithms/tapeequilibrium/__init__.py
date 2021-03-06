@@ -4,7 +4,7 @@ def tape_equilibrium(tape: list) -> int:
     parts = [0] * len(tape)
     parts[0] = tape[0]
 
-    for index in range(1, len(A)):
+    for index in range(1, len(tape)):
         parts[index] = tape[index] + parts[index - 1]
 
     result = sys.maxsize
