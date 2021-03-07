@@ -360,3 +360,10 @@ class LinkedList(object):
         :return: String presentation of LinkedList from the node
         """
         return "None" if node is None else f"{str(node.data)} -> {self.stringify(node.next)}"
+
+    @abstractmethod
+    def alternate_split(self):
+        """
+        Alternate split a linked list such that a linked list such as a->b->c->d->e becomes a->c->e->None and b->d->None
+        """
+        pass

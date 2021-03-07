@@ -334,3 +334,36 @@ class DoublyLinkedList(LinkedList):
         :return: String presentation of DoubleLinkedList from the node
         """
         return "None" if node is None else f"{str(node.value)} <-> {self.stringify(node.next_node)}"
+
+    def alternate_split(self) -> tuple:
+        if not self.head or not self.head.next:
+            raise ValueError("Head should not be none")
+        
+        current = self.head
+
+        # head for the first linked list
+        first = current
+
+        # head for the second linked list
+        second = current.next_node
+
+        while current and current.next_node:
+            temp = current.next_node
+
+            # set the next node for the first linked list
+            current.next_node = temp.next_node
+            temp.next_node.prev_node = current
+
+            # check if the next node is available for the second linked list
+            if current.next_node and current.next_node.next_node:
+                # set the next node for the second linked list
+                temp.next_node = current.next_node.next_node
+                current.next_node.next_node.prev_node = temp
+            else:
+                # we are at the end
+                temp.next_node = None
+            
+            # keep moving the pointer
+            current = current.next_node
+
+        return first, second

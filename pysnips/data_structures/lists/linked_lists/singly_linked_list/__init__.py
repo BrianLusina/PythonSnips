@@ -299,3 +299,34 @@ class SinglyLinkedList(LinkedList):
         current.next = node
         return self.head
 
+    def alternate_split(self) -> tuple:
+        if not self.head or not self.head.next:
+            raise ValueError("Head should not be none")
+        
+        current = self.head
+
+        # head for the first linked list
+        first = current
+
+        # head for the second linked list
+        second = current.next
+
+        while current and current.next:
+            temp = current.next
+
+            # set the next node for the first linked list
+            current.next = temp.next
+
+            # check if the next node is available for the second linked list
+            if current.next and current.next.next:
+                # set the next node for the second linked list
+                temp.next = current.next.next
+            else:
+                # we are at the end
+                temp.next = None
+            
+            # keep moving the pointer
+            current = current.next
+
+        return first, second
+
