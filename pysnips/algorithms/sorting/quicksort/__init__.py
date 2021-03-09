@@ -77,3 +77,4 @@ def quicksort(thelist: list) -> list:
         return thelist
     
     quicksort_sublist(thelist, 0, length - 1)
+    return thelist

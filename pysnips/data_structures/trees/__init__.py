@@ -1,15 +1,21 @@
-from queue import Queue
 
-
-class BinaryTreeNode(object):
+class TreeNode(object):
     """
-    Binary tree node class which will implement Binary tree
+    Tree node class which will implement Tree Node
     """
 
     def __init__(self, value):
+        """
+        Value here can be anything
+        """
         self.value = value
         self.left = None
         self.right = None
+
+class BinaryTreeNode(TreeNode):
+    """
+    Binary tree node class which will implement Binary tree
+    """
     
     def insert_node(self, value):
         """
@@ -34,49 +40,6 @@ class BinaryTreeNode(object):
         else:
             self.right = BinaryTreeNode(value)
 
-    @staticmethod
-    def is_binary_search_tree(value):
-        """
-        Checks if a binary search tree is valid. A value of None is a valid Binary Search Tree
-        :param: value Root node to use to check for validity
-        :rtype: bool
-        :return: Boolean True if valid, False otherwise
-        """
-        if value is None:
-            return True
-
-        stack = [(float("-inf"), value, float("inf"))]
-
-        while stack:
-            mind, node, maxd = stack.pop()
-
-            if not (mind < node.data < maxd):
-                return False
-
-            if node.left is not None:
-                stack.append((mind, node.left, node.data))
-
-            if node.right is not None:
-                stack.append((node.data, node.right, maxd))
-        return True
-
-    def search_node(self, value):
-        """
-        Searches for the given value in a binary search tree. If the value exists in the tree, then True is returned,
-        else false
-        :param value the value to search for
-        :rtype: bool
-        """
-        # check if the value is less than the root node and recursively check on the left of the tree
-        if value < self.value and self.left:
-            return self.left.search_node(value)
-        # check if the current value is greater than the root node and that the right node exist,
-        # then proceed to the right to perform the search
-        if value > self.value and self.right:
-            return self.right.search_node(value)
-        # if the root node is equal to the value, then return True if they are equal
-        return value == self.value
-    
     def delete_node(self, value, parent):
         """
         Deletes a node from the tree if present and return result of deletion, True if the delete was successful and
@@ -179,69 +142,3 @@ class BinaryTreeNode(object):
             new_node.right = self.right
             self.right = new_node
         return self.right
-
-    def pre_order(self):
-        """
-        Type of Depth First Traversal (DFS) for binary trees which will start at root node and proceed to the left
-        value and print it until it reaches the leaf(node with no more children) and then backtrack to the node and
-        check if the current node has a right child and print it. This will continue until all nodes have been
-        tracked and printed.
-        """
-        print("Value: {}".format(self.value))
-
-        if self.left:
-            self.left.pre_order()
-
-        if self.right:
-            self.right.pre_order()
-
-    def in_order(self):
-        """
-        Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree.
-        This type of search will begin at the left node and check if that node has a left child and continually check
-        until that left node is a leaf(has no children) and will then print its value and "bubble up" back to the
-        current node and execute that (in this case print it) and then print the right node. The same procedure is
-        executed for the right side of the tree.
-        """
-        if self.left:
-            self.left.in_order()
-
-        print("Value: {}".format(self.value))
-
-        if self.right:
-            self.right.in_order()
-
-    def post_order(self):
-        """
-        Post order is a another kind of Depth First Search (DFS) algorithm that will search the tree from the left first
-         then the right first before
-        then proceeding to the middle last, in this case, the root node
-        """
-        if self.left:
-            self.left.post_order()
-
-        if self.right:
-            self.right.post_order()
-
-        print("Value: {}".format(self.value))
-
-    def breadth_first_search(self):
-        """
-        Performs a breadth first search through a Binary Tree
-        This will traverse the tree level by level and depth by depth. Using a Queue to put elements into the queue
-        """
-        queue = Queue()
-
-        # start off by adding the root node
-        queue.put(self)
-
-        # while the queue is not empty, we want to traverse the tree and add elements to the queue,
-        while not queue.empty():
-            current_node = queue.get()
-            print("value: {}".format(self.value))
-
-            if current_node.left:
-                queue.put(current_node.left)
-
-            if current_node.right:
-                queue.put(current_node.right)
