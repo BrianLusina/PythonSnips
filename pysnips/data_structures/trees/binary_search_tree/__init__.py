@@ -1,5 +1,6 @@
 from queue import Queue
-from .. import BinaryTreeNode
+from pysnips.data_structures.trees import BinaryTreeNode
+from pysnips.data_structures.stacks import Stack
 
 class BinarySearchTree(object):
     def __init__(self, root: BinaryTreeNode = None):
@@ -104,7 +105,7 @@ class BinarySearchTree(object):
         if self.root.right:
             self.pre_order()
 
-    def in_order(self):
+    def in_order_recurse(self, node: BinaryTreeNode):
         """
         Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree.
         This type of search will begin at the left node and check if that node has a left child and continually check
@@ -112,11 +113,64 @@ class BinarySearchTree(object):
         current node and execute that (in this case print it) and then print the right node. The same procedure is
         executed for the right side of the tree.
         """
-        if self.root.left:
-            self.in_order()
+        result = []
+        if self.root:
+            if self.root.left:
+                self.in_order_recurse(self.root.left)
 
-        if self.root.right:
-            self.in_order()
+            result.append(self.root.value)
+
+            if self.root.right:
+                self.in_order_recurse(self.root.right)
+
+    def in_order_iterate(self):
+        """
+        Iterative approach using a stack
+        """
+        result = []
+        stack = Stack()
+        current = self.root
+
+        while current or not stack.is_empty():
+            while current:
+                stack.push(current)
+                current = current.left
+
+            current = stack.pop()
+            result.append(current.value)
+            current = current.right
+
+        return result
+
+    def in_order_morris_traversal(self):
+        result = []
+        current = self.root
+        pre = None
+
+        while current:
+            if not current.left:
+                # add the current value of the node
+                result.append(current.value)
+                # Move to next right node
+                current = current.right
+            else:
+                # we have a left subtree
+                pre = current.left
+                
+                # find rightmost
+                while pre.right:
+                    pre = pre.right
+
+                # put current after the pre node
+                pre.right = current
+                # store current node
+                temp = current
+                # move current to top of new tree
+                current = current.left
+                # original current left be None, avoid infinite loops
+                temp.left = None
+
+        return result
 
     def post_order(self):
         """

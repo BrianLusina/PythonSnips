@@ -11,7 +11,7 @@ class Stack(LifoQueue):
     Implementation of a Stack data structure
     """
 
-    def __init__(self, max_size):
+    def __init__(self, max_size=None):
         """
         Creates a new Stack object. Will initialize a stack which will be an empty list
         :param max_size The maximum size of the stack
