@@ -175,3 +175,24 @@ class BinarySearchTree(object):
 
         # if the root node is equal to the value, then return True if they are equal
         return value == node.value
+
+    def merge_trees(self, otherNode: BinaryTreeNode) -> BinaryTreeNode:
+        """
+        Merges this tree with another tree given another node
+        :param otherNode Other Root node, may be None, therefore we return the root node if availables
+        :type BinaryTreeNode
+        :returns Binary Tree Node
+        """
+        if not otherNode:
+            return self.root
+        
+        if not self.root:
+            return otherNode
+
+        self.root.value += otherNode.value
+
+        self.root.left = self.merge_trees(otherNode.left)
+        self.root.right = self.merge_trees(otherNode.right)
+
+        return self.root
+
