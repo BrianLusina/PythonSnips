@@ -185,17 +185,44 @@ class BinarySearchTree(object):
 
         return result
 
-    def post_order(self):
+    def post_order(self) -> list:
         """
-        Post order is a another kind of Depth First Search (DFS) algorithm that will search the tree from the left first
-         then the right first before
-        then proceeding to the middle last, in this case, the root node
+        1. Push root to first stack.
+        2. Loop while first stack is not empty
+            2.1 Pop a node from first stack and push it to second stack
+            2.2 Push left and right children of the popped node to first stack
+        3. Print contents of second stack        
         """
-        if self.root.left:
-            self.post_order()
+        if not self.root:
+            return
+        
+        # create 2 stacks
+        stack_one = Stack()
+        stack_two = Stack()
+        values = []
 
-        if self.root.right:
-            self.post_order()
+        # push root to stack one
+        stack_one.push(self.root)
+
+        # while stack 1 is not empty
+        while stack_one:
+
+            # pop a node from stack 1 and add it to stack 2
+            node = stack_one.pop()
+            stack_two.push(node)
+
+            # push left & right children of removed item to stack one
+            if node.left:
+                stack_one.push(node.left)
+            
+            if node.right:
+                stack_one.push(node.right)
+
+        while stack_two:
+            node = stack_two.pop()
+            values.append(node.data)
+
+        return values
 
     def is_binary_search_tree(self):
         """
