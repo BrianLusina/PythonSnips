@@ -91,19 +91,32 @@ class BinarySearchTree(object):
             if current_node.right:
                 queue.put(current_node.right)
 
-    def pre_order(self):
+    def pre_order(self) -> list:
         """
         Type of Depth First Traversal (DFS) for binary trees which will start at root node and proceed to the left
         value and print it until it reaches the leaf(node with no more children) and then backtrack to the node and
         check if the current node has a right child and print it. This will continue until all nodes have been
         tracked and printed.
         """
+        result = []
+        stack = Stack()
 
-        if self.root.left:
-            self.pre_order()
+        if not self.root:
+            return result
 
-        if self.root.right:
-            self.pre_order()
+        current = self.root
+
+        while current or not stack.is_empty():
+            while current:
+                result.append(current.value)
+                stack.push(current)
+                current = current.left
+
+            current = stack.pop()
+
+            current = current.right
+
+        return result
 
     def in_order_recurse(self, node: BinaryTreeNode):
         """
@@ -190,7 +203,7 @@ class BinarySearchTree(object):
         :rtype: bool
         :return: Boolean True if valid, False otherwise
         """
-        if self.root is None:
+        if not self.root:
             return True
 
         stack = [(float("-inf"), self.root, float("inf"))]
@@ -198,13 +211,16 @@ class BinarySearchTree(object):
         while stack:
             mind, node, maxd = stack.pop()
 
-            if not (mind < node.data < maxd):
+            if not node:
+                continue
+
+            if not (mind <= node.data <= maxd):
                 return False
 
-            if node.left is not None:
+            if node.left:
                 stack.append((mind, node.left, node.data))
 
-            if node.right is not None:
+            if node.right:
                 stack.append((node.data, node.right, maxd))
         return True
 

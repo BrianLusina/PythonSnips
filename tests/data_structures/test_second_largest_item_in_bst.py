@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.data_structures.trees.binary_search_tree import find_second_largest
+# from pysnips.data_structures.trees.binary_search_tree import find_second_largest
 
 
 class Test(unittest.TestCase):
