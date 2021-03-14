@@ -172,3 +172,102 @@ The largest node does not have a left subtree.
 Whenever a problem is starting to feel complicated. Try breaking it down into cases.
 
 It can be really helpful to actually draw out sample inputs for those cases. This'll keep your thinking organized and also help get your interviewer on the same page as you.
+
+---
+# Super Balanced Binary Tree
+
+Write a function to see if a binary tree is "superbalanced" (a new tree property we just made up).
+A tree is "superbalanced" if the difference between the depths of any two leaf nodes
+
+> A leaf node is a tree node with no children.
+> It's the "end" of a path to the bottom, from the root.
+
+is no greater than one.
+
+[Reference](https://www.interviewcake.com/question/python/balanced-binary-tree)
+
+We do a depth-first walk through our tree, keeping track of the depth as we go. When we find a leaf, we throw its depth into a list of depths if we haven't seen that depth already.
+
+```
+Depth-first traversal is a method for walking through a tree or graph where you go as deep as possible down a path before "fanning out." Your set of visited nodes will shoot out from the starting point along one path, with more single paths progressively shooting off of that one as each path hits a dead end.
+Depth-first search or DFS uses depth-first traversal to search for something in a tree or graph.
+Depth-first traversal is often compared with breadth-first traversal.
+
+Advantages:
++ Depth-first traversal on a binary tree generally requires less memory than breadth-first.
++ Depth-first traversal can be easily implemented with recursion.
+
+Disadvantages
++ A DFS doesn't necessarily find the shortest path to a node, while breadth-first search does.
+```
+
+Each time we hit a leaf with a new depth, there are two ways that our tree might now be unbalanced:
+
+There are more than 2 different leaf depths
+There are exactly 2 leaf depths and they are more than 1 apart.
+Why are we doing a depth-first walk and not a breadth-first ↴ one? You could make a case for either. We chose depth-first because it reaches leaves faster, which allows us to short-circuit earlier in some cases.
+
+```
+Breadth-first traversal is a method for walking through a tree or graph where you "fan out" as much as possible before going deeper. Your set of visited nodes will seem to "ripple outwards" from the starting point.
+
+Breadth-first search or BFS uses breadth-first traversal to search for something in a tree or graph.
+
+Breadth-first traversal is often compared with depth-first traversal.
+
+Advantages:
+
+A BFS will not necessarily find a target as quickly as possible, but it will find the shortest path between the starting point and the target. A depth-first search will not necessarily find the shortest path.
+Disadvantages
+
+A BFS on a binary tree generally requires more memory than a DFS.
+```
+
+## Complexity
+
+O(n) time and O(n) space.
+
+For time, the worst case is the tree is balanced and we have to iterate over all n nodes to make sure.
+
+For the space cost, we have two data structures to watch: depths and nodes.
+
+depths will never hold more than three elements, so we can write that off as O(1).
+
+Because we’re doing a depth first search, nodes will hold at most d nodes where d is the depth of the tree (the number of levels in the tree from the root node down to the lowest node). So we could say our space cost is O(d).
+
+But we can also relate d to n. In a balanced tree, dd is O(log2(n)). And the more unbalanced the tree gets, the closer d gets to n.
+
+In the worst case, the tree is a straight line of right children from the root where every node in that line also has a left child. The traversal will walk down the line of right children, adding a new left child to nodes at each step. When the traversal hits the rightmost node, nodes will hold half of the n total nodes in the tree. Half n is O(n), so our worst case space cost is O(n).
+
+## What we learn
+
+Particular things to note:
+
+One tip: Remember that breadth-first uses a queue ↴ and depth-first uses a stack ↴ (could be the call stack or an actual stack object). That's not just a clue about implementation, it also helps with figuring out the differences in behavior. Those differences come from whether we visit nodes in the order we see them (first in, first out) or we visit the last-seen node first (last in, first out).
+
+---
+# Check if Tree is valid Binary Search Tree
+Write a function to check that a binary tree is a valid binary search tree
+
+```
+A binary search tree is a binary tree in which, for each node:
+
+The node's value is greater than all values in the left subtree.
+The node's value is less than all values in the right subtree.
+BSTs are useful for quick lookups. If the tree is balanced, we can search for a given value in the tree in O(lgn) time.
+
+```
+
+We do a depth-first walk through the tree, testing each node for validity as we go. A given node is valid if it's greater than all the ancestral nodes it's in the right sub-tree of and less than all the ancestral nodes it's in the left-subtree of. Instead of keeping track of each ancestor to check these inequalities, we just check the largest number it must be greater than (its lower_bound) and the smallest number it must be less than (its upper_bound).
+
+O(n) time and O(n) space.
+
+The time cost is easy: for valid binary search trees, we’ll have to check all n nodes.
+
+Space is a little more complicated. Because we’re doing a depth first search, node_and_bounds_stack will hold at most dd nodes where d is the depth of the tree (the number of levels in the tree from the root node down to the lowest node). So we could say our space cost is O(d).
+
+But we can also relate d to n. In a balanced tree, d is log​2​ n. And the more unbalanced the tree gets, the closer d gets to n.
+
+In the worst case, the tree is a straight line of right children from the root where every node in that line also has a left child. The traversal will walk down the line of right children, adding a new left child to the stack at each step. When the traversal hits the rightmost node, the stack will hold half of the n total nodes in the tree. Half n is O(n), so our worst case space cost is O(n).
+
+Bonus
+What if the input tree has duplicate values?

@@ -6,15 +6,31 @@ class BinarySearchTree(object):
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
 
-    def find_largest(self, node):
+    def find_largest(self, node: BinaryTreeNode) -> BinaryTreeNode:
+        """
+        Simply finds the largest node in a BST. We walk righward down the BST until the current node has no right child
+        and return it
+        :param node: root node, or current node
+        :return: Value of the largest node
+        :rtype: object
+        """
         current = node
         while current:
             if not current.right:
-                return current.value
+                return current
             current = current.right
 
-    def find_second_largest(self):
-        if self.root is None or (self.root.left is None and self.root.right is None):
+        return current
+
+    def find_second_largest(self) -> BinaryTreeNode:
+        """
+        Finds the second largest node in the Binary Search Tree given a root node
+        :param root_node: BinaryTreeNode
+        :type root_node BinaryTreeNode
+        :return: Value of the second largest Node
+        :rtype: object
+        """        
+        if not self.root or (not self.root.left and not self.root.right):
             raise Exception('Tree must have at least 2 nodes')
 
         current = self.root
@@ -29,9 +45,11 @@ class BinarySearchTree(object):
             # largest has no children, so
             # current is 2nd largest
             if current.right and not current.right.left and not current.right.right:
-                return current.value
+                return current
 
             current = current.right
+
+        return current
 
     def range_sum(self, low: int, high: int):
         """
@@ -230,26 +248,60 @@ class BinarySearchTree(object):
         :rtype: bool
         :return: Boolean True if valid, False otherwise
         """
+
+        # Tree with no root is still valid
         if not self.root:
             return True
-
+    
+        # start with the root with an arbitrarily low lower bound and an arbitrarily higher bound
         stack = [(float("-inf"), self.root, float("inf"))]
-
-        while stack:
+    
+        # depth first traversal
+        while len(stack):
             mind, node, maxd = stack.pop()
 
             if not node:
                 continue
-
+        
+            # if this node is invalid, return false immediately
             if not (mind <= node.data <= maxd):
                 return False
 
             if node.left:
+                # this node must be less than the current node
                 stack.append((mind, node.left, node.data))
 
             if node.right:
+                # this node must be greater than the current node
                 stack.append((node.data, node.right, maxd))
+
+        # if none of the nodes are invalid, return true
+        # at this point we have checked all the nodes
         return True
+
+    def is_binary_search_tree_recursive(self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")):
+        """
+        This uses the call stack to check if the binary search tree node is valid.
+        This will work, but is vulnerable to stack overflow error
+        Possible :exception: OverflowError
+        :param root: Binary search tree node to check for
+        :param lower_bound: the lower bound set arbitrarily
+        :param upper_bound: upper bound set arbitrarily
+        :return: True/False if the root is a valid binary search tree
+        :rtype: bool
+        """
+
+        if not root:
+            return True
+
+        # if the value is out of bounds
+        if root.value > upper_bound or root.value < lower_bound:
+            return False
+
+        return not (
+            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.value)
+            or not self.is_binary_search_tree_recursive(root.right, root.value, upper_bound)
+        )
 
     def search_node(self, value, node: BinaryTreeNode = None):
         """
@@ -293,3 +345,49 @@ class BinarySearchTree(object):
 
         return self.root
 
+    def is_balanced(self, node: BinaryTreeNode) -> bool:
+        """
+        Checks if a binary tree is balanced
+        :param tree_root: The tree root or a BinaryTreeNode
+        :return: True/False, if a binary tree is balanced
+        :rtype: bool
+        """
+        tree_root = node or self.root
+
+        # short circuit as soon as we find more than 2
+        depths = []
+
+        # treat this list as a stack, that will store tuples of (node, depth)
+        # give the stack a maximum size of the length of the tree root
+        # alternatively, we could use a list
+        # nodes = []
+        nodes = Stack(len(tree_root))
+
+        # nodes.append((tree_root, 0))
+        nodes.push((tree_root, 0))
+
+        while len(nodes):
+            # pop a node and its depth from the top of a stack
+            node, depth = nodes.pop()
+
+            # case, we found a leaf
+            if not node.left and not node.right:
+
+                # we only care if it is a new depth
+                if depth not in depths:
+                    depths.append(depth)
+
+                    # two ways we might now have an unbalanced tree:
+                    #   1) more than 2 different leaf depths
+                    #   2) 2 leaf depths that are more than 1 apart
+                    if len(depths) > 2 or (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
+                        return False
+
+            # case, this is not a leaf, keep stepping down
+            else:
+                if node.left:
+                    nodes.push((node.left, depth + 1))
+                if node.right:
+                    nodes.push((node.right, depth + 1))
+
+        return True

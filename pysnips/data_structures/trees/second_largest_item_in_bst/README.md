@@ -1,1 +1,0 @@
-Find the 2nd largest item in a Binary Search Tree
