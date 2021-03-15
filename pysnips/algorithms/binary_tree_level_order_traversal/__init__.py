@@ -1,5 +1,6 @@
 from pysnips.data_structures.trees import BinaryTreeNode
 
+
 class Solution:
     def levelOrder(self, root: BinaryTreeNode) -> List[List[int]]:
         self.result = []
