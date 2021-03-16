@@ -1,15 +1,16 @@
 from queue import Queue
-from pysnips.data_structures.trees import BinaryTreeNode
+from pysnips.data_structures.trees import Tree
+from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
 from pysnips.data_structures.stacks import Stack
 
-class BinarySearchTree(object):
+class BinarySearchTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
 
     def find_largest(self, node: BinaryTreeNode) -> BinaryTreeNode:
         """
         Simply finds the largest node in a BST. We walk righward down the BST until the current node has no right child
-        and return it
+        and return it. This assumes that the Tree is a valid BST
         :param node: root node, or current node
         :return: Value of the largest node
         :rtype: object
@@ -136,6 +137,23 @@ class BinarySearchTree(object):
 
         return result
 
+    def increasing_order_traversal(self) -> BinaryTreeNode:
+        if not self.root:
+            return None
+        
+        def inorder(node: BinaryTreeNode):
+            if node:
+                yield from inorder(node.left)
+                yield node.value
+                yield from inorder(node.right)
+
+        result = current = BinaryTreeNode(None)
+        for value in inorder(self.root):
+            current.right = BinaryTreeNode(value)
+            current = current.right
+
+        return result.right
+
     def in_order_recurse(self, node: BinaryTreeNode):
         """
         Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree.
@@ -154,7 +172,7 @@ class BinarySearchTree(object):
             if self.root.right:
                 self.in_order_recurse(self.root.right)
 
-    def in_order_iterate(self):
+    def in_order_iterate(self) -> list:
         """
         Iterative approach using a stack
         """

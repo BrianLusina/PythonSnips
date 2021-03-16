@@ -1,4 +1,4 @@
-from pysnips.data_structures.trees import BinaryTreeNode
+from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
 
 
 class Solution:
