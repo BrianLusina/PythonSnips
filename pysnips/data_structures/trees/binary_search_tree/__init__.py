@@ -7,6 +7,57 @@ class BinarySearchTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
 
+    def insert_node(self, value: int) -> BinaryTreeNode:
+        """
+        Inserts a node in a BST given a value
+        If there is not root, then create a new root node with the value and return.
+
+        If there is a root, then check the value against the root node's value and determine if it should go left or right
+        If the value is greater than the root node's value, then go right, if the value is less than the root node's value,
+        then go left. Repeat this operation, until we can insert the node in the right place.
+
+        Alternatively, this tree can be re-arranged to form a new tree.
+
+        This has used an iterative approach. However, a recursive approach can also be adopted.
+
+        if not self.root:
+            return BinaryTreeNode(value)
+
+        if value < self.root.value and self.root.left:
+            self.insert_node(value, self.root.left)
+
+        elif value <= self.root.value:
+            self.root.left = BinaryTreeNode(value)
+            
+        elif value > self.root.value and self.root.right:
+            self.insert_node(value, self.root.right)
+        else:
+            self.root.right = BinaryTreeNode(value)
+
+        return self.root
+        """
+        if not self.root:
+            return BinaryTreeNode(value)
+
+        parent, dummy = self.root, self.root
+
+        while self.root:
+            parent = self.root
+
+            if value < self.root.value:
+                self.root = self.root.left
+            else:
+                self.root = self.root.right
+
+        if not parent:
+            parent = BinaryTreeNode(value)
+        elif value < parent.value:
+            parent.left = BinaryTreeNode(value)
+        else:
+            parent.right = BinaryTreeNode(value)
+
+        return dummy
+
     def find_largest(self, node: BinaryTreeNode) -> BinaryTreeNode:
         """
         Simply finds the largest node in a BST. We walk righward down the BST until the current node has no right child

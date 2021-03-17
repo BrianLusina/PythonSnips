@@ -35,3 +35,10 @@ class Tree(ABC):
         """
         raise NotImplementedError("This method has not been implemented")
 
+    @abstractmethod
+    def insert_node(self, value) -> TreeNode:
+        """
+        Based on the type of tree, this inserts a node in the Tree
+        """
+        raise NotImplementedError("This method has not been implemented")
+
