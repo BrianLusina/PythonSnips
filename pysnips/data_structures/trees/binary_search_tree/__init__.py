@@ -533,3 +533,31 @@ class BinarySearchTree(Tree):
                     nodes.push((node.right, depth + 1))
 
         return True
+
+    def lowest_common_ancestor(self, node_one: BinaryTreeNode, node_two: BinaryTreeNode) -> BinaryTreeNode:
+        """
+        Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
+        If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
+        if the nodes are less than the root node, we move to the left.
+        If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
+        no root node.
+        
+        Assumptions:
+        - assumes that the node itself can also be an ancestor/descendant of itself
+        """
+
+        if not self.root:
+            return None
+
+        while self.root:
+            # if both node_one and node_two are smaller than root, then LCA lies in the left
+            if self.root.value > node_one.value and self.root.value > node_two.value:
+                self.root = self.root.left
+            
+            # if both node_one and node_two are greater than root, then LCA lies in the right
+            elif self.root.value < node_one.value and self.root.value < node_two.value:
+                self.root = self.root.right
+            else:
+                break
+        
+        return self.root
