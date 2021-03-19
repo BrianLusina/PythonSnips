@@ -1,12 +1,43 @@
-from queue import Queue
 from pysnips.data_structures.trees import Tree
 from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
 from pysnips.data_structures.stacks import Stack
+from pysnips.data_structures.queues import FifoQueue
 
 class BinarySearchTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
         self.stack = Stack()
+
+    @property
+    def height(self) -> int:
+        if not self.root:
+            return 0
+        
+        # if we don't have either left and right nodes from the root, we return 0
+        if not self.root.left and not self.root.right:
+            return 0
+        
+        height = 0
+        queue = FifoQueue()
+        queue.enqueue(self.root)
+
+        while True:
+            current_level_nodes = queue.size
+            
+            if current_level_nodes == 0:
+                return height
+
+            height += 1
+
+            while current_level_nodes > 0:
+                node = queue.dequeue()
+
+                if node.left:
+                    queue.enqueue(node.left)
+
+                if node.right:
+                    queue.enqueue(node.right)
+                current_level_nodes -= 1
 
     def next(self) -> int:
         """
@@ -183,25 +214,25 @@ class BinarySearchTree(Tree):
 
         return ans
 
-    def breadth_first_search(self):
+    def breadth_first_search(self) -> list:
         """
         Performs a breadth first search through a Binary Tree
         This will traverse the tree level by level and depth by depth. Using a Queue to put elements into the queue
         """
-        queue = Queue()
+        queue = FifoQueue()
 
         # start off by adding the root node
-        queue.put(self)
+        queue.enqueue(self.root)
 
         # while the queue is not empty, we want to traverse the tree and add elements to the queue,
-        while not queue.empty():
-            current_node = queue.get()
+        while not queue.is_empty():
+            current_node = queue.dequeue()
 
             if current_node.left:
-                queue.put(current_node.left)
+                queue.enqueue(current_node.left)
 
             if current_node.right:
-                queue.put(current_node.right)
+                queue.enqueue(current_node.right)
 
     def pre_order(self) -> list:
         """

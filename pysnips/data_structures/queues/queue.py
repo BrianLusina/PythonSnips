@@ -1,5 +1,15 @@
-from data_structures.queues import Queue, User
+from pysnips.data_structures.queues import FifoQueue as Queue
 from pprint import pprint
+
+class User(object):
+    def __init__(self, name, email, phone):
+        self.name = name
+        self.email = email
+        self.phone = phone
+
+    def __repr__(self):
+        return "{Name: %r, Email: %r, Phone:%r}" % (self.name, self.email, self.phone)
+
 
 microsoftQueue = Queue()
 user = User("Brian Lusina", "awesome@example.com", 123456789)
@@ -15,12 +25,10 @@ microsoftQueue.enqueue(user3)
 pprint(microsoftQueue)
 
 # size of queue at beginning
-pprint(microsoftQueue.size())
+pprint(microsoftQueue.size)
 
 # first person leaves
 microsoftQueue.dequeue()
 
-pprint(microsoftQueue.who_left)
-
 # size of queue after
-pprint(microsoftQueue.size())
+pprint(microsoftQueue.size)

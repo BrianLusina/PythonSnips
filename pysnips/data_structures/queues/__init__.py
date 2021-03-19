@@ -1,4 +1,9 @@
-class Queue(object):
+from queue import Queue, Empty, Full
+
+class QueueFullException(Full):
+    pass
+
+class FifoQueue(object):
     """
     Queue implementation in Python
     Methods:
@@ -9,56 +14,48 @@ class Queue(object):
         is_full checks if the queue is full
         is_empty checks if the queue is empty
     """
-    def __init__(self):
-        self.queue = []
-        self._storage = {}
-        self._start = -1
-        self._end = -1
+    def __init__(self, size=0):
+        self.queue = Queue(maxsize=size)
+        self.data = []
+
+    @property
+    def size(self) -> int:
+        """
+        Returns the size of the queue
+        """
+        return self.queue.qsize()
+
+    def is_empty(self) -> bool:
+        """
+        Returns True if the queue is empty, false otherwise
+        """
+        return self.queue.empty()
+
+    @property
+    def items(self) -> list:
+        return self.data
 
     def enqueue(self, val):
         """
         Adds item to the end of the queue
-        :param val:
-        :return:
         """
-        self.queue.append(val)
-        self._end += 1
-        self._storage[self._end] = val
+        try:
+            self.queue.put(val, block=False)
+            self.data.append(val)
+        except Full:
+            raise QueueFullException(f"Queue has reached limit. Current Size: {self.size}. Capacity: {self.queue.maxsize}")
 
     def dequeue(self):
         """
-        Removes an item from the fron of the queue
-        :return:
+        Removes an item from the front of the queue. 
+        Returns None if the queue is empty
         """
-        # check if there are values
-        if self._end > self._start:
-            self._start += 1
-            next_up = self._storage[self._start]
-            self.who_left(self._start)
-            del self._storage[self._start]
-        return next_up
-
-    def size(self):
-        return self._end - self._start
-
-    @staticmethod
-    def who_left(val):
-        """
-        Notifies who left queue
-        :return: *User* Object
-        :rtype object
-        """
-        return str(val)
+        try:
+            item = self.queue.get(block=False)
+            self.data.pop(1)
+            return item
+        except Empty:
+            return None
 
     def __repr__(self):
-        return "Start: %r End: %r Size: %r, \n Queue:%r" % (self._start, self._end, self.size(), self._storage)
-
-
-class User(object):
-    def __init__(self, name, email, phone):
-        self.name = name
-        self.email = email
-        self.phone = phone
-
-    def __repr__(self):
-        return "{Name: %r, Email: %r, Phone:%r}" % (self.name, self.email, self.phone)
+        return f"Size: {self.size}. Queue: {self.items}"
