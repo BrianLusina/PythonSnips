@@ -17,7 +17,15 @@ class Tree(ABC):
     """
     Tree abstract base class that defines common methods & properties of a typical Tree data structure
     """
-    
+
+    @abstractmethod
+    def next(self) -> int:
+        raise NotImplementedError("This method has not been implemented")
+
+    @abstractmethod
+    def has_next(self) -> bool:
+        raise NotImplementedError("This method has not been implemented")
+
     @abstractmethod
     def increasing_order_traversal(self) -> TreeNode:
         """

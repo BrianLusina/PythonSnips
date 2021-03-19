@@ -6,6 +6,48 @@ from pysnips.data_structures.stacks import Stack
 class BinarySearchTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
+        self.stack = Stack()
+
+    def next(self) -> int:
+        """
+        Returns the next smallest number in a BST.
+        This involves two major operations. One is where we pop an element from the stack which becomes the next smallest element to return. This is a O(1) operation. 
+        However, we then make a call to our helper function _leftmost_inorder which iterates over a bunch of nodes. This is clearly a linear time operation i.e. O(N) in the worst case.
+        However, the important thing to note here is that we only make such a call for nodes which have a right child. Otherwise, we simply return. 
+        Also, even if we end up calling the helper function, it won't always process N nodes. They will be much lesser. Only if we have a skewed tree would there be N nodes for the root. 
+        But that is the only node for which we would call the helper function.
+        
+        Thus, the amortized (average) time complexity for this function would still be O(1). We don't need to have a solution which gives constant time operations for every call. 
+        We need that complexity on average and that is what we get.
+        """
+
+        # this is the smallest element in the BST
+        topmost_node = self.stack.pop()
+
+        # if the node has a right child, call the helper function for the right child to 
+        # get the next smallest item
+        # We don't need to check for the left child because of the way we have added nodes onto the stack. 
+        # The topmost node either won't have a left child or would already have the left subtree processed. 
+        # If it has a right child, then we call our helper function on the node's right child. 
+        # This would comparatively be a costly operation depending upon the structure of the tree
+        if topmost_node.right:
+            self.__leftmost_inorder(topmost_node.right)
+        
+        return topmost_node.value
+
+    def has_next(self) -> bool:
+        """
+        Checks if the BST has items left. Since this uses a stack, then we simply check if the stack still has items.
+        This is used in an iterator approach to getting items from the BST. This returns True if there are items & False
+        otherwise, the Time Complexity here is O(1)
+        """
+        return self.stack.is_empty()
+
+    def __leftmost_inorder(self, root: BinaryTreeNode) -> None:
+        # Add all the nodes of the left most branch to the stack
+        while root:
+            self.stack.push(root)
+            root = root.left
 
     def insert_node(self, value: int) -> BinaryTreeNode:
         """
