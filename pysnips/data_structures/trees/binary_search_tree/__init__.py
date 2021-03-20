@@ -1,5 +1,5 @@
 from pysnips.data_structures.trees import Tree
-from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
+from pysnips.data_structures.trees.binary_tree_node import BinaryTreeNode
 from pysnips.data_structures.stacks import Stack
 from pysnips.data_structures.queues import FifoQueue
 
@@ -544,10 +544,22 @@ class BinarySearchTree(Tree):
         
         Assumptions:
         - assumes that the node itself can also be an ancestor/descendant of itself
+
+        Complexity Analysis:
+
+        Time Complexity: O(h).
+        The Time Complexity of the above solution is O(h), where h is the height of the tree.
+
+        Space Complexity: O(1).
+        The space complexity of the above solution is constant.
         """
 
         if not self.root:
             return None
+
+        # if any of the node values matches the data value for the root node, return the root node
+        if self.root.value == node_one.value or self.root.value == node_two.value:
+            return self.root
 
         while self.root:
             # if both node_one and node_two are smaller than root, then LCA lies in the left
