@@ -71,3 +71,9 @@ class Tree(ABC):
         """
         raise NotImplementedError("This method has not been implemented")
 
+    @abstractmethod
+    def paths(self) -> list:
+        """
+        Prints all the paths of a Tree from root node to leaf nodes
+        """
+        raise NotImplementedError("This method has not been implemented")

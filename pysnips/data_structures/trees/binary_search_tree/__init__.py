@@ -17,7 +17,7 @@ class BinarySearchTree(Tree):
         if not self.root.left and not self.root.right:
             return 0
         
-        height = 0
+        height = 1
         queue = FifoQueue()
         queue.enqueue(self.root)
 
@@ -133,7 +133,7 @@ class BinarySearchTree(Tree):
 
     def find_largest(self, node: BinaryTreeNode) -> BinaryTreeNode:
         """
-        Simply finds the largest node in a BST. We walk righward down the BST until the current node has no right child
+        Simply finds the largest node in a BST. We walk rightward down the BST until the current node has no right child
         and return it. This assumes that the Tree is a valid BST
         :param node: root node, or current node
         :return: Value of the largest node
@@ -573,3 +573,29 @@ class BinarySearchTree(Tree):
                 break
         
         return self.root
+
+    @property
+    def paths(self) -> list:
+        """
+        Gets all the paths of this tree from root node to leaf nodes
+        """
+        if not self.root:
+            return []
+
+        stack = Stack()
+        stack.push((self.root, ""))
+        res = []
+
+        while stack:
+            node, path = stack.pop()
+            
+            if not (node.left or node.right):
+                res.append(path + str(node.value))            
+            
+            if node.left:
+                stack.push((node.left, path + str(node.value) + "->"))
+            
+            if node.right:
+                stack.push((node.right, path + str(node.value) + "->"))
+
+        return [list(map(int, x.split("->"))) for x in res]
