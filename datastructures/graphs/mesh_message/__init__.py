@@ -1,7 +1,7 @@
 from queue import Queue
 
 
-def shortest_path_(graph, start_node, end_node):
+def shortest_path_(graph: dict, start_node, end_node):
     """
     Find the shortes path in the graph from the start_node to the end_node
     This will use Breadth-First-Search(BFS) as it allows finding the shortest path in a graph although takes up more memory
@@ -9,7 +9,7 @@ def shortest_path_(graph, start_node, end_node):
     also speeding up the search for the shortes path
 
     We're using a queue instead of a list because we want an efficient first-in-first-out (FIFO) structure with O(1) inserts and removes.
-    If we used a list, appending would be O(1)O(1), but removing elements from the front would be O(n).
+    If we used a list, appending would be O(1), but removing elements from the front would be O(n).
 
     """
     if start_node not in graph:
@@ -45,8 +45,7 @@ def shortest_path_(graph, start_node, end_node):
     return None
 
 
-
-def reconstruct_path(how_we_reached_nodes, start_node, end_node):
+def reconstruct_path(how_we_reached_nodes: dict, start_node, end_node):
     shortest_path = []
     
     # start from the end node(recipient) and work backwards

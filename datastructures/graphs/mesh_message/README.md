@@ -27,9 +27,9 @@ For the network above, a message from Jayden to Adam should have this route:
   ['Jayden', 'Amelia', 'Adam']
 
 Gotchas
-We can find the shortest route in O(N+M)O(N+M) time, where NN is the number of users and MM is the number of connections between them.
+We can find the shortest route in O(N+M) time, where N is the number of users and M is the number of connections between them.
 
-It's easy to write code that can get caught in an infinite loop for some inputs! Does your code always finish running?
+It's easy to write code that can get caught in an infinite loop for some inputs!
 
 What happens if there's no way for messages to get to the recipient?
 
@@ -43,7 +43,7 @@ Dictionaries? Maybeee.
 Graphs? Yeah, that seems like it could work!
 Let's run with graphs for a bit and see how things go. Users will be nodes in our graph, and we'll draw edges between users who are close enough to message each other.
 
-Our input dictionary already represents the graph we want in adjacency list ↴ format. Each key in the dictionary is a node, and the associated value—a list of connected nodes—is an adjacency list.
+Our input dictionary already represents the graph we want in adjacency list format. Each key in the dictionary is a node, and the associated value—a list of connected nodes—is an adjacency list.
 
 > Adjacency list
 > In this format, every node has a list of connected neighbors: an adjacency list. We could store these lists in a dictionary where the keys represent the node and the values are the adjacency lists.
