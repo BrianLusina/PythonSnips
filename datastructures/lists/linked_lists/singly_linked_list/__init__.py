@@ -1,9 +1,8 @@
-from pysnips.data_structures.lists.linked_lists import LinkedList, Node
-
+from .. import LinkedList, Node
 
 class SingleNode(Node):
     """
-    Node implementation in a single linked list
+    SingleNode implementation in a single linked list
     """
     def __init__(self, value, next_):
         # noinspection PyCompatibility
@@ -33,12 +32,12 @@ class SinglyLinkedList(LinkedList):
             self.tail.next = node
         self.tail = node
 
-    def get_nth_node(self, position: int) -> Node:
+    def get_nth_node(self, position: int) -> SingleNode:
         """
         Gets nth node in a linked list given the head of the linked list
         :raises: ValueError for position less than 0 or position is greater than length of linked list
-        :rtype: Node
-        :returns: None when the head is None & Node
+        :rtype: SingleNode
+        :returns: None when the head is None & SingleNode
         """
         if position < 0:
             raise ValueError("Position less than 0")        
@@ -57,7 +56,7 @@ class SinglyLinkedList(LinkedList):
 
             return current
 
-    def delete_node_at_position(self, position: int) -> Node:
+    def delete_node_at_position(self, position: int) -> SingleNode:
         """
         Deletes a node at the specified position
         """
@@ -108,7 +107,7 @@ class SinglyLinkedList(LinkedList):
     def pop(self):
         pass
 
-    def reverse(self):
+    def reverse(self) -> SingleNode:
         """
         Uses an iterative approach to reverse this linked list.
         If the linked list has only 0 or 1 node, then just return the head.
@@ -193,7 +192,7 @@ class SinglyLinkedList(LinkedList):
         tail_pointer.next = current_pointer
         return self.head
 
-    def unshift(self, node: Node) -> Node:
+    def unshift(self, node: SingleNode) -> SingleNode:
         if self.head:
             return node
         node.next = self.head
@@ -269,7 +268,7 @@ class SinglyLinkedList(LinkedList):
 
         return self.head    
 
-    def append(self, node: Node) -> Node:
+    def append(self, node: SingleNode) -> SingleNode:
         """
         Appends another linked list to this linked list & returns the head of the newly formed linked list
         if both linked lists are None, return None, if 1 of the linked lists is None, return the one that is
@@ -283,8 +282,8 @@ class SinglyLinkedList(LinkedList):
         Time Complexity = O(n) as we are traversing only 1 linked list
 
         :param: node Head node of linked list to append
-        :type: Node
-        :rtype: Node
+        :type: SingleNode
+        :rtype: SingleNode
         """
         if node is None:
             return self.head

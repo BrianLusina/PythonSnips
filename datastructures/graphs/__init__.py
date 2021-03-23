@@ -6,12 +6,13 @@ class Node(object):
     """
     Graph Node representing a Node in a Graph
     """
-    def __init__(self, data):
+    def __init__(self, data, ):
         """
         Initializes a Node object
         :param data Value/data stored within this node
         """
         self.data = data
+        self.neighbours = defaultdict(list)
     
     def __str__(self):
         return f"Data: {self.data}"
@@ -84,7 +85,7 @@ class Graph(ABC):
         """
         Return string representation of this Graph
         """
-        return f"{self._graph}"
+        return f"Graph: {self._graph}"
     
     def is_connected(self, node_one: Node, node_two: Node) -> bool:
         return node_one in self._graph and node_two in self._graph[node_two]
@@ -133,7 +134,7 @@ class Graph(ABC):
         
         for node in self._graph[node_one.data]:
             if node not in path:
-                newpaths = self.find_all_paths(node, node_two, path)
+                newpaths = self.find_all_paths(Node(node), node_two, path)
                 for newpath in newpaths:
                     paths.append(newpath)
 
@@ -145,7 +146,7 @@ class Graph(ABC):
         """
         path = path + [node_one]
 
-        if node_one.data == node_two:
+        if node_one.data == node_two.data:
             return path
 
         if node_one.data not in self._graph:

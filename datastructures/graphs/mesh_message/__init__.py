@@ -3,10 +3,10 @@ from queue import Queue
 
 def shortest_path_(graph: dict, start_node, end_node):
     """
-    Find the shortes path in the graph from the start_node to the end_node
+    Find the shortest path in the graph from the start_node to the end_node
     This will use Breadth-First-Search(BFS) as it allows finding the shortest path in a graph although takes up more memory
     than Depth-First-Search. We will use a set to track the nodes we have already traversed to prevent repeating our search and 
-    also speeding up the search for the shortes path
+    also speeding up the search for the shortest path
 
     We're using a queue instead of a list because we want an efficient first-in-first-out (FIFO) structure with O(1) inserts and removes.
     If we used a list, appending would be O(1), but removing elements from the front would be O(n).
