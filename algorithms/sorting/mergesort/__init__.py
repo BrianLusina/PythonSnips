@@ -2,6 +2,14 @@ def merge_sort_in_place(the_list: list) -> list:
     """
     Performs a merge sort on a list in-place
     :param the_list: list of integer values to sort
+    :return: same list orded in ascending order
+    Examples:
+    >>> merge_sort_in_place([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> merge_sort_in_place([])
+    []
+    >>> merge_sort_in_place([-2, -5, -45])
+    [-45, -5, -2]
     """
     mid = len(the_list) // 2
     left_half = the_list[:mid]
@@ -74,7 +82,13 @@ def merge_sort_out_of_place(the_list: list) -> list:
     """
     Sorts a list of integer values out of place & returns a new list of integer
     :param the_list: List of integer values
-    :return sorted integer list
+    :return: a sorted integer list
+    >>> merge_sort_out_of_place([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> merge_sort_out_of_place([])
+    []
+    >>> merge_sort_out_of_place([-2, -5, -45])
+    [-45, -5, -2]
     """
     
     # base case

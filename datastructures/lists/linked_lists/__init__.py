@@ -367,3 +367,12 @@ class LinkedList(object):
         Alternate split a linked list such that a linked list such as a->b->c->d->e becomes a->c->e->None and b->d->None
         """
         pass
+
+    
+    @abstractmethod
+    def is_palindrome(self) -> bool:
+        """
+        Checks if the linked list is a Palndrome. That is, can be read from both back & front
+        :return: boolean value. True if the LinkedList is a Palindrome
+        """
+        raise NotImplementedError("Method has not been implemented")

@@ -1,4 +1,5 @@
 from .. import LinkedList, Node
+from ....stacks import Stack
 
 class SingleNode(Node):
     """
@@ -329,3 +330,38 @@ class SinglyLinkedList(LinkedList):
 
         return first, second
 
+    def is_palindrome(self) -> bool:
+        """
+        Checks to see if a Linked list is a Palindrome.
+        Returns True if it is, false otherwise.
+        Uses a stack, where we add the values/data of each node into a stack
+        & reset the pointer back to the head. We then traverse the linked list from the head
+        as we pop the data items from the stack(this will be the last added data item of the tail node) 
+        & check each node's value to the data item popped from the stack. If any differ, then it is not
+        a Palindrome
+        :returns: True
+        """
+
+        if not self.head:
+            return False
+
+        # A LinkedList with 1 Node is a Palindrome
+        if not self.head.next:
+            return True
+
+        current = self.head
+        stack = Stack()
+
+        while current:
+            stack.push(current.data)
+            current = current.next
+        
+        current = self.head
+
+        while current:
+            data = stack.pop()
+            if current.value != data:
+                return False
+            current = current.next
+
+        return True
