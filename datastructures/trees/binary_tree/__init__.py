@@ -1,6 +1,6 @@
-from pysnips.data_structures.trees import Tree
-from pysnips.data_structures.trees.binary_tree_node import BinaryTreeNode
-from pysnips.data_structures.stacks import Stack
+from .. import Tree
+from ..binary_tree_node import BinaryTreeNode
+from ...stacks import Stack
 
 
 class BinaryTree(Tree):
@@ -64,4 +64,23 @@ class BinaryTree(Tree):
         recurse_tree(self.root)
         return lca
 
+    def __len__(self) -> int:
+        if not self.root:
+            return 0
 
+        counter = 1
+        stack = Stack()
+        stack.push(self.root)
+
+        while not stack.is_empty():
+            node = stack.pop()
+
+            if node.left:
+                counter += 1
+                stack.push(node.left)
+            
+            if node.right:
+                counter += 1
+                stack.push(node.right)
+
+        return counter

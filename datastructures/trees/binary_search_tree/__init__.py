@@ -1,7 +1,7 @@
-from pysnips.data_structures.trees import Tree
-from pysnips.data_structures.trees.binary_tree_node import BinaryTreeNode
-from pysnips.data_structures.stacks import Stack
-from pysnips.data_structures.queues import FifoQueue
+from ...queues import FifoQueue
+from .. import Tree
+from ..binary_tree_node import BinaryTreeNode
+from ...stacks import Stack
 
 class BinarySearchTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
@@ -599,3 +599,24 @@ class BinarySearchTree(Tree):
                 stack.push((node.right, path + str(node.value) + "->"))
 
         return [list(map(int, x.split("->"))) for x in res]
+
+    def __len__(self) -> int:
+        if not self.root:
+            return 0
+
+        counter = 1
+        stack = Stack()
+        stack.push(self.root)
+
+        while not stack.is_empty():
+            node = stack.pop()
+
+            if node.left:
+                counter += 1
+                stack.push(node.left)
+            
+            if node.right:
+                counter += 1
+                stack.push(node.right)
+
+        return counter

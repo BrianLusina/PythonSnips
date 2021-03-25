@@ -1,4 +1,4 @@
-from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
+from datastructures.trees.binary_tree_node import BinaryTreeNode
 
 
 class Solution:
@@ -20,7 +20,7 @@ class Solution:
         self.traverse(root.right, level + 1)
 
 
-def levelOrder(self, root: BinaryTreeNode) -> List[List[int]]:
+def levelOrder(root: BinaryTreeNode) -> List[List[int]]:
     """
     This takes 16ms to compute
     """

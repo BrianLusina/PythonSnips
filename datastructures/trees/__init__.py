@@ -19,6 +19,14 @@ class Tree(ABC):
     """
 
     @abstractmethod
+    def __len__(self) -> int:
+        """
+        Calculates the number of nodes in the Tree
+        :returns: number of nodes in the tree
+        """
+        raise NotImplementedError("This method has not been implemented")
+        
+    @abstractmethod
     def next(self) -> int:
         raise NotImplementedError("This method has not been implemented")
 

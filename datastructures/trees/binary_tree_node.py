@@ -1,4 +1,4 @@
-from pysnips.data_structures.trees import TreeNode
+from . import TreeNode
 
 class BinaryTreeNode(TreeNode):
     """
