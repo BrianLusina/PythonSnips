@@ -1,5 +1,5 @@
 from itertools import count
-from pysnips.math_pysnips.is_prime import is_prime
+from ..is_prime import is_prime
 
 
 def nth_prime(n):
