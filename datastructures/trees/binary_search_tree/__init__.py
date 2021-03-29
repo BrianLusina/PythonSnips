@@ -406,7 +406,7 @@ class BinarySearchTree(Tree):
                 continue
         
             # if this node is invalid, return false immediately
-            if not (mind <= node.data <= maxd):
+            if node.data < mind or node.data > maxd:
                 return False
 
             if node.left:
