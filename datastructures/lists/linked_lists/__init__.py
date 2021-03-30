@@ -376,3 +376,19 @@ class LinkedList(object):
         :return: boolean value. True if the LinkedList is a Palindrome
         """
         raise NotImplementedError("Method has not been implemented")
+
+    @abstractmethod
+    def pairwise_swap(self) -> Node:
+        """
+        Swaps nodes in a linked list in pairs.
+        As there are different kinds of LinkedLists, it is up to the child class to implement this
+
+        The premise(idea) is to swap the data of each node with the data of the next node. This is while using 
+        an iterative approace
+        Example:
+        1 -> 2 -> 3 -> 4
+        becomes
+        2 -> 1 -> 4 -> 3
+        :return: New head of node
+        """
+        raise NotImplementedError("Method has not been implemented")

@@ -365,3 +365,27 @@ class SinglyLinkedList(LinkedList):
             current = current.next
 
         return True
+
+    def pairwise_swap(self) -> SingleNode:
+        # nothing to do here
+        if not self.head:
+            return self.head
+
+        current = self.head
+
+        # loop as long as there are at least 2 nodes left
+        while current and current.next:
+
+            # if both nodes have the same value/data
+            if current.value == current.next.value:
+                # no need to swap, move on to the next pair
+                current = current.next.next
+            else:
+                # swap data of node with the next node's data
+                current.value, current.next.value = current.next.value, current.value
+
+                # move on to the next pair
+                current = current.next.next
+        
+        # at this point, the linked list has been swapped in pairs
+        return self.head
