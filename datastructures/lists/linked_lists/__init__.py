@@ -384,7 +384,7 @@ class LinkedList(object):
         As there are different kinds of LinkedLists, it is up to the child class to implement this
 
         The premise(idea) is to swap the data of each node with the data of the next node. This is while using 
-        an iterative approace
+        an iterative approach
         Example:
         1 -> 2 -> 3 -> 4
         becomes
