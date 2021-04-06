@@ -1,4 +1,5 @@
 from collections import deque
+
 # python 2.x import sanity check
 try:
     from Queue import LifoQueue

@@ -30,4 +30,3 @@ def verse(num):
 
 def verses(start, stop):
     return "".join(verse(n) + "\n" for n in range(start, stop + 1))
-

@@ -1,7 +1,5 @@
-from pysnips.data_structures.lists.linked_lists.circular_linked_list import CircularLinkedList
-from pysnips.data_structures.lists.linked_lists.doubly_linked_list import DoublyLinkedList
-from pysnips.data_structures.lists.linked_lists.singly_linked_list import SinglyLinkedList
 from pysnips.data_structures.lists.linked_lists.build_one_2_3 import build_one_two_three
+from pysnips.data_structures.lists.linked_lists.singly_linked_list import SinglyLinkedList
 
 myArray = ["Dad", "Mom", "Linda", "Joyce", "Brian", "Mideva", "Lucky", "Fox", "Junior", "Coco", "Rabbits"]
 
@@ -12,6 +10,8 @@ single_list = SinglyLinkedList()
 
 for x in range(0, len(myArray)):
     single_list.push(myArray[x])
+
+
 #
 # for x in range(0, len(myArray)):
 #     double_list.push(myArray[x])

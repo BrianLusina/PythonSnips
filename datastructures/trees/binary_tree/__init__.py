@@ -7,7 +7,7 @@ class BinaryTree(Tree):
 
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
-    
+
     def lowest_common_ancestor(self, node_one: BinaryTreeNode, node_two: BinaryTreeNode) -> BinaryTreeNode:
         """
         The approach is pretty intuitive. Traverse the tree in a depth first manner. The moment you encounter either of the nodes node_one or node_two, 
@@ -78,7 +78,7 @@ class BinaryTree(Tree):
             if node.left:
                 counter += 1
                 stack.push(node.left)
-            
+
             if node.right:
                 counter += 1
                 stack.push(node.right)

@@ -1,4 +1,5 @@
 from pysnips.errors import PySnipsError
+
 try:
     from functools import reduce
 except ImportError:
@@ -28,4 +29,3 @@ def total_characters(word_list):
         else:
             total_chars += 0
     return total_chars
-

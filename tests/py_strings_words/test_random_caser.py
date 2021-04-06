@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 from pysnips.py_strings_words.random_caser import random_case
 
 

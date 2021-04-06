@@ -3,7 +3,8 @@ from functools import partial
 
 # Score categories
 # Change the values as you see fit
-YACHT , ONES , TWOS , THREES , FOURS , FIVES , SIXES , FULL_HOUSE , FOUR_OF_A_KIND , LITTLE_STRAIGHT , BIG_STRAIGHT, CHOICE = range(0, 12)
+YACHT, ONES, TWOS, THREES, FOURS, FIVES, SIXES, FULL_HOUSE, FOUR_OF_A_KIND, LITTLE_STRAIGHT, BIG_STRAIGHT, CHOICE = range(
+    0, 12)
 
 
 def yacht(dice):
@@ -15,7 +16,7 @@ def ns(number, dice):
 
 
 def big_straight(dice):
-    return 30 if set(dice) == {2,3,4,5,6} else 0
+    return 30 if set(dice) == {2, 3, 4, 5, 6} else 0
 
 
 def full_house(dice):
@@ -30,7 +31,7 @@ def four_of_a_kind(dice):
 
 
 def little_straight(dice):
-    return 30 if set(dice) == {1,2,3,4,5} else 0
+    return 30 if set(dice) == {1, 2, 3, 4, 5} else 0
 
 
 funcs = [
@@ -47,6 +48,7 @@ funcs = [
     big_straight,
     sum,
 ]
+
 
 def score(dice, category):
     try:

@@ -1,5 +1,6 @@
-from pysnips.math_pysnips.visible_cubes import VisibleCubes
 import unittest
+
+from pysnips.math_pysnips.visible_cubes import VisibleCubes
 
 
 class VisibleCubesTest(unittest.TestCase):

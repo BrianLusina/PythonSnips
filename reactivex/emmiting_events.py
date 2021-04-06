@@ -3,7 +3,6 @@ n top of data, Observables can also emit events. By treating data and events the
 """
 from rx import Observable
 
-
 Observable.interval(1000).map(lambda i: "{} Mississipi".format(i)).subscribe(lambda s: print(s))
 
 # this will stop the sequence

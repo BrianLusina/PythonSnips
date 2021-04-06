@@ -8,4 +8,5 @@ super_size(105)    # 510
 super_size(12)     # 21
 ```
 
-If the argument passed through is single digit or is already the maximum possible integer, your function should simply return it.
+If the argument passed through is single digit or is already the maximum possible integer, your function should simply
+return it.

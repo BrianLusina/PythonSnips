@@ -2,7 +2,8 @@
 
 A very easy task for you!
 
-You have to create a method, that corrects a given time string. There was a problem in addition, so many of the time strings are broken. Time-Format is european. So from "00:00:00" to "23:59:59".
+You have to create a method, that corrects a given time string. There was a problem in addition, so many of the time
+strings are broken. Time-Format is european. So from "00:00:00" to "23:59:59".
 
 Some examples:
 

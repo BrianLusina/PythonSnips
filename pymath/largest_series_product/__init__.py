@@ -25,4 +25,4 @@ def slice_me(series, length):
     numbers = [int(digit) for digit in series]
     if not 1 <= length <= len(series):
         raise ValueError("Invalid length to slice %s" % str(length))
-    return [numbers[i: i+length] for i in range(len(numbers) - length + 1)]
+    return [numbers[i: i + length] for i in range(len(numbers) - length + 1)]

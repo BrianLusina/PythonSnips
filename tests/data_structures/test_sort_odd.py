@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.sort_odd import sort_array
 
 

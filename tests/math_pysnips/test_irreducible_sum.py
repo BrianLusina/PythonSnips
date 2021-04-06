@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.irreducible_sum import sum_fracts
 
 

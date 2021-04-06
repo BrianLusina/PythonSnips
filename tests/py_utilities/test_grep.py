@@ -3,7 +3,6 @@ import unittest
 
 from pysnips.py_utilities.grep import grep
 
-
 ILIADFILENAME = 'iliad.txt'
 ILIADCONTENTS = '''Achilles sing, O Goddess! Peleus' son;
 His wrath pernicious, who ten thousand woes

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-import os
 import ast
-import imp
 import glob
+import imp
+import os
 import shutil
 import subprocess
 import sys
@@ -72,6 +72,7 @@ def main():
             raise SystemExit(1)
         else:
             print('SUCCESS!')
+
 
 if __name__ == '__main__':
     main()

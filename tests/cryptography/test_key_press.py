@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.cryptography.key_press import KeyPress
 
 

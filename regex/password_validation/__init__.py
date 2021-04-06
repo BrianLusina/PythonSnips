@@ -23,5 +23,3 @@ def password_validation(passwords):
             pass
         value.append(p)
     return ",".join(value)
-
-

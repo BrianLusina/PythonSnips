@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.power_of_sum import power_sum_dig_term
 
 
@@ -17,6 +18,7 @@ class PowerSumDigTermTests(unittest.TestCase):
 
     def test_5(self):
         self.assertEquals(power_sum_dig_term(5), 5832)
+
 
 if __name__ == '__main__':
     unittest.main()

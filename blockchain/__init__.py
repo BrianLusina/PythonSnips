@@ -2,9 +2,9 @@
 Custom Python implementation of a Block
 """
 
+from datetime import datetime
 from hashlib import sha256
 from json import dumps
-from datetime import datetime
 
 
 class Block(object):
@@ -26,11 +26,13 @@ class Block(object):
         This creates a hash for the current block
         """
         return sha256(str(self.index) + str(self.timestamp) +
-                self.previous_hash + str(dumps(self.data).encode("utf-8"))).hexdigest()
+                      self.previous_hash + str(dumps(self.data).encode("utf-8"))).hexdigest()
 
     def __repr__(self):
-        return "Block:{} => [Created at: {}, Data: {}, Previous Hash: {}, Hash: {}]".format(self.index, self.timestamp, self.data,
-                self.previous_hash, self.hash)
+        return "Block:{} => [Created at: {}, Data: {}, Previous Hash: {}, Hash: {}]".format(self.index, self.timestamp,
+                                                                                            self.data,
+                                                                                            self.previous_hash,
+                                                                                            self.hash)
 
 
 class BlockChain(object):
@@ -101,4 +103,3 @@ if __name__ == "__main__":
     # now lets tamper the block chain and see what happens
     block_chain.chain[1].data = {"account": "Anna", "amount": 100, "action": "buy"}
     print("Chain valid? " + str(block_chain.is_chain_valid()))
-

@@ -1,4 +1,5 @@
 import time
+
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
@@ -14,6 +15,7 @@ def callback(ch, method, properies, body):
     time.sleep(body.count(b'.'))
     print("[X] Done.")
     ch.basic_ack(delivery_tag=method.delivery_tag)
+
 
 channel.basic_qos(prefetch_count=1)
 channel.basic_consume(callback, queue="task_queue")

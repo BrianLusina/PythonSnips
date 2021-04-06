@@ -26,5 +26,5 @@ def value(colors):
 
     if len(colors) <= 1:
         raise Exception("Expected colors to be at least 2")
-    
+
     return color_mapping.index(colors[0]) * 10 + color_mapping.index(colors[1])

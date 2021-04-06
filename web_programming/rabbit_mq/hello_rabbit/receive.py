@@ -15,6 +15,7 @@ channel.queue_declare(queue="hello", durable=True)
 def callback(ch, method, properties, body):
     print("[X] Received %r" % body)
 
+
 # tell RabbitMQ that this particular callback fn should receive messages from our queue
 
 channel.basic_consume(callback, queue="hello", no_ack=True)

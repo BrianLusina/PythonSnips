@@ -1,5 +1,6 @@
-from ObjectOriented.Vehicles import car
 from pprint import pprint
+
+from ObjectOriented.Vehicles import car
 
 
 class Jeep(car.Car):
@@ -11,4 +12,3 @@ class Jeep(car.Car):
 jeep = Jeep("Jeep", "SUV", "Cherokee", 2000, 500000, "6000CC")
 pprint(jeep.vehicle_type())
 pprint(jeep.__repr__())
-

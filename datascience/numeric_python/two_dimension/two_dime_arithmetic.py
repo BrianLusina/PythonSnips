@@ -1,5 +1,3 @@
-import numpy as np
-
 # Create np_baseball (3 cols)
 # np_baseball = np.array(baseball)
 

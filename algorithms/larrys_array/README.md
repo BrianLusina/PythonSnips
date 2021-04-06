@@ -1,7 +1,7 @@
-Larry has been given a permutation of a sequence of natural numbers incrementing from  1 as an array. He must determine whether the array can be sorted using the following operation any number of times:
+Larry has been given a permutation of a sequence of natural numbers incrementing from 1 as an array. He must determine
+whether the array can be sorted using the following operation any number of times:
 
-Choose any  consecutive indices and rotate their elements in such a way that .
-For example, if :
+Choose any consecutive indices and rotate their elements in such a way that . For example, if :
 
 ```plain
 A		rotate 
@@ -14,49 +14,34 @@ A		rotate
 YES
 ```
 
-On a new line for each test case, print YES if  can be fully sorted. Otherwise, print NO.
+On a new line for each test case, print YES if can be fully sorted. Otherwise, print NO.
 
 Input Format
 
 The first line contains an integer , the number of test cases.
 
-The next  pairs of lines are as follows:
+The next pairs of lines are as follows:
 
-The first line contains an integer , the length of .
-The next line contains  space-separated integers .
-Constraints
+The first line contains an integer , the length of . The next line contains space-separated integers . Constraints
 
- integers incrementing by  from  to 
-Output Format
+integers incrementing by from to Output Format
 
-For each test case, print YES if  can be fully sorted. Otherwise, print NO.
+For each test case, print YES if can be fully sorted. Otherwise, print NO.
 
 Sample Input
 
-3
-3
-3 1 2
-4
-1 3 4 2
-5
-1 2 3 5 4
-Sample Output
+3 3 3 1 2 4 1 3 4 2 5 1 2 3 5 4 Sample Output
 
-YES
-YES
-NO
-Explanation
+YES YES NO Explanation
 
-In the explanation below, the subscript of  denotes the number of operations performed.
+In the explanation below, the subscript of denotes the number of operations performed.
 
-Test Case 0: 
- 
- is now sorted, so we print  on a new line.
+Test Case 0:
 
-Test Case 1: 
-. 
-. 
- is now sorted, so we print  on a new line.
+is now sorted, so we print on a new line.
+
+Test Case 1:
+. . is now sorted, so we print on a new line.
 
 Test Case 2:
-No sequence of rotations will result in a sorted . Thus, we print  on a new line.
+No sequence of rotations will result in a sorted . Thus, we print on a new line.

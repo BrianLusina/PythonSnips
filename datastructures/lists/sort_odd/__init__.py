@@ -1,5 +1,5 @@
-from collections import deque
 from cProfile import Profile, run
+from collections import deque
 
 
 def sort_array(arr):
@@ -35,6 +35,3 @@ if __name__ == "__main__":
     print(f"Sorted array of {source_array} using implementation 3 is {sort_array_2(source_array)}")
     print(f"Profile stats for 2nd implementation")
     run("sort_array(source_array)")
-
-
-

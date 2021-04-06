@@ -19,4 +19,5 @@ def draw_art():
 
     window.exitonclick()
 
+
 draw_art()

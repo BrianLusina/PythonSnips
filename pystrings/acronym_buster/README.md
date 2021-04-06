@@ -1,6 +1,9 @@
-Laura really hates people using acronyms in her office and wants to force her colleagues to remove all acronyms before emailing her. She wants you to build a system that will edit out all known acronyms or else will notify the sender if unknown acronyms are present.
+Laura really hates people using acronyms in her office and wants to force her colleagues to remove all acronyms before
+emailing her. She wants you to build a system that will edit out all known acronyms or else will notify the sender if
+unknown acronyms are present.
 
-Any combination of three or more letters in upper case will be considered an acronym. Acronyms will not be combined with lowercase letters, such as in the case of 'KPIs'. They will be kept isolated as a word/words within a string.
+Any combination of three or more letters in upper case will be considered an acronym. Acronyms will not be combined with
+lowercase letters, such as in the case of 'KPIs'. They will be kept isolated as a word/words within a string.
 
 For any string:
 

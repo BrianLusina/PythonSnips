@@ -8,6 +8,6 @@ class SquareClimber(object):
             d[x] = x ** 2
         return d
 
+
 sq = SquareClimber(7)
 print(sq.climber())
-

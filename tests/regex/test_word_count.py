@@ -1,5 +1,7 @@
 import unittest
+
 from pysnips.regex.word_count import word_count
+
 
 # todo check on word count
 @unittest.skip

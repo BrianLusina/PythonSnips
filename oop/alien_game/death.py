@@ -1,9 +1,9 @@
-from ObjectOriented.AlienGame import Scene
 from random import randint
+
+from ObjectOriented.AlienGame import Scene
 
 
 class Death(Scene):
-
     __quips = [
         "You died.  You kinda suck at this.",
         "Your mom would be proud...if she were smarter.",

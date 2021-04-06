@@ -28,8 +28,8 @@ class Minesweeper(object):
                 if b[i1][i2] != ' ':
                     continue
                 cnt = inp[i1 - 1][i2 - 1:i2 + 2].count('*') + \
-                    inp[i1][i2 - 1:i2 + 2].count('*') + \
-                    inp[i1 + 1][i2 - 1:i2 + 2].count('*')
+                      inp[i1][i2 - 1:i2 + 2].count('*') + \
+                      inp[i1 + 1][i2 - 1:i2 + 2].count('*')
                 if cnt == 0:
                     continue
                 b[i1][i2] = str(cnt)
@@ -62,5 +62,5 @@ class Minesweeper(object):
 
         # Borders not as expected
         if any(inp[i1] != '+' + '-' * (row_len - 2) + '+' for i1 in [0, -1]) or \
-           any(inp[i1][i2] != '|' for i1 in range(1, col_len - 1) for i2 in [0, -1]):
+                any(inp[i1][i2] != '|' for i1 in range(1, col_len - 1) for i2 in [0, -1]):
             raise ValueError("Invalid board")

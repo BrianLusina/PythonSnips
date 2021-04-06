@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.tail_swap import tail_swap
 
 

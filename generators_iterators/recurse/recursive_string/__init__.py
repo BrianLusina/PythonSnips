@@ -21,11 +21,13 @@ def get_permutations(word):
     permutations = set()
     for permutation_of_all_chars_except_last in permutations_of_all_chars_except_last:
         for position in range(len(all_chars_except_last) + 1):
-            permutation = permutation_of_all_chars_except_last[:position] + last_char + permutation_of_all_chars_except_last[position:]
+            permutation = permutation_of_all_chars_except_last[
+                          :position] + last_char + permutation_of_all_chars_except_last[position:]
 
             permutations.add(permutation)
 
     return permutations
+
 
 # example output
 print(get_permutations("word"))

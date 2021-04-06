@@ -1,7 +1,7 @@
 # Change
 
-Correctly determine the fewest number of coins to be given to a customer such
-that the sum of the coins' value would equal the correct amount of change.
+Correctly determine the fewest number of coins to be given to a customer such that the sum of the coins' value would
+equal the correct amount of change.
 
 ## For example
 
@@ -20,8 +20,8 @@ that the sum of the coins' value would equal the correct amount of change.
 
 Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
 indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
+every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include a
+message.
 
 To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
 `raise Exception`, you should write:
@@ -32,4 +32,5 @@ raise Exception("Meaningful message indicating the source of the error")
 
 ## Source
 
-Software Craftsmanship - Coin Change Kata [https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata](https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata)
+Software Craftsmanship - Coin Change
+Kata [https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata](https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata)

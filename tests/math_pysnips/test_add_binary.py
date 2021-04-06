@@ -1,5 +1,6 @@
-from pysnips.math_pysnips.binary.add_binary import add_binary
 import unittest
+
+from pysnips.math_pysnips.binary.add_binary import add_binary
 
 
 class AddBinaryTests(unittest.TestCase):
@@ -17,4 +18,3 @@ class AddBinaryTests(unittest.TestCase):
 
     def test_5(self):
         self.assertEqual(add_binary(51, 12), "111111")
-

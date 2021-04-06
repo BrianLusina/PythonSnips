@@ -9,7 +9,7 @@ def consecutive(arr):
     if len(arr) == 0 or len(arr) == 1:
         return 0
     s = sorted(arr)
-    m = range(s[0], s[len(s)-1] + 1)
+    m = range(s[0], s[len(s) - 1] + 1)
     return len(m) - len(s)
 
 # or

@@ -15,4 +15,3 @@ def cakes(recipe, available):
                     available[x] -= recipe[x]
                     cake_count += 1
     return cake_count
-

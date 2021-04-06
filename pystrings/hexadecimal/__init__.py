@@ -7,6 +7,7 @@ class Hexadecimal(object):
     Class for conversion of hexadecimal characters
     initialized with the hexadecimal string
     """
+
     def __init__(self):
         pass
 

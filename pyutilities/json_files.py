@@ -10,7 +10,6 @@ with json_data as data_file:
 
 
 class UserData(object):
-
     """
     Class to check the JSON file of user data,
     check if user id is an integer
@@ -48,6 +47,7 @@ class UserData(object):
      Returns the count for male, female in a list, with each list containing data for each gender, e.g
      [[Males: 46],[Females:54]]
      """
+
     @staticmethod
     def stats():
         male_count, female_count = 0, 0
@@ -66,6 +66,7 @@ class UserData(object):
     for each name in the sorted data, loop through each dictionary obtaining first names, store in a list
     find the rest of the data
     """
+
     @staticmethod
     def data_sorter():
         sorted_data = []

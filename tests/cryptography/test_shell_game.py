@@ -1,5 +1,6 @@
 import time
 import unittest
+
 from pysnips.cryptography.shell_game import ShellGame
 
 
@@ -25,6 +26,7 @@ class ShellGameTests(unittest.TestCase):
         time.sleep(3)
         shell = ShellGame(4, [[0, 9], [9, 3], [3, 7], [7, 8], [8, 2], [4, 5]])
         self.assertEqual(5, shell.find_the_ball(), "Nope! Expected 5.")
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(ShellGameTests)

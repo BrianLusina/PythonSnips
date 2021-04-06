@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.letter_digit_count import LetterDigitCount
 
 

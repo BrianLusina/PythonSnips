@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.number_letter_counts import number_letter_counts
 
 

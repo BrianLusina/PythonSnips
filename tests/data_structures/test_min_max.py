@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.min_max import min_max
 
 
@@ -11,6 +12,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_3(self):
         self.assertListEqual(min_max([1]), [1, 1])
+
 
 if __name__ == '__main__':
     unittest.main()

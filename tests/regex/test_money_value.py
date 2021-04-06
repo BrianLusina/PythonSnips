@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.regex.money_value import money_value
 
 
@@ -35,6 +36,7 @@ class MoneyValueTestCases(unittest.TestCase):
 
     def test_money_value_11(self):
         self.assertEqual(money_value("$$$"), 0.0)
+
 
 if __name__ == '__main__':
     unittest.main()

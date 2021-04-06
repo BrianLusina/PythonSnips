@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.nth_prime import nth_prime
 
 

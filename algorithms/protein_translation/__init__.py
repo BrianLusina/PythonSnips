@@ -14,12 +14,14 @@ CODON_MAP = {
     "UGC": "Cysteine",
     "UGG": "Tryptophan",
     "UAA": "STOP",
-    "UAG": "STOP", 
+    "UAG": "STOP",
     "UGA": "STOP",
 }
 
+
 def of_codon(codon):
     return CODON_MAP.get(codon, None)
+
 
 def of_rna(strand):
     proteins = []
@@ -34,6 +36,5 @@ def of_rna(strand):
             proteins.append(codon)
         else:
             raise ValueError("Invalid protein")
-    
+
     return proteins
-    

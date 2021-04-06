@@ -14,23 +14,22 @@ def shortest_path_(graph: dict, start_node, end_node):
     """
     if start_node not in graph:
         raise Exception("Start node not in Graph")
-    
+
     if end_node not in graph:
         raise Exception("End node not in graph")
-    
-    
+
     nodes_to_visit = Queue()
     nodes_to_visit.put(start_node)
-    
+
     # keep track of how we got to each node
     # we'll use this to reconstruct the shortest path at the end
     # we'll ALSO use this to keep track of which nodes we've
     # already visited
-    how_we_reached_nodes = {start_node : None}
-    
+    how_we_reached_nodes = {start_node: None}
+
     while not nodes_to_visit.empty():
         current_node = nodes_to_visit.get()
-        
+
         if current_node == end_node:
             return reconstruct_path(how_we_reached_nodes, start_node, end_node)
 
@@ -38,8 +37,7 @@ def shortest_path_(graph: dict, start_node, end_node):
             if neighbor not in how_we_reached_nodes:
                 how_we_reached_nodes[neighbor] = current_node
                 nodes_to_visit.put(neighbor)
-            
-    
+
     # if we get here, then we never found the end node
     # so there's NO path from start_node to end_node
     return None
@@ -47,17 +45,16 @@ def shortest_path_(graph: dict, start_node, end_node):
 
 def reconstruct_path(how_we_reached_nodes: dict, start_node, end_node):
     shortest_path = []
-    
+
     # start from the end node(recipient) and work backwards
     current_node = end_node
-    
+
     while current_node:
         shortest_path.append(current_node)
-        
+
         current_node = how_we_reached_nodes[current_node]
-    
+
     # we reverse, because start from the recipients node instead of the senders node
     shortest_path.reverse()
-    
-    return shortest_path
 
+    return shortest_path

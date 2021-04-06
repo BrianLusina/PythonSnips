@@ -1,5 +1,6 @@
-from pysnips.py_strings_words.accum import accum
 import unittest
+
+from pysnips.py_strings_words.accum import accum
 
 
 class AccumTests(unittest.TestCase):

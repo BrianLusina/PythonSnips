@@ -6,16 +6,17 @@ class EmptyListException(Exception):
 
 
 class Node(object):
-    
+
     def __init__(self, value=None, next_=None):
         self._value = value
         self.next_ = next_
-    
+
     def next(self):
         return self.next_
-    
+
     def value(self):
         return self._value
+
 
 class LinkedList(object):
     def __init__(self, data=[]):
@@ -27,7 +28,7 @@ class LinkedList(object):
         if self._head is None:
             raise EmptyListException("Can not get head of empty List")
         return self._head
-    
+
     def push(self, value):
         node = Node(value)
         node.next_ = self._head
@@ -41,22 +42,22 @@ class LinkedList(object):
         result = self._head.value()
         self._head = self._head.next()
         return result
-    
+
     def reversed(self):
         return LinkedList(self)
-    
+
     def __len__(self):
         return self._len
-    
+
     def __iter__(self):
         return self
-    
+
     def __next__(self):
         if self._head is None:
             raise StopIteration()
         value = self._head.value()
         self._head = self._head.next()
         return value
-    
+
     def next(self):
         return self.__next__()

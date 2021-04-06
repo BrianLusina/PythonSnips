@@ -1,9 +1,9 @@
 from __future__ import division
 
 import math
-from operator import mul
-from itertools import product
 from functools import reduce
+from itertools import product
+from operator import mul
 
 
 def fac(n):

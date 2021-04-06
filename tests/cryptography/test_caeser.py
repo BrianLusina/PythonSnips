@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.cryptography.caeser_cipher import CaesarCipher, CaesarCipherV2
 
 
@@ -33,7 +34,7 @@ class CaeserCipherTests(unittest.TestCase):
 
     def test_rotate_numbers(self):
         caeser = CaesarCipher(4)
-        self.assertEqual(caeser.encrypt('Testing 1 2 3 testing'),'Xiwxmrk 1 2 3 xiwxmrk')
+        self.assertEqual(caeser.encrypt('Testing 1 2 3 testing'), 'Xiwxmrk 1 2 3 xiwxmrk')
 
     def test_rotate_punctuation(self):
         caeser = CaesarCipher(21)
@@ -42,7 +43,7 @@ class CaeserCipherTests(unittest.TestCase):
     def test_rotate_all_letters(self):
         caeser = CaesarCipher(13)
         self.assertEqual(caeser.encrypt("The quick brown fox jumps"
-                                     " over the lazy dog."),
+                                        " over the lazy dog."),
                          "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
 
     def test_rotate_a_by_1_on_caeser_v2(self):
@@ -75,7 +76,7 @@ class CaeserCipherTests(unittest.TestCase):
 
     def test_rotate_numbers_on_caeser_v2(self):
         caeser = CaesarCipherV2(4)
-        self.assertEqual(caeser.encode('Testing 1 2 3 testing'),'Xiwxmrk 1 2 3 xiwxmrk'.upper())
+        self.assertEqual(caeser.encode('Testing 1 2 3 testing'), 'Xiwxmrk 1 2 3 xiwxmrk'.upper())
 
     def test_rotate_punctuation_on_caeser_v2(self):
         caeser = CaesarCipherV2(21)
@@ -84,7 +85,7 @@ class CaeserCipherTests(unittest.TestCase):
     def test_rotate_all_letters_on_caeser_v2(self):
         caeser = CaesarCipherV2(13)
         self.assertEqual(caeser.encode("The quick brown fox jumps"
-                                     " over the lazy dog."),
+                                       " over the lazy dog."),
                          "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.".upper())
 
 

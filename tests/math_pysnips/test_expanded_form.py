@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.expanded_form import expanded_form, expanded_form_2
 
 

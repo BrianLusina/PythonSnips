@@ -1,8 +1,8 @@
+import cProfile
+from functools import reduce
 from itertools import islice, count, product
 from math import sqrt, pow
-from functools import reduce
 from operator import mul
-import cProfile
 
 
 def is_prime(num):

@@ -38,4 +38,4 @@ class Network(object):
 
     def __repr__(self):
         return "<NetFile: %r>, Text: %r, Info: %r, Base Url: %r" % (
-            self.ufile, self.text, self.info,  self.base_url)
+            self.ufile, self.text, self.info, self.base_url)

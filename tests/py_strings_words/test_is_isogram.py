@@ -50,5 +50,6 @@ class Tests(unittest.TestCase):
     def test_made_up_name_that_is_an_isogram(self):
         self.assertTrue(is_isogram("Emily Jung Schwartzkopf"))
 
+
 if __name__ == "__main__":
     unittest.main()

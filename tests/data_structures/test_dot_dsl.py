@@ -85,7 +85,7 @@ class DotDslTest(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             Graph([
-                (ATTR, )
+                (ATTR,)
             ])
 
     def test_malformed_attr(self):
@@ -115,4 +115,3 @@ class DotDslTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

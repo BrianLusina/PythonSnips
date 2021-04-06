@@ -5,7 +5,7 @@ def song(start, stop=0):
     :return: the snippet of the song
     """
     result = ""
-    for number in reversed(range(stop, start+1)):
+    for number in reversed(range(stop, start + 1)):
         result += verse(number) + "\n"
 
     return result

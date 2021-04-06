@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.connect import ConnectGame
+from algorithms.connect import ConnectGame
 
 
 class ConnectTest(unittest.TestCase):

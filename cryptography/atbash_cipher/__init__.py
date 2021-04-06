@@ -1,4 +1,5 @@
 import string
+
 GROUP_SIZE = 5
 ALPHA = string.ascii_lowercase
 CIPHER = string.ascii_lowercase[::-1]
@@ -49,7 +50,7 @@ def grouper(txt_to_group):
     count, grouped = 0, []
     while count < len(txt_to_group):
         if count + GROUP_SIZE <= len(txt_to_group):
-            grouped.append(txt_to_group[count:count+GROUP_SIZE])
+            grouped.append(txt_to_group[count:count + GROUP_SIZE])
         else:
             grouped.append(txt_to_group[count:])
         count += GROUP_SIZE

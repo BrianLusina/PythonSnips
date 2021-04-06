@@ -1,11 +1,12 @@
 import unittest
+
 from pysnips.cryptography.key_pad_decode import decode
 
 
 class MyTestCase(unittest.TestCase):
     def test_1(self):
         self.assertEqual(decode("4103432323"), "6957678787")
-    
+
     def test_2(self):
         self.assertEqual(decode("4103438970"), "6957672135")
 
@@ -17,6 +18,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_5(self):
         self.assertEqual(decode("4107056043"), "6953504567")
+
 
 if __name__ == '__main__':
     unittest.main()

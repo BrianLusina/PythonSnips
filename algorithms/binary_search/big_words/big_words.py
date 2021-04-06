@@ -8,7 +8,7 @@ def find_rotation_point(words):
     while floor_index < ceiling_index:
 
         # guess a point 1/2 way between floor and ceiling
-        guess_index = floor_index + ((ceiling_index - floor_index) // 2 )
+        guess_index = floor_index + ((ceiling_index - floor_index) // 2)
 
         # if guess comes after the first word or is the first word
         if words[guess_index] >= first_word:

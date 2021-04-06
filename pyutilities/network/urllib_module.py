@@ -1,5 +1,6 @@
-from PythonUtilities.Network import Network
 from pprint import pprint
+
+from PythonUtilities.Network import Network
 
 url = input("Enter a url: ")
 

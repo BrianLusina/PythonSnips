@@ -34,6 +34,8 @@ class Node(object):
         Stringify Node
         """
         return "%s -> %s" % (self.value, self.next)
+
+
 class LinkedList(object):
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
@@ -296,7 +298,7 @@ class LinkedList(object):
                     break
             else:
                 return None
-        
+
             while self.head != slow_pointer:
                 slow_pointer = slow_pointer.next
                 self.head = self.head.next
@@ -319,35 +321,35 @@ class LinkedList(object):
         while fast_pointer and slow_pointer and fast_pointer.next:
             fast_pointer = fast_pointer.next.next
             slow_pointer = slow_pointer.next
-        
+
             if slow_pointer == fast_pointer:
                 pointer_1 = pointer_2 = slow_pointer
-                
+
                 # Count the number of nodes in loop
                 k = 1
-                while(pointer_1.next != pointer_2):
+                while (pointer_1.next != pointer_2):
                     pointer_1 = pointer_1.next
                     k += 1
 
             # Fix one pointer to head
             pointer_1 = self.head
-         
+
             # And the other pointer to k nodes after head
             pointer_2 = self.head
             for _ in range(k):
                 pointer_2 = pointer_2.next
- 
+
             # Move both pointers at the same place
             # they will meet at loop starting node
-            while(pointer_2 != pointer_1):
+            while (pointer_2 != pointer_1):
                 pointer_1 = pointer_1.next
                 pointer_2 = pointer_2.next
- 
+
             # Get pointer to the last node
             pointer_2 = pointer_2.next
-            while(pointer_2.next != pointer_1):
+            while (pointer_2.next != pointer_1):
                 pointer_2 = pointer_2.next
- 
+
             # Set the next node of the loop ending node
             # to fix the loop
             pointer_2.next = None
@@ -368,7 +370,6 @@ class LinkedList(object):
         """
         pass
 
-    
     @abstractmethod
     def is_palindrome(self) -> bool:
         """

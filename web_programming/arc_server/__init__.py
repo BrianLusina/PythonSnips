@@ -53,6 +53,7 @@ class ArcHandler(BaseHTTPRequestHandler):
         self.send_header("Location", "/")
         self.end_headers()
 
+
 if __name__ == "__main__":
     server_address = ('', 8000)
     httpd = HTTPServer(server_address=server_address, RequestHandlerClass=ArcHandler)

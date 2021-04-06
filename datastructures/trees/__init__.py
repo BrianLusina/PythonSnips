@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class TreeNode(object):
     """
     Tree node class which will implement Tree Node
@@ -13,6 +14,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 class Tree(ABC):
     """
     Tree abstract base class that defines common methods & properties of a typical Tree data structure
@@ -25,7 +27,7 @@ class Tree(ABC):
         :returns: number of nodes in the tree
         """
         raise NotImplementedError("This method has not been implemented")
-        
+
     @abstractmethod
     def next(self) -> int:
         raise NotImplementedError("This method has not been implemented")
@@ -49,7 +51,6 @@ class Tree(ABC):
         :rtype TreeNode
         """
         raise NotImplementedError("This method has not been implemented")
-
 
     @abstractmethod
     def has_next(self) -> bool:

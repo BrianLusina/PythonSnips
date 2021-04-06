@@ -30,4 +30,3 @@ def sum_between(array):
     # if both numbers are the same
     elif array[1] == array[0]:
         return choice(array)
-

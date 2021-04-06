@@ -63,5 +63,5 @@ def say(number, recurse=False):
         return say(number // millions) + ' million ' + say(number % millions, True)
 
     if number % billions == 0:
-            return say(number // billions) + ' billion'
+        return say(number // billions) + ' billion'
     return say(number // billions) + ' billion ' + say(number % billions, True)

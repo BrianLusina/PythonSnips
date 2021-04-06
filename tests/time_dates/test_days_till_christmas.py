@@ -1,6 +1,7 @@
 import unittest
-from pysnips.time_dates.days_till_christmas import days_until_christmas
 from datetime import date
+
+from pysnips.time_dates.days_till_christmas import days_until_christmas
 
 
 class DaysTillXmasTestCases(unittest.TestCase):

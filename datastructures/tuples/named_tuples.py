@@ -1,9 +1,9 @@
 """
 Simple demo of named tuples
 """
+import random
 from collections import namedtuple
 from string import ascii_letters
-import random
 
 A = namedtuple("A", "count enabled color")
 tup = A(count=6, enabled=False, color="green")

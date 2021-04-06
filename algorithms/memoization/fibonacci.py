@@ -1,6 +1,3 @@
-from functools import lru_cache
-
-
 def fibonacci(num):
     if num == 0:
         return 0
@@ -29,5 +26,3 @@ def memoize(func):
         return result
 
     return memoized_func
-
-

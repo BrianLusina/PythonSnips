@@ -2,10 +2,11 @@ from math import factorial as fac
 
 
 def binomial(x, y):
-	try:
-		return fac(x) // fac(y) // fac(x - y)
-	except ValueError:
-		return 0
+    try:
+        return fac(x) // fac(y) // fac(x - y)
+    except ValueError:
+        return 0
+
 
 def pascals_triangle(nth: int) -> list:
     """
@@ -19,6 +20,7 @@ def pascals_triangle(nth: int) -> list:
 
     return result
 
+
 def pascal_nth_row(nth: int) -> list:
     """
     Get's Pascal's Triangle Nth row and returns it
@@ -30,10 +32,10 @@ def pascal_nth_row(nth: int) -> list:
     """
     ncr_1 = 1
     row = [ncr_1]
-    
+
     for i in range(1, nth + 1):
         ncr = (ncr_1 * (nth - i + 1)) // i
         row.append(ncr)
         ncr_1 = ncr
-    
+
     return row

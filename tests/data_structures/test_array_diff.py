@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.array_diff import array_diff
 
 

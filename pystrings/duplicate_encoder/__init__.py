@@ -14,5 +14,3 @@ class DuplicateEncoder(object):
 
     def duplicate_encode_v2(self):
         return "".join(["(" if self.encode.lower().count(c) == 1 else ")" for c in self.encode.lower()])
-
-

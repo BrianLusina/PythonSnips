@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 import unittest
-from pysnips.py_strings_words.palindrome import Palindrome
 from random import choice, randint
 from string import ascii_letters
+
+from pysnips.py_strings_words.palindrome import Palindrome
 
 
 class PalindromeTests(unittest.TestCase):
     def setUp(self):
         self.palindrome = Palindrome()
-    
+
     def single_letter(self):
-        
+
         self.assertEqual(self.palindrome.longest_palindrome("a"), 1)
 
     def test_double_letter(self):
@@ -39,7 +40,7 @@ class PalindromeTests(unittest.TestCase):
 
     def test_10(self):
         self.assertEqual(self.palindrome.is_palindrome(123456), False)
-        
+
     def test_palindrome_pairs_1(self):
         self.assertEqual(self.palindrome.palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]])
 
@@ -95,6 +96,7 @@ class PalindromeTests(unittest.TestCase):
         for _ in range(100):
             test_case = PalindromeTests.generate_test_case()
             self.assertEqual(self.palindrome.is_palindrome(test_case), self.reference(test_case))
+
 
 if __name__ == '__main__':
     unittest.main()

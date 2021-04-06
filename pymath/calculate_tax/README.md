@@ -1,5 +1,4 @@
-TAX LAB
-Country X calculates tax for its citizens using a graduated scale rate as shown below:
+TAX LAB Country X calculates tax for its citizens using a graduated scale rate as shown below:
 
 Yearly Income: 0 - 1000
 
@@ -25,23 +24,15 @@ Yearly Income: Over 50,000
 
 Tax Rate: 30%
 
-Write a Python function named calculate_tax that will take as an argument, a dictionary containing key-value pairs of people's names as the keys and their yearly incomes as the values.
+Write a Python function named calculate_tax that will take as an argument, a dictionary containing key-value pairs of
+people's names as the keys and their yearly incomes as the values.
 
-The function should return a dictionary containing key-value pairs of the same people’s names as keys and their yearly tax bill as the values. For example, given the sample input below:
+The function should return a dictionary containing key-value pairs of the same people’s names as keys and their yearly
+tax bill as the values. For example, given the sample input below:
 
-{
-    ‘Alex’: 500,
-    ‘James’: 20500,
-    ‘Kinuthia’: 70000
-}
-The output would be as follows:
+{ ‘Alex’: 500, ‘James’: 20500, ‘Kinuthia’: 70000 } The output would be as follows:
 
-{
-    ‘Alex’: 0,
-    ‘James’: 2490,
-    ‘Kinuthia’: 15352.5
-}
-The tax for James would be calculated as follows:
+{ ‘Alex’: 0, ‘James’: 2490, ‘Kinuthia’: 15352.5 } The tax for James would be calculated as follows:
 
 The first 1000 (1000 - 0)
 

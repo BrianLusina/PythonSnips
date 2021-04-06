@@ -1,7 +1,7 @@
 import unittest
+from math import sqrt
 
 from pysnips.math_pysnips.triangles.triangle import Triangle, TriangleError
-from math import sqrt
 
 
 class TriangleTests(unittest.TestCase):

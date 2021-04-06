@@ -1,6 +1,5 @@
-from matplotlib import pyplot
 import numpy as np
-
+from matplotlib import pyplot
 
 height = np.round(np.random.normal(1.75, 0.20, 5000), 2)
 weight = np.round(np.random.normal(60.32, 15, 5000), 2)
@@ -30,7 +29,7 @@ pyplot.text(1550, 71, 'India', withdash=True)
 pyplot.text(5700, 80, 'China', withdash=True)
 
 # scatter plot, use s kwarg to increase the size of the dots, alpha sets the opacity, c sets the color of the dots
-pyplot.scatter(height, weight, s=np_city*2, alpha=0.8)
+pyplot.scatter(height, weight, s=np_city * 2, alpha=0.8)
 
 # adds a grid
 pyplot.grid(True)

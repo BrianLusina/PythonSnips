@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.is_prime import is_prime, divisors, is_prime_with_re
 
 

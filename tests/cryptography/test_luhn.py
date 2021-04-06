@@ -1,5 +1,5 @@
-from collections import Counter
 import unittest
+from collections import Counter
 
 from pysnips.cryptography.luhn import Luhn
 
@@ -128,6 +128,7 @@ class LuhnTests(unittest.TestCase):
 
     def test_28(self):
         self.assertEqual(Luhn.is_card_valid("6666 6666 6666 6664"), True)
+
 
 if __name__ == '__main__':
     unittest.main()

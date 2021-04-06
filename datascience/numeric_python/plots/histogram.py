@@ -7,4 +7,3 @@ plt.hist(values, bins=5)
 plt.show()
 # cleans it up again
 plt.clf()
-

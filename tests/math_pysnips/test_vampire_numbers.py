@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.vampire_numbers.vampire_numbers import vampire_test
 
 

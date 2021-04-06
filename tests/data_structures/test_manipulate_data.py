@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.manipulate_data import manipulate_data
 
 

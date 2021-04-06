@@ -41,4 +41,5 @@ def obtain_high(data_to_filter):
         curated.append((total, st))
     return curated
 
+
 pprint(filter_data(jsonify_custom(cols)))

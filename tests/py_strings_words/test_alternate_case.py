@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.alternate_case import to_alternating_case
 
 

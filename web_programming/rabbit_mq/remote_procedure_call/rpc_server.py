@@ -40,6 +40,7 @@ def on_request(ch, method, props, body):
                      properties=pika.BasicProperties(correlation_id=props.correlation_id),
                      body=str(response))
 
+
 channel.basic_qos(prefetch_count=1)
 channel.basic_consume(on_request, queue='rpc_queue')
 

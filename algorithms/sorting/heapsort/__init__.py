@@ -1,8 +1,10 @@
 def left_child_index(parent_index):
     return parent_index * 2 + 1
 
+
 def right_child_index(parent_index):
     return parent_index * 2 + 2
+
 
 def bubble_down(heap, heap_length, index):
     """
@@ -31,6 +33,7 @@ def bubble_down(heap, heap_length, index):
             # we're larger than both children, so we're done
             break
 
+
 def remove_max(heap, heap_length):
     """
     Remove and return the largest item from a heap
@@ -47,10 +50,12 @@ def remove_max(heap, heap_length):
 
     return max_value
 
+
 def heapify(the_list):
     # bubble down from the leaf nodes up to the top
-    for index in range(len(the_list) -1, -1, -1):
+    for index in range(len(the_list) - 1, -1, -1):
         bubble_down(the_list, len(the_list), index)
+
 
 def heapsort(the_list: list):
     heapify(the_list)
@@ -58,7 +63,6 @@ def heapsort(the_list: list):
     heap_size = len(the_list)
 
     while heap_size > 0:
-
         # Remove the largest item and update the heap size
         largest_size = remove_max(the_list, heap_size)
         heap_size -= 1

@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.how_much_love import how_much_i_love_you
 
 
@@ -11,6 +12,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_not_at_all(self):
         self.assertEqual(how_much_i_love_you(6), "not at all")
+
 
 if __name__ == '__main__':
     unittest.main()

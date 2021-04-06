@@ -2,7 +2,6 @@ from abc import ABCMeta, abstractmethod
 
 
 class Scene(object):
-
     __metaclass__ = ABCMeta
 
     @abstractmethod
@@ -15,7 +14,6 @@ class Scene(object):
 
 
 class Engine(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self, scene_map):
@@ -27,7 +25,6 @@ class Engine(object):
 
 
 class Map(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self, start_scene):
@@ -40,4 +37,3 @@ class Map(object):
     @abstractmethod
     def opening_scene(self):
         pass
-

@@ -1,5 +1,6 @@
-from firebase import firebase
 from pprint import pprint
+
+from firebase import firebase
 
 # https://chamayetu-ddca4.firebaseio.com/
 firebase = firebase.FirebaseApplication('https://chamayetu-ddca4.firebaseio.com/', None)

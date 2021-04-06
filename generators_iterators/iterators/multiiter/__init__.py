@@ -6,4 +6,3 @@ def multiiter(*args):
             for a in range(x):
                 for b in range(y):
                     yield (a, b)
-

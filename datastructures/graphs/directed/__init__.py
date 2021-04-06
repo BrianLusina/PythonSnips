@@ -1,6 +1,5 @@
-from .. import Graph, Node, Edge
-from collections import defaultdict
-from pprint import pprint, PrettyPrinter
+from .. import Graph, Node
+
 
 class DirectedGraph(Graph):
 
@@ -35,7 +34,7 @@ class DirectedGraph(Graph):
                     path.append(node)
 
                     path_set.add(node)
-                    
+
                     stack.append(iter(self._graph.get(node, set())))
 
                     break
@@ -43,4 +42,3 @@ class DirectedGraph(Graph):
                 path_set.remove(path.pop())
                 stack.pop()
         return False
-    

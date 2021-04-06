@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.uni_total import uni_total
 
 
@@ -16,7 +17,7 @@ class UniTotalTest(unittest.TestCase):
         self.assertEqual(uni_total(""), 0)
 
     def test_5(self):
-        self.assertEqual(uni_total("aaa") , 291)
+        self.assertEqual(uni_total("aaa"), 291)
 
     def test_6(self):
         self.assertEqual(uni_total("abc"), 294)

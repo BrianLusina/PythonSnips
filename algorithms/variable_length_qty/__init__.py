@@ -47,5 +47,3 @@ def decode(bytes_):
             raise ValueError('incomplete byte sequence')
 
     return values
-
-

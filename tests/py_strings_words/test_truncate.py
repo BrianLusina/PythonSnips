@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.truncate_string import truncate_string
 
 

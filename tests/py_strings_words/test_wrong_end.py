@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.wrong_end import fix_the_meerkat
 
 

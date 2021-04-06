@@ -1,4 +1,3 @@
-import unittest
 from pysnips.data_structures.lists.binary_array_to_num import binary_array_to_number
 
 print(binary_array_to_number([0, 0, 0, 1]))

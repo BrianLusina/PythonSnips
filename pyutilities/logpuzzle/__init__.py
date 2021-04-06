@@ -4,7 +4,6 @@ import sys
 # noinspection PyCompatibility
 from urllib.request import urlretrieve
 
-
 """
 Logpuzzle exercise
 Given an apache logfile, find the puzzle urls and download the images.

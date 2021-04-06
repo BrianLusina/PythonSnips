@@ -1,5 +1,6 @@
 """ This script reads csv file and plots a chart"""
 import csv as csv
+
 import matplotlib.pyplot as plt
 
 DATA_FILE = "adult.csv"

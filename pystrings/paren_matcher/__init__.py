@@ -19,5 +19,3 @@ def closing_paren(sentence, open_paren_index):
         position += 1
 
     raise Exception("No closing parenthesis :(")
-
-

@@ -1,5 +1,5 @@
-from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
 from pysnips.data_structures.stacks import Stack
+from pysnips.data_structures.trees.binary_search_tree.binary_tree_node import BinaryTreeNode
 
 
 class BinarySearchTreeIterator:
@@ -31,7 +31,7 @@ class BinarySearchTreeIterator:
         # This would comparatively be a costly operation depending upon the structure of the tree
         if topmost_node.right:
             self.__leftmost_inorder(topmost_node.right)
-        
+
         return topmost_node.value
 
     def has_next(self) -> bool:

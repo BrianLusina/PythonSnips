@@ -2,7 +2,6 @@ from abc import ABCMeta, abstractmethod
 
 
 class BankAccount(object):
-
     __metaclass__ = ABCMeta
 
     def __init__(self):

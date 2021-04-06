@@ -9,11 +9,14 @@ class Password(object):
     join the string to get one full password
     validate_scale: function to check if the user scale is an integer and is in range 1-10
     """
+
     def __init__(self, scale):
         self.scale = scale
 
     def generate_pass(self):
-        return "New Password: " + ''.join(random.choice(string.ascii_letters + string.digits + ".',={}[]-/|\£$%^&*()_+~#@?><") for _ in range(self.scale))
+        return "New Password: " + ''.join(
+            random.choice(string.ascii_letters + string.digits + ".',={}[]-/|\£$%^&*()_+~#@?><") for _ in
+            range(self.scale))
 
     @staticmethod
     def validate_scale(n):
@@ -39,7 +42,8 @@ def user_request():
 def pass_decorator(func):
     def wrap_pass():
         func()
-        print("*-" * 5 + "\nThank you."+"\n-*"*5)
+        print("*-" * 5 + "\nThank you." + "\n-*" * 5)
+
     return wrap_pass()
 
 

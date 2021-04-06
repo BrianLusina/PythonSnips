@@ -20,11 +20,11 @@ Simple sample of a url shortening server that gets requests from a client with i
     long URI.
 
 """
-import threading
-import requests
-from socketserver import ThreadingMixIn
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from socketserver import ThreadingMixIn
 from urllib.parse import parse_qs, unquote
+
+import requests
 
 memory = {}
 

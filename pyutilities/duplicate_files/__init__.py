@@ -1,5 +1,5 @@
-import os
 import hashlib
+import os
 
 
 def find_duplicate_files(directory):

@@ -26,7 +26,6 @@ def max_duffel_bag_value(cake_tuples, capacity):
             # if the current cake weighs as much or less than the current weight capacity
             # it's possible taking the cake would give get a better value
             if cake_weight <= current_capacity:
-
                 # so we check: should we use the cake or not?
                 # if we use the cake, the most kilograms we can include in addition to the
                 #  cake

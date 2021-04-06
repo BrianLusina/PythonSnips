@@ -1,5 +1,7 @@
 ## Ascii Converter
-Write a module Converter that can take ASCII text and convert it to hexadecimal. The class should also be able to take hexadecimal and convert it to ASCII text.
+
+Write a module Converter that can take ASCII text and convert it to hexadecimal. The class should also be able to take
+hexadecimal and convert it to ASCII text.
 
 Example
 

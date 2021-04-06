@@ -7,13 +7,13 @@ class MinesweeperTest(unittest.TestCase):
 
     def shortDescription(self):
         return "Tests for Minesweeper"
-    
+
     def setUp(self):
         self.minesweeper = Minesweeper()
-    
+
     def tearDown(self):
         self.minesweeper = None
-    
+
     def test_board1(self):
         inp = ["+------+",
                "| *  * |",

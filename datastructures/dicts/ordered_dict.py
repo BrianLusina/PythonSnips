@@ -27,9 +27,10 @@ def map_ascii_to_range_ordered(range_length):
     """
     return OrderedDict(zip(ascii_lowercase, range(range_length)))
 
+
 if __name__ == "__main__":
     result1 = map_ascii_to_range(5)
     result2 = map_ascii_to_range_ordered(5)
 
-    print(result1)    # {'d': 3, 'e': 4, 'a': 0, 'b': 1, 'c': 2}
-    print(result2)    # OrderedDict([('a', 0), ('b', 1), ('c', 2), ('d', 3), ('e', 4)])
+    print(result1)  # {'d': 3, 'e': 4, 'a': 0, 'b': 1, 'c': 2}
+    print(result2)  # OrderedDict([('a', 0), ('b', 1), ('c', 2), ('d', 3), ('e', 4)])

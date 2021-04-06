@@ -9,4 +9,3 @@ def divisor_generator(n):
             yield i
             if i * i != n:
                 yield n // i
-

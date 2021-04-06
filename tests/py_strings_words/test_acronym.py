@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.acronym_buster import acronym_buster
 
 
@@ -97,6 +98,7 @@ class AcronymTestCase(unittest.TestCase):
 
     def test_26(self):
         self.assertEqual(acronym_buster("My SM account needs some work."), "My SM account needs some work.")
+
 
 if __name__ == '__main__':
     unittest.main()

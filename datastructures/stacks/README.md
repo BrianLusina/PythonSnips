@@ -2,7 +2,8 @@
 
 Python implementation of Stacks Data Structure
 
-Stacks are like a stack of plates. Its 'Last In, First out', which means that the item that was placed on the stack most recently, is the first item out.
+Stacks are like a stack of plates. Its 'Last In, First out', which means that the item that was placed on the stack most
+recently, is the first item out.
 
 Stacks have 2 main methods:
 
@@ -17,11 +18,11 @@ They can include some utility methods:
 """Complexity O(1)O(1) time for push(), pop(), and get_max(). O(m)O(m) additional space, where mm is the number of
 operations performed on the stack.
 
-Notice that our time-efficient approach takes some additional space, while a lazy ↴ approach (simply walking through
-the stack to find the max integer whenever get_max() is called) took no additional space. We've traded some space
-efficiency for time efficiency.
+Notice that our time-efficient approach takes some additional space, while a lazy ↴ approach (simply walking through the
+stack to find the max integer whenever get_max() is called) took no additional space. We've traded some space efficiency
+for time efficiency.
 
-  class MaxStack:
+class MaxStack:
 
     def __init__(cls):
         cls.stack      = Stack()
@@ -47,4 +48,5 @@ efficiency for time efficiency.
     # The last item in maxs_stack is the max item in our stack.
     def get_max(cls):
         return cls.maxs_stack.peek()
+
 """

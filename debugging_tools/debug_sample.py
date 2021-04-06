@@ -8,6 +8,7 @@ def sample(a, b):
     print("Sample: ", y)
     return y
 
+
 dis.dis(sample)
 """
 Expected output
@@ -35,6 +36,7 @@ Expected output
 def trace_calls(frame, event, arg):
     if frame.f_code.co_name == "sample":
         print(frame.f_code)
+
 
 sample(3, 2)
 sys.settrace(trace_calls)

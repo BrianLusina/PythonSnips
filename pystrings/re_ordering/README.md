@@ -7,6 +7,7 @@ The part with a capital letter should be the first word.
 Please build a function for re-ordering
 
 Examples
+
 ``` python
 >>> re_ordering('ming Yao')
 'Yao ming'

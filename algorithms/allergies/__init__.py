@@ -32,4 +32,3 @@ class Allergies(object):
         """
         return sorted(list(allergy for allergy in self.ALLERGY_SCORES if
                            self.is_allergic_to(allergy)))
-

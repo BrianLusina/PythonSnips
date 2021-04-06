@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.sum_between import sum_between
 
 
@@ -36,12 +37,3 @@ class SumBetweenTests(unittest.TestCase):
     def test_both_elements_are_less_than_0(self):
         expected = sum(range(-5, -1))
         self.assertEqual(expected, sum_between([-5, -2]), "Expected {}".format(expected))
-
-
-
-
-
-
-
-
-

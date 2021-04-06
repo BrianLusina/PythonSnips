@@ -1,10 +1,10 @@
-import pandas
 import numpy as np
+import pandas
 from sklearn import tree
-from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import confusion_matrix, accuracy_score
 # from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.preprocessing import LabelEncoder
 
 # from sklearn.externals import joblib
 

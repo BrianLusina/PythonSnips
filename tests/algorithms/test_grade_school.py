@@ -1,6 +1,6 @@
+import unittest
 from collections import Sequence
 from types import GeneratorType
-import unittest
 
 from pysnips.algorithms.grade_school import School
 

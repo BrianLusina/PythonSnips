@@ -1,5 +1,5 @@
-from math import factorial as math_factorial, sqrt, pi, e
 from functools import wraps
+from math import factorial as math_factorial, sqrt, pi, e
 
 
 def memoize(func):
@@ -10,15 +10,18 @@ def memoize(func):
         if n not in cache:
             cache[n] = func(n)
         return cache[n]
+
     return wrapper
 
 
 def memodict(f):
     """ Memoization decorator for a function taking a single argument """
+
     class memodict(dict):
         def __missing__(self, key):
             ret = self[key] = f(key)
             return ret
+
     return memodict().__getitem__
 
 

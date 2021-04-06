@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.linked_lists.build_one_2_3 import push, build_one_two_three, Node
 
 
@@ -12,6 +13,7 @@ class BuildOneTwoThreeTestCases(unittest.TestCase):
         self.assertEqual(build_one_two_three().next.data, 2, "First node should should have 1 as data.")
         self.assertEqual(build_one_two_three().next.next.data, 3, "Second node should should have 2 as data.")
         self.assertEqual(build_one_two_three().next.next.next, None, "Third node should should have 3 as data.")
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,10 +1,13 @@
 from collections import defaultdict
+
 from pysnips.data_structures.lists.linked_lists import Node
+
 
 class NodeWithRandomPointer(Node):
     def __init__(self, x: int, next: 'NodeWithRandomPointer' = None, random: 'NodeWithRandomPointer' = None):
         super.__init__(x, next)
         self.random = random
+
 
 def copyRandomList(self, head: NodeWithRandomPointer) -> NodeWithRandomPointer:
     if not head:
@@ -13,7 +16,7 @@ def copyRandomList(self, head: NodeWithRandomPointer) -> NodeWithRandomPointer:
     copy = defaultdict(lambda: NodeWithRandomPointer(0, None, None))
     copy[None] = None
     node = head
-    
+
     while node:
         copy[node].val = node.val
         copy[node].next = copy[node.next]

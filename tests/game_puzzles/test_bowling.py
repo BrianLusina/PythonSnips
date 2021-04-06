@@ -119,11 +119,9 @@ class BowlingTests(unittest.TestCase):
         self.assertEqual(score, 300)
 
     def test_rolls_cannot_score_negative_points(self):
-
         self.assertRaises(ValueError, self.game.roll, -11)
 
     def test_a_roll_cannot_score_more_than_10_points(self):
-
         self.assertRaises(ValueError, self.game.roll, 11)
 
     def test_two_rolls_in_a_frame_cannot_score_more_than_10_points(self):
@@ -191,4 +189,3 @@ class BowlingTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

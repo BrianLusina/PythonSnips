@@ -1,9 +1,5 @@
-from data_science.data_download import DataDownload
-import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt
-import csv
-from pprint import pprint
+from data_science.data_download import DataDownload
 
 
 class RedWineData(object):

@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.consecutive import consecutive
 
 

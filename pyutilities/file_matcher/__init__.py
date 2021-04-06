@@ -1,6 +1,5 @@
 import os
 import shutil
-import re
 
 
 class FileMatcher(object):
@@ -61,6 +60,3 @@ class FileMatcher(object):
                 if dir_name.lower() == file:
                     # copy the file to the directory
                     shutil.move(self.list_files_in_dir()[file], self.get_dirs_in_destination()[dir_name])
-
-
-

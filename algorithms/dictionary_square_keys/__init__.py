@@ -8,4 +8,3 @@ def square_keys():
     for (_, v) in d.items():
         out += str(v) + "\n"
     return out
-

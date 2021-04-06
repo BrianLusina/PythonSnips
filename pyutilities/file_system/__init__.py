@@ -40,7 +40,7 @@ class MyFileSystem(object):
         """
         return {
             "Dir: " + os.path.dirname(self.make_absolute_path()): "Base" + os.path.basename(self.make_absolute_path())
-            }
+        }
 
     def is_path_valid(self, path=None):
         """

@@ -82,7 +82,7 @@ class DoublyLinkedList(LinkedList):
         if not self.tail:
             self.tail = node
         self.head = node
-        
+
     def get_nth_node(self, position: int) -> Node:
         """
         Gets nth node in a linked list given the head of the linked list
@@ -91,11 +91,11 @@ class DoublyLinkedList(LinkedList):
         :returns: None when the head is None & Node
         """
         if position < 0:
-            raise ValueError("Position less than 0")        
-        
+            raise ValueError("Position less than 0")
+
         if self.head is None:
             return None
-        
+
         current = self.head
 
         while current is not None:
@@ -125,7 +125,7 @@ class DoublyLinkedList(LinkedList):
 
                 if current is None:
                     raise ValueError("Invalid position found, reached end of list")
-            
+
             current.value = current.next.value
             current.next = current.next.next
             current.next.prev_node = current.prev_node
@@ -169,11 +169,11 @@ class DoublyLinkedList(LinkedList):
 
         if self.head is None:
             return None
-        
+
         # nothing to reverse here
         if self.head.next_node is None:
             return self.head
-        
+
         current = self.head
         previous = None
         next_ = None
@@ -205,10 +205,10 @@ class DoublyLinkedList(LinkedList):
         # if there is no next node, no need to traverse the doubly linked list, simply create a new
         # DoubleNode and insert it at the tail
         if node.next is None:
-            new_tail = DoubleNode(data, prev_node = node)
+            new_tail = DoubleNode(data, prev_node=node)
             node.next = new_tail
             return node
-        
+
         # if at the node the data value is already less than the data we intend to insert we make 
         # this node the head of the doubly linked list
         if node.value > data:
@@ -250,15 +250,15 @@ class DoublyLinkedList(LinkedList):
         if position == 0:
             node.next = self.head
             return node
-        
+
         while curr is not None:
-            
+
             for _ in range(position - 1):
                 curr = curr.next
-            
+
             node.next = curr.next
             curr.next = node
-            return self.head        
+            return self.head
 
     def display(self):
         print("Show list data...")
@@ -317,7 +317,7 @@ class DoublyLinkedList(LinkedList):
 
         current = self.head
         next_ = current.next_node
-        
+
         while next_:
             if next_.value == current.value:
                 current.next_node = current.next_node.next_node
@@ -338,7 +338,7 @@ class DoublyLinkedList(LinkedList):
     def alternate_split(self) -> tuple:
         if not self.head or not self.head.next:
             raise ValueError("Head should not be none")
-        
+
         current = self.head
 
         # head for the first linked list
@@ -362,7 +362,7 @@ class DoublyLinkedList(LinkedList):
             else:
                 # we are at the end
                 temp.next_node = None
-            
+
             # keep moving the pointer
             current = current.next_node
 

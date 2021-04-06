@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.pernicious import Pernicious
 
 

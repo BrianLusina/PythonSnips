@@ -1,9 +1,10 @@
 import unittest
+
 from pysnips.data_structures.stacks.bracket_validator import check_brackets_3, check_brackets_1, check_brackets_2
 
 
 class BracketsTestCase(unittest.TestCase):
-    
+
     def test1(self):
         self.assertEqual(True, check_brackets_1('((()))'))
 
@@ -69,7 +70,7 @@ class BracketsTestCase(unittest.TestCase):
 
     def test_nested_ensemble_2(self):
         self.assertEqual(check_brackets_2("{[]([()])}"), True)
-    
+
     def test_input_empty_3(self):
         self.assertEqual(check_brackets_3(""), True)
 
@@ -96,6 +97,7 @@ class BracketsTestCase(unittest.TestCase):
 
     def test_nested_ensemble_3(self):
         self.assertEqual(check_brackets_3("{[]([()])}"), True)
+
 
 if __name__ == '__main__':
     unittest.main()

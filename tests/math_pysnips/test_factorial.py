@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.factorial import factorial, factorial_digit_sum
 
 

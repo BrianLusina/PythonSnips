@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.sublist import check_lists, SUBLIST, SUPERLIST, EQUAL, UNEQUAL
 
 
@@ -80,6 +81,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(UNEQUAL, check_lists([1, 3], [1, 2, 3]))
         self.assertEqual(UNEQUAL, check_lists([1, 2, 3], [1, 3]))
         self.assertEqual(UNEQUAL, check_lists([1, 2, 3], [3, 2, 1]))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,6 +9,7 @@ class DataDownload(object):
     """
     Downloads data from the web and stores them in a file
     """
+
     def __init__(self, url, file_name):
         """
         Creates a new DataDownload object

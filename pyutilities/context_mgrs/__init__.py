@@ -1,9 +1,9 @@
 """
 a simple demo of Context managers in Python
 """
-from time import perf_counter
 from array import array
 from contextlib import contextmanager
+from time import perf_counter
 
 
 # using context manager decorater, this allows us to create our own context manager

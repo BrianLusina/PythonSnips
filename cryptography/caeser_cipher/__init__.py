@@ -57,6 +57,7 @@ class CaesarCipherV2(object):
     """
     This implementation uses maketrans on uppercase letters
     """
+
     def __init__(self, shift):
         self.alpha = ascii_uppercase
         self.new_alpha = self.alpha[shift:] + self.alpha[:shift]

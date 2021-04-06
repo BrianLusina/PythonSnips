@@ -1,5 +1,5 @@
-from datastructures.graphs.directed import DirectedGraph
 from datastructures.graphs import Node
+from datastructures.graphs.directed import DirectedGraph
 
 connections = [('A', 'B'), ('B', 'C'), ('B', 'D'), ('C', 'D'), ('E', 'F'), ('F', 'C'), ('C', 'A')]
 

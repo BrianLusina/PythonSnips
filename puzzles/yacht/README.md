@@ -2,11 +2,9 @@
 
 # Score a single throw of dice in *Yacht*
 
-The dice game [Yacht](https://en.wikipedia.org/wiki/Yacht_(dice_game)) is from
-the same family as Poker Dice, Generala and particularly Yahtzee, of which it
-is a precursor. In the game, five dice are rolled and the result can be entered
-in any of twelve categories. The score of a throw of the dice depends on
-category chosen.
+The dice game [Yacht](https://en.wikipedia.org/wiki/Yacht_(dice_game)) is from the same family as Poker Dice, Generala
+and particularly Yahtzee, of which it is a precursor. In the game, five dice are rolled and the result can be entered in
+any of twelve categories. The score of a throw of the dice depends on category chosen.
 
 ## Scores in Yacht
 
@@ -24,23 +22,22 @@ category chosen.
     Choice          Sum of the dice         2 3 3 4 6 scores 18
     Yacht           50 points               4 4 4 4 4 scores 50
 
-If the dice do not satisfy the requirements of a category, the score is zero.
-If, for example, *Four Of A Kind* is entered in the *Yacht* category, zero
-points are scored. A *Yacht* scores zero if entered in the *Full House* category.
+If the dice do not satisfy the requirements of a category, the score is zero. If, for example, *Four Of A Kind* is
+entered in the *Yacht* category, zero points are scored. A *Yacht* scores zero if entered in the *Full House* category.
 
-## Task 
-Given a list of values for five dice and a category, your solution should return
-the score of the dice for that category. If the dice do not satisfy the requirements
-of the category your solution should return 0. You can assume that five values
-will always be presented, and the value of each will be between one and six
-inclusively. You should not assume that the dice are ordered.
+## Task
+
+Given a list of values for five dice and a category, your solution should return the score of the dice for that
+category. If the dice do not satisfy the requirements of the category your solution should return 0. You can assume that
+five values will always be presented, and the value of each will be between one and six inclusively. You should not
+assume that the dice are ordered.
 
 ## Exception messages
 
 Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
 indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
+every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include a
+message.
 
 To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
 `raise Exception`, you should write:
@@ -51,4 +48,5 @@ raise Exception("Meaningful message indicating the source of the error")
 
 ## Source
 
-James Kilfiger, using wikipedia [https://en.wikipedia.org/wiki/Yacht_(dice_game)](https://en.wikipedia.org/wiki/Yacht_(dice_game))
+James Kilfiger, using
+wikipedia [https://en.wikipedia.org/wiki/Yacht_(dice_game)](https://en.wikipedia.org/wiki/Yacht_(dice_game))

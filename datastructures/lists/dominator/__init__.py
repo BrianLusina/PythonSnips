@@ -9,5 +9,3 @@ def dominator(arr):
         else:
             res = -1
     return res
-
-

@@ -1,5 +1,6 @@
-from pysnips.math_pysnips.summation import summation
 import unittest
+
+from pysnips.math_pysnips.summation import summation
 
 
 class SummationTests(unittest.TestCase):

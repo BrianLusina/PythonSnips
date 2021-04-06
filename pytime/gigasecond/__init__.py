@@ -1,5 +1,5 @@
-from datetime import timedelta, datetime
 import calendar
+from datetime import timedelta, datetime
 
 
 class Gigasecond(object):

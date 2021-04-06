@@ -1,5 +1,7 @@
-from pysnips.data_structures.queues import FifoQueue as Queue
 from pprint import pprint
+
+from .fifo import FifoQueue as Queue
+
 
 class User(object):
     def __init__(self, name, email, phone):

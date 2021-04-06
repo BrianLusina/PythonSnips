@@ -1,10 +1,11 @@
-import re
 import os
+import re
+import time
+from multiprocessing import Pool
+
 import click
 import ffmpy
 from ffprobe import FFProbe
-import time
-from multiprocessing import Pool
 
 """
     Optimize for Chrome with low profile, low bandwith and low patience.

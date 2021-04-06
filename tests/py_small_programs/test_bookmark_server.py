@@ -7,9 +7,9 @@
 # and responding accordingly, and answer a GET request to /name depending
 # on whether the name was previously stored or not.
 
-import requests
 import socket
 
+import requests
 from pysnips.py_small_programs.arc_server.bookmark_server import check_uri
 
 

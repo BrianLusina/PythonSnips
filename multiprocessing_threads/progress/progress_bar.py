@@ -1,5 +1,4 @@
 from threading import Thread
-from queue import Queue
 
 
 class ProgressBar(Thread):
@@ -37,7 +36,6 @@ class ProgressBar(Thread):
         """
         return float(self.processed_count) / float(self.total_count)
 
-
 # queue = Queue()
 # funcs = [add_to_cpanel(self.employee), add_to_seafile(self.employee), 
 #         send_email('webmaster@tezzasolutions.com',
@@ -58,4 +56,3 @@ class ProgressBar(Thread):
 #     queue.put(func)
 # # Causes the main thread to wait for the queue to finish processing all the tasks
 # queue.join()
-    

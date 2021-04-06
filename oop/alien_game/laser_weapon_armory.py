@@ -1,5 +1,6 @@
-from ObjectOriented.AlienGame import Scene
 from random import randint
+
+from ObjectOriented.AlienGame import Scene
 
 
 class LaserWeaponArmory(Scene):

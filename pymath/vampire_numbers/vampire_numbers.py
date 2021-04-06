@@ -1,4 +1,3 @@
-
 def vampire_test(x, y):
     product = x * y
     if len(str(x) + str(y)) != len(str(product)):

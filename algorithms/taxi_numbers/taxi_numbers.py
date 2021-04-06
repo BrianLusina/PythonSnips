@@ -1,9 +1,9 @@
-cubes, crev = [x**3 for x in range(1, 1201)], {}
+cubes, crev = [x ** 3 for x in range(1, 1201)], {}
 # for cube root lookup
 for x, x3 in enumerate(cubes):
-    crev[x3] = x+1
+    crev[x3] = x + 1
 
-sums = sorted(x+y for x in cubes for y in cubes if y < x)
+sums = sorted(x + y for x in cubes for y in cubes if y < x)
 
 idx = 0
 for i in range(1, len(sums) - 1):

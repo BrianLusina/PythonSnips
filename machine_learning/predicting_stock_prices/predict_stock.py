@@ -1,7 +1,8 @@
 import csv
+
+import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.svm import SVR
-import matplotlib.pyplot as plt
 
 # plt.switch_backend('newbackend')
 

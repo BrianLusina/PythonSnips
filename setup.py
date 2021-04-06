@@ -19,13 +19,13 @@ setup(
     install_requires=open("requirements.txt").readlines(),
     long_description=open("README.md").read(),
     classifiers=[
-      "License :: OSI Approved :: MIT License",
-      "Programming Language :: Python",
-      "Natural Language :: English",
-      "Operating System :: OS Independent",
-      "Development Status :: 5 - Production/Stable",
-      "Intended Audience :: Developers",
-      "Topic :: Software Development :: Libraries"],
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries"],
     package_data={
         '': ['*.txt', '*.xsd']
     },

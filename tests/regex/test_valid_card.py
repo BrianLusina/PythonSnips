@@ -1,5 +1,6 @@
-from pysnips.regex.valid_card import valid_card
 import unittest
+
+from pysnips.regex.valid_card import valid_card
 
 
 # todo: failing tests

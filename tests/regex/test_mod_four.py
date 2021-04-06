@@ -1,5 +1,6 @@
-import unittest
 import re
+import unittest
+
 from pysnips.regex.mod_four import mod
 
 

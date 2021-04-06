@@ -13,5 +13,3 @@ class CoinFlipTests(unittest.TestCase):
 
     def test_returns_dict(self):
         self.assertIsInstance(coin_flip(5), dict, "Expected dictionary")
-
-

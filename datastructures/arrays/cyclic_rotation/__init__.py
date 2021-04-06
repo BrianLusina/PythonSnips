@@ -21,8 +21,9 @@ def cyclic_rotation(a: list, k: int) -> list:
             output[new_position] = value
         else:
             output[new_index] = value
-    
+
     return output
+
 
 def cyclic_rotation_2(nums: list, k: int) -> list:
     """

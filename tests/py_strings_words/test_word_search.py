@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.word_search import word_search
 
 

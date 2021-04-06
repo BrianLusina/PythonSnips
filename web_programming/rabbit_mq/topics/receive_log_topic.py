@@ -1,5 +1,6 @@
-import pika
 import sys
+
+import pika
 
 # open a connection to localhost
 connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
@@ -32,6 +33,7 @@ print("[*] Waiting for for logs. To exit press CTRL+C")
 # create callback to handle messages received
 def callback(ch, method, properties, body):
     print("[X] Message <RoutingKey:%r, Body: %r>" % (method.routing_key, body))
+
 
 channel.basic_consume(callback, queue=queue_name, no_ack=True)
 

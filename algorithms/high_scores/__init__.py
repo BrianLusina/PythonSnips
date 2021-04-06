@@ -38,7 +38,3 @@ class HighScores(object):
         elif latest_score < maximum_score:
             diff = maximum_score - latest_score
             return f"{message} That's {diff} short of {message_end}"
-
-
-
-

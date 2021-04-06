@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.title_case import title_case
 
 

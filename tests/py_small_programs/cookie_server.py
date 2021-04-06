@@ -9,10 +9,10 @@
 #
 # 2. Read the cookie value into a variable.
 
-from http.server import HTTPServer, BaseHTTPRequestHandler
-from http import cookies
-from urllib.parse import parse_qs
 from html import escape as html_escape
+from http import cookies
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from urllib.parse import parse_qs
 
 form = '''<!DOCTYPE html>
 <title>I Remember You</title>

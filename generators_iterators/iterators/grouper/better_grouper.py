@@ -9,6 +9,7 @@ Memory used(KB): 4553416
 Used Time: (seconds): 3.69
 """
 
+
 def better_grouper(inputs, n):
     """
     This is used to group the numbers (inputs) into groups of 2.

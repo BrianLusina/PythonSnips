@@ -1,4 +1,5 @@
 from unittest import TestCase, main
+
 from pysnips.math_pysnips.cyclic_primes import find_number_of_cyclic_primes
 
 

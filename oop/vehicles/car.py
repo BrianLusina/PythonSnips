@@ -12,5 +12,3 @@ class Car(Vehicle):
         # noinspection PyCompatibility
         super().vehicle_type()
         return "Car"
-
-

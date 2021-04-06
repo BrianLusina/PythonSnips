@@ -14,9 +14,9 @@ def decode_huffman_tree(root: BinaryTreeNode, s: str) -> str:
             current = current.left
         else:
             current = current.right
-        
+
         if not current.left and not current.right:
             result += current.data
             current = root
-            
+
     return result

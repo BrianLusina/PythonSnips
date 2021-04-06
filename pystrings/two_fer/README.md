@@ -11,13 +11,12 @@ When X is a name or "you".
 If the given name is "Alice", the result should be "One for Alice, one for me."
 If no name is given, the result should be "One for you, one for me."
 
-
 ## Exception messages
 
 Sometimes it is necessary to raise an exception. When you do this, you should include a meaningful error message to
 indicate what the source of the error is. This makes your code more readable and helps significantly with debugging. Not
-every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include
-a message.
+every exercise will require you to raise an exception, but for those that do, the tests will only pass if you include a
+message.
 
 To raise a message with an exception, just write it as an argument to the exception type. For example, instead of
 `raise Exception`, you should write:

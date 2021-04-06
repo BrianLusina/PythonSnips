@@ -9,6 +9,7 @@ class PrintObserver(Observer):
     """
     Custom observer
     """
+
     def on_next(self, value):
         print("Received {}".format(value))
 
@@ -18,10 +19,8 @@ class PrintObserver(Observer):
     def on_completed(self):
         print("Done")
 
+
 greek_words = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"]
 source = Observable.from_(greek_words)
 
-
 source.subscribe(PrintObserver())
-
-

@@ -2,6 +2,7 @@
 Finds the smallest multiple in a range of numbers
 """
 from functools import reduce
+
 try:
     from math import gcd
 except ImportError:
@@ -23,4 +24,3 @@ if __name__ == "__main__":
     limit = 21
     result = smallest_multiple(limit)
     print(f"Smallest positive number in range of 1 to {limit} is {result}")
-

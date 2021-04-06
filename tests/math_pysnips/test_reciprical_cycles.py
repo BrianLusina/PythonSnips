@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.reciprocal_cycles import longest_recurring_cycle
 
 

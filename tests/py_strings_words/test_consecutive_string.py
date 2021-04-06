@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.consecutive_string import ConsecutiveString
 
 
@@ -8,16 +9,19 @@ class ConsecutiveTests(unittest.TestCase):
         self.assertEqual("abigailtheta", long_con.longest_consec())
 
     def test_2(self):
-        long_con = ConsecutiveString(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1)
-        self.assertEqual("oocccffuucccjjjkkkjyyyeehh",  long_con.longest_consec())
+        long_con = ConsecutiveString(
+            ["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1)
+        self.assertEqual("oocccffuucccjjjkkkjyyyeehh", long_con.longest_consec())
 
     def test_3(self):
         long_con = ConsecutiveString([], 3)
         self.assertEqual("", long_con.longest_consec())
 
     def test_4(self):
-        long_con = ConsecutiveString(["itvayloxrp", "wkppqsztdkmvcuwvereiupccauycnjutlv", "vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2)
-        self.assertEqual("wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck", long_con.longest_consec())
+        long_con = ConsecutiveString(
+            ["itvayloxrp", "wkppqsztdkmvcuwvereiupccauycnjutlv", "vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2)
+        self.assertEqual("wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck",
+                         long_con.longest_consec())
 
     def test_5(self):
         long_con = ConsecutiveString(["wlwsasphmxx", "owiaxujylentrklctozmymu", "wpgozvxxiu"], 2)

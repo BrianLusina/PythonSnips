@@ -74,5 +74,3 @@ class Phone(object):
             return number[-10:]
         else:
             return "0" * 10
-
-

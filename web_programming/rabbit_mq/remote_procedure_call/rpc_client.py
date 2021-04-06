@@ -1,5 +1,6 @@
-import pika
 import uuid
+
+import pika
 
 
 class FibonacciRpcClient(object):
@@ -27,6 +28,7 @@ class FibonacciRpcClient(object):
         while self.response is None:
             self.connection.process_data_events()
         return int(self.response)
+
 
 fibonacci_rpc = FibonacciRpcClient()
 

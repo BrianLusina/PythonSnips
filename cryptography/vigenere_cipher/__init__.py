@@ -1,6 +1,6 @@
-from itertools import cycle
-from functools import reduce
 import string
+from functools import reduce
+from itertools import cycle
 
 ALPHA = string.ascii_lowercase
 

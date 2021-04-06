@@ -1,5 +1,6 @@
 import sys
 
+
 def tape_equilibrium(tape: list) -> int:
     parts = [0] * len(tape)
     parts[0] = tape[0]

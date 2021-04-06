@@ -9,4 +9,3 @@ def auto_correct(input_):
                           string=word,
                           count=1))
     return " ".join(res)
-

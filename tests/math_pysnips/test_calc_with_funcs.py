@@ -1,7 +1,7 @@
 import unittest
 
-from pysnips.math_pysnips.calc_with_functions import seven, five, divided_by, six, minus,  plus, times, eight, nine, \
-    four, one, three, two, zero
+from pysnips.math_pysnips.calc_with_functions import seven, five, divided_by, six, minus, plus, times, eight, nine, \
+    four, three, two
 
 
 class CalcWithFuncs(unittest.TestCase):

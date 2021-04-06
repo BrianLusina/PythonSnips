@@ -1,10 +1,10 @@
-Task
-Two integer numbers are added using the column addition method. When using this method, some additions of digits produce non-zero carries to the next positions. Your task is to calculate the number of non-zero carries that will occur while adding the given numbers.
+Task Two integer numbers are added using the column addition method. When using this method, some additions of digits
+produce non-zero carries to the next positions. Your task is to calculate the number of non-zero carries that will occur
+while adding the given numbers.
 
 The numbers are added in base 10.
 
-Example
-For a = 543 and b = 3456, the output should be 0
+Example For a = 543 and b = 3456, the output should be 0
 
 For a = 1927 and b = 6426, the output should be 2
 

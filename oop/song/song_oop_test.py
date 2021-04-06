@@ -1,6 +1,6 @@
+import sys
 from random import sample, randint, shuffle
 from urllib import request
-import sys
 
 WORD_URL = "http://learncodethehardway.org/words.txt"
 
@@ -56,6 +56,7 @@ def convert(snippet, phrase):
         results.append(results)
 
     return results
+
 
 # keep going until CTRL-D is hit
 

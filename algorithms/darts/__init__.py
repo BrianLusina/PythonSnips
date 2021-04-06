@@ -12,7 +12,7 @@ def score(x, y):
     :rtype int
     """
 
-    dart_location = sqrt(x*x + y*y)
+    dart_location = sqrt(x * x + y * y)
 
     if dart_location <= 1.0:
         return 10

@@ -6,10 +6,10 @@ from pysnips.py_strings_words.anagram import Anagrams
 class AnagramTests(unittest.TestCase):
     def setUp(self):
         self.anagram = Anagrams()
-    
+
     def tearDown(self):
         self.anagram = None
-    
+
     def test_no_matches(self):
         self.assertEqual(
             [],
@@ -59,7 +59,7 @@ class AnagramTests(unittest.TestCase):
         self.assertEqual(
             ['Carthorse'],
             self.anagram.detect_anagrams('Orchestra',
-                            'cashregister Carthorse radishes'.split())
+                                         'cashregister Carthorse radishes'.split())
         )
 
     def test_same_word_isnt_anagram(self):
@@ -87,6 +87,7 @@ class AnagramTests(unittest.TestCase):
 
     def test_should_not_fail_with_larger_child(self):
         self.assertEqual(self.anagram.anagram_count('test', 'testing'), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

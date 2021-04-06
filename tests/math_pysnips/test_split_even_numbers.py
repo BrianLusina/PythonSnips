@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.split_even_numbers import split_all_even_numbers
 
 

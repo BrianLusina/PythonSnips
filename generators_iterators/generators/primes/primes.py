@@ -7,16 +7,18 @@ achieve the same outcome
 # maximum number we want to reach
 max_number = 50
 
+
 def check_prime(number):
     """
     Checks if the given number is prime
     :param: number Number to evaluate for primality
     :rtype: bool True if the number is a prime, false otherwise
     """
-    for divisor in range(2, int(number ** 0.5)  + 1):
+    for divisor in range(2, int(number ** 0.5) + 1):
         if number % divisor == 0:
             return False
     return True
+
 
 class Primes(object):
     def __init__(self, max):
@@ -27,7 +29,7 @@ class Primes(object):
         """
         self.max = max
         self.number = 1
-    
+
     def __iter__(self):
         return self
 
@@ -47,6 +49,7 @@ class Primes(object):
         else:
             return self.__next__()
 
+
 def prime_generator(max_number):
     """
     Prime generator function that yields prime numbers less than the maximum number given
@@ -57,6 +60,7 @@ def prime_generator(max_number):
         number += 1
         if check_prime(number):
             yield number
+
 
 # we can do better and use a generator expression
 prime_expression = (x for x in range(2, max_number) if check_prime(x))
@@ -69,6 +73,7 @@ if __name__ == "__main__":
         for x in primes:
             print(x)
 
+
     custom_iterator(max_number)
 
     print("using generator function {}".format(prime_generator.__name__))
@@ -76,7 +81,7 @@ if __name__ == "__main__":
     print(prime_gen)
     for x in prime_gen:
         print(x)
-    
+
     print("Using generator expression {}".format(prime_expression.__name__))
     print(prime_expression)
     for x in prime_expression:

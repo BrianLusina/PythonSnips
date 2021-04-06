@@ -1,7 +1,8 @@
-from ...queues import FifoQueue
 from .. import Tree
 from ..binary_tree_node import BinaryTreeNode
+from ...queues import FifoQueue
 from ...stacks import Stack
+
 
 class BinarySearchTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
@@ -12,18 +13,18 @@ class BinarySearchTree(Tree):
     def height(self) -> int:
         if not self.root:
             return 0
-        
+
         # if we don't have either left and right nodes from the root, we return 0
         if not self.root.left and not self.root.right:
             return 0
-        
+
         height = 1
         queue = FifoQueue()
-        queue.enqueue(self.root)
+        queue.add(self.root)
 
         while True:
             current_level_nodes = queue.size
-            
+
             if current_level_nodes == 0:
                 return height
 
@@ -33,10 +34,10 @@ class BinarySearchTree(Tree):
                 node = queue.dequeue()
 
                 if node.left:
-                    queue.enqueue(node.left)
+                    queue.add(node.left)
 
                 if node.right:
-                    queue.enqueue(node.right)
+                    queue.add(node.right)
                 current_level_nodes -= 1
 
     def next(self) -> int:
@@ -63,7 +64,7 @@ class BinarySearchTree(Tree):
         # This would comparatively be a costly operation depending upon the structure of the tree
         if topmost_node.right:
             self.__leftmost_inorder(topmost_node.right)
-        
+
         return topmost_node.value
 
     def has_next(self) -> bool:
@@ -154,7 +155,7 @@ class BinarySearchTree(Tree):
         :type root_node BinaryTreeNode
         :return: Value of the second largest Node
         :rtype: object
-        """        
+        """
         if not self.root or (not self.root.left and not self.root.right):
             raise Exception('Tree must have at least 2 nodes')
 
@@ -222,17 +223,17 @@ class BinarySearchTree(Tree):
         queue = FifoQueue()
 
         # start off by adding the root node
-        queue.enqueue(self.root)
+        queue.add(self.root)
 
         # while the queue is not empty, we want to traverse the tree and add elements to the queue,
         while not queue.is_empty():
             current_node = queue.dequeue()
 
             if current_node.left:
-                queue.enqueue(current_node.left)
+                queue.add(current_node.left)
 
             if current_node.right:
-                queue.enqueue(current_node.right)
+                queue.add(current_node.right)
 
     def pre_order(self) -> list:
         """
@@ -264,7 +265,7 @@ class BinarySearchTree(Tree):
     def increasing_order_traversal(self) -> BinaryTreeNode:
         if not self.root:
             return None
-        
+
         def inorder(node: BinaryTreeNode):
             if node:
                 yield from inorder(node.left)
@@ -329,7 +330,7 @@ class BinarySearchTree(Tree):
             else:
                 # we have a left subtree
                 pre = current.left
-                
+
                 # find rightmost
                 while pre.right:
                     pre = pre.right
@@ -355,7 +356,7 @@ class BinarySearchTree(Tree):
         """
         if not self.root:
             return
-        
+
         # create 2 stacks
         stack_one = Stack()
         stack_two = Stack()
@@ -374,7 +375,7 @@ class BinarySearchTree(Tree):
             # push left & right children of removed item to stack one
             if node.left:
                 stack_one.push(node.left)
-            
+
             if node.right:
                 stack_one.push(node.right)
 
@@ -394,17 +395,17 @@ class BinarySearchTree(Tree):
         # Tree with no root is still valid
         if not self.root:
             return True
-    
+
         # start with the root with an arbitrarily low lower bound and an arbitrarily higher bound
         stack = [(float("-inf"), self.root, float("inf"))]
-    
+
         # depth first traversal
         while len(stack):
             mind, node, maxd = stack.pop()
 
             if not node:
                 continue
-        
+
             # if this node is invalid, return false immediately
             if node.data < mind or node.data > maxd:
                 return False
@@ -421,7 +422,8 @@ class BinarySearchTree(Tree):
         # at this point we have checked all the nodes
         return True
 
-    def is_binary_search_tree_recursive(self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")):
+    def is_binary_search_tree_recursive(self, root: BinaryTreeNode, lower_bound=-float("inf"),
+                                        upper_bound=float("inf")):
         """
         This uses the call stack to check if the binary search tree node is valid.
         This will work, but is vulnerable to stack overflow error
@@ -441,8 +443,8 @@ class BinarySearchTree(Tree):
             return False
 
         return not (
-            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.value)
-            or not self.is_binary_search_tree_recursive(root.right, root.value, upper_bound)
+                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.value)
+                or not self.is_binary_search_tree_recursive(root.right, root.value, upper_bound)
         )
 
     def search_node(self, value, node: BinaryTreeNode = None):
@@ -476,7 +478,7 @@ class BinarySearchTree(Tree):
         """
         if not otherNode:
             return self.root
-        
+
         if not self.root:
             return otherNode
 
@@ -565,13 +567,13 @@ class BinarySearchTree(Tree):
             # if both node_one and node_two are smaller than root, then LCA lies in the left
             if self.root.value > node_one.value and self.root.value > node_two.value:
                 self.root = self.root.left
-            
+
             # if both node_one and node_two are greater than root, then LCA lies in the right
             elif self.root.value < node_one.value and self.root.value < node_two.value:
                 self.root = self.root.right
             else:
                 break
-        
+
         return self.root
 
     @property
@@ -588,13 +590,13 @@ class BinarySearchTree(Tree):
 
         while stack:
             node, path = stack.pop()
-            
+
             if not (node.left or node.right):
-                res.append(path + str(node.value))            
-            
+                res.append(path + str(node.value))
+
             if node.left:
                 stack.push((node.left, path + str(node.value) + "->"))
-            
+
             if node.right:
                 stack.push((node.right, path + str(node.value) + "->"))
 
@@ -614,7 +616,7 @@ class BinarySearchTree(Tree):
             if node.left:
                 counter += 1
                 stack.push(node.left)
-            
+
             if node.right:
                 counter += 1
                 stack.push(node.right)

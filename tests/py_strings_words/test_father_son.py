@@ -1,5 +1,6 @@
-from pysnips.py_strings_words.father_son import sc
 import unittest
+
+from pysnips.py_strings_words.father_son import sc
 
 
 class FatherSonTest(unittest.TestCase):
@@ -29,4 +30,3 @@ class FatherSonTest(unittest.TestCase):
 
     def test_9(self):
         self.assertEqual(sc("BANAna"), "ANAna")
-

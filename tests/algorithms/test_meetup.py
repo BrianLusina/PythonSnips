@@ -17,8 +17,9 @@ end in '-teenth'. Therefore, one is guaranteed that each day of the week
 (Monday, Tuesday, ...) will have exactly one date that is named with '-teenth'
 in every month.
 """
-from datetime import date
 import unittest
+from datetime import date
+
 from pysnips.algorithms.meetup import meetup_day
 
 

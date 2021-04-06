@@ -1,6 +1,6 @@
-import pika
 import sys
 
+import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 
@@ -17,4 +17,3 @@ channel.basic_publish(exchange='logs', routing_key="", body=message)
 print("[X] Sent %r" % message)
 # close the connection
 connection.close()
-

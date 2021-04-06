@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.binary.binary_converter import binary_converter
 
 

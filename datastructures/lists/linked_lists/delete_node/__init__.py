@@ -1,5 +1,6 @@
 from .. import Node
 
+
 def delete_node(node: Node) -> Node:
     """
     Given we don't have access to the head node, we can not traverse the linked list to move the pointer of the node

@@ -16,4 +16,3 @@ class BattleShip(object):
 
     def random_col(self):
         return randint(0, len(self.board[0]) - 1)
-

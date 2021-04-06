@@ -1,8 +1,9 @@
-import unittest
-from pysnips.py_utilities.mocking_sample import RemovalService, UploadService
-import tempfile
 import os
+import tempfile
+import unittest
+
 from mock import patch, create_autospec
+from pysnips.py_utilities.mocking_sample import RemovalService, UploadService
 
 
 class MockingSampleTestCases(unittest.TestCase):
@@ -65,12 +66,14 @@ class MockingSampleTestCases(unittest.TestCase):
 
         mock_os.remove.assert_called_with("any path")
 
+
 # todo: fix failing mocking test
 @unittest.skip("Keeps failing, why?")
 class UploadServiceTestCases(unittest.TestCase):
     """
     Tests for the Upload Service
     """
+
     @patch.object(RemovalService, "rm")
     def test_upload_complete(self, mock_rm):
         """>>>> Test that the upload is complete"""
@@ -97,6 +100,7 @@ class UploadServiceTestCases(unittest.TestCase):
 
         # test that it called rm
         mock_removal_service.rm.assert_called_with("uploaded file")
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -40,6 +40,7 @@ def partition(thelist: list, start_index: int, end_index: int) -> int:
 
     return left_index
 
+
 def quicksort_sublist(thelist: list, start_index: int, end_index: int):
     """
     Recursively sorts the sublists
@@ -62,6 +63,7 @@ def quicksort_sublist(thelist: list, start_index: int, end_index: int):
     quicksort_sublist(thelist, start_index, pivot_index - 1)
     quicksort_sublist(thelist, pivot_index + 1, end_index)
 
+
 def quicksort(thelist: list) -> list:
     """
     Quicksort algorithm picking the last element in the list as a pivot.
@@ -75,6 +77,6 @@ def quicksort(thelist: list) -> list:
     # nothing to sort here
     if length <= 0:
         return thelist
-    
+
     quicksort_sublist(thelist, 0, length - 1)
     return thelist

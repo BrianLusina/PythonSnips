@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.game_puzzles.name_score import name_score
 
 

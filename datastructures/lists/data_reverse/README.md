@@ -1,4 +1,5 @@
-A stream of data is received and needs to be reversed. Each segment is 8 bits meaning the order of these segments need to be reversed:
+A stream of data is received and needs to be reversed. Each segment is 8 bits meaning the order of these segments need
+to be reversed:
 
 11111111 00000000 00001111 10101010
 

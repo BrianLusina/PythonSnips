@@ -43,7 +43,7 @@ class Palindrome(object):
         """
         words = [str(word) for word in word_list]
 
-        return[
+        return [
             [i, j]
             for i, word_i in enumerate(words)
             for j, word_j in enumerate(words)

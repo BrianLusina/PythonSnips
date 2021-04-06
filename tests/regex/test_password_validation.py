@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.regex.password_validation import password_validation
 
 

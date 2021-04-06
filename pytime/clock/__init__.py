@@ -5,6 +5,7 @@ class Clock(object):
     __repr__ How to represent the format
     clean() cleans up the clock,
     """
+
     def __init__(self, hour, minute):
         self.hour = hour
         self.minute = minute
@@ -31,6 +32,7 @@ class ClockV2(object):
     """
     Variation of clock. This is the second way of doing it
     """
+
     def __init__(self, hour, minute):
         self.total = (hour * 60 + minute) % (24 * 60)
 
@@ -55,4 +57,3 @@ class ClockV2(object):
     # adds minutes to the clock
     def add(self, minutes):
         return Clock(self.hour, self.minute + minutes)
-

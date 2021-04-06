@@ -1,6 +1,6 @@
 from random import seed, choice
-from time import time
 from string import ascii_lowercase
+from time import time
 
 
 class Cipher(object):

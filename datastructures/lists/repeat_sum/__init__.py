@@ -12,4 +12,3 @@ def repeat_sum(list_lists):
             concat.append(i)
     counter = set([y for y in concat if concat.count(y) >= 2])
     return sum(list(counter))
-

@@ -1,5 +1,5 @@
-from itertools import islice
 import operator
+from itertools import islice
 
 
 def is_sorted_and_how(arr):

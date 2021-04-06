@@ -1,6 +1,7 @@
-from bs4 import BeautifulSoup
 # noinspection PyCompatibility
 from urllib.request import urlretrieve
+
+from bs4 import BeautifulSoup
 
 url = 'https://www.codewars.com/users/leaderboard'
 

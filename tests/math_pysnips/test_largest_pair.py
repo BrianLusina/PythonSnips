@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.largest_pair import max_product
 
 
@@ -10,7 +11,8 @@ class LargestPairTests(unittest.TestCase):
         self.assertEqual(max_product([154, 428, 455, 346]), 194740)
 
     def test_3(self):
-        self.assertEqual(max_product([39, 135, 47, 275, 37, 108, 265, 457, 2, 133, 316, 330, 153, 253, 321, 411]), 187827)
+        self.assertEqual(max_product([39, 135, 47, 275, 37, 108, 265, 457, 2, 133, 316, 330, 153, 253, 321, 411]),
+                         187827)
 
     def test_4(self):
         self.assertEqual(max_product([136, 376, 10, 146, 105, 63, 234]), 87984)

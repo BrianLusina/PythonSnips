@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
-import re
 import os
+import re
+import time
+from multiprocessing import Pool
+
 import click
 import ffmpy
 from ffprobe import FFProbe
-import time
-from multiprocessing import Pool
 
 """
     Optimize for Chrome with low profile, low bandwith and low patience.
@@ -19,12 +20,12 @@ current_milli_time = lambda: int(round(time.time() * 1000))
 
 source_dir = False
 
+
 @click.command()
 @click.option('--source', default='.', help='Directory where to find videos.')
 @click.option('--force-yes', default=False, help='Do not prompt yes/no')
 @click.option('--workers', default=1, help='Number of FFMpeg concurrent processes')
 def optimize(source, force_yes, workers):
-
     """
 
     :param source: Directory where to find videos.
@@ -45,7 +46,6 @@ def optimize(source, force_yes, workers):
 
 
 def ffmpeg(file_input, root_output='output'):
-
     """
     Transcode files
     :param file_input: Name of the file to transcode.
@@ -65,11 +65,12 @@ def ffmpeg(file_input, root_output='output'):
     start_time = current_milli_time()
     metadata = FFProbe(file_input)
     for stream in metadata.streams:
-            click.echo(str(stream.durationSeconds()) + " seconds for " + os.path.basename(file_input))
-            duration = stream.durationSeconds()
+        click.echo(str(stream.durationSeconds()) + " seconds for " + os.path.basename(file_input))
+        duration = stream.durationSeconds()
 
     try:
-        ff = ffmpy.FF(inputs={file_input: None}, outputs={os.path.abspath(os.path.join(output_dir, os.path.basename(file_input))): FFMPEG_OPTIONS})
+        ff = ffmpy.FF(inputs={file_input: None},
+                      outputs={os.path.abspath(os.path.join(output_dir, os.path.basename(file_input))): FFMPEG_OPTIONS})
         click.echo(ff.cmd_str)
         ff.run()
     except:
@@ -80,7 +81,6 @@ def ffmpeg(file_input, root_output='output'):
 
 
 def iter_matching(dirpath, predicate):
-
     """
     Yield all the matches
     :param dirpath:
@@ -93,6 +93,7 @@ def iter_matching(dirpath, predicate):
             abspath = os.path.join(dir_, filename)
             if predicate(abspath):
                 yield abspath
+
 
 if __name__ == '__main__':
     optimize()

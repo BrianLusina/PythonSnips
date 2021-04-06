@@ -1,11 +1,12 @@
 import unittest
+
 from pysnips.py_strings_words.contain_all_rots import contain_all_rots
 
 
 class ContainAllRots(unittest.TestCase):
     def shortDescription(self):
         return "Basic Tests for {}".format(contain_all_rots.__name__)
-    
+
     def test_1(self):
         self.assertEqual(contain_all_rots("", []), True)
 
@@ -17,5 +18,6 @@ class ContainAllRots(unittest.TestCase):
 
     def test_4(self):
         self.assertEqual(contain_all_rots("XjYABhR",
-                             ["TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", "hRXjYAB", "jYABhRX", "XjYABhR",
-                              "ABhRXjY"]), False)
+                                          ["TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", "hRXjYAB", "jYABhRX",
+                                           "XjYABhR",
+                                           "ABhRXjY"]), False)

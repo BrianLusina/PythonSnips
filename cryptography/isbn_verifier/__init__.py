@@ -9,4 +9,3 @@ def verify(isbn):
     indices = range(10, 0, -1)
 
     return sum(int(char) * index for char, index in zip(characters, indices)) % 11 == 0
-

@@ -1926,4 +1926,3 @@ weight_kg = array(weights) * 0.453592
 bmi = weight_kg / height_m ** 2
 
 print(bmi)
-

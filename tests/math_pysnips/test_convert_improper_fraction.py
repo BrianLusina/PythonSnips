@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
+
 from pysnips.math_pysnips.convert_improper_fraction import convert_to_mixed_numeral
 
 

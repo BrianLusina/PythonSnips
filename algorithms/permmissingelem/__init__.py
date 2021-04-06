@@ -10,5 +10,5 @@ def perm_missing_element(numbers: list) -> int:
 
     for index, number in enumerate(numbers):
         missing_element = missing_element ^ number ^ (index + 1)
-    
+
     return missing_element

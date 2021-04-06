@@ -1,5 +1,5 @@
+from operator import mul, add, sub
 from sys import version_info
-from operator import mul, add, sub, pow
 
 # version imports to make sure it works with Python 2.x.x
 if version_info.major == 2:

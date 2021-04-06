@@ -62,10 +62,11 @@ The above diagram contains 6 rectangles:
 
 ```
 
-You may assume that the input is always a proper rectangle (i.e. the length of
-every line equals the length of the first line).
+You may assume that the input is always a proper rectangle (i.e. the length of every line equals the length of the first
+line).
 
-You are required to create a function `count`, that accepts a parameter `lines` which will be a list and returns the number of rectangles.
+You are required to create a function `count`, that accepts a parameter `lines` which will be a list and returns the
+number of rectangles.
 
 ``` python
 >>> lines = ["+-+",

@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.xbonacci.product_fib import productFib
 
 
@@ -17,6 +18,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_5(self):
         self.assertEqual(productFib(20), [5, 8, False])
+
 
 if __name__ == '__main__':
     unittest.main()

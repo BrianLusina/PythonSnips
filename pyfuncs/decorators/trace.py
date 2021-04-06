@@ -7,6 +7,7 @@ def trace(func):
         print(f"TRACE: {func.__name__}() " f"returned {original_result!r}")
 
         return original_result
+
     return wrapper
 
 

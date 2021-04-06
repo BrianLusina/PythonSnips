@@ -1,5 +1,6 @@
-import pika
 import sys
+
+import pika
 
 # set up a connection
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
@@ -23,5 +24,3 @@ print("[X] Message Sent (%r,%r)" % (routing_key, message))
 
 # close the connection
 connection.close()
-
-

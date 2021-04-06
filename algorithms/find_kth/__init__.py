@@ -2,6 +2,7 @@
 Find the kth largest element in an unsorted array of elements
 """
 
+
 def find_kth(arr, k):
     """
     Finds the kth largest element in the given array arr of integers,
@@ -26,7 +27,7 @@ def find_kth(arr, k):
 
     # find the current maximum
     current_max = max(arr)
-    
+
     # filter out the numbers that are not equal to the current maximum
     new_array = list(filter(lambda x: x != current_max, arr))
 
@@ -38,4 +39,3 @@ if __name__ == "__main__":
     k = 2
     array = [10, 10, 20, 30, 40, 40]
     print(f"{k}th largest element in array {array} is {find_kth(array, k)}")
-

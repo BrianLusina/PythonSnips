@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.generators_iterators.iterators.multiiter import multiiter
 
 

@@ -1,4 +1,5 @@
 import os
+
 import coverage
 
 cov = coverage.coverage(branch=True, include='app/*')

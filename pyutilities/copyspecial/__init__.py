@@ -1,7 +1,7 @@
-import sys
-import re
 import os
+import re
 import shutil
+import sys
 
 # Python 2.x/Python 3.x
 try:

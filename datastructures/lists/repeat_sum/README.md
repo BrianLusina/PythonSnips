@@ -1,6 +1,7 @@
 ## Sum of Repeats
 
-Write a function that takes a list comprised of other lists of integers and returns the sum of all numbers that appear in two or more lists in the input list. Now that might have sounded confusing, it isn't:
+Write a function that takes a list comprised of other lists of integers and returns the sum of all numbers that appear
+in two or more lists in the input list. Now that might have sounded confusing, it isn't:
 
 ``` python
 repeat_sum([[1, 2, 3],[2, 8, 9],[7, 123, 8]])

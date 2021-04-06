@@ -1,4 +1,5 @@
 import sys
+
 import pika
 
 message = " ".join(sys.argv[1:] or "Hello RabbitMQ!")

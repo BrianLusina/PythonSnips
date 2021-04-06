@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.narcisstic import narcissistic
 
 
@@ -14,4 +15,3 @@ class NarcissticTest(unittest.TestCase):
 
     def test_4(self):
         self.assertEqual(narcissistic(4887), False, '4887 is not narcissistic')
-

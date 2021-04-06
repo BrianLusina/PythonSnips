@@ -1,14 +1,13 @@
 """
 This sample demonstrates using ThreadPoolExecutor to download landing page of sites
 """
+import time
 # noinspection PyCompatibility
 from concurrent.futures import ThreadPoolExecutor as Executor
-import time
 
 urls = ["google", "twitter", "facebook", "youtube", "pinterest", "tumblr", "instagram", "reddit",
         "flickr", "meetup", "classmates", "microsoft", "apple", "linkedin", "xing", "renren",
         "disqus", "snapchat", "twoo", "whatsapp"]
-
 
 current_milli_time = lambda: int(round(time.time() * 1000))
 

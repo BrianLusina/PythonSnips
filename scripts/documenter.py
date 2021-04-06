@@ -6,7 +6,7 @@ def document_me(function):
     """
     return function.__doc__
 
+
 # demo
 print(document_me(abs))
 print(document_me(int))
-

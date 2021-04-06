@@ -2,10 +2,12 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 from pprint import PrettyPrinter
 
+
 class Node(object):
     """
     Graph Node representing a Node in a Graph
     """
+
     def __init__(self, data, ):
         """
         Initializes a Node object
@@ -13,15 +15,17 @@ class Node(object):
         """
         self.data = data
         self.neighbours = defaultdict(list)
-    
+
     def __str__(self):
         return f"Data: {self.data}"
+
 
 class Edge(object):
     """
     Edge representation of an Edge in a Graph
     """
-    def __init__(self, source: Node = None, destination: Node = None, weight = None):
+
+    def __init__(self, source: Node = None, destination: Node = None, weight=None):
         """
         Initializes an Edge object
         :param source Source Node
@@ -31,6 +35,7 @@ class Edge(object):
         self.source = source
         self.destination = destination
         self.weight = weight
+
 
 class Graph(ABC):
     """
@@ -86,11 +91,11 @@ class Graph(ABC):
         Return string representation of this Graph
         """
         return f"Graph: {self._graph}"
-    
+
     def is_connected(self, node_one: Node, node_two: Node) -> bool:
         return node_one in self._graph and node_two in self._graph[node_two]
 
-    def find_path(self, node_one: Node, node_two: Node, path: list =[]) -> list:
+    def find_path(self, node_one: Node, node_two: Node, path: list = []) -> list:
         """
         Find any path between node_one and node_two. May not be the shortest path
         :param node_one
@@ -99,13 +104,13 @@ class Graph(ABC):
         """
 
         path = [path] + [node_one]
-        
+
         if node_one.data == node_two.data:
             return path
 
         if node_one.data not in self._graph:
             return None
-        
+
         for node in self._graph[node_one]:
             if node.data not in path:
                 new_path = self.find_path(node, node_two, path)
@@ -126,12 +131,12 @@ class Graph(ABC):
 
         if node_one.data == node_two.data:
             return [path]
-        
+
         if node_one.data not in self._graph:
             return []
-        
+
         paths = []
-        
+
         for node in self._graph[node_one.data]:
             if node not in path:
                 newpaths = self.find_all_paths(Node(node), node_two, path)

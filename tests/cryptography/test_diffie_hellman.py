@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.cryptography.diffie_hellman import private_key, secret, public_key
 
 

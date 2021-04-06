@@ -8,4 +8,3 @@ def to_ascii(h):
 
 def to_hex(s):
     return str(binascii.hexlify(str.encode(s)))
-

@@ -1,5 +1,4 @@
 import requests
-from pprint import pprint
 from WeatherForecastMailer import constants
 
 key = constants.open_weather_key
@@ -7,7 +6,7 @@ current_weather = constants.base_url
 
 
 def get_current_weather_forecast(town):
-    url = current_weather + "q="+town+"&units=metric" + key
+    url = current_weather + "q=" + town + "&units=metric" + key
     weather_req = requests.get(url=url)
     response = weather_req.json()
 
@@ -21,4 +20,3 @@ def get_current_weather_forecast(town):
     output = "Current weather forecast for " + town + " today is " + description + " with a high of " + temp_max \
              + " and min of " + temp_min
     return output
-

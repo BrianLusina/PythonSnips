@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.auto_complete import autocomplete
 
 dictionary = ['abnormal',

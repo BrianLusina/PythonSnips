@@ -6,6 +6,7 @@ class WordData(object):
              - Search results should be displayed in the terminal
              - Add the results and display the total number in terminal
     """
+
     @staticmethod
     def words(w):
         count = 0
@@ -15,5 +16,6 @@ class WordData(object):
             if w in x:
                 count += 1
         print(w + " has a count of " + str(count))
+
 
 WordData.words("est")

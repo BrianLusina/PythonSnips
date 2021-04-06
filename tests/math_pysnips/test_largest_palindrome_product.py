@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.largest_palindrome_product import find_largest_palindrome_product
 
 

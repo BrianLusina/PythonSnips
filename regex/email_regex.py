@@ -9,4 +9,5 @@ def is_email_valid(email):
     :return: True if the given email address is valid, False otherwise
     :rtype: bool
     """
-    return True if re.fullmatch(r'^[a-zA-Z0-9][\w\-._]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,3}|\.[a-zA-Z]{1,3}\.[a-zA-Z]{1,3}$', email) else False
+    return True if re.fullmatch(r'^[a-zA-Z0-9][\w\-._]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,3}|\.[a-zA-Z]{1,3}\.[a-zA-Z]{1,3}$',
+                                email) else False

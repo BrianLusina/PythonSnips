@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.array_pair_sum import array_pair_sum, array_pair_sum_hash_table, array_pair_sum_sort
 
 

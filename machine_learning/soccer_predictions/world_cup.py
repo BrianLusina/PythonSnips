@@ -2,15 +2,15 @@
     Predicts soccer outcomes using logistic regression.
 """
 
-import random
 import math
+import random
 
 import numpy as np
 import pandas as pd
 import pylab as pl
+import statsmodels.api as sm
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve
-import statsmodels.api as sm
 
 
 def _drop_unbalanced_matches(data):

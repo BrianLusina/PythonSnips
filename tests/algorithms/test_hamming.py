@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.algorithms.hamming import distance
 
 

@@ -1,8 +1,7 @@
-import sys
-import re
-import os
 import fnmatch
-import glob
+import os
+import re
+import sys
 
 """Baby Names exercise
 
@@ -103,7 +102,7 @@ def main():
 
         text = "\n".join(out)
 
-        outf = open(file[0: len(file)-5] + '.summary', 'w')
+        outf = open(file[0: len(file) - 5] + '.summary', 'w')
         outf.write(text + '\n')
         outf.close()
 
@@ -115,6 +114,7 @@ def main():
         # else:
         #     print(text)
     return
+
 
 if __name__ == '__main__':
     main()

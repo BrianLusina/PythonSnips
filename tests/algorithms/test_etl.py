@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.algorithms.etl import transform
 
 
@@ -47,6 +48,7 @@ class TransformTest(unittest.TestCase):
         }
 
         self.assertEqual(expected, transform(old))
+
 
 if __name__ == '__main__':
     unittest.main()

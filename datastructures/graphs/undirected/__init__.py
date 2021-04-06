@@ -1,6 +1,5 @@
-from pysnips.data_structures.graphs import Graph, Node, Edge
-from collections import defaultdict
-from pprint import pprint, PrettyPrinter
+from pysnips.data_structures.graphs import Graph
+
 
 class UnDirectedGraph(Graph):
 
@@ -14,7 +13,3 @@ class UnDirectedGraph(Graph):
         """
         self._graph[node_one].add(node_two)
         self._graph[node_two].add(node_one)
-    
-
-
-    

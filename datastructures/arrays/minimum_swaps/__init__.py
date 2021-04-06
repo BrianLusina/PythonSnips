@@ -5,11 +5,12 @@ def minimum_swaps(arr: list) -> int:
     """
     length = len(arr)
 
-    # Create list of pairs where each pair; the first element in the pair is the index of the element & second is the value
+    # Create list of pairs where each pair; the first element in the pair is the index of the element & second is
+    # the value
     array_positions = [*enumerate(arr)]
 
     # Sort the array by values to get the right position of every element
-    array_positions.sort(key = lambda x: x[1])
+    array_positions.sort(key=lambda x: x[1])
 
     # keep track of visited elements. Initialize all emements as not visited(False)
     visited_map = {k: False for k in range(length)}
@@ -28,7 +29,6 @@ def minimum_swaps(arr: list) -> int:
         y = x
 
         while not visited_map[y]:
-
             # mark node as visited
             visited_map[y] = True
 
@@ -38,7 +38,6 @@ def minimum_swaps(arr: list) -> int:
 
         # update by adding current cycle - 1
         if cycles > 0:
-            swaps += (cycles -1)
+            swaps += (cycles - 1)
 
     return swaps
-

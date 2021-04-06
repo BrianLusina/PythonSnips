@@ -13,11 +13,12 @@ def closeStrings(self, word1: str, word2: str) -> bool:
     """
     if len(word1) != len(word2):
         return False
-    
+
     counts_1 = Counter(word1)
     counts_2 = Counter(word2)
 
     return set(word1) == set(word2) and Counter(counts_1.values()) == Counter(counts_2.values())
+
 
 def closeStrings2(self, word1: str, word2: str) -> bool:
     if len(word1) != len(word2):
@@ -26,7 +27,7 @@ def closeStrings2(self, word1: str, word2: str) -> bool:
     counts1 = []
     counts2 = []
     for char in alpha:
-        in1,in2 = char in word1,char in word2
+        in1, in2 = char in word1, char in word2
         if in1 and in2:
             counts1.append(word1.count(char))
             counts2.append(word2.count(char))

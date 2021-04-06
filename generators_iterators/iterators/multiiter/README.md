@@ -19,4 +19,5 @@ If we print all yielded values, we'll get
 (1, 2)
 ```
 
-For a given parameter list N you must return an iterator, which goes through all possible tuples A, where Ai changes from 0 to Ni.
+For a given parameter list N you must return an iterator, which goes through all possible tuples A, where Ai changes
+from 0 to Ni.

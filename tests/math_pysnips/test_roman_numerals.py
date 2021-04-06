@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.roman_numeral import RomanNumeral, numeral
 
 
@@ -51,6 +52,7 @@ class RomanTest(unittest.TestCase):
     def test_numerals(self):
         for arabic, roman_numeral in self.numerals.items():
             self.assertEqual(roman_numeral, numeral(arabic))
+
 
 if __name__ == '__main__':
     unittest.main()

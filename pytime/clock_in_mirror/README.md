@@ -1,6 +1,6 @@
 Peter can see a clock in the mirror from the place he sits in the office. When he saw the clock shows 12:22
 
-![clock](https://dl.dropboxusercontent.com/u/106820791/KataPic6.png) 
+![clock](https://dl.dropboxusercontent.com/u/106820791/KataPic6.png)
 
 He knows that the time is 11:38
 ![image](https://dl.dropboxusercontent.com/u/106820791/KataPic7.png)

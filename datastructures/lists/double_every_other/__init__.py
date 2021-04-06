@@ -1,6 +1,3 @@
-from operator import __mul__
-
-
 # lst[1::2] = [__mul__(x, 2) for x in lst[1::2]]
 
 

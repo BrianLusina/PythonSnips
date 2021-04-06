@@ -1,10 +1,12 @@
 from .. import LinkedList, Node
 from ....stacks import Stack
 
+
 class SingleNode(Node):
     """
     SingleNode implementation in a single linked list
     """
+
     def __init__(self, value, next_):
         # noinspection PyCompatibility
         super().__init__(next_)
@@ -16,6 +18,7 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
+
     def __init__(self):
         # noinspection PyCompatibility
         super().__init__()
@@ -41,11 +44,11 @@ class SinglyLinkedList(LinkedList):
         :returns: None when the head is None & SingleNode
         """
         if position < 0:
-            raise ValueError("Position less than 0")        
-        
+            raise ValueError("Position less than 0")
+
         if self.head is None:
             return None
-        
+
         current = self.head
 
         while current is not None:
@@ -62,8 +65,8 @@ class SinglyLinkedList(LinkedList):
         Deletes a node at the specified position
         """
         if position < 0:
-            raise ValueError("Position less than 0")        
-        
+            raise ValueError("Position less than 0")
+
         if self.head is None:
             return None
 
@@ -72,7 +75,7 @@ class SinglyLinkedList(LinkedList):
         while current is not None:
             for _ in range(position):
                 current = current.next
-                
+
                 if current is None:
                     raise ValueError("Invalid position found, reached end of list")
 
@@ -167,15 +170,15 @@ class SinglyLinkedList(LinkedList):
 
         # Move the 2 pointers until they reach the proper starting point in the list
         current_pointer, previous_pointer = self.head, None
-        
+
         while left > 1:
             previous_pointer = current_pointer
             current_pointer = current_pointer.next
             left, right = left - 1, right - 1
-        
+
         # The 2 pointers that will fix the final connections
         tail_pointer, conn_pointer = current_pointer, previous_pointer
-        
+
         # iteratively reverse the nodes until right becomes 0
         while right:
             third_pointer = current_pointer.next
@@ -183,13 +186,13 @@ class SinglyLinkedList(LinkedList):
             previous_pointer = current_pointer
             current_pointer = third_pointer
             right -= 1
-        
+
         # Adjust the final connections
         if conn_pointer:
             conn_pointer.next = previous_pointer
         else:
             self.head = previous_pointer
-        
+
         tail_pointer.next = current_pointer
         return self.head
 
@@ -255,10 +258,10 @@ class SinglyLinkedList(LinkedList):
 
         if self.head is None or self.head.next is None:
             return self.head
-        
+
         current = self.head
         next_ = self.head.next
-        
+
         while current and next_:
             if next_.value == current.value:
                 current.next = next_.next
@@ -267,7 +270,7 @@ class SinglyLinkedList(LinkedList):
                 current = current.next
                 next_ = next_.next
 
-        return self.head    
+        return self.head
 
     def append(self, node: SingleNode) -> SingleNode:
         """
@@ -302,7 +305,7 @@ class SinglyLinkedList(LinkedList):
     def alternate_split(self) -> tuple:
         if not self.head or not self.head.next:
             raise ValueError("Head should not be none")
-        
+
         current = self.head
 
         # head for the first linked list
@@ -324,7 +327,7 @@ class SinglyLinkedList(LinkedList):
             else:
                 # we are at the end
                 temp.next = None
-            
+
             # keep moving the pointer
             current = current.next
 
@@ -355,7 +358,7 @@ class SinglyLinkedList(LinkedList):
         while current:
             stack.push(current.data)
             current = current.next
-        
+
         current = self.head
 
         while current:
@@ -386,6 +389,6 @@ class SinglyLinkedList(LinkedList):
 
                 # move on to the next pair
                 current = current.next.next
-        
+
         # at this point, the linked list has been swapped in pairs
         return self.head

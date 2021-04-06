@@ -1,7 +1,7 @@
 def palindrome_pairs(words):
     words = [str(word) for word in words]
 
-    return[
+    return [
         [i, j]
         for i, word_i in enumerate(words)
         for j, word_j in enumerate(words)
@@ -11,4 +11,3 @@ def palindrome_pairs(words):
 
 def is_palindrome(a):
     return str(a) == str(a)[::-1]
-

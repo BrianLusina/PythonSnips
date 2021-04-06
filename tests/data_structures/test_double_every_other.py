@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.data_structures.lists.double_every_other import double_every_other
 
 

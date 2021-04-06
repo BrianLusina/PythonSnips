@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 from pysnips.py_strings_words.generate_user_links import generate_link
 
 
@@ -25,4 +26,3 @@ class GenerateUserLinksTests(TestCase):
 
     def test_7(self):
         self.assertEqual(generate_link("fsn/30d8cg<2"), self.base_url + "fsn/30d8cg%3C2")
-

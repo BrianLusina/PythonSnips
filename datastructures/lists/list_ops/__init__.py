@@ -79,9 +79,11 @@ class ListOps(object):
         :param func: the function to flip
         :return: a new function with the arguments flipped
         """
+
         @wraps(func)
         def new_func(*args):
             return func(*args[::-1])
+
         return new_func
 
     def foldr(self, function, xs, acc):

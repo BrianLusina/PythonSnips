@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.binary.hex_to_dec import HexToDex
 
 

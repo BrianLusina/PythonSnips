@@ -10,5 +10,4 @@ Precondition: 1000 < |year| < 3000
 
 Examples:
 
-unluckyDays(2015) == 3
-unluckyDays(1986) == 1
+unluckyDays(2015) == 3 unluckyDays(1986) == 1

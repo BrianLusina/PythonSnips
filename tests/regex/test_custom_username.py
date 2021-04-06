@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.regex.custom_username import email_parser
 
 

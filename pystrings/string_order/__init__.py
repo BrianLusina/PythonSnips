@@ -11,7 +11,7 @@ def order(sentence):
                     print("Before:", word_list)
                     removed = word_list.pop(c)
                     print("After:", word_list)
-                    word_list.insert(digit-1, word)
+                    word_list.insert(digit - 1, word)
                     c += 1
 
     return " ".join(word_list)

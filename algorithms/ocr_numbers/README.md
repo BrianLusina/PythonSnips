@@ -1,6 +1,7 @@
 # Ocr Numbers
 
-Write a program that, given a 3 x 4 grid of pipes, underscores, and spaces, can determine which number is represented, or whether it is garbled.
+Write a program that, given a 3 x 4 grid of pipes, underscores, and spaces, can determine which number is represented,
+or whether it is garbled.
 
 # Step One
 
@@ -90,6 +91,7 @@ grid will accept a number passed in as a string and return a grid output of the 
 ```
 
 number will take in a grid and return a number as a string
+
 ``` python
 >>> number([" _ ",
         "| |",
@@ -98,10 +100,9 @@ number will take in a grid and return a number as a string
 "0"
 ```
 
-
-Both grid and number should validate their input
-and raise ValueErrors with meaningful error messages if necessary.
+Both grid and number should validate their input and raise ValueErrors with meaningful error messages if necessary.
 
 ## Source
 
-Inspired by the Bank OCR kata [http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR](http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR)
+Inspired by the Bank OCR
+kata [http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR](http://codingdojo.org/cgi-bin/wiki.pl?KataBankOCR)

@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.power_digit_sum import power_digit_sum
 
 

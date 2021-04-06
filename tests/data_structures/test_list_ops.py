@@ -1,5 +1,5 @@
-import unittest
 import operator
+import unittest
 
 from pysnips.data_structures.lists.list_ops import ListOps
 

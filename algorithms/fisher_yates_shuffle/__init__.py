@@ -40,4 +40,3 @@ def shuffle(the_list):
         if random_choice_index != index_we_are_choosing:
             the_list[index_we_are_choosing], the_list[random_choice_index] = \
                 the_list[random_choice_index], the_list[index_we_are_choosing]
-

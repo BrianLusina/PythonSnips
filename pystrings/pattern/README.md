@@ -1,7 +1,10 @@
 ## Pattern
-using n as a parameter in the calling function pattern, where n should be a natural number; complete the codes to get the pattern (take the help of examples). There is no newline in the end (after the pattern ends).
+
+using n as a parameter in the calling function pattern, where n should be a natural number; complete the codes to get
+the pattern (take the help of examples). There is no newline in the end (after the pattern ends).
 
 Examples
+
 ``` python
 pattern(3):
 

@@ -9,6 +9,7 @@ def say_num():
     logger.debug(num)
     return num
 
+
 # necessary for logging to work
 if __name__ == "__main__":
     logging.basicConfig(filename="example.log", level=logging.DEBUG)

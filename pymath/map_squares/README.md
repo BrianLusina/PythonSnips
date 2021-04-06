@@ -4,5 +4,4 @@ Write a program which can map() to make a list whose elements are square of elem
 
 Hints:
 
-Use map() to generate a list.
-Use lambda to define anonymous functions.
+Use map() to generate a list. Use lambda to define anonymous functions.

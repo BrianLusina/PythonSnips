@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.binary.count_binary import count_bits
 
 

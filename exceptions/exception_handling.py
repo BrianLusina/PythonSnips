@@ -24,7 +24,6 @@ except ZeroDivisionError:
 finally:
     print("As I was saying, I think the black hole occurred when God divided infinite by zero. I'm just saying")
 
-
 print("This is how the raise statement is used")
 try:
     print(50 / 0)
@@ -39,7 +38,8 @@ assert (temp >= 0), "It's too damn cold!"
 
 
 def throws():
-    return 5/0
+    return 5 / 0
+
 
 try:
     throws()

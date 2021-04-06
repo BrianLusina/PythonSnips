@@ -3,6 +3,7 @@ Lattice paths, this gets the number of routes ina given grid lattice
 """
 from functools import reduce
 
+
 # lattice_paths = lambda n: reduce(lambda x, y: x * y, range(1, n + 1), 1)
 
 

@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.re_ordering import re_ordering
 
 BASIC_TESTS = [

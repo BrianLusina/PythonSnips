@@ -10,4 +10,4 @@ def comp(array1, array2):
         return True
     if len(array1) == 0 or len(array2) == 0:
         return True
-    m = [x**2 for x in array1]
+    m = [x ** 2 for x in array1]

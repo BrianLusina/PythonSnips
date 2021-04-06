@@ -1,6 +1,7 @@
-import unittest
 import random
-from pysnips.algorithms.allergies import Allergies
+import unittest
+
+from algorithms.allergies import Allergies
 
 
 class AllergiesTests(unittest.TestCase):
@@ -109,6 +110,7 @@ class AllergiesTests(unittest.TestCase):
         for x in range(1000, 1500):
             y = random.choice(range(x, x + 3))
             self.assertEqual(Allergies(y).allergies(), self.MyAllergies(y).allergies())
+
 
 if __name__ == '__main__':
     unittest.main()

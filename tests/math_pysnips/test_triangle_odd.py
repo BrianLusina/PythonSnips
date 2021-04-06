@@ -1,5 +1,6 @@
-import unittest
 import time
+import unittest
+
 from pysnips.math_pysnips.triangles.triangle_odd import row_sum_odd_numbers
 
 
@@ -10,11 +11,11 @@ class TriangleTests(unittest.TestCase):
     def tearDown(self):
         t = time.time() - self.startTime
         print("%s: %.3f" % (self.id(), t))
-    
+
     def test_1(self):
         time.sleep(1)
         self.assertEquals(row_sum_odd_numbers(1), 1)
-        
+
     def test_2(self):
         time.sleep(2)
         self.assertEquals(row_sum_odd_numbers(2), 8)

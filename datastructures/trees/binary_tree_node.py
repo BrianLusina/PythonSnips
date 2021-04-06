@@ -1,10 +1,11 @@
 from . import TreeNode
 
+
 class BinaryTreeNode(TreeNode):
     """
     Binary tree node class which will implement Binary tree
     """
-    
+
     def insert_node(self, value):
         """
         Inserts a node using a Binary Search approach, where every value insert will be inserted to either the left or
@@ -49,38 +50,38 @@ class BinaryTreeNode(TreeNode):
 
         if value > self.value:
             return False
-    
+
         else:
             if self.left is None and self.right is None and self == parent.left:
                 parent.left = None
                 self.clear_node()
-            
+
             elif self.left is None and self.right is None and self == parent.right:
                 parent.right = None
                 self.clear_node()
-            
+
             elif self.left and self.right is None and self == parent.left:
                 parent.left = self.left
                 self.clear_node()
-         
+
             elif self.left and self.right is None and self == parent.right:
                 parent.right = self.left
                 self.clear_node()
-        
+
             elif self.right and self.left is None and self == parent.left:
                 parent.left = self.right
                 self.clear_node()
-    
+
             elif self.right and self.left is None and self == parent.right:
                 parent.right = self.right
                 self.clear_node()
-            
+
             else:
                 self.value = self.right.find_minimum_value()
                 self.right.delete_node(self.value, self)
 
         return True
-    
+
     def clear_node(self):
         """
         Clears the node and sets the values to None
@@ -88,7 +89,7 @@ class BinaryTreeNode(TreeNode):
         self.value = None
         self.left = None
         self.right = None
-    
+
     def find_minimum_value(self):
         """
         Find the minimum value by going way down to the left, if we can not find anymore nodes, we have reached the end

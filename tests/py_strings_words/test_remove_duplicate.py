@@ -1,5 +1,6 @@
-import unittest
 import time
+import unittest
+
 from pysnips.py_strings_words.remove_duplicate import RemoveDuplicate, RemoveDupSort
 
 
@@ -35,6 +36,7 @@ class DuplicateTests(unittest.TestCase):
         time.sleep(5)
         sent = RemoveDupSort("hello world and practice makes perfect and hello world again")
         self.assertEqual("again and hello makes perfect practice world", sent.remover())
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(DuplicateTests)

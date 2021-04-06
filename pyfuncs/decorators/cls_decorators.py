@@ -14,7 +14,7 @@ class Circle(object):
         This sets the radius as a mutable property
         """
         return self.__radius
-    
+
     @radius.setter
     def radius(self, value):
         """
@@ -25,7 +25,7 @@ class Circle(object):
             self.__radius = value
         else:
             raise ValueError(f"Radius can not be negative")
-    
+
     @property
     def area(self):
         """
@@ -36,7 +36,7 @@ class Circle(object):
 
     def cylinder_volume(self, height):
         return self.area * height
-    
+
     @classmethod
     def unit_circle(cls):
         """

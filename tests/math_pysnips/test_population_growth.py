@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.population_growth import nb_year
 
 
@@ -11,4 +12,3 @@ class Tests(unittest.TestCase):
 
     def test_3(self):
         self.assertEqual(nb_year(1500000, 0.25, 1000, 2000000), 94)
-

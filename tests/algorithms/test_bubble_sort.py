@@ -1,6 +1,6 @@
 import unittest
-import cProfile
-from pysnips.algorithms.bubble_sort import BubbleSort
+
+from algorithms.sorting.bubble_sort import BubbleSort
 
 
 class BubbleSortTests(unittest.TestCase):

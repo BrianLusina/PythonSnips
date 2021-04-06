@@ -1,5 +1,6 @@
-import unittest
 import time
+import unittest
+
 from pysnips.math_pysnips.make_larger import MakeLarger
 
 

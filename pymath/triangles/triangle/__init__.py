@@ -1,5 +1,5 @@
-from math import sqrt, pow
 from collections import Counter
+from math import sqrt, pow
 
 
 class Triangle(object):

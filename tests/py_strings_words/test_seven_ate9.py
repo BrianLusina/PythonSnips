@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.seven_ate9 import seven_ate9
 
 
@@ -11,4 +12,3 @@ class SevenAte9Tests(unittest.TestCase):
 
     def test_3(self):
         self.assertEqual(seven_ate9('7979797'), "7777")
-

@@ -15,6 +15,3 @@ def check_roman_numerals(phrase):
     ten = '(X[CL]|L?X{0,3})'
     digit = '(I[VX]|V?I{0,3})'
     return bool(re.match(thousand + hundred + ten + digit + '$', phrase))
-
-
-

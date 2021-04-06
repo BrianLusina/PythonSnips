@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.math_pysnips.digit_count import nb_dig
 
 

@@ -1,15 +1,14 @@
 from ObjectOriented.AlienGame import Map
 from ObjectOriented.AlienGame.central_corridor import CentralCorridor
+from ObjectOriented.AlienGame.death import Death
+from ObjectOriented.AlienGame.engine import EngineX
+from ObjectOriented.AlienGame.escape_pod import EscapePod
+from ObjectOriented.AlienGame.finished import Finished
 from ObjectOriented.AlienGame.laser_weapon_armory import LaserWeaponArmory
 from ObjectOriented.AlienGame.thebridge import TheBridge
-from ObjectOriented.AlienGame.escape_pod import EscapePod
-from ObjectOriented.AlienGame.death import Death
-from ObjectOriented.AlienGame.finished import Finished
-from ObjectOriented.AlienGame.engine import EngineX
 
 
 class StartGame(Map):
-
     __scenes = {
         'central_corridor': CentralCorridor(),
         'laser_weapon_armory': LaserWeaponArmory(),
@@ -25,6 +24,7 @@ class StartGame(Map):
 
     def opening_scene(self):
         return self.next_scene(self.start_scene)
+
 
 a_map = StartGame('central_corridor')
 a_game = EngineX(a_map)

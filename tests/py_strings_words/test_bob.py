@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
+
 import unittest
 
 from pysnips.py_strings_words.bob import hey
@@ -113,6 +114,7 @@ class BobTests(unittest.TestCase):
         self.assertEqual(
             'Sure.', hey('What if we end with whitespace?   ')
         )
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -30,13 +30,13 @@ def merge_sort_in_place(the_list: list) -> list:
             the_list[k] = right_half[j]
             j += 1
         k += 1
-    
+
     # check if any element was left_half in the left_half half
     while i < len(left_half):
         the_list[k] = left_half[i]
         i += 1
         k += 1
-    
+
     while i < len(right_half):
         the_list[k] = right_half[j]
         j += 1
@@ -75,8 +75,9 @@ def combine_lists(list_a: list, list_b: list) -> list:
     while list_b_index < len(list_b):
         merged_list.append(list_b[list_b_index])
         list_b_index += 1
-    
+
     return merged_list
+
 
 def merge_sort_out_of_place(the_list: list) -> list:
     """
@@ -90,11 +91,11 @@ def merge_sort_out_of_place(the_list: list) -> list:
     >>> merge_sort_out_of_place([-2, -5, -45])
     [-45, -5, -2]
     """
-    
+
     # base case
     if len(the_list) <= 1:
         return the_list
-    
+
     middle_index = len(the_list) // 2
     left_half = the_list[:middle_index]
     right_half = the_list[middle_index:]

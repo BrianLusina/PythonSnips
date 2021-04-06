@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.greek_comparator import greek_comparator
 
 

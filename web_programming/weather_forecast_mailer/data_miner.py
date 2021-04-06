@@ -1,5 +1,5 @@
-import os
 import fnmatch
+import os
 
 
 def get_schedule():
@@ -60,4 +60,3 @@ def extension_checker():
             json_files.append(file)
 
     return txt_files, json_files
-

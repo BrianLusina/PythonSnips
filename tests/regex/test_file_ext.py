@@ -1,5 +1,6 @@
 import unittest
-from pysnips.regex.file_extensions import is_img, is_audio, is_audio_2, is_img_2
+
+from pysnips.regex.file_extensions import is_img, is_audio
 
 
 class FileExtTests(unittest.TestCase):

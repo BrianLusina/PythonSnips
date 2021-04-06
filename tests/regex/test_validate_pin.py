@@ -1,10 +1,11 @@
-from pysnips.regex.validate_pin import validate_pin
 import unittest
+
+from pysnips.regex.validate_pin import validate_pin
 
 
 class ValidatePinTests(unittest.TestCase):
     def test_1(self):
-        self.assertEqual(validate_pin("1234"),True)
+        self.assertEqual(validate_pin("1234"), True)
 
     def test_2(self):
         self.assertEqual(validate_pin("12345"), False)

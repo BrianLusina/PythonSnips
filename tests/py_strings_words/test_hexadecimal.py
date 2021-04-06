@@ -7,7 +7,7 @@ class HexadecimalTest(unittest.TestCase):
     def setUp(self):
         self.hexa = Hexadecimal()
         self.hexa_prcpl = Hexadecimal()
-        
+
     def test_valid_hexa1(self):
         self.assertEqual(1, self.hexa.hex_built_in('1'))
 
@@ -69,6 +69,7 @@ class HexadecimalTest(unittest.TestCase):
     def test_invalid_hexa_1st_principles(self):
         with self.assertRaises(ValueError):
             self.hexa_prcpl.hexa_first_principles('carrot')
+
 
 if __name__ == '__main__':
     unittest.main()

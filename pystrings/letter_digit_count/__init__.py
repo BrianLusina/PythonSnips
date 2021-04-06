@@ -13,5 +13,3 @@ class LetterDigitCount(object):
                 pass
 
         return d
-
-

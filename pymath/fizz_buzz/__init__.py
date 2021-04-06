@@ -1,5 +1,4 @@
 # from itertools import cycle, zip, count, islice
-import unittest
 
 
 class FizzBuzz(object):
@@ -22,6 +21,7 @@ class FizzBuzz(object):
     """
     Using String concatenation
     """
+
     def string_concat(self):
         return ["Fizz" * (i % 3 == 0) + "Buzz" * (i % 5 == 0) or i for i in range(1, self.endpoint)]
 
@@ -45,6 +45,7 @@ class FizzBuzz(object):
         for i in islice(fizzbuzz, self.endpoint):
             out.append(i)
     """
+
 
 """
 TESTS

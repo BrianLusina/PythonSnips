@@ -1,7 +1,6 @@
 # Cyclic Primes
 
-Prime numbers which are prime no matter the order change of the given digits.
-An example.
+Prime numbers which are prime no matter the order change of the given digits. An example.
 
 ```plain
 31 is prime and 13 is prime.

@@ -1,5 +1,5 @@
-from math import ceil, sqrt
 import sys
+from math import ceil, sqrt
 
 if sys.version_info[0] == 2:
     from itertools import izip_longest as zip_longest

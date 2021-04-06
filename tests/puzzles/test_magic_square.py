@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.puzzles.magic_square import magic_square
 
 
@@ -29,6 +30,7 @@ class MagicSquareTestCases(unittest.TestCase):
         """>>>> Valid array should return false"""
         arr = [[9, 14, 7], [8, 10, 12], [13, 6, 11]]
         self.assertTrue(magic_square(arr))
+
 
 if __name__ == '__main__':
     unittest.main()

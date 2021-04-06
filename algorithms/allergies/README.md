@@ -1,10 +1,10 @@
 # Allergies
 
-Write a program that, given a person's allergy score, can tell them whether or not they're allergic to a given item, and their full list of allergies.
+Write a program that, given a person's allergy score, can tell them whether or not they're allergic to a given item, and
+their full list of allergies.
 
-An allergy test produces a single numeric score which contains the
-information about all the allergies the person has (that they were
-tested for).
+An allergy test produces a single numeric score which contains the information about all the allergies the person has (
+that they were tested for).
 
 The list of items (and their value) that were tested are:
 
@@ -44,15 +44,13 @@ True
 
 You will be provided with a class `Allergies` which will have 2 methods
 
-+ is_allergic_to
-  Checks if Tom is allergic to a particular allergen. Returns True if Tom is allergic, False otherwise
++ is_allergic_to Checks if Tom is allergic to a particular allergen. Returns True if Tom is allergic, False otherwise
 
-+ allergies
-  Returns a list of what Tom is allergic to. This list must be sorted alphabetically
++ allergies Returns a list of what Tom is allergic to. This list must be sorted alphabetically
 
 Must Dos:
 
-Ensure that your function throws a TypeError for invalid inputs such as None, floats, strings, or any data type
-that is not an integer.
+Ensure that your function throws a TypeError for invalid inputs such as None, floats, strings, or any data type that is
+not an integer.
 
 *Hint: Use Bitwise ANDing*

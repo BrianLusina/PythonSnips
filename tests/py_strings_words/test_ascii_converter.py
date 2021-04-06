@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_strings_words.ascii_converter import to_ascii, to_hex
 
 

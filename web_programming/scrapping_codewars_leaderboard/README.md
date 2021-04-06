@@ -1,13 +1,11 @@
-You should get and parse the html of the codewars leaderboard page.
-You can use the 'nokogiri' gem(Ruby) or 'BeautifulSoup'(Python) or 'jsdom'(Javascript).
-For Javascript: Return a Promise resolved with your 'Leaderboard' Object!
+You should get and parse the html of the codewars leaderboard page. You can use the 'nokogiri' gem(Ruby) or '
+BeautifulSoup'(Python) or 'jsdom'(Javascript). For Javascript: Return a Promise resolved with your 'Leaderboard' Object!
 
 You must meet the following criteria:
 
-Return a 'Leaderboard' object with a position property.
-Leaderboard#position should contain 500 'User' objects.
-Leaderboard#position[i] should return the ith ranked User(1 based index).
-Each User should have the following properties:
+Return a 'Leaderboard' object with a position property. Leaderboard#position should contain 500 'User' objects.
+Leaderboard#position[i] should return the ith ranked User(1 based index). Each User should have the following
+properties:
 
 ``` python
 User#name    # => the user's username, not their real name

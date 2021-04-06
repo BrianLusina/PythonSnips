@@ -5,4 +5,3 @@ def super_size(n):
 
 
 print(super_size(2150))
-

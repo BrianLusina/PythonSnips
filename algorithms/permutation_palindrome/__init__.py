@@ -1,5 +1,4 @@
 def has_palindrome_permutation(some_string):
-
     # keep track of oddly appearing char
     unpaired_chars = set()
 
@@ -12,4 +11,3 @@ def has_palindrome_permutation(some_string):
     # the string has a palindrome permutation if it
     # has one or zero characters without a pair
     return len(unpaired_chars) <= 1
-

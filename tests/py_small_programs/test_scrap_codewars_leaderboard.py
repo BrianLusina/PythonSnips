@@ -1,4 +1,5 @@
 import unittest
+
 from pysnips.py_small_programs.scrapping_codewars_leaderboard import solution
 
 

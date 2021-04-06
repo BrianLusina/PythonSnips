@@ -1,6 +1,7 @@
 ## isograms
 
-An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines
+whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
 ```python
 is_isogram("Dermatoglyphics" ) == true
@@ -16,8 +17,8 @@ is_isogram("moOse" ) == false # -- ignore letter case
 
 #### Alternatives
 
-Loop through each character in word and check the count of each letter, if the letter is greater than 1, it is not an isogram,
-else it is
+Loop through each character in word and check the count of each letter, if the letter is greater than 1, it is not an
+isogram, else it is
 
 ```python
 def is_isogram(word):
@@ -31,4 +32,5 @@ def is_isogram(word):
 
 OR
 
-Use a set to determine if the length of unique characters are equal to the characters already present, if they are then it is an isogram, else it is false
+Use a set to determine if the length of unique characters are equal to the characters already present, if they are then
+it is an isogram, else it is false

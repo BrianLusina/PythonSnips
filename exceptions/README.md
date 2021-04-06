@@ -1,7 +1,8 @@
 Sample Error Handling in Python
 
-Exception Handling is done using try/except syntax. The try block handles the code that may contain an error
-when it occurs, while the Except block handles the code that is run when the try block encounters an error
+Exception Handling is done using try/except syntax. The try block handles the code that may contain an error when it
+occurs, while the Except block handles the code that is run when the try block encounters an error
+
 ``` python
 try:
     code to run
@@ -10,6 +11,7 @@ except ErrorType:
 ```
 
 The Except block can handle multiple errors as well
+
 ``` python
 try:
     code
@@ -19,8 +21,8 @@ except (ErrorType1,ErrorType2):
     code
 ```
 
-Alternatively, This will catch all errors, but programmer will never know which exact error occured, thus should
-    be used sparingly
+Alternatively, This will catch all errors, but programmer will never know which exact error occured, thus should be used
+sparingly
 
 ``` python
 try:
@@ -30,6 +32,7 @@ except:
 ``` 
 
 finally statement shall run no matter what error occurs. Placed at the bottom of the try/except block
+
 ``` python    
 try:
     code
@@ -45,8 +48,8 @@ raise statement is used to "raise" an exception.
 raise ErrorType.
 ```
 
-The exception has to be specified
-The raise statement can "raise" exceptions with arguments containing details about them
+The exception has to be specified The raise statement can "raise" exceptions with arguments containing details about
+them
 
 ``` python
 raise ErrorType(args)
@@ -64,11 +67,13 @@ except:
 
 Assertion is a sanity check that is used to test programs. The assert statement is used on a statement and if statement
 is false, it will raise an AssertionError
+
 ``` python
 assert statement
 ```
 
 assert can take a second argument detailing the AssertionError raised
+
 ``` python
 temp = -29
 assert (temp>=0), "It's too damn cold!"

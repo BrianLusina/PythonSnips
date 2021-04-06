@@ -1,8 +1,9 @@
+import webbrowser
+
 import numpy as np
 import pandas as pd
 from pandas_datareader import data as web
 from sklearn import linear_model
-import webbrowser
 
 webbrowser.open("https://github.com/philliphsu/BottomSheetPickers")
 
@@ -54,4 +55,3 @@ class ScikitBacktest(object):
         d['strategy'] = d.pred * d.returns
         title = '%s to %s for %d lags' % (start_te, end_te, self.lags)
         d[['returns', 'strategy']].ix[self.lags:].cumsum().apply(np.exp).plot(title=title)
-

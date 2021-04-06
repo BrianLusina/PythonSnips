@@ -1,6 +1,7 @@
-from pysnips.py_strings_words.character_counter import total_characters
-from pysnips.errors import PySnipsError
 import unittest
+
+from pysnips.errors import PySnipsError
+from pysnips.py_strings_words.character_counter import total_characters
 
 
 class CharacterCounterTest(unittest.TestCase):
@@ -15,7 +16,7 @@ class CharacterCounterTest(unittest.TestCase):
         self.assertEqual(12, total_characters(["adios", "bye", "ciao"]), msg="Expected 12")
 
     def test_for_int_array(self):
-        self.assertEqual(0, total_characters([1,2,3,4,5,6]), "Expected 0")
+        self.assertEqual(0, total_characters([1, 2, 3, 4, 5, 6]), "Expected 0")
 
     def test_for_diff_elements_in_array(self):
         self.assertEqual(5, total_characters(["Brian", 5, {}, []]), "Expected 5")

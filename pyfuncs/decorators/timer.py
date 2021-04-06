@@ -1,5 +1,5 @@
-from functools import wraps
 import time
+from functools import wraps
 
 
 def timer(func):
@@ -17,8 +17,9 @@ def timer(func):
         run_time = end_time - start_time
         print(f"Finished {func.__name__!r} in {run_time:.4f} secs")
         return value
-    
+
     return wrapper_timer
+
 
 @timer
 def lets_waste_time(num_times):
