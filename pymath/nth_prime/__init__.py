@@ -1,11 +1,12 @@
 from itertools import count
+from typing import List
 
 from ..is_prime import is_prime
 
 
-def nth_prime(n):
+def primes_up_to(n: int) -> List[int]:
     """
-    Returns the nth prime number
+    Returns a list of prime numbers from 2, up to n
     """
     known = []
     candidates = primes()
@@ -14,6 +15,14 @@ def nth_prime(n):
         x = next(candidates)
         if is_prime(x):
             known.append(x)
+    return known
+
+
+def nth_prime(n):
+    """
+    Returns the nth prime number
+    """
+    known = primes_up_to(n)
     return known[n - 1]
 
 
