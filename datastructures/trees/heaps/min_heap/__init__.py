@@ -1,4 +1,5 @@
-from heapq import heappush, heappop, nsmallest
+from heapq import heappush, heappop, nsmallest, heapify
+from typing import Any
 
 
 class MinHeap:
@@ -6,6 +7,7 @@ class MinHeap:
         if heap is None:
             heap = []
         self.heap = heap
+        heapify(self.heap)
 
     @staticmethod
     def parent(i):
@@ -27,7 +29,10 @@ class MinHeap:
             # Swap heap[i] with heap[parent(i)]
             self.heap[index], self.heap[self.parent(index)] = self.heap[self.parent(index)], self.heap[index]
 
-    def remove_min(self):
+    def remove_min(self) -> Any:
+        """
+        Removes and returns the smallest value in the Heap
+        """
         return heappop(self.heap)
 
     def delete_key(self, index):
@@ -39,15 +44,24 @@ class MinHeap:
 
     def get_minimum(self):
         """
-        Returns the minimum value in the heap
+        Returns the minimum value in the heap without removing it
         """
         return self.heap[0]
 
     def is_empty(self) -> bool:
+        """
+        Checks if the heap is empty
+        """
         return len(self.heap) == 0
 
     def peek(self):
+        """
+        Gets the smallest item in the heap
+        """
         return nsmallest(1, self.heap)[0]
 
     def size(self):
+        """
+        Returns the size of the heap
+        """
         return len(self.heap)
