@@ -1,4 +1,4 @@
-from data_structures.stacks import Stack
+from datastructures.stacks import Stack
 
 stack = Stack(6)
 stack.push("Python")

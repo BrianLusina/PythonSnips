@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 
-from pysnips.algorithms.word_count import word_count
+from algorithms.word_count import word_count
 
 
 # to be backwards compatible with the old Python 2.X

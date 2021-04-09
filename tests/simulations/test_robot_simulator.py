@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.simulations.robot_simulator import Robot, NORTH, EAST, SOUTH, WEST
+from simulations.robot_simulator import Robot, NORTH, EAST, SOUTH, WEST
 
 
 class RobotTests(unittest.TestCase):

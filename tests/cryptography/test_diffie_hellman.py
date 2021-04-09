@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.cryptography.diffie_hellman import private_key, secret, public_key
+from cryptography.diffie_hellman import private_key, secret, public_key
 
 
 class DiffieHellmanTest(unittest.TestCase):

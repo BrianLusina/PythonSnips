@@ -2,7 +2,7 @@ import unittest
 from collections import Sequence
 from types import GeneratorType
 
-from pysnips.algorithms.grade_school import School
+from algorithms.grade_school import School
 
 
 class SchoolTest(unittest.TestCase):

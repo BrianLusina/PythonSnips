@@ -1,4 +1,4 @@
-from pysnips.math_pysnips.abundant_numbers import is_abundant
+from math_abundant_numbers import is_abundant
 
 
 def find_sum_cant_be_written(lower_limit, upper_limit):

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.cryptography.simple_cipher import Caesar, Cipher
+from cryptography.simple_cipher import Caesar, Cipher
 
 
 class CipherTest(unittest.TestCase):

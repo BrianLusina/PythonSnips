@@ -1,4 +1,4 @@
-from pysnips.data_structures.lists.linked_lists import LinkedList, Node
+from datastructures.lists.linked_lists import LinkedList, Node
 
 
 class DoubleNode(Node):

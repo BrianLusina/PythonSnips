@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.zebra_puzzle import solution
+from puzzles.zebra_puzzle import solution
 
 
 class ZebraPuzzleTest(unittest.TestCase):

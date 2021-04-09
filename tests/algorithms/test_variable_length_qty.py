@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.variable_length_qty import encode, decode
+from algorithms.variable_length_qty import encode, decode
 
 
 # TODO

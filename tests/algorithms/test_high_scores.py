@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.high_scores import HighScores
+from algorithms.high_scores import HighScores
 
 
 class HighScoreTest(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.jacks_house import rhyme, verse
+from puzzles.jacks_house import rhyme, verse
 
 
 class VerseTest(unittest.TestCase):

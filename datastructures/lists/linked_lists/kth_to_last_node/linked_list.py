@@ -1,4 +1,4 @@
-from data_structures.lists.linked_lists import LinkedListNode
+from datastructures.lists.linked_lists import LinkedListNode
 
 a = LinkedListNode("angel food")
 b = LinkedListNode("Bundt")

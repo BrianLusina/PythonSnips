@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-from pysnips.data_structures.lists.linked_lists import Node
+from datastructures.lists.linked_lists import Node
 
 
 class NodeWithRandomPointer(Node):

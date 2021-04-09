@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.yacht import score, BIG_STRAIGHT, YACHT, ONES, THREES, TWOS, LITTLE_STRAIGHT, CHOICE, FULL_HOUSE, \
+from puzzles.yacht import score, BIG_STRAIGHT, YACHT, ONES, THREES, TWOS, LITTLE_STRAIGHT, CHOICE, FULL_HOUSE, \
     SIXES, FOUR_OF_A_KIND, FIVES, FOURS
 
 

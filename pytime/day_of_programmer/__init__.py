@@ -1,7 +1,7 @@
 import os
 from collections import OrderedDict
 
-from pysnips.time_dates.is_leap import is_leap_year
+from pytime.is_leap import is_leap_year
 
 no_of_days = OrderedDict([("01", 31), ("02", 28), ("03", 31), ("04", 30),
                           ("05", 31), ("06", 30), ("07", 31), ("08", 31),

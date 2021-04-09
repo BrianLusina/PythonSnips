@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.name_score import name_score
+from puzzles.name_score import name_score
 
 
 class NameScoreTest(unittest.TestCase):

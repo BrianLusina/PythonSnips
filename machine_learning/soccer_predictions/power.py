@@ -5,7 +5,7 @@
 
 from numpy.linalg import LinAlgError
 
-from pysnips.machine_learning.soccer_predictions.world_cup import *
+from machine_learning.soccer_predictions.world_cup import *
 
 
 def _build_team_matrix(data, target_col):

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.pete_the_baker import cakes
+from puzzles.pete_the_baker import cakes
 
 
 # todo: fix pete the baker

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.resistor_color_duo import value
+from algorithms.resistor_color_duo import value
 
 
 class ResistorColorDuoTest(unittest.TestCase):

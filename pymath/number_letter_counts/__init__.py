@@ -1,4 +1,4 @@
-from pysnips.algorithms.say_number import say
+from algorithms.say_number import say
 
 
 def number_letter_counts(start, end):

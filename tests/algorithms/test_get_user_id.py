@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.get_user_id import get_users_ids
+from algorithms.get_user_id import get_users_ids
 
 
 class test(unittest.TestCase):

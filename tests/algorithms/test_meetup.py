@@ -20,7 +20,7 @@ in every month.
 import unittest
 from datetime import date
 
-from pysnips.algorithms.meetup import meetup_day
+from algorithms.meetup import meetup_day
 
 
 class MeetupTest(unittest.TestCase):

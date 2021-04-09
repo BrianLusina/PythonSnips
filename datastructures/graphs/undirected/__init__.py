@@ -1,4 +1,4 @@
-from pysnips.data_structures.graphs import Graph
+from datastructures.graphs import Graph
 
 
 class UnDirectedGraph(Graph):

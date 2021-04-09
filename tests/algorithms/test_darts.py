@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.darts import score
+from algorithms.darts import score
 
 
 class DartsTest(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.transpose import transpose
+from algorithms.transpose import transpose
 
 
 # test cases adapted from `x-common//canonical-data.json` @ version: 1.0.0

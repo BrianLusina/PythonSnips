@@ -1,5 +1,5 @@
-from pysnips.data_structures.lists.linked_lists.build_one_2_3 import build_one_two_three
-from pysnips.data_structures.lists.linked_lists.singly_linked_list import SinglyLinkedList
+from datastructures.lists.linked_lists.build_one_2_3 import build_one_two_three
+from datastructures.lists.linked_lists.singly_linked_list import SinglyLinkedList
 
 myArray = ["Dad", "Mom", "Linda", "Joyce", "Brian", "Mideva", "Lucky", "Fox", "Junior", "Coco", "Rabbits"]
 

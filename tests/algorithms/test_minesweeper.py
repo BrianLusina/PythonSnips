@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.minesweeper import Minesweeper
+from algorithms.minesweeper import Minesweeper
 
 
 class MinesweeperTest(unittest.TestCase):

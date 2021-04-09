@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.cryptography.isbn_verifier import verify
+from cryptography.isbn_verifier import verify
 
 
 class IsbnVerifierTests(unittest.TestCase):

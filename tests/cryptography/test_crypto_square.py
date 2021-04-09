@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.cryptography.crypto_square import encode
+from cryptography.crypto_square import encode
 
 
 class CryptoSquareTest(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.coin_change import find_minimum_coins
+from puzzles.coin_change import find_minimum_coins
 
 
 class ChangeTest(unittest.TestCase):

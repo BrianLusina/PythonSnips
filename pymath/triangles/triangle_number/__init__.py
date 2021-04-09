@@ -1,7 +1,7 @@
 from collections import Counter
 from math import sqrt
 
-from pysnips.math_pysnips.get_next_prime import get_next_prime
+from math_get_next_prime import get_next_prime
 
 
 def is_triangle_number(number):

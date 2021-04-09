@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.word_search import WordSearch, Point
+from algorithms.word_search import WordSearch, Point
 
 
 class WordSearchTests(unittest.TestCase):

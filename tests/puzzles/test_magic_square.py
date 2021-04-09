@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.magic_square import magic_square
+from puzzles.magic_square import magic_square
 
 
 class MagicSquareTestCases(unittest.TestCase):

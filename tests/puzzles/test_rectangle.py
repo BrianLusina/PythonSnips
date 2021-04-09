@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.rectangles import count
+from puzzles.rectangles import count
 
 
 class WordTest(unittest.TestCase):

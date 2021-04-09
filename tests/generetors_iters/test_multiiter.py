@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.generators_iterators.iterators.multiiter import multiiter
+from pygeneratorssanditers.iterators.multiiter import multiiter
 
 
 # todo: fix generator

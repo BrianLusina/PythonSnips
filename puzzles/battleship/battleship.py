@@ -1,4 +1,4 @@
-from game_puzzles.battleship import BattleShip
+from puzzles.battleship import BattleShip
 
 print("Let's play Battleship!")
 

@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.hamming import distance
+from puzzles.hamming import distance
 
 
 class HammingTest(unittest.TestCase):

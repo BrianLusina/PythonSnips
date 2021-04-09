@@ -1,4 +1,4 @@
-from pysnips.object_oriented.banker import BankAccount
+from object_oriented.banker import BankAccount
 
 
 class CurrentAccount(BankAccount):

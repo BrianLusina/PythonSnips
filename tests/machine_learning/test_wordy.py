@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.machine_learning.language_processing.wordy import calculate
+from machine_learning.language_processing.wordy import calculate
 
 
 class WordyTest(unittest.TestCase):

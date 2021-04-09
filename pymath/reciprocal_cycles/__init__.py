@@ -1,7 +1,7 @@
 """
 Finds the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 """
-from pysnips.math_pysnips.sieve_of_erastothenese import sieve
+from math_sieve_of_erastothenese import sieve
 
 
 def longest_recurring_cycle(limit=1000):

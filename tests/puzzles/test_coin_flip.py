@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.puzzles.coin_flip import coin_flip
+from puzzles.coin_flip import coin_flip
 
 
 class CoinFlipTests(unittest.TestCase):

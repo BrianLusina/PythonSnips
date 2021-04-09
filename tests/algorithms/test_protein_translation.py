@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.protein_translation import of_codon, of_rna
+from algorithms.protein_translation import of_codon, of_rna
 
 
 class ProteinTranslationTests(unittest.TestCase):

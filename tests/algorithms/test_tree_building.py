@@ -1,6 +1,6 @@
 import unittest
 
-from pysnips.algorithms.tree_building import Record, build_tree
+from algorithms.tree_building import Record, build_tree
 
 
 class TestBuildingTest(unittest.TestCase):

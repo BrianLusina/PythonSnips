@@ -1,4 +1,4 @@
-from pysnips.errors import PySnipsError
+from errors import PySnipsError
 
 try:
     from functools import reduce

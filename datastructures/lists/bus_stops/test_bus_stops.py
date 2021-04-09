@@ -1,6 +1,6 @@
 import unittest
 
-from data_structures.lists.bus_stops import number
+from datastructures.lists.bus_stops import number
 
 
 class BusStopsTests(unittest.TestCase):

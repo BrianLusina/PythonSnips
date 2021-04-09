@@ -8,7 +8,7 @@ if necessary.
 
 import unittest
 
-from pysnips.algorithms.ocr_numbers import grid, number
+from algorithms.ocr_numbers import grid, number
 
 
 class OcrTest(unittest.TestCase):
