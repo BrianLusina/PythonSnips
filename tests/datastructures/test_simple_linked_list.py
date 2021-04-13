@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.lists.linked_lists.simple_linked_list import LinkedList, EmptyListException
+from datastructures.linked_lists.simple_linked_list import LinkedList, EmptyListException
 
 
 # No canonical data available for this exercise

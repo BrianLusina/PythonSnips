@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-from datastructures.lists.linked_lists import Node
+from datastructures.linked_lists import Node
 
 
 class NodeWithRandomPointer(Node):

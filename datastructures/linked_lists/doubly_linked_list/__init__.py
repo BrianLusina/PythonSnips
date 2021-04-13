@@ -1,4 +1,4 @@
-from datastructures.lists.linked_lists import LinkedList, Node
+from datastructures.linked_lists import LinkedList, Node
 
 
 class DoubleNode(Node):

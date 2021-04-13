@@ -1,4 +1,7 @@
-def merge_sort_in_place(the_list: list) -> list:
+from typing import List
+
+
+def merge_sort_in_place(the_list: List[int]) -> List[int]:
     """
     Performs a merge sort on a list in-place
     :param the_list: list of integer values to sort
@@ -31,12 +34,13 @@ def merge_sort_in_place(the_list: list) -> list:
             j += 1
         k += 1
 
-    # check if any element was left_half in the left_half half
+    # check if any element was left in the left_half
     while i < len(left_half):
         the_list[k] = left_half[i]
         i += 1
         k += 1
 
+    # check if any element was left in the right_half
     while i < len(right_half):
         the_list[k] = right_half[j]
         j += 1
@@ -45,7 +49,7 @@ def merge_sort_in_place(the_list: list) -> list:
     return the_list
 
 
-def combine_lists(list_a: list, list_b: list) -> list:
+def combine_lists(list_a: List[int], list_b: List[int]) -> List[int]:
     """
     Combines 2 integer lists
     :param list_a: List a
@@ -79,7 +83,7 @@ def combine_lists(list_a: list, list_b: list) -> list:
     return merged_list
 
 
-def merge_sort_out_of_place(the_list: list) -> list:
+def merge_sort_out_of_place(the_list: List[int]) -> List[int]:
     """
     Sorts a list of integer values out of place & returns a new list of integer
     :param the_list: List of integer values

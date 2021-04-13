@@ -1,5 +1,5 @@
+from datastructures.stacks import Stack
 from .. import LinkedList, Node
-from ....stacks import Stack
 
 
 class SingleNode(Node):
@@ -391,4 +391,19 @@ class SinglyLinkedList(LinkedList):
                 current = current.next.next
 
         # at this point, the linked list has been swapped in pairs
+        return self.head
+
+    def swap_nodes(self, k: int) -> Node:
+        a, b = self.head, self.head
+
+        for _ in range(1, k):
+            a = a.next
+
+        node, a = a, a.next
+
+        while a:
+            a, b = a.next, b.next
+
+        node.value, b.value = b.value, node.value
+
         return self.head

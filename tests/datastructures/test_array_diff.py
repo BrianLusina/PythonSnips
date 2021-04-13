@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.lists.array_diff import array_diff
+from datastructures.arrays.array_diff import array_diff
 
 
 class ArrayDiffTests(unittest.TestCase):

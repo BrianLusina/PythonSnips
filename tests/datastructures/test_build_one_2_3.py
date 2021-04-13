@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.lists.linked_lists.build_one_2_3 import push, build_one_two_three, Node
+from datastructures.linked_lists.build_one_2_3 import push, build_one_two_three, Node
 
 
 class BuildOneTwoThreeTestCases(unittest.TestCase):

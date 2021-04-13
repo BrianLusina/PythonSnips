@@ -1,7 +1,7 @@
 import unittest
 from random import randint
 
-from datastructures.lists.array_chunks import make_parts
+from datastructures.arrays.array_chunks import make_parts
 
 
 class ArrayChunksTestCase(unittest.TestCase):

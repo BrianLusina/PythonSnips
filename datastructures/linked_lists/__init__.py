@@ -393,3 +393,14 @@ class LinkedList(object):
         :return: New head of node
         """
         raise NotImplementedError("Method has not been implemented")
+
+    @abstractmethod
+    def swap_nodes(self, k: int) -> Node:
+        """
+        Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node
+        from the end (the list is 1-indexed).
+
+        Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
+        Output: [7,9,6,6,8,7,3,0,9,5]
+        """
+        raise NotImplementedError("Method has not been implemented")

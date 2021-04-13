@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.lists.array_pair_sum import array_pair_sum, array_pair_sum_hash_table, array_pair_sum_sort
+from datastructures.arrays.array_pair_sum import array_pair_sum, array_pair_sum_hash_table, array_pair_sum_sort
 
 
 class ArrayPairSumTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.lists.linked_lists.doubly_linked_list import DoublyLinkedList
+from datastructures.linked_lists.doubly_linked_list import DoublyLinkedList
 
 
 class LinkedListTests(unittest.TestCase):
