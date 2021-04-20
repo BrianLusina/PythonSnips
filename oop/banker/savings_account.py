@@ -1,4 +1,4 @@
-from object_oriented.banker import BankAccount
+from . import BankAccount
 
 
 class SavingsAccount(BankAccount):
