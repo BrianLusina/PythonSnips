@@ -1,6 +1,6 @@
 import unittest
 
-from math_roman_numeral import RomanNumeral, numeral
+from pymath.roman_numeral import RomanNumeral, numeral
 
 
 class RomanTests(unittest.TestCase):

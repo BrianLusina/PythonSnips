@@ -1,6 +1,6 @@
 import unittest
 
-from math_visible_cubes import VisibleCubes
+from pymath.visible_cubes import VisibleCubes
 
 
 class VisibleCubesTest(unittest.TestCase):

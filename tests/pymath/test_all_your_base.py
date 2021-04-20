@@ -1,6 +1,6 @@
 import unittest
 
-from math_all_your_base import rebase
+from pymath.all_your_base import rebase
 
 
 class AllYourBaseTests(unittest.TestCase):

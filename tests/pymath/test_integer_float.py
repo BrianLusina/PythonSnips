@@ -1,6 +1,6 @@
 import unittest
 
-from math_integer_of_float import i_or_f
+from pymath.integer_of_float import i_or_f
 
 
 class IntegerFloatTests(unittest.TestCase):

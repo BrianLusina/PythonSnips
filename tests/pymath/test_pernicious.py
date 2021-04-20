@@ -1,6 +1,6 @@
 import unittest
 
-from math_pernicious import Pernicious
+from pymath.pernicious import Pernicious
 
 
 class PerniciousTests(unittest.TestCase):

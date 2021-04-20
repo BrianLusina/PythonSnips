@@ -1,6 +1,6 @@
 import unittest
 
-from math_evil_or_odious import evil
+from pymath.evil_or_odious import evil
 
 
 class EvilOrOdiousTest(unittest.TestCase):

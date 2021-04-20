@@ -1,6 +1,6 @@
 import unittest
 
-from math_reciprocal_cycles import longest_recurring_cycle
+from pymath.reciprocal_cycles import longest_recurring_cycle
 
 
 class ReciprocalCyclesTestCase(unittest.TestCase):

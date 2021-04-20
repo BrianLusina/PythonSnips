@@ -1,6 +1,5 @@
 import unittest
 
-from errors import PySnipsError
 from pystrings.character_counter import total_characters
 
 
@@ -9,7 +8,7 @@ class CharacterCounterTest(unittest.TestCase):
         return "Tests for {}".format(total_characters.__name__)
 
     def test_for_invalid_chars(self):
-        with self.assertRaises(PySnipsError):
+        with self.assertRaises(Exception):
             total_characters(9)
 
     def test_for_word_list(self):

@@ -35,7 +35,7 @@ b=2*m*n and m and n are coprime.
 """
 import unittest
 
-from math_pythagorean_triplet import (primitive_triplets, triplets_in_range,
+from pymath.pythagorean_triplet import (primitive_triplets, triplets_in_range,
                                                       is_pythagorean_triplet)
 
 

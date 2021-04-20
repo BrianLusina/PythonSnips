@@ -1,7 +1,7 @@
 import unittest
 from math import sqrt
 
-from math_triangles.triangle import Triangle, TriangleError
+from pymath.triangles.triangle import Triangle, TriangleError
 
 
 class TriangleTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_wallpaper import wallpaper
+from pymath.wallpaper import wallpaper
 
 
 # todo: failing tests

@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from math_cyclic_primes import find_number_of_cyclic_primes
+from pymath.cyclic_primes import find_number_of_cyclic_primes
 
 
 class CyclicPrimesTest(TestCase):

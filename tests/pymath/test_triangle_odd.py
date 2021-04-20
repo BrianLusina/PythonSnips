@@ -1,7 +1,7 @@
 import time
 import unittest
 
-from math_triangles.triangle_odd import row_sum_odd_numbers
+from pymath.triangles.triangle_odd import row_sum_odd_numbers
 
 
 class TriangleTests(unittest.TestCase):

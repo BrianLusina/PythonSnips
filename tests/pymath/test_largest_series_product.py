@@ -8,7 +8,7 @@ Feel free to reuse your code from the 'series' exercise!
 """
 import unittest
 
-from math_largest_series_product import largest_product
+from pymath.largest_series_product import largest_product
 
 
 class SeriesTest(unittest.TestCase):

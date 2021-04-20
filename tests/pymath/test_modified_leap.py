@@ -1,6 +1,6 @@
 import unittest
 
-from math_modified_leap import year_days
+from pymath.modified_leap import year_days
 
 
 class ModifiedLeapTests(unittest.TestCase):

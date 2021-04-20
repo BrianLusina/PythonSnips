@@ -1,6 +1,6 @@
 import unittest
 
-from math_perfect_numbers import is_perfect
+from pymath.perfect_numbers import is_perfect
 
 
 class PerfectNumbersTest(unittest.TestCase):

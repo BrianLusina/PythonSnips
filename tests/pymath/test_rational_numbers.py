@@ -2,7 +2,7 @@ from __future__ import division
 
 import unittest
 
-from math_rational_numbers import Rational
+from pymath.rational_numbers import Rational
 
 
 # Tests adapted from `problem-specifications//canonical-data.json` @ v1.0.0

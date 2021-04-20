@@ -9,7 +9,7 @@ You can make the following assumptions about the inputs to the
 
 import unittest
 
-from math_sum_of_multiples import sum_of_multiples
+from pymath.sum_of_multiples import sum_of_multiples
 
 
 class SumOfMultiplesTest(unittest.TestCase):

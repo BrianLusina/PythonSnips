@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 
-from math_convert_improper_fraction import convert_to_mixed_numeral
+from pymath.convert_improper_fraction import convert_to_mixed_numeral
 
 
 class ConvertTests(unittest.TestCase):

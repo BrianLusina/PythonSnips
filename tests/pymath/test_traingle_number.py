@@ -1,6 +1,6 @@
 import unittest
 
-from math_triangles.triangle_number import is_triangle_number
+from pymath.triangles.triangle_number import is_triangle_number
 
 
 class TriangleNumberTests(unittest.TestCase):

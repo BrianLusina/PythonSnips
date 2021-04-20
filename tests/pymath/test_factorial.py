@@ -1,6 +1,6 @@
 import unittest
 
-from math_factorial import factorial, factorial_digit_sum
+from pymath.factorial import factorial, factorial_digit_sum
 
 
 class FactorialTests(unittest.TestCase):

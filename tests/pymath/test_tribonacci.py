@@ -1,6 +1,6 @@
 import unittest
 
-from math_xbonacci.tribonacci import tribonacci
+from pymath.xbonacci.tribonacci import tribonacci
 
 
 class Tests(unittest.TestCase):

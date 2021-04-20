@@ -1,6 +1,6 @@
 import unittest
 
-from math_calc_with_functions import seven, five, divided_by, six, minus, plus, times, eight, nine, \
+from pymath.calc_with_functions import seven, five, divided_by, six, minus, plus, times, eight, nine, \
     four, three, two
 
 

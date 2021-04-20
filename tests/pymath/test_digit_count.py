@@ -1,6 +1,6 @@
 import unittest
 
-from math_digit_count import nb_dig
+from pymath.digit_count import nb_dig
 
 
 class DigTest(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_prime_factors import prime_factors
+from pymath.prime_factors import prime_factors
 
 
 class PrimeFactorsTest(unittest.TestCase):

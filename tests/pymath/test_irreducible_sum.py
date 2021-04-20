@@ -1,6 +1,6 @@
 import unittest
 
-from math_irreducible_sum import sum_fracts
+from pymath.irreducible_sum import sum_fracts
 
 
 class IrreducibleTestCases(unittest.TestCase):

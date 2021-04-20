@@ -1,6 +1,6 @@
 from unittest import TestCase, skip
 
-from math_calculate_tax import calculate_tax
+from pymath.calculate_tax import calculate_tax
 
 
 # todo: failing tests

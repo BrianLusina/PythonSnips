@@ -1,6 +1,6 @@
 import unittest
 
-from math_xbonacci.product_fib import productFib
+from pymath.xbonacci.product_fib import productFib
 
 
 class MyTestCase(unittest.TestCase):

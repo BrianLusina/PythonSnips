@@ -1,6 +1,6 @@
 import unittest
 
-from math_split_even_numbers import split_all_even_numbers
+from pymath.split_even_numbers import split_all_even_numbers
 
 
 @unittest.skip

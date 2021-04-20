@@ -1,6 +1,6 @@
 import unittest
 
-from math_expanded_form import expanded_form, expanded_form_2
+from pymath.expanded_form import expanded_form, expanded_form_2
 
 
 class ExpandedFormTests(unittest.TestCase):

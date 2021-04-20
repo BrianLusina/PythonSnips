@@ -1,6 +1,6 @@
 import unittest
 
-from math_power_of_sum import power_sum_dig_term
+from pymath.power_of_sum import power_sum_dig_term
 
 
 class PowerSumDigTermTests(unittest.TestCase):

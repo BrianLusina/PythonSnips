@@ -1,6 +1,6 @@
 import unittest
 
-from math_number_letter_counts import number_letter_counts
+from pymath.number_letter_counts import number_letter_counts
 
 
 class NumberLetterCountsTestCase(unittest.TestCase):

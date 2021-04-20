@@ -1,7 +1,7 @@
 import time
 import unittest
 
-from math_make_larger import MakeLarger
+from pymath.make_larger import MakeLarger
 
 
 class Tests(unittest.TestCase):

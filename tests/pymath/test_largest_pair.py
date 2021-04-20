@@ -1,6 +1,6 @@
 import unittest
 
-from math_largest_pair import max_product
+from pymath.largest_pair import max_product
 
 
 class LargestPairTests(unittest.TestCase):

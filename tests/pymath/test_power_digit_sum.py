@@ -1,6 +1,6 @@
 import unittest
 
-from math_power_digit_sum import power_digit_sum
+from pymath.power_digit_sum import power_digit_sum
 
 
 class PowerDigitSumTestCase(unittest.TestCase):

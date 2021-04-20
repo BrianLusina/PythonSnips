@@ -1,6 +1,6 @@
 import unittest
 
-from math_sum_between import sum_between
+from pymath.sum_between import sum_between
 
 
 class SumBetweenTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_narcisstic import narcissistic
+from pymath.narcisstic import narcissistic
 
 
 class NarcissticTest(unittest.TestCase):

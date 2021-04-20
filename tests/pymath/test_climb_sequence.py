@@ -1,6 +1,6 @@
 import unittest
 
-from math_climb_sequence import climb
+from pymath.climb_sequence import climb
 
 
 class Tests(unittest.TestCase):

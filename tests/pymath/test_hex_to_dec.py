@@ -1,6 +1,6 @@
 import unittest
 
-from math_binary.hex_to_dec import HexToDex
+from pymath.binary.hex_to_dec import HexToDex
 
 
 class Tests(unittest.TestCase):

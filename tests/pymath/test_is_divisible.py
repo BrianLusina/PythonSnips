@@ -1,6 +1,6 @@
 import unittest
 
-from math_is_divisible import is_divisible
+from pymath.is_divisible import is_divisible
 
 
 class IsDivisibleTests(unittest.TestCase):

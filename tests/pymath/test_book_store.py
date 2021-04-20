@@ -1,6 +1,6 @@
 import unittest
 
-from math_book_store import calculate_total
+from pymath.book_store import calculate_total
 
 
 class BookStoreTests(unittest.TestCase):

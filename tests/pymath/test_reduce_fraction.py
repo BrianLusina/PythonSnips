@@ -1,6 +1,6 @@
 import unittest
 
-from math_reduce_fraction import reduce
+from pymath.reduce_fraction import reduce
 
 
 class ReduceFractionTestss(unittest.TestCase):

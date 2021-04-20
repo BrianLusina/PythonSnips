@@ -1,6 +1,6 @@
 import unittest
 
-from math_matrix import Matrix
+from pymath.matrix import Matrix
 
 
 class MatrixTest(unittest.TestCase):

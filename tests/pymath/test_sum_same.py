@@ -1,6 +1,6 @@
 import unittest
 
-from math_sum_same import sum_same
+from pymath.sum_same import sum_same
 
 
 class SumSameDigTests(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_vampire_numbers.vampire_numbers import vampire_test
+from pymath.vampire_numbers.vampire_numbers import vampire_test
 
 
 # todo: failing tests

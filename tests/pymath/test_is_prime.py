@@ -1,6 +1,6 @@
 import unittest
 
-from math_is_prime import is_prime, divisors, is_prime_with_re
+from pymath.is_prime import is_prime, divisors, is_prime_with_re
 
 
 class PrimeTests(unittest.TestCase):

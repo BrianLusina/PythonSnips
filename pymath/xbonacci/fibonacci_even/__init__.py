@@ -1,4 +1,4 @@
-from math_xbonacci.fibonacci import fib
+from pymath.xbonacci.fibonacci import fib
 
 
 def even_fibonacci(a, b, limit):

@@ -1,6 +1,6 @@
 import unittest
 
-from math_binary.divisible_by_5 import Divisible5
+from pymath.binary.divisible_by_5 import Divisible5
 
 
 class Tests(unittest.TestCase):

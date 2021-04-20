@@ -1,6 +1,6 @@
 from operator import itemgetter
 
-from math_perfect_numbers import divisor_generator
+from pymath.perfect_numbers import divisor_generator
 
 
 def is_deficient(n):

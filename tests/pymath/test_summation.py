@@ -1,6 +1,6 @@
 import unittest
 
-from math_summation import summation
+from pymath.summation import summation
 
 
 class SummationTests(unittest.TestCase):

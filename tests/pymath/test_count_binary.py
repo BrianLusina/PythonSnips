@@ -1,6 +1,6 @@
 import unittest
 
-from math_binary.count_binary import count_bits
+from pymath.binary.count_binary import count_bits
 
 
 class Tests(unittest.TestCase):

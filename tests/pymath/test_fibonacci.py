@@ -1,6 +1,6 @@
 import unittest
 
-from math_xbonacci.fibonacci import fib
+from pymath.xbonacci.fibonacci import fib
 
 
 class FibonacciTestCase(unittest.TestCase):

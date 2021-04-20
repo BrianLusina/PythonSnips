@@ -1,6 +1,6 @@
 import unittest
 
-from math_population_growth import nb_year
+from pymath.population_growth import nb_year
 
 
 class Tests(unittest.TestCase):
