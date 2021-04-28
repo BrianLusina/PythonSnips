@@ -1,17 +1,20 @@
+from typing import List, Tuple
+
 from .. import Graph, Node
 
 
 class DirectedGraph(Graph):
 
-    def __init__(self, connections):
-        super().__init__(connections)
+    def __init__(self, edge_list: List[Tuple[Node, Node]]):
+        super(DirectedGraph, self).__init__(edge_list)
 
     def add(self, node_one: Node, node_two: Node) -> None:
         """
         Adds connections/edges between Node 1 and Node 2.
         Since this is a Directed Graph. Connection will be from Node 1 to Node 2
         """
-        self._graph[node_one.data].add(node_two.data)
+        node_one.next = node_two
+        self.adjacency_list.append((node_one, node_two))
 
     def contains_cycle(self) -> bool:
         """
@@ -21,7 +24,7 @@ class DirectedGraph(Graph):
         visited = set()
         path = [object()]
         path_set = set(path)
-        stack = [iter(self._graph)]
+        stack = [iter(self.adjacency_list)]
 
         while stack:
             for node in stack[-1]:
@@ -35,7 +38,7 @@ class DirectedGraph(Graph):
 
                     path_set.add(node)
 
-                    stack.append(iter(self._graph.get(node, set())))
+                    stack.append(iter(self.adjacency_list.get(node, set())))
 
                     break
             else:

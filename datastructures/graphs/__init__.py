@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from pprint import PrettyPrinter
+from typing import List, Tuple
 
 
 class Node(object):
@@ -8,12 +9,13 @@ class Node(object):
     Graph Node representing a Node in a Graph
     """
 
-    def __init__(self, data, ):
+    def __init__(self, data):
         """
         Initializes a Node object
         :param data Value/data stored within this node
         """
         self.data = data
+        self.next = None
         self.neighbours = defaultdict(list)
 
     def __str__(self):
@@ -42,26 +44,19 @@ class Graph(ABC):
     Represents a Graph Data structure
     """
 
-    def __init__(self, connections):
+    def __init__(self, edge_list: List[Tuple[Node, Node]] = None):
         """
-        Initializes a Graph object
-        :param connections This is a list/tuple/dict of connections to be created for the Graph. This has been left to the 
-        child class to implement
+        Initializes a Graph object by passing in an adjacency list
+        :param edge_list list of edges with all the Nodes of the graph
         """
-        self.connections = connections
-        self._graph = defaultdict(set)
-        self.__create_connections()
-
-    def __create_connections(self):
-        for a, b in self.connections:
-            node_one = Node(data=a)
-            node_two = Node(data=b)
-            self.add(node_one, node_two)
+        if edge_list is None:
+            edge_list = []
+        self.adjacency_list = edge_list
 
     @property
     def graph(self):
         pretty_print = PrettyPrinter()
-        pretty_print.pprint(self._graph)
+        pretty_print.pprint(self.adjacency_list)
 
     @abstractmethod
     def add(self, node_one: Node, node_two: Node):
@@ -75,14 +70,14 @@ class Graph(ABC):
         Removes all references to a node
         :param node 
         """
-        for _, cxns in self._graph.items():
+        for _, cxns in self.adjacency_list.items():
             try:
                 cxns.remove(node)
             except KeyError:
                 pass
 
         try:
-            del self._graph[node]
+            del self.adjacency_list[node]
         except KeyError:
             pass
 
@@ -90,12 +85,12 @@ class Graph(ABC):
         """
         Return string representation of this Graph
         """
-        return f"Graph: {self._graph}"
+        return f"Graph: {self.adjacency_list}"
 
     def is_connected(self, node_one: Node, node_two: Node) -> bool:
-        return node_one in self._graph and node_two in self._graph[node_two]
+        return node_one in self.adjacency_list and node_two in self.adjacency_list[node_two]
 
-    def find_path(self, node_one: Node, node_two: Node, path: list = []) -> list:
+    def find_path(self, node_one: Node, node_two: Node, path=None) -> list:
         """
         Find any path between node_one and node_two. May not be the shortest path
         :param node_one
@@ -103,15 +98,17 @@ class Graph(ABC):
         :param path
         """
 
+        if path is None:
+            path = []
         path = [path] + [node_one]
 
         if node_one.data == node_two.data:
             return path
 
-        if node_one.data not in self._graph:
+        if node_one.data not in self.adjacency_list:
             return None
 
-        for node in self._graph[node_one]:
+        for node in self.adjacency_list[node_one]:
             if node.data not in path:
                 new_path = self.find_path(node, node_two, path)
 
@@ -132,12 +129,12 @@ class Graph(ABC):
         if node_one.data == node_two.data:
             return [path]
 
-        if node_one.data not in self._graph:
+        if node_one.data not in self.adjacency_list:
             return []
 
         paths = []
 
-        for node in self._graph[node_one.data]:
+        for node in self.adjacency_list[node_one.data]:
             if node not in path:
                 newpaths = self.find_all_paths(Node(node), node_two, path)
                 for newpath in newpaths:
@@ -154,12 +151,12 @@ class Graph(ABC):
         if node_one.data == node_two.data:
             return path
 
-        if node_one.data not in self._graph:
+        if node_one.data not in self.adjacency_list:
             return None
 
         shortest = None
 
-        for node in self._graph[node_one]:
+        for node in self.adjacency_list[node_one]:
             if node.data not in path:
                 newpath = self.find_shortest_path(node, node_two, path)
                 if newpath:
