@@ -1,20 +1,12 @@
-from typing import List, Tuple
+from typing import List
 
-from .. import Graph, Node
+from .. import Graph, Edge
 
 
 class DirectedGraph(Graph):
 
-    def __init__(self, edge_list: List[Tuple[Node, Node]]):
+    def __init__(self, edge_list: List[Edge]):
         super(DirectedGraph, self).__init__(edge_list)
-
-    def add(self, node_one: Node, node_two: Node) -> None:
-        """
-        Adds connections/edges between Node 1 and Node 2.
-        Since this is a Directed Graph. Connection will be from Node 1 to Node 2
-        """
-        node_one.next = node_two
-        self.adjacency_list.append((node_one, node_two))
 
     def contains_cycle(self) -> bool:
         """

@@ -1,7 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from collections import defaultdict
 from pprint import PrettyPrinter
-from typing import List, Tuple
+from typing import List, Union
+
+from datastructures.stacks import Stack
 
 
 class Node(object):
@@ -16,7 +18,7 @@ class Node(object):
         """
         self.data = data
         self.next = None
-        self.neighbours = defaultdict(list)
+        self.neighbours = []
 
     def __str__(self):
         return f"Data: {self.data}"
@@ -44,26 +46,96 @@ class Graph(ABC):
     Represents a Graph Data structure
     """
 
-    def __init__(self, edge_list: List[Tuple[Node, Node]] = None):
+    def __init__(self, edge_list: List[Edge] = None):
         """
-        Initializes a Graph object by passing in an adjacency list
+        Initializes a Graph object by passing in an edge list
         :param edge_list list of edges with all the Nodes of the graph
         """
         if edge_list is None:
             edge_list = []
-        self.adjacency_list = edge_list
+        self.edge_list = edge_list
+        self.adjacency_list = defaultdict(list)
+        self.__construct_adjacency_list()
+        self.nodes = []
+        self.node_count = len(self.nodes)
+
+    def __construct_adjacency_list(self):
+        """
+        Construct adjacency list
+        """
+        for edge in self.edge_list:
+            self.adjacency_list[edge.source].append(edge.destination)
+
+    def topological_sorted_order(self) -> List[Node]:
+        """
+        Returns the topological sorted order of the Graph
+        """
+        # These static variables are used to perform DFS recursion
+        # white nodes depict nodes that have not been visited yet
+        # gray nodes depict ongoing recursion
+        # black nodes depict recursion is complete
+        # An edge leading to a BLACK node is not a "cycle"
+        white = 1
+        gray = 2
+        black = 3
+
+        # Nothing to do here
+        if self.node_count == 0:
+            return []
+
+        is_possible = True
+        stack = Stack()
+
+        # By default all nodes are WHITE
+        visited_nodes = {node: white for node in range(self.node_count)}
+
+        def dfs(node: Node):
+            nonlocal is_possible
+
+            # Don't recurse further if we found a cycle already
+            if not is_possible:
+                return
+
+            # start recursion
+            visited_nodes[node] = gray
+
+            # Traverse on neighbouring nodes/vertices
+            if node in self.adjacency_list:
+                for neighbour in self.adjacency_list[node]:
+                    if visited_nodes[neighbour] == white:
+                        dfs(node)
+                    elif visited_nodes[node] == gray:
+                        # An Edge to a Gray vertex/node represents a cycle
+                        is_possible = False
+
+            # Recursion ends. We mark if as BLACK
+            visited_nodes[node] = black
+            stack.push(node)
+
+        for node in self.nodes:
+            # if the node is unprocessed, then call DFS on it
+            if visited_nodes[node] == white:
+                dfs(node)
+
+        return list(stack.stack) if is_possible else []
 
     @property
     def graph(self):
         pretty_print = PrettyPrinter()
         pretty_print.pprint(self.adjacency_list)
 
-    @abstractmethod
     def add(self, node_one: Node, node_two: Node):
         """
         Adds a connection between node_one and node_two
         """
-        raise NotImplementedError("Method has not been implemented")
+        node_one.neighbours.append(node_two)
+        node_two.neighbours.append(node_one)
+        edge = Edge(source=node_one, destination=node_two)
+        self.edge_list.append(edge)
+        self.adjacency_list[node_one].append(node_two)
+        self.adjacency_list[node_two].append(node_one)
+        self.nodes.append(node_one)
+        self.nodes.append(node_two)
 
     def remove(self, node: Node) -> None:
         """
@@ -81,16 +153,10 @@ class Graph(ABC):
         except KeyError:
             pass
 
-    def __str__(self):
-        """
-        Return string representation of this Graph
-        """
-        return f"Graph: {self.adjacency_list}"
-
     def is_connected(self, node_one: Node, node_two: Node) -> bool:
         return node_one in self.adjacency_list and node_two in self.adjacency_list[node_two]
 
-    def find_path(self, node_one: Node, node_two: Node, path=None) -> list:
+    def find_path(self, node_one: Node, node_two: Node, path=None) -> Union[List, None]:
         """
         Find any path between node_one and node_two. May not be the shortest path
         :param node_one
@@ -117,13 +183,15 @@ class Graph(ABC):
 
         return None
 
-    def find_all_paths(self, node_one: Node, node_two: Node, path: list = []) -> list:
+    def find_all_paths(self, node_one: Node, node_two: Node, path: List = None) -> list:
         """
         Finds all paths between node_one and node_two, where node_one is the start & node_two is the end
         :param node_one Graph Node 
         :param node_two Graph Node 
         :param path
         """
+        if path is None:
+            path = []
         path = path + [node_one]
 
         if node_one.data == node_two.data:
@@ -142,10 +210,13 @@ class Graph(ABC):
 
         return paths
 
-    def find_shortest_path(self, node_one: Node, node_two: Node, path: list = []) -> list:
+    def find_shortest_path(self, node_one: Node, node_two: Node, path: List = None) -> Union[List, None]:
         """
         Finds the shortest path between 2 nodes in the graph
         """
+        if path is None:
+            path = []
+
         path = path + [node_one]
 
         if node_one.data == node_two.data:
@@ -164,3 +235,9 @@ class Graph(ABC):
                         shortest = newpath
 
         return shortest
+
+    def __str__(self):
+        """
+        Return string representation of this Graph
+        """
+        return f"Graph: {self.adjacency_list}"
