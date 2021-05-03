@@ -1,4 +1,6 @@
 def is_perfect(number):
+    if number <= 1:
+        return False
     return sum(divisor_generator(number)) + 1 == number
 
 

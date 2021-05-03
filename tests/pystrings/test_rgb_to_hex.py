@@ -18,7 +18,7 @@ class RgbToHexTestCase(unittest.TestCase):
         self.assertEquals(rgb_to_hex(-20, 275, 125), "00FF7D", "testing out of range values")
 
     def test_random(self):
-        for i in range(5):
+        for _ in range(5):
             r = randint(0, 255) + (-1) ** randint(1, 2) * randint(0, 255)
             g = randint(0, 255) + (-1) ** randint(1, 2) * randint(0, 255)
             b = randint(0, 255) + (-1) ** randint(1, 2) * randint(0, 255)
