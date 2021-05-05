@@ -1,4 +1,7 @@
+from typing import Any
+
 from datastructures.linked_lists import LinkedList, Node
+from datastructures.linked_lists.exceptions import EmptyLinkedList
 
 
 class DoubleNode(Node):
@@ -10,22 +13,8 @@ class DoubleNode(Node):
         # noinspection PyCompatibility
         super().__init__(value, next_node)
         self.value = value
-        self.prev_node = prev_node
-        self.next_node = next_node
-
-    def get_next(self):
-        """
-        Gets the next node
-        :return: the next node
-        """
-        return self.next_node
-
-    def get_previous(self):
-        """
-        gets the previous node
-        :return: previous node 
-        """
-        return self.prev_node
+        self.prev = prev_node
+        self.next = next_node
 
 
 class DoublyLinkedList(LinkedList):
@@ -37,29 +26,65 @@ class DoublyLinkedList(LinkedList):
     def __init__(self):
         # noinspection PyCompatibility
         super().__init__()
+        self.tail = None
 
-    def push(self, data):
+    def __str__(self):
+        return "<->".join([str(item) for item in self])
+
+    def __repr__(self):
+        return "<->".join([str(item) for item in self])
+
+    def append(self, data):
         """
         Add a node to the end of Linked List
         :param data: Data to add
         :return:
         """
-        node = DoubleNode(data, prev_node=self.tail)
-        if self.tail:
-            self.tail.next_node = node
+        node = DoubleNode(data)
 
         # if the head does not exist, set the head to the node
         if not self.head:
             self.head = node
-        self.tail = node
+            return
+        else:
+            self.tail.next = node
+            node.prev = self.tail
+            self.tail = node
+            return
+
+    def prepend(self, data):
+        node = DoubleNode(data)
+        self.head.prev = node
+        node.next = self.head
+        self.head = node
+
+    def insert_after_node(self, prev_node: DoubleNode, data: Any):
+        if self.is_empty():
+            raise EmptyLinkedList("LinkedList has no Nodes")
+        if not prev_node:
+            raise ValueError("Prev Node can not be None")
+
+        node_to_insert = DoubleNode(data)
+
+        current = self.head
+
+        # traverse the linked list until we find the node to insert
+        while current.next:
+            if current == prev_node:
+                node_to_insert.next = prev_node.next
+                node_to_insert.prev = prev_node
+                prev_node.next = node_to_insert
+                # we have inserted the node, now we can exit
+                break
+            current = current.next
 
     def pop(self):
         """
         Removes the last item from the list and returns it
         :return: Node at the last position
         """
-        last_node = self.tail.value
-        self.tail = self.tail.prev_node
+        last_node = self.tail.data
+        self.tail = self.tail.prev
         return last_node
 
     def shift(self):
@@ -67,7 +92,7 @@ class DoublyLinkedList(LinkedList):
         Removes value at the front of the doubly linked list
         :return: deleted node
         """
-        value = self.head.value
+        value = self.head.data
         self.head = self.head.next_node
         return value
 
@@ -78,9 +103,7 @@ class DoublyLinkedList(LinkedList):
         """
         node = DoubleNode(value, next_node=self.head)
         if self.head:
-            self.head.prev_node = node
-        if not self.tail:
-            self.tail = node
+            self.head.prev = node
         self.head = node
 
     def get_nth_node(self, position: int) -> Node:
@@ -126,9 +149,9 @@ class DoublyLinkedList(LinkedList):
                 if current is None:
                     raise ValueError("Invalid position found, reached end of list")
 
-            current.value = current.next.value
+            current.data = current.next.data
             current.next = current.next.next
-            current.next.prev_node = current.prev_node
+            current.next.prev = current.prev
             return self.head
 
     def delete_node(self, node):
@@ -138,7 +161,7 @@ class DoublyLinkedList(LinkedList):
         """
         current_node = self.head
         while current_node is not None:
-            if current_node.value == node:
+            if current_node.data == node:
                 # if it is not the first element
                 if current_node.prev is not None:
                     current_node.prev.next = current_node.next
@@ -213,7 +236,7 @@ class DoublyLinkedList(LinkedList):
         # this node the head of the doubly linked list
         if node.value > data:
             new_head = DoubleNode(data, next_node=node)
-            node.prev_node = new_head
+            node.prev = new_head
             return new_head
 
         current = node
@@ -231,7 +254,7 @@ class DoublyLinkedList(LinkedList):
             # less than the previous node value
             if current.value <= data and next_node.data >= data:
                 new_node = DoubleNode(data, prev_node=current, next_node=next_node)
-                next_node.prev_node = new_node
+                next_node.prev = new_node
                 current.next_node = new_node
                 return node
 
@@ -264,9 +287,9 @@ class DoublyLinkedList(LinkedList):
         print("Show list data...")
         current_node = self.head
         while current_node is not None:
-            print(current_node.prev.value if hasattr(current_node.prev, "value") else None)
-            print(current_node.value)
-            print(current_node.next.value if hasattr(current_node.next, "value") else None)
+            print(current_node.prev.data if hasattr(current_node.prev, "value") else None)
+            print(current_node.data)
+            print(current_node.next.data if hasattr(current_node.next, "value") else None)
             current_node = current_node.next
         print("*" * 10)
 
@@ -304,7 +327,7 @@ class DoublyLinkedList(LinkedList):
             current = current.next
 
         current.next = node
-        node.prev_node = current
+        node.prev = current
         return self.head
 
     def remove_duplicates(self):
@@ -319,21 +342,15 @@ class DoublyLinkedList(LinkedList):
         next_ = current.next_node
 
         while next_:
-            if next_.value == current.value:
+            if next_.data == current.data:
                 current.next_node = current.next_node.next_node
-                current = current.next_node.prev_node
+                current = current.next_node.prev
                 next_ = current.next_node
             else:
                 current = next_
                 next_ = current.next_node
 
         return self.head
-
-    def stringify(self, node: DoubleNode):
-        """
-        :return: String presentation of DoubleLinkedList from the node
-        """
-        return "None" if node is None else f"{str(node.value)} <-> {self.stringify(node.next_node)}"
 
     def alternate_split(self) -> tuple:
         if not self.head or not self.head.next:
@@ -358,7 +375,7 @@ class DoublyLinkedList(LinkedList):
             if current.next_node and current.next_node.next_node:
                 # set the next node for the second linked list
                 temp.next_node = current.next_node.next_node
-                current.next_node.next_node.prev_node = temp
+                current.next_node.next_node.prev = temp
             else:
                 # we are at the end
                 temp.next_node = None
@@ -367,3 +384,12 @@ class DoublyLinkedList(LinkedList):
             current = current.next_node
 
         return first, second
+
+    def is_palindrome(self) -> bool:
+        pass
+
+    def pairwise_swap(self) -> Node:
+        pass
+
+    def swap_nodes(self, k: int) -> Node:
+        pass

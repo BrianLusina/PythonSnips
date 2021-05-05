@@ -16,6 +16,6 @@ def delete_node(node: Node) -> Node:
     if node is None or node.next is None:
         return node
 
-    node.value = node.next.value
+    node.value = node.next.data
     node.next = node.next.next
     return node

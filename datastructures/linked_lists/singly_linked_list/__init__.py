@@ -1,5 +1,8 @@
+from typing import Any
+
 from datastructures.stacks import Stack
 from .. import LinkedList, Node
+from ..exceptions import EmptyLinkedList
 
 
 class SingleNode(Node):
@@ -7,10 +10,10 @@ class SingleNode(Node):
     SingleNode implementation in a single linked list
     """
 
-    def __init__(self, value, next_):
+    def __init__(self, value, next_=None):
         # noinspection PyCompatibility
         super().__init__(next_)
-        self.value = value
+        self.data = value
         self.next = next_
 
 
@@ -23,7 +26,13 @@ class SinglyLinkedList(LinkedList):
         # noinspection PyCompatibility
         super().__init__()
 
-    def push(self, data):
+    def __str__(self):
+        return "->".join([str(item) for item in self])
+
+    def __repr__(self):
+        return "->".join([str(item) for item in self])
+
+    def append(self, data):
         """
         Add a node to the Linked List
         :param data:
@@ -31,10 +40,36 @@ class SinglyLinkedList(LinkedList):
         """
         node = SingleNode(data, None)
         if self.head is None:
-            self.head = self.tail = node
-        else:
-            self.tail.next = node
-        self.tail = node
+            self.head = node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = node
+
+    def prepend(self, data):
+        node = SingleNode(data)
+        node.next = self.head
+        self.head = node
+
+    def insert_after_node(self, prev_node: SingleNode, data: Any):
+        if self.is_empty():
+            raise EmptyLinkedList("LinkedList has no Nodes")
+        if not prev_node:
+            raise ValueError("Prev Node can not be None")
+
+        node_to_insert = SingleNode(data)
+
+        current = self.head
+
+        # traverse the linked list until we find the node to insert
+        while current.next:
+            if current == prev_node:
+                node_to_insert.next = prev_node.next
+                prev_node.next = node_to_insert
+                # we have inserted the node, now we can exit
+                break
+            current = current.next
 
     def get_nth_node(self, position: int) -> SingleNode:
         """
@@ -79,7 +114,7 @@ class SinglyLinkedList(LinkedList):
                 if current is None:
                     raise ValueError("Invalid position found, reached end of list")
 
-            current.value = current.next.value
+            current.data = current.next.data
             current.next = current.next.next
             return self.head
 
@@ -87,7 +122,7 @@ class SinglyLinkedList(LinkedList):
         current_node = self.head
         previous_node = None
         while current_node is not None:
-            if current_node.value == node:
+            if current_node.data == node:
                 # if this is the first node (head)
                 if previous_node is not None:
                     previous_node.next = current_node.next
@@ -221,7 +256,7 @@ class SinglyLinkedList(LinkedList):
         print("Displaying data...")
         current_node = self.head
         while current_node is not None:
-            print(current_node.value, ">>>")
+            print(current_node.data, ">>>")
             current_node = current_node.next
         print(None)
 
@@ -263,7 +298,7 @@ class SinglyLinkedList(LinkedList):
         next_ = self.head.next
 
         while current and next_:
-            if next_.value == current.value:
+            if next_.data == current.data:
                 current.next = next_.next
                 next_ = next_.next
             else:
@@ -363,7 +398,7 @@ class SinglyLinkedList(LinkedList):
 
         while current:
             data = stack.pop()
-            if current.value != data:
+            if current.data != data:
                 return False
             current = current.next
 
@@ -380,12 +415,12 @@ class SinglyLinkedList(LinkedList):
         while current and current.next:
 
             # if both nodes have the same value/data
-            if current.value == current.next.value:
+            if current.data == current.next.data:
                 # no need to swap, move on to the next pair
                 current = current.next.next
             else:
                 # swap data of node with the next node's data
-                current.value, current.next.value = current.next.value, current.value
+                current.data, current.next.data = current.next.data, current.data
 
                 # move on to the next pair
                 current = current.next.next
@@ -404,6 +439,6 @@ class SinglyLinkedList(LinkedList):
         while a:
             a, b = a.next, b.next
 
-        node.value, b.value = b.value, node.value
+        node.data, b.data = b.data, node.data
 
         return self.head

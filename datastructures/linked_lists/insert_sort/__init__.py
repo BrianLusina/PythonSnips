@@ -10,7 +10,7 @@ def sorted_insert(head: Node, new_node: Node):
     else:
         current = head
 
-        while current.next is not None and current.next.value < new_node.value:
+        while current.next is not None and current.next.data < new_node.value:
             current = current.next
 
         new_node.next = current.next

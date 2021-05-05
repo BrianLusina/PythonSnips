@@ -39,7 +39,7 @@ class LinkedList(object):
         if self._head is None:
             raise EmptyListException("Can not pop from empty List")
         self._len -= 1
-        result = self._head.value()
+        result = self._head.data()
         self._head = self._head.next()
         return result
 
@@ -55,7 +55,7 @@ class LinkedList(object):
     def __next__(self):
         if self._head is None:
             raise StopIteration()
-        value = self._head.value()
+        value = self._head.data()
         self._head = self._head.next()
         return value
 

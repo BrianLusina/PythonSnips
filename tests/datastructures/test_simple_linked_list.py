@@ -25,11 +25,11 @@ class LinkedListTest(unittest.TestCase):
 
     def test_singleton_list_has_head(self):
         sut = LinkedList([1])
-        self.assertEqual(sut.head().value(), 1)
+        self.assertEqual(sut.head().data(), 1)
 
     def test_non_empty_list_has_correct_head(self):
         sut = LinkedList([1, 2])
-        self.assertEqual(sut.head().value(), 2)
+        self.assertEqual(sut.head().data(), 2)
 
     def test_can_push_to_non_empty_list(self):
         sut = LinkedList([1, 2, 3])
@@ -40,13 +40,13 @@ class LinkedListTest(unittest.TestCase):
         sut = LinkedList()
         sut.push(5)
         self.assertEqual(len(sut), 1)
-        self.assertEqual(sut.head().value(), 5)
+        self.assertEqual(sut.head().data(), 5)
 
     def test_can_from_non_empty_list(self):
         sut = LinkedList([3, 4, 5])
         self.assertEqual(sut.pop(), 5)
         self.assertEqual(len(sut), 2)
-        self.assertEqual(sut.head().value(), 4)
+        self.assertEqual(sut.head().data(), 4)
 
     def test_pop_from_singleton_list_removes_head(self):
         sut = LinkedList([1])
@@ -69,7 +69,7 @@ class LinkedListTest(unittest.TestCase):
         self.assertEqual(len(sut), 0)
         sut.push(4)
         self.assertEqual(len(sut), 1)
-        self.assertEqual(sut.head().value(), 4)
+        self.assertEqual(sut.head().data(), 4)
 
     def test_singleton_list_head_has_no_next(self):
         sut = LinkedList([1])
@@ -79,7 +79,7 @@ class LinkedListTest(unittest.TestCase):
         sut = LinkedList(range(10))
         current = sut.head()
         for i in range(10):
-            self.assertEqual(current.value(), 9 - i)
+            self.assertEqual(current.data(), 9 - i)
             current = current.next()
         self.assertIsNone(current)
 

@@ -1,5 +1,6 @@
 # coding=utf-8
 from abc import ABCMeta, abstractmethod
+from typing import Union, Any
 
 
 class Node(object):
@@ -8,32 +9,15 @@ class Node(object):
     """
     __metaclass__ = ABCMeta
 
-    def __init__(self, value=None, next_=None):
-        self.value = value
+    def __init__(self, data=None, next_=None):
+        self.data = data
         self.next = next_
 
-    def get_next(self):
-        """
-        Get the next node
-        :return:
-        """
-        return self.next
-
-    @staticmethod
-    def has_next(node):
-        """
-        Checks if the node has a successor
-        :param node, the node to check in the linked list
-        :return: True or False
-        :rtype: bool
-        """
-        return node.next is None
-
     def __str__(self):
-        """
-        Stringify Node
-        """
-        return "%s -> %s" % (self.value, self.next)
+        return f"Node({self.data})"
+
+    def __repr__(self):
+        return f"Node({self.data})"
 
 
 class LinkedList(object):
@@ -42,18 +26,23 @@ class LinkedList(object):
     """
     __metaclass__ = ABCMeta
     head = None
-    tail = None
 
     def __init__(self):
         self.head = None
 
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node.data
+            node = node.next
+
     @abstractmethod
-    def push(self, data):
-        """
-        Add a node to the end of the linked list
-        :param data: the node to add to the list
-        """
-        pass
+    def __str__(self):
+        raise NotImplementedError("Not Yet implemented")
+
+    @abstractmethod
+    def __repr__(self):
+        raise NotImplementedError("Not Yet implemented")
 
     def __len__(self):
         """
@@ -62,13 +51,23 @@ class LinkedList(object):
         :return: Number of nodes
         :rtype: int
         """
-        temp = self.head
-        count = 0
+        return len(tuple(iter(self)))
 
-        while temp:
-            count += 1
-            temp = temp.next
-        return count
+    @abstractmethod
+    def append(self, data):
+        """
+        Add a node to the end of the linked list
+        :param data: the node to add to the list
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def prepend(self, data):
+        """
+        Add a node to the beginning of the linked list
+        :param data: the node to add to the list
+        """
+        raise NotImplementedError("Not yet implemented")
 
     def search(self, node):
         """
@@ -98,35 +97,35 @@ class LinkedList(object):
             count_ = 0
             temp = self.head
             while temp:
-                if temp.value == data:
+                if temp.data == data:
                     count_ += 1
                 temp = temp.next
             return count_
 
-    @staticmethod
-    def get_last():
+    def get_last(self):
         """
         Gets the last node in the Linked List. check each node and test if it has a successor
         if it does, continue checking
-        :return: The last Node elemen
+        :return: The last Node element
         :rtype: Node
         """
-        # last_node = None
-        # while not self.has_next(self.value.next):
-        #     last_node = self.value
-        # return last_node
-        pass
+        if not self.head or not self.head.next:
+            return self.head
 
-    def delete_first(self):
+        node = self.head
+        while node.next:
+            node = node.next
+
+        return node
+
+    def delete_head(self) -> Union[Node, None]:
         """
         Delete the first node in the linked list
-        :return:
         """
         if self.head:
-            deleted_element = self.head
-            temp = deleted_element.next
-            self.head = temp
-            return deleted_element
+            deleted_node = self.head
+            self.head = self.head.next
+            return deleted_node
         else:
             return None
 
@@ -168,7 +167,7 @@ class LinkedList(object):
     @abstractmethod
     def reverse(self):
         """
-        Reverses the linked list, such that the Head points to the last item in the 
+        Reverses the linked list, such that the Head points to the last item in the
         LinkedList and the tail points to its predecessor. The first node becomes the tail
         :return: New LinkedList which is reversed
         :rtype: LinkedList
@@ -187,18 +186,16 @@ class LinkedList(object):
         """
         raise NotImplementedError()
 
-    @staticmethod
-    def insert_after(node_to_insert, current_node):
+    @abstractmethod
+    def insert_after_node(self, prev_node: Node, data: Any):
         """
         Inserts a node after a node in the Linked List. First find the node in the LinkedList,
         Get its successor, store in temp variable and insert this node in the position,
         get this node's next as the successor of the current node
-        :param node_to_insert: The node to be inserted
-        :param current_node: the current node to look for to perform insertion
-        :return: Node object
-        :rtype: Node
+        :param prev_node: The node to find
+        :param data: the data for the node to insert
         """
-        pass
+        raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
     def unshift(self, node):
@@ -307,7 +304,7 @@ class LinkedList(object):
     def remove_cycle(self):
         """
         Removes cycle if there exists. This will use the same concept as has_cycle method to check if there is a loop and remove the cycle
-        if one is found. 
+        if one is found.
         1) Detect Loop using Floyd’s Cycle detection algo and get the pointer to a loop node.
         2) Count the number of nodes in loop. Let the count be k.
         3) Fix one pointer to the head and another to kth node from head.
@@ -357,12 +354,6 @@ class LinkedList(object):
 
         return False
 
-    def stringify(self, node: Node):
-        """
-        :return: String presentation of LinkedList from the node
-        """
-        return "None" if node is None else f"{str(node.data)} -> {self.stringify(node.next)}"
-
     @abstractmethod
     def alternate_split(self):
         """
@@ -374,7 +365,7 @@ class LinkedList(object):
     def is_palindrome(self) -> bool:
         """
         Checks if the linked list is a Palndrome. That is, can be read from both back & front
-        :return: boolean value. True if the LinkedList is a Palindrome
+        :return: boolean data. True if the LinkedList is a Palindrome
         """
         raise NotImplementedError("Method has not been implemented")
 
@@ -384,7 +375,7 @@ class LinkedList(object):
         Swaps nodes in a linked list in pairs.
         As there are different kinds of LinkedLists, it is up to the child class to implement this
 
-        The premise(idea) is to swap the data of each node with the data of the next node. This is while using 
+        The premise(idea) is to swap the data of each node with the data of the next node. This is while using
         an iterative approach
         Example:
         1 -> 2 -> 3 -> 4
@@ -397,7 +388,7 @@ class LinkedList(object):
     @abstractmethod
     def swap_nodes(self, k: int) -> Node:
         """
-        Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node
+        Return the head of the linked list after swapping the datas of the kth node from the beginning and the kth node
         from the end (the list is 1-indexed).
 
         Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5

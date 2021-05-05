@@ -9,14 +9,14 @@ class LinkedListTests(unittest.TestCase):
         self.list = DoublyLinkedList()
 
     def test_push_pop(self):
-        self.list.push(10)
-        self.list.push(20)
+        self.list.append(10)
+        self.list.append(20)
         self.assertEqual(20, self.list.pop())
         self.assertEqual(10, self.list.pop())
 
     def test_push_shift(self):
-        self.list.push(10)
-        self.list.push(20)
+        self.list.append(10)
+        self.list.append(20)
         self.assertEqual(10, self.list.shift())
         self.assertEqual(20, self.list.shift())
 
@@ -33,13 +33,13 @@ class LinkedListTests(unittest.TestCase):
         self.assertEqual(20, self.list.pop())
 
     def test_all(self):
-        self.list.push(10)
-        self.list.push(20)
+        self.list.append(10)
+        self.list.append(20)
         self.assertEqual(20, self.list.pop())
-        self.list.push(30)
+        self.list.append(30)
         self.assertEqual(10, self.list.shift())
         self.list.unshift(40)
-        self.list.push(50)
+        self.list.append(50)
         self.assertEqual(40, self.list.shift())
         self.assertEqual(50, self.list.pop())
         self.assertEqual(30, self.list.shift())
