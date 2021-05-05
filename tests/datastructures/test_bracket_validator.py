@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.stacks.bracket_validator import check_brackets_3, check_brackets_1, check_brackets_2
+from algorithms.bracket_validator import check_brackets_3, check_brackets_1, check_brackets_2
 
 
 class BracketsTestCase(unittest.TestCase):
