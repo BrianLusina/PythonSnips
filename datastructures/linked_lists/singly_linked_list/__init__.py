@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Union
 
 from datastructures.stacks import Stack
 from .. import LinkedList, Node
@@ -11,8 +11,7 @@ class SingleNode(Node):
     """
 
     def __init__(self, value, next_=None):
-        # noinspection PyCompatibility
-        super().__init__(next_)
+        super().__init__(value, next_)
         self.data = value
         self.next = next_
 
@@ -32,14 +31,21 @@ class SinglyLinkedList(LinkedList):
     def __repr__(self):
         return "->".join([str(item) for item in self])
 
-    def append(self, data):
+    def append(self, data: Any):
         """
         Add a node to the Linked List
+
+        We have to traverse the linked list to get to the tail and assign the tail node's next node from None to
+        the linked list we intend to append.
+
+        Complexities:
+        Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
+        Time Complexity = O(n) as we are traversing only 1 linked list
+
         :param data:
-        :return:
         """
         node = SingleNode(data, None)
-        if self.head is None:
+        if not self.head:
             self.head = node
             return
         last_node = self.head
@@ -71,7 +77,7 @@ class SinglyLinkedList(LinkedList):
                 break
             current = current.next
 
-    def get_nth_node(self, position: int) -> SingleNode:
+    def get_nth_node(self, position: int) -> Union[SingleNode, None]:
         """
         Gets nth node in a linked list given the head of the linked list
         :raises: ValueError for position less than 0 or position is greater than length of linked list
@@ -95,7 +101,7 @@ class SinglyLinkedList(LinkedList):
 
             return current
 
-    def delete_node_at_position(self, position: int) -> SingleNode:
+    def delete_node_at_position(self, position: int) -> Union[SingleNode, None]:
         """
         Deletes a node at the specified position
         """
@@ -143,25 +149,52 @@ class SinglyLinkedList(LinkedList):
         self.head = self.head.next
         return to_del
 
-    def pop(self):
-        pass
+    def pop(self) -> Union[SingleNode, None]:
+        if not self.head:
+            return None
 
-    def reverse(self) -> SingleNode:
+        if not self.head.next:
+            # for instances where there is no next Node. i.e. SinglyLinkedList has a length of 1
+            node = self.head
+            self.head = None
+            return node
+
+        # pointer to current node
+        current = self.head
+
+        # holds a pointer reference to the node before the current pointer
+        current_prev = self.head
+
+        while current.next:
+            # as we move the next pointer down the SinglyLinkedList, we also need to ensure that we are moving the
+            # previous pointer down the linked list
+            current_prev = current
+            current = current.next
+
+        # assign the current pointer's previous node's next to None
+        current_prev.next = None
+        return current
+
+    def reverse(self) -> Union[SingleNode, None]:
         """
+        Returns the head of the newly reversed LinkedList
+
         Uses an iterative approach to reverse this linked list.
         If the linked list has only 0 or 1 node, then just return the head.
         If that is not the case, then the iterative approach is best where there are 2 pointers.
         1. reversed_list: A pointer to already reversed linked list. initialized to head
-        2. list_to_reverse: pointer to the remaining list. intialized to head->next
+        2. list_to_reverse: pointer to the remaining list. initialized to head->next
 
         we then set the reversed_list->next to None, this then becomes the last node. reversed_list will
         always point to the head of the newly reversed linked list
 
-        At each iteration, the list_to_do pointer moves forward (until it reaches NULL). 
-        The current node becomes the head of the new reversed linked list and starts pointing to the previous head of the reversed linked list.
-        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at the termination of the loop.
+        At each iteration, the list_to_reverse pointer moves forward (until it reaches NULL).
+        The current node becomes the head of the new reversed linked list and starts pointing to the previous head of
+        the reversed linked list.
+        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at
+        the termination of the loop.
         """
-        if self.head == None or self.head.next == None:
+        if self.head is None or self.head.next is None:
             return self.head
 
         list_to_reverse = self.head.next
@@ -169,7 +202,7 @@ class SinglyLinkedList(LinkedList):
         reversed_list = self.head
         reversed_list.next = None
 
-        while list_to_reverse != None:
+        while list_to_reverse is not None:
             temp = list_to_reverse
 
             # move the pointer to the next node
@@ -179,6 +212,7 @@ class SinglyLinkedList(LinkedList):
             temp.next = reversed_list
             reversed_list = temp
 
+        self.head = reversed_list
         return reversed_list
 
     def reverse_between(self, left: int, right: int):
@@ -305,36 +339,6 @@ class SinglyLinkedList(LinkedList):
                 current = current.next
                 next_ = next_.next
 
-        return self.head
-
-    def append(self, node: SingleNode) -> SingleNode:
-        """
-        Appends another linked list to this linked list & returns the head of the newly formed linked list
-        if both linked lists are None, return None, if 1 of the linked lists is None, return the one that is
-        not None.
-
-        We have to traverse the linked list to get to the tail and assign the tail node's next node from None to 
-        the linked list we intend to append.
-
-        Complexities:
-        Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
-        Time Complexity = O(n) as we are traversing only 1 linked list
-
-        :param: node Head node of linked list to append
-        :type: SingleNode
-        :rtype: SingleNode
-        """
-        if node is None:
-            return self.head
-        if self.head is None:
-            return node
-
-        current = self.head
-
-        while current.next is not None:
-            current = current.next
-
-        current.next = node
         return self.head
 
     def alternate_split(self) -> tuple:

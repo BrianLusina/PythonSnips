@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Union
 
 from datastructures.linked_lists import LinkedList, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
@@ -9,10 +9,8 @@ class DoubleNode(Node):
     Node implementation of DoubleLinkedList
     """
 
-    def __init__(self, value, prev_node=None, next_node=None):
-        # noinspection PyCompatibility
-        super().__init__(value, next_node)
-        self.value = value
+    def __init__(self, data, prev_node=None, next_node=None):
+        super().__init__(data, next_node)
         self.prev = prev_node
         self.next = next_node
 
@@ -24,8 +22,8 @@ class DoublyLinkedList(LinkedList):
     """
 
     def __init__(self):
-        # noinspection PyCompatibility
         super().__init__()
+        self.head = None
         self.tail = None
 
     def __str__(self):
@@ -37,6 +35,13 @@ class DoublyLinkedList(LinkedList):
     def append(self, data):
         """
         Add a node to the end of Linked List
+
+        We have to traverse the linked list to get to the tail and assign the tail node's next node from None to
+        the linked list we intend to append.
+
+        Complexities:
+        Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
+        Time Complexity = O(n) as we are traversing only 1 linked list
         :param data: Data to add
         :return:
         """
@@ -45,10 +50,16 @@ class DoublyLinkedList(LinkedList):
         # if the head does not exist, set the head to the node
         if not self.head:
             self.head = node
+            self.tail = node
             return
         else:
-            self.tail.next = node
-            node.prev = self.tail
+            current = self.head
+
+            while current.next:
+                current = current.next
+
+            current.next = node
+            node.prev = current
             self.tail = node
             return
 
@@ -83,18 +94,42 @@ class DoublyLinkedList(LinkedList):
         Removes the last item from the list and returns it
         :return: Node at the last position
         """
-        last_node = self.tail.data
-        self.tail = self.tail.prev
-        return last_node
+        if not self.head:
+            return None
+
+        if not self.head.next:
+            # for instances where there is no next Node. i.e. DoublyLinkedList has a length of 1
+            node = self.head
+            self.head = None
+            return node
+
+        current = self.head
+
+        while current.next:
+            current = current.next
+
+        # if the current node has a pointer to the previous node
+        if current.prev:
+            # we assign the previous pointer to a 'temp' variable
+            last_node_prev = current.prev
+
+            # then assign the next node to None
+            last_node_prev.next = None
+
+            # and lastly set the new tail
+            self.tail = last_node_prev
+
+        # return the last node
+        return current
 
     def shift(self):
         """
         Removes value at the front of the doubly linked list
-        :return: deleted node
+        :return: deleted node's data
         """
-        value = self.head.data
-        self.head = self.head.next_node
-        return value
+        data = self.head.data
+        self.head = self.head.next
+        return data
 
     def unshift(self, value):
         """
@@ -106,7 +141,7 @@ class DoublyLinkedList(LinkedList):
             self.head.prev = node
         self.head = node
 
-    def get_nth_node(self, position: int) -> Node:
+    def get_nth_node(self, position: int) -> Union[Node, None]:
         """
         Gets nth node in a linked list given the head of the linked list
         :raises: ValueError for position less than 0 or position is greater than length of linked list
@@ -130,7 +165,7 @@ class DoublyLinkedList(LinkedList):
 
             return current
 
-    def delete_node_at_position(self, position: int) -> DoubleNode:
+    def delete_node_at_position(self, position: int) -> Union[DoubleNode, None]:
         """
         Deletes a node at the specified position
         """
@@ -174,7 +209,7 @@ class DoublyLinkedList(LinkedList):
 
                 current_node = current_node.next
 
-    def reverse(self) -> DoubleNode:
+    def reverse(self) -> Union[DoubleNode, None]:
         """
         Order of operations is important here. We set the current.next to next before
         setting previous to current.next
@@ -194,7 +229,7 @@ class DoublyLinkedList(LinkedList):
             return None
 
         # nothing to reverse here
-        if self.head.next_node is None:
+        if self.head.next is None:
             return self.head
 
         current = self.head
@@ -204,19 +239,23 @@ class DoublyLinkedList(LinkedList):
         # do this, until we are at the end of the linked list
         while current:
             # copy a pointer to the next element, before we overwrite the current
-            next_ = current.next_node
+            next_ = current.next
 
             # reverse the next pointer & previous pointer
-            current.next_node = previous
-            current.prev_node = next_
+            current.next = previous
+            current.prev = next_
 
             # step forward in the list
             previous = current
             current = next_
 
+        # actually reverses the current DoublyLinkedList
+        self.head = previous
+
+        # returns the head of the reversed DoublyLinkedList
         return previous
 
-    def insertSorted(self, node: DoubleNode, data: int):
+    def insert_sorted(self, node: DoubleNode, data: int):
         """
         Inserts a node with data value into a sorted DoublyLinked List. The assumption here is that 
         the double linked list node is already sorted
@@ -234,7 +273,7 @@ class DoublyLinkedList(LinkedList):
 
         # if at the node the data value is already less than the data we intend to insert we make 
         # this node the head of the doubly linked list
-        if node.value > data:
+        if node.data > data:
             new_head = DoubleNode(data, next_node=node)
             node.prev = new_head
             return new_head
@@ -298,37 +337,6 @@ class DoublyLinkedList(LinkedList):
 
     def display_forward(self):
         pass
-
-    def append(self, node: DoubleNode) -> DoubleNode:
-        """
-        Appends another linked list to this linked list & returns the head of the newly formed linked list
-        if both linked lists are None, return None, if 1 of the linked lists is None, return the one that is
-        not None.
-
-        We have to traverse the linked list to get to the tail and assign the tail node's next node from None to 
-        the linked list we intend to append.
-
-        Complexities:
-        Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
-        Time Complexity = O(n) as we are traversing only 1 linked list
-
-        :param: node Head node of linked list to append
-        :type: Node
-        :rtype: Node
-        """
-        if node is None:
-            return self.head
-        if self.head is None:
-            return node
-
-        current = self.head
-
-        while current.next is not None:
-            current = current.next
-
-        current.next = node
-        node.prev = current
-        return self.head
 
     def remove_duplicates(self):
         """

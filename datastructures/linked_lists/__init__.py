@@ -172,7 +172,7 @@ class LinkedList(object):
         :return: New LinkedList which is reversed
         :rtype: LinkedList
         """
-        pass
+        raise NotImplementedError("Not Yet Implemented")
 
     @abstractmethod
     def insert(self, node, pos):
@@ -219,12 +219,13 @@ class LinkedList(object):
             return None
 
     @abstractmethod
-    def pop(self):
+    def pop(self) -> Union[Node, None]:
         """
         Deletes the last node element from the LinkedList
         :return: Deleted node element
         :rtype: Node object
         """
+        raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
     def delete_node(self, node):
