@@ -118,18 +118,7 @@ class LinkedList(object):
 
         return node
 
-    def delete_head(self) -> Union[Node, None]:
-        """
-        Delete the first node in the linked list
-        """
-        if self.head:
-            deleted_node = self.head
-            self.head = self.head.next
-            return deleted_node
-        else:
-            return None
-
-    def get_position(self, position):
+    def get_position(self, position: int) -> Union[Node, None]:
         """
         Returns the current node in the linked list if the current position of the node is equal to the position. Assume
         counting starts from 1
@@ -227,16 +216,51 @@ class LinkedList(object):
         """
         raise NotImplementedError("Not yet implemented")
 
+    def delete_head(self) -> Union[Node, None]:
+        """
+        Delete the first node in the linked list
+        """
+        if self.head:
+            deleted_node = self.head
+            self.head = self.head.next
+            return deleted_node
+        else:
+            return None
+
     @abstractmethod
-    def delete_node(self, node):
+    def delete_node(self, node: Node):
         """
         Finds the node from the linked list and deletes it from the LinkedList
         Moves the node's next to this node's previous link
         Moves this node's previous link to this node's next link
         :param node: Node element to be deleted
-        :return: Deleted node
         """
-        pass
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def delete_node_at_position(self, position: int):
+        """
+        Deletes a node from the given provided position
+        :param position: Position of node to delete
+        """
+        if not 0 <= position <= len(self) - 1:
+            raise ValueError("Position out of bounds")
+
+        if self.head is None:
+            return None
+
+        # rest of the implementation is at the relevant subclasses
+
+    @abstractmethod
+    def delete_node_by_data(self, data: Any):
+        """
+        traverses the LinkedList until we find the data in a Node that matches and deletes that node. This uses the same
+        approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list, we use the
+        data attribute of a node. Note that if there are duplicate Nodes in the LinkedList with the same data attributes
+        only, the first Node is deleted.
+        :param data: Data of Node element to be deleted
+        """
+        raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
     def display(self):
@@ -387,7 +411,7 @@ class LinkedList(object):
         raise NotImplementedError("Method has not been implemented")
 
     @abstractmethod
-    def swap_nodes(self, k: int) -> Node:
+    def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> Node:
         """
         Return the head of the linked list after swapping the datas of the kth node from the beginning and the kth node
         from the end (the list is 1-indexed).

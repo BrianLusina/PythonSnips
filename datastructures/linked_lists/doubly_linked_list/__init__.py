@@ -169,13 +169,16 @@ class DoublyLinkedList(LinkedList):
         """
         Deletes a node at the specified position
         """
-        if position < 0:
-            raise ValueError("Position less than 0 not allowed")
-
-        if self.head is None:
-            return None
+        super().delete_node_at_position(position)
 
         current = self.head
+
+        # we are re-assigning the head node in the linked list if the position is 0. Then we return the deleted node at
+        # position 0
+        if position == 0:
+            self.head = current.next
+            current.next.prev = self.head
+            return current
 
         while current is not None:
             for _ in range(position):
@@ -189,14 +192,10 @@ class DoublyLinkedList(LinkedList):
             current.next.prev = current.prev
             return self.head
 
-    def delete_node(self, node):
-        """
-        :param node: The node to delete
-        :return: deleted node
-        """
+    def delete_node(self, node: DoubleNode):
         current_node = self.head
         while current_node is not None:
-            if current_node.data == node:
+            if current_node.data == node.data:
                 # if it is not the first element
                 if current_node.prev is not None:
                     current_node.prev.next = current_node.next
@@ -208,6 +207,36 @@ class DoublyLinkedList(LinkedList):
                     current_node.next.prev = None
 
                 current_node = current_node.next
+
+    def delete_node_by_data(self, data: Any):
+        current = self.head
+
+        # in the event we have a head node and the head node's data matches the data we intend to remove from the Linked
+        # List, then we simply re-assign the head node to the next node
+        if current and current.data == data:
+            self.head = current.next
+            current = None
+            return
+
+        # this will be used to keep track of the previous node of the node to delete
+        previous = None
+
+        # we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
+        while current and current.data != data:
+            previous = current
+            current = current.next
+
+        # if there is not node that matches the condition above, we exit
+        if not current:
+            return
+
+        # re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
+        # pointer to the current node's next pointer and then assign current to None. This essentially 'deletes'
+        # the node by the data attribute
+        previous.next = current.next
+        current.next.prev = previous
+        current = None
+        return
 
     def reverse(self) -> Union[DoubleNode, None]:
         """
@@ -399,5 +428,17 @@ class DoublyLinkedList(LinkedList):
     def pairwise_swap(self) -> Node:
         pass
 
-    def swap_nodes(self, k: int) -> Node:
-        pass
+    def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> DoubleNode:
+        a, b = self.head, self.head
+
+        for _ in range(1, k):
+            a = a.next
+
+        node, a = a, a.next
+
+        while a:
+            a, b = a.next, b.next
+
+        node.data, b.data = b.data, node.data
+
+        return self.head
