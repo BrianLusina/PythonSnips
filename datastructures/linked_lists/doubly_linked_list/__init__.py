@@ -249,7 +249,18 @@ class DoublyLinkedList(LinkedList):
         Complexity:
         O(n) time and O(1) space. We pass over the list only once, and maintain a
         constant number of variables in memory.
-        
+
+        Another implementation/variation to this approach:
+          prev = None
+          cur = self.head
+          while cur:
+            nxt = cur.next
+            cur.next = prev
+            cur.prev = nxt
+            prev = cur
+            cur = nxt
+          self.head = prev
+
         :return: a reversed LinkedList
         :rtype: DoublyLinkedList
         """

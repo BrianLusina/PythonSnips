@@ -224,6 +224,16 @@ class SinglyLinkedList(LinkedList):
         the reversed linked list.
         The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at
         the termination of the loop.
+
+        Another implementation/variation to this approach:
+          prev = None
+          cur = self.head
+          while cur:
+            nxt = cur.next
+            cur.next = prev
+            prev = cur
+            cur = nxt
+          self.head = prev
         """
         if self.head is None or self.head.next is None:
             return self.head
@@ -233,7 +243,7 @@ class SinglyLinkedList(LinkedList):
         reversed_list = self.head
         reversed_list.next = None
 
-        while list_to_reverse is not None:
+        while list_to_reverse:
             temp = list_to_reverse
 
             # move the pointer to the next node
