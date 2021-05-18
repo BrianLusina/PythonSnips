@@ -2,6 +2,8 @@
 from abc import ABCMeta, abstractmethod
 from typing import Union, Any
 
+from datastructures.linked_lists.exceptions import EmptyLinkedList
+
 
 class Node(object):
     """
@@ -289,8 +291,10 @@ class LinkedList(object):
     def has_cycle(self):
         """
         Detects if linked list has cycle, i.e. a node in the linked list points to a node already traversed.
-        Will use Floyd-Cycle Detection algorithm to check for cycles. Will have a fast and slow pointer and check if the fast pointer
-        catches up to the slow pointer. If this happens, there is a cycle. The fast pointer will move at twice the speed of slow pointer
+        Will use Floyd-Cycle Detection algorithm to check for cycles. Will have a fast and slow pointer and check if
+        the fast pointer
+        catches up to the slow pointer. If this happens, there is a cycle. The fast pointer will move at twice the speed
+        of slow pointer
         :return: True if there is a cycle, False otherwise
         :rtype: bool
         """
@@ -328,7 +332,8 @@ class LinkedList(object):
 
     def remove_cycle(self):
         """
-        Removes cycle if there exists. This will use the same concept as has_cycle method to check if there is a loop and remove the cycle
+        Removes cycle if there exists. This will use the same concept as has_cycle method to check if there is a loop
+        and remove the cycle
         if one is found.
         1) Detect Loop using Floyd’s Cycle detection algo and get the pointer to a loop node.
         2) Count the number of nodes in loop. Let the count be k.
@@ -349,7 +354,7 @@ class LinkedList(object):
 
                 # Count the number of nodes in loop
                 k = 1
-                while (pointer_1.next != pointer_2):
+                while pointer_1.next != pointer_2:
                     pointer_1 = pointer_1.next
                     k += 1
 
@@ -363,13 +368,13 @@ class LinkedList(object):
 
             # Move both pointers at the same place
             # they will meet at loop starting node
-            while (pointer_2 != pointer_1):
+            while pointer_2 != pointer_1:
                 pointer_1 = pointer_1.next
                 pointer_2 = pointer_2.next
 
             # Get pointer to the last node
             pointer_2 = pointer_2.next
-            while (pointer_2.next != pointer_1):
+            while pointer_2.next != pointer_1:
                 pointer_2 = pointer_2.next
 
             # Set the next node of the loop ending node
@@ -393,6 +398,43 @@ class LinkedList(object):
         :return: boolean data. True if the LinkedList is a Palindrome
         """
         raise NotImplementedError("Method has not been implemented")
+
+    def swap_nodes(self, data_one: Any, data_two: Any):
+        """
+        Swaps two nodes based on the data they contain. We search through the LinkedList looking for the data item in
+        each node. Once the first is found, we keep track of it and move on until we find the next data item. Once that
+        is found, we swap the two nodes' data items.
+
+        If we can't find the first data item nor the second. No need to perform swap. If the 2 data items are similar
+        no need to perform swap as well.
+
+        If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
+        """
+        if not self.head:
+            raise EmptyLinkedList("Empty LinkedList")
+
+        # if they are the same, we do not need to swap
+        if data_one == data_two:
+            return
+
+        # set the 2 pointers we will use to traverse the linked list
+        current_one = self.head
+        current_two = self.head
+
+        # move the pointer down the LinkedList while the data item is not the same as the data item we are searching for
+        while current_one and current_one.data != data_one:
+            current_one = current_one.next
+
+        # we look for the second data item
+        while current_two and current_two.data != data_two:
+            current_two = current_two.next
+
+        # the data items do not exist in the LinkedList or only one of them exists, therefore we can not perform a swap
+        if not current_one or not current_two:
+            return
+
+        # swap the data items of the nodes
+        current_one.data, current_two.data = current_two.data, current_one.data
 
     @abstractmethod
     def pairwise_swap(self) -> Node:

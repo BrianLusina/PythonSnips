@@ -425,8 +425,29 @@ class DoublyLinkedList(LinkedList):
     def is_palindrome(self) -> bool:
         pass
 
-    def pairwise_swap(self) -> Node:
-        pass
+    def pairwise_swap(self) -> DoubleNode:
+        # nothing to do here
+        if not self.head:
+            return self.head
+
+        current = self.head
+
+        # loop as long as there are at least 2 nodes left
+        while current and current.next:
+
+            # if both nodes have the same value/data
+            if current.data == current.next.data:
+                # no need to swap, move on to the next pair
+                current = current.next.next
+            else:
+                # swap data of node with the next node's data
+                current.data, current.next.data = current.next.data, current.data
+
+                # move on to the next pair
+                current = current.next.next
+
+        # at this point, the linked list has been swapped in pairs
+        return self.head
 
     def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> DoubleNode:
         a, b = self.head, self.head
