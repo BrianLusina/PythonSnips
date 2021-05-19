@@ -12,3 +12,22 @@ def tribonacci(sig, n):
         if len(res) == n:
             break
     return res
+
+
+def nth_tribonacci(n: int) -> int:
+    sig = [0, 1, 1]
+
+    if n in sig:
+        return n
+
+    first = sig[0]
+    second = sig[1]
+    third = sig[2]
+
+    for _ in range(3, n + 1):
+        fourth = first + second + third
+        first = second
+        second = third
+        third = fourth
+
+    return third
