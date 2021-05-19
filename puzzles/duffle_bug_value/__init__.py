@@ -1,4 +1,7 @@
-def max_duffel_bag_value(cake_tuples, capacity):
+from typing import Tuple, List
+
+
+def max_duffel_bag_value(cake_tuples: List[Tuple[int, int]], capacity: int):
     """
     Calculates the value of a duffel bag give a list of tuples of cakes which contain weight
     of each cakes and their value(monetary) and the capacity the bag can carry
@@ -24,7 +27,7 @@ def max_duffel_bag_value(cake_tuples, capacity):
                 return float('inf')
 
             # if the current cake weighs as much or less than the current weight capacity
-            # it's possible taking the cake would give get a better value
+            # it's possible taking the cake would get a better value
             if cake_weight <= current_capacity:
                 # so we check: should we use the cake or not?
                 # if we use the cake, the most kilograms we can include in addition to the

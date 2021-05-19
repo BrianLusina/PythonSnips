@@ -331,7 +331,7 @@ class DoublyLinkedList(LinkedList):
 
             # we create a new node and insert it into 2 nodes iff it is less than the next node value and 
             # less than the previous node value
-            if current.value <= data and next_node.data >= data:
+            if current.value <= data <= next_node.data:
                 new_node = DoubleNode(data, prev_node=current, next_node=next_node)
                 next_node.prev = new_node
                 current.next_node = new_node
