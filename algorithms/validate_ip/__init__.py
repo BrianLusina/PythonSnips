@@ -29,7 +29,7 @@ def validate_ip_address_regex(ip: str) -> str:
     chunk_ipv6 = r'([0-9a-fA-F]{1,4})'
     pattern_ipv6 = re.compile(r'^(' + chunk_ipv6 + r'\:){7}' + chunk_ipv6 + r'$')
 
-    if pattern_ipv4.match(ip):
+    if pattern_ipv4.match(ip): 
         return "IPv4"
     return "IPv6" if pattern_ipv6.match(ip) else "Neither"
 
