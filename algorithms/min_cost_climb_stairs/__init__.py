@@ -10,4 +10,3 @@ def min_cost_climbing_stairs(cost: List[int]) -> int:
         minimum_cost[x] = min(one_step, two_steps)
 
     return minimum_cost[-1]
-m
