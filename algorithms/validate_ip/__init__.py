@@ -32,3 +32,50 @@ def validate_ip_address_regex(ip: str) -> str:
     if pattern_ipv4.match(ip):
         return "IPv4"
     return "IPv6" if pattern_ipv6.match(ip) else "Neither"
+
+
+def validate_ipv4(ip: str) -> str:
+    nums = ip.split(".")
+
+    for x in nums:
+        # validate integer in range 0-255
+        # 1. length of chunk is between 1 and 3
+        if len(x) == 0 or len(x) > 3:
+            return "Neither"
+
+        # 2. no extra leading zeros
+        # 3. only digits are allowed
+        # 4. less than 255
+        if x[0] == '0' and len(x) != 1 or not x.isdigit() or int(x) > 255:
+            return "Neither"
+    return "IPv4"
+
+
+def validate_ipv6(ip: str) -> str:
+    nums = ip.split(":")
+
+    hexdigits = "0123456789abcdefABCDEF"
+
+    for x in nums:
+        # Validate hexadecimal in range (0, 2**16)
+        # 1. at least one and not more than 4 hexdigits in one chunk
+        # 2. only hexdigits are allowed: 0-9, a-f, A-F
+        if len(x) == 0 or len(x) > 4 or not all(c in hexdigits for c in x):
+            return "Neither"
+    return "IPv6"
+
+
+def validate_ip_address_div_conquer(ip: str) -> str:
+    """
+    Validates an IP address as either IPv4 or IPv6 or returns Neither if the IP is invalid. This splits up the string
+    using either . or : and validates the chunks. an IP is only valid if each chunk is valid.
+    Space Complexity is O(1)
+    Time Complexity is O(n) because to count the number of dots requires parsing the whole input string
+    """
+
+    if ip.count(".") == 3:
+        return validate_ipv4(ip)
+    elif ip.count(":") == 7:
+        return validate_ipv6(ip)
+    else:
+        return "Neither"

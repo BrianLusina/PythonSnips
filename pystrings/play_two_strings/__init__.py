@@ -13,6 +13,7 @@ def replacer(counter: Counter, word: str) -> str:
     return word
 
 
+# TODO: still failing tests
 def work_on_strings(a: str, b: str) -> str:
     count_a = Counter(a.lower())
     count_b = Counter(b.lower())
