@@ -63,15 +63,15 @@ processed, we will simply return the nodes as they are present in the stack from
 
 ## Complexity Analysis
 
-Time Complexity: O(V + E)O(V+E) where VV represents the number of vertices and EE represents the number of edges.
+Time Complexity: O(V+E) where V represents the number of vertices and E represents the number of edges.
 Essentially we iterate through each node and each vertex in the graph once and only once.
 
-Space Complexity: O(V + E)O(V+E).
+Space Complexity: O(V+E).
 
 We use the adjacency list to represent our graph initially. The space occupied is defined by the number of edges because
-for each node as the key, we have all its adjacent nodes in the form of a list as the value. Hence, O(E)O(E)
+for each node as the key, we have all its adjacent nodes in the form of a list as the value. Hence, O(E)
 
-Additionally, we apply recursion in our algorithm, which in worst case will incur O(E)O(E) extra space in the function
+Additionally, we apply recursion in our algorithm, which in worst case will incur O(E) extra space in the function
 call stack.
 
-To sum up, the overall space complexity is O(V + E)O(V+E).
+To sum up, the overall space complexity is O(V+E).

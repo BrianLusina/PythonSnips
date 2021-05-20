@@ -11,7 +11,6 @@ def find_order(num_courses: int, prerequisites: List[List[int]]) -> List[int]:
 
     for destination, source in prerequisites:
         adjacency_list[source].append(destination)
-
     topological_sorted_order = []
     is_possible = True
 
