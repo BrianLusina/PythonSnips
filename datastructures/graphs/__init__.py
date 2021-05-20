@@ -1,14 +1,14 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from collections import defaultdict
 from pprint import PrettyPrinter
-from typing import List, Union
+from typing import List, Union, Set
 
 from datastructures.stacks import Stack
 
 
 class Node(object):
     """
-    Graph Node representing a Node in a Graph
+    Graph Node representing a Node in a Graph or Vertex
     """
 
     def __init__(self, data):
@@ -59,12 +59,40 @@ class Graph(ABC):
         self.nodes = []
         self.node_count = len(self.nodes)
 
+    def add(self, node_one: Node, node_two: Node):
+        """
+        Adds a connection between node_one and node_two
+        """
+        node_one.neighbours.append(node_two)
+        node_two.neighbours.append(node_one)
+        edge = Edge(source=node_one, destination=node_two)
+        self.edge_list.append(edge)
+        self.adjacency_list[node_one].append(node_two)
+        self.adjacency_list[node_two].append(node_one)
+        self.nodes.append(node_one)
+        self.nodes.append(node_two)
+
     def __construct_adjacency_list(self):
         """
         Construct adjacency list
         """
         for edge in self.edge_list:
             self.adjacency_list[edge.source].append(edge.destination)
+
+    @abstractmethod
+    def bfs_from_root_to_target(self, root: Node, target: Node) -> Set[Node]:
+        """
+        Given the root node to traverse and a target node, returns the BFS result of this Graph from the root node to
+        the target node
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def bfs_from_node(self, source: Node) -> Set[Node]:
+        """
+        Given the source to traverse, returns the BFS result of this Graph from the source node
+        """
+        raise NotImplementedError("Not yet implemented")
 
     def topological_sorted_order(self) -> List[Node]:
         """
@@ -123,19 +151,6 @@ class Graph(ABC):
     def graph(self):
         pretty_print = PrettyPrinter()
         pretty_print.pprint(self.adjacency_list)
-
-    def add(self, node_one: Node, node_two: Node):
-        """
-        Adds a connection between node_one and node_two
-        """
-        node_one.neighbours.append(node_two)
-        node_two.neighbours.append(node_one)
-        edge = Edge(source=node_one, destination=node_two)
-        self.edge_list.append(edge)
-        self.adjacency_list[node_one].append(node_two)
-        self.adjacency_list[node_two].append(node_one)
-        self.nodes.append(node_one)
-        self.nodes.append(node_two)
 
     def remove(self, node: Node) -> None:
         """
