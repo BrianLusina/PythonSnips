@@ -1,6 +1,6 @@
 import unittest
 
-from pymath.sieve_of_erastothenese import sieve
+from pymath.primes.sieve_of_erastothenese import sieve
 
 
 class SieveTest(unittest.TestCase):

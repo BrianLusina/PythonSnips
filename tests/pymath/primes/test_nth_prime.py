@@ -1,6 +1,6 @@
 import unittest
 
-from pymath.nth_prime import nth_prime
+from pymath.primes.nth_prime import nth_prime
 
 
 class NthPrimeTests(unittest.TestCase):

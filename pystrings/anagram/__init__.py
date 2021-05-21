@@ -2,7 +2,7 @@
 from functools import reduce
 from string import ascii_letters
 
-from pymath.is_prime import is_prime_with_re
+from pymath.primes.is_prime import is_prime_with_re
 
 
 class Anagrams(object):

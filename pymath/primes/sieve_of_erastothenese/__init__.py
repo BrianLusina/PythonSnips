@@ -1,5 +1,4 @@
-from itertools import islice, count
-from math import sqrt
+from ..is_prime import is_prime
 
 
 def sieve(limit, start=2):
@@ -10,4 +9,4 @@ def sieve(limit, start=2):
     :return: List of all primes from start up to limit
     """
     to_sieve = range(start, limit + 1)
-    return list(filter(lambda x: x > 1 and all(x % i for i in islice(count(2), int(sqrt(x) - 1))), to_sieve))
+    return list(filter(is_prime, to_sieve))

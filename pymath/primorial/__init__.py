@@ -1,6 +1,6 @@
 from functools import reduce
 
-from ..nth_prime import primes_up_to
+from pymath.primes.nth_prime import primes_up_to
 
 
 def multiplier(x, y):

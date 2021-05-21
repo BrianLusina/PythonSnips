@@ -1,5 +1,5 @@
-from ..is_prime import is_prime
-from ..sieve_of_erastothenese import sieve
+from pymath.primes.is_prime import is_prime
+from pymath.primes.sieve_of_erastothenese import sieve
 
 
 def find_cyclic_primes(start, limit):

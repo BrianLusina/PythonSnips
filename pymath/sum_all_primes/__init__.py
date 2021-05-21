@@ -3,7 +3,7 @@ This finds the sum of all primes below a target limit
 """
 import cProfile
 
-from pymath.sieve_of_erastothenese import sieve
+from pymath.primes.sieve_of_erastothenese import sieve
 
 
 def find_sum_of_primes(limit):

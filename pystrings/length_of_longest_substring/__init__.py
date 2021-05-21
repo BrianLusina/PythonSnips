@@ -3,7 +3,7 @@ def length_of_longest_substring(s: str) -> int:
     The most obvious way to do this would be to go through all possible substrings of the string which would result in
     an algorithm with an overall O(n^2) complexity.
 
-    But we can solve this problem using a more subtle method that does it with one linear transversal( O(n)complexity ).
+    But we can solve this problem using a more subtle method that does it with one linear traversal( O(n)complexity ).
 
     First,we go through the string one by one until we reach a repeated character. For example if the string is
     “abcdcedf”, what happens when you reach the second appearance of "c"?
@@ -12,7 +12,7 @@ def length_of_longest_substring(s: str) -> int:
     repeated character of course) is a potential maximum, so we update the maximum if necessary. It also means that the
     repeated character must have appeared before at an index i, where i<j
 
-    Since all substrings that start before or at index ii would be less than the current maximum, we can safely start
+    Since all substrings that start before or at index i would be less than the current maximum, we can safely start
     to look for the next substring with head which starts exactly at index i+1.
     """
     # creating set to store last positions of occurrence
