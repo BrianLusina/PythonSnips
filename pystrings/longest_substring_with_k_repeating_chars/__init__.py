@@ -1,6 +1,3 @@
-from collections import Counter
-
-
 def longest_substring_util(s: str, start: int, end: int, k: int) -> int:
     if end < k:
         return 0
