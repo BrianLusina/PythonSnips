@@ -462,3 +462,72 @@ class LinkedList(object):
         Output: [7,9,6,6,8,7,3,0,9,5]
         """
         raise NotImplementedError("Method has not been implemented")
+
+    def get_kth_to_last_node(self, k: int) -> Union[Node, None]:
+        """
+        Gets the kth to the last node in a Linked list.
+
+        Assumptions:
+        - k can be an invalid integer, less than 0. A ValueError will be raised
+
+        Algorithm:
+        - set 2 pointers; fast_pointer & slow_pointer
+        - Move fast_pointer k steps ahead
+        - increment both pointers(fast_pointer & slow_pointer) until fast_pointer reaches end
+        - return the slow_pointer
+
+        Complexity Analysis:
+        - Time Complexity O(n) where n is the number of nodes in the linked list to traverse
+        - Space Complexity O(1). No extra space is needed
+
+        @param k: integer value which will enable us to get the kth node from the end of the LinkedList
+        @return: Kth node from the end
+        @rtype: Node
+        """
+        if k < 0:
+            raise ValueError("Invalid K value")
+        if k > len(self):
+            raise IndexError("K longer than linked list")
+        fast_pointer, slow_pointer = self.head, self.head
+
+        for _ in range(k):
+            fast_pointer = fast_pointer.next
+
+            if not fast_pointer:
+                return None
+
+        while fast_pointer.next:
+            fast_pointer = fast_pointer.next
+            slow_pointer = slow_pointer.next
+
+        return slow_pointer
+
+    @abstractmethod
+    def partition(self, data: Any) -> Union[Node, None]:
+        """
+        Partitions a LinkedList around a data point such that all nodes with values less than this data point come
+        before all nodes greater than or equal to that data point
+
+        Algorithm:
+        - Create left & right LinkedLists
+        - For each element/node in the linked list:
+            - if element data < data:
+                - append to the left list
+            - if element data is equal to the data:
+                - prepend to the right list
+            - if element data is greater than the data:
+                - append to the right list
+        - Check if the left list is empty. Return right list if left is empty
+        - Move the pointer of the left list up to the last node (O(n) operation)
+        - set the next pointer of the last node in the left list to the head of the right list
+        - return the head of the left list
+
+        Complexity Analysis:
+        - Space Complexity: O(n) - left & right lists to hold the partitions of the linked list with nodes n
+        - Time Complexity: O(n) - where n is the number of nodes in the linked list
+
+        @param data: Data point to compare nodes and create partitions
+        @return: Head of the partitioned linked list
+        @rtype: Node
+        """
+        raise NotImplementedError("Not yet implemented")

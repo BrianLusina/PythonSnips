@@ -487,3 +487,30 @@ class SinglyLinkedList(LinkedList):
         node.data, b.data = b.data, node.data
 
         return self.head
+
+    def partition(self, data: Any) -> Union[SingleNode, None]:
+        if not self.head:
+            return None
+        left = SinglyLinkedList()
+        right = SinglyLinkedList()
+        current = self.head
+
+        while current:
+            if current.data < data:
+                left.append(current.data)
+            elif current.data == data:
+                right.prepend(current.data)
+            else:
+                right.append(current.data)
+            current = current.next
+
+        current_left = left.head
+
+        if not current_left:
+            return right.head
+        else:
+            while current_left.next:
+                current_left = current_left.next
+
+            current_left.next = right.head
+            return left.head
