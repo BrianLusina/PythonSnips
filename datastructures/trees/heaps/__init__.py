@@ -17,6 +17,14 @@ class Heap(ABC):
         self.idx_of_element = {}
 
     @abstractmethod
+    def __getitem__(self, idx: int):
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def __setitem__(self, idx: int, data):
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
     def __bubble_up(self, idx: int):
         raise NotImplementedError("Not yet implemented")
 

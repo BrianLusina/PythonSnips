@@ -4,7 +4,7 @@ from typing import Any, List, Union
 from .. import HeapNode, Heap
 
 
-class MinHeap(Heap):
+class MaxHeap(Heap):
     def __init__(self, heap: List[HeapNode] = None):
         super().__init__()
         if heap is None:
@@ -15,10 +15,10 @@ class MinHeap(Heap):
     def __len__(self):
         return len(self.heap)
 
-    def __getitem__(self, idx: int):
+    def __getitem__(self, item):
         raise NotImplementedError("Not yet implemented")
 
-    def __setitem__(self, idx: int, value):
+    def __setitem__(self, key, value):
         raise NotImplementedError("Not yet implemented")
 
     def __find_smaller_child(self, index: int) -> int:
