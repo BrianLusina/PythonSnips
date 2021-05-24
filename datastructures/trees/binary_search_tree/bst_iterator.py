@@ -32,7 +32,7 @@ class BinarySearchTreeIterator:
         if topmost_node.right:
             self.__leftmost_inorder(topmost_node.right)
 
-        return topmost_node.value
+        return topmost_node.data
 
     def has_next(self) -> bool:
         return self.stack.is_empty()

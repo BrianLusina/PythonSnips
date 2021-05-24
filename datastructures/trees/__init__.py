@@ -10,7 +10,7 @@ class TreeNode(object):
         """
         Value here can be anything
         """
-        self.value = value
+        self.data = value
         self.left = None
         self.right = None
 

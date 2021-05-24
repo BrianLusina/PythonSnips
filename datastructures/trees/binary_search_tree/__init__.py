@@ -65,7 +65,7 @@ class BinarySearchTree(Tree):
         if topmost_node.right:
             self.__leftmost_inorder(topmost_node.right)
 
-        return topmost_node.value
+        return topmost_node.data
 
     def has_next(self) -> bool:
         """
@@ -118,14 +118,14 @@ class BinarySearchTree(Tree):
         while self.root:
             parent = self.root
 
-            if value < self.root.value:
+            if value < self.root.data:
                 self.root = self.root.left
             else:
                 self.root = self.root.right
 
         if not parent:
             parent = BinaryTreeNode(value)
-        elif value < parent.value:
+        elif value < parent.data:
             parent.left = BinaryTreeNode(value)
         else:
             parent.right = BinaryTreeNode(value)
@@ -311,7 +311,7 @@ class BinarySearchTree(Tree):
                 current = current.left
 
             current = stack.pop()
-            result.append(current.value)
+            result.append(current.data)
             current = current.right
 
         return result
@@ -560,16 +560,16 @@ class BinarySearchTree(Tree):
             return None
 
         # if any of the node values matches the data value for the root node, return the root node
-        if self.root.value == node_one.value or self.root.value == node_two.value:
+        if self.root.data == node_one.value or self.root.data == node_two.value:
             return self.root
 
         while self.root:
             # if both node_one and node_two are smaller than root, then LCA lies in the left
-            if self.root.value > node_one.value and self.root.value > node_two.value:
+            if self.root.data > node_one.value and self.root.data > node_two.value:
                 self.root = self.root.left
 
             # if both node_one and node_two are greater than root, then LCA lies in the right
-            elif self.root.value < node_one.value and self.root.value < node_two.value:
+            elif self.root.data < node_one.value and self.root.data < node_two.value:
                 self.root = self.root.right
             else:
                 break
@@ -592,13 +592,13 @@ class BinarySearchTree(Tree):
             node, path = stack.pop()
 
             if not (node.left or node.right):
-                res.append(path + str(node.value))
+                res.append(path + str(node.data))
 
             if node.left:
-                stack.push((node.left, path + str(node.value) + "->"))
+                stack.push((node.left, path + str(node.data) + "->"))
 
             if node.right:
-                stack.push((node.right, path + str(node.value) + "->"))
+                stack.push((node.right, path + str(node.data) + "->"))
 
         return [list(map(int, x.split("->"))) for x in res]
 
