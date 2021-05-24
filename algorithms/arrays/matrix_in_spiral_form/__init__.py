@@ -1,6 +1,94 @@
 from typing import List
 
 
+def generate_n_by_n_matrix_in_spiral_form(n: int) -> List[List[int]]:
+    """
+    Generates an n by n matrix in spiral form.
+
+    Approach: Traverse layer by layer in spiral form
+
+    If we try to build a pattern for a given nn, we observe that the pattern repeats after completing one circular
+    traversal around the matrix. Let's call this one circular traversal as layer. We start traversing from the outer
+    layer and move towards inner layers on every iteration.
+
+    Algorithm
+
+    Let's devise an algorithm for the spiral traversal:
+
+        We can observe that, for any given n, the total number of layers is given by: (n+1)/2.
+        This works for both even and odd n.
+
+        Example
+
+    For n = 3, layers=2
+
+    For n = 6, total layers = 3
+
+        Also, for each layer, we traverse in at most 4 directions
+
+    In every direction, either row or column remains constant and other parameter changes (increments/decrements).
+
+    Direction 1: From top left corner to top right corner.
+
+        The row remains constant as layer and column increments from layer to n−layer−1
+
+    Direction 2: From top right corner to the bottom right corner.
+
+        The column remains constant as n−layer−1 and row increments from layer + 1 to n−layer.
+
+    Direction 3: From bottom right corner to bottom left corner.
+
+        The row remains constant as n−layer−1 and column decrements from n−layer−2 to layer.
+
+    Direction 4: From bottom left corner to top left corner.
+
+        The column remains constant as layer and column decrements from n−layer−2 to layer+1.
+
+    This process repeats (n+1)/2 times until all layers are traversed.
+
+    Complexity Analysis
+
+    Time Complexity: O(n^2). Here, n is given input and we are iterating over n⋅n matrix in spiral form.
+    Space Complexity: O(1) We use constant extra space for storing count.
+
+    :param n: the number of rows and columns in the matrix
+    :type n int
+    :return: n by n matrix in spiral form
+    :rtype: list
+    """
+    if n == 1:
+        return [[1]]
+
+    # DO NOT use [[0] * n] * n as Python will re-use the list n times and updating a coordinate in the matrix x,y will
+    # update all the items in the list at the same coordinates of each list
+    matrix = [[0 for _ in range(n)] for _ in range(n)]
+
+    count = 1
+
+    for layer in range((n + 1) // 2):
+        # direction 1, from left to right
+        for pointer in range(layer, n - layer):
+            matrix[layer][pointer] = count
+            count += 1
+
+        # direction 2, from top to bottom
+        for pointer in range(layer + 1, n - layer):
+            matrix[pointer][n - layer - 1] = count
+            count += 1
+
+        # direction 3, from right to left
+        for pointer in range(layer + 1, n - layer):
+            matrix[n - layer - 1][n - pointer - 1] = count
+            count += 1
+
+        # direction 4, from bottom to top
+        for pointer in range(layer + 1, n - layer - 1):
+            matrix[n - pointer - 1][layer] = count
+            count += 1
+
+    return matrix
+
+
 def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
     """
     The problem can be solved by dividing the matrix into loops or squares or boundaries. It can be seen that the
