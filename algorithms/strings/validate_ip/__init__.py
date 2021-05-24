@@ -29,29 +29,34 @@ def validate_ip_address_regex(ip: str) -> str:
     chunk_ipv6 = r'([0-9a-fA-F]{1,4})'
     pattern_ipv6 = re.compile(r'^(' + chunk_ipv6 + r'\:){7}' + chunk_ipv6 + r'$')
 
-    if pattern_ipv4.match(ip): 
+    if pattern_ipv4.match(ip):
         return "IPv4"
     return "IPv6" if pattern_ipv6.match(ip) else "Neither"
 
 
-def validate_ipv4(ip: str) -> str:
-    nums = ip.split(".")
+def is_valid_ipv4(ip: str) -> bool:
+    if ip.count(".") < 3 or ip.count(".") >= 4:
+        return False
 
-    for x in nums:
-        # validate integer in range 0-255
-        # 1. length of chunk is between 1 and 3
-        if len(x) == 0 or len(x) > 3:
-            return "Neither"
+    octets = ip.split(".")
 
-        # 2. no extra leading zeros
-        # 3. only digits are allowed
-        # 4. less than 255
-        if x[0] == '0' and len(x) != 1 or not x.isdigit() or int(x) > 255:
-            return "Neither"
-    return "IPv4"
+    for octet in octets:
+        if not octet.isdigit():
+            return False
+
+        if len(octet) > 3 or int(octet) < 0 or int(octet) > 255:
+            return False
+
+        if int(octet) == 0 and len(octet) > 1:
+            return False
+
+        if len(octet) > 1 and int(octet) != 0 and octet[0] == '0':
+            return False
+
+    return True
 
 
-def validate_ipv6(ip: str) -> str:
+def is_valid_ipv6(ip: str) -> bool:
     nums = ip.split(":")
 
     hexdigits = "0123456789abcdefABCDEF"
@@ -61,11 +66,11 @@ def validate_ipv6(ip: str) -> str:
         # 1. at least one and not more than 4 hexdigits in one chunk
         # 2. only hexdigits are allowed: 0-9, a-f, A-F
         if len(x) == 0 or len(x) > 4 or not all(c in hexdigits for c in x):
-            return "Neither"
-    return "IPv6"
+            return False
+    return True
 
 
-def validate_ip_address_div_conquer(ip: str) -> str:
+def validate_ip_address_div_conquer(ip: str) -> bool:
     """
     Validates an IP address as either IPv4 or IPv6 or returns Neither if the IP is invalid. This splits up the string
     using either . or : and validates the chunks. an IP is only valid if each chunk is valid.
@@ -74,8 +79,8 @@ def validate_ip_address_div_conquer(ip: str) -> str:
     """
 
     if ip.count(".") == 3:
-        return validate_ipv4(ip)
+        return is_valid_ipv4(ip)
     elif ip.count(":") == 7:
-        return validate_ipv6(ip)
+        return is_valid_ipv6(ip)
     else:
-        return "Neither"
+        return False
