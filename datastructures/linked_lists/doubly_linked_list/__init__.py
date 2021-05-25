@@ -197,7 +197,7 @@ class DoublyLinkedList(LinkedList):
         while current_node is not None:
             if current_node.data == node.data:
                 # if it is not the first element
-                if current_node.prev is not None:
+                if current_node.prev:
                     current_node.prev.next = current_node.next
                     current_node.next.prev = current_node.prev
                 else:
@@ -474,3 +474,28 @@ class DoublyLinkedList(LinkedList):
         node.data, b.data = b.data, node.data
 
         return self.head
+
+    def move_to_front(self, node: DoubleNode):
+        if self.head:
+            prev = node.prev
+            prev.next = node.next
+            node.next.prev = prev
+            node.next = self.head
+            self.head.prev = node
+        else:
+            self.head = node
+            self.tail = node
+            self.head.next = self.tail
+            self.tail.prev = self.head
+
+    def remove_tail(self):
+        current = self.head
+
+        if not current:
+            return
+        else:
+            while current:
+                current = current.next
+
+            prev = current.prev
+            prev.next = None

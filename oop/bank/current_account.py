@@ -1,4 +1,4 @@
-from object_oriented.bank import BankAccount
+from ..bank import BankAccount
 
 
 class CurrentAccount(BankAccount):

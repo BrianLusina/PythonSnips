@@ -503,6 +503,15 @@ class LinkedList(object):
         return slow_pointer
 
     @abstractmethod
+    def move_to_front(self, node: Node):
+        """
+        Moves a node from it's current position to the head of the linked list
+        @param node:
+        @return:
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
     def partition(self, data: Any) -> Union[Node, None]:
         """
         Partitions a LinkedList around a data point such that all nodes with values less than this data point come
@@ -529,5 +538,12 @@ class LinkedList(object):
         @param data: Data point to compare nodes and create partitions
         @return: Head of the partitioned linked list
         @rtype: Node
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def remove_tail(self):
+        """
+        Remotes the tail of a linked list
         """
         raise NotImplementedError("Not yet implemented")

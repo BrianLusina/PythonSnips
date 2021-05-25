@@ -147,7 +147,6 @@ class SinglyLinkedList(LinkedList):
         # List, then we simply re-assign the head node to the next node
         if current and current.data == data:
             self.head = current.next
-            current = None
             return
 
         # this will be used to keep track of the previous node of the node to delete
@@ -158,15 +157,13 @@ class SinglyLinkedList(LinkedList):
             previous = current
             current = current.next
 
-        # if there is not node that matches the condition above, we exit
+        # if there is no node that matches the condition above, we exit
         if not current:
             return
 
         # re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
-        # pointer to the current node's next pointer and then assign current to None. This essentially 'deletes'
-        # the node by the data attribute
+        # pointer to the current node's next pointer. This essentially 'deletes' the node by the data attribute
         previous.next = current.next
-        current = None
         return
 
     def shift(self):
@@ -514,3 +511,24 @@ class SinglyLinkedList(LinkedList):
 
             current_left.next = right.head
             return left.head
+
+    def move_to_front(self, node: SingleNode):
+        current = self.head
+        prev = None
+        if current:
+            # move the pointer down the LinkedList until we reach the node that we want to move to the front
+            while current and current.data != node.data:
+                prev = current
+                current = current.next
+
+            # that node does not seem to exist in the LinkedList, we should exit
+            if not current:
+                return
+
+            # re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
+            # pointer to the current node's next pointer. This essentially 'deletes' the node by the data attribute
+            prev.next = current.next
+            return
+        else:
+            self.head = node
+            return
