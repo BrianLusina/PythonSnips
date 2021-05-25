@@ -1,5 +1,24 @@
 from typing import List
+
 from ..validate_ip import is_valid_ipv4
+
+
+def backtrack(s: str, current: List[str], start: int, ips: List[str]):
+    if len(current) == 4:
+        if start == len(s):
+            ips.append(".".join(current))
+        return
+    for i in range(start, min(start + 3, len(s))):
+        if s[start] == '0' and i > start:
+            continue
+        if 0 <= int(s[start:i + 1]) <= 255:
+            backtrack(s, current + [s[start:i + 1]], i + 1, ips)
+
+
+def gen_ips(s: str) -> List[str]:
+    ips = []
+    backtrack(s, [], 0, ips)
+    return ips
 
 
 def generate_ip(s: str) -> List[str]:

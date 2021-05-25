@@ -1,4 +1,33 @@
+from itertools import cycle
 from typing import List
+
+
+def make_a_spiral(size: int) -> List[List[int]]:
+    def collision_in_two_steps() -> bool:
+        step_inside_bounds = y + change_y * 2 in range(size) and x + change_x * 2 in range(size)
+        return step_inside_bounds and spiral[y + change_y * 2][x + change_x * 2] == 1
+
+    directions = cycle(((1, 0), (0, 1), (-1, 0), (0, -1)))
+
+    spiral = [[0] * size for _ in range(size)]
+    x, y = 0, 0
+    direction_changes = 0
+
+    while direction_changes < size:
+        change_x, change_y = next(directions)
+
+        while y + change_y in range(size) and x + change_x in range(size):
+            spiral[y][x] = 1
+
+            if collision_in_two_steps():
+                break
+
+            y += change_y
+            x += change_x
+
+        direction_changes += 1
+
+    return spiral
 
 
 def generate_n_by_n_matrix_in_spiral_form(n: int) -> List[List[int]]:
@@ -7,7 +36,7 @@ def generate_n_by_n_matrix_in_spiral_form(n: int) -> List[List[int]]:
 
     Approach: Traverse layer by layer in spiral form
 
-    If we try to build a pattern for a given nn, we observe that the pattern repeats after completing one circular
+    If we try to build a pattern for a given n, we observe that the pattern repeats after completing one circular
     traversal around the matrix. Let's call this one circular traversal as layer. We start traversing from the outer
     layer and move towards inner layers on every iteration.
 
@@ -67,23 +96,27 @@ def generate_n_by_n_matrix_in_spiral_form(n: int) -> List[List[int]]:
 
     for layer in range((n + 1) // 2):
         # direction 1, from left to right
-        for pointer in range(layer, n - layer):
-            matrix[layer][pointer] = count
+        for column_top in range(layer, n - layer):
+            # matrix[row][column]
+            matrix[layer][column_top] = count
             count += 1
 
         # direction 2, from top to bottom
-        for pointer in range(layer + 1, n - layer):
-            matrix[pointer][n - layer - 1] = count
+        for row_right in range(layer + 1, n - layer):
+            # matrix[row][column]
+            matrix[row_right][n - layer - 1] = count
             count += 1
 
         # direction 3, from right to left
-        for pointer in range(layer + 1, n - layer):
-            matrix[n - layer - 1][n - pointer - 1] = count
+        for column_bottom in range(layer + 1, n - layer):
+            # matrix[row][column]
+            matrix[n - layer - 1][n - column_bottom - 1] = count
             count += 1
 
         # direction 4, from bottom to top
-        for pointer in range(layer + 1, n - layer - 1):
-            matrix[n - pointer - 1][layer] = count
+        for row_left in range(layer + 1, n - layer - 1):
+            # matrix[row][column]
+            matrix[n - row_left - 1][layer] = count
             count += 1
 
     return matrix
