@@ -2,7 +2,7 @@ import unittest
 from collections import Sequence
 from types import GeneratorType
 
-from algorithms.grade_school import School
+from puzzles.grade_school import School
 
 
 class SchoolTest(unittest.TestCase):
