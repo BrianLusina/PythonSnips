@@ -203,7 +203,7 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
         start_row_index which will have been incremented from the first or initial for loop and up to, but not including
         the end_row_index which will be the last row in the matrix.
         To get an item, we get each item in the column using the row_num which is the result of ranging from 
-        start_row_index to end_row_index and getting each last item in each row as shown with end_col_index - 1, becase
+        start_row_index to end_row_index and getting each last item in each row as shown with end_col_index - 1, because
         of 0-based-indexing. these items are now added to the final list/array
         
         After this we decrement the end_col_index by 1 in order to move to the next column from the end allowing us to
@@ -213,7 +213,7 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
             item = matrix[row_num][end_col_index - 1]
             spiral_matrix_form.append(item)
 
-        # decrement the col index
+        # decrement the col index to move from outer layers to inner layers
         end_col_index -= 1
 
         """

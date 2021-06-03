@@ -11,9 +11,10 @@ class Node(object):
     """
     __metaclass__ = ABCMeta
 
-    def __init__(self, data=None, next_=None):
+    def __init__(self, data=None, next_=None, key=None):
         self.data = data
         self.next = next_
+        self.key = key
 
     def __str__(self):
         return f"Node({self.data})"

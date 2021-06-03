@@ -44,7 +44,8 @@ class SinglyLinkedList(LinkedList):
 
         :param data:
         """
-        node = SingleNode(data, None)
+        node = data if isinstance(data, SingleNode) else SingleNode(data, None)
+
         if not self.head:
             self.head = node
             return
@@ -54,7 +55,7 @@ class SinglyLinkedList(LinkedList):
         last_node.next = node
 
     def prepend(self, data):
-        node = SingleNode(data)
+        node = data if isinstance(data, SingleNode) else SingleNode(data)
         node.next = self.head
         self.head = node
 

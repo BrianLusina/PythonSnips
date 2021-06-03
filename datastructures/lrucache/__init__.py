@@ -22,7 +22,7 @@ class LRUCache(object):
             node = self.lookup[key]
             result = node.data
             self.linked_list.delete_node(node)
-            self.linked_list.prepend(node)
+            self.linked_list.prepend(node.data)
             return result
 
     def set(self, key, value):
@@ -51,5 +51,5 @@ class LRUCache(object):
             else:
                 self.size += 1
             new_node = DoubleNode(value)
-            self.linked_list.prepend(new_node)
+            self.linked_list.prepend(new_node.data)
             self.lookup[key] = new_node

@@ -9,10 +9,11 @@ class DoubleNode(Node):
     Node implementation of DoubleLinkedList
     """
 
-    def __init__(self, data, prev_node=None, next_node=None):
-        super().__init__(data, next_node)
+    def __init__(self, data, key=None, prev_node=None, next_node=None):
+        super().__init__(data, next_node, key)
         self.prev = prev_node
         self.next = next_node
+        self.frequency = 1
 
 
 class DoublyLinkedList(LinkedList):
@@ -45,7 +46,7 @@ class DoublyLinkedList(LinkedList):
         :param data: Data to add
         :return:
         """
-        node = DoubleNode(data)
+        node = data if isinstance(data, DoubleNode) else DoubleNode(data)
 
         # if the head does not exist, set the head to the node
         if not self.head:
@@ -64,10 +65,16 @@ class DoublyLinkedList(LinkedList):
             return
 
     def prepend(self, data):
-        node = DoubleNode(data)
-        self.head.prev = node
-        node.next = self.head
+        node = data if isinstance(data, DoubleNode) else DoubleNode(data)
+        if self.head:
+            self.head.prev = node
+            node.next = self.head
+            self.head = node
+            return
+        # no head node, means that this is a LinkedList which is empty. Thus, we set the head node to this node
         self.head = node
+        self.tail = node
+        return
 
     def insert_after_node(self, prev_node: DoubleNode, data: Any):
         if self.is_empty():
@@ -89,7 +96,7 @@ class DoublyLinkedList(LinkedList):
                 break
             current = current.next
 
-    def pop(self):
+    def pop(self) -> Union[DoubleNode, None]:
         """
         Removes the last item from the list and returns it
         :return: Node at the last position
@@ -101,6 +108,7 @@ class DoublyLinkedList(LinkedList):
             # for instances where there is no next Node. i.e. DoublyLinkedList has a length of 1
             node = self.head
             self.head = None
+            self.tail = None
             return node
 
         current = self.head
@@ -193,20 +201,25 @@ class DoublyLinkedList(LinkedList):
             return self.head
 
     def delete_node(self, node: DoubleNode):
-        current_node = self.head
-        while current_node is not None:
-            if current_node.data == node.data:
-                # if it is not the first element
-                if current_node.prev:
-                    current_node.prev.next = current_node.next
-                    current_node.next.prev = current_node.prev
-                else:
-                    # otherwise we have no prev (it's None), head is the next one, and prev
-                    #  becomes None
-                    self.head = current_node.next
-                    current_node.next.prev = None
+        # if it is the first node
+        if node.key == self.head.key:
+            # if there is a node after the head
+            if self.head.next:
+                next_node = self.head.next
+                next_node.prev = None
+                self.head = next_node
+                node.next = None
+                return
+            self.head = None
+            return
 
-                current_node = current_node.next
+        current_node = self.head
+        while current_node:
+            if current_node.key == node.key:
+                current_node.prev.next = current_node.next
+                current_node.next.prev = current_node.prev
+
+            current_node = current_node.next
 
     def delete_node_by_data(self, data: Any):
         current = self.head
@@ -499,3 +512,6 @@ class DoublyLinkedList(LinkedList):
 
             prev = current.prev
             prev.next = None
+
+    def partition(self, data: Any) -> Union[Node, None]:
+        pass
