@@ -266,6 +266,16 @@ class LinkedList(object):
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
+    def delete_nodes_by_data(self, data: Any):
+        """
+        traverses the LinkedList until we find the data in a Node that matches and deletes those nodes. This uses the
+        same approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list,
+        we use the data attribute of a node.
+        :param data: Data of Node element to be deleted
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
     def display(self):
         """
         Displays the whole of the LinkedList

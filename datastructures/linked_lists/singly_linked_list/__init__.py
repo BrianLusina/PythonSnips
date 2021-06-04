@@ -167,6 +167,20 @@ class SinglyLinkedList(LinkedList):
         previous.next = current.next
         return
 
+    def delete_nodes_by_data(self, data: Any):
+        dummy_head = SingleNode(-1)
+        dummy_head.next = self.head
+        current = dummy_head
+
+        while current.next:
+
+            if current.next.data == data:
+                current.next = current.next.next
+            else:
+                current = current.next
+
+        return dummy_head.next
+
     def shift(self):
         """
         Since this is a singly linked list, this will have to make the head's next to the position of head
