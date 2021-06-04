@@ -324,6 +324,7 @@
       * [Test Gen Matrix In Spiral Form](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_gen_matrix_in_spiral_form.py)
       * [Test Make Spiral](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_make_spiral.py)
       * [Test Matrix In Spiral Form](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_matrix_in_spiral_form.py)
+      * [Test Remove Element](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_remove_element.py)
     * Sorting
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
     * Strings
