@@ -416,6 +416,9 @@
     * [Test Sublist](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_sublist.py)
     * [Test Tuple Sorter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_tuple_sorter.py)
     * [Test Word Frequency](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_word_frequency.py)
+  * Design Patterns
+    * Pubsub
+      * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/pubsub/test_simple_events.py)
   * Generetors Iters
     * [Test Multiiter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generetors_iters/test_multiiter.py)
     * [Test Recur Iter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generetors_iters/test_recur_iter.py)
