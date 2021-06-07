@@ -86,7 +86,6 @@
   * Queues
     * Priority
       * [Models](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/queues/priority/models.py)
-    * [Queue](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/queues/queue.py)
   * Trees
     * Binary Search Tree
       * [Bst Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary_search_tree/bst_iterator.py)
@@ -140,6 +139,13 @@
     * [Classroom](https://github.com/BrianLusina/PythonSnips/blob/master/oop/classroom/Classroom.py)
   * Ghost Colors
     * [Ghost](https://github.com/BrianLusina/PythonSnips/blob/master/oop/ghost_colors/Ghost.py)
+  * Parking Lot
+    * [Bus](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/bus.py)
+    * [Car](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/car.py)
+    * [Enums](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/enums.py)
+    * [Motocycle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/motocycle.py)
+    * [Parking Spot](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/parking_spot.py)
+    * [Vehicle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/vehicle.py)
   * Shape
     * [Circle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/shape/circle.py)
     * [Square](https://github.com/BrianLusina/PythonSnips/blob/master/oop/shape/square.py)
@@ -324,6 +330,7 @@
       * [Test Gen Matrix In Spiral Form](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_gen_matrix_in_spiral_form.py)
       * [Test Make Spiral](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_make_spiral.py)
       * [Test Matrix In Spiral Form](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_matrix_in_spiral_form.py)
+      * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_next_permutation.py)
       * [Test Remove Element](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_remove_element.py)
     * Sorting
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
