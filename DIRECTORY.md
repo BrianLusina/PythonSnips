@@ -504,6 +504,7 @@
     * [Test Pernicious](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_pernicious.py)
     * [Test Population Growth](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_population_growth.py)
     * [Test Power Digit Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_digit_sum.py)
+    * [Test Power Of I](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_of_i.py)
     * [Test Power Of Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_of_sum.py)
     * [Test Product Fib](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_product_fib.py)
     * [Test Pythagorean Triplet](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_pythagorean_triplet.py)
