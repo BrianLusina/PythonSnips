@@ -519,6 +519,7 @@
     * [Test Sum Of Multiples](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_sum_of_multiples.py)
     * [Test Sum Same](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_sum_same.py)
     * [Test Summation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_summation.py)
+    * [Test Tank Truck](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_tank_truck.py)
     * [Test Traingle Number](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_traingle_number.py)
     * [Test Triangle](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_triangle.py)
     * [Test Triangle Odd](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_triangle_odd.py)
