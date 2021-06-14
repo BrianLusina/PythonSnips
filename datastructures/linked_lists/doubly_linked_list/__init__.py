@@ -76,22 +76,25 @@ class DoublyLinkedList(LinkedList):
         self.tail = node
         return
 
-    def insert_after_node(self, prev_node: DoubleNode, data: Any):
+    def insert_after_node(self, prev_node: Any, data: Any):
         if self.is_empty():
             raise EmptyLinkedList("LinkedList has no Nodes")
         if not prev_node:
             raise ValueError("Prev Node can not be None")
+        if not data:
+            raise ValueError("Data to insert can not be None")
 
+        prev_node = prev_node if isinstance(prev_node, DoubleNode) else DoubleNode(prev_node)
         node_to_insert = DoubleNode(data)
 
         current = self.head
 
         # traverse the linked list until we find the node to insert
-        while current.next:
-            if current == prev_node:
-                node_to_insert.next = prev_node.next
-                node_to_insert.prev = prev_node
-                prev_node.next = node_to_insert
+        while current:
+            if current.data == prev_node.data:
+                node_to_insert.next = current.next
+                node_to_insert.prev = current
+                current.next = node_to_insert
                 # we have inserted the node, now we can exit
                 break
             current = current.next

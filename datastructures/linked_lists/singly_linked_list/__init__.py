@@ -59,12 +59,15 @@ class SinglyLinkedList(LinkedList):
         node.next = self.head
         self.head = node
 
-    def insert_after_node(self, prev_node: SingleNode, data: Any):
+    def insert_after_node(self, prev_node: Any, data: Any):
         if self.is_empty():
             raise EmptyLinkedList("LinkedList has no Nodes")
         if not prev_node:
             raise ValueError("Prev Node can not be None")
+        if not data:
+            raise ValueError("Data to insert can not be None")
 
+        prev_node = prev_node if isinstance(prev_node, SingleNode) else SingleNode(prev_node)
         node_to_insert = SingleNode(data)
 
         current = self.head

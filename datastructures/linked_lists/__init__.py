@@ -179,12 +179,12 @@ class LinkedList(object):
         raise NotImplementedError()
 
     @abstractmethod
-    def insert_after_node(self, prev_node: Node, data: Any):
+    def insert_after_node(self, prev: Any, data: Any):
         """
         Inserts a node after a node in the Linked List. First find the node in the LinkedList,
         Get its successor, store in temp variable and insert this node in the position,
         get this node's next as the successor of the current node
-        :param prev_node: The node to find
+        :param prev: The node to find
         :param data: the data for the node to insert
         """
         raise NotImplementedError("Not yet implemented")

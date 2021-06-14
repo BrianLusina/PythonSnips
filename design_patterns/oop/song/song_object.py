@@ -1,4 +1,4 @@
-from object_oriented.song import Song
+from . import Song
 
 happy_bday = Song(["Happy birthday to you",
                    "I don't want to get sued",

@@ -1,6 +1,6 @@
 from math import pi
 
-from object_oriented.shape import Shape
+from . import Shape
 
 
 class Circle(Shape):
