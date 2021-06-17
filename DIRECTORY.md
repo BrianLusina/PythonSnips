@@ -428,6 +428,8 @@
     * Oop
       * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_bank.py)
       * [Test Throne Inheritance](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_throne_inheritance.py)
+    * Orderedstream
+      * [Test Ordered Stream](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/orderedstream/test_ordered_stream.py)
     * Pubsub
       * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/pubsub/test_simple_events.py)
   * Generetors Iters
