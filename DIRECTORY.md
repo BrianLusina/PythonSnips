@@ -98,6 +98,46 @@
 ## Debugging Tools
   * [Debug Sample](https://github.com/BrianLusina/PythonSnips/blob/master/debugging_tools/debug_sample.py)
 
+## Design Patterns
+  * Oop
+    * Alien Game
+      * [Central Corridor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/central_corridor.py)
+      * [Death](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/death.py)
+      * [Engine](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/engine.py)
+      * [Escape Pod](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/escape_pod.py)
+      * [Finished](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/finished.py)
+      * [Laser Weapon Armory](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/laser_weapon_armory.py)
+      * [Start Game](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/start_game.py)
+      * [Thebridge](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/thebridge.py)
+    * Bank
+      * [Current Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/bank/current_account.py)
+      * [Savings Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/bank/savings_account.py)
+    * Banker
+      * [Current Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/banker/current_account.py)
+      * [Savings Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/banker/savings_account.py)
+    * Classroom
+      * [Classroom](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/classroom/Classroom.py)
+    * Ghost Colors
+      * [Ghost](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/ghost_colors/Ghost.py)
+    * Parking Lot
+      * [Bus](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/parking_lot/bus.py)
+      * [Car](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/parking_lot/car.py)
+      * [Enums](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/parking_lot/enums.py)
+      * [Motocycle](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/parking_lot/motocycle.py)
+      * [Parking Spot](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/parking_lot/parking_spot.py)
+      * [Vehicle](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/parking_lot/vehicle.py)
+    * Shape
+      * [Circle](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/shape/circle.py)
+      * [Square](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/shape/square.py)
+    * Song
+      * [Song Object](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/song/song_object.py)
+      * [Song Oop Test](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/song/song_oop_test.py)
+    * Vehicles
+      * [Car](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/car.py)
+      * [Jeep](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/jeep.py)
+      * [Kawasaki](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/kawasaki.py)
+      * [Motor Cycle](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/motor_cycle.py)
+
 ## Exceptions
   * [Exception Handling](https://github.com/BrianLusina/PythonSnips/blob/master/exceptions/exception_handling.py)
 
@@ -118,45 +158,6 @@
 ## Multiprocessing Threads
   * Progress
     * [Progress Bar](https://github.com/BrianLusina/PythonSnips/blob/master/multiprocessing_threads/progress/progress_bar.py)
-
-## Oop
-  * Alien Game
-    * [Central Corridor](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/central_corridor.py)
-    * [Death](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/death.py)
-    * [Engine](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/engine.py)
-    * [Escape Pod](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/escape_pod.py)
-    * [Finished](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/finished.py)
-    * [Laser Weapon Armory](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/laser_weapon_armory.py)
-    * [Start Game](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/start_game.py)
-    * [Thebridge](https://github.com/BrianLusina/PythonSnips/blob/master/oop/alien_game/thebridge.py)
-  * Bank
-    * [Current Account](https://github.com/BrianLusina/PythonSnips/blob/master/oop/bank/current_account.py)
-    * [Savings Account](https://github.com/BrianLusina/PythonSnips/blob/master/oop/bank/savings_account.py)
-  * Banker
-    * [Current Account](https://github.com/BrianLusina/PythonSnips/blob/master/oop/banker/current_account.py)
-    * [Savings Account](https://github.com/BrianLusina/PythonSnips/blob/master/oop/banker/savings_account.py)
-  * Classroom
-    * [Classroom](https://github.com/BrianLusina/PythonSnips/blob/master/oop/classroom/Classroom.py)
-  * Ghost Colors
-    * [Ghost](https://github.com/BrianLusina/PythonSnips/blob/master/oop/ghost_colors/Ghost.py)
-  * Parking Lot
-    * [Bus](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/bus.py)
-    * [Car](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/car.py)
-    * [Enums](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/enums.py)
-    * [Motocycle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/motocycle.py)
-    * [Parking Spot](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/parking_spot.py)
-    * [Vehicle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/parking_lot/vehicle.py)
-  * Shape
-    * [Circle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/shape/circle.py)
-    * [Square](https://github.com/BrianLusina/PythonSnips/blob/master/oop/shape/square.py)
-  * Song
-    * [Song Object](https://github.com/BrianLusina/PythonSnips/blob/master/oop/song/song_object.py)
-    * [Song Oop Test](https://github.com/BrianLusina/PythonSnips/blob/master/oop/song/song_oop_test.py)
-  * Vehicles
-    * [Car](https://github.com/BrianLusina/PythonSnips/blob/master/oop/vehicles/car.py)
-    * [Jeep](https://github.com/BrianLusina/PythonSnips/blob/master/oop/vehicles/jeep.py)
-    * [Kawasaki](https://github.com/BrianLusina/PythonSnips/blob/master/oop/vehicles/kawasaki.py)
-    * [Motor Cycle](https://github.com/BrianLusina/PythonSnips/blob/master/oop/vehicles/motor_cycle.py)
 
 ## Puzzles
   * Battleship
@@ -424,6 +425,9 @@
     * [Test Tuple Sorter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_tuple_sorter.py)
     * [Test Word Frequency](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_word_frequency.py)
   * Design Patterns
+    * Oop
+      * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_bank.py)
+      * [Test Throne Inheritance](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_throne_inheritance.py)
     * Pubsub
       * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/pubsub/test_simple_events.py)
   * Generetors Iters
@@ -433,8 +437,6 @@
     * [Test Create Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/higher_order_functions/test_create_iterator.py)
   * Machine Learning
     * [Test Wordy](https://github.com/BrianLusina/PythonSnips/blob/master/tests/machine_learning/test_wordy.py)
-  * Oop
-    * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/oop/test_bank.py)
   * Puzzles
     * [Test Alphametics](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_alphametics.py)
     * [Test Beer Song](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_beer_song.py)
