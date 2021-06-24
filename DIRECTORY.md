@@ -432,6 +432,8 @@
       * [Test Ordered Stream](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/orderedstream/test_ordered_stream.py)
     * Pubsub
       * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/pubsub/test_simple_events.py)
+    * Recent Calls
+      * [Test Recent Calls](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/recent_calls/test_recent_calls.py)
   * Generetors Iters
     * [Test Multiiter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generetors_iters/test_multiiter.py)
     * [Test Recur Iter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generetors_iters/test_recur_iter.py)
