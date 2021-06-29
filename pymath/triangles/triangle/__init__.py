@@ -48,6 +48,11 @@ class Triangle(object):
         where x,y, and z are the lengths of the sides of a triangle. In other words, the
         sum of the lengths of any two sides of a triangle always exceeds or is equal to
         the length of the third side.
+
+        # alternatively
+        triangle=lambda a,b,c:all([a+b>c,a+c>b,b+c>a])
+        triangle=lambda a,b,c:(a+b>c)&(a+c>b)&(b+c>a)
+        triangle=lambda *x:sum(x)-max(x)>max(x)
         :return: True/False in regards to any violation
         :rtype: bool
         """
