@@ -425,6 +425,8 @@
     * [Test Tuple Sorter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_tuple_sorter.py)
     * [Test Word Frequency](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_word_frequency.py)
   * Design Patterns
+    * Hashset
+      * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashset/test_my_hashset.py)
     * Oop
       * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_bank.py)
       * [Test Throne Inheritance](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_throne_inheritance.py)
