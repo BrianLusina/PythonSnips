@@ -1,6 +1,6 @@
 from .. import Tree
 from ..binary_tree_node import BinaryTreeNode
-from ...queues import FifoQueue
+from ...queues.fifo import FifoQueue
 from ...stacks import Stack
 
 
