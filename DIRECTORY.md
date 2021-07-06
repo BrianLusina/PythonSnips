@@ -395,6 +395,10 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
+    * Stack
+      * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
+      * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_min_stack.py)
+      * [Test Stacks](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_stacks.py)
     * [Test Build One 2 3](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_build_one_2_3.py)
     * [Test Circular Buffer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_circular_buffer.py)
     * [Test Consecutive](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_consecutive.py)
@@ -421,7 +425,6 @@
     * [Test Sort Odd](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_sort_odd.py)
     * [Test Sort Twisted37](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_sort_twisted37.py)
     * [Test Square Odds](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_square_odds.py)
-    * [Test Stacks](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_stacks.py)
     * [Test Sublist](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_sublist.py)
     * [Test Tuple Sorter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_tuple_sorter.py)
     * [Test Word Frequency](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_word_frequency.py)
