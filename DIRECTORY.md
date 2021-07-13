@@ -579,6 +579,7 @@
     * [Test Hexadecimal](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_hexadecimal.py)
     * [Test How Much Love](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_how_much_love.py)
     * [Test Is Isogram](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_is_isogram.py)
+    * [Test Is Isomorphic](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_is_isomorphic.py)
     * [Test Letter Digit Count](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_letter_digit_count.py)
     * [Test Lineup Students](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_lineup_students.py)
     * [Test Longest Substring K Repeating Chars](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_longest_substring_k_repeating_chars.py)
