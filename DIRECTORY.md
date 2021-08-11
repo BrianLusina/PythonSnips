@@ -395,6 +395,7 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
+      * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
     * Stack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_min_stack.py)
