@@ -20,9 +20,6 @@
 
 ## [Constants](https://github.com/BrianLusina/PythonSnips/blob/master//constants.py)
 
-## Context Mgr
-  * [Managed File](https://github.com/BrianLusina/PythonSnips/blob/master/context_mgr/managed_file.py)
-
 ## Cryptography
   * Atbash Cipher
     * [Atbash Cipher 2](https://github.com/BrianLusina/PythonSnips/blob/master/cryptography/atbash_cipher/atbash_cipher_2.py)
@@ -141,6 +138,26 @@
 ## Exceptions
   * [Exception Handling](https://github.com/BrianLusina/PythonSnips/blob/master/exceptions/exception_handling.py)
 
+## Generators And Iterators
+  * Generators
+    * Mod 7
+      * [Test Mod7](https://github.com/BrianLusina/PythonSnips/blob/master/generators_and_iterators/generators/mod_7/test_mod7.py)
+    * Primes
+      * [Primes](https://github.com/BrianLusina/PythonSnips/blob/master/generators_and_iterators/generators/primes/primes.py)
+  * Iterators
+    * Grouper
+      * [Better Grouper](https://github.com/BrianLusina/PythonSnips/blob/master/generators_and_iterators/iterators/grouper/better_grouper.py)
+      * [Even Better Grouper](https://github.com/BrianLusina/PythonSnips/blob/master/generators_and_iterators/iterators/grouper/even_better_grouper.py)
+      * [Naive Grouper](https://github.com/BrianLusina/PythonSnips/blob/master/generators_and_iterators/iterators/grouper/naive_grouper.py)
+
+## Graphics
+  * Turtle Graphics
+    * [Turtle](https://github.com/BrianLusina/PythonSnips/blob/master/graphics/turtle_graphics/Turtle.py)
+
+## Io
+  * Context Mgr
+    * [Managed File](https://github.com/BrianLusina/PythonSnips/blob/master/io/context_mgr/managed_file.py)
+
 ## Machine Learning
   * Predicting Stock Prices
     * [Predict Stock](https://github.com/BrianLusina/PythonSnips/blob/master/machine_learning/predicting_stock_prices/predict_stock.py)
@@ -190,22 +207,6 @@
     * [Trace](https://github.com/BrianLusina/PythonSnips/blob/master/pyfuncs/decorators/trace.py)
     * [Wraps](https://github.com/BrianLusina/PythonSnips/blob/master/pyfuncs/decorators/wraps.py)
 
-## Pygeneratorssanditers
-  * Generators
-    * Mod 7
-      * [Test Mod7](https://github.com/BrianLusina/PythonSnips/blob/master/pygeneratorssanditers/generators/mod_7/test_mod7.py)
-    * Primes
-      * [Primes](https://github.com/BrianLusina/PythonSnips/blob/master/pygeneratorssanditers/generators/primes/primes.py)
-  * Iterators
-    * Grouper
-      * [Better Grouper](https://github.com/BrianLusina/PythonSnips/blob/master/pygeneratorssanditers/iterators/grouper/better_grouper.py)
-      * [Even Better Grouper](https://github.com/BrianLusina/PythonSnips/blob/master/pygeneratorssanditers/iterators/grouper/even_better_grouper.py)
-      * [Naive Grouper](https://github.com/BrianLusina/PythonSnips/blob/master/pygeneratorssanditers/iterators/grouper/naive_grouper.py)
-
-## Pygraphics
-  * Turtle Graphics
-    * [Turtle](https://github.com/BrianLusina/PythonSnips/blob/master/pygraphics/turtle_graphics/Turtle.py)
-
 ## Pymath
   * Divisible By 7 Not 5
     * [Test Divisible By7 Not 5](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/divisible_by_7_not_5/test_divisible_by7_not_5.py)
@@ -247,68 +248,6 @@
     * [Test Pangram Checker](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/pangram/test_pangram_checker.py)
   * Reverse Words
     * [Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/reverse_words/reverse_words.py)
-
-## Pyutils
-  * Basic
-    * [List1](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/list1.py)
-    * [List2](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/list2.py)
-    * [Mimic](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/mimic.py)
-    * Solution
-      * [List1](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/solution/list1.py)
-      * [List2](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/solution/list2.py)
-      * [Mimic](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/solution/mimic.py)
-      * [String1](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/solution/string1.py)
-      * [String2](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/solution/string2.py)
-      * [Wordcount](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/solution/wordcount.py)
-    * [String1](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/string1.py)
-    * [String2](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/string2.py)
-    * [Wordcount](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/basic/wordcount.py)
-  * Domestic Trade
-    * [Domestictrade](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/domestic_trade/domestictrade.py)
-  * File Matcher
-    * [Match Maker](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/file_matcher/match_maker.py)
-  * File System
-    * [Os Module](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/file_system/os_module.py)
-  * [Json Files](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/json_files.py)
-  * Network
-    * [Urllib Module](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/network/urllib_module.py)
-  * [User File](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/user_file.py)
-  * Video Optimizer
-    * [Video](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/video_optimizer/video.py)
-  * [Word Reader](https://github.com/BrianLusina/PythonSnips/blob/master/pyutils/word_reader.py)
-
-## Pyweb
-  * Arc Server
-    * [Bookmark Server](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/arc_server/bookmark_server.py)
-    * [Sample Record](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/arc_server/sample_record.py)
-  * [Merge Tools](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/merge_tools.ipynb)
-  * Python Firebase
-    * Myfirebase
-      * [Connect Fire](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/python_firebase/MyFirebase/connect_fire.py)
-  * Rabbit Mq
-    * Hello Rabbit
-      * [Receive](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/hello_rabbit/receive.py)
-      * [Send](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/hello_rabbit/send.py)
-    * Publish Subscribe
-      * [Emit Log](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/publish_subscribe/emit_log.py)
-      * [Receive Logs](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/publish_subscribe/receive_logs.py)
-    * Remote Procedure Call
-      * [Rpc Client](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/remote_procedure_call/rpc_client.py)
-      * [Rpc Server](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/remote_procedure_call/rpc_server.py)
-    * Routing
-      * [Emit Log Direct](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/routing/emit_log_direct.py)
-      * [Receive Log Direct](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/routing/receive_log_direct.py)
-    * Topics
-      * [Emit Log Topic](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/topics/emit_log_topic.py)
-      * [Receive Log Topic](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/topics/receive_log_topic.py)
-    * Work Queues
-      * [New Tasks](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/work_queues/new_tasks.py)
-      * [Worker](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/rabbit_mq/work_queues/worker.py)
-  * Weather Forecast Mailer
-    * [Data Miner](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/weather_forecast_mailer/data_miner.py)
-    * [Main](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/weather_forecast_mailer/main.py)
-    * [Smtp](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/weather_forecast_mailer/smtp.py)
-    * [Weather](https://github.com/BrianLusina/PythonSnips/blob/master/pyweb/weather_forecast_mailer/weather.py)
 
 ## Reactivex
   * [Concurrency](https://github.com/BrianLusina/PythonSnips/blob/master/reactivex/concurrency.py)
@@ -443,9 +382,9 @@
       * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/pubsub/test_simple_events.py)
     * Recent Calls
       * [Test Recent Calls](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/recent_calls/test_recent_calls.py)
-  * Generetors Iters
-    * [Test Multiiter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generetors_iters/test_multiiter.py)
-    * [Test Recur Iter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generetors_iters/test_recur_iter.py)
+  * Generators And Iterators
+    * [Test Multiiter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generators_and_iterators/test_multiiter.py)
+    * [Test Recur Iter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generators_and_iterators/test_recur_iter.py)
   * Higher Order Functions
     * [Test Create Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/higher_order_functions/test_create_iterator.py)
   * Machine Learning
@@ -469,6 +408,7 @@
     * [Test Poker](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_poker.py)
     * [Test Queen Attack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_queen_attack.py)
     * [Test Rectangle](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_rectangle.py)
+    * [Test Replace Words](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_replace_words.py)
     * [Test Robot Name](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_robot_name.py)
     * [Test Scale Generator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_scale_generator.py)
     * [Test Scrabble](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_scrabble.py)
@@ -621,14 +561,76 @@
     * [Test Gigasecond](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_gigasecond.py)
     * [Test Time Correct](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_time_correct.py)
     * [Time Degrees](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/time_degrees.py)
-  * Pyutils
-    * [Test Grep](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyutils/test_grep.py)
-    * [Test Mocking Sample](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyutils/test_mocking_sample.py)
-  * Pyweb
-    * [Cookie Server](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyweb/cookie_server.py)
-    * [Test Bookmark Server](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyweb/test_bookmark_server.py)
-    * [Test Scrap Codewars Leaderboard](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyweb/test_scrap_codewars_leaderboard.py)
   * Simulations
     * [Test Robot Simulator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/simulations/test_robot_simulator.py)
   * [Test Check Exercises](https://github.com/BrianLusina/PythonSnips/blob/master/tests/test_check_exercises.py)
   * [Test Check Pysnips](https://github.com/BrianLusina/PythonSnips/blob/master/tests/test_check_pysnips.py)
+  * Utils
+    * [Test Grep](https://github.com/BrianLusina/PythonSnips/blob/master/tests/utils/test_grep.py)
+    * [Test Mocking Sample](https://github.com/BrianLusina/PythonSnips/blob/master/tests/utils/test_mocking_sample.py)
+  * Web
+    * [Cookie Server](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/cookie_server.py)
+    * [Test Bookmark Server](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/test_bookmark_server.py)
+    * [Test Scrap Codewars Leaderboard](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/test_scrap_codewars_leaderboard.py)
+
+## Utils
+  * Basic
+    * [List1](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/list1.py)
+    * [List2](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/list2.py)
+    * [Mimic](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/mimic.py)
+    * Solution
+      * [List1](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/solution/list1.py)
+      * [List2](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/solution/list2.py)
+      * [Mimic](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/solution/mimic.py)
+      * [String1](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/solution/string1.py)
+      * [String2](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/solution/string2.py)
+      * [Wordcount](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/solution/wordcount.py)
+    * [String1](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/string1.py)
+    * [String2](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/string2.py)
+    * [Wordcount](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/wordcount.py)
+  * Domestic Trade
+    * [Domestictrade](https://github.com/BrianLusina/PythonSnips/blob/master/utils/domestic_trade/domestictrade.py)
+  * File Matcher
+    * [Match Maker](https://github.com/BrianLusina/PythonSnips/blob/master/utils/file_matcher/match_maker.py)
+  * File System
+    * [Os Module](https://github.com/BrianLusina/PythonSnips/blob/master/utils/file_system/os_module.py)
+  * [Json Files](https://github.com/BrianLusina/PythonSnips/blob/master/utils/json_files.py)
+  * Network
+    * [Urllib Module](https://github.com/BrianLusina/PythonSnips/blob/master/utils/network/urllib_module.py)
+  * [User File](https://github.com/BrianLusina/PythonSnips/blob/master/utils/user_file.py)
+  * Video Optimizer
+    * [Video](https://github.com/BrianLusina/PythonSnips/blob/master/utils/video_optimizer/video.py)
+  * [Word Reader](https://github.com/BrianLusina/PythonSnips/blob/master/utils/word_reader.py)
+
+## Web
+  * Arc Server
+    * [Bookmark Server](https://github.com/BrianLusina/PythonSnips/blob/master/web/arc_server/bookmark_server.py)
+    * [Sample Record](https://github.com/BrianLusina/PythonSnips/blob/master/web/arc_server/sample_record.py)
+  * [Merge Tools](https://github.com/BrianLusina/PythonSnips/blob/master/web/merge_tools.ipynb)
+  * Python Firebase
+    * Myfirebase
+      * [Connect Fire](https://github.com/BrianLusina/PythonSnips/blob/master/web/python_firebase/MyFirebase/connect_fire.py)
+  * Rabbit Mq
+    * Hello Rabbit
+      * [Receive](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/hello_rabbit/receive.py)
+      * [Send](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/hello_rabbit/send.py)
+    * Publish Subscribe
+      * [Emit Log](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/publish_subscribe/emit_log.py)
+      * [Receive Logs](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/publish_subscribe/receive_logs.py)
+    * Remote Procedure Call
+      * [Rpc Client](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/remote_procedure_call/rpc_client.py)
+      * [Rpc Server](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/remote_procedure_call/rpc_server.py)
+    * Routing
+      * [Emit Log Direct](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/routing/emit_log_direct.py)
+      * [Receive Log Direct](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/routing/receive_log_direct.py)
+    * Topics
+      * [Emit Log Topic](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/topics/emit_log_topic.py)
+      * [Receive Log Topic](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/topics/receive_log_topic.py)
+    * Work Queues
+      * [New Tasks](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/work_queues/new_tasks.py)
+      * [Worker](https://github.com/BrianLusina/PythonSnips/blob/master/web/rabbit_mq/work_queues/worker.py)
+  * Weather Forecast Mailer
+    * [Data Miner](https://github.com/BrianLusina/PythonSnips/blob/master/web/weather_forecast_mailer/data_miner.py)
+    * [Main](https://github.com/BrianLusina/PythonSnips/blob/master/web/weather_forecast_mailer/main.py)
+    * [Smtp](https://github.com/BrianLusina/PythonSnips/blob/master/web/weather_forecast_mailer/smtp.py)
+    * [Weather](https://github.com/BrianLusina/PythonSnips/blob/master/web/weather_forecast_mailer/weather.py)
