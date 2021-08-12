@@ -11,7 +11,7 @@ import socket
 
 import requests
 
-from pyweb.arc_server.bookmark_server import check_uri
+from web.arc_server.bookmark_server import check_uri
 
 
 def test_CheckURI_bad():

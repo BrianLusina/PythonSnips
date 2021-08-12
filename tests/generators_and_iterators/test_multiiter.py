@@ -1,6 +1,6 @@
 import unittest
 
-from pygeneratorssanditers.iterators.multiiter import multiiter
+from generators_and_iterators.iterators.multiiter import multiiter
 
 
 # todo: fix generator

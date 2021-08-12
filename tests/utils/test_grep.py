@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from pyutils.grep import grep
+from utils.grep import grep
 
 ILIADFILENAME = 'iliad.txt'
 ILIADCONTENTS = '''Achilles sing, O Goddess! Peleus' son;

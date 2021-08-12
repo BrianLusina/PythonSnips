@@ -1,6 +1,6 @@
 import unittest
 
-from pygeneratorssanditers.iterators.recur_iter import replicate_iter, replicate_recur
+from generators_and_iterators.iterators.recur_iter import replicate_iter, replicate_recur
 
 
 class ReplicateIterTestCases(unittest.TestCase):

@@ -1,7 +1,7 @@
 import unittest
 from random import randint
 
-from pyfundamentals.count_inner_calls import count_calls
+from fundamentals.count_inner_calls import count_calls
 
 
 def add(a, b):

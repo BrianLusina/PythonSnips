@@ -1,6 +1,6 @@
 import unittest
 
-from pyweb.scrapping_codewars_leaderboard import solution
+from web.scrapping_codewars_leaderboard import solution
 
 
 @unittest.skip

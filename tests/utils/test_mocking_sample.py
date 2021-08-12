@@ -3,7 +3,7 @@ import tempfile
 import unittest
 
 from mock import patch, create_autospec
-from pyutils.mocking_sample import RemovalService, UploadService
+from utils.mocking_sample import RemovalService, UploadService
 
 
 class MockingSampleTestCases(unittest.TestCase):
@@ -19,15 +19,15 @@ class MockingSampleTestCases(unittest.TestCase):
         # test that the file was actually removed
         self.assertFalse(os.path.isfile(self.tmpfilepath), msg="Failed to remove file")
 
-    @patch("pyutils.mocking_sample.os")
+    @patch("utils.mocking_sample.os")
     def test_rm_with_mock(self, mock_os):
         """>>>> Testing removing of file with mock"""
         RemovalService.rm("any path")
         # test that rm called os.remove with the right params
         mock_os.remove.assert_called_with("any path")
 
-    @patch("pyutils.mocking_sample.os.path")
-    @patch("pyutils.mocking_sample.os")
+    @patch("utils.mocking_sample.os.path")
+    @patch("utils.mocking_sample.os")
     def test_rm_after_validation(self, mock_os, mock_path):
         """>>>> Test to check if rm is validating path before delete"""
         mock_path.isfile.return_value = False
@@ -44,8 +44,8 @@ class MockingSampleTestCases(unittest.TestCase):
 
         mock_os.remove.assert_called_with("any path")
 
-    @patch("pyutils.mocking_sample.os.path")
-    @patch("pyutils.mocking_sample.os")
+    @patch("utils.mocking_sample.os.path")
+    @patch("utils.mocking_sample.os")
     def test_rm_after_adding_service_class(self, mock_os, mock_path):
         """>>>> Testing rm function after making it a class method"""
         # instantiate our service

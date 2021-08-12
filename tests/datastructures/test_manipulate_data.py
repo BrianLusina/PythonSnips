@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.manipulate_data import manipulate_data
+from misc.manipulate_data import manipulate_data
 
 
 class ManipulateDataTestCases(unittest.TestCase):
