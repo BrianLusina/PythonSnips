@@ -368,6 +368,9 @@
     * [Test Sublist](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_sublist.py)
     * [Test Tuple Sorter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_tuple_sorter.py)
     * [Test Word Frequency](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_word_frequency.py)
+    * Trees
+      * Trie
+        * [Test Trie](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/trie/test_trie.py)
   * Design Patterns
     * Hashmap
       * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashmap/test_hashmap.py)
