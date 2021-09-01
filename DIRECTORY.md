@@ -517,6 +517,7 @@
     * [Test Diamond](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_diamond.py)
     * [Test Duplicate Encoder](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_duplicate_encoder.py)
     * [Test Father Son](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_father_son.py)
+    * [Test Format Names](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_format_names.py)
     * [Test Generate User Links](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_generate_user_links.py)
     * [Test Greek Comparator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_greek_comparator.py)
     * [Test Hexadecimal](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_hexadecimal.py)
