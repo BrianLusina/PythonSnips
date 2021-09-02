@@ -6,7 +6,7 @@ is disconnected, it's distance should be -1.
 For example, there are n=6 nodes in the graph with a starting node s = 1. The list of [[1,2], [2,3], [3,4], [1,5]], and
 each has a weight of 6.
 
-![shortest_reach](./shortest_reach_graph.png)
+![shortest_reach](shortest_reach_graph.png)
 
 Starting from node 1 and creating a list of distances, for nodes 2 through 6 we have distances = [6,12,18,6,-1].
 

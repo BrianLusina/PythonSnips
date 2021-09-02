@@ -6,9 +6,9 @@ from typing import List, Union, Set
 from datastructures.stacks import Stack
 
 
-class Node(object):
+class Vertex(object):
     """
-    Graph Node representing a Node in a Graph or Vertex
+    Graph Node/Vertex representing a Node/Vertex in a Graph
     """
 
     def __init__(self, data):
@@ -29,7 +29,7 @@ class Edge(object):
     Edge representation of an Edge in a Graph
     """
 
-    def __init__(self, source: Node = None, destination: Node = None, weight=None):
+    def __init__(self, source: Vertex = None, destination: Vertex = None, weight=None):
         """
         Initializes an Edge object
         :param source Source Node
@@ -54,12 +54,12 @@ class Graph(ABC):
         if edge_list is None:
             edge_list = []
         self.edge_list = edge_list
-        self.adjacency_list = defaultdict(list)
+        self.adjacency_list = defaultdict(List[Vertex])
         self.__construct_adjacency_list()
         self.nodes = []
         self.node_count = len(self.nodes)
 
-    def add(self, node_one: Node, node_two: Node):
+    def add(self, node_one: Vertex, node_two: Vertex):
         """
         Adds a connection between node_one and node_two
         """
@@ -80,7 +80,7 @@ class Graph(ABC):
             self.adjacency_list[edge.source].append(edge.destination)
 
     @abstractmethod
-    def bfs_from_root_to_target(self, root: Node, target: Node) -> Set[Node]:
+    def bfs_from_root_to_target(self, root: Vertex, target: Vertex) -> Set[Vertex]:
         """
         Given the root node to traverse and a target node, returns the BFS result of this Graph from the root node to
         the target node
@@ -88,13 +88,13 @@ class Graph(ABC):
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
-    def bfs_from_node(self, source: Node) -> Set[Node]:
+    def bfs_from_node(self, source: Vertex) -> Set[Vertex]:
         """
         Given the source to traverse, returns the BFS result of this Graph from the source node
         """
         raise NotImplementedError("Not yet implemented")
 
-    def topological_sorted_order(self) -> List[Node]:
+    def topological_sorted_order(self) -> List[Vertex]:
         """
         Returns the topological sorted order of the Graph
         """
@@ -117,7 +117,7 @@ class Graph(ABC):
         # By default all nodes are WHITE
         visited_nodes = {node: white for node in range(self.node_count)}
 
-        def dfs(node: Node):
+        def dfs(node: Vertex):
             nonlocal is_possible
 
             # Don't recurse further if we found a cycle already
@@ -152,7 +152,7 @@ class Graph(ABC):
         pretty_print = PrettyPrinter()
         pretty_print.pprint(self.adjacency_list)
 
-    def remove(self, node: Node) -> None:
+    def remove(self, node: Vertex) -> None:
         """
         Removes all references to a node
         :param node 
@@ -168,10 +168,10 @@ class Graph(ABC):
         except KeyError:
             pass
 
-    def is_connected(self, node_one: Node, node_two: Node) -> bool:
+    def is_connected(self, node_one: Vertex, node_two: Vertex) -> bool:
         return node_one in self.adjacency_list and node_two in self.adjacency_list[node_two]
 
-    def find_path(self, node_one: Node, node_two: Node, path=None) -> Union[List, None]:
+    def find_path(self, node_one: Vertex, node_two: Vertex, path=None) -> Union[List, None]:
         """
         Find any path between node_one and node_two. May not be the shortest path
         :param node_one
@@ -198,7 +198,7 @@ class Graph(ABC):
 
         return None
 
-    def find_all_paths(self, node_one: Node, node_two: Node, path: List = None) -> list:
+    def find_all_paths(self, node_one: Vertex, node_two: Vertex, path: List = None) -> list:
         """
         Finds all paths between node_one and node_two, where node_one is the start & node_two is the end
         :param node_one Graph Node 
@@ -219,13 +219,13 @@ class Graph(ABC):
 
         for node in self.adjacency_list[node_one.data]:
             if node not in path:
-                newpaths = self.find_all_paths(Node(node), node_two, path)
+                newpaths = self.find_all_paths(Vertex(node), node_two, path)
                 for newpath in newpaths:
                     paths.append(newpath)
 
         return paths
 
-    def find_shortest_path(self, node_one: Node, node_two: Node, path: List = None) -> Union[List, None]:
+    def find_shortest_path(self, node_one: Vertex, node_two: Vertex, path: List = None) -> Union[List, None]:
         """
         Finds the shortest path between 2 nodes in the graph
         """

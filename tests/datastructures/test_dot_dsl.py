@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.graphs.dot_dsl import Graph, Node, Edge, NODE, EDGE, ATTR
+from algorithms.bfs.graphs.dot_dsl import Graph, Node, Edge, NODE, EDGE, ATTR
 
 
 class DotDslTest(unittest.TestCase):

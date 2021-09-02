@@ -25,7 +25,7 @@ class TrieTestCases(unittest.TestCase):
         second_search_result = trie.search("")
 
         self.assertEqual([], second_search_result)
-    
+
     def test_trie_insert_and_search_words_prefixed_with_he(self):
         trie = Trie()
         trie.insert("here")
@@ -41,6 +41,7 @@ class TrieTestCases(unittest.TestCase):
 
         actual2 = trie.search("her")
         self.assertEqual(['her', 'here'], actual2)
+
 
 if __name__ == "__main__":
     unittest.main()

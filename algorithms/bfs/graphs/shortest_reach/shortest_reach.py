@@ -12,7 +12,7 @@ class Graph:
         self.edges[y].append(x)
 
     def find_all_distances(self, root):
-        distances = [-1 for i in range(self.n)]
+        distances = [-1 for _ in range(self.n)]
         unvisited = set([i for i in range(self.n)])
         q = queue.Queue()
 

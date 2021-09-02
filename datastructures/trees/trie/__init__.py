@@ -9,7 +9,7 @@ class TrieNode(object):
         self.is_end = False
 
 
-def Trie(object):
+class Trie(object):
     def __init__(self):
         self.root = TrieNode("")
 
@@ -27,15 +27,11 @@ def Trie(object):
 
         curr.is_end = True
 
-    def _dfs(self, node: TrieNode, prefix: str) -> None:
-        if node.is_end:
-            self.output.append((prefix + node.char))
-        
-        for child in node.children.values():
-            self._dfs(child, prefix + node.char)
-
     def search(self, word: str) -> List[str]:
         curr = self.root
+
+        if len(word) == 0:
+            return []
 
         for char in word:
             if char in curr.children:
@@ -43,9 +39,17 @@ def Trie(object):
             else:
                 return []
 
-        self.output = []
-        self._dfs(curr, word[:-1])
-        return self.output
+        output = []
+
+        def dfs(node: TrieNode, prefix: str) -> None:
+            if node.is_end:
+                output.append((prefix + node.char))
+
+            for child in node.children.values():
+                dfs(child, prefix + node.char)
+
+        dfs(curr, word[:-1])
+        return output
 
     def starts_with(self, prefix: str) -> bool:
         """

@@ -1,7 +1,7 @@
 from typing import List, Set
 
 from datastructures.queues.fifo import FifoQueue as Queue
-from .. import Graph, Edge, Node
+from .. import Graph, Edge, Vertex
 
 
 class DirectedGraph(Graph):
@@ -9,7 +9,7 @@ class DirectedGraph(Graph):
     def __init__(self, edge_list: List[Edge]):
         super(DirectedGraph, self).__init__(edge_list)
 
-    def bfs_from_root_to_target(self, root: Node, target: Node) -> Set[Node]:
+    def bfs_from_root_to_target(self, root: Vertex, target: Vertex) -> Set[Vertex]:
         # store all nodes awaiting processing
         queue = Queue()
         # marks visited nodes
@@ -32,7 +32,7 @@ class DirectedGraph(Graph):
 
         return visited
 
-    def bfs_from_node(self, source: Node) -> Set[Node]:
+    def bfs_from_node(self, source: Vertex) -> Set[Vertex]:
         """
         Using visited to mark the nodes/vertices that have been visited and a queue (fifo) to ensure that the graph is
         traversed one level at a time.
