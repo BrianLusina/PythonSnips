@@ -1,5 +1,11 @@
 
 ## Algorithms
+  * Bfs
+    * Graphs
+      * Shortest Reach
+        * [Shortest Reach](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/bfs/graphs/shortest_reach/shortest_reach.py)
+      * Smallest Set Of Vertices
+        * [Smallest Set Of Vertices](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/bfs/graphs/smallest_set_of_vertices/smallest_set_of_vertices.py)
   * Binary Search
     * Big Words
       * [Big Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/binary_search/big_words/big_words.py)
@@ -64,11 +70,6 @@
   * Dicts
     * [Default Dicts](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/default_dicts.py)
     * [Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/ordered_dict.py)
-  * Graphs
-    * Shortest Reach
-      * [Shortest Reach](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/shortest_reach/shortest_reach.py)
-    * Smallest Set Of Vertices
-      * [Smallest Set Of Vertices](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/smallest_set_of_vertices/smallest_set_of_vertices.py)
   * Linked Lists
     * Kth To Last Node
       * [Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/kth_to_last_node/linked_list.py)
@@ -272,6 +273,9 @@
       * [Test Matrix In Spiral Form](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_matrix_in_spiral_form.py)
       * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_next_permutation.py)
       * [Test Remove Element](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/arrays/test_remove_element.py)
+    * Bfs
+      * Graphs
+        * [Test Find If Path Exists](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/bfs/graphs/test_find_if_path_exists.py)
     * Sorting
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
     * Strings
