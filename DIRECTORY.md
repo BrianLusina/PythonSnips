@@ -426,6 +426,7 @@
     * [Test Count Inner Calls](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyfundamentals/test_count_inner_calls.py)
   * Pymath
     * Primes
+      * [Test Backdwards Primes](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/primes/test_backdwards_primes.py)
       * [Test Is Prime](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/primes/test_is_prime.py)
       * [Test Nth Prime](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/primes/test_nth_prime.py)
       * [Test Prime Factors](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/primes/test_prime_factors.py)
