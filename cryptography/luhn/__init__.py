@@ -1,5 +1,8 @@
+from typing import Union
+
+
 class Luhn(object):
-    def __init__(self, number):
+    def __init__(self, number: Union[int, str]):
         if isinstance(number, int):
             self.number = number
         else:
