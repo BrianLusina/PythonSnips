@@ -404,6 +404,7 @@
     * [Test Coin Change](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_change.py)
     * [Test Coin Flip](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_flip.py)
     * [Test Count Vegetables](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_count_vegetables.py)
+    * [Test Furthest Building](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_furthest_building.py)
     * [Test Grade School](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_grade_school.py)
     * [Test Grains](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_grains.py)
     * [Test Hamming](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_hamming.py)
