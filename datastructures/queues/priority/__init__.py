@@ -8,7 +8,7 @@ class QueueFullException(Full):
 
 class PriorityQueue(object):
     """
-    Queue implementation in Python
+    Priority Queue implementation in Python
     Methods:
         enqueue adds an item to the queue
         dequeue removes an item from the front of the queue
