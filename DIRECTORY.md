@@ -290,7 +290,6 @@
     * [Test Etl](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_etl.py)
     * [Test Get User Id](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_get_user_id.py)
     * [Test Grade School](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_grade_school.py)
-    * [Test Grains](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_grains.py)
     * [Test Hamming](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_hamming.py)
     * [Test High Scores](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_high_scores.py)
     * [Test Kindergarten Garden](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_kindergarten_garden.py)
