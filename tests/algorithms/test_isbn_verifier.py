@@ -1,6 +1,6 @@
 import unittest
 
-from cryptography.isbn_verifier import verify
+from algorithms.isbn_verifier import verify
 
 
 class IsbnVerifierTests(unittest.TestCase):

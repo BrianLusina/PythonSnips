@@ -22,6 +22,9 @@ class DoublyLinkedList(LinkedList):
     Doubly linked lists have nodes which have reference to its predecessor and its successor
     """
 
+    def delete_nodes_by_data(self, data: Any):
+        pass
+
     def __init__(self):
         super().__init__()
         self.head = None
