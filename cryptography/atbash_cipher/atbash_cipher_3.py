@@ -12,7 +12,7 @@ def decode(cyphertext):
 def _codec(text):
     a = string.ascii_lowercase
     t = str.maketrans(a, a[::-1])
-    return "".join(c.translate(t) if c.isalnum() else "" for c in text)
+    return "".join(c.translate(t) if c.isalnum() else c for c in text)
 
 
 def _group(text, n):
