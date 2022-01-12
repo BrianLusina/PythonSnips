@@ -33,8 +33,8 @@ def find_max_sub_array(array):
     max_so_far = -maxint - 1
     max_ending = 0
 
-    for x in range(len(array)):
-        max_ending = max_ending + array[x]
+    for num in array:
+        max_ending += num
 
         if max_so_far < max_ending:
             max_so_far = max_ending
@@ -43,8 +43,3 @@ def find_max_sub_array(array):
             max_ending = 0
 
     return max_so_far
-
-
-if __name__ == "__main__":
-    arr = [-13, -3, -25, -20, -3, -16, -23, -12, -5, -22, -15, -4, -7]
-    print(f"Maximum sub-array of {arr} is {find_max_sub_array(arr)}")
