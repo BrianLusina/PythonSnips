@@ -14,8 +14,6 @@
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
-  * Max Subarray
-    * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/max_subarray/sub_array_maxsum.py)
   * Memoization
     * [Fibonacci](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/memoization/fibonacci.py)
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
@@ -28,6 +26,7 @@
 
 ## Cryptography
   * Atbash Cipher
+    * [Atbash Ci[Her 4](https://github.com/BrianLusina/PythonSnips/blob/master/cryptography/atbash_cipher/atbash_ci[her_4.py)
     * [Atbash Cipher 2](https://github.com/BrianLusina/PythonSnips/blob/master/cryptography/atbash_cipher/atbash_cipher_2.py)
     * [Atbash Cipher 3](https://github.com/BrianLusina/PythonSnips/blob/master/cryptography/atbash_cipher/atbash_cipher_3.py)
   * Crypto Square
@@ -65,6 +64,8 @@
       * [Diff Elements In List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/array_diff/diff_elements_in_list.py)
     * Distinct
       * [Distinct Values](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/distinct/distinct_values.py)
+    * Max Subarray
+      * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/max_subarray/sub_array_maxsum.py)
     * Minincrementsforunique
       * [Min Increment For Unique](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/minincrementsforunique/min_increment_for_unique.py)
   * Dicts
@@ -337,6 +338,7 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
+      * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
     * Stack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
