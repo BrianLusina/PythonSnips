@@ -338,6 +338,7 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
+      * [Test Max Profit](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_profit.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_merge_sorted_arrays.py)
