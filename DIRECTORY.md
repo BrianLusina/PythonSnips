@@ -66,6 +66,7 @@
       * [Distinct Values](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/distinct/distinct_values.py)
     * Intersection Of Two Arrays
       * [Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/intersection_of_two_arrays/intersection_one.py)
+      * [Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/intersection_of_two_arrays/intersection_two.py)
     * Max Subarray
       * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/max_subarray/sub_array_maxsum.py)
     * Minincrementsforunique
@@ -341,6 +342,7 @@
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
       * [Test Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_one.py)
+      * [Test Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_two.py)
       * [Test Max Profit](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_profit.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
