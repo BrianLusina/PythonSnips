@@ -335,6 +335,8 @@
     * [Test Vigenere](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_vigenere.py)
   * Datastructures
     * Arrays
+      * Matrix
+        * [Test Reshape Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/matrix/test_reshape_matrix.py)
       * [Test 2D Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_2d_array.py)
       * [Test Array Chunks](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_chunks.py)
       * [Test Array Diff](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_diff.py)
