@@ -343,6 +343,7 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
+      * [Test Contains Nearby Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_duplicate.py)
       * [Test Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_one.py)
       * [Test Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_two.py)
       * [Test Max Profit](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_profit.py)
