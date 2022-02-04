@@ -596,6 +596,8 @@
   * Web
     * [Cookie Server](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/cookie_server.py)
     * [Test Bookmark Server](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/test_bookmark_server.py)
+    * [Test Iou Rest Api](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/test_iou_rest_api.py)
+    * [Test Iou Rest Api V1](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/test_iou_rest_api_v1.py)
     * [Test Scrap Codewars Leaderboard](https://github.com/BrianLusina/PythonSnips/blob/master/tests/web/test_scrap_codewars_leaderboard.py)
 
 ## Utils
@@ -631,6 +633,8 @@
   * Arc Server
     * [Bookmark Server](https://github.com/BrianLusina/PythonSnips/blob/master/web/arc_server/bookmark_server.py)
     * [Sample Record](https://github.com/BrianLusina/PythonSnips/blob/master/web/arc_server/sample_record.py)
+  * Iou Rest Api
+    * [Io Rest V1](https://github.com/BrianLusina/PythonSnips/blob/master/web/iou_rest_api/io_rest_v1.py)
   * [Merge Tools](https://github.com/BrianLusina/PythonSnips/blob/master/web/merge_tools.ipynb)
   * Python Firebase
     * Myfirebase
