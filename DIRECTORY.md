@@ -389,6 +389,8 @@
       * Trie
         * [Test Trie](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/trie/test_trie.py)
   * Design Patterns
+    * Browser History
+      * [Test Browser History](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/browser_history/test_browser_history.py)
     * Hashmap
       * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashmap/test_hashmap.py)
     * Hashset
