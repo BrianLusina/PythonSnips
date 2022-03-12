@@ -91,7 +91,8 @@
   * Trees
     * Binary Search Tree
       * [Bst Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary_search_tree/bst_iterator.py)
-    * [Binary Tree Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary_tree_node.py)
+    * Binary Tree
+      * [Binary Tree Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary_tree/binary_tree_node.py)
     * Heaps
       * [Convert Max To Min](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/convert_max_to_min.py)
   * Tuples
@@ -184,6 +185,8 @@
 ## Puzzles
   * Battleship
     * [Battleship](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/battleship/battleship.py)
+  * Hidden Cubic Numbers
+    * [Hidden Cubic Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hidden_cubic_numbers/hidden_cubic_numbers.py)
 
 ## Pyasync
   * Compute Factorial
