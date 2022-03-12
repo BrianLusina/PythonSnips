@@ -1,18 +1,20 @@
 from abc import ABC, abstractmethod
+from typing import Any, List
 
 
 class TreeNode(object):
     """
-    Tree node class which will implement Tree Node
+    Tree node class which will implement Tree Node.
+    Note that this could be any type of tree node. Not all tree nodes have only left or right children, they could have
+    more than one child. In this case `children` property is a list of all the immediate descendants of the node.
     """
 
     def __init__(self, value):
         """
         Value here can be anything
         """
-        self.data = value
-        self.left = None
-        self.right = None
+        self.data: Any = value
+        self.children: List[TreeNode] = []
 
 
 class Tree(ABC):

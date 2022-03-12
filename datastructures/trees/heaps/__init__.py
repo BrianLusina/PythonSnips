@@ -1,10 +1,9 @@
 from abc import abstractmethod, ABC
 from typing import Any
+from ..binary_tree.binary_tree_node import BinaryTreeNode
 
-from .. import TreeNode
 
-
-class HeapNode(TreeNode):
+class HeapNode(BinaryTreeNode):
     def __init__(self, data, name):
         super().__init__(data)
         self.name = name

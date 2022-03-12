@@ -1,5 +1,5 @@
+from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
 from .. import Tree
-from ..binary_tree_node import BinaryTreeNode
 from ...queues.fifo import FifoQueue
 from ...stacks import Stack
 
@@ -81,13 +81,13 @@ class BinarySearchTree(Tree):
             self.stack.push(root)
             root = root.left
 
-    def insert_node(self, value: int) -> BinaryTreeNode:
+    def insert_node(self, data: int) -> BinaryTreeNode:
         """
-        Inserts a node in a BST given a value
-        If there is not root, then create a new root node with the value and return.
+        Inserts a node in a BST given a data
+        If there is not root, then create a new root node with the data and return.
 
-        If there is a root, then check the value against the root node's value and determine if it should go left or right
-        If the value is greater than the root node's value, then go right, if the value is less than the root node's value,
+        If there is a root, then check the data against the root node's data and determine if it should go left or right
+        If the data is greater than the root node's data, then go right, if the data is less than the root node's data,
         then go left. Repeat this operation, until we can insert the node in the right place.
 
         Alternatively, this tree can be re-arranged to form a new tree.
@@ -95,40 +95,40 @@ class BinarySearchTree(Tree):
         This has used an iterative approach. However, a recursive approach can also be adopted.
 
         if not self.root:
-            return BinaryTreeNode(value)
+            return BinaryTreeNode(data)
 
-        if value < self.root.value and self.root.left:
-            self.insert_node(value, self.root.left)
+        if data < self.root.data and self.root.left:
+            self.insert_node(data, self.root.left)
 
-        elif value <= self.root.value:
-            self.root.left = BinaryTreeNode(value)
+        elif data <= self.root.data:
+            self.root.left = BinaryTreeNode(data)
             
-        elif value > self.root.value and self.root.right:
-            self.insert_node(value, self.root.right)
+        elif data > self.root.data and self.root.right:
+            self.insert_node(data, self.root.right)
         else:
-            self.root.right = BinaryTreeNode(value)
+            self.root.right = BinaryTreeNode(data)
 
         return self.root
         """
         if not self.root:
-            return BinaryTreeNode(value)
+            return BinaryTreeNode(data)
 
         parent, dummy = self.root, self.root
 
         while self.root:
             parent = self.root
 
-            if value < self.root.data:
+            if data < self.root.data:
                 self.root = self.root.left
             else:
                 self.root = self.root.right
 
         if not parent:
-            parent = BinaryTreeNode(value)
-        elif value < parent.data:
-            parent.left = BinaryTreeNode(value)
+            parent = BinaryTreeNode(data)
+        elif data < parent.data:
+            parent.left = BinaryTreeNode(data)
         else:
-            parent.right = BinaryTreeNode(value)
+            parent.right = BinaryTreeNode(data)
 
         return dummy
 
@@ -179,7 +179,7 @@ class BinarySearchTree(Tree):
 
     def range_sum(self, low: int, high: int):
         """
-        returns the sum of values of all nodes with a value in the range [low, high].
+        returns the sum of datas of all nodes with a data in the range [low, high].
 
         Example:
         Input: root = [10,5,15,3,7,null,18], low = 7, high = 15
@@ -238,7 +238,7 @@ class BinarySearchTree(Tree):
     def pre_order(self) -> list:
         """
         Type of Depth First Traversal (DFS) for binary trees which will start at root node and proceed to the left
-        value and print it until it reaches the leaf(node with no more children) and then backtrack to the node and
+        data and print it until it reaches the leaf(node with no more children) and then backtrack to the node and
         check if the current node has a right child and print it. This will continue until all nodes have been
         tracked and printed.
         """
@@ -252,7 +252,7 @@ class BinarySearchTree(Tree):
 
         while current or not stack.is_empty():
             while current:
-                result.append(current.value)
+                result.append(current.data)
                 stack.push(current)
                 current = current.left
 
@@ -269,12 +269,12 @@ class BinarySearchTree(Tree):
         def inorder(node: BinaryTreeNode):
             if node:
                 yield from inorder(node.left)
-                yield node.value
+                yield node.data
                 yield from inorder(node.right)
 
         result = current = BinaryTreeNode(None)
-        for value in inorder(self.root):
-            current.right = BinaryTreeNode(value)
+        for data in inorder(self.root):
+            current.right = BinaryTreeNode(data)
             current = current.right
 
         return result.right
@@ -283,7 +283,7 @@ class BinarySearchTree(Tree):
         """
         Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree.
         This type of search will begin at the left node and check if that node has a left child and continually check
-        until that left node is a leaf(has no children) and will then print its value and "bubble up" back to the
+        until that left node is a leaf(has no children) and will then print its data and "bubble up" back to the
         current node and execute that (in this case print it) and then print the right node. The same procedure is
         executed for the right side of the tree.
         """
@@ -292,7 +292,7 @@ class BinarySearchTree(Tree):
             if self.root.left:
                 self.in_order_recurse(self.root.left)
 
-            result.append(self.root.value)
+            result.append(self.root.data)
 
             if self.root.right:
                 self.in_order_recurse(self.root.right)
@@ -323,8 +323,8 @@ class BinarySearchTree(Tree):
 
         while current:
             if not current.left:
-                # add the current value of the node
-                result.append(current.value)
+                # add the current data of the node
+                result.append(current.data)
                 # Move to next right node
                 current = current.right
             else:
@@ -360,7 +360,7 @@ class BinarySearchTree(Tree):
         # create 2 stacks
         stack_one = Stack()
         stack_two = Stack()
-        values = []
+        datas = []
 
         # push root to stack one
         stack_one.push(self.root)
@@ -381,13 +381,13 @@ class BinarySearchTree(Tree):
 
         while stack_two:
             node = stack_two.pop()
-            values.append(node.data)
+            datas.append(node.data)
 
-        return values
+        return datas
 
     def is_binary_search_tree(self):
         """
-        Checks if a binary search tree is valid. A value of None is a valid Binary Search Tree
+        Checks if a binary search tree is valid. A data of None is a valid Binary Search Tree
         :rtype: bool
         :return: Boolean True if valid, False otherwise
         """
@@ -438,36 +438,36 @@ class BinarySearchTree(Tree):
         if not root:
             return True
 
-        # if the value is out of bounds
-        if root.value > upper_bound or root.value < lower_bound:
+        # if the data is out of bounds
+        if root.data > upper_bound or root.data < lower_bound:
             return False
 
         return not (
-                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.value)
-                or not self.is_binary_search_tree_recursive(root.right, root.value, upper_bound)
+                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
+                or not self.is_binary_search_tree_recursive(root.right, root.data, upper_bound)
         )
 
-    def search_node(self, value, node: BinaryTreeNode = None):
+    def search_node(self, data, node: BinaryTreeNode = None):
         """
-        Searches for the given value in a binary search tree. If the value exists in the tree, then True is returned,
+        Searches for the given data in a binary search tree. If the data exists in the tree, then True is returned,
         else false
-        :param value the value to search for
+        :param data the data to search for
         :rtype: bool
         """
         if not node:
             node = self.root
 
-        # check if the value is less than the root node and recursively check on the left of the tree
-        if value < node.value and node.left:
-            return self.search_node(value, node.left)
+        # check if the data is less than the root node and recursively check on the left of the tree
+        if data < node.data and node.left:
+            return self.search_node(data, node.left)
 
-        # check if the current value is greater than the root node and that the right node exist,
+        # check if the current data is greater than the root node and that the right node exist,
         # then proceed to the right to perform the search
-        if value > node.value and node.right:
-            return self.search_node(value, node.right)
+        if data > node.data and node.right:
+            return self.search_node(data, node.right)
 
-        # if the root node is equal to the value, then return True if they are equal
-        return value == node.value
+        # if the root node is equal to the data, then return True if they are equal
+        return data == node.data
 
     def merge_trees(self, otherNode: BinaryTreeNode) -> BinaryTreeNode:
         """
@@ -482,7 +482,7 @@ class BinarySearchTree(Tree):
         if not self.root:
             return otherNode
 
-        self.root.value += otherNode.value
+        self.root.data += otherNode.data
 
         self.root.left = self.merge_trees(otherNode.left)
         self.root.right = self.merge_trees(otherNode.right)
@@ -539,7 +539,7 @@ class BinarySearchTree(Tree):
     def lowest_common_ancestor(self, node_one: BinaryTreeNode, node_two: BinaryTreeNode) -> BinaryTreeNode:
         """
         Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
-        If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
+        If both of the datas in the 2 nodes provided are greater than the root node, then we move to the right.
         if the nodes are less than the root node, we move to the left.
         If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
         no root node.
@@ -559,17 +559,17 @@ class BinarySearchTree(Tree):
         if not self.root:
             return None
 
-        # if any of the node values matches the data value for the root node, return the root node
-        if self.root.data == node_one.value or self.root.data == node_two.value:
+        # if any of the node datas matches the data data for the root node, return the root node
+        if self.root.data == node_one.data or self.root.data == node_two.data:
             return self.root
 
         while self.root:
             # if both node_one and node_two are smaller than root, then LCA lies in the left
-            if self.root.data > node_one.value and self.root.data > node_two.value:
+            if self.root.data > node_one.data and self.root.data > node_two.data:
                 self.root = self.root.left
 
             # if both node_one and node_two are greater than root, then LCA lies in the right
-            elif self.root.data < node_one.value and self.root.data < node_two.value:
+            elif self.root.data < node_one.data and self.root.data < node_two.data:
                 self.root = self.root.right
             else:
                 break

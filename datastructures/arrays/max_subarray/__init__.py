@@ -1,6 +1,8 @@
 """
 Finds the maximum sub-array in an array
 """
+from typing import List
+
 try:
     from collections import Iterable
 except ImportError:
@@ -11,7 +13,7 @@ except ImportError:
     from sys import maxint
 
 
-def find_max_sub_array(array):
+def find_max_sub_array(array: List[int]) -> int:
     """
     Finds the maximum sub-array in an array of integers
     Examples:

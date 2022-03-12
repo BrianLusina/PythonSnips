@@ -1,4 +1,4 @@
-## Caeser Cipher
+# Caeser Cipher
 
 have the function CaesarCipher(str, num) take the str parameter and perform a Caesar Cipher num on it using the num
 parameter as the numing number. A Caesar Cipher works by numing all letters in the string N places down in the
