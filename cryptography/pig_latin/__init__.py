@@ -1,11 +1,17 @@
 import re
 
 cons = re.compile('^([^aeiou]?qu|[^aeiou]+)([a-z]*)')
+cons_with_y = re.compile('^([^aeiou]+)y([a-z]*)')
 vowel = re.compile('^([aeiou]|y[^aeiou]|xr)[a-z]*')
 
 
 def split_initial_consonant_sound(word):
-    return cons.match(word).groups()
+    match_with_y = cons_with_y.match(word)
+    match = cons.match(word)
+    if match_with_y:
+        return match_with_y.group(1), f"y{match_with_y.group(2)}"
+    if match:
+        return match.groups()
 
 
 def starts_with_vowel_sound(word):
