@@ -28,6 +28,8 @@ def find_sum_of_primes(limit):
 
 if __name__ == "__main__":
     limit_ = 2_000_000
-    print(f"Sum of all prime numbers in the given range of 2 to {limit_} is {find_sum_of_primes(limit_)}")
+    print(
+        f"Sum of all prime numbers in the given range of 2 to {limit_} is {find_sum_of_primes(limit_)}"
+    )
 
     cProfile.run("find_sum_of_primes(2_000_000)")

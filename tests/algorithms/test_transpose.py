@@ -2,72 +2,34 @@ import unittest
 
 from algorithms.transpose import transpose
 
-
 # test cases adapted from `x-common//canonical-data.json` @ version: 1.0.0
+
 
 class TransposeTests(unittest.TestCase):
     def test_empty_string(self):
         input_line = ""
         expected = ""
-        self.assertEqual(
-            transpose(input_line),
-            expected
-        )
+        self.assertEqual(transpose(input_line), expected)
 
     def test_two_characters_in_a_row(self):
-        self.assertEqual(
-            transpose("A1"),
-            "\n".join(["A", "1"])
-        )
+        self.assertEqual(transpose("A1"), "\n".join(["A", "1"]))
 
     def test_two_characters_in_a_column(self):
-        self.assertEqual(
-            transpose("\n".join(["A", "1"])),
-            "A1"
-        )
+        self.assertEqual(transpose("\n".join(["A", "1"])), "A1")
 
     def test_simple(self):
-        input_line = [
-            "ABC",
-            "123"
-        ]
-        expected = [
-            "A1",
-            "B2",
-            "C3"
-        ]
+        input_line = ["ABC", "123"]
+        expected = ["A1", "B2", "C3"]
 
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_single_line(self):
         input_line = ["Single line."]
-        expected = [
-            "S",
-            "i",
-            "n",
-            "g",
-            "l",
-            "e",
-            " ",
-            "l",
-            "i",
-            "n",
-            "e",
-            "."
-        ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        expected = ["S", "i", "n", "g", "l", "e", " ", "l", "i", "n", "e", "."]
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_first_line_longer_than_second_line(self):
-        input_line = [
-            "The fourth line.",
-            "The fifth line."
-        ]
+        input_line = ["The fourth line.", "The fifth line."]
         expected = [
             "TT",
             "hh",
@@ -84,18 +46,12 @@ class TransposeTests(unittest.TestCase):
             "in",
             "ne",
             "e.",
-            "."
+            ".",
         ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_second_line_longer_than_first_line(self):
-        input_line = [
-            "The first line.",
-            "The second line."
-        ]
+        input_line = ["The first line.", "The second line."]
         expected = [
             "TT",
             "hh",
@@ -112,76 +68,24 @@ class TransposeTests(unittest.TestCase):
             "ni",
             "en",
             ".e",
-            " ."
+            " .",
         ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_square(self):
-        input_line = [
-            "HEART",
-            "EMBER",
-            "ABUSE",
-            "RESIN",
-            "TREND"
-        ]
-        expected = [
-            "HEART",
-            "EMBER",
-            "ABUSE",
-            "RESIN",
-            "TREND"
-        ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        input_line = ["HEART", "EMBER", "ABUSE", "RESIN", "TREND"]
+        expected = ["HEART", "EMBER", "ABUSE", "RESIN", "TREND"]
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_rectangle(self):
-        input_line = [
-            "FRACTURE",
-            "OUTLINED",
-            "BLOOMING",
-            "SEPTETTE"
-        ]
-        expected = [
-            "FOBS",
-            "RULE",
-            "ATOP",
-            "CLOT",
-            "TIME",
-            "UNIT",
-            "RENT",
-            "EDGE"
-        ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        input_line = ["FRACTURE", "OUTLINED", "BLOOMING", "SEPTETTE"]
+        expected = ["FOBS", "RULE", "ATOP", "CLOT", "TIME", "UNIT", "RENT", "EDGE"]
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_triangle(self):
-        input_line = [
-            "T",
-            "EE",
-            "AAA",
-            "SSSS",
-            "EEEEE",
-            "RRRRRR"
-        ]
-        expected = [
-            "TEASER",
-            " EASER",
-            "  ASER",
-            "   SER",
-            "    ER",
-            "     R"
-        ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        input_line = ["T", "EE", "AAA", "SSSS", "EEEEE", "RRRRRR"]
+        expected = ["TEASER", " EASER", "  ASER", "   SER", "    ER", "     R"]
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
     def test_many_lines(self):
         input_line = [
@@ -198,7 +102,7 @@ class TransposeTests(unittest.TestCase):
             "Which, but their children's end, naught could remove,",
             "Is now the two hours' traffic of our stage;",
             "The which if you with patient ears attend,",
-            "What here shall miss, our toil shall strive to mend."
+            "What here shall miss, our toil shall strive to mend.",
         ]
         expected = [
             "CIFWFAWDTAWITW",
@@ -253,13 +157,10 @@ class TransposeTests(unittest.TestCase):
             "          o  n",
             "          v  d",
             "          e  .",
-            "          ,"
+            "          ,",
         ]
-        self.assertEqual(
-            transpose("\n".join(input_line)),
-            "\n".join(expected)
-        )
+        self.assertEqual(transpose("\n".join(input_line)), "\n".join(expected))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -47,5 +47,5 @@ class ReciprocalCyclesTestCase(unittest.TestCase):
         self.assertEqual(999983, longest_recurring_cycle(100000))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

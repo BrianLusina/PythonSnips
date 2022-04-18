@@ -47,7 +47,7 @@ class BinaryTreeNode(TreeNode):
         :param parent
         :rtype: bool True if the deletion was a success, false otherwise
         """
-        # recursively check that the data is less than the current node data and that there is a left 
+        # recursively check that the data is less than the current node data and that there is a left
         if data < self.data and self.left:
             return self.delete_node(data, self)
 

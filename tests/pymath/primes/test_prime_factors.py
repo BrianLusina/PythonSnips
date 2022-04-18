@@ -44,5 +44,5 @@ class PrimeFactorsTest(unittest.TestCase):
         self.assertEqual([71, 839, 1471, 6857], prime_factors(600851475143))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

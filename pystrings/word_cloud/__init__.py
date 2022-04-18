@@ -23,16 +23,20 @@ class WordCloudData:
                 if character.isalpha():
                     current_word_length += 1
                 if current_word_length > 0:
-                    current_word = input_string[current_word_start_index:
-                                                current_word_start_index + current_word_length]
+                    current_word = input_string[
+                        current_word_start_index : current_word_start_index
+                        + current_word_length
+                    ]
                     self.add_word_to_dictionary(current_word)
 
             # if we reach a space or emdash, we know we are at the end of a word
             # so we add it to our dictionary and reset our current word
-            elif character == " " or character == u'\u2014':
+            elif character == " " or character == "\u2014":
                 if current_word_length > 0:
-                    current_word = input_string[current_word_start_index:
-                                                current_word_start_index + current_word_length]
+                    current_word = input_string[
+                        current_word_start_index : current_word_start_index
+                        + current_word_length
+                    ]
                     self.add_word_to_dictionary(current_word)
                     current_word_length = 0
 
@@ -41,13 +45,15 @@ class WordCloudData:
             elif character == ".":
                 if i < len(input_string) - 1 and input_string[i + 1] == ".":
                     if current_word_length > 0:
-                        current_wrd = input_string[current_word_start_index:
-                                                   current_word_start_index + current_word_length]
+                        current_wrd = input_string[
+                            current_word_start_index : current_word_start_index
+                            + current_word_length
+                        ]
                         self.add_word_to_dictionary[current_word]
                         current_word_length = 0
 
             # if the character is a letter of an apostrophe, we add it to our current word
-            elif character.isalpha() or character == '\'':
+            elif character.isalpha() or character == "'":
                 if current_word_length == 0:
                     current_word_start_index = i
                 current_word_length += 1
@@ -55,15 +61,21 @@ class WordCloudData:
             # if the character is a hyphen, we want to check if it's surrounded by letters
             # if it is we add it to our current word
             elif character == "-":
-                if i > 0 and input_string[i - 1].isalpha() and input_string[i + 1].isalpha():
+                if (
+                    i > 0
+                    and input_string[i - 1].isalpha()
+                    and input_string[i + 1].isalpha()
+                ):
                     if current_word_length == 0:
                         current_word_start_index = i
                     current_word_length += 1
 
                 else:
                     if current_word_length > 0:
-                        current_word = input_string[current_word_start_index:
-                                                    current_word_start_index + current_word_length]
+                        current_word = input_string[
+                            current_word_start_index : current_word_start_index
+                            + current_word_length
+                        ]
                         self.add_word_to_dictionary(current_word)
                         current_word_length = 0
 

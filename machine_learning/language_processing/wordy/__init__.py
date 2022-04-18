@@ -1,4 +1,4 @@
-from operator import mul, add, sub
+from operator import add, mul, sub
 from sys import version_info
 
 # version imports to make sure it works with Python 2.x.x

@@ -21,62 +21,50 @@ class WordTest(unittest.TestCase):
 
     @staticmethod
     def test_one_rectangle():
-        lines = ["+-+",
-                 "| |",
-                 "+-+",
-                 ]
+        lines = [
+            "+-+",
+            "| |",
+            "+-+",
+        ]
         assert 1 == count(lines)
 
     @staticmethod
     def test_two_rectangles_no_shared_parts():
-        lines = ["  +-+",
-                 "  | |",
-                 "+-+-+",
-                 "| |  ",
-                 "+-+  "
-                 ]
+        lines = ["  +-+", "  | |", "+-+-+", "| |  ", "+-+  "]
         assert 2 == count(lines)
 
     @staticmethod
     def test_five_rectangles_three_regions():
-        lines = ["  +-+",
-                 "  | |",
-                 "+-+-+",
-                 "| | |",
-                 "+-+-+"
-                 ]
+        lines = ["  +-+", "  | |", "+-+-+", "| | |", "+-+-+"]
         assert 5 == count(lines)
 
     @staticmethod
     def test_incomplete_rectangles():
-        lines = ["  +-+",
-                 "    |",
-                 "+-+-+",
-                 "| | -",
-                 "+-+-+"
-                 ]
+        lines = ["  +-+", "    |", "+-+-+", "| | -", "+-+-+"]
         assert 1 == count(lines)
 
     @staticmethod
     def test_complicated():
-        lines = ["+------+----+",
-                 "|      |    |",
-                 "+---+--+    |",
-                 "|   |       |",
-                 "+---+-------+"
-                 ]
+        lines = [
+            "+------+----+",
+            "|      |    |",
+            "+---+--+    |",
+            "|   |       |",
+            "+---+-------+",
+        ]
         assert 3 == count(lines)
 
     @staticmethod
     def test_not_so_complicated():
-        lines = ["+------+----+",
-                 "|      |    |",
-                 "+------+    |",
-                 "|   |       |",
-                 "+---+-------+"
-                 ]
+        lines = [
+            "+------+----+",
+            "|      |    |",
+            "+------+    |",
+            "|   |       |",
+            "+---+-------+",
+        ]
         assert 2 == count(lines)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -3,6 +3,7 @@ class Human(object):
     A Human class which describes the properties of a human being
     :__init__ initialized the number of legs,eyes, hands, etc a human usually has
     """
+
     walks_upright = True
     talks = True
 
@@ -34,9 +35,12 @@ class Person(Human):
     """
     Defines a single person class which inherits from super class Human
     """
+
     has_name = True
 
-    def __init__(self, name, age, height, country, no_legs, no_hands, no_eyes, no_mouth, nose):
+    def __init__(
+        self, name, age, height, country, no_legs, no_hands, no_eyes, no_mouth, nose
+    ):
         # noinspection PyCompatibility
         super().__init__(no_legs, no_hands, no_eyes, no_mouth, nose)
         self.name = name
@@ -50,10 +54,25 @@ class Students(Person):
     Defines a single Student. THese are the properties of a single Student
     """
 
-    def __init__(self, homework, quizzes, tests, name, age, height, country, no_legs, no_hands, no_eyes, no_mouth,
-                 nose):
+    def __init__(
+        self,
+        homework,
+        quizzes,
+        tests,
+        name,
+        age,
+        height,
+        country,
+        no_legs,
+        no_hands,
+        no_eyes,
+        no_mouth,
+        nose,
+    ):
         # noinspection PyCompatibility
-        super().__init__(name, age, height, country, no_legs, no_hands, no_eyes, no_mouth, nose)
+        super().__init__(
+            name, age, height, country, no_legs, no_hands, no_eyes, no_mouth, nose
+        )
         self.homework = homework
         self.quizzes = quizzes
         self.tests = tests
@@ -81,19 +100,19 @@ lloyd = {
     "name": "Lloyd",
     "homework": [90.0, 97.0, 75.0, 92.0],
     "quizzes": [88.0, 40.0, 94.0],
-    "tests": [75.0, 90.0]
+    "tests": [75.0, 90.0],
 }
 alice = {
     "name": "Alice",
     "homework": [100.0, 92.0, 98.0, 100.0],
     "quizzes": [82.0, 83.0, 91.0],
-    "tests": [89.0, 97.0]
+    "tests": [89.0, 97.0],
 }
 tyler = {
     "name": "Tyler",
     "homework": [0.0, 87.0, 75.0, 22.0],
     "quizzes": [0.0, 75.0, 78.0],
-    "tests": [100.0, 100.0]
+    "tests": [100.0, 100.0],
 }
 
 
@@ -109,7 +128,7 @@ def get_average(student):
     homework = average(student["homework"])
     quizzes = average(student["quizzes"])
     tests = average(student["tests"])
-    return (homework * 0.1) + (quizzes * .3) + (tests * .6)
+    return (homework * 0.1) + (quizzes * 0.3) + (tests * 0.6)
 
 
 def get_letter_grade(score):

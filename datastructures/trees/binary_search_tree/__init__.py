@@ -1,7 +1,8 @@
 from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
-from .. import Tree
+
 from ...queues.fifo import FifoQueue
 from ...stacks import Stack
+from .. import Tree
 
 
 class BinarySearchTree(Tree):
@@ -43,24 +44,24 @@ class BinarySearchTree(Tree):
     def next(self) -> int:
         """
         Returns the next smallest number in a BST.
-        This involves two major operations. One is where we pop an element from the stack which becomes the next smallest element to return. This is a O(1) operation. 
+        This involves two major operations. One is where we pop an element from the stack which becomes the next smallest element to return. This is a O(1) operation.
         However, we then make a call to our helper function _leftmost_inorder which iterates over a bunch of nodes. This is clearly a linear time operation i.e. O(N) in the worst case.
-        However, the important thing to note here is that we only make such a call for nodes which have a right child. Otherwise, we simply return. 
-        Also, even if we end up calling the helper function, it won't always process N nodes. They will be much lesser. Only if we have a skewed tree would there be N nodes for the root. 
+        However, the important thing to note here is that we only make such a call for nodes which have a right child. Otherwise, we simply return.
+        Also, even if we end up calling the helper function, it won't always process N nodes. They will be much lesser. Only if we have a skewed tree would there be N nodes for the root.
         But that is the only node for which we would call the helper function.
-        
-        Thus, the amortized (average) time complexity for this function would still be O(1). We don't need to have a solution which gives constant time operations for every call. 
+
+        Thus, the amortized (average) time complexity for this function would still be O(1). We don't need to have a solution which gives constant time operations for every call.
         We need that complexity on average and that is what we get.
         """
 
         # this is the smallest element in the BST
         topmost_node = self.stack.pop()
 
-        # if the node has a right child, call the helper function for the right child to 
+        # if the node has a right child, call the helper function for the right child to
         # get the next smallest item
-        # We don't need to check for the left child because of the way we have added nodes onto the stack. 
-        # The topmost node either won't have a left child or would already have the left subtree processed. 
-        # If it has a right child, then we call our helper function on the node's right child. 
+        # We don't need to check for the left child because of the way we have added nodes onto the stack.
+        # The topmost node either won't have a left child or would already have the left subtree processed.
+        # If it has a right child, then we call our helper function on the node's right child.
         # This would comparatively be a costly operation depending upon the structure of the tree
         if topmost_node.right:
             self.__leftmost_inorder(topmost_node.right)
@@ -102,7 +103,7 @@ class BinarySearchTree(Tree):
 
         elif data <= self.root.data:
             self.root.left = BinaryTreeNode(data)
-            
+
         elif data > self.root.data and self.root.right:
             self.insert_node(data, self.root.right)
         else:
@@ -157,7 +158,7 @@ class BinarySearchTree(Tree):
         :rtype: object
         """
         if not self.root or (not self.root.left and not self.root.right):
-            raise Exception('Tree must have at least 2 nodes')
+            raise Exception("Tree must have at least 2 nodes")
 
         current = self.root
 
@@ -352,7 +353,7 @@ class BinarySearchTree(Tree):
         2. Loop while first stack is not empty
             2.1 Pop a node from first stack and push it to second stack
             2.2 Push left and right children of the popped node to first stack
-        3. Print contents of second stack        
+        3. Print contents of second stack
         """
         if not self.root:
             return
@@ -422,8 +423,9 @@ class BinarySearchTree(Tree):
         # at this point we have checked all the nodes
         return True
 
-    def is_binary_search_tree_recursive(self, root: BinaryTreeNode, lower_bound=-float("inf"),
-                                        upper_bound=float("inf")):
+    def is_binary_search_tree_recursive(
+        self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
+    ):
         """
         This uses the call stack to check if the binary search tree node is valid.
         This will work, but is vulnerable to stack overflow error
@@ -443,8 +445,10 @@ class BinarySearchTree(Tree):
             return False
 
         return not (
-                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
-                or not self.is_binary_search_tree_recursive(root.right, root.data, upper_bound)
+            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
+            or not self.is_binary_search_tree_recursive(
+                root.right, root.data, upper_bound
+            )
         )
 
     def search_node(self, data, node: BinaryTreeNode = None):
@@ -524,7 +528,9 @@ class BinarySearchTree(Tree):
                     # two ways we might now have an unbalanced tree:
                     #   1) more than 2 different leaf depths
                     #   2) 2 leaf depths that are more than 1 apart
-                    if len(depths) > 2 or (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
+                    if len(depths) > 2 or (
+                        len(depths) == 2 and abs(depths[0] - depths[1]) > 1
+                    ):
                         return False
 
             # case, this is not a leaf, keep stepping down
@@ -536,14 +542,16 @@ class BinarySearchTree(Tree):
 
         return True
 
-    def lowest_common_ancestor(self, node_one: BinaryTreeNode, node_two: BinaryTreeNode) -> BinaryTreeNode:
+    def lowest_common_ancestor(
+        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+    ) -> BinaryTreeNode:
         """
         Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
         If both of the datas in the 2 nodes provided are greater than the root node, then we move to the right.
         if the nodes are less than the root node, we move to the left.
         If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
         no root node.
-        
+
         Assumptions:
         - assumes that the node itself can also be an ancestor/descendant of itself
 

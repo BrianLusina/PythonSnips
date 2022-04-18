@@ -5,7 +5,9 @@ from pymath.sum_between import sum_between
 
 class SumBetweenTests(unittest.TestCase):
     def shortDescription(self):
-        return "Tests for {} checks if function sums the array and all numbers in between".format(sum_between.__name__)
+        return "Tests for {} checks if function sums the array and all numbers in between".format(
+            sum_between.__name__
+        )
 
     def test_only_accepts_a_list(self):
         with self.assertRaises(TypeError):
@@ -36,4 +38,6 @@ class SumBetweenTests(unittest.TestCase):
 
     def test_both_elements_are_less_than_0(self):
         expected = sum(range(-5, -1))
-        self.assertEqual(expected, sum_between([-5, -2]), "Expected {}".format(expected))
+        self.assertEqual(
+            expected, sum_between([-5, -2]), "Expected {}".format(expected)
+        )

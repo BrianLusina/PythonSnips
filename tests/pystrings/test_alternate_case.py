@@ -23,11 +23,15 @@ class AlternateCaseTest(unittest.TestCase):
         self.assertEqual(to_alternating_case("1a2b3c4d5e"), "1A2B3C4D5E")
 
     def test_7(self):
-        self.assertEqual(to_alternating_case("String.prototype.toAlternatingCase"),
-                         "sTRING.PROTOTYPE.TOaLTERNATINGcASE")
+        self.assertEqual(
+            to_alternating_case("String.prototype.toAlternatingCase"),
+            "sTRING.PROTOTYPE.TOaLTERNATINGcASE",
+        )
 
     def test_8(self):
-        self.assertEqual(to_alternating_case(to_alternating_case("Hello World")), "Hello World")
+        self.assertEqual(
+            to_alternating_case(to_alternating_case("Hello World")), "Hello World"
+        )
 
     title1 = "altERnaTIng cAsE"
 

@@ -3,7 +3,6 @@ from typing import List
 
 
 class ThroneInheritance:
-
     def __init__(self, king_name: str):
         self.king = king_name
         self.family_tree = defaultdict(list)

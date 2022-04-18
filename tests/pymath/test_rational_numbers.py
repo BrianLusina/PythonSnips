@@ -4,8 +4,8 @@ import unittest
 
 from pymath.rational_numbers import Rational
 
-
 # Tests adapted from `problem-specifications//canonical-data.json` @ v1.0.0
+
 
 class RationalTests(unittest.TestCase):
 
@@ -101,9 +101,7 @@ class RationalTests(unittest.TestCase):
         self.assertAlmostEqual(8 ** Rational(4, 3), 16.0, places=8)
 
     def test_raise_a_real_number_to_a_negative_rational(self):
-        self.assertAlmostEqual(
-            9 ** Rational(-1, 2), 0.3333333333333333, places=8
-        )
+        self.assertAlmostEqual(9 ** Rational(-1, 2), 0.3333333333333333, places=8)
 
     def test_raise_a_real_number_to_a_zero_rational(self):
         self.assertAlmostEqual(2 ** Rational(0, 1), 1.0, places=8)
@@ -128,5 +126,5 @@ class RationalTests(unittest.TestCase):
         self.assertEqual(Rational(13, 13), Rational(1, 1))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

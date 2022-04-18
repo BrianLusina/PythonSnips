@@ -16,4 +16,4 @@ def _codec(text):
 
 
 def _group(text, n):
-    return " ".join(text[i: i + n] for i in range(0, len(text), n))
+    return " ".join(text[i : i + n] for i in range(0, len(text), n))

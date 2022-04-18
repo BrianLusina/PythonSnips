@@ -2,7 +2,6 @@ from collections import OrderedDict
 
 
 class LRUCache(OrderedDict):
-
     def __init__(self, capacity):
         """
         :type capacity: int
@@ -16,7 +15,7 @@ class LRUCache(OrderedDict):
         :rtype: int
         """
         if key not in self:
-            return - 1
+            return -1
 
         self.move_to_end(key)
         return self[key]

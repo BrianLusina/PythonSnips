@@ -1,6 +1,6 @@
 def minimum_swaps(arr: list) -> int:
     """
-    Time Complexity: O(n Log n) 
+    Time Complexity: O(n Log n)
     Auxiliary Space: O(n)
     """
     length = len(arr)
@@ -38,6 +38,6 @@ def minimum_swaps(arr: list) -> int:
 
         # update by adding current cycle - 1
         if cycles > 0:
-            swaps += (cycles - 1)
+            swaps += cycles - 1
 
     return swaps

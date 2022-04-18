@@ -11,5 +11,5 @@ class IrreducibleTestCases(unittest.TestCase):
         self.assertEqual(sum_fracts([[1, 3], [5, 3]]), 2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

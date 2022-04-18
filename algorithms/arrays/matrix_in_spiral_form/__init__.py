@@ -4,7 +4,9 @@ from typing import List
 
 def make_a_spiral(size: int) -> List[List[int]]:
     def collision_in_two_steps() -> bool:
-        step_inside_bounds = y + change_y * 2 in range(size) and x + change_x * 2 in range(size)
+        step_inside_bounds = y + change_y * 2 in range(
+            size
+        ) and x + change_x * 2 in range(size)
         return step_inside_bounds and spiral[y + change_y * 2][x + change_x * 2] == 1
 
     directions = cycle(((1, 0), (0, 1), (-1, 0), (0, -1)))
@@ -178,13 +180,13 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
     while start_row_index < end_row_index and start_col_index < end_col_index:
         """
         Getting the items from rows moving left to right
-        
+
         To do this, we iterate on the columns of the first row or the items in the first
-        array in the matrix. this will be a range from the start_col_index to the end_col_index. Moving us from left to 
+        array in the matrix. this will be a range from the start_col_index to the end_col_index. Moving us from left to
         right. To get the items we need from this row, we use the start_row_index and the col_num. The start row_index
-        is the first row in the matrix at the first iteration, while the col_num will move from left to right thus 
+        is the first row in the matrix at the first iteration, while the col_num will move from left to right thus
         picking each element in the first row.
-        
+
         We then increment the start_row_index, to move to the next row
         """
 
@@ -196,16 +198,16 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
         start_row_index += 1
 
         """
-        Getting items from the end columns or from top to bottom. 
-        
+        Getting items from the end columns or from top to bottom.
+
         To get the last column in our matrix we move down the matrix from top to bottom on the
-        last column. we iterate on the row indices or number of rows, that will be provided or shown by the 
+        last column. we iterate on the row indices or number of rows, that will be provided or shown by the
         start_row_index which will have been incremented from the first or initial for loop and up to, but not including
         the end_row_index which will be the last row in the matrix.
-        To get an item, we get each item in the column using the row_num which is the result of ranging from 
+        To get an item, we get each item in the column using the row_num which is the result of ranging from
         start_row_index to end_row_index and getting each last item in each row as shown with end_col_index - 1, because
         of 0-based-indexing. these items are now added to the final list/array
-        
+
         After this we decrement the end_col_index by 1 in order to move to the next column from the end allowing us to
         move from right to left
         """
@@ -218,17 +220,17 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
 
         """
         Getting items on the bottom rows from right to left.
-        
+
         First we check if the current start_row_index is less than the end_row_index
-        
+
         Moving from right to left we move against the columns & to do this, we shall move backwards in the range from
         end_col_index to the start_col_index moving 1 step at a time. Because from previous iterations we have already
         gotten the bottom right item, we shall start on the left of the bottom_right_item, which will be given by
         end_col_index - 1 up to, but not including the item at the bottom right of the matrix.
-        
-        To get items on this row, we shall use the end_row_index which will let us traverse items on the last row, 
+
+        To get items on this row, we shall use the end_row_index which will let us traverse items on the last row,
         moving column by column.
-        
+
         We then decrement the end_row_index in order to move up the matrix in subsequent operations
         """
 
@@ -242,14 +244,14 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
 
         """
         Getting items on the left columns, i.e from bottom to top
-        
-        We move along the leftmost column by moving from bottom rows to top rows. We do this by using the end_row_index 
+
+        We move along the leftmost column by moving from bottom rows to top rows. We do this by using the end_row_index
         - 1 which will give us inner rows. And using the start_row_index - 1 will also give us the inner rows. This will
         have been incremented by 1 in previous iterations.
-        
-        To get items on this column, we traverse the row numbers from the range of end_row_index - 1 to 
+
+        To get items on this column, we traverse the row numbers from the range of end_row_index - 1 to
         start_row_index - 1, getting each item on this column.
-        
+
         We increment the start_col_index by 1 in order to move from left to right within our matrix
         """
         if start_col_index < end_col_index:

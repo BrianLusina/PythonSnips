@@ -28,8 +28,10 @@ class CircleOfNumbersTestCase(unittest.TestCase):
             print(f"Testing for: n = {ddd}, fst= {eee}")
 
             ans = an(ddd, eee)
-            self.assertEqual(circle_of_numbers(ddd, eee), ans, "It should work for random inputs too")
+            self.assertEqual(
+                circle_of_numbers(ddd, eee), ans, "It should work for random inputs too"
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

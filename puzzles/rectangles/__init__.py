@@ -103,8 +103,8 @@ def validate_rect(rect, lines):
     :rtype: bool
     """
     for i in range(0, len(rect)):
-        l = same_line(rect[i].i, rect[0:i] + rect[i + 1:])
-        c = same_col(rect[i].j, rect[0:i] + rect[i + 1:])
+        l = same_line(rect[i].i, rect[0:i] + rect[i + 1 :])
+        c = same_col(rect[i].j, rect[0:i] + rect[i + 1 :])
         if not path(rect[i], l, lines) or not path(rect[i], c, lines):
             return False
     return True

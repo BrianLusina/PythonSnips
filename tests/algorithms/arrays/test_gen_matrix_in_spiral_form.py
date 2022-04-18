@@ -1,6 +1,8 @@
 import unittest
 
-from algorithms.arrays.matrix_in_spiral_form import generate_n_by_n_matrix_in_spiral_form
+from algorithms.arrays.matrix_in_spiral_form import (
+    generate_n_by_n_matrix_in_spiral_form,
+)
 
 
 class MatrixInSpiralFormTestCase(unittest.TestCase):
@@ -11,5 +13,5 @@ class MatrixInSpiralFormTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

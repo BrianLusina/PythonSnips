@@ -34,10 +34,12 @@ class DuplicateTests(unittest.TestCase):
 
     def test_5(self):
         time.sleep(5)
-        sent = RemoveDupSort("hello world and practice makes perfect and hello world again")
+        sent = RemoveDupSort(
+            "hello world and practice makes perfect and hello world again"
+        )
         self.assertEqual("again and hello makes perfect practice world", sent.remover())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(DuplicateTests)
     unittest.TextTestRunner(verbosity=0).run(suite)

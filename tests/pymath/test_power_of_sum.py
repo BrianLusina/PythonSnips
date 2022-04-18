@@ -20,5 +20,5 @@ class PowerSumDigTermTests(unittest.TestCase):
         self.assertEquals(power_sum_dig_term(5), 5832)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

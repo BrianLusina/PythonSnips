@@ -8,5 +8,10 @@ class Test(object):
     @staticmethod
     def test_function(actual, expected):
         print
-        "Test for " + str(actual) + " passed " if actual == expected else "Test for " + str(
-            actual) + " failed, expected " + str(expected)
+        "Test for " + str(
+            actual
+        ) + " passed " if actual == expected else "Test for " + str(
+            actual
+        ) + " failed, expected " + str(
+            expected
+        )

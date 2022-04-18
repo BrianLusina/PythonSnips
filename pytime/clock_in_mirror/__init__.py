@@ -10,5 +10,5 @@ def what_is_the_time(time_in_mirror):
     :param time_in_mirror: time as shown in the mirror
     :return: real time in mirror as a string
     """
-    h, m = map(int, time_in_mirror.split(':'))
-    return '{:02}:{:02}'.format(-(h + (m != 0)) % 12 or 12, -m % 60)
+    h, m = map(int, time_in_mirror.split(":"))
+    return "{:02}:{:02}".format(-(h + (m != 0)) % 12 or 12, -m % 60)

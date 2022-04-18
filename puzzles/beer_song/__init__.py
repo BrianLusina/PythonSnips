@@ -16,12 +16,14 @@ def verse(verse_no):
     :param verse_no: The verse number to start from
     :return: the verse
     """
-    return "".join([
-        "%s of beer on the wall, " % _bottles(verse_no).capitalize(),
-        "%s of beer.\n" % _bottles(verse_no),
-        _action(verse_no),
-        _next_bottle(verse_no)
-    ])
+    return "".join(
+        [
+            "%s of beer on the wall, " % _bottles(verse_no).capitalize(),
+            "%s of beer.\n" % _bottles(verse_no),
+            _action(verse_no),
+            _next_bottle(verse_no),
+        ]
+    )
 
 
 def _bottles(number):

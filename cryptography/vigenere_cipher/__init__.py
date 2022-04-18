@@ -19,7 +19,7 @@ def encode(key, plaintext):
 
 def decode(key, ciphertext):
     pairs = zip(ciphertext, cycle(key))
-    result = ''
+    result = ""
 
     for pair in pairs:
         total = reduce(lambda x, y: ALPHA.index(x) - ALPHA.index(y), pair)
@@ -33,10 +33,10 @@ def show_result(plaintext, key):
     encrypted = encode(key, plaintext)
     decrypted = decode(key, encrypted)
 
-    print('Key: %s' % key)
-    print('Plaintext: %s' % plaintext)
-    print('Encrypted: %s' % encrypted)
-    print('Decrypted: %s' % decrypted)
+    print("Key: %s" % key)
+    print("Plaintext: %s" % plaintext)
+    print("Encrypted: %s" % encrypted)
+    print("Decrypted: %s" % decrypted)
 
 
-show_result('ihadadream', 'boom')
+show_result("ihadadream", "boom")

@@ -12,12 +12,18 @@ class Int32ToIpv4TestCase(unittest.TestCase):
 
     def test_random(self):
         for _ in range(100):
-            test_n = randint(0, 2 ** 32 - 1)
+            test_n = randint(0, 2**32 - 1)
             expected = ".".join(
-                [str(test_n >> 24 & 0xFF), str(test_n >> 16 & 0xFF), str(test_n >> 8 & 0xFF), str(test_n & 0xFF)])
+                [
+                    str(test_n >> 24 & 0xFF),
+                    str(test_n >> 16 & 0xFF),
+                    str(test_n >> 8 & 0xFF),
+                    str(test_n & 0xFF),
+                ]
+            )
 
             self.assertEquals(int32_to_ip(test_n), expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

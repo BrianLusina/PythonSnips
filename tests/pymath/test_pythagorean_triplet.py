@@ -35,12 +35,14 @@ b=2*m*n and m and n are coprime.
 """
 import unittest
 
-from pymath.pythagorean_triplet import (primitive_triplets, triplets_in_range,
-                                                      is_pythagorean_triplet)
+from pymath.pythagorean_triplet import (
+    is_pythagorean_triplet,
+    primitive_triplets,
+    triplets_in_range,
+)
 
 
 class PythagoreanTripletTest(unittest.TestCase):
-
     def test_triplet1(self):
         ans = {(3, 4, 5)}
         self.assertEqual(ans, primitive_triplets(4))
@@ -50,8 +52,16 @@ class PythagoreanTripletTest(unittest.TestCase):
         self.assertEqual(ans, primitive_triplets(84))
 
     def test_triplet3(self):
-        ans = {(29, 420, 421), (341, 420, 541), (420, 851, 949), (420, 1189, 1261), (420, 1739, 1789),
-               (420, 4891, 4909), (420, 11021, 11029), (420, 44099, 44101)}
+        ans = {
+            (29, 420, 421),
+            (341, 420, 541),
+            (420, 851, 949),
+            (420, 1189, 1261),
+            (420, 1739, 1789),
+            (420, 4891, 4909),
+            (420, 11021, 11029),
+            (420, 44099, 44101),
+        }
         self.assertEqual(ans, primitive_triplets(420))
 
     def test_triplet4(self):
@@ -79,5 +89,5 @@ class PythagoreanTripletTest(unittest.TestCase):
         self.assertRaises(ValueError, primitive_triplets, 5)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

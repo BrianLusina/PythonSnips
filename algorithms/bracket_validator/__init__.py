@@ -1,9 +1,5 @@
 def check_brackets_1(code):
-    openers_to_closers_map = {
-        '(': ')',
-        '{': '}',
-        '[': ']'
-    }
+    openers_to_closers_map = {"(": ")", "{": "}", "[": "]"}
 
     openers = frozenset(openers_to_closers_map.keys())
     closers = frozenset(openers_to_closers_map.values())
@@ -31,7 +27,7 @@ def check_brackets_1(code):
 
 # another version to the solution
 def check_brackets_2(string):
-    counterparts = {')': '(', '}': '{', ']': '['}
+    counterparts = {")": "(", "}": "{", "]": "["}
 
     stack = []
     for char in string:

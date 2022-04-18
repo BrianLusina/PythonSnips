@@ -36,11 +36,11 @@ def split_all_even_numbers(numbers, way):
                 rnge, indx = list(range(1, num, 2)), 0
                 print("Odd numbers in the range: ", rnge)
                 for _ in rnge:
-                    print("Sum of two odds: ", sum(rnge[indx: indx + 2]))
+                    print("Sum of two odds: ", sum(rnge[indx : indx + 2]))
                     # if the sum of the 2 closest odd numbers sums to the odd number
                     if rnge[indx] + rnge[indx + 2] == num:
                         # replace the num with the 2 odd numbers
-                        result[even_pos: even_pos + 1] = rnge[indx: indx + 2]
+                        result[even_pos : even_pos + 1] = rnge[indx : indx + 2]
                         break
                     indx += 1
     elif way == 1:

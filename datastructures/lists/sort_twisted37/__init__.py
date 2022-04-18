@@ -15,7 +15,7 @@ def sort_twisted37(arr):
     three, seven = 0, 0
 
     for num in sorted_arr:
-        if re.match(r'^3$|^[1-9]+3$', str(num)):
+        if re.match(r"^3$|^[1-9]+3$", str(num)):
             three = num
             # find its index
             sorted_arr.index(num)

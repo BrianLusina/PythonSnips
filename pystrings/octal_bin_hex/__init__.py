@@ -17,8 +17,13 @@ def print_formatted(number):
     for num in range(1, number + 1):
         # for each number convert the number to octal, binary and hexadecimal and add it to a list
         result.append(
-            "{} {} {} {}".format(str(num).rjust(width), oct(num)[2:].rjust(width), hex(num)[2:].upper().rjust(width),
-                                 bin(num)[2:].rjust(width)))
+            "{} {} {} {}".format(
+                str(num).rjust(width),
+                oct(num)[2:].rjust(width),
+                hex(num)[2:].upper().rjust(width),
+                bin(num)[2:].rjust(width),
+            )
+        )
     # return each output on a new line
     return "\n".join(result)
 

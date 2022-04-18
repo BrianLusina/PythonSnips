@@ -14,8 +14,10 @@ class Luhn(object):
             return (2 * val - 9) if (val > 4) else (2 * val)
 
         dig = [int(d) for d in str(self.number)]
-        return [(transform(x) if (i % 2 == 0) else x)
-                for i, x in enumerate(dig, start=len(dig) % 2)]
+        return [
+            (transform(x) if (i % 2 == 0) else x)
+            for i, x in enumerate(dig, start=len(dig) % 2)
+        ]
 
     def checksum(self):
         return sum(self.addends())

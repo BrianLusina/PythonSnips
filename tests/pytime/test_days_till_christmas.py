@@ -36,5 +36,5 @@ class DaysTillXmasTestCases(unittest.TestCase):
         self.assertEqual(days_until_christmas(date(2015, 12, 26)), 365)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

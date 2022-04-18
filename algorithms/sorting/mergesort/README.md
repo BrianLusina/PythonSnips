@@ -1,3 +1,3 @@
-# Merge Sort 
+# Merge Sort
 
 Merge sort algorithm

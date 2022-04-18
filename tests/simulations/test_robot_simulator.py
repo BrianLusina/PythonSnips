@@ -1,10 +1,9 @@
 import unittest
 
-from simulations.robot_simulator import Robot, NORTH, EAST, SOUTH, WEST
+from simulations.robot_simulator import EAST, NORTH, SOUTH, WEST, Robot
 
 
 class RobotTests(unittest.TestCase):
-
     def test_init(self):
         robot = Robot()
         self.assertEqual((0, 0), robot.coordinates)
@@ -70,5 +69,5 @@ class RobotTests(unittest.TestCase):
         self.assertEqual(NORTH, robot.bearing)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

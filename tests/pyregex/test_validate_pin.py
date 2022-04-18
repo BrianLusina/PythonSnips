@@ -14,5 +14,5 @@ class ValidatePinTests(unittest.TestCase):
         self.assertEqual(validate_pin("a234"), False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

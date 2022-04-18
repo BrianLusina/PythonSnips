@@ -10,9 +10,10 @@ source = Observable.from_(greek_words)
 source.subscribe(
     on_next=lambda value: print("Received {}".format(value)),
     on_error=lambda error: print("Error encounted {}".format(error)),
-    on_completed=lambda: print("Done")
+    on_completed=lambda: print("Done"),
 )
 print(
-    "We can even eliminate the on_<> callbacks in the subscriber and simply use the on_next callback, not recommended in production")
+    "We can even eliminate the on_<> callbacks in the subscriber and simply use the on_next callback, not recommended in production"
+)
 
 source.subscribe(lambda value: print("Recieved {}".format(value)))

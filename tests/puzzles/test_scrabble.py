@@ -5,16 +5,16 @@ from puzzles.scrabble import score
 
 class WordTest(unittest.TestCase):
     def test_invalid_word_scores_zero(self):
-        self.assertEqual(0, score(''))
-        self.assertEqual(0, score(' \t\n'))
-        self.assertEqual(0, score('hous3'))
-        self.assertEqual(0, score('wo rd'))
+        self.assertEqual(0, score(""))
+        self.assertEqual(0, score(" \t\n"))
+        self.assertEqual(0, score("hous3"))
+        self.assertEqual(0, score("wo rd"))
 
     def test_scores_very_short_word(self):
-        self.assertEqual(1, score('a'))
+        self.assertEqual(1, score("a"))
 
     def test_scores_other_very_short_word(self):
-        self.assertEqual(4, score('f'))
+        self.assertEqual(4, score("f"))
 
     def test_simple_word_the_number_of_letters(self):
         self.assertEqual(6, score("street"))
@@ -26,5 +26,5 @@ class WordTest(unittest.TestCase):
         self.assertEqual(41, score("OxyphenButazone"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

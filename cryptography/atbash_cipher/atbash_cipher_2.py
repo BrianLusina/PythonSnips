@@ -11,13 +11,12 @@ trtbl = maketrans(ascii_lowercase, ascii_lowercase[::-1])
 
 
 def base_trans(text):
-    return ''.join([c for c in text if c.isalnum()]).lower().translate(trtbl)
+    return "".join([c for c in text if c.isalnum()]).lower().translate(trtbl)
 
 
 def encode(plain):
     cipher = base_trans(plain)
-    return " ".join([cipher[i:i + BLKSZ]
-                     for i in range(0, len(cipher), BLKSZ)])
+    return " ".join([cipher[i : i + BLKSZ] for i in range(0, len(cipher), BLKSZ)])
 
 
 def decode(ciphered):

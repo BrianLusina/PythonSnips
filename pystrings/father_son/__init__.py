@@ -7,4 +7,4 @@ def sc(s):
         elif c.islower():
             if chr(ord(c) - 32) in s:
                 ret.append(c)
-    return ''.join(ret)
+    return "".join(ret)

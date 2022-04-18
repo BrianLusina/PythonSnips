@@ -9,13 +9,16 @@ except ImportError:
 from pysnips import constants
 
 setup(
-    name='PySnips',
+    name="PySnips",
     version=constants.__VERSION__,
-    description='A Python library containing small Python algorithms',
-    author='Brian Lusina (@BrianLusina)',
-    author_email='lusinabrian@gmail.com',
-    url='https://github.com/BrianLusina/Python_Snippets',
-    packages=['pysnips', 'tests', ],
+    description="A Python library containing small Python algorithms",
+    author="Brian Lusina (@BrianLusina)",
+    author_email="lusinabrian@gmail.com",
+    url="https://github.com/BrianLusina/Python_Snippets",
+    packages=[
+        "pysnips",
+        "tests",
+    ],
     install_requires=open("requirements.txt").readlines(),
     long_description=open("README.md").read(),
     classifiers=[
@@ -25,11 +28,10 @@ setup(
         "Operating System :: OS Independent",
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "Topic :: Software Development :: Libraries"],
-    package_data={
-        '': ['*.txt', '*.xsd']
-    },
-    keywords='Python snippets and algorithms',
-    license='MIT',
-    test_suite='tests',
+        "Topic :: Software Development :: Libraries",
+    ],
+    package_data={"": ["*.txt", "*.xsd"]},
+    keywords="Python snippets and algorithms",
+    license="MIT",
+    test_suite="tests",
 )

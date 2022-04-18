@@ -2,7 +2,8 @@ import os
 import tempfile
 import unittest
 
-from mock import patch, create_autospec
+from mock import create_autospec, patch
+
 from utils.mocking_sample import RemovalService, UploadService
 
 
@@ -13,7 +14,9 @@ class MockingSampleTestCases(unittest.TestCase):
         with open(self.tmpfilepath, "wb") as file:
             file.write(b"DELETE ME!")
 
-    def test_rm(self, ):
+    def test_rm(
+        self,
+    ):
         """>>>> Testing removing a file"""
         RemovalService.rm(self.tmpfilepath)
         # test that the file was actually removed
@@ -35,7 +38,9 @@ class MockingSampleTestCases(unittest.TestCase):
         RemovalService.rm("any path")
 
         # test that the remove call was not called
-        self.assertFalse(mock_os.remove.called, "Failed to remove the file if not present")
+        self.assertFalse(
+            mock_os.remove.called, "Failed to remove the file if not present"
+        )
 
         # make the file exist
         mock_path.isfile.return_value = True
@@ -57,7 +62,9 @@ class MockingSampleTestCases(unittest.TestCase):
         reference.rm("any path")
 
         # test that the remove call was not called
-        self.assertFalse(mock_os.remove.called, "Failed to remove the file if not present")
+        self.assertFalse(
+            mock_os.remove.called, "Failed to remove the file if not present"
+        )
 
         # make the file exist
         mock_path.isfile.return_value = True
@@ -102,5 +109,5 @@ class UploadServiceTestCases(unittest.TestCase):
         mock_removal_service.rm.assert_called_with("uploaded file")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

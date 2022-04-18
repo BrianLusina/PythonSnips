@@ -1,4 +1,4 @@
-from datastructures.linked_lists.doubly_linked_list import DoublyLinkedList, DoubleNode
+from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
 
 
 class LRUCache(object):

@@ -5,6 +5,7 @@ class MotorCycle(Vehicle):
     """
     Subclass of *Vehicle* class
     """
+
     wheels = 2
     no_of_seats = 1
 

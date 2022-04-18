@@ -29,5 +29,5 @@ class FindIfPathExistsInGraphTestCases(unittest.TestCase):
         self.assertTrue(valid_path(n, edges, start, end))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

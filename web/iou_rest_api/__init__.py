@@ -1,5 +1,5 @@
 import json
-from typing import Dict, Optional, List
+from typing import Dict, List, Optional
 
 
 def json_io(func):
@@ -18,8 +18,13 @@ def json_io(func):
 
 
 class User:
-    def __init__(self, name: str, owes: Optional[Dict[str, float]] = None, owed_by: Optional[Dict[str, float]] = None,
-                 **kwargs):
+    def __init__(
+        self,
+        name: str,
+        owes: Optional[Dict[str, float]] = None,
+        owed_by: Optional[Dict[str, float]] = None,
+        **kwargs,
+    ):
         if name != "":
             self.name = name
         else:
@@ -60,19 +65,28 @@ class User:
             "name": self.name,
             "owes": self.owes,
             "owed_by": self.owed_by,
-            "balance": self.balance
+            "balance": self.balance,
         }
 
 
 class RestAPI:
     def __init__(self, database: Optional[Dict[str, List[Dict]]] = None):
-        self.database = {user["name"]: User(**user) for user in (database or {}).get("users", [])}
+        self.database = {
+            user["name"]: User(**user) for user in (database or {}).get("users", [])
+        }
 
     @json_io
-    def get(self, url: str, payload: Optional[Dict[str, List]] = None) -> Optional[Dict]:
+    def get(
+        self, url: str, payload: Optional[Dict[str, List]] = None
+    ) -> Optional[Dict]:
         if url == "/users":
-            return {"users": [user.__dict__ for name, user in sorted(self.database.items()) if
-                              payload is None or name in payload["users"]]}
+            return {
+                "users": [
+                    user.__dict__
+                    for name, user in sorted(self.database.items())
+                    if payload is None or name in payload["users"]
+                ]
+            }
 
     @json_io
     def post(self, url: str, payload: Optional[Dict] = None) -> Optional[Dict]:
@@ -87,4 +101,8 @@ class RestAPI:
             amount = payload["amount"]
             lender.loan(borrower.name, amount)
             borrower.borrow(lender.name, amount)
-            return {"users": sorted([lender.__dict__, borrower.__dict__], key=lambda x: x["name"])}
+            return {
+                "users": sorted(
+                    [lender.__dict__, borrower.__dict__], key=lambda x: x["name"]
+                )
+            }

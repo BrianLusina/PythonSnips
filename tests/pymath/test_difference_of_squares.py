@@ -4,7 +4,6 @@ from pymath.difference_of_squares import difference, square_of_sum, sum_of_squar
 
 
 class DifferenceOfSquaresTest(unittest.TestCase):
-
     def test_square_of_sum_5(self):
         self.assertEqual(225, square_of_sum(5))
 
@@ -24,5 +23,5 @@ class DifferenceOfSquaresTest(unittest.TestCase):
         self.assertEqual(25164150, difference(100))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

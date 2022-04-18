@@ -12,7 +12,7 @@ def draw_art():
     window.bgcolor("red")
 
     my_turtle = turtle.Turtle()
-    my_turtle.shape('turtle')
+    my_turtle.shape("turtle")
     for i in range(1, 37):
         draw_square(my_turtle)
         my_turtle.right(10)

@@ -13,7 +13,12 @@ class QFormula(object):
 
     # using list compression
     def q_formula_compress(self):
-        return ",".join([str(math.sqrt((float(x) * self.constant_c * 2) / self.constant_h)) for x in self.number_list])
+        return ",".join(
+            [
+                str(math.sqrt((float(x) * self.constant_c * 2) / self.constant_h))
+                for x in self.number_list
+            ]
+        )
 
     # using simple for loop
     def q_formula_simple(self):

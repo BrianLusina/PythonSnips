@@ -20,5 +20,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(productFib(20), [5, 8, False])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

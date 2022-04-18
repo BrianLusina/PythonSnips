@@ -5,10 +5,12 @@ from pystrings.balanced_paren import balanced_parens
 
 class BalancedParensTestCase(unittest.TestCase):
     def sample_tests(self):
-        for n, exp in [[0, [""]],
-                       [1, ["()"]],
-                       [2, ["(())", "()()"]],
-                       [3, ["((()))", "(()())", "(())()", "()(())", "()()()"]]]:
+        for n, exp in [
+            [0, [""]],
+            [1, ["()"]],
+            [2, ["(())", "()()"]],
+            [3, ["((()))", "(()())", "(())()", "()(())", "()()()"]],
+        ]:
             actual = balanced_parens(n)
             actual.sort()
             self.assertEqual(actual, exp)
@@ -22,11 +24,11 @@ class BalancedParensTestCase(unittest.TestCase):
                 yield "".join(s)
                 return
             if open_count > close_count:
-                s.append(')')
+                s.append(")")
                 yield from dfs(s, open_count, close_count + 1, max_p)
                 s.pop()
             if open_count < max_p:
-                s.append('(')
+                s.append("(")
                 yield from dfs(s, open_count + 1, close_count, max_p)
                 s.pop()
 
@@ -40,10 +42,10 @@ class BalancedParensTestCase(unittest.TestCase):
             exp.sort()
             act.sort()
             if len(exp) > 1000:
-                self.assertEqual(exp == act, 'Nope...(n={})'.format(n))
+                self.assertEqual(exp == act, "Nope...(n={})".format(n))
             else:
                 self.assertEqual(act, exp)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

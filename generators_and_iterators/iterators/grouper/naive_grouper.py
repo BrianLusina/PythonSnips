@@ -15,7 +15,7 @@ def naive_grouper(inputs, n):
     :rtype: list
     """
     num_of_groups = len(inputs) // n
-    return [tuple(inputs[i * n: (i + 1) * n]) for i in range(num_of_groups)]
+    return [tuple(inputs[i * n : (i + 1) * n]) for i in range(num_of_groups)]
 
 
 for _ in naive_grouper(range(1000000000), 10):

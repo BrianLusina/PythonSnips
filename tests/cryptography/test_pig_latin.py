@@ -50,5 +50,5 @@ class PigLatinTests(unittest.TestCase):
         self.assertEqual("xrayay", translate("xray"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

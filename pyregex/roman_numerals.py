@@ -10,8 +10,8 @@ def check_roman_numerals(phrase):
     :param phrase: word, sentence or roman numeral
     :return: True if a valid roman numeral is found
     """
-    thousand = 'M{0,3}'
-    hundred = '(C[MD]|D?C{0,3})'
-    ten = '(X[CL]|L?X{0,3})'
-    digit = '(I[VX]|V?I{0,3})'
-    return bool(re.match(thousand + hundred + ten + digit + '$', phrase))
+    thousand = "M{0,3}"
+    hundred = "(C[MD]|D?C{0,3})"
+    ten = "(X[CL]|L?X{0,3})"
+    digit = "(I[VX]|V?I{0,3})"
+    return bool(re.match(thousand + hundred + ten + digit + "$", phrase))

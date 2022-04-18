@@ -1,6 +1,10 @@
-TAX_RATES = {0 / 100: range(0, 1001), 10 / 100: range(1000, 10001), 15 / 100: range(10000, 20201),
-             20 / 100: range(20200, 30751),
-             25 / 100: range(30750, 50001)}
+TAX_RATES = {
+    0 / 100: range(0, 1001),
+    10 / 100: range(1000, 10001),
+    15 / 100: range(10000, 20201),
+    20 / 100: range(20200, 30751),
+    25 / 100: range(30750, 50001),
+}
 
 
 # , 30: 50000
@@ -49,8 +53,4 @@ def results(person, result, rate):
     return result
 
 
-print(calculate_tax({
-    "James": 20500,
-    "Alex": 500,
-    "Kinuthia": 70000
-}))
+print(calculate_tax({"James": 20500, "Alex": 500, "Kinuthia": 70000}))

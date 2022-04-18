@@ -11,5 +11,5 @@ class LargestPalindromeProductTestCase(unittest.TestCase):
         self.assertEqual(906609, find_largest_palindrome_product(3))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -30,7 +30,7 @@ class FileMatcher(object):
         file_dict = {}
         for file in filenames:
             if os.path.isfile(file):
-                file_dict[file[:file.index(".")]] = os.path.abspath(file)
+                file_dict[file[: file.index(".")]] = os.path.abspath(file)
         return file_dict
 
     def get_dirs_in_destination(self):
@@ -59,4 +59,7 @@ class FileMatcher(object):
             for file in self.list_files_in_dir().keys():
                 if dir_name.lower() == file:
                     # copy the file to the directory
-                    shutil.move(self.list_files_in_dir()[file], self.get_dirs_in_destination()[dir_name])
+                    shutil.move(
+                        self.list_files_in_dir()[file],
+                        self.get_dirs_in_destination()[dir_name],
+                    )

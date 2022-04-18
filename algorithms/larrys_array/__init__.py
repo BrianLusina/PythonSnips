@@ -5,11 +5,16 @@ import os
 
 # Complete the larrysArray function below.
 def larrysArray(A):
-    return "NO" if sum([1 for i in range(len(A)) for j in range(i + 1, len(A)) if A[i] > A[j]]) % 2 else "YES"
+    return (
+        "NO"
+        if sum([1 for i in range(len(A)) for j in range(i + 1, len(A)) if A[i] > A[j]])
+        % 2
+        else "YES"
+    )
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     t = int(input())
 
@@ -20,6 +25,6 @@ if __name__ == '__main__':
 
         result = larrysArray(A)
 
-        fptr.write(result + '\n')
+        fptr.write(result + "\n")
 
     fptr.close()

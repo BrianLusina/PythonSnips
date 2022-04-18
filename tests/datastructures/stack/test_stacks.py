@@ -38,7 +38,9 @@ class StackTestCase(unittest.TestCase):
         stack.push("Python")
         stack.push("Java")
         stack.push("JavaScript")
-        self.assertEqual("JavaScript", stack.peek(), "Expected last item added to be JavaScript")
+        self.assertEqual(
+            "JavaScript", stack.peek(), "Expected last item added to be JavaScript"
+        )
 
     def test_push_diff_types(self):
         stack = Stack(5)
@@ -47,8 +49,10 @@ class StackTestCase(unittest.TestCase):
         stack.push(dict(brian="Brian", lusina="Lusina", ombito="Ombito"))
         stack.push((1, 5))
         stack.push(range(5))
-        self.assertEqual(range(5), stack.peek(), "Expected last item added to be a range")
+        self.assertEqual(
+            range(5), stack.peek(), "Expected last item added to be a range"
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

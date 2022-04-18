@@ -4,7 +4,6 @@ from pymath.perfect_numbers import is_perfect
 
 
 class PerfectNumbersTest(unittest.TestCase):
-
     def test_first_perfect_number(self):
         self.assertTrue(is_perfect(6))
 
@@ -39,5 +38,5 @@ class PerfectNumbersTest(unittest.TestCase):
         self.assertTrue(is_perfect(137438691328))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -28,17 +28,30 @@ class UserData(object):
             user_id = int(uid)
             # pprint(data)
             for x in data:
-                if x.get('id') == user_id:
-                    print("---" * 10 + "\n" +
-                          "User Found...\n" +
-                          "---" * 10 + "\n" +
-                          "ID: " + str(x.get('id')) + "\n" +
-                          "First Name: " + x.get('first_name') + "\n" +
-                          "Last Name: " + x.get("last_name") + "\n" +
-                          "Gender: " + x.get('gender') + "\n" +
-                          "Email: " + x.get('email') + "\n" +
-                          "---" * 10
-                          )
+                if x.get("id") == user_id:
+                    print(
+                        "---" * 10
+                        + "\n"
+                        + "User Found...\n"
+                        + "---" * 10
+                        + "\n"
+                        + "ID: "
+                        + str(x.get("id"))
+                        + "\n"
+                        + "First Name: "
+                        + x.get("first_name")
+                        + "\n"
+                        + "Last Name: "
+                        + x.get("last_name")
+                        + "\n"
+                        + "Gender: "
+                        + x.get("gender")
+                        + "\n"
+                        + "Email: "
+                        + x.get("email")
+                        + "\n"
+                        + "---" * 10
+                    )
         else:
             print("Please enter a valid id")
 
@@ -53,9 +66,9 @@ class UserData(object):
         male_count, female_count = 0, 0
 
         for x in data:
-            if x.get('gender') == "Male":
+            if x.get("gender") == "Male":
                 male_count += 1
-            elif x.get('gender') == "Female":
+            elif x.get("gender") == "Female":
                 female_count += 1
         print([["Males", male_count], ["Females", female_count]])
 
@@ -70,7 +83,7 @@ class UserData(object):
     @staticmethod
     def data_sorter():
         sorted_data = []
-        firsts = [user.get('first_name') for user in data]
+        firsts = [user.get("first_name") for user in data]
 
         user_request = input("Reverse Data?(y/n)")
         if user_request == "y" or user_request == "Y":

@@ -1,11 +1,22 @@
 import unittest
 
-from pymath.calc_with_functions import seven, five, divided_by, six, minus, plus, times, eight, nine, \
-    four, three, two
+from pymath.calc_with_functions import (
+    divided_by,
+    eight,
+    five,
+    four,
+    minus,
+    nine,
+    plus,
+    seven,
+    six,
+    three,
+    times,
+    two,
+)
 
 
 class CalcWithFuncs(unittest.TestCase):
-
     @unittest.skip
     def test_seven_times_five(self):
         self.assertEqual(seven(times(five())), 35)

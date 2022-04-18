@@ -1,5 +1,7 @@
 from functools import wraps
-from math import factorial as math_factorial, sqrt, pi, e
+from math import e
+from math import factorial as math_factorial
+from math import pi, sqrt
 
 
 def memoize(func):
@@ -15,7 +17,7 @@ def memoize(func):
 
 
 def memodict(f):
-    """ Memoization decorator for a function taking a single argument """
+    """Memoization decorator for a function taking a single argument"""
 
     class memodict(dict):
         def __missing__(self, key):

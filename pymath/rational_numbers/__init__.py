@@ -32,7 +32,7 @@ class Rational(object):
         return Rational(self.numer * other.numer, self.denom * other.denom)
 
     def __truediv__(self, other):
-        return self * (other ** -1)
+        return self * (other**-1)
 
     def __abs__(self):
         return Rational(abs(self.numer), self.denom)
@@ -41,7 +41,7 @@ class Rational(object):
         if power < 0:
             self.numer, self.denom = self.denom, self.numer
             power = -power
-        return Rational(self.numer ** power, self.denom ** power)
+        return Rational(self.numer**power, self.denom**power)
 
     def __rpow__(self, base):
         return base ** (self.numer / self.denom)

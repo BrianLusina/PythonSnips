@@ -3,7 +3,14 @@ from .vehicle import Vehicle
 
 
 class ParkingSpot(object):
-    def __init__(self, level: int, row: int, spot_number: int, spot_size: int, vehicle_size: VehicleSize):
+    def __init__(
+        self,
+        level: int,
+        row: int,
+        spot_number: int,
+        spot_size: int,
+        vehicle_size: VehicleSize,
+    ):
         self.level = level
         self.row = row
         self.spot_number = spot_number

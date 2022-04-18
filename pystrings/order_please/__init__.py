@@ -24,4 +24,4 @@ def order(sentence):
 
 
 def order_2(words):
-    return ' '.join(sorted(words.split(), key=lambda w: sorted(w)))
+    return " ".join(sorted(words.split(), key=lambda w: sorted(w)))

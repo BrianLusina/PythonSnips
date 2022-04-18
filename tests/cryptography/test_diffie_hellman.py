@@ -1,10 +1,9 @@
 import unittest
 
-from cryptography.diffie_hellman import private_key, secret, public_key
+from cryptography.diffie_hellman import private_key, public_key, secret
 
 
 class DiffieHellmanTest(unittest.TestCase):
-
     def test_private_key_is_in_range(self):
         primes = [5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
         for i in primes:
@@ -50,5 +49,5 @@ class DiffieHellmanTest(unittest.TestCase):
         self.assertEqual(secret_a, secret_b)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

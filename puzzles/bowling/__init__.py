@@ -18,11 +18,12 @@ class BowlingGame(object):
             self.bonusRollsSeen += 1
 
         # is the second roll valid based off the first?
-        if (self.currentFrame.isOpen() and
-                self.currentFrame.getFrame()[0] is not None):
+        if self.currentFrame.isOpen() and self.currentFrame.getFrame()[0] is not None:
             if self.currentFrame.getFrame()[0] + pins > MAX_PINS:
-                raise ValueError("This roll will cause the current frame  "
-                                 "to be getter than the max number of pins")
+                raise ValueError(
+                    "This roll will cause the current frame  "
+                    "to be getter than the max number of pins"
+                )
 
         # open a new frame if the last one has been closed
         if not self.currentFrame.isOpen():
@@ -31,15 +32,15 @@ class BowlingGame(object):
         # valid roll between 0-10
         if pins in range(MAX_PINS + 1):
             # raise an error if the game is over and they try to roll again
-            if ((len(self.rolls) == NUM_FRAMES) and
-                    self.bonusRollsAccrued == 0):
-                raise IndexError("Max Frames have been reached.  Too many "
-                                 "rolls")
+            if (len(self.rolls) == NUM_FRAMES) and self.bonusRollsAccrued == 0:
+                raise IndexError("Max Frames have been reached.  Too many " "rolls")
             else:
-                self.currentFrame.roll(pins,
-                                       self.isBonusRoll(),
-                                       self.bonusRollsAccrued,
-                                       self.bonusRollsSeen)
+                self.currentFrame.roll(
+                    pins,
+                    self.isBonusRoll(),
+                    self.bonusRollsAccrued,
+                    self.bonusRollsSeen,
+                )
                 # if we closed it add it to our rolls
                 if not self.currentFrame.isOpen():
                     self.rolls.append(self.currentFrame)
@@ -47,13 +48,14 @@ class BowlingGame(object):
                     if len(self.rolls) == NUM_FRAMES:
                         self.bonusRollsEarned()
         else:
-            raise ValueError("Amount of pins rolled is greater than the max "
-                             "number of pins")
+            raise ValueError(
+                "Amount of pins rolled is greater than the max " "number of pins"
+            )
 
     def score(self):
         frame_index = 0
 
-        while (frame_index <= NUM_FRAMES - 1):
+        while frame_index <= NUM_FRAMES - 1:
             frame = self.rolls[frame_index].getFrame()
 
             roll1 = frame[0]
@@ -63,8 +65,7 @@ class BowlingGame(object):
                 self.totalScore += roll1 + self.stikeBonus(frame_index)
             else:
                 if self.isSpare(roll1, roll2):
-                    self.totalScore += roll1 + roll2 + \
-                                       self.spareBonus(frame_index)
+                    self.totalScore += roll1 + roll2 + self.spareBonus(frame_index)
                 else:
                     self.totalScore += roll1 + roll2
 
@@ -88,10 +89,10 @@ class BowlingGame(object):
             bonusroll2 = self.rolls[frame_index + 1].getFrame()[1]
         # edge case - if the last roll is a stike the bonus rolls needs to be
         # validated
-        if (not self.isStrike(bonusroll1) and
-                (bonusroll1 + bonusroll2 > MAX_PINS)):
-            raise ValueError("The bonus rolls total to greater than the max "
-                             "number of pins")
+        if not self.isStrike(bonusroll1) and (bonusroll1 + bonusroll2 > MAX_PINS):
+            raise ValueError(
+                "The bonus rolls total to greater than the max " "number of pins"
+            )
         else:
             return bonusroll1 + bonusroll2
 

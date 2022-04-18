@@ -1,6 +1,6 @@
 """
 Demonstration of using generators to find prime numbers. This will demonstrate using
-custom classes with the __iter__ and __next__ functions and using generator expressions to 
+custom classes with the __iter__ and __next__ functions and using generator expressions to
 achieve the same outcome
 """
 
@@ -14,7 +14,7 @@ def check_prime(number):
     :param: number Number to evaluate for primality
     :rtype: bool True if the number is a prime, false otherwise
     """
-    for divisor in range(2, int(number ** 0.5) + 1):
+    for divisor in range(2, int(number**0.5) + 1):
         if number % divisor == 0:
             return False
     return True
@@ -66,13 +66,13 @@ def prime_generator(max_number):
 prime_expression = (x for x in range(2, max_number) if check_prime(x))
 
 if __name__ == "__main__":
+
     def custom_iterator(number):
         print("Using custom generator")
         primes = Primes(number)
         print(primes)
         for x in primes:
             print(x)
-
 
     custom_iterator(max_number)
 

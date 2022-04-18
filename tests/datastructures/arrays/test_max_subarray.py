@@ -4,13 +4,12 @@ from datastructures.arrays.max_subarray import find_max_sub_array
 
 
 class MaxSubArrayTestCases(unittest.TestCase):
-
     def test_empty_array(self):
         nums = []
         expected = 0
         actual = find_max_sub_array(nums)
         self.assertEqual(expected, actual)
-    
+
     def test_single_element_array(self):
         nums = [1]
         expected = 1
@@ -30,5 +29,5 @@ class MaxSubArrayTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

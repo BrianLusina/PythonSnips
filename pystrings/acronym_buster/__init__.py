@@ -2,15 +2,15 @@ import re
 from functools import reduce
 
 ACRONYMS = {
-    'KPI': "key performance indicators",
-    'EOD': "the end of the day",
-    'TBD': "to be decided",
-    'WAH': "work at home",
-    'IAM': "in a meeting",
-    'OOO': "out of office",
-    'NRN': "no reply necessary",
-    'CTA': "call to action",
-    'SWOT': "strengths, weaknesses, opportunities and threats",
+    "KPI": "key performance indicators",
+    "EOD": "the end of the day",
+    "TBD": "to be decided",
+    "WAH": "work at home",
+    "IAM": "in a meeting",
+    "OOO": "out of office",
+    "NRN": "no reply necessary",
+    "CTA": "call to action",
+    "SWOT": "strengths, weaknesses, opportunities and threats",
 }
 
 ACRONYM_PATTERN = re.compile(r"\b[A-Z]{3,}\b")
@@ -33,6 +33,8 @@ def acronym_buster(message):
     try:
         # find all matching groups with .finditer using next and get the first acronym that is not allows
         acronym = next(ACRONYM_PATTERN.finditer(message)).group(0)
-        return "{} is an acronym. I do not like acronyms. Please remove them from your email.".format(acronym)
+        return "{} is an acronym. I do not like acronyms. Please remove them from your email.".format(
+            acronym
+        )
     except StopIteration:
         return CAPITAL_PATTERN.sub(CAPITAL_FIX, message)

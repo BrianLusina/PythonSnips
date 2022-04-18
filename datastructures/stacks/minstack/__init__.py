@@ -2,7 +2,6 @@ from .. import Stack
 
 
 class MinStack(Stack):
-
     def __init__(self, maxsize: int = None):
         """
         Initializes a Minimum stack with a max size defaulted to None. If set to None, the min stack has no upper bound

@@ -7,33 +7,38 @@ from algorithms.allergies import Allergies
 class AllergiesTests(unittest.TestCase):
     def test_no_allergies_means_not_allergic(self):
         allergies = Allergies(0)
-        self.assertFalse(allergies.is_allergic_to('peanuts'))
-        self.assertFalse(allergies.is_allergic_to('cats'))
-        self.assertFalse(allergies.is_allergic_to('strawberries'))
+        self.assertFalse(allergies.is_allergic_to("peanuts"))
+        self.assertFalse(allergies.is_allergic_to("cats"))
+        self.assertFalse(allergies.is_allergic_to("strawberries"))
 
     def test_is_allergic_to_eggs(self):
-        self.assertTrue(Allergies(1).is_allergic_to('eggs'))
+        self.assertTrue(Allergies(1).is_allergic_to("eggs"))
 
     def test_has_the_right_allergies(self):
         allergies = Allergies(5)
-        self.assertTrue(allergies.is_allergic_to('eggs'))
-        self.assertTrue(allergies.is_allergic_to('shellfish'))
-        self.assertFalse(allergies.is_allergic_to('strawberries'))
+        self.assertTrue(allergies.is_allergic_to("eggs"))
+        self.assertTrue(allergies.is_allergic_to("shellfish"))
+        self.assertFalse(allergies.is_allergic_to("strawberries"))
 
     def test_no_allergies_at_all(self):
         self.assertEqual(Allergies(0).allergies(), [])
 
     def test_allergic_to_just_peanuts(self):
-        self.assertEqual(Allergies(2).allergies(), ['peanuts'])
+        self.assertEqual(Allergies(2).allergies(), ["peanuts"])
 
     def test_allergic_to_everything(self):
-        self.assertEqual(Allergies(255).allergies(),
-                         sorted(('eggs peanuts shellfish strawberries tomatoes '
-                                 'chocolate pollen cats').split())
-                         )
+        self.assertEqual(
+            Allergies(255).allergies(),
+            sorted(
+                (
+                    "eggs peanuts shellfish strawberries tomatoes "
+                    "chocolate pollen cats"
+                ).split()
+            ),
+        )
 
     def test_ignore_non_allergen_score_parts(self):
-        self.assertEqual(['eggs'], Allergies(257).allergies())
+        self.assertEqual(["eggs"], Allergies(257).allergies())
 
     def test_not_allergic_at_score_256(self):
         self.assertEqual(Allergies(256).allergies(), [])
@@ -61,18 +66,20 @@ class AllergiesTests(unittest.TestCase):
             Allergies(None)
 
     def test_allergic_with_score_of_1000(self):
-        self.assertEqual(Allergies(1000).allergies(), ["cats", "chocolate", "pollen", "strawberries"])
+        self.assertEqual(
+            Allergies(1000).allergies(), ["cats", "chocolate", "pollen", "strawberries"]
+        )
 
     class MyAllergies(object):
         ALLERGY_SCORES = {
-            'eggs': 1,
-            'peanuts': 2,
-            'shellfish': 4,
-            'strawberries': 8,
-            'tomatoes': 16,
-            'chocolate': 32,
-            'pollen': 64,
-            'cats': 128
+            "eggs": 1,
+            "peanuts": 2,
+            "shellfish": 4,
+            "strawberries": 8,
+            "tomatoes": 16,
+            "chocolate": 32,
+            "pollen": 64,
+            "cats": 128,
         }
 
         def __init__(self, score):
@@ -95,16 +102,32 @@ class AllergiesTests(unittest.TestCase):
             :return: a sorted list of all the allergies
              :rtype: list
             """
-            return sorted(list(allergy for allergy in self.ALLERGY_SCORES if
-                               self.is_allergic_to(allergy)))
+            return sorted(
+                list(
+                    allergy
+                    for allergy in self.ALLERGY_SCORES
+                    if self.is_allergic_to(allergy)
+                )
+            )
 
     def test_random_number_input(self):
         x = random.randrange(255, 2000)
         self.assertEqual(Allergies(x).allergies(), self.MyAllergies(x).allergies())
 
     def test_negative_numbers(self):
-        self.assertEqual(Allergies(-1).allergies(), ['cats', 'chocolate', 'eggs', 'peanuts',
-                                                     'pollen', 'shellfish', 'strawberries', 'tomatoes'])
+        self.assertEqual(
+            Allergies(-1).allergies(),
+            [
+                "cats",
+                "chocolate",
+                "eggs",
+                "peanuts",
+                "pollen",
+                "shellfish",
+                "strawberries",
+                "tomatoes",
+            ],
+        )
 
     def test_random_numbers(self):
         for x in range(1000, 1500):
@@ -112,5 +135,5 @@ class AllergiesTests(unittest.TestCase):
             self.assertEqual(Allergies(y).allergies(), self.MyAllergies(y).allergies())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

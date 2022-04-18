@@ -24,8 +24,10 @@ def is_prime_with_re(num):
     :return: True /False
     :rtype: bool
     """
-    return re.match(r'^1?$|^(11+?)\1+$', "1" * num) is None
+    return re.match(r"^1?$|^(11+?)\1+$", "1" * num) is None
 
 
 def divisors(n):
-    return len([1, n]) if is_prime(n) else len([x for x in range(1, n + 1) if n % x == 0])
+    return (
+        len([1, n]) if is_prime(n) else len([x for x in range(1, n + 1) if n % x == 0])
+    )

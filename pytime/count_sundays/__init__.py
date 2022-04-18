@@ -34,4 +34,6 @@ def count_sundays_in_20th_century():
 
 
 if __name__ == "__main__":
-    print(f"Number of Sundays in 20th Century that fall on the 1st of the month are {count_sundays_in_20th_century()}")
+    print(
+        f"Number of Sundays in 20th Century that fall on the 1st of the month are {count_sundays_in_20th_century()}"
+    )

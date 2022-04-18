@@ -10,12 +10,12 @@ from ObjectOriented.AlienGame.thebridge import TheBridge
 
 class StartGame(Map):
     __scenes = {
-        'central_corridor': CentralCorridor(),
-        'laser_weapon_armory': LaserWeaponArmory(),
-        'the_bridge': TheBridge(),
-        'escape_pod': EscapePod(),
-        'death': Death(),
-        'finished': Finished(),
+        "central_corridor": CentralCorridor(),
+        "laser_weapon_armory": LaserWeaponArmory(),
+        "the_bridge": TheBridge(),
+        "escape_pod": EscapePod(),
+        "death": Death(),
+        "finished": Finished(),
     }
 
     def next_scene(self, scene_name):
@@ -26,6 +26,6 @@ class StartGame(Map):
         return self.next_scene(self.start_scene)
 
 
-a_map = StartGame('central_corridor')
+a_map = StartGame("central_corridor")
 a_game = EngineX(a_map)
 a_game.play()

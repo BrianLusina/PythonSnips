@@ -20,7 +20,9 @@ class ThroneInheritanceTestCase(unittest.TestCase):
         t.birth("king", "andy")
         t.birth("king", "bob")
         t.birth("king", "catherine")
-        self.assertEqual(["king", "andy", "bob", "catherine"], t.get_inheritance_order())
+        self.assertEqual(
+            ["king", "andy", "bob", "catherine"], t.get_inheritance_order()
+        )
 
     def test_order_with_grand_children_one(self):
         t = ThroneInheritance("king")
@@ -28,7 +30,9 @@ class ThroneInheritanceTestCase(unittest.TestCase):
         t.birth("king", "bob")
         t.birth("king", "catherine")
         t.birth("andy", "mathew")
-        self.assertEqual(["king", "andy", "mathew", "bob", "catherine"], t.get_inheritance_order())
+        self.assertEqual(
+            ["king", "andy", "mathew", "bob", "catherine"], t.get_inheritance_order()
+        )
 
     def test_order_with_grand_children_two(self):
         t = ThroneInheritance("king")
@@ -38,7 +42,10 @@ class ThroneInheritanceTestCase(unittest.TestCase):
         t.birth("andy", "mathew")
         t.birth("bob", "alex")
         t.birth("bob", "asha")
-        self.assertEqual(["king", "andy", "mathew", "bob", "alex", "asha", "catherine"], t.get_inheritance_order())
+        self.assertEqual(
+            ["king", "andy", "mathew", "bob", "alex", "asha", "catherine"],
+            t.get_inheritance_order(),
+        )
 
     def test_order_with_one_death(self):
         t = ThroneInheritance("king")
@@ -49,8 +56,11 @@ class ThroneInheritanceTestCase(unittest.TestCase):
         t.birth("bob", "alex")
         t.birth("bob", "asha")
         t.death("bob")
-        self.assertEqual(["king", "andy", "mathew", "alex", "asha", "catherine"], t.get_inheritance_order())
+        self.assertEqual(
+            ["king", "andy", "mathew", "alex", "asha", "catherine"],
+            t.get_inheritance_order(),
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

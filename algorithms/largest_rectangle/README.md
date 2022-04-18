@@ -8,7 +8,7 @@ k * min(h[i]), h[i + 1], ..., h[i + k - 1])
 Example:
 h = [3,2,3]
 
-A rectangle of height h = 2 and length k = 3 can be constructed within the boundaries. The area formed is: 
+A rectangle of height h = 2 and length k = 3 can be constructed within the boundaries. The area formed is:
 h * k = 2 * 3 = 6
 
 Function Description

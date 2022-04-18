@@ -1,5 +1,6 @@
-from abc import abstractmethod, ABC
+from abc import ABC, abstractmethod
 from typing import Any
+
 from ..binary_tree.binary_tree_node import BinaryTreeNode
 
 
@@ -10,7 +11,6 @@ class HeapNode(BinaryTreeNode):
 
 
 class Heap(ABC):
-
     def __init__(self):
         self.heap_dict = {}
         self.idx_of_element = {}

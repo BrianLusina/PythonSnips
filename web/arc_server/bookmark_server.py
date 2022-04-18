@@ -3,7 +3,7 @@ Simple sample of a url shortening server that gets requests from a client with i
  long url the client would like to shorten and the short url they would like to shorten it to.
  This server then checks if the long url already exists with requests module and if it does stores the
  short url as a key and long url as a value in a dictionary.
- 
+
  If it does not exist a 404 response is returned to the client
 
  This server is intended to serve three kinds of requests:
@@ -28,7 +28,7 @@ import requests
 
 memory = {}
 
-form = '''<!DOCTYPE html>
+form = """<!DOCTYPE html>
 <title>Bookmark Server</title>
 <form method="POST">
     <label>Long URI:
@@ -45,7 +45,7 @@ form = '''<!DOCTYPE html>
 <pre>
 {}
 </pre>
-'''
+"""
 
 
 def check_uri(uri, timeout=5):
@@ -103,7 +103,9 @@ class Shortener(BaseHTTPRequestHandler):
             self.end_headers()
 
             # list the known associations in the form
-            known = "\n".join("{} : {}".format(key, memory[key]) for key in sorted(memory.keys()))
+            known = "\n".join(
+                "{} : {}".format(key, memory[key]) for key in sorted(memory.keys())
+            )
             self.wfile.write(form.format(known).encode())
 
     def do_POST(self):
@@ -139,6 +141,8 @@ class Shortener(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     server_address = ("", 8000)
-    httpd = ThreadHTTPServer(server_address=server_address, RequestHandlerClass=Shortener)
+    httpd = ThreadHTTPServer(
+        server_address=server_address, RequestHandlerClass=Shortener
+    )
     print("listening on {}".format(httpd.server_address))
     httpd.serve_forever()

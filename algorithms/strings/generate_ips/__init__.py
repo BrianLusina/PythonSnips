@@ -9,10 +9,10 @@ def backtrack(s: str, current: List[str], start: int, ips: List[str]):
             ips.append(".".join(current))
         return
     for i in range(start, min(start + 3, len(s))):
-        if s[start] == '0' and i > start:
+        if s[start] == "0" and i > start:
             continue
-        if 0 <= int(s[start:i + 1]) <= 255:
-            backtrack(s, current + [s[start:i + 1]], i + 1, ips)
+        if 0 <= int(s[start : i + 1]) <= 255:
+            backtrack(s, current + [s[start : i + 1]], i + 1, ips)
 
 
 def gen_ips(s: str) -> List[str]:

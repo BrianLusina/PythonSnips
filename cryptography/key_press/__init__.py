@@ -16,11 +16,20 @@ class KeyPress(object):
         phrase = self.phrase.upper()  # .replace(" ", "")
         # creates a counter variable
         key_count = 0
-        keys_dict = {"1": ["1"], "2": ["A", "B", "C", "2"], "3": ["D", "E", "F", "3"],
-                     "4": ["G", "H", "I", "4"], "5": ["J", "K", "L", "5"], "6": ["M", "N", "O", "6"],
-                     "7": ["P", "Q", "R", "S", "7"], "8": ["T", "U", "V", "8"], "9": ["W", "X", "Y", "Z", "9"],
-                     "*": ["*"], "0": [" ", "0"], "#": ["#"]
-                     }
+        keys_dict = {
+            "1": ["1"],
+            "2": ["A", "B", "C", "2"],
+            "3": ["D", "E", "F", "3"],
+            "4": ["G", "H", "I", "4"],
+            "5": ["J", "K", "L", "5"],
+            "6": ["M", "N", "O", "6"],
+            "7": ["P", "Q", "R", "S", "7"],
+            "8": ["T", "U", "V", "8"],
+            "9": ["W", "X", "Y", "Z", "9"],
+            "*": ["*"],
+            "0": [" ", "0"],
+            "#": ["#"],
+        }
 
         # perform loop
         for k in keys_dict.keys():
@@ -32,12 +41,30 @@ class KeyPress(object):
         return key_count
 
     def presses_v2(self):
-        BUTTONS = ['1', 'abc2', 'def3',
-                   'ghi4', 'jkl5', 'mno6',
-                   'pqrs7', 'tuv8', 'wxyz9',
-                   '*', ' 0', '#']
-        return sum(1 + button.find(c) for c in self.phrase.lower() for button in BUTTONS if c in button)
+        BUTTONS = [
+            "1",
+            "abc2",
+            "def3",
+            "ghi4",
+            "jkl5",
+            "mno6",
+            "pqrs7",
+            "tuv8",
+            "wxyz9",
+            "*",
+            " 0",
+            "#",
+        ]
+        return sum(
+            1 + button.find(c)
+            for c in self.phrase.lower()
+            for button in BUTTONS
+            if c in button
+        )
 
     # using lambda expression
-    presses_v3 = lambda s: sum((c in b) * (1 + b.find(c)) for c in s.lower() for b in
-                               '1,abc2,def3,ghi4,jkl5,mno6,pqrs7,tuv8,wxyz9,*, 0,#'.split(","))
+    presses_v3 = lambda s: sum(
+        (c in b) * (1 + b.find(c))
+        for c in s.lower()
+        for b in "1,abc2,def3,ghi4,jkl5,mno6,pqrs7,tuv8,wxyz9,*, 0,#".split(",")
+    )

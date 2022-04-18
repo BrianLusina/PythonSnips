@@ -29,11 +29,11 @@ try:
     code
 except:
     code
-``` 
+```
 
 finally statement shall run no matter what error occurs. Placed at the bottom of the try/except block
 
-``` python    
+``` python
 try:
     code
 except ErrorType:

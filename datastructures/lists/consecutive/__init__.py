@@ -12,5 +12,6 @@ def consecutive(arr):
     m = range(s[0], s[len(s) - 1] + 1)
     return len(m) - len(s)
 
+
 # or
 # return max(arr) - min(arr) + 1 - len(arr) if arr else 0

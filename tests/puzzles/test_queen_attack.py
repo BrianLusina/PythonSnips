@@ -6,27 +6,31 @@ from puzzles.queen_attack import QueenAttack
 class QueenAttackTest(unittest.TestCase):
     def test_board1(self):
         queen_attack = QueenAttack((2, 3), (5, 6))
-        ans = ['________',
-               '________',
-               '___W____',
-               '________',
-               '________',
-               '______B_',
-               '________',
-               '________']
+        ans = [
+            "________",
+            "________",
+            "___W____",
+            "________",
+            "________",
+            "______B_",
+            "________",
+            "________",
+        ]
         self.assertEqual(ans, queen_attack.board())
 
     def test_board2(self):
         queen_attack = QueenAttack((0, 6), (1, 7))
 
-        ans = ['______W_',
-               '_______B',
-               '________',
-               '________',
-               '________',
-               '________',
-               '________',
-               '________']
+        ans = [
+            "______W_",
+            "_______B",
+            "________",
+            "________",
+            "________",
+            "________",
+            "________",
+            "________",
+        ]
         self.assertEqual(ans, queen_attack.board())
 
     def test_attack_true1(self):
@@ -84,5 +88,5 @@ class QueenAttackTest(unittest.TestCase):
             queen_attack.can_attack()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

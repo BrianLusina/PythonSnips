@@ -1,12 +1,10 @@
 import unittest
 
-
 # from datastructures.trees.binary_search_tree import find_second_largest
 
 
 class Test(unittest.TestCase):
     class BinaryTreeNode(object):
-
         def __init__(self, value):
             self.value = value
             self.left = None
@@ -96,5 +94,5 @@ class Test(unittest.TestCase):
     #         find_second_largest(None)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main(verbosity=2)
