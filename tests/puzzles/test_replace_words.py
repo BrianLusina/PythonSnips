@@ -1,10 +1,12 @@
 import unittest
 
-from puzzles.replace_words import replace_words_with_prefix_hash, replace_words_with_trie
+from puzzles.replace_words import (
+    replace_words_with_prefix_hash,
+    replace_words_with_trie,
+)
 
 
 class ReplaceWordsHashTestCases(unittest.TestCase):
-
     def test_with_cat_bat_rat(self):
         dictionary = ["cat", "bat", "rat"]
         sentence = "the cattle was rattled by the battery"
@@ -47,7 +49,6 @@ class ReplaceWordsHashTestCases(unittest.TestCase):
 
 
 class ReplaceWordsHashTrieTestCases(unittest.TestCase):
-
     def test_with_cat_bat_rat(self):
         dictionary = ["cat", "bat", "rat"]
         sentence = "the cattle was rattled by the battery"
@@ -89,5 +90,5 @@ class ReplaceWordsHashTrieTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

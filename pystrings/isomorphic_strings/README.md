@@ -17,4 +17,3 @@ Output: false Example 3:
 
 Input: s = "paper", t = "title"
 Output: true
- 

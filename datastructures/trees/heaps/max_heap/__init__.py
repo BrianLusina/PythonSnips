@@ -1,7 +1,7 @@
-from heapq import heappop, heapify
+from heapq import heapify, heappop
 from typing import Any, List, Union
 
-from .. import HeapNode, Heap
+from .. import Heap, HeapNode
 
 
 class MaxHeap(Heap):
@@ -47,10 +47,17 @@ class MaxHeap(Heap):
             return
 
         if self.heap[idx] > self.heap[min_child_index]:
-            self.heap[idx], self.heap[min_child_index] = self.heap[min_child_index], self.heap[idx]
-            self.idx_of_element[self.heap[min_child_index]], self.idx_of_element[self.heap[idx]] = (
+            self.heap[idx], self.heap[min_child_index] = (
+                self.heap[min_child_index],
+                self.heap[idx],
+            )
+            (
+                self.idx_of_element[self.heap[min_child_index]],
+                self.idx_of_element[self.heap[idx]],
+            ) = (
                 self.idx_of_element[self.idx_of_element[self.heap[idx]]],
-                self.idx_of_element[self.idx_of_element[self.heap[min_child_index]]])
+                self.idx_of_element[self.idx_of_element[self.heap[min_child_index]]],
+            )
 
             self.__bubble_down(min_child_index)
 
@@ -60,10 +67,17 @@ class MaxHeap(Heap):
         parent_idx = (idx - 1) // 2
         if self.heap[idx] < self.heap[parent_idx]:
             # swap indices & recurse
-            self.heap[idx], self.heap[parent_idx] = self.heap[parent_idx], self.heap[idx]
-            self.idx_of_element[self.heap[parent_idx]], self.idx_of_element[self.heap[idx]] = (
+            self.heap[idx], self.heap[parent_idx] = (
+                self.heap[parent_idx],
+                self.heap[idx],
+            )
+            (
+                self.idx_of_element[self.heap[parent_idx]],
+                self.idx_of_element[self.heap[idx]],
+            ) = (
                 self.idx_of_element[self.idx_of_element[self.heap[idx]]],
-                self.idx_of_element[self.idx_of_element[self.heap[parent_idx]]])
+                self.idx_of_element[self.idx_of_element[self.heap[parent_idx]]],
+            )
 
             self.__bubble_up(parent_idx)
 
@@ -101,8 +115,10 @@ class MaxHeap(Heap):
         self.heap[index] = new_val
         while index != 0 and self.heap[self.get_parent_index(index)] > self.heap[index]:
             # Swap heap[i] with heap[parent(i)]
-            self.heap[index], self.heap[self.get_parent_index(index)] = self.heap[self.get_parent_index(index)], \
-                                                                        self.heap[index]
+            self.heap[index], self.heap[self.get_parent_index(index)] = (
+                self.heap[self.get_parent_index(index)],
+                self.heap[index],
+            )
 
     def remove_min(self) -> Any:
         """

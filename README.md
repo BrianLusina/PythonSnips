@@ -14,7 +14,7 @@ and/or python package has a readme for more information about the Python program
 Clone the repo
 
 ``` sh
-git clone 
+git clone
 
 ```
 

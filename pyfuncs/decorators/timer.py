@@ -24,7 +24,7 @@ def timer(func):
 @timer
 def lets_waste_time(num_times):
     for _ in range(num_times):
-        sum([i ** 2 for i in range(10000)])
+        sum([i**2 for i in range(10000)])
 
 
 if __name__ == "__main__":

@@ -87,7 +87,9 @@ class DoublyLinkedList(LinkedList):
         if not data:
             raise ValueError("Data to insert can not be None")
 
-        prev_node = prev_node if isinstance(prev_node, DoubleNode) else DoubleNode(prev_node)
+        prev_node = (
+            prev_node if isinstance(prev_node, DoubleNode) else DoubleNode(prev_node)
+        )
         node_to_insert = DoubleNode(data)
 
         current = self.head
@@ -264,7 +266,7 @@ class DoublyLinkedList(LinkedList):
         We return previous because when we exit, current is None, which means that the last
         node we visited—previous—was the tail of the original list, and thus the head of
         our reversed list.
-        
+
         Complexity:
         O(n) time and O(1) space. We pass over the list only once, and maintain a
         constant number of variables in memory.
@@ -316,7 +318,7 @@ class DoublyLinkedList(LinkedList):
 
     def insert_sorted(self, node: DoubleNode, data: int):
         """
-        Inserts a node with data value into a sorted DoublyLinked List. The assumption here is that 
+        Inserts a node with data value into a sorted DoublyLinked List. The assumption here is that
         the double linked list node is already sorted
         """
         # if there is no node, make this node the new head of the list
@@ -330,7 +332,7 @@ class DoublyLinkedList(LinkedList):
             node.next = new_tail
             return node
 
-        # if at the node the data value is already less than the data we intend to insert we make 
+        # if at the node the data value is already less than the data we intend to insert we make
         # this node the head of the doubly linked list
         if node.data > data:
             new_head = DoubleNode(data, next_node=node)
@@ -348,7 +350,7 @@ class DoublyLinkedList(LinkedList):
                 current.next_node = new_node
                 return node
 
-            # we create a new node and insert it into 2 nodes iff it is less than the next node value and 
+            # we create a new node and insert it into 2 nodes iff it is less than the next node value and
             # less than the previous node value
             if current.value <= data <= next_node.data:
                 new_node = DoubleNode(data, prev_node=current, next_node=next_node)
@@ -385,9 +387,13 @@ class DoublyLinkedList(LinkedList):
         print("Show list data...")
         current_node = self.head
         while current_node is not None:
-            print(current_node.prev.data if hasattr(current_node.prev, "value") else None)
+            print(
+                current_node.prev.data if hasattr(current_node.prev, "value") else None
+            )
             print(current_node.data)
-            print(current_node.next.data if hasattr(current_node.next, "value") else None)
+            print(
+                current_node.next.data if hasattr(current_node.next, "value") else None
+            )
             current_node = current_node.next
         print("*" * 10)
 

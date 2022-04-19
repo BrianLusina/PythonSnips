@@ -15,9 +15,11 @@ def check_assignment(name, test_file, example_name):
     try:
         test_file_out = os.path.join(workdir, os.path.basename(test_file))
         shutil.copyfile(test_file, test_file_out)
-        shutil.copyfile(os.path.join(os.path.dirname(test_file), 'example.py'),
-                        os.path.join(workdir, '{}.py'.format(example_name)))
-        return subprocess.call(['python', test_file_out])
+        shutil.copyfile(
+            os.path.join(os.path.dirname(test_file), "example.py"),
+            os.path.join(workdir, "{}.py".format(example_name)),
+        )
+        return subprocess.call(["python", test_file_out])
     finally:
         shutil.rmtree(workdir)
 
@@ -50,29 +52,30 @@ def is_module_missing(modname):
 
 
 def assignment_name(test_file):
-    return os.path.basename(test_file).rpartition('_')[0]
+    return os.path.basename(test_file).rpartition("_")[0]
 
 
 def main():
     if len(sys.argv) == 2:  # test a specific exercise
-        exercise_path = sys.argv[1].strip('/')
-        test_file = glob.glob('./exercises/{}/*_test.py'.format(exercise_path))[0]
-        check_assignment(assignment_name(test_file), test_file,
-                         modname_heuristic(test_file))
+        exercise_path = sys.argv[1].strip("/")
+        test_file = glob.glob("./exercises/{}/*_test.py".format(exercise_path))[0]
+        check_assignment(
+            assignment_name(test_file), test_file, modname_heuristic(test_file)
+        )
     else:
         failures = []
-        for test_file in glob.glob('./exercises/*/*_test.py'):
+        for test_file in glob.glob("./exercises/*/*_test.py"):
             name = assignment_name(test_file)
-            print('# ' + str(name))
+            print("# " + str(name))
             if check_assignment(name, test_file, modname_heuristic(test_file)):
                 failures.append(name)
-            print('')
+            print("")
         if failures:
-            print('FAILURES: ' + ' '.join(failures))
+            print("FAILURES: " + " ".join(failures))
             raise SystemExit(1)
         else:
-            print('SUCCESS!')
+            print("SUCCESS!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

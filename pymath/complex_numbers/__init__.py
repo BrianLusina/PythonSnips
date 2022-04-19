@@ -23,14 +23,18 @@ class Complex(object):
 
     def __truediv__(self, other):
         s = Complex()
-        s.real = (self.real * other.real + self.imag * other.imag) / (other.real ** 2 + other.imag ** 2)
-        s.imag = (self.imag * other.real - self.real * other.imag) / (other.real ** 2 + other.imag ** 2)
+        s.real = (self.real * other.real + self.imag * other.imag) / (
+            other.real**2 + other.imag**2
+        )
+        s.imag = (self.imag * other.real - self.real * other.imag) / (
+            other.real**2 + other.imag**2
+        )
         return s
 
     def mod(self):
         s = Complex()
-        s.real = math.sqrt(self.real ** 2 + self.imag ** 2)
+        s.real = math.sqrt(self.real**2 + self.imag**2)
         return s
 
     def __str__(self):
-        return '{0:.2f}{1:+.2f}i'.format(self.real, self.imag)
+        return "{0:.2f}{1:+.2f}i".format(self.real, self.imag)

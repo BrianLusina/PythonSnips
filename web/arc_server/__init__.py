@@ -1,11 +1,11 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs
 
 # todo: python 2.x compatibility import
 
 memory = []
 
-form = '''<!DOCTYPE html>
+form = """<!DOCTYPE html>
   <title>Message Board</title>
   <form method="POST" action="http://localhost:8000/">
     <textarea name="message"></textarea>
@@ -15,7 +15,7 @@ form = '''<!DOCTYPE html>
   <pre>
   {}
   </pre>
-'''
+"""
 
 
 class ArcHandler(BaseHTTPRequestHandler):
@@ -55,7 +55,7 @@ class ArcHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server_address = ('', 8000)
+    server_address = ("", 8000)
     httpd = HTTPServer(server_address=server_address, RequestHandlerClass=ArcHandler)
     print("listening on port 8000")
     httpd.serve_forever()

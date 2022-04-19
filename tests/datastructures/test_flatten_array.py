@@ -4,7 +4,6 @@ from datastructures.lists.flatten_array import flatten
 
 
 class FlattenArrayTests(unittest.TestCase):
-
     def test_no_nesting(self):
         self.assertEqual(flatten([0, 1, 2]), [0, 1, 2])
 
@@ -33,8 +32,8 @@ class FlattenArrayTests(unittest.TestCase):
         self.assertEqual(flatten(inputs), expected)
 
     def test_strings(self):
-        self.assertEqual(flatten(['0', ['1', '2']]), ['0', '1', '2'])
+        self.assertEqual(flatten(["0", ["1", "2"]]), ["0", "1", "2"])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

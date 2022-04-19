@@ -22,4 +22,6 @@ def pandigital_products(limit=10000):
 if __name__ == "__main__":
     upper_limit = 10000
     pan_products = pandigital_products(upper_limit)
-    print(f"Sum of pandigital products for upper limit of {upper_limit} is {pan_products}")
+    print(
+        f"Sum of pandigital products for upper limit of {upper_limit} is {pan_products}"
+    )

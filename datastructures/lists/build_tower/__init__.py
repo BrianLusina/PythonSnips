@@ -5,5 +5,6 @@ def tower_builder(n_floors):
     :return: a list with the number of floors represented with *
     :rtype: list
     """
-    return [("*" * (i * 2 - 1)).center(n_floors * 2 - 1)
-            for i in range(1, n_floors + 1)]
+    return [
+        ("*" * (i * 2 - 1)).center(n_floors * 2 - 1) for i in range(1, n_floors + 1)
+    ]

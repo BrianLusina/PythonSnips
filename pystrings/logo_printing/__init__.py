@@ -12,7 +12,10 @@ def print_logo(thickness, c):
 
     # Top Pillars
     for i in range(thickness + 1):
-        print((c * thickness).center(thickness * 2) + (c * thickness).center(thickness * 6))
+        print(
+            (c * thickness).center(thickness * 2)
+            + (c * thickness).center(thickness * 6)
+        )
 
     # Middle Belt
     for i in range((thickness + 1) // 2):
@@ -20,12 +23,20 @@ def print_logo(thickness, c):
 
         # Bottom Pillars
     for i in range(thickness + 1):
-        print((c * thickness).center(thickness * 2) + (c * thickness).center(thickness * 6))
+        print(
+            (c * thickness).center(thickness * 2)
+            + (c * thickness).center(thickness * 6)
+        )
 
         # Bottom Cone
     for i in range(thickness):
-        print(((c * (thickness - i - 1)).rjust(thickness) + c + (c * (thickness - i - 1)).ljust(thickness)).rjust(
-            thickness * 6))
+        print(
+            (
+                (c * (thickness - i - 1)).rjust(thickness)
+                + c
+                + (c * (thickness - i - 1)).ljust(thickness)
+            ).rjust(thickness * 6)
+        )
 
 
 print_logo(5, "H")

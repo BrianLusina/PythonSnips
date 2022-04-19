@@ -250,7 +250,7 @@ class WordCloudData:
             if i == len(input_string)-1:
                 if character.isalpha():
                     current_word += character
-                if current_word: 
+                if current_word:
                     self.add_word_to_dictionary(current_word)
 
             # if we reach a space or emdash we know we're at the end of a word
@@ -264,7 +264,7 @@ class WordCloudData:
             # a row we add the current word to our dictionary and reset our current word
             elif character == '.':
                 if i < len(input_string)-1 and input_string[i+1] == '.':
-                    if current_word: 
+                    if current_word:
                         self.add_word_to_dictionary(current_word)
                     current_word = ''
 

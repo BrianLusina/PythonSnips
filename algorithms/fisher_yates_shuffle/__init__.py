@@ -38,5 +38,7 @@ def shuffle(the_list):
 
         # place our random choice in the spot by swapping
         if random_choice_index != index_we_are_choosing:
-            the_list[index_we_are_choosing], the_list[random_choice_index] = \
-                the_list[random_choice_index], the_list[index_we_are_choosing]
+            the_list[index_we_are_choosing], the_list[random_choice_index] = (
+                the_list[random_choice_index],
+                the_list[index_we_are_choosing],
+            )

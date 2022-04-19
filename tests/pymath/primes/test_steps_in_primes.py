@@ -11,8 +11,9 @@ def prime_sol(number):
         return True
     elif number % 2 == 0:
         return False
-    for i in range(3, int(number ** 0.5) + 1, 2):
-        if number % i == 0: return False
+    for i in range(3, int(number**0.5) + 1, 2):
+        if number % i == 0:
+            return False
     return True
 
 
@@ -64,10 +65,14 @@ class StepsInPrimesTestCase(unittest.TestCase):
             self.assertEqual(step(8, n, n + 100000), step_sol(8, n, n + 100000))
             k = randint(0, 2)
             if k % 2 == 0:
-                self.assertEqual(step(2, n + 1000, n + 10000), step_sol(2, n + 1000, n + 10000))
+                self.assertEqual(
+                    step(2, n + 1000, n + 10000), step_sol(2, n + 1000, n + 10000)
+                )
             else:
-                self.assertEqual(step(4, n + 1000, n + 10000), step_sol(4, n + 1000, n + 10000))
+                self.assertEqual(
+                    step(4, n + 1000, n + 10000), step_sol(4, n + 1000, n + 10000)
+                )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -45,5 +45,5 @@ class BrowserHistoryTestCases(unittest.TestCase):
         self.assertEqual(history_six, "leetcode.com")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,6 @@
-from queue import PriorityQueue as Pq, Empty, Full
-from typing import Any, Union, NoReturn, List, Optional
+from queue import Empty, Full
+from queue import PriorityQueue as Pq
+from typing import Any, List, NoReturn, Optional, Union
 
 
 class QueueFullException(Full):
@@ -51,7 +52,8 @@ class PriorityQueue(object):
             self.data.append(data)
         except Full:
             raise QueueFullException(
-                f"Queue has reached limit. Current Size: {self.size}. Capacity: {self.queue.maxsize}")
+                f"Queue has reached limit. Current Size: {self.size}. Capacity: {self.queue.maxsize}"
+            )
 
     def peek(self) -> Optional[Any]:
         return self.data[0]

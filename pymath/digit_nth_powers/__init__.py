@@ -18,7 +18,7 @@ def digit_nth_power(nth):
         raise ValueError("Expected nth power to be an integer")
 
     # this finds the limit we will use for brute force
-    limit = 6 * 9 ** nth
+    limit = 6 * 9**nth
 
     result = []
 
@@ -37,4 +37,6 @@ def digit_nth_power(nth):
 if __name__ == "__main__":
     power = 5
     sum_of_numbers = digit_nth_power(power)
-    print(f"Sum of all numbers that can be written as the sum of {power} of their digits is {sum_of_numbers}")
+    print(
+        f"Sum of all numbers that can be written as the sum of {power} of their digits is {sum_of_numbers}"
+    )

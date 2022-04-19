@@ -1,5 +1,5 @@
 import unittest
-from math import pi, sqrt, acos, floor
+from math import acos, floor, pi, sqrt
 from random import randint
 
 from pymath.tank_truck import tankvol
@@ -30,7 +30,6 @@ def tankvol_sol(h, d, vt):
 
 
 class TankTankTestCase(unittest.TestCase):
-
     def test_basic(self):
         self.assertEqual(tankvol(5, 7, 3848), 2940)
         self.assertEqual(tankvol(2, 7, 3848), 907)
@@ -60,5 +59,5 @@ class TankTankTestCase(unittest.TestCase):
             self.assertEqual(tankvol(h, d, v), tankvol_sol(h, d, v))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

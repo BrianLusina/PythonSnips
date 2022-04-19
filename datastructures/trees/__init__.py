@@ -44,7 +44,9 @@ class Tree(ABC):
         raise NotImplementedError("This method has not been implemented")
 
     @abstractmethod
-    def lowest_common_ancestor(self, node_one: TreeNode, node_two: TreeNode) -> TreeNode:
+    def lowest_common_ancestor(
+        self, node_one: TreeNode, node_two: TreeNode
+    ) -> TreeNode:
         """
         Returns the lowest common ancestor of 2 nodes in the Tree.
         :param node_one

@@ -23,14 +23,18 @@ class test(unittest.TestCase):
         self.assertEqual(get_users_ids("uid##doublehashtag"), ["doublehashtag"])
 
     def test7(self):
-        self.assertEqual(get_users_ids("  uidin name whitespace"), ["in", "name", "whitespace"])
+        self.assertEqual(
+            get_users_ids("  uidin name whitespace"), ["in", "name", "whitespace"]
+        )
 
     def test8(self):
         self.assertEqual(get_users_ids("uidMultipleuid"), ["multipleuid"])
 
     @unittest.skip
     def test9(self):
-        self.assertEqual(get_users_ids("uid12 ab, uid#, uidMiXeDcHaRs"), ["12 ab", "", "mixedchars"])
+        self.assertEqual(
+            get_users_ids("uid12 ab, uid#, uidMiXeDcHaRs"), ["12 ab", "", "mixedchars"]
+        )
 
     def test10(self):
         self.assertEqual(get_users_ids(" uidT#e#S#t# "), ["test"])

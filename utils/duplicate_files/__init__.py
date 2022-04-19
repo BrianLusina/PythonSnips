@@ -63,7 +63,9 @@ def sample_hash_file(current_path):
 
             # read first, middle and last bytes
             for offset_multiplier in range(3):
-                start_of_sample = offset_multiplier * (num_of_bytes_to_read + num_bytes_btwn_samples)
+                start_of_sample = offset_multiplier * (
+                    num_of_bytes_to_read + num_bytes_btwn_samples
+                )
                 file.seek(start_of_sample)
                 sample = file.read(num_of_bytes_to_read)
                 hasher.update(sample)

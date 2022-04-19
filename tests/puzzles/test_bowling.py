@@ -2,8 +2,8 @@ import unittest
 
 from puzzles.bowling import BowlingGame
 
-
 # Tests adapted from `problem-specifications//canonical-data.json` @ v1.0.1
+
 
 class BowlingTests(unittest.TestCase):
     def setUp(self):
@@ -80,32 +80,28 @@ class BowlingTests(unittest.TestCase):
         self.assertEqual(score, 81)
 
     def test_strike_in_last_frame_gets_two_roll_bonus_counted_once(self):
-        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                 10, 7, 1]
+        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 1]
 
         score = self.roll_and_score(rolls)
 
         self.assertEqual(score, 18)
 
     def test_rolling_spare_with_bonus_roll_does_not_get_bonus(self):
-        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                 0, 10, 7, 3]
+        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 3]
 
         score = self.roll_and_score(rolls)
 
         self.assertEqual(score, 20)
 
     def test_strikes_with_the_two_bonus_rolls_do_not_get_bonus_rolls(self):
-        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10,
-                 10, 10]
+        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]
 
         score = self.roll_and_score(rolls)
 
         self.assertEqual(score, 30)
 
     def test_strike_with_bonus_after_spare_in_last_frame_gets_no_bonus(self):
-        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7,
-                 3, 10]
+        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10]
 
         score = self.roll_and_score(rolls)
 
@@ -137,8 +133,7 @@ class BowlingTests(unittest.TestCase):
         self.assertRaises(ValueError, self.game.roll, 11)
 
     def test_bonus_aft_last_frame_strk_can_be_more_than_10_if_1_is_strk(self):
-        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10,
-                 10, 6]
+        rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 6]
 
         score = self.roll_and_score(rolls)
 
@@ -187,5 +182,5 @@ class BowlingTests(unittest.TestCase):
         self.assertRaises(IndexError, self.game.score)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -14,10 +14,11 @@ def hi_all():
     :return: String
     :rtype: str
     """
-    return str(Hello_World)[five * two:five * three] + str(Hello_World)[three * (five + two)] + str(Hello_World)[
-                                                                                                two ** (
-                                                                                                            two * two):three * (
-                                                                                                            five + two)]
+    return (
+        str(Hello_World)[five * two : five * three]
+        + str(Hello_World)[three * (five + two)]
+        + str(Hello_World)[two ** (two * two) : three * (five + two)]
+    )
 
 
 if __name__ == "__main__":

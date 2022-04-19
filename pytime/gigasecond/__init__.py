@@ -1,5 +1,5 @@
 import calendar
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 
 
 class Gigasecond(object):
@@ -12,7 +12,7 @@ class Gigasecond(object):
         exactly exactly 1 Gs
         :return: datetime object
         """
-        return self.birthday + timedelta(seconds=10 ** 9)
+        return self.birthday + timedelta(seconds=10**9)
 
     def get_date(self):
         """
@@ -21,7 +21,8 @@ class Gigasecond(object):
         :rtype: list
         """
         date = self.add_gigasecond()
-        return [str(date.date()),
-                calendar.day_name[date.weekday()],
-                str((date - datetime.today()).days) + " days left"
-                ]
+        return [
+            str(date.date()),
+            calendar.day_name[date.weekday()],
+            str((date - datetime.today()).days) + " days left",
+        ]

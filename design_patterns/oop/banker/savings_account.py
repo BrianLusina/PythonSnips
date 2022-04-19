@@ -2,7 +2,6 @@ from . import BankAccount
 
 
 class SavingsAccount(BankAccount):
-
     def __init__(self):
         super(SavingsAccount, self).__init__()
         self.balance = 500

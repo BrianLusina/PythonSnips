@@ -6,13 +6,13 @@ def hey(what):
     # silence
     if len(what) == 0:
         return "Fine. Be that way!"
-    que = r'(\w|\W)+\?$'
+    que = r"(\w|\W)+\?$"
     # shouting
     if what.isupper() and not what.islower():
-        return 'Whoa, chill out!'
+        return "Whoa, chill out!"
     # question
     if re.match(que, what):
-        return 'Sure.'
+        return "Sure."
     # everything else
     else:
-        return 'Whatever.'
+        return "Whatever."

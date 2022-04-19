@@ -1,4 +1,4 @@
-from math import sqrt, ceil
+from math import ceil, sqrt
 
 
 def encode(message):
@@ -39,7 +39,7 @@ def get_segments(normalize_text):
     # get the text segments
     while indx < chars:
         if indx + square_size < chars:
-            chunks.append(normalize_text[indx: indx + square_size])
+            chunks.append(normalize_text[indx : indx + square_size])
         else:
             chunks.append(normalize_text[indx:])
         indx += square_size

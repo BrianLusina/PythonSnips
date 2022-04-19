@@ -56,7 +56,9 @@ def find_highly_divisible_triangle_number(no_of_divisors):
     highly_divisible_triangle_num = 1
 
     while True:
-        triangle = highly_divisible_triangle_num * (highly_divisible_triangle_num + 1) / 2
+        triangle = (
+            highly_divisible_triangle_num * (highly_divisible_triangle_num + 1) / 2
+        )
         factors = prime_factorize(triangle)
         counts = Counter(factors)
         divisors = 1
@@ -72,5 +74,7 @@ def find_highly_divisible_triangle_number(no_of_divisors):
 
 if __name__ == "__main__":
     number_of_divisors = 500
-    print(f"First triangular number to have over {number_of_divisors} divisors is "
-          f"{find_highly_divisible_triangle_number(number_of_divisors)}")
+    print(
+        f"First triangular number to have over {number_of_divisors} divisors is "
+        f"{find_highly_divisible_triangle_number(number_of_divisors)}"
+    )

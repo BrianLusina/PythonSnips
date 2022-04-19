@@ -50,31 +50,34 @@ def divisors(n):
     powerranges = (range(m + 1) for m in maxpowers)
     powers = product(*powerranges)
     return (
-        reduce(mul,
-               (prime ** power for prime, power in zip(primes, powergroup)),
-               1)
-        for powergroup in powers)
+        reduce(mul, (prime**power for prime, power in zip(primes, powergroup)), 1)
+        for powergroup in powers
+    )
 
 
 def vampire(n):
-    fangsets = set(frozenset([d, n // d])
-                   for d in divisors(n)
-                   if (len(str(d)) == len(str(n)) / 2.
-                       and sorted(str(d) + str(n // d)) == sorted(str(n))
-                       and (str(d)[-1] == 0) + (str(n // d)[-1] == 0) <= 1))
+    fangsets = set(
+        frozenset([d, n // d])
+        for d in divisors(n)
+        if (
+            len(str(d)) == len(str(n)) / 2.0
+            and sorted(str(d) + str(n // d)) == sorted(str(n))
+            and (str(d)[-1] == 0) + (str(n // d)[-1] == 0) <= 1
+        )
+    )
     return sorted(tuple(sorted(fangs)) for fangs in fangsets)
 
 
-if __name__ == '__main__':
-    print('First 25 vampire numbers')
+if __name__ == "__main__":
+    print("First 25 vampire numbers")
     count = n = 0
     while count < 25:
         n += 1
         fangpairs = vampire(n)
         if fangpairs:
             count += 1
-            print('%i: %r' % (n, fangpairs))
-    print('\nSpecific checks for fangpairs')
+            print("%i: %r" % (n, fangpairs))
+    print("\nSpecific checks for fangpairs")
     for n in (16758243290880, 24959017348650, 14593825548650):
         fangpairs = vampire(n)
-        print('%i: %r' % (n, fangpairs))
+        print("%i: %r" % (n, fangpairs))

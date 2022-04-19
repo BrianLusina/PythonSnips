@@ -8,7 +8,7 @@ class Death(Scene):
         "You died.  You kinda suck at this.",
         "Your mom would be proud...if she were smarter.",
         "Such a looser.",
-        "I have a small puppy that's better at this."
+        "I have a small puppy that's better at this.",
     ]
 
     def enter(self):

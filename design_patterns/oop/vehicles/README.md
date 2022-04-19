@@ -9,4 +9,3 @@ Vehicle Python package demonstrating Object Oriented Programming in Python
                         Car     MotorCycle
                         |             |
                        Jeep          Kawasaki
-                    

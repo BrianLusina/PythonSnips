@@ -32,5 +32,5 @@ class MagicSquareTestCases(unittest.TestCase):
         self.assertTrue(magic_square(arr))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

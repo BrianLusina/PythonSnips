@@ -60,12 +60,12 @@ def print_mimic(mimic_dict, word):
 def main():
     if len(sys.argv) != 2:
         print
-        'usage: ./mimic.py file-to-read'
+        "usage: ./mimic.py file-to-read"
         sys.exit(1)
 
     dict = mimic_dict(sys.argv[1])
-    print_mimic(dict, '')
+    print_mimic(dict, "")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

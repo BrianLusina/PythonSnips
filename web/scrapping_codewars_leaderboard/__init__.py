@@ -3,7 +3,7 @@ from urllib.request import urlretrieve
 
 from bs4 import BeautifulSoup
 
-url = 'https://www.codewars.com/users/leaderboard'
+url = "https://www.codewars.com/users/leaderboard"
 
 
 # todo: find the solution!

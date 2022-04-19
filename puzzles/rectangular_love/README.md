@@ -105,7 +105,7 @@ def find_x_overlap(x1, width1, x2, width2):
     lowest_end_point = min(x1 + width1, x2 + width2)
 
     # return null overlap if there is no overlap
-    if highest_start_point >= lowest_end_point: 
+    if highest_start_point >= lowest_end_point:
         return None, None
 
     # compute the overlap width

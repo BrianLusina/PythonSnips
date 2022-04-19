@@ -13,5 +13,5 @@ class LongestSubstringWithKRepeatingCharsTestCase(unittest.TestCase):
         self.assertEqual(expected, longest_substring("ababacb", 3))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

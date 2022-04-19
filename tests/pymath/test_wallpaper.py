@@ -19,5 +19,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(wallpaper(6.1, 6.7, 2.81), "sixteen")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

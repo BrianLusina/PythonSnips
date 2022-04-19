@@ -23,5 +23,7 @@ class MaskifyTests(unittest.TestCase):
         self.assertEqual(maskify("Skippy"), "##ippy")
 
     def test_7(self):
-        self.assertEqual(maskify("Nananananananananananananananana Batman!"),
-                         "####################################man!")
+        self.assertEqual(
+            maskify("Nananananananananananananananana Batman!"),
+            "####################################man!",
+        )

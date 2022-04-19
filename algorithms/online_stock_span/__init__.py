@@ -2,7 +2,6 @@ from datastructures.stacks import Stack
 
 
 class StockSpanner:
-
     def __init__(self):
         self.stack = Stack()
 

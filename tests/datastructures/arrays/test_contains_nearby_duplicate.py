@@ -1,6 +1,5 @@
 import unittest
 
-
 from datastructures.arrays.contains_duplicates import contains_nearby_duplicate
 
 
@@ -23,12 +22,12 @@ class ContainsNearbyDuplicateTestCases(unittest.TestCase):
 
     def test_nums_is_1_2_3_1_2_3_and_k_is_2(self):
         """Should return false for nums=[1,2,3,1,2,3] and k = 2"""
-        nums = [1,2,3,1,2,3]
+        nums = [1, 2, 3, 1, 2, 3]
         k = 2
         expected = False
         actual = contains_nearby_duplicate(nums, k)
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

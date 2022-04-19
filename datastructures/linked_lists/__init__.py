@@ -1,6 +1,6 @@
 # coding=utf-8
 from abc import ABCMeta, abstractmethod
-from typing import Union, Any
+from typing import Any, Union
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
@@ -9,6 +9,7 @@ class Node(object):
     """
     Node object in the Linked List
     """
+
     __metaclass__ = ABCMeta
 
     def __init__(self, data=None, next_=None, key=None):
@@ -27,6 +28,7 @@ class LinkedList(object):
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
     """
+
     __metaclass__ = ABCMeta
     head = None
 

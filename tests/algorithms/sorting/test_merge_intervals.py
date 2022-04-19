@@ -13,5 +13,5 @@ class MergeIntervalsTestCase(unittest.TestCase):
         self.assertEqual(expected, merge([[1, 4], [4, 5]]))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

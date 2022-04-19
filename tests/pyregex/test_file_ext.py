@@ -1,6 +1,6 @@
 import unittest
 
-from pyregex.file_extensions import is_img, is_audio
+from pyregex.file_extensions import is_audio, is_img
 
 
 class FileExtTests(unittest.TestCase):
@@ -47,5 +47,5 @@ class FileExtTests(unittest.TestCase):
         self.assertEqual(is_img("transparency.png"), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

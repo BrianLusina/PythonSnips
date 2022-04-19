@@ -17,7 +17,7 @@ Constraints
 1 <= T <= 5
 1 <= n <= 10
 1 <= sideLength <= 2^31
-``` 
+```
 
 Output Format
 

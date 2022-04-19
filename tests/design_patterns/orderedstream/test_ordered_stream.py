@@ -24,5 +24,5 @@ class OrderedStreamTestCase(unittest.TestCase):
         self.assertEqual(["ddddd", "eeeee"], insert_4)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

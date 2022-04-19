@@ -20,5 +20,5 @@ def find_rotation_point(words):
 
         # if floor and ceiling have changed
         if floor_index + 1 == ceiling_index:
-            # between the floor and ceiling is where we flipped to the beginning 
+            # between the floor and ceiling is where we flipped to the beginning
             return ceiling_index

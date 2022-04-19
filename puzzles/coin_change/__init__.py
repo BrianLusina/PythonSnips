@@ -24,7 +24,9 @@ def find_minimum_coins(total_change, coins):
         raise ValueError("Cannot find change of negative values")
 
     if total_change < min(coins):
-        raise ValueError("Cannot find change if total change is smaller than smallest coin")
+        raise ValueError(
+            "Cannot find change if total change is smaller than smallest coin"
+        )
 
     result = None
 

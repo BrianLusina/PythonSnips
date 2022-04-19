@@ -2,12 +2,32 @@
 This sample demonstrates using ThreadPoolExecutor to download landing page of sites
 """
 import time
+
 # noinspection PyCompatibility
 from concurrent.futures import ThreadPoolExecutor as Executor
 
-urls = ["google", "twitter", "facebook", "youtube", "pinterest", "tumblr", "instagram", "reddit",
-        "flickr", "meetup", "classmates", "microsoft", "apple", "linkedin", "xing", "renren",
-        "disqus", "snapchat", "twoo", "whatsapp"]
+urls = [
+    "google",
+    "twitter",
+    "facebook",
+    "youtube",
+    "pinterest",
+    "tumblr",
+    "instagram",
+    "reddit",
+    "flickr",
+    "meetup",
+    "classmates",
+    "microsoft",
+    "apple",
+    "linkedin",
+    "xing",
+    "renren",
+    "disqus",
+    "snapchat",
+    "twoo",
+    "whatsapp",
+]
 
 current_milli_time = lambda: int(round(time.time() * 1000))
 
@@ -19,7 +39,7 @@ def fetch(url):
     :return: length of the landing page from the given url
     :rtype: str
     """
-    from urllib import request, error
+    from urllib import error, request
 
     try:
         data = request.urlopen(url).read()

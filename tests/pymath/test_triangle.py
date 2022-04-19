@@ -35,34 +35,19 @@ class TriangleTests(unittest.TestCase):
         self.assertEqual("scalene", Triangle(0.4, 0.6, 0.3).kind())
 
     def test_triangles_with_no_size_are_illegal(self):
-        self.assertRaises(
-            TriangleError,
-            Triangle, 0, 0, 0
-        )
+        self.assertRaises(TriangleError, Triangle, 0, 0, 0)
 
     def test_triangles_with_negative_sides_are_illegal(self):
-        self.assertRaises(
-            TriangleError,
-            Triangle, 3, 4, -5
-        )
+        self.assertRaises(TriangleError, Triangle, 3, 4, -5)
 
     def test_triangles_violating_triangle_inequality_are_illegal(self):
-        self.assertRaises(
-            TriangleError,
-            Triangle, 1, 1, 3
-        )
+        self.assertRaises(TriangleError, Triangle, 1, 1, 3)
 
     def test_triangles_violating_triangle_inequality_are_illegal_2(self):
-        self.assertRaises(
-            TriangleError,
-            Triangle, 2, 4, 2
-        )
+        self.assertRaises(TriangleError, Triangle, 2, 4, 2)
 
     def test_triangles_violating_triangle_inequality_are_illegal_3(self):
-        self.assertRaises(
-            TriangleError,
-            Triangle, 7, 3, 2
-        )
+        self.assertRaises(TriangleError, Triangle, 7, 3, 2)
 
     def test_perimeter(self):
         self.assertEqual(Triangle(2, 2, 2).perimeter(), sum([2, 2, 2]))
@@ -71,7 +56,10 @@ class TriangleTests(unittest.TestCase):
         self.assertEqual(Triangle(3, 3, 3).area(), (sqrt(3) * pow(3, 2)) / 4)
 
     def test_area_isosceles(self):
-        self.assertEqual(Triangle(2, 3, 3).area(), (0.5 * pow(2, 2)) * sqrt((pow(3, 2) / pow(2, 2)) - (1 / 4)))
+        self.assertEqual(
+            Triangle(2, 3, 3).area(),
+            (0.5 * pow(2, 2)) * sqrt((pow(3, 2) / pow(2, 2)) - (1 / 4)),
+        )
 
     def test_area_scalene(self):
         s = (2 + 3 + 4) / 2
@@ -79,5 +67,5 @@ class TriangleTests(unittest.TestCase):
         self.assertEqual(Triangle(2, 3, 4).area(), area)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

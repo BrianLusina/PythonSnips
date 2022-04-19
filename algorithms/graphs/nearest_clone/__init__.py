@@ -3,7 +3,13 @@ from queue import Queue
 from typing import List
 
 
-def find_shortest(graph_nodes: int, graph_from: List[int], graph_to: List[int], ids: List[int], val: int) -> int:
+def find_shortest(
+    graph_nodes: int,
+    graph_from: List[int],
+    graph_to: List[int],
+    ids: List[int],
+    val: int,
+) -> int:
     """
     Finds the length of the shortest path to node of color val
     @param graph_nodes: Number of nodes in the graph

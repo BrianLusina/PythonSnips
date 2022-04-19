@@ -6,7 +6,19 @@ def count_vegetables(s):
     return this list
     """
     p = s.split()
-    valid = ["cabbage", "carrot", "celery", "cucumber", "mushroom", "onion", "pepper", "potato", "tofu", "turnip",
-             "kales", "tomatoes"]
+    valid = [
+        "cabbage",
+        "carrot",
+        "celery",
+        "cucumber",
+        "mushroom",
+        "onion",
+        "pepper",
+        "potato",
+        "tofu",
+        "turnip",
+        "kales",
+        "tomatoes",
+    ]
     m = set([(p.count(x), x) for x in p if x in valid])
     return sorted(m, key=lambda tup: (tup[0], tup[1]), reverse=True)

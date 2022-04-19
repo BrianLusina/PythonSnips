@@ -22,7 +22,9 @@ try:
 except ZeroDivisionError:
     print("Damn! divided by zero again! Quit that!")
 finally:
-    print("As I was saying, I think the black hole occurred when God divided infinite by zero. I'm just saying")
+    print(
+        "As I was saying, I think the black hole occurred when God divided infinite by zero. I'm just saying"
+    )
 
 print("This is how the raise statement is used")
 try:
@@ -34,7 +36,7 @@ except:
 # statement is false, therefore will return an AssertionError
 assert 5 * 2 == 12
 temp = -29
-assert (temp >= 0), "It's too damn cold!"
+assert temp >= 0, "It's too damn cold!"
 
 
 def throws():
@@ -46,6 +48,6 @@ try:
 except ZeroDivisionError:
     print("division by zero!")
 except ZeroDivisionError as err:
-    print('Caught an exception')
+    print("Caught an exception")
 finally:
-    print('In finally block for cleanup')
+    print("In finally block for cleanup")

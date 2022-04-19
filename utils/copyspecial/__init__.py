@@ -15,8 +15,11 @@ def get_special_paths(directory):
     Given a dirname, returns a list of all its special files.
     """
     files = os.listdir(directory)
-    return [os.path.abspath(os.path.join(directory, file))
-            for file in files if re.match(r'__(\w+)__', file)]
+    return [
+        os.path.abspath(os.path.join(directory, file))
+        for file in files
+        if re.match(r"__(\w+)__", file)
+    ]
 
 
 def copy_to(paths, to_dir):
@@ -36,7 +39,7 @@ def copy_to(paths, to_dir):
 
 
 def zip_to(paths, zippath):
-    cmd = 'zip -j ' + zippath + ' ' + ' '.join(paths)
+    cmd = "zip -j " + zippath + " " + " ".join(paths)
     print("Command I'm going to do:" + cmd)
     try:
         (status, output) = subprocess.getstatusoutput(cmd)
@@ -63,13 +66,13 @@ def main():
     # todir and tozip are either set from command line
     # or left as the empty string.
     # The args array is left just containing the dirs.
-    todir = ''
-    if args[0] == '--todir':
+    todir = ""
+    if args[0] == "--todir":
         todir = args[1]
         del args[0:2]
 
-    tozip = ''
-    if args[0] == '--tozip':
+    tozip = ""
+    if args[0] == "--tozip":
         tozip = args[1]
         del args[0:2]
 
@@ -91,7 +94,7 @@ def main():
     elif tozip:
         zip_to(paths, tozip)
     else:
-        print('\n'.join(paths))
+        print("\n".join(paths))
         # LAB(end solution)
 
 

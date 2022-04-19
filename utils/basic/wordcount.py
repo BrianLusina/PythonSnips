@@ -39,7 +39,6 @@ print_words() and print_top().
 
 import sys
 
-
 # +++your code here+++
 # Define print_words(filename) and print_top(filename) functions.
 # You could write a helper utility function that reads a file
@@ -53,20 +52,20 @@ import sys
 def main():
     if len(sys.argv) != 3:
         print
-        'usage: ./wordcount.py {--count | --topcount} file'
+        "usage: ./wordcount.py {--count | --topcount} file"
         sys.exit(1)
 
     option = sys.argv[1]
     filename = sys.argv[2]
-    if option == '--count':
+    if option == "--count":
         print_words(filename)
-    elif option == '--topcount':
+    elif option == "--topcount":
         print_top(filename)
     else:
         print
-        'unknown option: ' + option
+        "unknown option: " + option
         sys.exit(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

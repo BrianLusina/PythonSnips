@@ -23,10 +23,16 @@ class FizzBuzz(object):
     """
 
     def string_concat(self):
-        return ["Fizz" * (i % 3 == 0) + "Buzz" * (i % 5 == 0) or i for i in range(1, self.endpoint)]
+        return [
+            "Fizz" * (i % 3 == 0) + "Buzz" * (i % 5 == 0) or i
+            for i in range(1, self.endpoint)
+        ]
 
     def string_concat_2(self):
-        return [i % 3 // 2 * 'Fizz' + i % 5 // 4 * 'Buzz' or i + 1 for i in range(self.endpoint)]
+        return [
+            i % 3 // 2 * "Fizz" + i % 5 // 4 * "Buzz" or i + 1
+            for i in range(self.endpoint)
+        ]
 
     """
     You can also create a lazy, unbounded sequence by using generator expressions:

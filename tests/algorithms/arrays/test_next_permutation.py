@@ -29,5 +29,5 @@ class NextPermutationTestCase(unittest.TestCase):
         self.assertEqual(expected, arr)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

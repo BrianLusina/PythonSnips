@@ -15,7 +15,7 @@ If in the solution we have two or more arrays having the maximum sum value, the 
 the corresponding order of the array, from left to right.
 
 ```plain
-find_subarr_maxsum([4, -1, 2, 1, -40, 1, 2, -1, 4]) == [[[4, -1, 2, 1], [1, 2, -1, 4]], 6]  
+find_subarr_maxsum([4, -1, 2, 1, -40, 1, 2, -1, 4]) == [[[4, -1, 2, 1], [1, 2, -1, 4]], 6]
 # From left to right [4, -1, 2, 1] appears in the array before than [1, 2, -1, 4].
 ```
 

@@ -1,4 +1,4 @@
-from queue import Queue, Empty, Full
+from queue import Empty, Full, Queue
 
 
 class QueueFullException(Full):
@@ -47,7 +47,8 @@ class FifoQueue(object):
             self.data.append(val)
         except Full:
             raise QueueFullException(
-                f"Queue has reached limit. Current Size: {self.size}. Capacity: {self.queue.maxsize}")
+                f"Queue has reached limit. Current Size: {self.size}. Capacity: {self.queue.maxsize}"
+            )
 
     def dequeue(self):
         """

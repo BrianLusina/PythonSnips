@@ -38,5 +38,5 @@ class MyHashSetTestCase(unittest.TestCase):
         self.assertFalse(actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

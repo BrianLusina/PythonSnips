@@ -1,4 +1,5 @@
 import unittest
+
 from design_patterns.hashmap import HashMap, Item
 
 
@@ -106,5 +107,5 @@ class HashMapTestCases(unittest.TestCase):
         self.assertEqual("something 5", hashmap.get(5))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

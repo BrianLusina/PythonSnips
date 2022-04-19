@@ -1,4 +1,4 @@
-alpha = {'ABCDE': 1, 'FGHIJ': 2, 'KLMNO': 3, 'PQRST': 4, 'UVWXY': 5}
+alpha = {"ABCDE": 1, "FGHIJ": 2, "KLMNO": 3, "PQRST": 4, "UVWXY": 5}
 
 
 def name_score(name):

@@ -33,7 +33,7 @@ def grades_variance(scores):
 
 # function to calculate the standard deviation of the grades list
 def grades_std_deviation(variance):
-    return variance ** 0.5
+    return variance**0.5
 
 
 print(grades)

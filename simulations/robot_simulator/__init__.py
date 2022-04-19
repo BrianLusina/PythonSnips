@@ -8,6 +8,7 @@ class CompassPoints(object):
     left method subtracts a 'co-ordinate' point from the x axis
     right method moves the robot +1 co-ordinate along the x-axis
     """
+
     compass_points = [NORTH, EAST, SOUTH, WEST]
 
     def __init__(self, c_bearing=NORTH):
@@ -60,7 +61,7 @@ class Robot(object):
         return self.compass_points.move_right()
 
     def simulate(self, robot_commands):
-        instruct = {'A': self.advance, 'R': self.turn_right, "L": self.turn_left}
+        instruct = {"A": self.advance, "R": self.turn_right, "L": self.turn_left}
 
         for cmd in robot_commands:
             if cmd in instruct:

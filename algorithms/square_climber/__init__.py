@@ -5,7 +5,7 @@ class SquareClimber(object):
     def climber(self):
         d = dict()
         for x in range(1, self.number + 1):
-            d[x] = x ** 2
+            d[x] = x**2
         return d
 
 

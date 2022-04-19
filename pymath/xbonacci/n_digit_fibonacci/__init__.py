@@ -17,7 +17,9 @@ def n_digit_fibonacci(n):
     :rtype: int
     """
     if not isinstance(n, int) or n <= 0:
-        raise ValueError(f"Expected n to be an integer and greater than 0, instead found {n}")
+        raise ValueError(
+            f"Expected n to be an integer and greater than 0, instead found {n}"
+        )
 
     # starting fibonacci sequence
     fib_list = [1, 1]

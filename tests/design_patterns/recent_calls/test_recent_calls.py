@@ -4,7 +4,6 @@ from design_patterns.recent_counter import RecentCounter
 
 
 class RecentCounterTest(unittest.TestCase):
-
     def test_3_calls(self):
         recent_counter = RecentCounter()
 
@@ -21,5 +20,5 @@ class RecentCounterTest(unittest.TestCase):
         self.assertEquals(actual_ping_3002, 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -14,7 +14,7 @@ The solution above modifies the visited list to store the level of each node. La
 
 In this code, while visiting each node, the level of that node is set with an increment in the level of its parent node, i.e.,
 
-       visited[child] = visited[parent] + 1 
+       visited[child] = visited[parent] + 1
 This is how the level of each node is determined.
 
 ## Time complexity

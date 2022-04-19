@@ -22,7 +22,7 @@ def convert_from_digits(digits, base):
     :return: an integer
     :rtype: int
     """
-    return sum(num * base ** indx for indx, num in enumerate(reversed(digits)))
+    return sum(num * base**indx for indx, num in enumerate(reversed(digits)))
 
 
 def convert_to_digits(number, base):

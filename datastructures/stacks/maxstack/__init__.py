@@ -2,7 +2,6 @@ from .. import Stack
 
 
 class MaxStack(Stack):
-
     def __init__(self, maxsize: int = None):
         """
         Initializes a Maximum stack with a max size defaulted to None. If set to None, the ma stack has no upper bound

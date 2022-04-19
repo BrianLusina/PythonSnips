@@ -49,37 +49,37 @@ def front_back(a, b):
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix = " OK "
     else:
-        prefix = '  X '
+        prefix = "  X "
     print
-    '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
+    "%s got: %s expected: %s" % (prefix, repr(got), repr(expected))
 
 
 # main() calls the above functions with interesting inputs,
 # using the above test() to check if the result is correct or not.
 def main():
     print
-    'verbing'
-    test(verbing('hail'), 'hailing')
-    test(verbing('swiming'), 'swimingly')
-    test(verbing('do'), 'do')
+    "verbing"
+    test(verbing("hail"), "hailing")
+    test(verbing("swiming"), "swimingly")
+    test(verbing("do"), "do")
 
     print
     print
-    'not_bad'
-    test(not_bad('This movie is not so bad'), 'This movie is good')
-    test(not_bad('This dinner is not that bad!'), 'This dinner is good!')
-    test(not_bad('This tea is not hot'), 'This tea is not hot')
+    "not_bad"
+    test(not_bad("This movie is not so bad"), "This movie is good")
+    test(not_bad("This dinner is not that bad!"), "This dinner is good!")
+    test(not_bad("This tea is not hot"), "This tea is not hot")
     test(not_bad("It's bad yet not"), "It's bad yet not")
 
     print
     print
-    'front_back'
-    test(front_back('abcd', 'xy'), 'abxcdy')
-    test(front_back('abcde', 'xyz'), 'abcxydez')
-    test(front_back('Kitten', 'Donut'), 'KitDontenut')
+    "front_back"
+    test(front_back("abcd", "xy"), "abxcdy")
+    test(front_back("abcde", "xyz"), "abcxydez")
+    test(front_back("Kitten", "Donut"), "KitDontenut")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

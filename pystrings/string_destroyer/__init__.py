@@ -29,4 +29,5 @@ def destroyer(input_sets):
 # alternative
 def destroyer_2(input_sets):
     from string import ascii_lowercase as alphabet
+
     return " ".join(c if c not in set.union(*input_sets) else "_" for c in alphabet)

@@ -42,15 +42,21 @@ class PalindromeTests(unittest.TestCase):
         self.assertEqual(self.palindrome.is_palindrome(123456), False)
 
     def test_palindrome_pairs_1(self):
-        self.assertEqual(self.palindrome.palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]])
+        self.assertEqual(
+            self.palindrome.palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]]
+        )
 
     def test_palindrome_pairs_2(self):
-        self.assertEqual(self.palindrome.palindrome_pairs(["dog", "cow", "tap", "god", "pat"]),
-                         [[0, 3], [2, 4], [3, 0], [4, 2]])
+        self.assertEqual(
+            self.palindrome.palindrome_pairs(["dog", "cow", "tap", "god", "pat"]),
+            [[0, 3], [2, 4], [3, 0], [4, 2]],
+        )
 
     def test_palindrome_pairs_3(self):
-        self.assertEqual(self.palindrome.palindrome_pairs(["abcd", "dcba", "lls", "s", "sssll"]),
-                         [[0, 1], [1, 0], [2, 4], [3, 2]])
+        self.assertEqual(
+            self.palindrome.palindrome_pairs(["abcd", "dcba", "lls", "s", "sssll"]),
+            [[0, 1], [1, 0], [2, 4], [3, 2]],
+        )
 
     def test_largest_palindrome_from_single_digit_factors(self):
         value, factors = self.palindrome.largest_palindrome(max_factor=9)
@@ -58,22 +64,30 @@ class PalindromeTests(unittest.TestCase):
         self.assertIn(set(factors), [{1, 9}, {3, 3}])
 
     def test_largest_palindrome_from_double_digit_factors(self):
-        value, factors = self.palindrome.largest_palindrome(max_factor=99, min_factor=10)
+        value, factors = self.palindrome.largest_palindrome(
+            max_factor=99, min_factor=10
+        )
         self.assertEqual(9009, value)
         self.assertEqual({91, 99}, set(factors))
 
     def test_smallest_palindrome_from_double_digit_factors(self):
-        value, factors = self.palindrome.smallest_palindrome(max_factor=99, min_factor=10)
+        value, factors = self.palindrome.smallest_palindrome(
+            max_factor=99, min_factor=10
+        )
         self.assertEqual(121, value)
         self.assertEqual({11}, set(factors))
 
     def test_largest_palindrome_from_triple_digit_factors(self):
-        value, factors = self.palindrome.largest_palindrome(max_factor=999, min_factor=100)
+        value, factors = self.palindrome.largest_palindrome(
+            max_factor=999, min_factor=100
+        )
         self.assertEqual(906609, value)
         self.assertEqual({913, 993}, set(factors))
 
     def test_smallest_palindrome_from_triple_digit_factors(self):
-        value, factors = self.palindrome.smallest_palindrome(max_factor=999, min_factor=100)
+        value, factors = self.palindrome.smallest_palindrome(
+            max_factor=999, min_factor=100
+        )
         self.assertEqual(10201, value)
         self.assertEqual({101, 101}, set(factors))
 
@@ -95,8 +109,10 @@ class PalindromeTests(unittest.TestCase):
     def test_14(self):
         for _ in range(100):
             test_case = PalindromeTests.generate_test_case()
-            self.assertEqual(self.palindrome.is_palindrome(test_case), self.reference(test_case))
+            self.assertEqual(
+                self.palindrome.is_palindrome(test_case), self.reference(test_case)
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

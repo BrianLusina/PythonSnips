@@ -1,9 +1,7 @@
 import json
 import unittest
 
-from web.iou_rest_api import (
-    RestAPI,
-)
+from web.iou_rest_api import RestAPI
 
 
 class RestApiTest(unittest.TestCase):

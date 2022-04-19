@@ -3,7 +3,7 @@ import re
 
 def password_validation(passwords):
     value = []
-    items = [x for x in passwords.split(',')]
+    items = [x for x in passwords.split(",")]
     for p in items:
         if len(p) < 6 or len(p) > 12:
             continue

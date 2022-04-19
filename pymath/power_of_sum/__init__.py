@@ -21,7 +21,7 @@ def power_of_sum():
 series = [0]
 for a in range(2, 99):
     for b in range(2, 42):
-        c = a ** b
+        c = a**b
         if a == sum(map(int, str(c))):
             series.append(c)
 power_sumDigTerm = sorted(series).__getitem__
@@ -33,8 +33,9 @@ memo = []
 
 for i in range(2, 100):
     for j in range(1, 100):
-        p = i ** j
-        if p > 10 and sum_dig(p) == i: memo += [p]
+        p = i**j
+        if p > 10 and sum_dig(p) == i:
+            memo += [p]
 
 memo.sort()
 
@@ -44,7 +45,7 @@ def power_sumDigTerm_2(n):
 
 
 def main():
-    cProfile.run('power_of_sum()')
+    cProfile.run("power_of_sum()")
 
 
 if __name__ == "__main__":

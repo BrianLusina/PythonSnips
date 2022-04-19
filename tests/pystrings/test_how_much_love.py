@@ -14,5 +14,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(how_much_i_love_you(6), "not at all")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

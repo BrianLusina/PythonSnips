@@ -14,10 +14,24 @@ class ContainAllRots(unittest.TestCase):
         self.assertEqual(contain_all_rots("", ["bsjq", "qbsj"]), True)
 
     def test_3(self):
-        self.assertEqual(contain_all_rots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]), True)
+        self.assertEqual(
+            contain_all_rots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]), True
+        )
 
     def test_4(self):
-        self.assertEqual(contain_all_rots("XjYABhR",
-                                          ["TzYxlgfnhf", "yqVAuoLjMLy", "BhRXjYA", "YABhRXj", "hRXjYAB", "jYABhRX",
-                                           "XjYABhR",
-                                           "ABhRXjY"]), False)
+        self.assertEqual(
+            contain_all_rots(
+                "XjYABhR",
+                [
+                    "TzYxlgfnhf",
+                    "yqVAuoLjMLy",
+                    "BhRXjYA",
+                    "YABhRXj",
+                    "hRXjYAB",
+                    "jYABhRX",
+                    "XjYABhR",
+                    "ABhRXjY",
+                ],
+            ),
+            False,
+        )

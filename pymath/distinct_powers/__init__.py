@@ -27,7 +27,7 @@ def distinct_powers(a, b):
     if not isinstance(a, int) or not isinstance(b, int):
         raise ValueError("Expected a or b to be a integer")
 
-    powers = set(m ** n for m in range(2, a + 1) for n in range(2, b + 1))
+    powers = set(m**n for m in range(2, a + 1) for n in range(2, b + 1))
 
     return len(powers)
 

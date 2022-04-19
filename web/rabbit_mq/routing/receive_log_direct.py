@@ -2,12 +2,12 @@ import sys
 
 import pika
 
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
 
 channel = connection.channel()
 
 # declare the exchange to match the one from the producer
-channel.exchange_declare(exchange='direct_logs', type='direct')
+channel.exchange_declare(exchange="direct_logs", type="direct")
 
 # declare a queue, and give it a random name
 result = channel.queue_declare(exclusive=True)
@@ -20,7 +20,7 @@ if not severities:
     sys.exit(1)
 
 for severity in severities:
-    channel.queue_bind(exchange='direct_logs', queue=queue_name, routing_key=severity)
+    channel.queue_bind(exchange="direct_logs", queue=queue_name, routing_key=severity)
 
 print("[*] Waiting for logs, press CTRL + C to quit")
 

@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+
 # noinspection PyCompatibility
 from urllib.request import urlretrieve
 
@@ -17,7 +18,7 @@ def url_sort_key(url):
     """
     Used to order the urls in increasing order by 2nd word if present.
     """
-    match = re.search(r'-(\w+)-(\w+)\.\w+', url)
+    match = re.search(r"-(\w+)-(\w+)\.\w+", url)
     if match:
         return match.group(2)
     else:
@@ -32,8 +33,8 @@ def read_urls(filename):
     increasing order.
     """
     # Extract the hostname from the filename
-    underbar = filename.index('_')
-    host = filename[underbar + 1:]
+    underbar = filename.index("_")
+    host = filename[underbar + 1 :]
 
     # Store the ulrs into a dict to screen out the duplicates
     url_dict = {}
@@ -50,8 +51,8 @@ def read_urls(filename):
             path = match.group(1)
             # Add to dict if it's a special "puzzle" url
             # (could combine this 'puzzle' check with the above GET extraction)
-            if 'puzzle' in path:
-                url_dict['http://' + host + path] = 1
+            if "puzzle" in path:
+                url_dict["http://" + host + path] = 1
 
     return sorted(url_dict.keys(), key=url_sort_key)
     # LAB(end solution)
@@ -68,19 +69,19 @@ def download_images(img_urls, dest_dir):
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
 
-    index = open(os.path.join(dest_dir, 'index.html'), 'w')
-    index.write('<html><body>\n')
+    index = open(os.path.join(dest_dir, "index.html"), "w")
+    index.write("<html><body>\n")
 
     i = 0
     for img_url in img_urls:
-        local_name = 'img%d' % i
-        print('Retrieving...', img_url)
+        local_name = "img%d" % i
+        print("Retrieving...", img_url)
         urlretrieve(img_url, os.path.join(dest_dir, local_name))
 
         index.write('<img src="%s">' % (local_name,))
         i += 1
 
-    index.write('\n</body></html>\n')
+    index.write("\n</body></html>\n")
     index.close()
 
 
@@ -88,11 +89,11 @@ def main():
     args = sys.argv[1:]
 
     if not args:
-        print('usage: [--todir dir] logfile ')
+        print("usage: [--todir dir] logfile ")
         sys.exit(1)
 
-    todir = ''
-    if args[0] == '--todir':
+    todir = ""
+    if args[0] == "--todir":
         todir = args[1]
         del args[0:2]
 
@@ -101,8 +102,8 @@ def main():
     if todir:
         download_images(img_urls, todir)
     else:
-        print('\n'.join(img_urls))
+        print("\n".join(img_urls))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

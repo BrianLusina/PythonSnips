@@ -33,6 +33,6 @@ class TriangleTests(unittest.TestCase):
         self.assertEquals(row_sum_odd_numbers(41), 68921)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(TriangleTests)
     unittest.TextTestRunner(verbosity=0).run(suite)

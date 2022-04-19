@@ -50,11 +50,11 @@ def mimic_dict(filename):
     # +++your code here+++
     # LAB(begin solution)
     mimic_dict = {}
-    f = open(filename, 'r')
+    f = open(filename, "r")
     text = f.read()
     f.close()
     words = text.split()
-    prev = ''
+    prev = ""
     for word in words:
         if not prev in mimic_dict:
             mimic_dict[prev] = [word]
@@ -78,7 +78,7 @@ def print_mimic(mimic_dict, word):
         word,
         nexts = mimic_dict.get(word)  # Returns None if not found
         if not nexts:
-            nexts = mimic_dict['']  # Fallback to '' if not found
+            nexts = mimic_dict[""]  # Fallback to '' if not found
         word = random.choice(nexts)
     # The 'unused_' prefix turns off the lint warning about the unused variable.
     # LAB(replace solution)
@@ -90,12 +90,12 @@ def print_mimic(mimic_dict, word):
 def main():
     if len(sys.argv) != 2:
         print
-        'usage: ./mimic.py file-to-read'
+        "usage: ./mimic.py file-to-read"
         sys.exit(1)
 
     dict = mimic_dict(sys.argv[1])
-    print_mimic(dict, '')
+    print_mimic(dict, "")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

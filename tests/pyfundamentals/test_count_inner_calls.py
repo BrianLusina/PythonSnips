@@ -33,7 +33,8 @@ def substract_two(i):
 
 
 def add_three_random(i, n):
-    if i > n: return i
+    if i > n:
+        return i
     return substract_two_random(i + 3, n)
 
 
@@ -74,5 +75,5 @@ class CountInnerCallsTestCase(unittest.TestCase):
         self.assertEqual(count_calls(random_wrapper(b), a), (2 * (b - a) + 3, b + 1))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

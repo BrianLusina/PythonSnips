@@ -38,6 +38,12 @@ class CakeTests(unittest.TestCase):
         self.assertEqual(0, cakes(recipe, available), "must return 0")
 
     def test_4(self):
-        recipe = {'flour': 300, 'sugar': 150, 'milk': 100, 'oil': 100, 'cream': 200}
-        available = {'flour': 20000, 'oil': 30000, 'cream': 5000, 'milk': 20000, 'sugar': 1700}
+        recipe = {"flour": 300, "sugar": 150, "milk": 100, "oil": 100, "cream": 200}
+        available = {
+            "flour": 20000,
+            "oil": 30000,
+            "cream": 5000,
+            "milk": 20000,
+            "sugar": 1700,
+        }
         self.assertEqual(11, cakes(recipe, available), "Should equal 11")

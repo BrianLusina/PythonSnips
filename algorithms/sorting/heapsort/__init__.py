@@ -25,7 +25,10 @@ def bubble_down(heap, heap_length, index):
             larger_child_index = right_index
 
         if heap[index] < heap[larger_child_index]:
-            heap[index], heap[larger_child_index] = heap[larger_child_index], heap[index]
+            heap[index], heap[larger_child_index] = (
+                heap[larger_child_index],
+                heap[index],
+            )
 
             # continue bubbling down
             index = larger_child_index

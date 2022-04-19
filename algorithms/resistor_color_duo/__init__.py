@@ -8,7 +8,7 @@ color_mapping = [
     "blue",
     "violet",
     "grey",
-    "white"
+    "white",
 ]
 
 

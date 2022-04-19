@@ -1,6 +1,8 @@
 from urllib import request
+
 # noinspection PyCompatibility
 from urllib.parse import urljoin
+
 # noinspection PyCompatibility
 from urllib.request import urlretrieve
 
@@ -38,4 +40,8 @@ class Network(object):
 
     def __repr__(self):
         return "<NetFile: %r>, Text: %r, Info: %r, Base Url: %r" % (
-            self.ufile, self.text, self.info, self.base_url)
+            self.ufile,
+            self.text,
+            self.info,
+            self.base_url,
+        )

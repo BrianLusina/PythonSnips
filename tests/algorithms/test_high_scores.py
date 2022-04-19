@@ -56,16 +56,12 @@ class HighScoreTest(unittest.TestCase):
 
     def test_message_when_latest_score_is_not_the_highest_score(self):
         scores = [20, 100, 0, 30, 70]
-        expected = (
-            "Your latest score was 70. That's 30 short of your personal best!"
-        )
+        expected = "Your latest score was 70. That's 30 short of your personal best!"
         self.assertEqual(HighScores(scores).report(), expected)
 
     def test_message_for_repeated_personal_best(self):
         scores = [20, 70, 50, 70, 30]
-        expected = (
-            "Your latest score was 30. That's 40 short of your personal best!"
-        )
+        expected = "Your latest score was 30. That's 40 short of your personal best!"
         self.assertEqual(HighScores(scores).report(), expected)
 
 

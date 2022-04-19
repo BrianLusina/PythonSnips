@@ -86,5 +86,5 @@ class SeriesTest(unittest.TestCase):
             largest_product("12345", -1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

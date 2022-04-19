@@ -1,6 +1,7 @@
 from typing import Any, Union
 
 from datastructures.stacks import Stack
+
 from .. import LinkedList, Node
 from ..exceptions import EmptyLinkedList
 
@@ -67,7 +68,9 @@ class SinglyLinkedList(LinkedList):
         if not data:
             raise ValueError("Data to insert can not be None")
 
-        prev_node = prev_node if isinstance(prev_node, SingleNode) else SingleNode(prev_node)
+        prev_node = (
+            prev_node if isinstance(prev_node, SingleNode) else SingleNode(prev_node)
+        )
         node_to_insert = SingleNode(data)
 
         current = self.head
@@ -274,20 +277,20 @@ class SinglyLinkedList(LinkedList):
     def reverse_between(self, left: int, right: int):
         """
         Reverse linked list between left & right node positions.
-        This uses the iterative link reversal to reverse a sublist of the linked list between the left & the right 
+        This uses the iterative link reversal to reverse a sublist of the linked list between the left & the right
         positions in the linked list.
-        This is based on the assumption that we don't have access to the data in the nodes themselves, 
+        This is based on the assumption that we don't have access to the data in the nodes themselves,
         but instead we can change the links between the nodes.
 
-        Starting from the node at position left all the way to position right, we reverse the next pointers for 
+        Starting from the node at position left all the way to position right, we reverse the next pointers for
         all the nodes in between.
 
         Ref: https://leetcode.com/problems/reverse-linked-list-ii/solution/
-        
-        Time Complexity: O(N) considering the list consists of N nodes. 
+
+        Time Complexity: O(N) considering the list consists of N nodes.
         We process each of the nodes at most once (we don't process the nodes after the right node from the beginning.
-        
-        Space Complexity: O(1) since we simply adjust some pointers in the original linked list and only use O(1) additional 
+
+        Space Complexity: O(1) since we simply adjust some pointers in the original linked list and only use O(1) additional
         memory for achieving the final result.
         """
         if self.head is None or self.head.next is None:
@@ -434,7 +437,7 @@ class SinglyLinkedList(LinkedList):
         Returns True if it is, false otherwise.
         Uses a stack, where we add the values/data of each node into a stack
         & reset the pointer back to the head. We then traverse the linked list from the head
-        as we pop the data items from the stack(this will be the last added data item of the tail node) 
+        as we pop the data items from the stack(this will be the last added data item of the tail node)
         & check each node's value to the data item popped from the stack. If any differ, then it is not
         a Palindrome
         :returns: True

@@ -46,5 +46,5 @@ class BinaryTests(unittest.TestCase):
         self.assertRaises(ValueError, parse_binary, "nope10")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

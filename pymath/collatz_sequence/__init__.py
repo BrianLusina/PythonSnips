@@ -60,7 +60,9 @@ def find_starting_number(limit):
     :rtype: int
     """
     if limit < 0 or limit is None:
-        raise ValueError(f"Expected limit to be greater than one or not None instead found {limit}")
+        raise ValueError(
+            f"Expected limit to be greater than one or not None instead found {limit}"
+        )
 
     if limit == 1:
         # short circuit, we already have the starting point
@@ -83,4 +85,6 @@ def find_starting_number(limit):
 if __name__ == "__main__":
     range_limit = 1_000_000
     starting_number = find_starting_number(range_limit)
-    print(f"Starting number with the longest collatz seq under {range_limit} is {starting_number}")
+    print(
+        f"Starting number with the longest collatz seq under {range_limit} is {starting_number}"
+    )

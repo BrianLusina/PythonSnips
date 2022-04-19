@@ -3,8 +3,20 @@ from functools import partial
 
 # Score categories
 # Change the values as you see fit
-YACHT, ONES, TWOS, THREES, FOURS, FIVES, SIXES, FULL_HOUSE, FOUR_OF_A_KIND, LITTLE_STRAIGHT, BIG_STRAIGHT, CHOICE = range(
-    0, 12)
+(
+    YACHT,
+    ONES,
+    TWOS,
+    THREES,
+    FOURS,
+    FIVES,
+    SIXES,
+    FULL_HOUSE,
+    FOUR_OF_A_KIND,
+    LITTLE_STRAIGHT,
+    BIG_STRAIGHT,
+    CHOICE,
+) = range(0, 12)
 
 
 def yacht(dice):

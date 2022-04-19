@@ -39,14 +39,16 @@ def extract_names(filename):
     baby_html = open(filename)
     with baby_html as baby_data:
         text = baby_data.read()
-        match = re.search(r'Popularity\sin\s(\d\d\d\d)', text)
+        match = re.search(r"Popularity\sin\s(\d\d\d\d)", text)
         if not match:
             sys.stderr.write("Year not found")
             sys.exit(1)
         # store the year in a list
         res.append(match.group(1))
         # <td>1</td><td>Michael</td><td>Jessica</td>
-        name_tuples = re.findall("<td>([0-9]+)</td><td>([a-zA-Z]+)</td><td>([a-zA-Z]+)</td>", text)
+        name_tuples = re.findall(
+            "<td>([0-9]+)</td><td>([a-zA-Z]+)</td><td>([a-zA-Z]+)</td>", text
+        )
         # print(name_tuples)
 
         # unpack the tuple into a dictionary
@@ -102,8 +104,8 @@ def main():
 
         text = "\n".join(out)
 
-        outf = open(file[0: len(file) - 5] + '.summary', 'w')
-        outf.write(text + '\n')
+        outf = open(file[0 : len(file) - 5] + ".summary", "w")
+        outf.write(text + "\n")
         outf.close()
 
         # if true, prints data to a summary file
@@ -116,5 +118,5 @@ def main():
     return
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

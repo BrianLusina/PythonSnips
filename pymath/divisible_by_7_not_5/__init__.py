@@ -15,7 +15,7 @@ class Divisible7(object):
         for i in self.rnge:
             if (i % 7 == 0) and (i % 5 != 0):
                 l.append(str(i))
-        return ','.join(l)
+        return ",".join(l)
 
 
 lst = Divisible7(range(2000, 3201))

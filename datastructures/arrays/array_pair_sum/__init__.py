@@ -28,7 +28,7 @@ def array_pair_sum_sort(k, arr):
     arr.sort()
 
     for i in range(len(arr)):
-        if k - arr[i] in arr[i + 1:]:
+        if k - arr[i] in arr[i + 1 :]:
             result.append([arr[i], k - arr[i]])
 
     return result

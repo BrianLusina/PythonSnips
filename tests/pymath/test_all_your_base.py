@@ -4,7 +4,6 @@ from pymath.all_your_base import rebase
 
 
 class AllYourBaseTests(unittest.TestCase):
-
     def test_single_bit_to_one_decimal(self):
         self.assertEqual(rebase(2, [1], 10), [1])
 
@@ -78,5 +77,5 @@ class AllYourBaseTests(unittest.TestCase):
             rebase(-2, [1], -7)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

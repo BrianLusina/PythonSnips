@@ -1,7 +1,7 @@
 import pika
 
 # connect to RabbitMQ as before
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters("localhost"))
 
 channel = connection.channel()
 
@@ -11,6 +11,7 @@ channel.queue_declare(queue="hello", durable=True)
 
 # subscribe a callback function to a queue. Whenever we receive a message, this callback will be called by the
 # Pika library
+
 
 def callback(ch, method, properties, body):
     print("[X] Received %r" % body)

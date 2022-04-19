@@ -1,5 +1,5 @@
 from collections import Counter
-from math import sqrt, pow
+from math import pow, sqrt
 
 
 class Triangle(object):
@@ -11,12 +11,9 @@ class Triangle(object):
         i stands for isosceles triangle
         s stands for scalene triangle
     """
+
     # the types of triangles
-    TYPES = {
-        "e": "equilateral",
-        "s": "scalene",
-        "i": "isosceles"
-    }
+    TYPES = {"e": "equilateral", "s": "scalene", "i": "isosceles"}
 
     def __init__(self, s1, s2, s3):
         """
@@ -57,12 +54,7 @@ class Triangle(object):
         :rtype: bool
         """
         x, y, z = self.sides
-        return any([
-            x + y <= z,
-            x + z <= y,
-            y + z <= x
-        ]
-        )
+        return any([x + y <= z, x + z <= y, y + z <= x])
 
     def kind(self):
         """

@@ -29,10 +29,10 @@ class Circle(object):
     @property
     def area(self):
         """
-        immutable property: properties without .setter() methods can’t be changed. 
+        immutable property: properties without .setter() methods can’t be changed.
         Even though it is defined as a method, it can be retrieved as an attribute without parentheses.
         """
-        return self.pi() * self.radius ** 2
+        return self.pi() * self.radius**2
 
     def cylinder_volume(self, height):
         return self.area * height
@@ -41,7 +41,7 @@ class Circle(object):
     def unit_circle(cls):
         """
         Factory method creating a unit circle of 1
-        A class method not bound to one particular instance of Circle. 
+        A class method not bound to one particular instance of Circle.
         Class methods are often used as factory methods that can create specific instances of the class
         """
         return cls(1)

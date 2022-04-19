@@ -1,4 +1,4 @@
-cubes, crev = [x ** 3 for x in range(1, 1201)], {}
+cubes, crev = [x**3 for x in range(1, 1201)], {}
 # for cube root lookup
 for x, x3 in enumerate(cubes):
     crev[x3] = x + 1

@@ -1,6 +1,8 @@
 import unittest
 
-from datastructures.arrays.intersection_of_two_arrays.intersection_one import intersection
+from datastructures.arrays.intersection_of_two_arrays.intersection_one import (
+    intersection,
+)
 
 
 class IntersectionArraysTestCase(unittest.TestCase):
@@ -19,5 +21,5 @@ class IntersectionArraysTestCase(unittest.TestCase):
         self.assertEqual(actual, expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -3,9 +3,7 @@ from data_science.data_download import DataDownload
 
 
 class RedWineData(object):
-    """
-
-    """
+    """ """
 
     def __init__(self):
         self.wine_url = None

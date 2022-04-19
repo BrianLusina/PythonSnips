@@ -1,7 +1,7 @@
 import re
 
-cons = re.compile('^([^aeiou]?qu|[^aeiou]+)([a-z]*)')
-vowel = re.compile('^([aeiou]|y[^aeiou]|xr)[a-z]*')
+cons = re.compile("^([^aeiou]?qu|[^aeiou]+)([a-z]*)")
+vowel = re.compile("^([aeiou]|y[^aeiou]|xr)[a-z]*")
 
 
 def split_initial_consonant_sound(word):
@@ -24,4 +24,6 @@ def translate(words):
 
 
 def pig_it(text):
-    return " ".join(x.replace(x[0], "") + x[0] + "ay" for x in text.split(" ") if re.match('\w+', x))
+    return " ".join(
+        x.replace(x[0], "") + x[0] + "ay" for x in text.split(" ") if re.match("\w+", x)
+    )

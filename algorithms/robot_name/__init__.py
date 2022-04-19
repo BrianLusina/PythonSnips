@@ -3,7 +3,6 @@ from string import ascii_uppercase
 
 
 class Robot(object):
-
     def __init__(self):
         self._name = None
         self._past_names = set()

@@ -13,7 +13,7 @@ class MaxProd(object):
     # average of the three solutions
     def max_product_avg(self):
         count = 0
-        m1 = m2 = float('-inf')
+        m1 = m2 = float("-inf")
         for x in self.array:
             count += 1
             if x > m2:

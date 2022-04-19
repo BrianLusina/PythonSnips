@@ -22,7 +22,7 @@ class EscapePod(Scene):
             print("The pod escapes out into the void of space, then")
             print("implodes as the hull ruptures, crushing your body")
             print("into jam jelly.")
-            return 'death'
+            return "death"
         else:
             print("You jump into pod %s and hit the eject button." % guess)
             print("The pod easily slides out into space heading to")
@@ -31,4 +31,4 @@ class EscapePod(Scene):
             print("bright star, taking out the Gothon ship at the same")
             print("time.  You won!")
 
-            return 'finished'
+            return "finished"

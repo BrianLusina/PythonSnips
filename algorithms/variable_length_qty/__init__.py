@@ -1,5 +1,5 @@
 EIGHTBITMASK = 0x80
-SEVENBITSMASK = 0x7f
+SEVENBITSMASK = 0x7F
 
 
 def encode_single(num):
@@ -20,7 +20,7 @@ def encode_single(num):
 
 def encode(numbers):
     """
-    Encodes a list of numbers in HEX 
+    Encodes a list of numbers in HEX
     :param numbers: list of numbers e.g [0X0, 0X40]
     :return: list of encoded numbers following VLQ
     """
@@ -30,7 +30,7 @@ def encode(numbers):
 def decode(bytes_):
     """
     Decodes a list of bytes
-    :param bytes_: 
+    :param bytes_:
     :return: decoded bytes
     :raises: ValueError
     """
@@ -38,12 +38,12 @@ def decode(bytes_):
 
     for idx, byt in enumerate(bytes_):
         n <<= 7
-        n += (byt & SEVENBITSMASK)
+        n += byt & SEVENBITSMASK
 
         if byt & EIGHTBITMASK == 0:
             values.append(n)
             n = 0
         elif idx == len(bytes_) - 1:
-            raise ValueError('incomplete byte sequence')
+            raise ValueError("incomplete byte sequence")
 
     return values
