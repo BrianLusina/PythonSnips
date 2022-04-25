@@ -24,7 +24,7 @@ def pascals_triangle(nth: int) -> list:
 def pascal_nth_row(nth: int) -> list:
     """
     Get's Pascal's Triangle Nth row and returns it
-    This is much faster than calculating the whole triangle and then fetching by it's index. 
+    This is much faster than calculating the whole triangle and then fetching by it's index.
     Instead we use the formula
     NCr = (NCr - 1 * (N - r + 1)) / r where 1 ≤ r ≤ N
     as the nth row consists of the following sequence:

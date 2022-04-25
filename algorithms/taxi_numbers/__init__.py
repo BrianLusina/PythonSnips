@@ -1,20 +1,20 @@
 # using heapq module
 # A priority queue that holds cube sums. When consecutive sums come out with the same value, they are taxis.
-from heapq import heappush, heappop
+from heapq import heappop, heappush
 
 
 def cubesum():
     h, n = [], 1
     while True:
-        while not h or h[0][0] > n ** 3:
-            heappush(h, (n ** 3 + 1, n, 1))
+        while not h or h[0][0] > n**3:
+            heappush(h, (n**3 + 1, n, 1))
             n += 1
 
         (s, a, b) = heappop(h)
         yield ((s, a, b))
         b += 1
         if b < a:
-            heappush(h, (a ** 3, b ** 3, a, b))
+            heappush(h, (a**3, b**3, a, b))
 
 
 def taxis():

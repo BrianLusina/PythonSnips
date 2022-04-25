@@ -20,5 +20,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(decode("4107056043"), "6953504567")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -30,8 +30,12 @@ class ClockTestCases(unittest.TestCase):
     def test_random(self):
         for i in range(10):
             time = ClockTestCases.rand_time()
-            self.assertEqual(what_is_the_time(what_is_the_time(time)), time, "didn't work for " + time)
+            self.assertEqual(
+                what_is_the_time(what_is_the_time(time)),
+                time,
+                "didn't work for " + time,
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -8,21 +8,21 @@ def longest_substring_util(s: str, start: int, end: int, k: int) -> int:
 
     # build the count map which will contain the occurrences of each character in the string
     for i in range(start, end):
-        count_map[ord(s[i]) - ord('a')] += 1
+        count_map[ord(s[i]) - ord("a")] += 1
 
     # iterate through the string
     for mid in range(start, end):
 
         # if we find a character that is 'invalid' i.e. the frequency of the character is less than k
         # if counter.get(s[mid]) >= k:
-        if count_map[ord(s[mid]) - ord('a')] >= k:
+        if count_map[ord(s[mid]) - ord("a")] >= k:
             continue
 
         # we now have a mid point
         mid_next = mid + 1
 
         # while mid_next < end and counter.get(s[mid_next]) < k:
-        while mid_next < end and count_map[ord(s[mid_next]) - ord('a')] < k:
+        while mid_next < end and count_map[ord(s[mid_next]) - ord("a")] < k:
             mid_next += 1
 
         left_sub = longest_substring_util(s, start, mid, k)

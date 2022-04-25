@@ -21,7 +21,7 @@ class Anagrams(object):
         However, since strings in Python are immutable, the first step in
         the process will be to convert the second string to a list.
         Each character from the first string can be checked against the characters in the list and if found,
-        checked off by replacement. """
+        checked off by replacement."""
         res, word = [], word.lower()
         for x in word_list:
             if len(word) == len(x.lower()) and word != x.lower():
@@ -89,7 +89,7 @@ class Anagrams(object):
             else:
                 return 0
         for i in range(0, len(parent) - child_slice):
-            if self.hash_string(parent[i: i + child_slice]) == anagram:
+            if self.hash_string(parent[i : i + child_slice]) == anagram:
                 count += 1
         return count
 

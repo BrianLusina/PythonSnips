@@ -1,11 +1,10 @@
 from collections import defaultdict
 from typing import Any, Union
 
-from datastructures.linked_lists.doubly_linked_list import DoublyLinkedList, DoubleNode
+from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
 
 
 class LFUCache:
-
     def __init__(self, capacity: int):
         """
         Initializes an instance of a LFUCache

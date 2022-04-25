@@ -1,7 +1,20 @@
 import unittest
 
-from puzzles.yacht import score, BIG_STRAIGHT, YACHT, ONES, THREES, TWOS, LITTLE_STRAIGHT, CHOICE, FULL_HOUSE, \
-    SIXES, FOUR_OF_A_KIND, FIVES, FOURS
+from puzzles.yacht import (
+    BIG_STRAIGHT,
+    CHOICE,
+    FIVES,
+    FOUR_OF_A_KIND,
+    FOURS,
+    FULL_HOUSE,
+    LITTLE_STRAIGHT,
+    ONES,
+    SIXES,
+    THREES,
+    TWOS,
+    YACHT,
+    score,
+)
 
 
 class YachtTests(unittest.TestCase):
@@ -84,5 +97,5 @@ class YachtTests(unittest.TestCase):
         self.assertEqual(score([2, 2, 2, 2, 2], CHOICE), 10)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

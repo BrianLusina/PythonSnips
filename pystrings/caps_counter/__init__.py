@@ -6,6 +6,6 @@ def caps_counter(word):
     for x in word:
         if re.match(r"[A-Z]", x):
             result["UPPER CASE"] += 1
-        elif re.match(r'[a-z]', x):
-            result['LOWER CASE'] += 1
+        elif re.match(r"[a-z]", x):
+            result["LOWER CASE"] += 1
     return result

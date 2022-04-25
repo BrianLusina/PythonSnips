@@ -4,7 +4,12 @@ from datastructures.linked_lists import Node
 
 
 class NodeWithRandomPointer(Node):
-    def __init__(self, x: int, next: 'NodeWithRandomPointer' = None, random: 'NodeWithRandomPointer' = None):
+    def __init__(
+        self,
+        x: int,
+        next: "NodeWithRandomPointer" = None,
+        random: "NodeWithRandomPointer" = None,
+    ):
         super.__init__(x, next)
         self.random = random
 

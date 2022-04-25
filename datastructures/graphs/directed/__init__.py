@@ -1,11 +1,11 @@
 from typing import List, Set
 
 from datastructures.queues.fifo import FifoQueue as Queue
-from .. import Graph, Edge, Vertex
+
+from .. import Edge, Graph, Vertex
 
 
 class DirectedGraph(Graph):
-
     def __init__(self, edge_list: List[Edge]):
         super(DirectedGraph, self).__init__(edge_list)
 

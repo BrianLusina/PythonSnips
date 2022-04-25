@@ -22,7 +22,7 @@ def find_coef_a_b_with_max_primes(n=0):
     for a in range(-999, 1001):
         for b in range(-999, 1001):
             while True:
-                s = num ** 2 + a * num + b
+                s = num**2 + a * num + b
                 if not is_prime(s):
                     break
 
@@ -36,4 +36,6 @@ def find_coef_a_b_with_max_primes(n=0):
 if __name__ == "__main__":
     start = 0
     product_a_b = find_coef_a_b_with_max_primes(start)
-    print(f"Product of coefficient a and b with maximum primes with starting point n of {start} is {product_a_b}")
+    print(
+        f"Product of coefficient a and b with maximum primes with starting point n of {start} is {product_a_b}"
+    )

@@ -3,10 +3,22 @@ from collections import OrderedDict
 
 from pytime.is_leap import is_leap_year
 
-no_of_days = OrderedDict([("01", 31), ("02", 28), ("03", 31), ("04", 30),
-                          ("05", 31), ("06", 30), ("07", 31), ("08", 31),
-                          ("09", 30), ("10", 31), ("11", 30), ("12", 31)
-                          ])
+no_of_days = OrderedDict(
+    [
+        ("01", 31),
+        ("02", 28),
+        ("03", 31),
+        ("04", 30),
+        ("05", 31),
+        ("06", 30),
+        ("07", 31),
+        ("08", 31),
+        ("09", 30),
+        ("10", 31),
+        ("11", 30),
+        ("12", 31),
+    ]
+)
 
 
 def day_of_programmer(year):
@@ -34,16 +46,18 @@ def day_of_programmer(year):
     day = 256 - (elapsed_days if year != 1918 else elapsed_days - 13)
     day = day if day > 0 else 1
 
-    return "{}.{}.{}".format(("0%s" % day if day in range(1, 10) else day), current_month, year)
+    return "{}.{}.{}".format(
+        ("0%s" % day if day in range(1, 10) else day), current_month, year
+    )
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     year = int(input())
 
     result = day_of_programmer(year)
 
-    fptr.write(result + '\n')
+    fptr.write(result + "\n")
 
     fptr.close()

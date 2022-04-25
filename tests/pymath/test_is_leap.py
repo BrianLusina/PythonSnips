@@ -20,5 +20,5 @@ class YearTest(unittest.TestCase):
         self.assertIs(is_leap_year(2400), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

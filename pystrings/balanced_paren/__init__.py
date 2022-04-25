@@ -1,4 +1,4 @@
-from typing import List, Generator
+from typing import Generator, List
 
 
 def balanced_parens(n: int) -> List[str]:

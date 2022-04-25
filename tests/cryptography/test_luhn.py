@@ -7,14 +7,11 @@ from cryptography.luhn import Luhn
 class LuhnTests(unittest.TestCase):
     def test_addends(self):
         # uses a Counter to avoid specifying order of return value
-        self.assertEqual(Counter([1, 4, 1, 4, 1]),
-                         Counter(Luhn(12121).
-                                 addends()))
+        self.assertEqual(Counter([1, 4, 1, 4, 1]), Counter(Luhn(12121).addends()))
 
     def test_addends_large(self):
         # uses a Counter to avoid specifying order of return value
-        self.assertEqual(Counter([7, 6, 6, 1]),
-                         Counter(Luhn(8631).addends()))
+        self.assertEqual(Counter([7, 6, 6, 1]), Counter(Luhn(8631).addends()))
 
     def test_checksum1(self):
         self.assertEqual(22, Luhn(4913).checksum())
@@ -130,5 +127,5 @@ class LuhnTests(unittest.TestCase):
         self.assertEqual(Luhn.is_card_valid("6666 6666 6666 6664"), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

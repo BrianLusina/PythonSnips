@@ -1,7 +1,6 @@
 from typing import Union
 
 from .enums import VehicleSize
-from .enums import VehicleSize
 from .parking_spot import ParkingSpot
 from .vehicle import Vehicle
 

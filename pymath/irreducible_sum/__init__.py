@@ -26,4 +26,6 @@ def sum_fracts(lst):
 def sum_fracts_2(lst):
     if lst:
         ret = sum(Fraction(a, b) for (a, b) in lst)
-        return ret.numerator if ret.denominator == 1 else [ret.numerator, ret.denominator]
+        return (
+            ret.numerator if ret.denominator == 1 else [ret.numerator, ret.denominator]
+        )

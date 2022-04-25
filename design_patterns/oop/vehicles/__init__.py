@@ -37,5 +37,14 @@ class Vehicle(object):
         pass
 
     def __repr__(self, *args, **kwargs):
-        return "Name: %r, Make: %r, Model: %r, Manufacture Year: %r Price: %r, Engine Capacity: %r" % (
-            self.name, self.make, self.model, self.manufacture_year, self.price, self.engine_capacity)
+        return (
+            "Name: %r, Make: %r, Model: %r, Manufacture Year: %r Price: %r, Engine Capacity: %r"
+            % (
+                self.name,
+                self.make,
+                self.model,
+                self.manufacture_year,
+                self.price,
+                self.engine_capacity,
+            )
+        )

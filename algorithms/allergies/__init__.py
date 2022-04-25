@@ -1,13 +1,13 @@
 class Allergies(object):
     ALLERGY_SCORES = {
-        'eggs': 1,
-        'peanuts': 2,
-        'shellfish': 4,
-        'strawberries': 8,
-        'tomatoes': 16,
-        'chocolate': 32,
-        'pollen': 64,
-        'cats': 128
+        "eggs": 1,
+        "peanuts": 2,
+        "shellfish": 4,
+        "strawberries": 8,
+        "tomatoes": 16,
+        "chocolate": 32,
+        "pollen": 64,
+        "cats": 128,
     }
 
     def __init__(self, score):
@@ -30,5 +30,10 @@ class Allergies(object):
         :return: a sorted list of all the allergies
          :rtype: list
         """
-        return sorted(list(allergy for allergy in self.ALLERGY_SCORES if
-                           self.is_allergic_to(allergy)))
+        return sorted(
+            list(
+                allergy
+                for allergy in self.ALLERGY_SCORES
+                if self.is_allergic_to(allergy)
+            )
+        )

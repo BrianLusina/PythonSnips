@@ -37,15 +37,15 @@ def invert_result(result):
 
 
 def format_table(results):
-    table = ['Team                           | MP |  W |  D |  L |  P']
+    table = ["Team                           | MP |  W |  D |  L |  P"]
 
     for team, games in sorted(
-            results.items(), key=lambda g: (-calculate_points(g[1]), g[0])):
-        team_fmt = '{0:30} | {1:2} | {3:2} | {4:2} | {5:2} | {2:2}'
-        table.append(
-            team_fmt.format(team, sum(games), calculate_points(games), *games))
+        results.items(), key=lambda g: (-calculate_points(g[1]), g[0])
+    ):
+        team_fmt = "{0:30} | {1:2} | {3:2} | {4:2} | {5:2} | {2:2}"
+        table.append(team_fmt.format(team, sum(games), calculate_points(games), *games))
 
-    return '\n'.join(table)
+    return "\n".join(table)
 
 
 def calculate_points(stats):

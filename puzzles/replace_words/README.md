@@ -30,4 +30,3 @@ Example 5:
 
 Input: dictionary = ["ac","ab"], sentence = "it is abnormal that this solution is accepted"
 Output: "it is ab that this solution is ac"
- 

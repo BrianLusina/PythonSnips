@@ -24,7 +24,9 @@ class MyFileSystem(object):
         :return:
         """
         if self.read_current_dir():
-            return [os.path.join(self.directory, files) for files in self.read_current_dir()]
+            return [
+                os.path.join(self.directory, files) for files in self.read_current_dir()
+            ]
         return False
 
     def make_absolute_path(self):
@@ -39,7 +41,9 @@ class MyFileSystem(object):
         :return: dict with the key as the directory name and value as the base name
         """
         return {
-            "Dir: " + os.path.dirname(self.make_absolute_path()): "Base" + os.path.basename(self.make_absolute_path())
+            "Dir: "
+            + os.path.dirname(self.make_absolute_path()): "Base"
+            + os.path.basename(self.make_absolute_path())
         }
 
     def is_path_valid(self, path=None):

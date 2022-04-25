@@ -16,14 +16,16 @@ class ArrayChunksTestCase(unittest.TestCase):
 
     @staticmethod
     def make_parts_solution(arr, chunk_size):
-        return [arr[x:x + chunk_size] for x in range(0, len(arr), chunk_size)]
+        return [arr[x : x + chunk_size] for x in range(0, len(arr), chunk_size)]
 
     def test_random_numbers(self):
         for _ in range(10):
             arr = list(range(randint(10, 100)))
             chunk_size = randint(1, 25)
-            self.assertListEqual(make_parts(arr, chunk_size), self.make_parts_solution(arr, chunk_size))
+            self.assertListEqual(
+                make_parts(arr, chunk_size), self.make_parts_solution(arr, chunk_size)
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

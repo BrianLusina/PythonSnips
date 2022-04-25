@@ -1,6 +1,6 @@
 import unittest
 
-from Lambdas.OpenClosed.open_closed import greet, spoken, shouted, whispered
+from Lambdas.OpenClosed.open_closed import greet, shouted, spoken, whispered
 
 
 class MyTestCase(unittest.TestCase):
@@ -14,5 +14,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(greet(whispered, "Hello"), "hello.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -42,5 +42,7 @@ def longest_recurring_cycle(limit=1000):
 if __name__ == "__main__":
     limit_ = 1000
     digit_with_recurring_cycle = longest_recurring_cycle(limit_)
-    print(f"Digit with longest recurring cycle in its decimal fraction part within range of 2 to {limit_} "
-          f"is {digit_with_recurring_cycle}")
+    print(
+        f"Digit with longest recurring cycle in its decimal fraction part within range of 2 to {limit_} "
+        f"is {digit_with_recurring_cycle}"
+    )

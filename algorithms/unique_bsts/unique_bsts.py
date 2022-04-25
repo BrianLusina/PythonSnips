@@ -2,8 +2,8 @@ def num_trees(n: int) -> int:
     """
     For all possible values of i, consider i as root, then [1….i-1] numbers will fall in the left subtree and [i+1….n]
     numbers will fall in the right subtree.
-    So, add (i-1)*(n-i) to the answer. 
-    The summation of the products will be the answer to the number of unique BST.    
+    So, add (i-1)*(n-i) to the answer.
+    The summation of the products will be the answer to the number of unique BST.
     """
     dp = [0] * (n + 1)
 

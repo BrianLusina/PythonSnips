@@ -19,5 +19,5 @@ class IntersectionTwoTestCase(unittest.TestCase):
         self.assertEqual(intersect(nums1, nums2), expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

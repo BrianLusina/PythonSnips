@@ -28,6 +28,6 @@ class ShellGameTests(unittest.TestCase):
         self.assertEqual(5, shell.find_the_ball(), "Nope! Expected 5.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(ShellGameTests)
     unittest.TextTestRunner(verbosity=0).run(suite)

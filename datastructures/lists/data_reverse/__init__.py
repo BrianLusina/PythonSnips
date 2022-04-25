@@ -13,7 +13,7 @@ def data_reverse(data):
 
     count = 0
     while count < data_len:
-        byte_store.append(data[count: count + 8])
+        byte_store.append(data[count : count + 8])
         count += 8
 
     for byte in reversed(byte_store):
@@ -28,4 +28,4 @@ def data_reverse_(data):
     :param data:
     :return:
     """
-    return [b for a in range(len(data) - 8, -1, -8) for b in data[a:a + 8]]
+    return [b for a in range(len(data) - 8, -1, -8) for b in data[a : a + 8]]

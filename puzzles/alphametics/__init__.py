@@ -9,7 +9,9 @@ def solve(puzzle):
     :rtype: dict
     """
     # get a set of letters and map 0-9 range to a string
-    letters = set(char for char in puzzle if char.isupper())  # retrieves letters from the puzzle
+    letters = set(
+        char for char in puzzle if char.isupper()
+    )  # retrieves letters from the puzzle
     numbers = map(str, range(10))  # returns a map object of string numbers from 0-9
 
     # will produce combinations of numbers using length of the letters

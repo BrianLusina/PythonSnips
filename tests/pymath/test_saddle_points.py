@@ -31,5 +31,5 @@ class SaddlePointTest(unittest.TestCase):
         self.assertRaises(ValueError, saddle_points, inp)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

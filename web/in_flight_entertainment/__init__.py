@@ -1,6 +1,6 @@
 """
 Small entertainment in flight program for recommending movies to people to watch while they are in flight
-should return a boolean indicating whether there are 2 movies to watch whose lengths sum up to the flight 
+should return a boolean indicating whether there are 2 movies to watch whose lengths sum up to the flight
 length or are less than the flight length
 """
 
@@ -9,7 +9,7 @@ def in_flight_entertainment(flight_length, movie_lengths):
     """
     Loops through the movie lengths and checks whether there are 2 movies to watch which sum up to the flight
     length
-    :param flight_length: length of the flight in minutes 
+    :param flight_length: length of the flight in minutes
     :param movie_lengths: list of movie lengths
     :return: 2 recommended movies to watch that are equal to or less than the flight length
     :rtype: bool

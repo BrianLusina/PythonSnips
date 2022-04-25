@@ -15,7 +15,7 @@ def self_dividing_numbers(left: int, right: int) -> List[int]:
 
     def self_dividing(number: int):
         for digit in str(number):
-            if digit == '0' or number % int(digit) > 0:
+            if digit == "0" or number % int(digit) > 0:
                 return False
         return True
 

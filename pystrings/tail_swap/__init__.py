@@ -8,10 +8,10 @@ def tail_swap(word_list):
     :rtype: list
     """
     # create a format for final replacement
-    fmt = '{}:{}'.format
+    fmt = "{}:{}".format
 
     # pick the head and tail for each word in the list
-    (head, tail), (head_2, tail_2) = (a.split(':') for a in word_list)
+    (head, tail), (head_2, tail_2) = (a.split(":") for a in word_list)
 
     # return the formatted list
     return [fmt(head, tail_2), fmt(head_2, tail)]

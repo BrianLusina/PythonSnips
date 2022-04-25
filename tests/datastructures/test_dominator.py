@@ -20,4 +20,6 @@ class DominatorTests(unittest.TestCase):
         self.assertEqual(dominator([]), -1)
 
     def test6(self):
-        self.assertEqual(dominator([7, 6, 9, 7, 7, 7, 7, 7, 3, 7, 2, 7, 10, 7, 7, 7, 2]), 7)
+        self.assertEqual(
+            dominator([7, 6, 9, 7, 7, 7, 7, 7, 3, 7, 2, 7, 10, 7, 7, 7, 2]), 7
+        )

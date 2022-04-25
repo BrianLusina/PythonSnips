@@ -36,8 +36,10 @@ class ChessBoardCellColorTestCase(unittest.TestCase):
         for _ in range(100):
             bishop = get_position()
             pawn = get_position(bishop)
-            self.assertEquals(chess_board_cell_color(bishop, pawn), reference(bishop, pawn))
+            self.assertEquals(
+                chess_board_cell_color(bishop, pawn), reference(bishop, pawn)
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

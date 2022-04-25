@@ -7,6 +7,6 @@ def beeramid(bonus, price):
 
     while (levels + 1) ** 2 <= number_of_cans:
         levels += 1
-        number_of_cans -= levels ** 2
+        number_of_cans -= levels**2
 
     return levels

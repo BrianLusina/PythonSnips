@@ -10,7 +10,10 @@ class Tests(unittest.TestCase):
 
     def test1(self):
         word = Swap("Hello World")
-        self.assertEqual("hELLO wORLD", word.swappie(), )
+        self.assertEqual(
+            "hELLO wORLD",
+            word.swappie(),
+        )
 
     def test2(self):
         word = Swap("Hello World")

@@ -21,7 +21,7 @@ To use a module, at the top of your file, type
 ```
 
 ```
-This means you are allowing your Python program to use a module called random in 
+This means you are allowing your Python program to use a module called random in
 the rest of your code.
 
 To use it (and generate a random integer), now type:

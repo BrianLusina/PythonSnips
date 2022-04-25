@@ -31,5 +31,5 @@ class NumberLetterCountsTestCase(unittest.TestCase):
         self.assertEqual(19, number_letter_counts(1, 5.0))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

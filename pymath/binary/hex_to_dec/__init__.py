@@ -10,4 +10,7 @@ class HexToDex(object):
 
     # alternative version using binascii
     def hex_to_dec_binascii(self):
-        return int.from_bytes(binascii.unhexlify(("0" * (len(self.hex_string) % 2)) + self.hex_string), byteorder="big")
+        return int.from_bytes(
+            binascii.unhexlify(("0" * (len(self.hex_string) % 2)) + self.hex_string),
+            byteorder="big",
+        )

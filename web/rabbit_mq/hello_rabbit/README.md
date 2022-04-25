@@ -18,7 +18,7 @@ Sample RabbitMQ messaging client as an introduction to using RabbitMQ
     The command to use is:
     `invoke-rc.d rabbitmq-server stop/start/etc.`
     The server is started as a daemon by default when the RabbitMQ server package is installed.
-    Note: The server is set up to run as system user rabbitmq. 
+    Note: The server is set up to run as system user rabbitmq.
     If you change the location of the Mnesia database or the logs, you must ensure the files are owned by this user (and also update the environment variables).
 
 2. `recieve.py` will recieve the messages from the queue Will start by establishing a connection to RabbitMQ and
@@ -39,6 +39,6 @@ Sample RabbitMQ messaging client as an introduction to using RabbitMQ
 
    After that, start a never ending loop awaiting for a message to come in.
    `channel.start_consuming()`
-    
+
 
 

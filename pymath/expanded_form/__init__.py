@@ -21,7 +21,7 @@ def expanded_form_2(num):
     """Second implementation of expanded form"""
     result = []
     for a in range(len(str(num)) - 1, -1, -1):
-        current = 10 ** a
+        current = 10**a
         quo, num = divmod(num, current)
 
         if quo:

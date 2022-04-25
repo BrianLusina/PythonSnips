@@ -17,7 +17,7 @@ class Point(object):
         self.y = y
 
     def __repr__(self):
-        return 'Point({}:{})'.format(self.x, self.y)
+        return "Point({}:{})".format(self.x, self.y)
 
     def __add__(self, other):
         return Point(self.x + other.x, self.y + other.y)
@@ -34,8 +34,14 @@ class Point(object):
 
 # points on cartesian plan enclosing the word grid
 PLANE_LIMITS = (
-    Point(1, 0), Point(1, -1), Point(1, 1), Point(-1, -1),
-    Point(0, -1), Point(0, 1), Point(-1, 1), Point(-1, 0)
+    Point(1, 0),
+    Point(1, -1),
+    Point(1, 1),
+    Point(-1, -1),
+    Point(0, -1),
+    Point(0, 1),
+    Point(-1, 1),
+    Point(-1, 0),
 )
 
 
@@ -64,7 +70,9 @@ class WordSearch(object):
         positions = (Point(x, y) for x in range(self.width) for y in range(self.height))
         for pos in positions:
             for plane_limit in PLANE_LIMITS:
-                result = self.find_word(word=word, position=pos, plane_limit=plane_limit)
+                result = self.find_word(
+                    word=word, position=pos, plane_limit=plane_limit
+                )
                 if result:
                     return result
         return None

@@ -31,7 +31,7 @@ class PeteTalk(object):
         if ok is not None:
             for word in speech_words:
                 if word not in ok and len(word) > 2:
-                    middle = word[1: len(word) - 1]
+                    middle = word[1 : len(word) - 1]
                     word = re.sub(middle, "*" * len(middle), word)
         else:
             # split the string into words, loop through each word checking if it is longer than length of 2
@@ -44,9 +44,9 @@ class PeteTalk(object):
                     # get the middle section, exclude the punctuation mark
                     # checks if the word ends with a punctuation mark and gets the middle section accordingly
                     if word.endswith(tuple(punctuation)):
-                        middle = word[1: len(word) - 2]
+                        middle = word[1 : len(word) - 2]
                     else:
-                        middle = word[1: len(word) - 1]
+                        middle = word[1 : len(word) - 1]
                     word = re.sub(middle, "*" * len(middle), word)
                     result.append(word.lower())
                 else:
@@ -62,4 +62,7 @@ class PeteTalk(object):
 
 
 pete = PeteTalk("What the hell am I doing here? And where is my wallet? PETE SMASH!")
-print(pete.pete_talk(), "W**t t*e h**l am i d***g h**e? A*d w***e is my w****t? P**e s***h!")
+print(
+    pete.pete_talk(),
+    "W**t t*e h**l am i d***g h**e? A*d w***e is my w****t? P**e s***h!",
+)

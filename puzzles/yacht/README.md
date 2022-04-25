@@ -17,7 +17,7 @@ any of twelve categories. The score of a throw of the dice depends on category c
     Sixes           6 × number of sixes     2 3 4 5 6 scores 6
     Full House      Total of the dice       3 3 3 5 5 scores 19
     Four of a Kind  Total of the four dice  4 4 4 4 6 scores 16
-    Little Straight 30 points               1 2 3 4 5 scores 30 
+    Little Straight 30 points               1 2 3 4 5 scores 30
     Big Straight    30 points               2 3 4 5 6 scores 30
     Choice          Sum of the dice         2 3 3 4 6 scores 18
     Yacht           50 points               4 4 4 4 4 scores 50

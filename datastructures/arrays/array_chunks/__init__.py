@@ -6,7 +6,7 @@ def make_parts(arr, chunk_size):
     :return: a new list evenly divided into chunk sizes
     :rtype: list
     """
-    return [arr[x:x + chunk_size] for x in range(0, len(arr), chunk_size)]
+    return [arr[x : x + chunk_size] for x in range(0, len(arr), chunk_size)]
 
 
 def make_parts_yield(arr, chunk_size):
@@ -18,4 +18,4 @@ def make_parts_yield(arr, chunk_size):
     :rtype: object
     """
     for x in range(0, len(arr), chunk_size):
-        yield arr[x:x + chunk_size]
+        yield arr[x : x + chunk_size]

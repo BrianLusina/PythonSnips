@@ -17,14 +17,20 @@ def find_sum_cant_be_written(lower_limit, upper_limit):
     if lower_limit is None or upper_limit is None:
         raise ValueError("Expected non-None types for bounds lower and upper limit")
 
-    if not isinstance(lower_limit, (int, float)) or not isinstance(upper_limit, (int, float)):
+    if not isinstance(lower_limit, (int, float)) or not isinstance(
+        upper_limit, (int, float)
+    ):
         raise TypeError("Expected number type for upper and lower limits")
 
     if lower_limit < 0:
-        raise ValueError(f"Expected lower limit to be positive, instead got {lower_limit}")
+        raise ValueError(
+            f"Expected lower limit to be positive, instead got {lower_limit}"
+        )
 
     if upper_limit > 28123:
-        raise ValueError(f"Expected upper limit to be less than 28123, instead got {upper_limit}")
+        raise ValueError(
+            f"Expected upper limit to be less than 28123, instead got {upper_limit}"
+        )
 
     # convert the upper and lower limits to integers, this is for float type inputs
     lower_limit, upper_limit = int(lower_limit), int(upper_limit)

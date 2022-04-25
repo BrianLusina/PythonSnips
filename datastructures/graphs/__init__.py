@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from pprint import PrettyPrinter
-from typing import List, Union, Set
+from typing import List, Set, Union
 
 from datastructures.stacks import Stack
 
@@ -155,7 +155,7 @@ class Graph(ABC):
     def remove(self, node: Vertex) -> None:
         """
         Removes all references to a node
-        :param node 
+        :param node
         """
         for _, cxns in self.adjacency_list.items():
             try:
@@ -169,9 +169,14 @@ class Graph(ABC):
             pass
 
     def is_connected(self, node_one: Vertex, node_two: Vertex) -> bool:
-        return node_one in self.adjacency_list and node_two in self.adjacency_list[node_two]
+        return (
+            node_one in self.adjacency_list
+            and node_two in self.adjacency_list[node_two]
+        )
 
-    def find_path(self, node_one: Vertex, node_two: Vertex, path=None) -> Union[List, None]:
+    def find_path(
+        self, node_one: Vertex, node_two: Vertex, path=None
+    ) -> Union[List, None]:
         """
         Find any path between node_one and node_two. May not be the shortest path
         :param node_one
@@ -198,11 +203,13 @@ class Graph(ABC):
 
         return None
 
-    def find_all_paths(self, node_one: Vertex, node_two: Vertex, path: List = None) -> list:
+    def find_all_paths(
+        self, node_one: Vertex, node_two: Vertex, path: List = None
+    ) -> list:
         """
         Finds all paths between node_one and node_two, where node_one is the start & node_two is the end
-        :param node_one Graph Node 
-        :param node_two Graph Node 
+        :param node_one Graph Node
+        :param node_two Graph Node
         :param path
         """
         if path is None:
@@ -225,7 +232,9 @@ class Graph(ABC):
 
         return paths
 
-    def find_shortest_path(self, node_one: Vertex, node_two: Vertex, path: List = None) -> Union[List, None]:
+    def find_shortest_path(
+        self, node_one: Vertex, node_two: Vertex, path: List = None
+    ) -> Union[List, None]:
         """
         Finds the shortest path between 2 nodes in the graph
         """

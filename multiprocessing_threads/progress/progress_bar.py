@@ -3,8 +3,8 @@ from threading import Thread
 
 class ProgressBar(Thread):
     """
-        class for running progress process
-        against a list of function calls
+    class for running progress process
+    against a list of function calls
     """
 
     def __init__(self, queue):
@@ -36,8 +36,9 @@ class ProgressBar(Thread):
         """
         return float(self.processed_count) / float(self.total_count)
 
+
 # queue = Queue()
-# funcs = [add_to_cpanel(self.employee), add_to_seafile(self.employee), 
+# funcs = [add_to_cpanel(self.employee), add_to_seafile(self.employee),
 #         send_email('webmaster@tezzasolutions.com',
 #             'harrison.kamau@tezzasolutions.com',
 #             'harrison.kamau@tezzasolutions.com',

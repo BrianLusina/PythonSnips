@@ -1,4 +1,4 @@
-def calculate_total(books, price_thus_far=0.):
+def calculate_total(books, price_thus_far=0.0):
     """
     Calculates the total amount that one can get from the books. Should return the least discount
     one can get from the book titles
@@ -31,10 +31,10 @@ def calculate_total(books, price_thus_far=0.):
 def group_price(size):
     """
     Calculates group price of books
-    :param size: size of the books 
+    :param size: size of the books
     :return: price of the group of books
     """
-    discounts = [0, .05, .1, .2, .25]
+    discounts = [0, 0.05, 0.1, 0.2, 0.25]
     if not (0 < size <= 5):
         ValueError("Size must be in range 1...{}".format(len(discounts)))
     return 8 * size * (1 - discounts[size - 1])

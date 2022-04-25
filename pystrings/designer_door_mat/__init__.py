@@ -23,4 +23,5 @@ def design_door_mat(n, m):
     # join the pattern with the middle WELCOME line and the pattern reversed
     return "\n".join(pattern + ["WELCOME".center(m, "-")] + pattern[::-1])
 
+
 # print(design_door_mat(7, 21))

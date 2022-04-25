@@ -5,10 +5,10 @@ from algorithms.tree_building import Record, build_tree
 
 class TestBuildingTest(unittest.TestCase):
     """
-        Record(record_id, parent_id): records given to be processed
-        Node(node_id): Node in tree
-        BuildTree(records): records as argument and returns tree
-        BuildTree should raise ValueError if given records are invalid
+    Record(record_id, parent_id): records given to be processed
+    Node(node_id): Node in tree
+    BuildTree(records): records as argument and returns tree
+    BuildTree should raise ValueError if given records are invalid
     """
 
     def test_empty_list_input(self):
@@ -17,19 +17,13 @@ class TestBuildingTest(unittest.TestCase):
         self.assertIsNone(root)
 
     def test_one_node(self):
-        records = [
-            Record(0, 0)
-        ]
+        records = [Record(0, 0)]
         root = build_tree(records)
 
         self.assert_node_is_leaf(root, node_id=0)
 
     def test_three_nodes_in_order(self):
-        records = [
-            Record(0, 0),
-            Record(1, 0),
-            Record(2, 0)
-        ]
+        records = [Record(0, 0), Record(1, 0), Record(2, 0)]
         root = build_tree(records)
 
         self.assert_node_is_branch(root, node_id=0, children_count=2)
@@ -37,11 +31,7 @@ class TestBuildingTest(unittest.TestCase):
         self.assert_node_is_leaf(root.children[1], node_id=2)
 
     def test_three_nodes_in_reverse_order(self):
-        records = [
-            Record(2, 0),
-            Record(1, 0),
-            Record(0, 0)
-        ]
+        records = [Record(2, 0), Record(1, 0), Record(0, 0)]
         root = build_tree(records)
 
         self.assert_node_is_branch(root, node_id=0, children_count=2)
@@ -49,12 +39,7 @@ class TestBuildingTest(unittest.TestCase):
         self.assert_node_is_leaf(root.children[1], node_id=2)
 
     def test_more_than_two_children(self):
-        records = [
-            Record(0, 0),
-            Record(1, 0),
-            Record(2, 0),
-            Record(3, 0)
-        ]
+        records = [Record(0, 0), Record(1, 0), Record(2, 0), Record(3, 0)]
         root = build_tree(records)
 
         self.assert_node_is_branch(root, node_id=0, children_count=3)
@@ -70,7 +55,7 @@ class TestBuildingTest(unittest.TestCase):
             Record(2, 0),
             Record(4, 1),
             Record(5, 2),
-            Record(1, 0)
+            Record(1, 0),
         ]
         root = build_tree(records)
 
@@ -103,30 +88,19 @@ class TestBuildingTest(unittest.TestCase):
         self.assert_node_is_leaf(root.children[1].children[0], 6)
 
     def test_root_node_has_parent(self):
-        records = [
-            Record(0, 1),
-            Record(1, 0)
-        ]
+        records = [Record(0, 1), Record(1, 0)]
         # Root parent_id should be equal to record_id(0)
         with self.assertRaises(ValueError):
             build_tree(records)
 
     def test_no_root_node(self):
-        records = [
-            Record(1, 0),
-            Record(2, 0)
-        ]
+        records = [Record(1, 0), Record(2, 0)]
         # Record with record_id 0 (root) is missing
         with self.assertRaises(ValueError):
             build_tree(records)
 
     def test_non_continuous(self):
-        records = [
-            Record(2, 0),
-            Record(4, 2),
-            Record(1, 0),
-            Record(0, 0)
-        ]
+        records = [Record(2, 0), Record(4, 2), Record(1, 0), Record(0, 0)]
         # Record with record_id 3 is missing
         with self.assertRaises(ValueError):
             build_tree(records)
@@ -139,7 +113,7 @@ class TestBuildingTest(unittest.TestCase):
             Record(4, 1),
             Record(1, 0),
             Record(0, 0),
-            Record(6, 3)
+            Record(6, 3),
         ]
         # Cycle caused by Record 2 with parent_id pointing to itself
         with self.assertRaises(ValueError):
@@ -153,18 +127,14 @@ class TestBuildingTest(unittest.TestCase):
             Record(4, 1),
             Record(1, 0),
             Record(0, 0),
-            Record(6, 3)
+            Record(6, 3),
         ]
         # Cycle caused by Record 2 with parent_id(6) greater than record_id(2)
         with self.assertRaises(ValueError):
             build_tree(records)
 
     def test_higher_id_parent_of_lower_id(self):
-        records = [
-            Record(0, 0),
-            Record(2, 0),
-            Record(1, 2)
-        ]
+        records = [Record(0, 0), Record(2, 0), Record(1, 2)]
         # Record 1 have parent_id(2) greater than record_id(1)
         with self.assertRaises(ValueError):
             build_tree(records)
@@ -179,5 +149,5 @@ class TestBuildingTest(unittest.TestCase):
         self.assertEqual(len(node.children), 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

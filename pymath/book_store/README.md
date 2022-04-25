@@ -66,7 +66,7 @@ And $51.20 is the price with the biggest discount.
 You will be given a list of books and are expected to calculate the least discount one can get from the shopping basket:
 
 ``` python
->>> calculate_total([1, 2, 3, 4]) 
+>>> calculate_total([1, 2, 3, 4])
 >>> 25.60
 ```
 

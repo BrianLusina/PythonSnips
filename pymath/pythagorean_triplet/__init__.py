@@ -1,7 +1,7 @@
 import cProfile
 from functools import reduce
-from itertools import islice, count, product
-from math import sqrt, pow
+from itertools import count, islice, product
+from math import pow, sqrt
 from operator import mul
 
 
@@ -85,9 +85,17 @@ def triplets_in_range(mini, maxi):
         for b in range(a + 1, maxi + 1):
             c = int(sqrt(a * a + b * b) + 0.5)
             if c * c == a * a + b * b and mini <= c <= maxi:
-                res.update([(a, b, c,)])
+                res.update(
+                    [
+                        (
+                            a,
+                            b,
+                            c,
+                        )
+                    ]
+                )
     return res
 
 
 if __name__ == "__main__":
-    cProfile.run('is_prime(1000)')
+    cProfile.run("is_prime(1000)")

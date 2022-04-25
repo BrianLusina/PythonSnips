@@ -19,7 +19,12 @@ filtered = lengths.filter(lambda i: i >= 5)
 filtered.subscribe(lambda value: print("Received {}".format(value)))
 
 print(
-    "This will chain the operators on the observable and make this code more readable, eliminating intermidiary variables")
+    "This will chain the operators on the observable and make this code more readable, eliminating intermidiary variables"
+)
 
-source = Observable.from_(greek_words).map(lambda s: len(s)).filter(lambda i: i >= 5).subscribe(
-    lambda value: print("Received {}".format(value)))
+source = (
+    Observable.from_(greek_words)
+    .map(lambda s: len(s))
+    .filter(lambda i: i >= 5)
+    .subscribe(lambda value: print("Received {}".format(value)))
+)

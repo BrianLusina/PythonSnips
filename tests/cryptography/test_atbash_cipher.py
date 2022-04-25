@@ -1,6 +1,6 @@
 import unittest
 
-from cryptography.atbash_cipher.atbash_cipher_2 import encode, decode
+from cryptography.atbash_cipher.atbash_cipher_2 import decode, encode
 
 
 class AtbashCipherTest(unittest.TestCase):
@@ -20,12 +20,12 @@ class AtbashCipherTest(unittest.TestCase):
         self.assertMultiLineEqual("nrmwy oldrm tob", encode("mindblowingly"))
 
     def test_encode_numbers(self):
-        self.assertMultiLineEqual("gvhgr mt123 gvhgr mt",
-                                  encode("Testing, 1 2 3, testing."))
+        self.assertMultiLineEqual(
+            "gvhgr mt123 gvhgr mt", encode("Testing, 1 2 3, testing.")
+        )
 
     def test_encode_sentence(self):
-        self.assertMultiLineEqual("gifgs rhurx grlm",
-                                  encode("Truth is fiction."))
+        self.assertMultiLineEqual("gifgs rhurx grlm", encode("Truth is fiction."))
 
     def test_encode_all_things(self):
         plaintext = "The quick brown fox jumps over the lazy dog."
@@ -38,9 +38,9 @@ class AtbashCipherTest(unittest.TestCase):
     def test_decode_sentence(self):
         self.assertMultiLineEqual(
             "anobstacleisoftenasteppingstone",
-            decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v")
+            decode("zmlyh gzxov rhlug vmzhg vkkrm thglm v"),
         )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

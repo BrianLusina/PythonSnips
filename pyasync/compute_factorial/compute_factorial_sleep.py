@@ -6,7 +6,7 @@ from datetime import datetime
 
 # noinspection PyCompatibility
 async def custom_sleep():
-    print('SLEEP', datetime.now())
+    print("SLEEP", datetime.now())
     time.sleep(1)
 
 
@@ -14,10 +14,10 @@ async def custom_sleep():
 async def factorial(name, number):
     f = 1
     for i in range(2, number + 1):
-        print('Task {}: Compute factorial({})'.format(name, i))
+        print("Task {}: Compute factorial({})".format(name, i))
         await custom_sleep()
         f *= i
-    print('Task {}: factorial({}) is {}\n'.format(name, number, f))
+    print("Task {}: factorial({}) is {}\n".format(name, number, f))
 
 
 start = time.time()

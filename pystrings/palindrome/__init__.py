@@ -28,7 +28,7 @@ class Palindrome(object):
         else:
             for y, item in enumerate(s):
                 for x, _ in enumerate(s):
-                    tr = s[y: x + 1]
+                    tr = s[y : x + 1]
                     if Palindrome.is_palindrome(tr) and (len(tr) > len(final_str)):
                         final_str = tr
 
@@ -58,7 +58,9 @@ class Palindrome(object):
         :return: Smallest palindrome pair product,
         :rtype:int
         """
-        return min(self.generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0])
+        return min(
+            self.generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0]
+        )
 
     def largest_palindrome(self, max_factor, min_factor=0):
         """
@@ -69,7 +71,9 @@ class Palindrome(object):
         :return: Maximum palindrome product from the generator
         :rtype:int
         """
-        return max(self.generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0])
+        return max(
+            self.generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0]
+        )
 
     def generate_palindromes(self, max_factor, min_factor):
         """
@@ -81,8 +85,9 @@ class Palindrome(object):
         make the product(factors)
         :rtype: tuple
         """
-        return ((a * b, (a, b))
-                for a in range(min_factor, max_factor + 1)
-                for b in range(min_factor, a + 1)
-                if self.is_palindrome(a * b)
-                )
+        return (
+            (a * b, (a, b))
+            for a in range(min_factor, max_factor + 1)
+            for b in range(min_factor, a + 1)
+            if self.is_palindrome(a * b)
+        )

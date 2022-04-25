@@ -2,7 +2,7 @@ from typing import Union
 
 
 def calculate_partial_result(prev_char: str, count: int) -> str:
-    return prev_char + (str(count) if count > 1 else '')
+    return prev_char + (str(count) if count > 1 else "")
 
 
 def compress(s: str) -> Union[None, str]:
@@ -11,7 +11,7 @@ def compress(s: str) -> Union[None, str]:
 
     prev_char = s[0]
     count = 0
-    result = ''
+    result = ""
 
     for char in s:
         if char == prev_char:

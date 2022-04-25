@@ -20,7 +20,7 @@ class TheBridge(Scene):
             print("As you die you see another Gothon frantically try to disarm")
             print("the bomb. You die knowing they will probably blow up when")
             print("it goes off.")
-            return 'death'
+            return "death"
 
         elif action == "slowly place the bomb":
             print("You point your blaster at the bomb under your arm")
@@ -31,7 +31,7 @@ class TheBridge(Scene):
             print("and blast the lock so the Gothons can't get out.")
             print("Now that the bomb is placed you run to the escape pod to")
             print("get off this tin can.")
-            return 'escape_pod'
+            return "escape_pod"
         else:
             print("DOES NOT COMPUTE!")
             return "the_bridge"

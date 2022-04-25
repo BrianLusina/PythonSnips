@@ -1,10 +1,15 @@
 import json
-from typing import Dict, Optional, List
+from typing import Dict, List, Optional
 
 
 class User:
-    def __init__(self, name: str, owes: Optional[Dict[str, float]] = None, owed_by: Optional[Dict[str, float]] = None,
-                 balance: Optional[float] = None):
+    def __init__(
+        self,
+        name: str,
+        owes: Optional[Dict[str, float]] = None,
+        owed_by: Optional[Dict[str, float]] = None,
+        balance: Optional[float] = None,
+    ):
         if name != "":
             self.name = name
         else:
@@ -24,19 +29,26 @@ class User:
             "name": self.name,
             "owes": self.owes,
             "owed_by": self.owed_by,
-            "balance": self.balance
+            "balance": self.balance,
         }
 
 
 class RestAPI:
     def __init__(self, database: Optional[Dict[str, List[Dict]]] = None):
-        self.database = self.initialize_database(database) if database else {"users": []}
+        self.database = (
+            self.initialize_database(database) if database else {"users": []}
+        )
 
     @staticmethod
     def initialize_database(database: Dict[str, List[Dict]]) -> Dict[str, List[User]]:
         db = {"users": []}
         for user in database["users"]:
-            name, owes, owed_by, balance = user["name"], user["owes"], user["owed_by"], user["balance"]
+            name, owes, owed_by, balance = (
+                user["name"],
+                user["owes"],
+                user["owed_by"],
+                user["balance"],
+            )
             db["users"].append(User(name, owes, owed_by, balance))
         return db
 
@@ -91,7 +103,11 @@ class RestAPI:
         if url == "/iou":
             if payload:
                 data = json.loads(payload)
-                lender_name, borrower_name, amount = data["lender"], data["borrower"], data["amount"]
+                lender_name, borrower_name, amount = (
+                    data["lender"],
+                    data["borrower"],
+                    data["amount"],
+                )
                 lender = borrower = None
                 for user in self.database["users"]:
                     if user.name == lender_name:
@@ -104,5 +120,7 @@ class RestAPI:
                     borrower.owes.setdefault(lender_name, 0.0)
                     borrower.owes[lender_name] += amount
                     self.__update()
-                    return self.get('/users', json.dumps({'users': [lender_name, borrower_name]}))
+                    return self.get(
+                        "/users", json.dumps({"users": [lender_name, borrower_name]})
+                    )
         return None

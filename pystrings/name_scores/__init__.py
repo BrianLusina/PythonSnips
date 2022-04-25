@@ -4,8 +4,12 @@ Calculates the name scores of each name in the names.txt file
 from collections import Iterable, OrderedDict
 from string import ascii_lowercase, ascii_uppercase
 
-ALPHABET_UPPER_POSITIONS = {letter: index for index, letter in enumerate(ascii_uppercase, start=1)}
-ALPHABET_LOWER_POSITIONS = {letter: index for index, letter in enumerate(ascii_lowercase, start=1)}
+ALPHABET_UPPER_POSITIONS = {
+    letter: index for index, letter in enumerate(ascii_uppercase, start=1)
+}
+ALPHABET_LOWER_POSITIONS = {
+    letter: index for index, letter in enumerate(ascii_lowercase, start=1)
+}
 
 
 def name_scores(names):
@@ -61,12 +65,20 @@ def find_alphabetical_score(name):
     # if any of the letters in the name is upper
     if any(x for x in name if x.isupper()):
         name = name.upper()
-        numbers = [ALPHABET_UPPER_POSITIONS[letter] for letter in name if letter in ALPHABET_UPPER_POSITIONS]
+        numbers = [
+            ALPHABET_UPPER_POSITIONS[letter]
+            for letter in name
+            if letter in ALPHABET_UPPER_POSITIONS
+        ]
         return sum(numbers)
     else:
         # use lower case
         name = name.lower()
-        numbers = [ALPHABET_LOWER_POSITIONS[letter] for letter in name if letter in ALPHABET_LOWER_POSITIONS]
+        numbers = [
+            ALPHABET_LOWER_POSITIONS[letter]
+            for letter in name
+            if letter in ALPHABET_LOWER_POSITIONS
+        ]
         return sum(numbers)
 
 

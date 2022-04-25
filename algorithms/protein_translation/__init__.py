@@ -28,7 +28,7 @@ def of_rna(strand):
     l = len(strand)
 
     for x in range(0, l, 3):
-        rna = strand[x: x + 3]
+        rna = strand[x : x + 3]
         codon = of_codon(rna)
         if codon:
             if codon == "STOP":

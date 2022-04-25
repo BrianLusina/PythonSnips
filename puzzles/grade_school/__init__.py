@@ -2,7 +2,6 @@ from collections import defaultdict
 
 
 class School(object):
-
     def __init__(self, name):
         self.name = name
         self.database = defaultdict(set)
@@ -14,4 +13,7 @@ class School(object):
         return self.database[grade].add(student_name)
 
     def sort(self):
-        return sorted((grade, tuple(sorted(students))) for grade, students in self.database.items())
+        return sorted(
+            (grade, tuple(sorted(students)))
+            for grade, students in self.database.items()
+        )

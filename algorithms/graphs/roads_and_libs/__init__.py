@@ -1,7 +1,9 @@
 from typing import List
 
 
-def roads_and_libraries(n: int, c_lib: int, c_road: int, cities: List[List[int]]) -> int:
+def roads_and_libraries(
+    n: int, c_lib: int, c_road: int, cities: List[List[int]]
+) -> int:
     """
 
     @param n: number of cities

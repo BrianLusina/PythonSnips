@@ -1,21 +1,24 @@
 import unittest
 
-from algorithms.bracket_validator import check_brackets_3, check_brackets_1, check_brackets_2
+from algorithms.bracket_validator import (
+    check_brackets_1,
+    check_brackets_2,
+    check_brackets_3,
+)
 
 
 class BracketsTestCase(unittest.TestCase):
-
     def test1(self):
-        self.assertEqual(True, check_brackets_1('((()))'))
+        self.assertEqual(True, check_brackets_1("((()))"))
 
     def test2(self):
-        self.assertEqual(True, check_brackets_1('(()())'))
+        self.assertEqual(True, check_brackets_1("(()())"))
 
     def test3(self):
-        self.assertEqual(False, check_brackets_1('((()'))
+        self.assertEqual(False, check_brackets_1("((()"))
 
     def test4(self):
-        self.assertEqual(False, check_brackets_1('())('))
+        self.assertEqual(False, check_brackets_1("())("))
 
     def test_input_empty(self):
         self.assertEqual(check_brackets_1(""), True)
@@ -99,5 +102,5 @@ class BracketsTestCase(unittest.TestCase):
         self.assertEqual(check_brackets_3("{[]([()])}"), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

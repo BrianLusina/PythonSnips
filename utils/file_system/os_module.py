@@ -6,7 +6,7 @@ from PyUtilities.FileSystem import MyFileSystem
 # 1 (.) dot refers to the current directory, 2 dots (..) takes it a directory higher
 
 current_dir = MyFileSystem(".")
-upper_level_dir = MyFileSystem('..')
+upper_level_dir = MyFileSystem("..")
 
 # current directory
 pprint(upper_level_dir.read_current_dir())

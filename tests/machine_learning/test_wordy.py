@@ -4,7 +4,6 @@ from machine_learning.language_processing.wordy import calculate
 
 
 class WordyTest(unittest.TestCase):
-
     def test_simple_add_1(self):
         self.assertEqual(18, calculate("What is 5 plus 13?"))
 
@@ -39,15 +38,15 @@ class WordyTest(unittest.TestCase):
         self.assertEqual(-7, calculate("What is 20 minus 14 minus 13?"))
 
     def test_multiply_twice(self):
-        self.assertEqual(-12, calculate("What is 2 multiplied by -2 "
-                                        "multiplied by 3?"))
+        self.assertEqual(
+            -12, calculate("What is 2 multiplied by -2 " "multiplied by 3?")
+        )
 
     def test_add_then_multiply(self):
         self.assertEqual(-8, calculate("What is -3 plus 7 multiplied by -2?"))
 
     def test_divide_twice(self):
-        self.assertEqual(
-            16, calculate("What is -12000 divided by 25 divided by -30?"))
+        self.assertEqual(16, calculate("What is -12000 divided by 25 divided by -30?"))
 
     def test_invalid_operation(self):
         self.assertRaises(ValueError, calculate, "What is 4 xor 7?")
@@ -56,12 +55,11 @@ class WordyTest(unittest.TestCase):
         self.assertRaises(ValueError, calculate, "What is 2 2 minus 3?")
 
     def test_missing_number(self):
-        self.assertRaises(ValueError, calculate, "What is 7 plus "
-                                                 "multiplied by -2?")
+        self.assertRaises(ValueError, calculate, "What is 7 plus " "multiplied by -2?")
 
     def test_irrelevant_question(self):
         self.assertRaises(ValueError, calculate, "Which is greater, 3 or 2?")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -56,5 +56,5 @@ class PigLatinTests(unittest.TestCase):
         self.assertEqual("ymay", translate("my"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

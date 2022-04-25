@@ -9,8 +9,11 @@ def largest_product(num_str, sub_length):
     :param sub_length:
     :return: largest product
     """
-    return max(reduce(lambda x, y: x * y, sli) for sli in slice_me(num_str, sub_length)) \
-        if sub_length != 0 else 1
+    return (
+        max(reduce(lambda x, y: x * y, sli) for sli in slice_me(num_str, sub_length))
+        if sub_length != 0
+        else 1
+    )
 
 
 def slice_me(series, length):
@@ -25,4 +28,4 @@ def slice_me(series, length):
     numbers = [int(digit) for digit in series]
     if not 1 <= length <= len(series):
         raise ValueError("Invalid length to slice %s" % str(length))
-    return [numbers[i: i + length] for i in range(len(numbers) - length + 1)]
+    return [numbers[i : i + length] for i in range(len(numbers) - length + 1)]

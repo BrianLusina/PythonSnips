@@ -18,10 +18,10 @@ class ScikitBacktest(object):
         self.lm = linear_model.LogisticRegression(C=1e3)
 
     def get_data(self):
-        d = web.DataReader(self.sys, data_source='yahoo')['Adj Close']
+        d = web.DataReader(self.sys, data_source="yahoo")["Adj Close"]
         d = pd.DataFrame(d)
         d.columns = [self.symbol]
-        d['returns'] = np.log(d / d.shift())
+        d["returns"] = np.log(d / d.shift())
 
     def select_data(self, start, end):
         d = self.data[(self.data.index >= start) & (self.data.index <= end)].copy()
@@ -34,15 +34,15 @@ class ScikitBacktest(object):
             if i == self.lags:
                 m[i] = d[i:]
             else:
-                m[i] = d[i:i - self.lags]
+                m[i] = d[i : i - self.lags]
 
     def fit_model(self, start, end):
         self.get_matrix(start, end)
-        self.lm.fit(self.matrix[:self.lags], np.sign(self.matrix[self.lags]))
+        self.lm.fit(self.matrix[: self.lags], np.sign(self.matrix[self.lags]))
 
     def predict_moves(self, start, end):
         self.get_matrix(start, end)
-        pred = self.lm.predict(self.matrix[:self.lags])
+        pred = self.lm.predict(self.matrix[: self.lags])
         return pred
 
     def run_strategy(self, start_tr, end_tr, start_te, end_te, lags):
@@ -50,8 +50,10 @@ class ScikitBacktest(object):
         self.fit_model(start_tr, end_tr)
         pred = self.predict_moves(start_te, end_te)
         d = self.select_data(start_te, end_te)
-        d['pred'] = 0.0
-        d['pred'].ix[self.lags:] = pred
-        d['strategy'] = d.pred * d.returns
-        title = '%s to %s for %d lags' % (start_te, end_te, self.lags)
-        d[['returns', 'strategy']].ix[self.lags:].cumsum().apply(np.exp).plot(title=title)
+        d["pred"] = 0.0
+        d["pred"].ix[self.lags :] = pred
+        d["strategy"] = d.pred * d.returns
+        title = "%s to %s for %d lags" % (start_te, end_te, self.lags)
+        d[["returns", "strategy"]].ix[self.lags :].cumsum().apply(np.exp).plot(
+            title=title
+        )

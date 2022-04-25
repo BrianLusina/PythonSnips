@@ -34,5 +34,5 @@ class LFUCacheTestCases(unittest.TestCase):
         self.assertEquals(4, value_4)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

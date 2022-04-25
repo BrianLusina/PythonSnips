@@ -14,7 +14,7 @@ def send_emails(emails, schedule, forecast):
     :param forecast: forecasts to send
     :return: Nothing is returned as this is simply used to temporarily connect to server, perform operations and close server.
     """
-    server = smtplib.SMTP(host='smtp.gmail.com', port=587)
+    server = smtplib.SMTP(host="smtp.gmail.com", port=587)
 
     # start TCL server
     server.starttls()

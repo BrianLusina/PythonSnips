@@ -4,7 +4,6 @@ from datastructures.arrays.max_profit import max_profit
 
 
 class MaxProfitTestCases(unittest.TestCase):
-
     def test_empty_array(self):
         nums = []
         expected = 0
@@ -36,5 +35,5 @@ class MaxProfitTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

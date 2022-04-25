@@ -1,12 +1,11 @@
 from typing import Optional
 
-from .binary_tree_node import BinaryTreeNode
-from .. import Tree
 from ...stacks import Stack
+from .. import Tree
+from .binary_tree_node import BinaryTreeNode
 
 
 class BinaryTree(Tree):
-
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
 
@@ -29,13 +28,15 @@ class BinaryTree(Tree):
                     tree_node.right = dfs[-1]
                     tree_node.left = None
 
-    def lowest_common_ancestor(self, node_one: BinaryTreeNode, node_two: BinaryTreeNode) -> Optional[BinaryTreeNode]:
+    def lowest_common_ancestor(
+        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+    ) -> Optional[BinaryTreeNode]:
         """
         The approach is pretty intuitive. Traverse the tree in a depth first manner. The moment you encounter either of
         the nodes node_one or node_two,
         return some boolean flag. The flag helps to determine if we found the required nodes in any of the paths.
         The least common ancestor would
-        then be the node for which both the subtree recursions return a True flag. 
+        then be the node for which both the subtree recursions return a True flag.
         It can also be the node which itself is one of node_one or node_two and for which one of the subtree recursions
          returns a True flag.
 
@@ -49,13 +50,13 @@ class BinaryTree(Tree):
         - If either of the left or the right branch returns True, this means one of the two nodes was found below.
         - If at any point in the traversal, any two of the three flags left, right or mid become True, this means we have
         found the lowest common ancestor for the nodes p and q.
-        
+
         Complexity Analysis
 
-        Time Complexity: O(N) where NN is the number of nodes in the binary tree. 
+        Time Complexity: O(N) where NN is the number of nodes in the binary tree.
         In the worst case we might be visiting all the nodes of the binary tree.
 
-        Space Complexity: O(N). 
+        Space Complexity: O(N).
         This is because the maximum amount of space utilized by the recursion stack would be N since the height of a
         skewed binary tree could be N.
 

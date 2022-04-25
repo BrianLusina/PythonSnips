@@ -4,7 +4,6 @@ from datastructures.linked_lists.doubly_linked_list import DoublyLinkedList
 
 
 class LinkedListTests(unittest.TestCase):
-
     def setUp(self):
         self.list = DoublyLinkedList()
 
@@ -45,5 +44,5 @@ class LinkedListTests(unittest.TestCase):
         self.assertEqual(30, self.list.shift())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

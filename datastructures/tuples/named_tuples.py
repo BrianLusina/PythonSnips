@@ -22,10 +22,19 @@ def generate_tuple():
     :rtype: tuple
     """
     result = namedtuple("result", "letter number letter_num another_letter")
-    letter, number = random.choice(ascii_letters), random.choice(range(len(ascii_letters)))
-    letter_num, another_letter = letter + str(number), random.choice(ascii_letters[0: number])
+    letter, number = random.choice(ascii_letters), random.choice(
+        range(len(ascii_letters))
+    )
+    letter_num, another_letter = letter + str(number), random.choice(
+        ascii_letters[0:number]
+    )
 
-    return result(letter=letter, letter_num=letter_num, number=number, another_letter=another_letter)
+    return result(
+        letter=letter,
+        letter_num=letter_num,
+        number=number,
+        another_letter=another_letter,
+    )
 
 
 if __name__ == "__main__":

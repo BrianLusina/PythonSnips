@@ -19,7 +19,11 @@ def sum_between(array):
         raise TypeError("Expected input to be a list instead got {}".format(array))
     # test if the array is of a valid length
     elif len(array) < 2 or len(array) > 2:
-        raise TypeError("Expect array to be of length 2 instead got array of length: {}".format(str(len(array))))
+        raise TypeError(
+            "Expect array to be of length 2 instead got array of length: {}".format(
+                str(len(array))
+            )
+        )
 
     # If the first number is less than second sum up to the 2nd
     if array[0] < array[1]:

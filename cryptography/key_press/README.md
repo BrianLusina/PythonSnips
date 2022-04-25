@@ -38,7 +38,7 @@ Examples:
 presses('V8') # 7 presses('LOL') # 9 presses('How R u 2day') # 23
 
 Bonus:  Try to avoid hard-coding the number of button presses for each letter!
-Resource:  
+Resource:
 Use python [Dictionaries](http://www.learnpython.org/en/Dictionaries) in this exercise
 
 

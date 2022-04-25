@@ -3,7 +3,9 @@ n top of data, Observables can also emit pubsub. By treating data and pubsub the
 """
 from rx import Observable
 
-Observable.interval(1000).map(lambda i: "{} Mississipi".format(i)).subscribe(lambda s: print(s))
+Observable.interval(1000).map(lambda i: "{} Mississipi".format(i)).subscribe(
+    lambda s: print(s)
+)
 
 # this will stop the sequence
 input("Press any key to exit\n")

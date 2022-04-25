@@ -4,7 +4,6 @@ from ObjectOriented.AlienGame import Scene
 
 
 class LaserWeaponArmory(Scene):
-
     @staticmethod
     def enter():
         print("You do a dive roll into the Weapon Armory, crouch and scan the room")
@@ -27,10 +26,10 @@ class LaserWeaponArmory(Scene):
             print("The container clicks open and the seal breaks, letting gas out.")
             print("You grab the neutron bomb and run as fast as you can to the")
             print("bridge where you must place it in the right spot.")
-            return 'the_bridge'
+            return "the_bridge"
         else:
             print("The lock buzzes one last time and then you hear a sickening")
             print("melting sound as the mechanism is fused together.")
             print("You decide to sit there, and finally the Gothons blow up the")
             print("ship from their ship and you die.")
-            return 'death'
+            return "death"

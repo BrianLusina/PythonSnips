@@ -37,10 +37,10 @@ class TrieTestCases(unittest.TestCase):
 
         actual = trie.search("he")
 
-        self.assertEqual(['he', 'her', 'here', 'hear', 'hello'], actual)
+        self.assertEqual(["he", "her", "here", "hear", "hello"], actual)
 
         actual2 = trie.search("her")
-        self.assertEqual(['her', 'here'], actual2)
+        self.assertEqual(["her", "here"], actual2)
 
 
 if __name__ == "__main__":

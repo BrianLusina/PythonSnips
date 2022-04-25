@@ -1,17 +1,17 @@
 import pika
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters("localhost"))
 
 channel = connection.channel()
 
 # create an exchange with name *logs*
-channel.exchange_declare(exchange='logs', type="fanout")
+channel.exchange_declare(exchange="logs", type="fanout")
 
 result = channel.queue_declare(exclusive=True)
 queue_name = result.method.queue
 
 # bind our exchange to the randomly name queue
-channel.queue_bind(exchange='logs', queue=queue_name)
+channel.queue_bind(exchange="logs", queue=queue_name)
 
 # print statement to display waiting method
 

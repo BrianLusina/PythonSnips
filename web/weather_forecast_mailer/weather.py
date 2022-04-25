@@ -12,11 +12,21 @@ def get_current_weather_forecast(town):
 
     # Parse the JSON response, cast floats to integers, convert to strings
     description = response["weather"][0]["description"]
-    temp = response['main']['temp']
+    temp = response["main"]["temp"]
 
-    temp_min, temp_max = str(int(response['main']['temp_min'])) + " degrees Celsius", str(
-        int(response['main']['temp_max'])) + " degrees Celsius"
+    temp_min, temp_max = (
+        str(int(response["main"]["temp_min"])) + " degrees Celsius",
+        str(int(response["main"]["temp_max"])) + " degrees Celsius",
+    )
 
-    output = "Current weather forecast for " + town + " today is " + description + " with a high of " + temp_max \
-             + " and min of " + temp_min
+    output = (
+        "Current weather forecast for "
+        + town
+        + " today is "
+        + description
+        + " with a high of "
+        + temp_max
+        + " and min of "
+        + temp_min
+    )
     return output

@@ -9,6 +9,6 @@ def maximum_time(time: str) -> str:
     @return: Maximum possible time
     """
     hh, mm = time.replace("?", "\\d").split(":")
-    hour = re.search(hh, ' '.join([str(h).zfill(2) for h in range(23, -1, -1)]))
-    minute = re.search(mm, ' '.join([str(m).zfill(2) for m in range(59, -1, -1)]))
+    hour = re.search(hh, " ".join([str(h).zfill(2) for h in range(23, -1, -1)]))
+    minute = re.search(mm, " ".join([str(m).zfill(2) for m in range(59, -1, -1)]))
     return hour[0] + ":" + minute[0]

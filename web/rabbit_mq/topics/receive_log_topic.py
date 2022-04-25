@@ -9,7 +9,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost")
 channel = connection.channel()
 
 # declare the exchange to use which will match the producer
-channel.exchange_declare(exchange='topic_logs', type='topic')
+channel.exchange_declare(exchange="topic_logs", type="topic")
 
 # exclusively declare a channel which will give a random name, save the random name in a variable
 result = channel.queue_declare(exclusive=True)

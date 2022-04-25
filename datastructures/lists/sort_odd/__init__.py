@@ -1,5 +1,5 @@
-from cProfile import Profile, run
 from collections import deque
+from cProfile import Profile, run
 
 
 def sort_array(arr):
@@ -28,10 +28,14 @@ def sort_array_2(arr):
 if __name__ == "__main__":
     profile = Profile()
     source_array = [1, 3, 4, 5, 6, 7, 8, 9, 2, 3, 5, 6, 8, 9, 0]
-    print(f"Sorted array of {source_array} using implementation 2 is {sort_array(source_array)}")
+    print(
+        f"Sorted array of {source_array} using implementation 2 is {sort_array(source_array)}"
+    )
     print(f"Profile stats for 1st implementation")
     run("sort_array(source_array)")
     print(f"{'-' * 100}")
-    print(f"Sorted array of {source_array} using implementation 3 is {sort_array_2(source_array)}")
+    print(
+        f"Sorted array of {source_array} using implementation 3 is {sort_array_2(source_array)}"
+    )
     print(f"Profile stats for 2nd implementation")
     run("sort_array(source_array)")

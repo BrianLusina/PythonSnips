@@ -14,9 +14,12 @@ class Password(object):
         self.scale = scale
 
     def generate_pass(self):
-        return "New Password: " + ''.join(
-            random.choice(string.ascii_letters + string.digits + ".',={}[]-/|\£$%^&*()_+~#@?><") for _ in
-            range(self.scale))
+        return "New Password: " + "".join(
+            random.choice(
+                string.ascii_letters + string.digits + ".',={}[]-/|\£$%^&*()_+~#@?><"
+            )
+            for _ in range(self.scale)
+        )
 
     @staticmethod
     def validate_scale(n):

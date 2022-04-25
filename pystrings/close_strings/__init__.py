@@ -4,11 +4,11 @@ from string import ascii_lowercase
 
 def closeStrings(self, word1: str, word2: str) -> bool:
     """
-    Operation 1 allows us to swap any two symbols, so what matters in the end is not the order of them, but how many of each symbol we have. 
-    Imagine we have (6, 3, 3, 5, 6, 6) frequencies of symbols, than we need to have the same frequencies for the second string as well. 
-    So, we need to check if we have the same elements, but in different order (that is one is anagramm of another). We can do it in 2 ways. 
+    Operation 1 allows us to swap any two symbols, so what matters in the end is not the order of them, but how many of each symbol we have.
+    Imagine we have (6, 3, 3, 5, 6, 6) frequencies of symbols, than we need to have the same frequencies for the second string as well.
+    So, we need to check if we have the same elements, but in different order (that is one is anagramm of another). We can do it in 2 ways.
     We can sort both of them and compare, or we can use Counter again to check if these two lists have the same elements.
-    
+
     Operation 2 allows us to rename our letters, but we need to use the same letters: it means, that set of letters in first and second strings should be the same.
     """
     if len(word1) != len(word2):
@@ -17,7 +17,9 @@ def closeStrings(self, word1: str, word2: str) -> bool:
     counts_1 = Counter(word1)
     counts_2 = Counter(word2)
 
-    return set(word1) == set(word2) and Counter(counts_1.values()) == Counter(counts_2.values())
+    return set(word1) == set(word2) and Counter(counts_1.values()) == Counter(
+        counts_2.values()
+    )
 
 
 def closeStrings2(self, word1: str, word2: str) -> bool:

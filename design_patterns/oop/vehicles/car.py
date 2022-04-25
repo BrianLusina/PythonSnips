@@ -5,6 +5,7 @@ class Car(Vehicle):
     """
     Car class which is a subclass of *Vehicle*
     """
+
     wheels = 4
     no_of_seats = 4
 

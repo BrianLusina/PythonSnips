@@ -48,7 +48,10 @@ def number_of_carries_2(a, b):
 def number_of_carries_3(a, b):
     a, b = str(a)[::-1], str(b)[::-1]
     result = c = 0
-    for x, y, in zip_longest(map(int, a), map(int, b), fillvalue=0):
+    for (
+        x,
+        y,
+    ) in zip_longest(map(int, a), map(int, b), fillvalue=0):
         c = (x, y, c) > 9
         result += c
     return result

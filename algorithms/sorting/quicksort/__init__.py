@@ -31,12 +31,18 @@ def partition(thelist: list, start_index: int, end_index: int) -> int:
         # half and the element that's larger than the pivot to the right half
 
         if left_index < right_index:
-            thelist[right_index], thelist[left_index] = thelist[left_index], thelist[right_index]
+            thelist[right_index], thelist[left_index] = (
+                thelist[left_index],
+                thelist[right_index],
+            )
 
         # unless we have looked at all the elements in the list and are done partitioning. In that case, move the pivot element
         # into it's final position
         else:
-            thelist[end_index], thelist[left_index] = thelist[left_index], thelist[end_index]
+            thelist[end_index], thelist[left_index] = (
+                thelist[left_index],
+                thelist[end_index],
+            )
 
     return left_index
 

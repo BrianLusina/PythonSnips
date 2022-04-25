@@ -8,7 +8,7 @@ from puzzles.grade_school import School
 class SchoolTest(unittest.TestCase):
     def setUp(self):
         # assertCountEqual is py3, py2 only knowns assetItemsEqual
-        if not hasattr(self, 'assertCountEqual'):
+        if not hasattr(self, "assertCountEqual"):
             self.assertCountEqual = self.assertItemsEqual
         self.school = School("Haleakala Hippy School")
 
@@ -45,8 +45,14 @@ class SchoolTest(unittest.TestCase):
 
         students = [
             (3, ("Kyle",)),
-            (4, ("Christopher", "Jennifer",)),
-            (6, ("Kareem",))
+            (
+                4,
+                (
+                    "Christopher",
+                    "Jennifer",
+                ),
+            ),
+            (6, ("Kareem",)),
         ]
         for grade, students_in_grade in students:
             for student in students_in_grade:
@@ -55,15 +61,16 @@ class SchoolTest(unittest.TestCase):
         result = self.school.sort()
 
         # Attempts to catch false positives
-        self.assertTrue(isinstance(result, Sequence) or
-                        isinstance(result, GeneratorType) or
-                        callable(getattr(result, '__reversed__', False)))
+        self.assertTrue(
+            isinstance(result, Sequence)
+            or isinstance(result, GeneratorType)
+            or callable(getattr(result, "__reversed__", False))
+        )
 
-        result_list = list(result.items() if hasattr(result, "items")
-                           else result)
+        result_list = list(result.items() if hasattr(result, "items") else result)
 
         self.assertEqual(result_list, students)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

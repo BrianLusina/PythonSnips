@@ -47,7 +47,7 @@ class Phone(object):
         return "(%s) %s-%s" % (
             self.area_code(),
             self.exchange_code(),
-            self.subscriber_number()
+            self.subscriber_number(),
         )
 
     def _clean_number(self, number):
@@ -56,9 +56,7 @@ class Phone(object):
         :param number: The number to clean
         :return: a clean and normalized number
         """
-        return self._normalize(
-            re.sub(r"[^\d]", "", number)
-        )
+        return self._normalize(re.sub(r"[^\d]", "", number))
 
     @staticmethod
     def _normalize(number):
