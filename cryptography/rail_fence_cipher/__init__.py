@@ -3,8 +3,8 @@ from itertools import cycle, chain
 
 def fence_pattern(rail, size):
     """
-    Creates a fence pattern for th encoding of messages
-    This is done by creating a zig zag pattern using cycle and chain
+    Creates a fence pattern for the encoding of messages
+    This is done by creating a zigzag pattern using cycle and chain.
     chain will 'chain' the rail and the decreasing rail range to create 1 long iterable
     cycle will produce this chain until it is exhausted
     :param rail: The rail length

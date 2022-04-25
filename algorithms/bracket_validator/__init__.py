@@ -30,7 +30,7 @@ def check_brackets_1(code):
 
 
 # another version to the solution
-def check_brackets_2(string):
+def check_brackets_2(string: str):
     counterparts = {')': '(', '}': '{', ']': '['}
 
     stack = []
