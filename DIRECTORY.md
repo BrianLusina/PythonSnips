@@ -332,6 +332,7 @@
     * [Test Maskify](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_maskify.py)
     * [Test Pig Latin](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_pig_latin.py)
     * [Test Rail Fence Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_rail_fence_cipher.py)
+    * [Test Rot13](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_rot13.py)
     * [Test Run Length](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_run_length.py)
     * [Test Shell Game](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_shell_game.py)
     * [Test Simple Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_simple_cipher.py)
