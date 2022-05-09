@@ -416,6 +416,8 @@
   * Machine Learning
     * [Test Wordy](https://github.com/BrianLusina/PythonSnips/blob/master/tests/machine_learning/test_wordy.py)
   * Puzzles
+    * Maxareaofisland
+      * [Test Max Area Of Island](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/maxareaofisland/test_max_area_of_island.py)
     * [Test Alphametics](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_alphametics.py)
     * [Test Beer Song](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_beer_song.py)
     * [Test Bowling](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_bowling.py)
