@@ -418,6 +418,8 @@
   * Puzzles
     * Maxareaofisland
       * [Test Max Area Of Island](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/maxareaofisland/test_max_area_of_island.py)
+    * Number Of Provinces
+      * [Test Number Of Provinces](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/number_of_provinces/test_number_of_provinces.py)
     * [Test Alphametics](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_alphametics.py)
     * [Test Beer Song](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_beer_song.py)
     * [Test Bowling](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_bowling.py)
