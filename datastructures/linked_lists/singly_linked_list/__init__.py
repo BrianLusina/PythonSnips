@@ -1,20 +1,9 @@
-from typing import Any, Union
+from typing import Any, Union, Optional
 
 from datastructures.stacks import Stack
-
-from .. import LinkedList, Node
+from .node import SingleNode
+from .. import LinkedList
 from ..exceptions import EmptyLinkedList
-
-
-class SingleNode(Node):
-    """
-    SingleNode implementation in a single linked list
-    """
-
-    def __init__(self, value, next_=None):
-        super().__init__(value, next_)
-        self.data = value
-        self.next = next_
 
 
 class SinglyLinkedList(LinkedList):
@@ -224,7 +213,7 @@ class SinglyLinkedList(LinkedList):
         current_prev.next = None
         return current
 
-    def reverse(self) -> Union[SingleNode, None]:
+    def reverse(self) -> Optional[SingleNode]:
         """
         Returns the head of the newly reversed LinkedList
 
@@ -553,3 +542,33 @@ class SinglyLinkedList(LinkedList):
         else:
             self.head = node
             return
+
+    def rotate(self, k: int) -> Optional[SingleNode]:
+        if k == 0:
+            return self.head
+
+        if self.head is None:
+            return None
+
+        current = self.head
+        count = 1
+
+        while count < k and current:
+            current = current.next
+            count += 1
+
+        if current is None:
+            return self.head
+
+        kth_node = current
+
+        while current.next:
+            current = current.next
+
+        current.next = self.head
+
+        self.head = kth_node.next
+
+        kth_node.next = None
+
+        return self.head

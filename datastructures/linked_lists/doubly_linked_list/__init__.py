@@ -1,4 +1,4 @@
-from typing import Any, Union
+from typing import Any, Union, Optional
 
 from datastructures.linked_lists import LinkedList, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
@@ -259,7 +259,7 @@ class DoublyLinkedList(LinkedList):
         current = None
         return
 
-    def reverse(self) -> Union[DoubleNode, None]:
+    def reverse(self) -> Optional[DoubleNode]:
         """
         Order of operations is important here. We set the current.next to next before
         setting previous to current.next
@@ -295,7 +295,6 @@ class DoublyLinkedList(LinkedList):
 
         current = self.head
         previous = None
-        next_ = None
 
         # do this, until we are at the end of the linked list
         while current:

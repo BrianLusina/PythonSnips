@@ -560,3 +560,10 @@ class LinkedList(object):
         Remotes the tail of a linked list
         """
         raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def rotate(self, k: int):
+        """
+        Rotates a linked list by k nodes
+        """
+        raise NotImplementedError("Not yet implemented")
