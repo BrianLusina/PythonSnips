@@ -77,6 +77,8 @@
   * Linked Lists
     * Kth To Last Node
       * [Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/kth_to_last_node/linked_list.py)
+    * Singly Linked List
+      * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/node.py)
   * Lists
     * Bus Stops
       * [Test Bus Stops](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lists/bus_stops/test_bus_stops.py)
