@@ -23,11 +23,3 @@ def lexicographic_permutations(input_, index):
             break
 
     return "".join(result)
-
-
-if __name__ == "__main__":
-    chars = "".join(map(str, range(0, 10)))
-    index = 1000000
-    lexi_perms = lexicographic_permutations(chars, index)
-    p = lexi_perms[index]
-    print(f"The {index}th lexicographic permutation of {chars} is {p}")
