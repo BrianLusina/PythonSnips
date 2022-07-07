@@ -1,6 +1,6 @@
 # coding=utf-8
 from abc import ABCMeta, abstractmethod
-from typing import Any, Union
+from typing import Any, Union, Optional
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
@@ -565,5 +565,12 @@ class LinkedList(object):
     def rotate(self, k: int):
         """
         Rotates a linked list by k nodes
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def reverse_groups(self, k: int, head: Optional[Node] = None):
+        """
+        Reverses every k groups of a linked list
         """
         raise NotImplementedError("Not yet implemented")

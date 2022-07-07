@@ -572,3 +572,41 @@ class SinglyLinkedList(LinkedList):
         kth_node.next = None
 
         return self.head
+
+    def reverse_groups(self, k: int, head: Optional[SingleNode] = None) -> Optional[SingleNode]:
+        """
+        Reverses every k groups of a linked list and returns the new head node
+        @param head: Node to start reversing from
+        @param k: number of groups in the linked list to reverse
+        @return: new head node
+        """
+        if not head:
+            head = self.head
+
+        if k == 0:
+            return head
+
+        if head is None:
+            return None
+
+        current = head
+        prev, next_ = None, None
+        count = 0
+
+        # Reverse first k nodes of the linked list
+        while current and count < k:
+            next_ = current.next
+            current.next = prev
+            prev = current
+            current = next_
+            count += 1
+
+        # next_ is now a pointer to (k+1)th node
+        # recursively call for the list starting
+        # from current. And make rest of the list as
+        # next of first node
+        if next_:
+            head.next = self.reverse_groups(k, next_)
+
+        # prev is new head
+        return prev

@@ -154,6 +154,54 @@ class SinglyLinkedListTest(unittest.TestCase):
         self.assertEqual(new_head.data, 5)
         self.assertEqual(list(linked_list), [5, 6, 1, 2, 3, 4])
 
+    def test_reverse_groups_of_4_of_non_empty_list(self):
+        linked_list = SinglyLinkedList()
+        linked_list.append(1)
+        linked_list.append(2)
+        linked_list.append(3)
+        linked_list.append(4)
+        linked_list.append(5)
+        linked_list.append(6)
+
+        new_head = linked_list.reverse_groups(4, linked_list.head)
+
+        self.assertIsNotNone(new_head)
+        self.assertEqual(4, new_head.data)
+
+    def test_reverse_groups_of_3_of_non_empty_list(self):
+        linked_list = SinglyLinkedList()
+        linked_list.append(9)
+        linked_list.append(8)
+        linked_list.append(7)
+        linked_list.append(6)
+        linked_list.append(5)
+        linked_list.append(4)
+        linked_list.append(3)
+        linked_list.append(2)
+        linked_list.append(1)
+
+        new_head = linked_list.reverse_groups(3)
+
+        self.assertIsNotNone(new_head)
+        self.assertEqual(7, new_head.data)
+
+    def test_reverse_groups_of_0_of_non_empty_list_returns_initial_head(self):
+        linked_list = SinglyLinkedList()
+        linked_list.append(9)
+        linked_list.append(8)
+        linked_list.append(7)
+        linked_list.append(6)
+        linked_list.append(5)
+        linked_list.append(4)
+        linked_list.append(3)
+        linked_list.append(2)
+        linked_list.append(1)
+
+        new_head = linked_list.reverse_groups(0)
+
+        self.assertIsNotNone(new_head)
+        self.assertEqual(9, new_head.data)
+
 
 if __name__ == "__main__":
     unittest.main()
