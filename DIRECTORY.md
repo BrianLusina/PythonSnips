@@ -349,6 +349,7 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
+      * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_cascading_subsets.py)
       * [Test Contains Nearby Almost Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_almost_duplicate.py)
       * [Test Contains Nearby Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_duplicate.py)
       * [Test Highest Rank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_highest_rank.py)
