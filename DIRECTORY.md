@@ -352,6 +352,7 @@
       * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_cascading_subsets.py)
       * [Test Contains Nearby Almost Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_almost_duplicate.py)
       * [Test Contains Nearby Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_duplicate.py)
+      * [Test Find Unique](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_find_unique.py)
       * [Test Highest Rank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_highest_rank.py)
       * [Test Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_one.py)
       * [Test Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_two.py)
