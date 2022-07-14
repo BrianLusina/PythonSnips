@@ -38,6 +38,9 @@ class Anagrams(object):
         :return: Whether the strings are anagrams
         :rtype: bool
         """
+        if len(s1.lower()) != len(s2.lower()):
+            return False
+
         a_list = list(s2)
         pos1 = 0
         flag = True
