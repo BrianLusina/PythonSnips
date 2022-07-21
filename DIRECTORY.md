@@ -360,6 +360,7 @@
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_merge_sorted_arrays.py)
+      * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_sub_array_with_sum.py)
     * Stack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_min_stack.py)
@@ -580,6 +581,7 @@
     * [Test Re Ordering](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_re_ordering.py)
     * [Test Remove Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_remove_duplicate.py)
     * [Test Rgb To Hex](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_rgb_to_hex.py)
+    * [Test Rock Paper Scissors](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_rock_paper_scissors.py)
     * [Test Seven Ate9](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_seven_ate9.py)
     * [Test String Destroyer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_string_destroyer.py)
     * [Test String Order](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_string_order.py)
