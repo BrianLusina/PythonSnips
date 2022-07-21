@@ -450,6 +450,8 @@
     * [Test Tournament](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_tournament.py)
     * [Test Yacht](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_yacht.py)
     * [Test Zebra Puzzle](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_zebra_puzzle.py)
+  * Pyfuncs
+    * [Test Functional Add](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyfuncs/test_functional_add.py)
   * Pyfundamentals
     * [Test Count Inner Calls](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pyfundamentals/test_count_inner_calls.py)
   * Pymath
