@@ -27,7 +27,10 @@ We can do this in O(n) time and space. One iteration is all we need!
 
 We can use a greedy
 
-> A greedy algorithm iterates through the problem space taking the optimal solution "so far," until it reaches the end. The greedy approach is only optimal if the problem has "optimal substructure," which means stitching together optimal solutions to subproblems yields an optimal solution. approach to walk through our string character by character, making sure the string validates "so far" until we reach the end.
+> A greedy algorithm iterates through the problem space taking the optimal solution "so far," until it reaches the end.
+> The greedy approach is only optimal if the problem has "optimal substructure," which means stitching together optimal
+> solutions to subproblems yields an optimal solution. approach to walk through our string character by character, making
+> sure the string validates "so far" until we reach the end.
 
 ## What do we do when we find an opener or closer?
 
@@ -55,18 +58,22 @@ Stacks have two main methods:
 
 push() : adds an item pop() : removes and returns the top item They can also include some utility methods:
 
-peek() : returns the item on the top of the stack, without removing it. is_empty() : returns True if the stack is empty, False otherwise
+peek() : returns the item on the top of the stack, without removing it. is_empty() : returns True if the stack is empty,
+False otherwise
 
 ### Solution
 
 We iterate through our string, making sure that:
 
-each closer corresponds to the most recently seen, unclosed opener every opener and closer is in a pair We use a stack to keep track of the most recently seen, unclosed opener. And if the stack is ever empty when we come to a closer, we know that closer doesn't have an opener.
+each closer corresponds to the most recently seen, unclosed opener every opener and closer is in a pair We use a stack
+to keep track of the most recently seen, unclosed opener. And if the stack is ever empty when we come to a closer, we
+know that closer doesn't have an opener.
 
 So as we iterate:
 
 If we see an opener, we push it onto the stack. If we see a closer, we check to see if it is the closer for the opener
-at the top of the stack. If it is, we pop from the stack. If it isn't, or if the stack is empty, we return False. If we finish iterating and our stack is empty, we know every opener was properly closed.
+at the top of the stack. If it is, we pop from the stack. If it isn't, or if the stack is empty, we return False. If we
+finish iterating and our stack is empty, we know every opener was properly closed.
 
 ## Complexity
 

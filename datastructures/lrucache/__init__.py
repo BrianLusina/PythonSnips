@@ -1,14 +1,15 @@
+from typing import AnyStr, Dict, Any
 from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
 
 
 class LRUCache(object):
-    def __init__(self, max_size):
+    def __init__(self, max_size: int):
         self.max_size = max_size
         self.size = 0
-        self.lookup = {}
+        self.lookup: Dict[str, DoubleNode] = {}
         self.linked_list = DoublyLinkedList()
 
-    def get(self, key):
+    def get(self, key: AnyStr):
         """
         Gets an item from the cache.
 
@@ -25,7 +26,7 @@ class LRUCache(object):
             self.linked_list.prepend(node.data)
             return result
 
-    def set(self, key, value):
+    def set(self, key: str, value: Any):
         """
         Adds an item to the cache with the key and value
 

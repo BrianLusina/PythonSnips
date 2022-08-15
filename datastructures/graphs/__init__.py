@@ -2,43 +2,9 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 from pprint import PrettyPrinter
 from typing import List, Set, Union
-
 from datastructures.stacks import Stack
-
-
-class Vertex(object):
-    """
-    Graph Node/Vertex representing a Node/Vertex in a Graph
-    """
-
-    def __init__(self, data):
-        """
-        Initializes a Node object
-        :param data Value/data stored within this node
-        """
-        self.data = data
-        self.next = None
-        self.neighbours = []
-
-    def __str__(self):
-        return f"Data: {self.data}"
-
-
-class Edge(object):
-    """
-    Edge representation of an Edge in a Graph
-    """
-
-    def __init__(self, source: Vertex = None, destination: Vertex = None, weight=None):
-        """
-        Initializes an Edge object
-        :param source Source Node
-        :param destination Destination node
-        :param weight This is useful for graphs whose edges are weighted
-        """
-        self.source = source
-        self.destination = destination
-        self.weight = weight
+from .node import Vertex
+from .edge import Edge
 
 
 class Graph(ABC):
@@ -47,10 +13,6 @@ class Graph(ABC):
     """
 
     def __init__(self, edge_list: List[Edge] = None):
-        """
-        Initializes a Graph object by passing in an edge list
-        :param edge_list list of edges with all the Nodes of the graph
-        """
         if edge_list is None:
             edge_list = []
         self.edge_list = edge_list
@@ -170,12 +132,12 @@ class Graph(ABC):
 
     def is_connected(self, node_one: Vertex, node_two: Vertex) -> bool:
         return (
-            node_one in self.adjacency_list
-            and node_two in self.adjacency_list[node_two]
+                node_one in self.adjacency_list
+                and node_two in self.adjacency_list[node_two]
         )
 
     def find_path(
-        self, node_one: Vertex, node_two: Vertex, path=None
+            self, node_one: Vertex, node_two: Vertex, path=None
     ) -> Union[List, None]:
         """
         Find any path between node_one and node_two. May not be the shortest path
@@ -204,7 +166,7 @@ class Graph(ABC):
         return None
 
     def find_all_paths(
-        self, node_one: Vertex, node_two: Vertex, path: List = None
+            self, node_one: Vertex, node_two: Vertex, path: List = None
     ) -> list:
         """
         Finds all paths between node_one and node_two, where node_one is the start & node_two is the end
@@ -233,7 +195,7 @@ class Graph(ABC):
         return paths
 
     def find_shortest_path(
-        self, node_one: Vertex, node_two: Vertex, path: List = None
+            self, node_one: Vertex, node_two: Vertex, path: List = None
     ) -> Union[List, None]:
         """
         Finds the shortest path between 2 nodes in the graph
