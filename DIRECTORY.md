@@ -74,6 +74,9 @@
   * Dicts
     * [Default Dicts](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/default_dicts.py)
     * [Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/ordered_dict.py)
+  * Graphs
+    * [Edge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge.py)
+    * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/node.py)
   * Linked Lists
     * Kth To Last Node
       * [Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/kth_to_last_node/linked_list.py)
