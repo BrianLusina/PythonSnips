@@ -26,7 +26,7 @@ class SinglyLinkedList(LinkedList):
         Add a node to the Linked List
 
         We have to traverse the linked list to get to the tail and assign the tail node's next node from None to
-        the linked list we intend to append.
+        the node we intend to append.
 
         Complexities:
         Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
@@ -34,20 +34,20 @@ class SinglyLinkedList(LinkedList):
 
         :param data:
         """
-        node = data if isinstance(data, SingleNode) else SingleNode(data, None)
+        node_ = data if isinstance(data, SingleNode) else SingleNode(data, None)
 
         if not self.head:
-            self.head = node
+            self.head = node_
             return
         last_node = self.head
         while last_node.next:
             last_node = last_node.next
-        last_node.next = node
+        last_node.next = node_
 
     def prepend(self, data):
-        node = data if isinstance(data, SingleNode) else SingleNode(data)
-        node.next = self.head
-        self.head = node
+        node_ = data if isinstance(data, SingleNode) else SingleNode(data)
+        node_.next = self.head
+        self.head = node_
 
     def insert_after_node(self, prev_node: Any, data: Any):
         if self.is_empty():
@@ -610,3 +610,6 @@ class SinglyLinkedList(LinkedList):
 
         # prev is new head
         return prev
+
+    def remove_tail(self):
+        pass
