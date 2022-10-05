@@ -408,6 +408,8 @@
       * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashmap/test_hashmap.py)
     * Hashset
       * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashset/test_my_hashset.py)
+    * Linked List
+      * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/linked_list/test_linked_list.py)
     * Oop
       * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_bank.py)
       * [Test Throne Inheritance](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_throne_inheritance.py)
