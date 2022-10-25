@@ -571,6 +571,7 @@
     * [Test How Much Love](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_how_much_love.py)
     * [Test Is Isogram](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_is_isogram.py)
     * [Test Is Isomorphic](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_is_isomorphic.py)
+    * [Test Is Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_is_subsequence.py)
     * [Test Latest Time](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_latest_time.py)
     * [Test Letter Digit Count](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_letter_digit_count.py)
     * [Test Lineup Students](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_lineup_students.py)
