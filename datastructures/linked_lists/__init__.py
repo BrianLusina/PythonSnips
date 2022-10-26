@@ -574,3 +574,21 @@ class LinkedList(object):
         Reverses every k groups of a linked list
         """
         raise NotImplementedError("Not yet implemented")
+
+    def middle_node(self) -> Optional[Node]:
+        """
+        Traverse the linked list to find the middle node
+        Time Complexity: O(n) where n is the number of nodes in the linked list
+        Space Complexity: O(1) as constant extra space is needed
+        @return: Middle Node or None
+        """
+        if not self.head:
+            return None
+
+        fast_pointer, slow_pointer = self.head, self.head
+
+        while fast_pointer and fast_pointer.next:
+            slow_pointer = slow_pointer.next
+            fast_pointer = fast_pointer.next.next
+
+        return slow_pointer

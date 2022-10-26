@@ -1,15 +1,14 @@
+from typing import List, Optional
 from .. import Node
 
 
-def mergeTwoSortedLists(l1: Node, l2: Node) -> Node:
+def merge_two_sorted_lists(l1: Optional[Node], l2: Optional[Node]) -> Optional[Node]:
     if l1 is None:
         return l2
     if l2 is None:
         return l1
 
-    output = None
-
-    if l1.val < l2.val:
+    if l1.data < l2.data:
         output = l1
         l1 = l1.next
     else:
@@ -19,7 +18,7 @@ def mergeTwoSortedLists(l1: Node, l2: Node) -> Node:
     curr = output
 
     while l1 is not None and l2 is not None:
-        if l1.val > l2.val:
+        if l1.data > l2.data:
             curr.next = l2
             l2 = l2.next
         else:
@@ -36,7 +35,7 @@ def mergeTwoSortedLists(l1: Node, l2: Node) -> Node:
     return output
 
 
-def mergeKLists(lists: List[Node]) -> Node:
+def merge_k_lists(lists: List[Node]) -> Optional[Node]:
     length = len(lists)
 
     if length == 0:
@@ -51,7 +50,7 @@ def mergeKLists(lists: List[Node]) -> Node:
         i = 0
 
         while i + interval < length:
-            lists[i] = mergeTwoSortedLists(lists[i], lists[i + interval])
+            lists[i] = merge_two_sorted_lists(lists[i], lists[i + interval])
             i = i + interval * 2
         interval *= 2
 
