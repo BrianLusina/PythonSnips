@@ -257,6 +257,8 @@
 ## Pystrings
   * Domain Name
     * [Extract Host](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/domain_name/extract_host.py)
+  * Palindrome
+    * [Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/longest_palindrome.py)
   * Pangram
     * [Test Pangram Checker](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/pangram/test_pangram_checker.py)
   * Reverse Words
@@ -575,6 +577,7 @@
     * [Test Latest Time](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_latest_time.py)
     * [Test Letter Digit Count](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_letter_digit_count.py)
     * [Test Lineup Students](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_lineup_students.py)
+    * [Test Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_longest_palindrome.py)
     * [Test Longest Substring K Repeating Chars](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_longest_substring_k_repeating_chars.py)
     * [Test Mean](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_mean.py)
     * [Test Name That Number](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_name_that_number.py)
