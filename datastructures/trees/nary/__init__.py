@@ -1,4 +1,5 @@
 from typing import List, Any
+from collections import deque
 from .. import Tree, TreeNode
 
 
@@ -25,19 +26,18 @@ class NAryTree(Tree):
         pass
 
     def pre_order_traversal(self) -> List[Any]:
-        values, queue = [], []
+        stack, visited = deque([]), []
         if not self.root:
-            return values
+            return visited
 
-        queue.append(self.root)
-        while queue:
-            node = queue.pop(0)
-            values.append(node.data)
+        stack.append(self.root)
 
-            for child in node.children:
-                queue.append(child)
+        while stack:
+            node = stack.pop()
+            visited.append(node.data)
+            stack.extend(node.children[::-1])
 
-        return values
+        return visited
 
     def level_order_traversal(self) -> List[Any]:
         values, queue = [], []
