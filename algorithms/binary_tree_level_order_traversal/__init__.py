@@ -1,8 +1,9 @@
+from typing import List
 from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
 
 
 class Solution:
-    def levelOrder(self, root: BinaryTreeNode) -> List[List[int]]:
+    def level_order(self, root: BinaryTreeNode) -> List[List[int]]:
         self.result = []
         self.traverse(root, 0)
         return self.result
@@ -12,15 +13,15 @@ class Solution:
             return
 
         if level + 1 > len(self.result):
-            self.result.append([root.val])
+            self.result.append([root.data])
         else:
-            self.result[level].append(root.val)
+            self.result[level].append(root.data)
 
         self.traverse(root.left, level + 1)
         self.traverse(root.right, level + 1)
 
 
-def levelOrder(root: BinaryTreeNode) -> List[List[int]]:
+def level_order(root: BinaryTreeNode) -> List[List[int]]:
     """
     This takes 16ms to compute
     """
@@ -34,7 +35,7 @@ def levelOrder(root: BinaryTreeNode) -> List[List[int]]:
         level_node = []
         next_level = []
         for node in curr:
-            level_node.append(node.val)
+            level_node.append(node.data)
 
             if node.left:
                 next_level.append(node.left)

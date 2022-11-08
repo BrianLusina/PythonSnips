@@ -366,6 +366,7 @@
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_merge_sorted_arrays.py)
+      * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_product_except_self.py)
       * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_sub_array_with_sum.py)
     * Stack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
@@ -401,6 +402,9 @@
     * [Test Tuple Sorter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_tuple_sorter.py)
     * [Test Word Frequency](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_word_frequency.py)
     * Trees
+      * Nary
+        * [Test Nary Level Order](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/nary/test_nary_level_order.py)
+        * [Test Nary Preorder Traversal](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/nary/test_nary_preorder_traversal.py)
       * Trie
         * [Test Trie](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/trie/test_trie.py)
   * Design Patterns
@@ -436,14 +440,17 @@
     * [Test Alphametics](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_alphametics.py)
     * [Test Beer Song](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_beer_song.py)
     * [Test Bowling](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_bowling.py)
+    * [Test Cake Is Not A Lie](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_cake_is_not_a_lie.py)
     * [Test Chess Board Cell Color](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_chess_board_cell_color.py)
     * [Test Coin Change](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_change.py)
     * [Test Coin Flip](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_flip.py)
     * [Test Count Vegetables](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_count_vegetables.py)
     * [Test Furthest Building](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_furthest_building.py)
+    * [Test Gearing Up For Destruction](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_gearing_up_for_destruction.py)
     * [Test Grade School](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_grade_school.py)
     * [Test Grains](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_grains.py)
     * [Test Hamming](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_hamming.py)
+    * [Test I Already Did That](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_i_already_did_that.py)
     * [Test Jacks House](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_jacks_house.py)
     * [Test Kindergarten Garden](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_kindergarten_garden.py)
     * [Test Magic Square](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_magic_square.py)
@@ -452,6 +459,7 @@
     * [Test Pete The Baker](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_pete_the_baker.py)
     * [Test Poker](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_poker.py)
     * [Test Queen Attack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_queen_attack.py)
+    * [Test Queue To Do](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_queue_to_do.py)
     * [Test Rectangle](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_rectangle.py)
     * [Test Replace Words](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_replace_words.py)
     * [Test Robot Name](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_robot_name.py)

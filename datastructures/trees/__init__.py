@@ -45,7 +45,7 @@ class Tree(ABC):
 
     @abstractmethod
     def lowest_common_ancestor(
-        self, node_one: TreeNode, node_two: TreeNode
+            self, node_one: TreeNode, node_two: TreeNode
     ) -> TreeNode:
         """
         Returns the lowest common ancestor of 2 nodes in the Tree.
@@ -89,4 +89,12 @@ class Tree(ABC):
         """
         Prints all the paths of a Tree from root node to leaf nodes
         """
+        raise NotImplementedError("This method has not been implemented")
+
+    @abstractmethod
+    def level_order_traversal(self) -> List[Any]:
+        raise NotImplementedError("This method has not been implemented")
+
+    @abstractmethod
+    def pre_order_traversal(self) -> List[Any]:
         raise NotImplementedError("This method has not been implemented")

@@ -389,6 +389,10 @@ class BinarySearchTree(Tree):
     def is_binary_search_tree(self):
         """
         Checks if a binary search tree is valid. A data of None is a valid Binary Search Tree
+        Complexity Analysis:
+        Space Complexity: O(n) as we are using a stack to keep track of the nodes, where n is the height of the tree
+        Time Complexity: O(n), worst case we travers all the nodes of the tree(left sub tree and right sub tree) to
+        check if the tree is a valid BST
         :rtype: bool
         :return: Boolean True if valid, False otherwise
         """
@@ -401,30 +405,30 @@ class BinarySearchTree(Tree):
         stack = [(float("-inf"), self.root, float("inf"))]
 
         # depth first traversal
-        while len(stack):
-            mind, node, maxd = stack.pop()
+        while stack:
+            lower_bound, node, upper_bound = stack.pop()
 
             if not node:
                 continue
 
             # if this node is invalid, return false immediately
-            if node.data < mind or node.data > maxd:
+            if node.data <= lower_bound or node.data >= upper_bound:
                 return False
 
             if node.left:
                 # this node must be less than the current node
-                stack.append((mind, node.left, node.data))
+                stack.append((lower_bound, node.left, node.data))
 
             if node.right:
                 # this node must be greater than the current node
-                stack.append((node.data, node.right, maxd))
+                stack.append((node.data, node.right, upper_bound))
 
         # if none of the nodes are invalid, return true
         # at this point we have checked all the nodes
         return True
 
     def is_binary_search_tree_recursive(
-        self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
+            self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
     ):
         """
         This uses the call stack to check if the binary search tree node is valid.
@@ -445,10 +449,10 @@ class BinarySearchTree(Tree):
             return False
 
         return not (
-            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
-            or not self.is_binary_search_tree_recursive(
-                root.right, root.data, upper_bound
-            )
+                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
+                or not self.is_binary_search_tree_recursive(
+            root.right, root.data, upper_bound
+        )
         )
 
     def search_node(self, data, node: BinaryTreeNode = None):
@@ -529,7 +533,7 @@ class BinarySearchTree(Tree):
                     #   1) more than 2 different leaf depths
                     #   2) 2 leaf depths that are more than 1 apart
                     if len(depths) > 2 or (
-                        len(depths) == 2 and abs(depths[0] - depths[1]) > 1
+                            len(depths) == 2 and abs(depths[0] - depths[1]) > 1
                     ):
                         return False
 
@@ -543,7 +547,7 @@ class BinarySearchTree(Tree):
         return True
 
     def lowest_common_ancestor(
-        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+            self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
     ) -> BinaryTreeNode:
         """
         Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this

@@ -1,13 +1,60 @@
-from typing import Optional
+from typing import Optional, List, Any
 
 from ...stacks import Stack
-from .. import Tree
+from .. import Tree, TreeNode
 from .binary_tree_node import BinaryTreeNode
 
 
 class BinaryTree(Tree):
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
+
+    def next(self) -> int:
+        pass
+
+    def height(self) -> int:
+        pass
+
+    def has_next(self) -> bool:
+        pass
+
+    def increasing_order_traversal(self) -> TreeNode:
+        pass
+
+    def get_depth(self) -> int:
+        pass
+
+    def insert_node(self, value) -> TreeNode:
+        pass
+
+    def paths(self) -> list:
+        pass
+
+    def level_order_traversal(self) -> List[Any]:
+        if not self.root:
+            return []
+
+        current_level = [self.root]
+        levels = []
+        while current_level:
+            level = []
+            next_level = []
+
+            for node in current_level:
+                level.append(node.data)
+
+                if node.left:
+                    next_level.append(node.left)
+                if node.right:
+                    next_level.append(node.right)
+
+            levels.append(level)
+            current_level = next_level
+
+        return levels
+
+    def pre_order_traversal(self) -> List[Any]:
+        pass
 
     def flatten_into_linked_list(self) -> None:
         """
@@ -29,7 +76,7 @@ class BinaryTree(Tree):
                     tree_node.left = None
 
     def lowest_common_ancestor(
-        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+            self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
     ) -> Optional[BinaryTreeNode]:
         """
         The approach is pretty intuitive. Traverse the tree in a depth first manner. The moment you encounter either of
