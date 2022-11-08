@@ -573,6 +573,7 @@
     * [Test Diamond](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_diamond.py)
     * [Test Diff Ints In String](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_diff_ints_in_string.py)
     * [Test Duplicate Encoder](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_duplicate_encoder.py)
+    * [Test Encode Decode](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_encode_decode.py)
     * [Test Father Son](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_father_son.py)
     * [Test Format Names](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_format_names.py)
     * [Test Generate User Links](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_generate_user_links.py)
