@@ -366,6 +366,7 @@
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_maxlen_contiguous_binary_subarray.py)
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_merge_sorted_arrays.py)
+      * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_product_except_self.py)
       * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_sub_array_with_sum.py)
     * Stack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
