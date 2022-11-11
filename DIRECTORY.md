@@ -145,6 +145,13 @@
       * [Jeep](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/jeep.py)
       * [Kawasaki](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/kawasaki.py)
       * [Motor Cycle](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/motor_cycle.py)
+  * Structural
+    * Proxy
+      * Subject
+        * [Client](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/client.py)
+        * [Proxy](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/proxy.py)
+        * [Real Subject](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/real_subject.py)
+        * [Subject](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/subject.py)
 
 ## Exceptions
   * [Exception Handling](https://github.com/BrianLusina/PythonSnips/blob/master/exceptions/exception_handling.py)
