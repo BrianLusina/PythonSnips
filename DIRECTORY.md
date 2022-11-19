@@ -455,6 +455,7 @@
     * [Test Coin Change](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_change.py)
     * [Test Coin Flip](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_flip.py)
     * [Test Count Vegetables](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_count_vegetables.py)
+    * [Test Doomsday Fuel](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_doomsday_fuel.py)
     * [Test Fuel Injection Perfection](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_fuel_injection_perfection.py)
     * [Test Furthest Building](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_furthest_building.py)
     * [Test Gearing Up For Destruction](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_gearing_up_for_destruction.py)
