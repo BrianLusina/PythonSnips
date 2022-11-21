@@ -65,3 +65,27 @@ def max_profit_2(prices: List[int]) -> int:
         left += 1
         right += 1
     return current_profit
+
+
+def max_profit_3(prices: List[int]) -> int:
+    n = len(prices)
+    if prices is None or n < 2:
+        return 0
+
+    forward_profit, backward_profit = [0] * n, [0] * n
+    earliest_price = prices[0]
+
+    for day in range(1, n):
+        earliest_price = min(prices[day], earliest_price)
+        forward_profit[day] = max(forward_profit[day - 1], prices[day] - earliest_price)
+
+    latest_price = prices[-1]
+    for day in range(n - 2, -1, -1):
+        latest_price = max(latest_price, prices[day])
+        backward_profit[day] = max(backward_profit[day + 1], latest_price - prices[day])
+
+    profit = 0
+    for day in range(n):
+        profit = max(profit, forward_profit[day] + backward_profit[day])
+
+    return profit
