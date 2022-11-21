@@ -107,6 +107,10 @@
   * [Debug Sample](https://github.com/BrianLusina/PythonSnips/blob/master/debugging_tools/debug_sample.py)
 
 ## Design Patterns
+  * Behavioral
+    * Iterator
+      * Words
+        * [Alphabetical Order Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/iterator/words/alphabetical_order_iterator.py)
   * Oop
     * Alien Game
       * [Central Corridor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/central_corridor.py)
