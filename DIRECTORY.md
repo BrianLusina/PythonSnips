@@ -604,6 +604,7 @@
     * [Test Lineup Students](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_lineup_students.py)
     * [Test Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_longest_palindrome.py)
     * [Test Longest Substring K Repeating Chars](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_longest_substring_k_repeating_chars.py)
+    * [Test Longest Substring Without Repeating Characers](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_longest_substring_without_repeating_characers.py)
     * [Test Mean](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_mean.py)
     * [Test Name That Number](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_name_that_number.py)
     * [Test Order Please](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_order_please.py)
