@@ -1,5 +1,5 @@
 from collections.abc import Iterator, Iterable
-from typing import Optional, List, Any
+from typing import Optional, Any
 
 
 class AlphabeticalOrderIterator(Iterator):
