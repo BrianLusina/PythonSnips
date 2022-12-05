@@ -355,6 +355,7 @@
   * Datastructures
     * Arrays
       * Matrix
+        * [Test Diagonal Difference](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/matrix/test_diagonal_difference.py)
         * [Test Reshape Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/matrix/test_reshape_matrix.py)
       * [Test 2D Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_2d_array.py)
       * [Test Array Chunks](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_chunks.py)
