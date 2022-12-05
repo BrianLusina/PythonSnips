@@ -370,6 +370,7 @@
       * [Test Highest Rank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_highest_rank.py)
       * [Test Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_one.py)
       * [Test Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_intersection_two.py)
+      * [Test Lonely Integer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_lonely_integer.py)
       * [Test Longest Consecutive Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_longest_consecutive_sequence.py)
       * [Test Max Profit](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_profit.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
