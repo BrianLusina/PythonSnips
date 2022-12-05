@@ -192,8 +192,6 @@
   * Stock Trading
     * [Stock Trading](https://github.com/BrianLusina/PythonSnips/blob/master/machine_learning/stock_trading/stock_trading.py)
 
-## [Main](https://github.com/BrianLusina/PythonSnips/blob/master//main.py)
-
 ## Multiprocessing Threads
   * Progress
     * [Progress Bar](https://github.com/BrianLusina/PythonSnips/blob/master/multiprocessing_threads/progress/progress_bar.py)
@@ -240,8 +238,6 @@
     * [Trailing Zeros](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/factorial/trailing_zeros.py)
   * Filter Evens
     * [Test Filter Evens](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/filter_evens/test_filter_evens.py)
-  * Find Median
-    * [Test Median](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/find_median/test_median.py)
   * Map Squares
     * [Test Map Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/map_squares/test_map_squares.py)
   * Matrices
@@ -524,11 +520,14 @@
     * [Test Largest Series Product](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_largest_series_product.py)
     * [Test Make Larger](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_make_larger.py)
     * [Test Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_matrix.py)
+    * [Test Median](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_median.py)
+    * [Test Mini Max Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_mini_max_sum.py)
     * [Test Modified Leap](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_modified_leap.py)
     * [Test Narcisstic](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_narcisstic.py)
     * [Test Number Letter Counts](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_number_letter_counts.py)
     * [Test Perfect Numbers Test](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_perfect_numbers_test.py)
     * [Test Pernicious](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_pernicious.py)
+    * [Test Plus Minus](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_plus_minus.py)
     * [Test Population Growth](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_population_growth.py)
     * [Test Power Digit Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_digit_sum.py)
     * [Test Power Of I](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_of_i.py)
@@ -641,6 +640,7 @@
     * [Test Days Till Christmas](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_days_till_christmas.py)
     * [Test Friday 13](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_friday_13.py)
     * [Test Gigasecond](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_gigasecond.py)
+    * [Test Time Conversion](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_time_conversion.py)
     * [Test Time Correct](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/test_time_correct.py)
     * [Time Degrees](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pytime/time_degrees.py)
   * Simulations
