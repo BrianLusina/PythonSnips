@@ -1,3 +1,6 @@
+from typing import List
+
+
 def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
     """
     Finds the median of 2 sorted arrays

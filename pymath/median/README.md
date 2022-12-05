@@ -14,10 +14,6 @@ to decimal place (i.e., format). Input Format
 The first line contains a single integer, , denoting the number of integers in the data stream. Each line of the
 subsequent lines contains an integer, , to be added to your list.
 
-Constraints
-
-Output Format
-
 After each new integer is added to the list, print the list's updated median on a new line as a single double-precision
 number scaled to decimal place (i.e., format).
 
