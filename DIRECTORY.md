@@ -382,6 +382,7 @@
       * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_product_except_self.py)
       * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_sub_array_with_sum.py)
       * [Test Three Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_three_sum.py)
+      * [Test Zig Zag Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_zig_zag_sequence.py)
     * Stack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_max_stack.py)
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/stack/test_min_stack.py)
