@@ -108,6 +108,13 @@
 
 ## Design Patterns
   * Behavioral
+    * Chain Of Responsibility
+      * Animals
+        * [Abstract Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/chain_of_responsibility/animals/abstract_handler.py)
+        * [Dog Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/chain_of_responsibility/animals/dog_handler.py)
+        * [Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/chain_of_responsibility/animals/handler.py)
+        * [Monkey Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/chain_of_responsibility/animals/monkey_handler.py)
+        * [Squirrel Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/chain_of_responsibility/animals/squirrel_handler.py)
     * Iterator
       * Words
         * [Alphabetical Order Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/iterator/words/alphabetical_order_iterator.py)
