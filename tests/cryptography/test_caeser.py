@@ -49,6 +49,12 @@ class CaeserCipherTests(unittest.TestCase):
             "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.",
         )
 
+    def test_rotate_www_abc_xy(self):
+        caeser = CaesarCipher(87)
+        expected = "fff.jkl.gh"
+        actual = caeser.encrypt("www.abc.xy")
+        self.assertEqual(expected, actual)
+
     def test_rotate_a_by_1_on_caeser_v2(self):
         caeser = CaesarCipherV2(1)
         self.assertEqual(caeser.encode("a"), "b".upper())
