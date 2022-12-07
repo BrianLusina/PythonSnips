@@ -483,6 +483,7 @@
     * [Test Scale Generator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_scale_generator.py)
     * [Test Scrabble](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_scrabble.py)
     * [Test Tournament](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_tournament.py)
+    * [Test Tower Breakers](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_tower_breakers.py)
     * [Test Yacht](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_yacht.py)
     * [Test Zebra Puzzle](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_zebra_puzzle.py)
   * Pyfuncs
