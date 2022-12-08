@@ -4,7 +4,8 @@ def binary_search(arr, key):
     If the key can not be found in the list, raise a ValueError
     Will keep shifting the middle point for as long as the middle value is not equal to the search key
     If, the search key is less than the middle value, we shift the high point by the middle value - 1
-    the same applies if the key is greater than the low point, only difference is, we increase the low point by 1
+    the same applies if the key is greater than the middle point, only difference is, we increase the low point by
+    middle + 1
     :param arr: The array, which will be a list of numbers
     :param key: search key, what we will search for
     :return: Position of the key in the array
