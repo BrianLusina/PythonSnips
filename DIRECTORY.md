@@ -304,13 +304,15 @@
     * Bfs
       * Graphs
         * [Test Find If Path Exists](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/bfs/graphs/test_find_if_path_exists.py)
+    * Binary Search
+      * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/binary_search/test_binary_search.py)
+      * [Test Search Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/binary_search/test_search_rotated_sorted_array.py)
     * Sorting
       * [Test Counting Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_counting_sort.py)
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
     * Strings
       * [Test Validate Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/strings/test_validate_ipv4.py)
     * [Test Allergies](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_allergies.py)
-    * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_binary_search.py)
     * [Test Bracket Validator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_bracket_validator.py)
     * [Test Bubble Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_bubble_sort.py)
     * [Test Connect](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_connect.py)
