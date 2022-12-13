@@ -306,7 +306,10 @@
         * [Test Find If Path Exists](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/bfs/graphs/test_find_if_path_exists.py)
     * Binary Search
       * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/binary_search/test_binary_search.py)
+      * [Test Find Min Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/binary_search/test_find_min_rotated_sorted_array.py)
       * [Test Search Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/binary_search/test_search_rotated_sorted_array.py)
+    * Sliding Window
+      * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sliding_window/test_min_window_substring.py)
     * Sorting
       * [Test Counting Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_counting_sort.py)
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
