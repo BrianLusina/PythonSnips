@@ -118,6 +118,12 @@
     * Iterator
       * Words
         * [Alphabetical Order Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/iterator/words/alphabetical_order_iterator.py)
+    * Memento
+      * Concept
+        * [Caretaker](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/memento/concept/caretaker.py)
+        * [Concrete Memento](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/memento/concept/concrete_memento.py)
+        * [Memento](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/memento/concept/memento.py)
+        * [Originator](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/memento/concept/originator.py)
   * Oop
     * Alien Game
       * [Central Corridor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/central_corridor.py)
@@ -608,6 +614,7 @@
     * [Test Duplicate Encoder](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_duplicate_encoder.py)
     * [Test Encode Decode](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_encode_decode.py)
     * [Test Father Son](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_father_son.py)
+    * [Test Find Capitals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_find_capitals.py)
     * [Test Format Names](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_format_names.py)
     * [Test Generate User Links](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_generate_user_links.py)
     * [Test Greek Comparator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_greek_comparator.py)
