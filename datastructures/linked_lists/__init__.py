@@ -12,9 +12,9 @@ class Node(object):
 
     __metaclass__ = ABCMeta
 
-    def __init__(self, data=None, next_=None, key=None):
+    def __init__(self, data=Optional[Any], next_=None, key=None):
         self.data = data
-        self.next = next_
+        self.next: Optional[Node] = next_
         self.key = key
 
     def __str__(self):
