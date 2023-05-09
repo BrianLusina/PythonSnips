@@ -1,3 +1,5 @@
+# Beeramid
+
 Let's pretend your company just hired your friend from college and paid you a referral bonus. Awesome! To celebrate,
 you're taking your team out to the terrible dive bar next door and using the referral bonus to buy, and build, the
 largest three-dimensional beer can pyramid you can. And then probably drink those beers, because let's pretend it's
@@ -15,4 +17,7 @@ the price of a beer can
 
 For example:
 
-beeramid(1500, 2); // should === 12 beeramid(5000, 3); // should === 16
+```
+beeramid(1500, 2); // should === 12 
+beeramid(5000, 3); // should === 16
+```
