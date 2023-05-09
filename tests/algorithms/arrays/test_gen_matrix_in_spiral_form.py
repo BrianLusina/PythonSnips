@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.arrays.matrix_in_spiral_form import (
+from puzzles.matrix_in_spiral_form import (
     generate_n_by_n_matrix_in_spiral_form,
 )
 

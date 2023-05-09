@@ -4,7 +4,7 @@ from typing import List
 def find_missing_element(numbers: List[int]) -> int:
     """
     Finds the missing element in a list of numbers
-    :param numbers of numbers
+    :param numbers: sorted list of numbers
     :return missing element
     :rtype: int
     """

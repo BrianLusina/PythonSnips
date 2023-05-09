@@ -3,7 +3,7 @@ import unittest
 from . import remove_duplicates_from_sorted_list
 
 
-class RemoveDuplTestCase(unittest.TestCase):
+class RemoveDuplicateTestCase(unittest.TestCase):
     def test_1(self):
         """nums = [1,1,2] should return 2"""
         nums = [1, 1, 2]

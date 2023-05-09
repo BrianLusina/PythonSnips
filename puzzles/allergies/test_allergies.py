@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from algorithms.allergies import Allergies
+from puzzles.allergies import Allergies
 
 
 class AllergiesTests(unittest.TestCase):

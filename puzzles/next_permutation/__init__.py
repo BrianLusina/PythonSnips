@@ -4,9 +4,6 @@ from typing import List
 def next_permutation(nums: List[int]) -> None:
     """
     Does not return anything, modifies nums in-place instead.
-
-    >>> next_permutation([1,2,3])
-    [1,3,2]
     """
     i = len(nums) - 2
 

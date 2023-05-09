@@ -17,7 +17,7 @@ def remove_duplicates_from_sorted_list(nums: List[int]) -> int:
      the element before and j pointer is at the next element. These are moved along the elements in the list as below:
      1. as long as j is less than the length of the list we shall iterate until j reaches the end of the list, i.e. the
      last element in the list
-     2. if the element at position i is not equal to the element at position j(at this point js is ahead of i), we
+     2. if the element at position i is not equal to the element at position j(at this point j is ahead of i), we
      increase the i index by 1 and assign the index at i the value of the index at j and increment the index at j, i.e.
      moving the pointer j and i forward by 1
      3. if the elements are equal, then that means we have encountered a duplicate & therefore we move the pointer j
@@ -28,6 +28,7 @@ def remove_duplicates_from_sorted_list(nums: List[int]) -> int:
      The other elements after the pointer i are the duplicate elements. This modifies the sorted list in place retaining
      "some" of the duplicated elements to the right of i. Note that this means we will not know how many times an
      element occurred in the original sorted list of elements.
+
     @param nums: list of integers
     @return: integer denoting the number of unique elements in the list
     """

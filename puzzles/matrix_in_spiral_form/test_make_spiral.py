@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.arrays.matrix_in_spiral_form import make_a_spiral
+from puzzles.matrix_in_spiral_form import make_a_spiral
 
 
 class MakeSpiralTestCase(unittest.TestCase):
