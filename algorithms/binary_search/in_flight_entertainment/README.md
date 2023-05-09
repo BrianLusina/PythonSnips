@@ -1,3 +1,5 @@
+# In Flight Entertainment
+
 You've built an in-flight entertainment system with on-demand movie streaming. Users on longer flights like to start a
 second movie right when their first one ends, but they complain that the plane usually lands before they can see the
 ending. So you're building a feature for choosing two movies whose total runtimes will equal the exact flight length.
@@ -11,22 +13,24 @@ When building your function:
 + Don't make your users watch the same movie twice
 + Optimize for runtime over memory
 
-Breakdown How would we solve this by hand? We know our two movie lengths need to sum to flight_length. So for a given
+## Breakdown 
+
+How would we solve this by hand? We know our two movie lengths need to sum to flight_length. So for a given
 first_movie_length, we need a second_movie_length that equals flight_length - first_movie_length.
 
 To do this by hand we might go through movie_lengths from beginning to end, treating each item as first_movie_length,
 and for each of those check if there's a second_movie_length equal to flight_length - first_movie_length.
 
 How would we implement this in code? We could nest two loops (the outer choosing first_movie_length, the inner choosing
-second_movie_length). That’d give us a runtime of O(n^2)O(n ​2 ​​ ). We can do better.
+second_movie_length). That’d give us a runtime of O(n^2). We can do better.
 
 To bring our runtime down we'll probably need to replace that inner loop (the one that looks for a matching
 second_movie_length) with something faster.
 
-We could sort the movie_lengths first—then we could use binary search ↴ A binary search algorithm finds an item in a
-sorted list in O(\lg{n})O(lgn) time.
+We could sort the movie_lengths first—then we could use binary search. A binary search algorithm finds an item in a
+sorted list in O(lgn) time.
 
-A brute force search would walk through the whole list, taking O(n)O(n) time in the worst case.
+A brute force search would walk through the whole list, taking O(n) time in the worst case.
 
 Let's say we have a sorted list of numbers. To find a number with a binary search, we:
 
