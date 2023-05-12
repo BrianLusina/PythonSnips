@@ -13,6 +13,9 @@ def intersection(a: List[T], b: List[T]) -> List[T]:
             O(N^2) where N is the size of each list, this is because we are comparing each value in the first list to
             each value in the second list. If they are not identical in size, then the complexity becomes O(N * M) where
             N is the size of the first list and M the size of the second list.
+        Space Complexity:
+            Again, this will depend on the sizes of each list, but it averages to O(N+M) where N is the size of the first
+            list and M is the size of the second list
 
     :param a: first collection
     :param b: second collection
