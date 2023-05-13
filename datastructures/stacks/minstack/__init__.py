@@ -1,4 +1,15 @@
+"""
+Contains MinStack data structure that is used to keep track of the current minimum value in a Stack data structure.
+All operations pertaining to a Stack data structure remain true for the MinStack.
+
+Complexity analysis varies when performing Pop operations(removing the current top item from the stack). This is because
+a new minimum has to be iterated over the current items in the stack in order to keep track of the new minimum value.
+This will be an O(n) operation as the Pop() function has to iterate over the remaining items in the worst case.
+"""
+from typing import TypeVar
 from .. import Stack
+
+T = TypeVar("T")
 
 
 class MinStack(Stack):
@@ -9,7 +20,7 @@ class MinStack(Stack):
         """
         super().__init__(maxsize)
         # keeps track of current minimum of the stack
-        self.minimum = float("inf")
+        self.minimum = None
 
     def push(self, val: int) -> None:
         """
@@ -18,28 +29,32 @@ class MinStack(Stack):
         @return: None
         """
         super().push(val)
-        if val < self.minimum:
+        if self.minimum is not None:
+            if val < self.minimum:
+                self.minimum = val
+        else:
             self.minimum = val
 
-    def pop(self) -> None:
+    def pop(self) -> T:
         """
         Removes an item from the top of the stack without returning it
         @return: None
         """
-        v = super().pop()
+        data = super().pop()
         if len(self.stack) == 0:
-            self.minimum = float("inf")
-        elif self.minimum == v:
+            self.minimum = None
+        elif self.minimum == data:
             self.minimum = min(self.stack)
+        return data
 
-    def peek(self) -> int:
+    def peek(self) -> T:
         """
         Gets the top item from the stack without removing it from the stack
         @return: top item in the stack
         """
         return super().peek()
 
-    def get_min(self) -> int:
+    def get_min(self) -> T:
         """
         Gets the minimum item from the stack
         @return: minimum item in the stack

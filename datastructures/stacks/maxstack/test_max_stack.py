@@ -1,27 +1,31 @@
 import unittest
 
-from datastructures.stacks.minstack import MinStack
+from . import MaxStack
 
 
-class MinStackTestCases(unittest.TestCase):
+class MaxStackTestCases(unittest.TestCase):
     def test_one(self):
-        min_stack = MinStack()
+        min_stack = MaxStack()
         min_stack.push(-2)
+        # top of stack is on the left
+        # Current Stack [-2]
 
         self.assertEqual([-2], list(min_stack.stack))
 
         min_stack.push(0)
+        # Current Stack [0, -2]
 
         self.assertEqual([-2, 0], list(min_stack.stack))
 
         min_stack.push(-3)
+        # Current Stack [-3, 0, -2]
 
         self.assertEqual([-2, 0, -3], list(min_stack.stack))
 
-        actual_current_min_1 = min_stack.get_min()
+        actual_current_max_1 = min_stack.get_max()
 
         self.assertEqual([-2, 0, -3], list(min_stack.stack))
-        self.assertEqual(-3, actual_current_min_1)
+        self.assertEqual(0, actual_current_max_1)
 
         min_stack.pop()
 
@@ -32,10 +36,10 @@ class MinStackTestCases(unittest.TestCase):
         self.assertEqual(0, current_top)
         self.assertEqual([-2, 0], list(min_stack.stack))
 
-        actual_current_min_2 = min_stack.get_min()
+        actual_current_max_2 = min_stack.get_max()
 
         self.assertEqual([-2, 0], list(min_stack.stack))
-        self.assertEqual(-2, actual_current_min_2)
+        self.assertEqual(0, actual_current_max_2)
 
 
 if __name__ == "__main__":

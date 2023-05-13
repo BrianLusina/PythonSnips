@@ -1,3 +1,5 @@
+# Max Stack
+
 Design a stack that supports push, pop, top, and retrieving the maximum element in constant time.
 
 Implement the MaxStack class:
@@ -8,7 +10,7 @@ void pop() removes the element on the top of the stack.
 int top() gets the top element of the stack.
 int getMax() retrieves the minimum element in the stack.
 
-
+``` plain
 Example 1:
 
 Input
@@ -27,3 +29,4 @@ minStack.getMax(); // return 0
 minStack.pop();
 minStack.top();    // return 0
 minStack.getMax(); // return 0
+```

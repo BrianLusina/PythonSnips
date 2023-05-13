@@ -1,11 +1,13 @@
 from collections import deque
-from typing import Any
+from typing import TypeVar
 
 # python 2.x import sanity check
 try:
     from Queue import LifoQueue
 except ImportError:
     from queue import LifoQueue
+
+T = TypeVar("T")
 
 
 class Stack(LifoQueue):
@@ -24,7 +26,7 @@ class Stack(LifoQueue):
         super(Stack, self).__init__()
         self.stack = deque(maxlen=max_size)
 
-    def push(self, item: Any):
+    def push(self, item: T):
         """
         Storing an element to the top of the stack
         Check if the stack is empty, if it is pushes the element to the stack
@@ -38,19 +40,20 @@ class Stack(LifoQueue):
         elif not self.is_empty() and not self.is_full():
             self.stack.append(item)
 
-    def pop(self) -> Any:
+    def pop(self) -> T:
         """
         Removes an item from the stack, check if the stack is empty, raise an error if it is
         If stack is not empty get the top most item in the stack and store it in a variable
         Remove the item from the stack and reduce the length of the stack
         :return: The top most item in the stack
-        :rtype: Stack object
+        :rtype: T
+        :raises IndexError if the stack is empty
         """
         if self.is_empty():
             raise IndexError("Stack is empty, add item to stack.")
         return self.stack.pop()
 
-    def peek(self) -> Any:
+    def peek(self) -> T:
         """
         Get the top data element of the stack without removing it
         Check if the stack is empty, if the stack is empty raise an error
