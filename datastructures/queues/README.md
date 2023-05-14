@@ -5,13 +5,11 @@ principle of **FIFO**, First In, First Out.
 
 Queues have 2 main methods:
 
-1. enqueue() adds an item
-2. dequeue() removes and returns the item in line
-
-They could also have utility methods
-
-1. peek(), returns an item at the front of the queue, without removing it
-2. is_empty(), returns True if the queue is empty, False otherwise.
+1. `enqueue()` adds an item
+2. `dequeue()` removes and returns the item in line
+3. `is_empty()` checks if the queue is empty
+4. `is_full()` checks if a queue is full
+5. `peek()` gets the value at the front of the queue without removing it
 
 Refer
 to [This article](https://medium.freecodecamp.com/a-gentle-introduction-to-data-structures-how-queues-work-f8b871938e64#.tn3wjml0b)
