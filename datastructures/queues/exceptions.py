@@ -1,5 +1,9 @@
-from queue import Empty, Full
+from queue import Full
 
 
 class QueueFullException(Full):
-    pass
+    """Queue full exception thrown when a queue is full"""
+
+
+class QueueEmptyException(Exception):
+    """Queue Empty exception raised when a queue is empty"""

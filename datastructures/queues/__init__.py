@@ -21,6 +21,8 @@ class Queue(ABC):
         Creates an instance of a Queue
         :param maxsize: Maximum size of queue. Defaults to 0. If set to 0, this will create an infinite queue.
         """
+        if maxsize < 0:
+            raise ValueError("Maximum size can not be less than 0")
         self.maxsize = maxsize
 
     @property
@@ -56,3 +58,6 @@ class Queue(ABC):
         Returns None if the queue is empty
         """
         raise NotImplementedError("Not yet implemented")
+
+    def __len__(self):
+        return self.size
