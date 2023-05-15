@@ -26,18 +26,21 @@ class Queue(ABC):
         self.maxsize = maxsize
 
     @property
+    @abstractmethod
     def size(self) -> int:
         """
         Returns the current size of the queue
         """
         raise NotImplementedError("Not implemented")
 
+    @abstractmethod
     def is_empty(self) -> bool:
         """
         Returns True if the queue is empty, false otherwise
         """
         raise NotImplementedError("Not yet implemented")
 
+    @abstractmethod
     def is_full(self) -> bool:
         """
         Returns True if the queue is full, false otherwise

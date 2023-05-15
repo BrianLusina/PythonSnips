@@ -1,5 +1,7 @@
+from typing import Optional
 from .. import Queue, T
 from ..exceptions import QueueFullException, QueueEmptyException
+from ...linked_lists.singly_linked_list import SingleNode
 
 
 class CircularQueue(Queue):
@@ -54,3 +56,59 @@ class CircularQueue(Queue):
 
     def is_full(self) -> bool:
         return (self.tail + 1) % self.maxsize == self.head
+
+
+class CircularLinkedListQueue(Queue):
+    """
+    Circular Linked List Queue implements a circular queue using a linked list as the underlying implementation.
+    """
+
+    def __init__(self, maxsize: int):
+        super().__init__(maxsize)
+        self.current_size = 0
+        self.head: Optional[SingleNode] = None
+        self.tail: Optional[SingleNode] = None
+
+    def enqueue(self, data: T):
+        if self.is_full():
+            raise QueueFullException("Queue is full")
+
+        node = SingleNode(data)
+
+        if self.head is None:
+            self.head = node
+        else:
+            self.tail.next = node
+
+        self.tail = node
+        self.tail.next = self.head
+        self.current_size += 1
+
+    def dequeue(self) -> T:
+        if self.head is None:
+            raise QueueEmptyException("queue is empty")
+
+        # if there is no other element in the queue, i.e., we only have 1 element in the queue
+        if self.head == self.tail:
+            value = self.head.data
+            self.head = None
+            self.tail = None
+        else:
+            temp = self.head
+            value = temp.data
+            self.head = self.head.next
+            self.tail.next = self.head
+        self.current_size -= 1
+        return value
+
+    @property
+    def size(self) -> int:
+        if self.is_empty():
+            return 0
+        return self.current_size
+
+    def is_empty(self) -> bool:
+        return self.current_size == 0
+
+    def is_full(self) -> bool:
+        return self.current_size == self.maxsize
