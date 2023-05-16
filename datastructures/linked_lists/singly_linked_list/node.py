@@ -10,3 +10,4 @@ class SingleNode(Node):
         super().__init__(value, next_)
         self.data = value
         self.next = next_
+

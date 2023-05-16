@@ -1,4 +1,6 @@
-# You have a singly-linked list and want to check if it contains a cycle.
+# Singly Linked list
+
+## You have a singly-linked list and want to check if it contains a cycle.
 
 A singly-linked list is built with nodes, where each node has:
 

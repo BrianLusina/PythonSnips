@@ -613,3 +613,50 @@ class SinglyLinkedList(LinkedList):
 
     def remove_tail(self):
         pass
+
+    def kth_to_last_node(self, k: int) -> Optional[SingleNode]:
+        """
+        Gets the Kth to the last node.
+        For example given a linked list of:
+
+        a -> b -> c -> d
+
+        if k is the number one then d should be returned
+        if k is the number two then c should be returned
+        if k is the number three then b should be returned
+        if k is the number four then a should be returned
+        if k exceeds the size of the list then None returned
+
+        :param k: Position to get the node
+        :return: Kth to the last node
+        :raises: ValueError if k impossible to find kth to the last node
+        """
+        if k < 1:
+            raise ValueError("Impossible to find less than first to last node %s" % k)
+
+        left_node = self.head
+        right_node = self.head
+
+        for _ in range(k - 1):
+            """
+            Along the way, if a right node does not have a next, then k is greater than the length of the list
+            thus, there can't be kth to the last node, we raise an error
+            """
+            if not right_node.next:
+                raise ValueError("K is larger than the length of the linked list %s" % k)
+
+            right_node = right_node.next
+
+        """
+        Starting with the left node on the head, move left node and right node down the list
+        maintaining a distance of k between them until right node hits the end of the list
+        """
+        while right_node.next:
+            left_node = left_node.next
+            right_node = right_node.next
+
+        """
+        Since left node is k nodes behind right node
+        left node is now the kth to last node
+        """
+        return left_node

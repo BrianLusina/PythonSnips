@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.linked_lists.singly_linked_list import SinglyLinkedList
+from . import SinglyLinkedList, SingleNode
 
 
 class SinglyLinkedListTest(unittest.TestCase):
@@ -201,6 +201,34 @@ class SinglyLinkedListTest(unittest.TestCase):
 
         self.assertIsNotNone(new_head)
         self.assertEqual(9, new_head.data)
+
+
+class SinglyLinkedListKthToLastNodeTestCases(unittest.TestCase):
+    """Kth to Last node test cases"""
+
+    def test_1(self):
+        """should return correct nodes for linked list of a->b->c->d"""
+        linked_list = SinglyLinkedList()
+        linked_list.append("a")
+        linked_list.append("b")
+        linked_list.append("c")
+        linked_list.append("d")
+
+        expected_d = SingleNode("d")
+        actual = linked_list.kth_to_last_node(1)
+        self.assertEqual(expected_d, actual)
+
+        expected_c = SingleNode("c")
+        actual = linked_list.kth_to_last_node(2)
+        self.assertEqual(expected_c, actual)
+
+        expected_b = SingleNode("b")
+        actual = linked_list.kth_to_last_node(3)
+        self.assertEqual(expected_b, actual)
+
+        expected_a = SingleNode("a")
+        actual = linked_list.kth_to_last_node(4)
+        self.assertEqual(expected_a, actual)
 
 
 if __name__ == "__main__":
