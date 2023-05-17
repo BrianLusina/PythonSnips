@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.arrays.container_with_most_water import max_area
+from . import max_area
 
 
 class ContainerWithMostWaterTestCases(unittest.TestCase):
