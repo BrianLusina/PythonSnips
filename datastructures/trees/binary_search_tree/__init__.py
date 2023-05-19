@@ -1,3 +1,4 @@
+from typing import List, Any, Optional
 from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
 
 from ...queues.fifo import FifoQueue
@@ -6,6 +7,7 @@ from .. import Tree
 
 
 class BinarySearchTree(Tree):
+
     def __init__(self, root: BinaryTreeNode = None):
         self.root = root
         self.stack = Stack()
@@ -152,8 +154,6 @@ class BinarySearchTree(Tree):
     def find_second_largest(self) -> BinaryTreeNode:
         """
         Finds the second largest node in the Binary Search Tree given a root node
-        :param root_node: BinaryTreeNode
-        :type root_node BinaryTreeNode
         :return: Value of the second largest Node
         :rtype: object
         """
@@ -203,20 +203,20 @@ class BinarySearchTree(Tree):
             node = stack.pop()
 
             if node:
-                if low <= node.val <= high:
-                    ans += node.val
+                if low <= node.data <= high:
+                    ans += node.data
 
-                if low < node.val:
+                if low < node.data:
                     if node.left:
                         stack.append(node.left)
 
-                if node.val < high:
+                if node.data < high:
                     if node.right:
                         stack.append(node.right)
 
         return ans
 
-    def breadth_first_search(self) -> list:
+    def breadth_first_search(self) -> List[Any]:
         """
         Performs a breadth first search through a Binary Tree
         This will traverse the tree level by level and depth by depth. Using a Queue to put elements into the queue
@@ -224,19 +224,19 @@ class BinarySearchTree(Tree):
         queue = FifoQueue()
 
         # start off by adding the root node
-        queue.add(self.root)
+        queue.enqueue(self.root)
 
         # while the queue is not empty, we want to traverse the tree and add elements to the queue,
         while not queue.is_empty():
             current_node = queue.dequeue()
 
             if current_node.left:
-                queue.add(current_node.left)
+                queue.enqueue(current_node.left)
 
             if current_node.right:
-                queue.add(current_node.right)
+                queue.enqueue(current_node.right)
 
-    def pre_order(self) -> list:
+    def pre_order(self) -> List[Any]:
         """
         Type of Depth First Traversal (DFS) for binary trees which will start at root node and proceed to the left
         data and print it until it reaches the leaf(node with no more children) and then backtrack to the node and
@@ -263,7 +263,7 @@ class BinarySearchTree(Tree):
 
         return result
 
-    def increasing_order_traversal(self) -> BinaryTreeNode:
+    def increasing_order_traversal(self) -> Optional[BinaryTreeNode]:
         if not self.root:
             return None
 
@@ -317,7 +317,7 @@ class BinarySearchTree(Tree):
 
         return result
 
-    def in_order_morris_traversal(self):
+    def in_order_morris_traversal(self) -> List[Any]:
         result = []
         current = self.root
         pre = None
@@ -347,7 +347,7 @@ class BinarySearchTree(Tree):
 
         return result
 
-    def post_order(self) -> list:
+    def post_order(self) -> List[Any]:
         """
         1. Push root to first stack.
         2. Loop while first stack is not empty
@@ -356,12 +356,12 @@ class BinarySearchTree(Tree):
         3. Print contents of second stack
         """
         if not self.root:
-            return
+            return []
 
         # create 2 stacks
         stack_one = Stack()
         stack_two = Stack()
-        datas = []
+        data = []
 
         # push root to stack one
         stack_one.push(self.root)
@@ -382,9 +382,18 @@ class BinarySearchTree(Tree):
 
         while stack_two:
             node = stack_two.pop()
-            datas.append(node.data)
+            data.append(node.data)
 
-        return datas
+        return data
+
+    def get_depth(self) -> int:
+        pass
+
+    def level_order_traversal(self) -> List[Any]:
+        pass
+
+    def pre_order_traversal(self) -> List[Any]:
+        pass
 
     def is_binary_search_tree(self):
         """

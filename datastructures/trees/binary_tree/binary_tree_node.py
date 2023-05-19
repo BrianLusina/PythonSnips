@@ -12,7 +12,7 @@ class BinaryTreeNode(TreeNode):
         """
         Value here can be anything
         """
-        super(BinaryTreeNode).__init__(data)
+        super().__init__(data)
         self.left: Optional[BinaryTreeNode] = None
         self.right: Optional[BinaryTreeNode] = None
 

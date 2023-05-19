@@ -159,3 +159,31 @@ class BinaryTree(Tree):
                 stack.push(node.right)
 
         return counter
+
+    def is_full(self) -> bool:
+        """
+        Checks if a binary tree is a full binary tree.
+        A full binary tree is a tree whose nodes(parent & internal) have either 2 or no children
+        :return: True if binary tree is full, false otherwise
+        """
+
+        def is_full_helper(root: BinaryTreeNode) -> bool:
+            """
+            Helper function that recurses over subtrees from the root checking if each subtree is a full binary tree
+            :param root: Root of binary subtree
+            :return: True if the binary subtree is a full binary tree
+            """
+            # if we have no root, then this is not a tree, yet, to begin with
+            if root is None:
+                return False
+
+            # if the root has no left nor right subtrees, then this is a full binary tree by definition
+            if root.left is None and root.right is None:
+                return True
+
+            if root.left is not None and root.right is not None:
+                return is_full_helper(root.left) and is_full_helper(root.right)
+
+            return False
+
+        return is_full_helper(self.root)
