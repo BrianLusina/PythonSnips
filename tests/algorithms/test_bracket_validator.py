@@ -20,6 +20,9 @@ class BracketsTestCase(unittest.TestCase):
     def test4(self):
         self.assertEqual(False, check_brackets_1("())("))
 
+    def test_5(self):
+        self.assertEqual(check_brackets_1("(()((((()("), False)
+
     def test_input_empty(self):
         self.assertEqual(check_brackets_1(""), True)
 
@@ -100,6 +103,9 @@ class BracketsTestCase(unittest.TestCase):
 
     def test_nested_ensemble_3(self):
         self.assertEqual(check_brackets_3("{[]([()])}"), True)
+
+    def test_nested_ensemble_4(self):
+        self.assertEqual(check_brackets_3("(()((((()("), False)
 
 
 if __name__ == "__main__":

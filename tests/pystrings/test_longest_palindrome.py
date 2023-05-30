@@ -1,6 +1,6 @@
 import unittest
 
-from pystrings.palindrome.longest_palindrome import longest_palindrome_one, longest_palindrome_two
+from puzzles.palindrome import longest_palindrome_one, longest_palindrome_two
 
 
 class LongestPalindromeV1TestCases(unittest.TestCase):

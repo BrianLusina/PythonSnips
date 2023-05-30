@@ -1,6 +1,6 @@
 import unittest
 
-from pymath.largest_palindrome_product import find_largest_palindrome_product
+from . import find_largest_palindrome_product
 
 
 class LargestPalindromeProductTestCase(unittest.TestCase):

@@ -7,9 +7,9 @@ corresponding closing parenthesis.
 Example: if the example string above is input with the number 10 (position of the first parenthesis), the output should
 be 79 (position of the last parenthesis).
 
-Gotchas We can do this in O(n)O(n) time.
+Gotchas We can do this in O(n) time.
 
-We can do this in O(1)O(1) additional space.
+We can do this in O(1) additional space.
 
 Breakdown How would you solve this problem by hand with an example input?
 
@@ -38,12 +38,12 @@ open_nested_parens = 0 position = opening_paren_index + 1
 
     raise Exception("No closing parenthesis :(")
 
-Complexity O(n)O(n) time, where nn is the number of chars in the string. O(1)O(1) space.
+Complexity O(n) time, where nn is the number of chars in the string. O(1)O(1) space.
 
-The while loop keeps our space cost at O(1)O(1). It might be more Pythonic to use:
+The while loop keeps our space cost at O(1). It might be more Pythonic to use:
 
 for char in sentence[position:]:
-Python but then our space cost would be O(n)O(n), because in the worst case position would be 0 and we'd take a slice of
+Python but then our space cost would be O(n), because in the worst case position would be 0 and we'd take a slice of
 the entire input.
 
 What We Learned The trick to many "parsing" questions like this is using a stack to track which brackets/phrases/etc
@@ -54,6 +54,6 @@ So next time you get a parsing question, one of your first thoughts should be "u
 In this problem we can realize our stack would only hold '(' characters. So instead of storing each of those characters
 in a stack, we can store the number of items our stack would be holding.
 
-That gets us from O(n)O(n) space to O(1)O(1) space.
+That gets us from O(n) space to O(1) space.
 
 It's pretty cool when you can replace a whole data structure with a single integer :)

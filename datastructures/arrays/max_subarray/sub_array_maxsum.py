@@ -5,7 +5,6 @@ except ImportError:
 from collections import defaultdict
 
 
-# TODO
 def find_sub_arr_maxsum(array):
     """
     Finds the sub array with the maximum value

@@ -56,3 +56,41 @@ Example 2:
 Input: s = "a"
 Output: 1
 Explanation: The longest palindrome that can be built is "a", whose length is 1.
+
+## Palindrome Index
+
+Given a string of lowercase letters in the range ascii[a-z], determine a character that can be removed to make the
+string a palindrome. There may be more than one solution, but any will do. For example, if your string is "bcbc", you
+can either remove 'b' at index or 'c' at index . If the word is already a palindrome or there is no solution, return -1.
+Otherwise, return the index of a character to remove.
+
+Sample Input:
+
+```plain
+aaab
+baa
+aaa
+```
+
+Sample Output:
+
+```plain
+3
+0
+-1
+```
+
+Explanation:
+
+```plain
+Explanation
+
+Query 1: "aaab"
+Removing 'b' at index  results in a palindrome, so we print  on a new line.
+
+Query 2: "baa"
+Removing 'b' at index  results in a palindrome, so we print  on a new line.
+
+Query 3: "aaa"
+This string is already a palindrome, so we print . Removing any one of the characters would result in a palindrome, but this test comes first.
+```

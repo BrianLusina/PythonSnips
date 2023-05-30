@@ -28,6 +28,18 @@ class MaxSubArrayTestCases(unittest.TestCase):
         actual = find_max_sub_array(nums)
         self.assertEqual(expected, actual)
 
+    def test_1_2_3_4_negative_10(self):
+        nums = [1, 2, 3, 4, -10]
+        expected = 10
+        actual = find_max_sub_array(nums)
+        self.assertEqual(expected, actual)
+
+    def test_neg2_1_neg3_4_neg1_2_1_neg5_4(self):
+        nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+        expected = 6
+        actual = find_max_sub_array(nums)
+        self.assertEqual(expected, actual)
+
 
 if __name__ == "__main__":
     unittest.main()

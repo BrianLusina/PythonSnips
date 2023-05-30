@@ -1,4 +1,19 @@
 from collections import Counter
+from . import is_palindrome
+
+
+def longest_palindrome(s):
+    s, final_str = s.lower(), ""
+    if s == "":
+        return 0
+    else:
+        for y, _ in enumerate(s):
+            for x, _ in enumerate(s):
+                tr = s[y: x + 1]
+                if is_palindrome(tr) and (len(tr) > len(final_str)):
+                    final_str = tr
+
+    return len(final_str)
 
 
 def longest_palindrome_one(s: str) -> int:
