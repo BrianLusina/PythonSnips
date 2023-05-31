@@ -3,8 +3,9 @@ import unittest
 from random import choice, randint
 from string import ascii_letters
 
-from . import is_palindrome, palindrome_pairs, smallest_palindrome, largest_palindrome
+from . import is_palindrome, smallest_palindrome, largest_palindrome
 from .longest_palindrome import longest_palindrome
+
 
 class LongestPalindromeTests(unittest.TestCase):
 
@@ -62,24 +63,6 @@ class IsPalindromeTests(unittest.TestCase):
             self.assertEqual(
                 is_palindrome(test_case), self.reference(test_case)
             )
-
-
-class PalindromePairsTests(unittest.TestCase):
-
-    def test_one(self):
-        self.assertEqual(palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]])
-
-    def test_two(self):
-        self.assertEqual(
-            palindrome_pairs(["dog", "cow", "tap", "god", "pat"]),
-            [[0, 3], [2, 4], [3, 0], [4, 2]],
-        )
-
-    def test_three(self):
-        self.assertEqual(
-            palindrome_pairs(["abcd", "dcba", "lls", "s", "sssll"]),
-            [[0, 1], [1, 0], [2, 4], [3, 2]],
-        )
 
 
 class SmallestPalindromeTests(unittest.TestCase):

@@ -17,7 +17,7 @@ the two words, i.e. words[i] + words[j] is a palindrome.
 
 Examples:
 
-```python
+```plain
 ["bat", "tab", "cat"]  # [[0, 1], [1, 0]]
 ["dog", "cow", "tap", "god", "pat"]  # [[0, 3], [2, 4], [3, 0], [4, 2]]
 ["abcd", "dcba", "lls", "s", "sssll"]  # [[0, 1], [1, 0], [2, 4], [3, 2]]

@@ -1,22 +1,8 @@
+from typing import List
+
+
 def is_palindrome(a):
     return str(a) == str(a)[::-1]
-
-
-def palindrome_pairs(word_list):
-    """
-    Loops through the word_list and checks if the current word is a palindrome of any of the preceding words
-    or if the preceding words are a palindrome of the current
-    :param word_list: list of words to evaluate for palindrome pairs
-    :return: list of lists with each list containing the word indices which form a palindrome
-    """
-    words = [str(word) for word in word_list]
-
-    return [
-        [i, j]
-        for i, word_i in enumerate(words)
-        for j, word_j in enumerate(words)
-        if i != j and is_palindrome(word_i + word_j)
-    ]
 
 
 def smallest_palindrome(max_factor, min_factor=0):
