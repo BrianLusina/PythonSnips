@@ -187,3 +187,25 @@ class BinaryTree(Tree):
             return False
 
         return is_full_helper(self.root)
+
+    def is_complete(self) -> bool:
+        """
+        Checks if a binary tree is a complete binary tree
+        :return: true if is a complete binary tree, false otherwise
+        """
+        if self.root is None:
+            return True
+
+        node_count = len(self)
+
+        def is_complete_helper(root, idx: int) -> bool:
+            if root is None:
+                return True
+
+            if idx >= node_count:
+                return False
+
+            return is_complete_helper(root.left, 2 * idx + 1) and is_complete_helper(root.right, 2 * index + 2)
+
+        index = 0
+        return is_complete_helper(self.root, index)
