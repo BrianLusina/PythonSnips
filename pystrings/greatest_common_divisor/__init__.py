@@ -1,3 +1,6 @@
+from math import gcd
+
+
 def gcd_of_strings_brute_force(str1: str, str2: str) -> str:
     len_1, len_2 = len(str1), len(str2)
 
@@ -17,5 +20,8 @@ def gcd_of_strings_brute_force(str1: str, str2: str) -> str:
     return ""
 
 
-def gcd_of_strings_(str1: str, str2: str) -> str:
-    pass
+def gcd_of_strings_gcd(str1: str, str2: str) -> str:
+    if str1 + str2 != str2 + str1:
+        return ""
+    max_length = gcd(len(str1), len(str2))
+    return str1[:max_length]
