@@ -1,7 +1,13 @@
 from collections import defaultdict
-from typing import Any, Union
+from typing import Any, Union, Dict
 
 from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
+
+
+class LfuCacheNode(DoubleNode):
+    def __init__(self, data):
+        super().__init__(data)
+        self.frequency = 1
 
 
 class LFUCache:
@@ -23,10 +29,10 @@ class LFUCache:
         self.capacity = capacity
         self._current_size = 0
         self._lookup = dict()
-        self._frequency = defaultdict(DoublyLinkedList)
+        self._frequency: Dict[int, DoublyLinkedList] = defaultdict(DoublyLinkedList)
         self._minimum_frequency = 0
 
-    def __update(self, node: DoubleNode):
+    def __update(self, node: LfuCacheNode):
         """
         Helper function used in 2 cases:
             1. When get(key) is called
@@ -46,7 +52,7 @@ class LFUCache:
             Time Complexity: O(1) time
 
         @param node: Node to update in the Cache
-        @type node DoubleNode
+        @type node LfuCacheNode
         """
         frequency = node.frequency
 

@@ -8,6 +8,3 @@ class SingleNode(Node):
 
     def __init__(self, value, next_=None):
         super().__init__(value, next_)
-        self.data = value
-        self.next = next_
-

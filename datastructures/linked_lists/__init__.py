@@ -216,7 +216,7 @@ class LinkedList(object):
             return None
 
     @abstractmethod
-    def pop(self) -> Union[Node, None]:
+    def pop(self) -> Optional[Node]:
         """
         Deletes the last node element from the LinkedList
         :return: Deleted node element

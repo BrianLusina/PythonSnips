@@ -18,13 +18,13 @@ class LRUCache:
 
     @staticmethod
     def __delete_node(node):
-        node.prev.next = node.next
-        node.next.prev = node.prev
+        node.previous.next = node.next
+        node.next.previous = node.previous
 
     def __add_to_head(self, node):
         node.next = self.head.next
-        node.next.prev = node
-        node.prev = self.head
+        node.next.previous = node
+        node.previous = self.head
         self.head.next = node
 
     def get(self, key: int) -> int:

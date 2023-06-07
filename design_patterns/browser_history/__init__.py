@@ -23,7 +23,7 @@ class BrowserHistory:
 
         # check if there is a node after current node
         if not current.next:
-            node.prev = current
+            node.previous = current
             self.current_node = node
             current.next = node
             return
@@ -31,7 +31,7 @@ class BrowserHistory:
             # if there is, we clear all forward history
             current.next = node
             node.next = None
-            node.prev = self.current_node
+            node.previous = self.current_node
             self.current_node = node
 
     def back(self, steps: int) -> str:
@@ -43,8 +43,8 @@ class BrowserHistory:
         """
         current = self.current_node
         for _ in range(steps):
-            if current.prev:
-                current = current.prev
+            if current.previous:
+                current = current.previous
         self.current_node = current
         return current.data
 
