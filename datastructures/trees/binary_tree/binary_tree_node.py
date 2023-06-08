@@ -8,13 +8,14 @@ class BinaryTreeNode(TreeNode):
     Binary tree node class which will implement Binary tree
     """
 
-    def __init__(self, data: Any):
+    def __init__(self, data: Any, left: Optional['BinaryTreeNode'] = None, right: Optional['BinaryTreeNode'] = None):
         """
         Value here can be anything
         """
         super().__init__(data)
-        self.left: Optional[BinaryTreeNode] = None
-        self.right: Optional[BinaryTreeNode] = None
+        self.left: Optional[BinaryTreeNode] = left
+        self.right: Optional[BinaryTreeNode] = right
+        self.children = [left, right]
 
     def insert_node(self, data: Any) -> None:
         """

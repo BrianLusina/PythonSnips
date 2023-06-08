@@ -72,7 +72,7 @@ class Tree(ABC):
     @abstractmethod
     def get_depth(self) -> int:
         """
-        Gets the depth of the tree or hight of the tree
+        Gets the depth of the tree or height of the tree
         :returns height/depth of the tree
         """
         raise NotImplementedError("This method has not been implemented")

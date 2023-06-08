@@ -22,7 +22,12 @@ class BinaryTree(Tree):
         pass
 
     def get_depth(self) -> int:
-        pass
+        depth = 0
+        node = self.root
+        while node:
+            depth += 1
+            node = node.left
+        return depth
 
     def insert_node(self, value) -> TreeNode:
         pass
@@ -209,3 +214,30 @@ class BinaryTree(Tree):
 
         index = 0
         return is_complete_helper(self.root, index)
+
+    def is_perfect(self) -> bool:
+        """
+        Checks if a binary tree is perfect
+        :return: true if tree is perfect, false otherwise
+        """
+        if self.root is None:
+            return False
+
+        if self.root.left is None and self.root.right is None:
+            return True
+
+        depth = self.get_depth()
+
+        def is_perfect_helper(root: BinaryTreeNode, level: int = 0) -> bool:
+            if root is None:
+                return True
+
+            if root.left is None and root.right is None:
+                return depth == level + 1
+
+            if root.left is None and root.right is None:
+                return False
+
+            return is_perfect_helper(root.left, level + 1) and is_perfect_helper(root.right, level + 1)
+
+        return is_perfect_helper(self.root, 0)
