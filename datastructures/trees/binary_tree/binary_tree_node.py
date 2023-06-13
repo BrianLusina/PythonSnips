@@ -15,7 +15,7 @@ class BinaryTreeNode(TreeNode):
         super().__init__(data)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
-        self.children = [left, right]
+        self.children = [self.left, self.right]
 
     def insert_node(self, data: Any) -> None:
         """
