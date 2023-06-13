@@ -98,3 +98,12 @@ class Tree(ABC):
     @abstractmethod
     def pre_order_traversal(self) -> List[Any]:
         raise NotImplementedError("This method has not been implemented")
+
+    def is_balanced(self) -> bool:
+        """
+        Checks if this tree is balanced.
+        A balanced tree is a tree where every node has 0 or more n children for n-ary trees or for binary trees, where
+        the heights of its left and right subtrees differ by at most 1 or 0 and both subtrees are also balanced.
+        @return: True if the tree is balanced, false otherwise
+        """
+        raise NotImplementedError("This method has not yet been implemented")

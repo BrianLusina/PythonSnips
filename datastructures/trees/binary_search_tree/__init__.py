@@ -506,14 +506,16 @@ class BinarySearchTree(Tree):
 
         return self.root
 
-    def is_balanced(self, node: BinaryTreeNode) -> bool:
+    def is_balanced(self) -> bool:
         """
         Checks if a binary tree is balanced
-        :param tree_root: The tree root or a BinaryTreeNode
         :return: True/False, if a binary tree is balanced
         :rtype: bool
         """
-        tree_root = node or self.root
+        if self.root is None:
+            return True
+
+        tree_root = self.root
 
         # short circuit as soon as we find more than 2
         depths = []

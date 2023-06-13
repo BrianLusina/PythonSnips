@@ -142,3 +142,13 @@ class BinaryTreeNode(TreeNode):
             new_node.right = self.right
             self.right = new_node
         return self.right
+
+    def __len__(self) -> int:
+        """
+        Returns the length of this node. Length of this node is the node itself and it's children. If it has only
+        a left node, then the length is 2, similar case for only having a right node
+        """
+        if self.left and self.right:
+            return 3
+        if (self.left and not self.right) or (self.right and not self.left):
+            return 2

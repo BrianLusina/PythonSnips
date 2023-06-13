@@ -241,3 +241,28 @@ class BinaryTree(Tree):
             return is_perfect_helper(root.left, level + 1) and is_perfect_helper(root.right, level + 1)
 
         return is_perfect_helper(self.root, 0)
+
+    def is_balanced(self) -> bool:
+        """
+        Checks if a binary is balanced
+        @return:
+        """
+        if self.root is None:
+            return True
+
+        def is_height_balanced(node: BinaryTreeNode) -> bool:
+            left_height = 0
+            right_height = 0
+
+            if node is None:
+                return True
+
+            l = is_height_balanced(node.left)
+            r = is_height_balanced(node.right)
+
+            if abs(left_height - right_height) <= 1:
+                return l and r
+
+            return False
+
+        return is_height_balanced(self.root)
