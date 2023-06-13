@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.arrays.product_of_array_except_self import product_except_self
+from . import product_except_self
 
 
 class ProductOfArrayExceptSelfTestCases(unittest.TestCase):
