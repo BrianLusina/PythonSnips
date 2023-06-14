@@ -3,7 +3,7 @@ from datastructures.trees.binary.node import BinaryTreeNode
 
 from datastructures.queues.fifo import FifoQueue
 from datastructures.stacks import Stack
-from datastructures.trees import Tree
+from datastructures.trees import Tree, T
 
 
 class BinarySearchTree(Tree):
@@ -11,6 +11,29 @@ class BinarySearchTree(Tree):
     def __init__(self, root: Optional[BinaryTreeNode] = None):
         self.root = root
         self.stack = Stack()
+
+    def insert_node(self, data: T) -> BinaryTreeNode:
+        """
+        Inserts a node in a BST given an element
+        If there is no root, then create a new root node with the data and return it
+
+        If there is a root, then check the data against the root node's data and determine if it should go left or right
+        If the data is greater than the root node's data, then go right, if the data is less than the root node's data,
+        then go left. Repeat this operation, until we can insert the node in the right place.
+        """
+        if not self.root:
+            return BinaryTreeNode(data)
+
+        def insert_helper(value: T, node: BinaryTreeNode) -> BinaryTreeNode:
+            if not node:
+                return BinaryTreeNode(data)
+            if value < node.data:
+                node.left = insert_helper(value, node.left)
+            else:
+                node.right = insert_helper(value, node.right)
+            return node
+
+        return insert_helper(data, self.root)
 
     @property
     def height(self) -> int:
@@ -83,57 +106,6 @@ class BinarySearchTree(Tree):
         while root:
             self.stack.push(root)
             root = root.left
-
-    def insert_node(self, data: int) -> BinaryTreeNode:
-        """
-        Inserts a node in a BST given a data
-        If there is not root, then create a new root node with the data and return.
-
-        If there is a root, then check the data against the root node's data and determine if it should go left or right
-        If the data is greater than the root node's data, then go right, if the data is less than the root node's data,
-        then go left. Repeat this operation, until we can insert the node in the right place.
-
-        Alternatively, this tree can be re-arranged to form a new tree.
-
-        This has used an iterative approach. However, a recursive approach can also be adopted.
-
-        if not self.root:
-            return BinaryTreeNode(data)
-
-        if data < self.root.data and self.root.left:
-            self.insert_node(data, self.root.left)
-
-        elif data <= self.root.data:
-            self.root.left = BinaryTreeNode(data)
-
-        elif data > self.root.data and self.root.right:
-            self.insert_node(data, self.root.right)
-        else:
-            self.root.right = BinaryTreeNode(data)
-
-        return self.root
-        """
-        if not self.root:
-            return BinaryTreeNode(data)
-
-        parent, dummy = self.root, self.root
-
-        while self.root:
-            parent = self.root
-
-            if data < self.root.data:
-                self.root = self.root.left
-            else:
-                self.root = self.root.right
-
-        if not parent:
-            parent = BinaryTreeNode(data)
-        elif data < parent.data:
-            parent.left = BinaryTreeNode(data)
-        else:
-            parent.right = BinaryTreeNode(data)
-
-        return dummy
 
     def find_largest(self, node: BinaryTreeNode) -> BinaryTreeNode:
         """
