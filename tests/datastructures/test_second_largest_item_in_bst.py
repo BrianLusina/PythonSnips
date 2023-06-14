@@ -1,6 +1,6 @@
 import unittest
 
-# from datastructures.trees.binary_search_tree import find_second_largest
+# from datastructures.trees.search_tree import find_second_largest
 
 
 class Test(unittest.TestCase):

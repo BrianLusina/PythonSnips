@@ -1,3 +1,7 @@
+# Binary Search Tree
+
+Contains binary search tree implementation in Python
+
 Write a function to find the 2nd largest element in a binary search tree ↴ A binary search tree is a binary tree in
 which, for each node:
 

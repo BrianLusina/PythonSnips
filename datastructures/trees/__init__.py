@@ -1,23 +1,25 @@
+from typing import List, Generic, TypeVar
 from abc import ABC, abstractmethod
-from typing import Any, List
+
+T = TypeVar("T")
 
 
-class TreeNode(object):
+class TreeNode(Generic[T]):
     """
     Tree node class which will implement Tree Node.
     Note that this could be any type of tree node. Not all tree nodes have only left or right children, they could have
     more than one child. In this case `children` property is a list of all the immediate descendants of the node.
     """
 
-    def __init__(self, value):
+    def __init__(self, value: T):
         """
         Value here can be anything
         """
-        self.data: Any = value
+        self.data = value
         self.children: List[TreeNode] = []
 
 
-class Tree(ABC):
+class Tree(ABC, Generic[T]):
     """
     Tree abstract base class that defines common methods & properties of a typical Tree data structure
     """
@@ -92,11 +94,11 @@ class Tree(ABC):
         raise NotImplementedError("This method has not been implemented")
 
     @abstractmethod
-    def level_order_traversal(self) -> List[Any]:
+    def level_order_traversal(self) -> List[T]:
         raise NotImplementedError("This method has not been implemented")
 
     @abstractmethod
-    def pre_order_traversal(self) -> List[Any]:
+    def pre_order_traversal(self) -> List[T]:
         raise NotImplementedError("This method has not been implemented")
 
     def is_balanced(self) -> bool:

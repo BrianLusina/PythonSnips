@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
-from ..binary_tree.binary_tree_node import BinaryTreeNode
+from datastructures.trees.binary.tree import BinaryTreeNode
 
 
 class HeapNode(BinaryTreeNode):

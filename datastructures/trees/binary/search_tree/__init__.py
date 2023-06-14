@@ -1,14 +1,14 @@
 from typing import List, Any, Optional
-from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
+from datastructures.trees.binary.node import BinaryTreeNode
 
-from ...queues.fifo import FifoQueue
-from ...stacks import Stack
-from .. import Tree
+from datastructures.queues.fifo import FifoQueue
+from datastructures.stacks import Stack
+from datastructures.trees import Tree
 
 
 class BinarySearchTree(Tree):
 
-    def __init__(self, root: BinaryTreeNode = None):
+    def __init__(self, root: Optional[BinaryTreeNode] = None):
         self.root = root
         self.stack = Stack()
 

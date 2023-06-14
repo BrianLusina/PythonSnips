@@ -1,4 +1,4 @@
-from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
+from datastructures.trees.binary.node import BinaryTreeNode
 
 
 def decode_huffman_tree(root: BinaryTreeNode, s: str) -> str:

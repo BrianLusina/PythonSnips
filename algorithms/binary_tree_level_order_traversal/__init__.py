@@ -1,5 +1,5 @@
 from typing import List
-from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
+from datastructures.trees.binary.node import BinaryTreeNode
 
 
 class Solution:

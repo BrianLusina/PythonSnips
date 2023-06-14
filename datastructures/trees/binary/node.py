@@ -1,6 +1,6 @@
-from typing import Any, Optional
+from typing import Optional
 
-from .. import TreeNode
+from datastructures.trees import TreeNode, T
 
 
 class BinaryTreeNode(TreeNode):
@@ -8,7 +8,7 @@ class BinaryTreeNode(TreeNode):
     Binary tree node class which will implement Binary tree
     """
 
-    def __init__(self, data: Any, left: Optional['BinaryTreeNode'] = None, right: Optional['BinaryTreeNode'] = None):
+    def __init__(self, data: T, left: Optional['BinaryTreeNode'] = None, right: Optional['BinaryTreeNode'] = None):
         """
         Value here can be anything
         """
@@ -17,7 +17,7 @@ class BinaryTreeNode(TreeNode):
         self.right: Optional[BinaryTreeNode] = right
         self.children = [self.left, self.right]
 
-    def insert_node(self, data: Any) -> None:
+    def insert_node(self, data: T) -> None:
         """
         Inserts a node using a Binary Search approach, where every data insert will be inserted to either the left or
         right based on whether the data is greater than the root node. if the data is greater than the root node,
@@ -40,11 +40,11 @@ class BinaryTreeNode(TreeNode):
         else:
             self.right = BinaryTreeNode(data)
 
-    def delete_node(self, data: Any, parent) -> bool:
+    def delete_node(self, data: T, parent) -> bool:
         """
         Deletes a node from the tree if present and return result of deletion, True if delete was successful and
         False if the deletion was unsuccessful,
-        :param data data we want to delete from the tree
+        :param data we want to delete from the tree
         :param parent
         :rtype: bool True if the deletion was a success, false otherwise
         """
@@ -110,7 +110,7 @@ class BinaryTreeNode(TreeNode):
         else:
             return self.data
 
-    def insert_left(self, data: Any):
+    def insert_left(self, data: T) -> 'BinaryTreeNode':
         """
         Inserts a new data(node) to the left of the current node and return the newly created node
         :param data the data to insert into the new node
@@ -127,12 +127,12 @@ class BinaryTreeNode(TreeNode):
             self.left = new_node
         return self.left
 
-    def insert_right(self, data: Any):
+    def insert_right(self, data: T) -> 'BinaryTreeNode':
         """
         Inserts a data to the right of the current node. This will check if the current node has a right child already
         and insert this node as the new right node of the current node and move the previous node (if not None) to
         become the new right node of the newly created node. This will then return the newly inserted node data
-        :param data data used to create a new node
+        :param data used to create a new node
         :rtype: BinaryTreeNode
         """
         if self.right is None:

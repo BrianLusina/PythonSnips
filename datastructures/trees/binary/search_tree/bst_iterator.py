@@ -1,5 +1,5 @@
 from datastructures.stacks import Stack
-from datastructures.trees.binary_tree.binary_tree_node import BinaryTreeNode
+from datastructures.trees.binary.node import BinaryTreeNode
 
 
 class BinarySearchTreeIterator:

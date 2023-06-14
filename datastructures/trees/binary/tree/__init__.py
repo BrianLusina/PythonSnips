@@ -1,8 +1,8 @@
 from typing import Optional, List, Any
 
-from ...stacks import Stack
-from .. import Tree, TreeNode
-from .binary_tree_node import BinaryTreeNode
+from datastructures.stacks import Stack
+from datastructures.trees import Tree, TreeNode
+from datastructures.trees.binary.node import BinaryTreeNode
 
 
 class BinaryTree(Tree):
