@@ -2,7 +2,7 @@ import random
 from collections import Counter
 from typing import List
 
-from datastructures.trees.heaps.min_heap import MinHeap
+from datastructures.trees.heaps.binary.min_heap import MinHeap
 
 
 def top_k_frequent(nums: List[int], k: int) -> List[int]:

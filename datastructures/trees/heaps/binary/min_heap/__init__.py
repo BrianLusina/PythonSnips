@@ -1,7 +1,7 @@
 from heapq import heapify, heappop
 from typing import Any, List, Union
 
-from .. import Heap, HeapNode
+from datastructures.trees.heaps import Heap, HeapNode
 
 
 class MinHeap(Heap):
@@ -14,12 +14,6 @@ class MinHeap(Heap):
 
     def __len__(self):
         return len(self.heap)
-
-    def __getitem__(self, idx: int):
-        raise NotImplementedError("Not yet implemented")
-
-    def __setitem__(self, idx: int, value):
-        raise NotImplementedError("Not yet implemented")
 
     def __find_smaller_child(self, index: int) -> int:
         left_child_index = self.get_left_child_index(index)
@@ -103,9 +97,6 @@ class MinHeap(Heap):
         node = HeapNode(data, data.__name__)
         self.heap.append(node)
         self.__bubble_up(len(self.heap) - 1)
-
-    def insert_node(self, node: HeapNode):
-        pass
 
     def decrease_value_at(self, index, new_val):
         """
