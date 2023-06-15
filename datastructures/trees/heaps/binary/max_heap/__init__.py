@@ -7,6 +7,8 @@ from datastructures.trees.heaps import Heap, HeapNode
 class MaxHeap(Heap):
     def __init__(self, heap: List[HeapNode] = None):
         super().__init__()
+        self.heap_dict = {}
+        self.idx_of_element = {}
         if heap is None:
             heap = []
         self.heap = self.build_heap(heap)
@@ -110,6 +112,9 @@ class MaxHeap(Heap):
                 self.heap[self.get_parent_index(index)],
                 self.heap[index],
             )
+
+    def delete(self) -> Any:
+        return self.remove_min()
 
     def remove_min(self) -> Any:
         """

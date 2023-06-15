@@ -7,6 +7,8 @@ from datastructures.trees.heaps import Heap, HeapNode
 class MinHeap(Heap):
     def __init__(self, heap: List[HeapNode] = None):
         super().__init__()
+        self.heap_dict = {}
+        self.idx_of_element = {}
         if heap is None:
             heap = []
         self.heap = self.build_heap(heap)

@@ -23,10 +23,6 @@ class Heap(ABC):
     Heap abstract class that contains methods for all types of heaps
     """
 
-    def __init__(self):
-        self.heap_dict = {}
-        self.idx_of_element = {}
-
     @abstractmethod
     def insert_data(self, data: Any):
         """
@@ -63,7 +59,10 @@ class ArrayBasedHeap(Heap):
 
     def __init__(self):
         super().__init__()
-        self.__data: List[Any] = []
+        self.data: List[Any] = []
+
+    def __len__(self):
+        return len(self.data)
 
     @property
     def root_node(self):
@@ -71,9 +70,9 @@ class ArrayBasedHeap(Heap):
         Retrieves the root node of the Heap
         :return:
         """
-        if len(self.__data) == 0:
+        if len(self.data) == 0:
             raise Exception("Heap is empty")
-        return self.__data[0]
+        return self.data[0]
 
     @property
     def last_node(self):
@@ -81,9 +80,9 @@ class ArrayBasedHeap(Heap):
         Returns the last node of the heap
         :return:
         """
-        if len(self.__data) == 0:
+        if len(self.data) == 0:
             raise Exception("Heap is empty")
-        return self.__data[len(self.__data) - 1]
+        return self.data[len(self.data) - 1]
 
     def insert_data(self, data: Any):
         """
@@ -92,5 +91,9 @@ class ArrayBasedHeap(Heap):
         """
         raise NotImplementedError("not yet implemented")
 
-    def __len__(self):
-        return len(self.__data)
+    def delete(self) -> Any:
+        """
+        Deletes an element from the heap and performs operations to ensure the heap remains complete.
+        :return: deleted element to from the heap
+        """
+        raise NotImplementedError("not yet implemented")
