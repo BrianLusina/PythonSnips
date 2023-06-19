@@ -32,6 +32,9 @@ class MaxArrayBasedHeap(ArrayBasedHeap):
             new_node_index = self.get_parent_index(new_node_index)
 
     def delete(self) -> Any:
+        if len(self.data) == 0:
+            raise Exception("Heap is empty")
+
         # we only ever delete the root node from a heap, so we pop the last node from the array and make it the root node
         root_node = self.data[0]
         self.data[0] = self.data.pop()

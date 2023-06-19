@@ -1,12 +1,12 @@
 import unittest
 
-from .max_array_heap import MaxArrayBasedHeap
+from .min_array_heap import MinArrayBasedHeap
 
 
 class MaxArrayBasedHeapTestCaseOne(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.heap = MaxArrayBasedHeap()
+        self.heap = MinArrayBasedHeap()
 
     def test_insertion(self):
         """should insert nodes in the correct position in the heap"""
@@ -19,9 +19,9 @@ class MaxArrayBasedHeapTestCaseOne(unittest.TestCase):
         self.heap.insert_data(4)
         actual = self.heap.root_node
         actual_last_node = self.heap.last_node
-        expected = 9
-        expected_last_node = 2
-        self.assertEqual(expected, actual)
+        expected_root_node = 1
+        expected_last_node = 4
+        self.assertEqual(expected_root_node, actual)
         self.assertEqual(expected_last_node, actual_last_node)
 
 

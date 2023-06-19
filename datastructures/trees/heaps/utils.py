@@ -1,8 +1,9 @@
+from datastructures.trees.heaps import Heap
 from datastructures.trees.heaps.binary.max_heap import MaxHeap
 from datastructures.trees.heaps.binary.min_heap import MinHeap
 
 
-def min_heapify(heap: MaxHeap, idx: int) -> MinHeap:
+def min_heapify(heap: MaxHeap, idx: int) -> Heap:
     left = heap.get_left_child_index(idx)
     right = heap.get_right_child_index(idx)
     smallest = idx
@@ -24,7 +25,7 @@ def min_heapify(heap: MaxHeap, idx: int) -> MinHeap:
     return heap
 
 
-def convert_max_to_min(max_heap: MaxHeap) -> MinHeap:
+def convert_max_to_min(max_heap: MaxHeap) -> MaxHeap:
     """
     Converts a max heap into a min heap
     @param max_heap:
