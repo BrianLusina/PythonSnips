@@ -1,6 +1,6 @@
 import unittest
 
-from pystrings.issubsequence import is_subsequence, is_subsequence_v2
+from . import is_subsequence, is_subsequence_v2
 
 
 class IsSubsequenceTestCases(unittest.TestCase):
