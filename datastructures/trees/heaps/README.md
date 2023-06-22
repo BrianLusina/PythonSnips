@@ -12,3 +12,4 @@ A heap data structure is a complete binary tree that satisfies the *heap propert
 There are different types of heaps with different implementations:
 
 1. [Binary Heap](./binary)
+2. [Fibonacci Heap](./fibonacci)
