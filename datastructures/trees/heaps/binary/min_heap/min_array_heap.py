@@ -65,10 +65,25 @@ class MinArrayBasedHeap(ArrayBasedHeap):
         :param index: the index to check for
         :return: True if the condition is met, false otherwise
         """
-        return (self.data[self.get_left_child_index(index)] and self.get_left_child_index(index) < self.data[
-            index]) or (
-                self.data[self.get_right_child_index(index)] and self.data[self.get_right_child_index(index)] <
-                self.data[index])
+        left_child_index = self.get_left_child_index(index)
+        right_child_index = self.get_right_child_index(index)
+
+        left_child_exists = left_child_index < len(self.data)
+        right_child_exists = right_child_index < len(self.data)
+
+        if left_child_exists and right_child_exists:
+            left_child = self.data[left_child_index]
+            right_child = self.data[right_child_index]
+
+            return left_child < self.data[index] or right_child < self.data[index]
+        elif left_child_exists and not right_child_exists:
+            left_child = self.data[left_child_index]
+            return left_child < self.data[index]
+        elif right_child_exists and not left_child_exists:
+            right_child = self.data[right_child_index]
+            return right_child < self.data[index]
+        else:
+            return False
 
     def __calculate_smaller_child_index(self, index: int) -> int:
         """
