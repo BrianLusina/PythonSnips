@@ -1,5 +1,5 @@
 import unittest
-from pystrings.longest_substring_without_repeating_characters import length_of_longest_substring
+from . import length_of_longest_substring
 
 
 class LongestSubstringWithoutRepeatingCharactersTestCase(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from pystrings.longest_repeating_char_replacement import character_replacement
+from . import character_replacement
 
 
 class LongestRepeatingCharacterReplacementTestCase(unittest.TestCase):

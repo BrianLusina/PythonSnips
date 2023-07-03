@@ -1,6 +1,6 @@
 import unittest
 
-from pystrings.longest_substring_with_k_repeating_chars import longest_substring
+from . import longest_substring
 
 
 class LongestSubstringWithKRepeatingCharsTestCase(unittest.TestCase):
