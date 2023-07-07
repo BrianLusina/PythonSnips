@@ -13,7 +13,7 @@ class LargestAltitudeTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_two(self):
-        """should return 1 from gain=[-4,-3,-2,-1,4,3,2]"""
+        """should return 0 from gain=[-4,-3,-2,-1,4,3,2]"""
         gain = [-4, -3, -2, -1, 4, 3, 2]
         expected = 0
         actual = largest_altitude(gain)
