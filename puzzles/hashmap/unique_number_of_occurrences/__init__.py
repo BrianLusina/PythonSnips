@@ -1,15 +1,13 @@
-from typing import List
+from collections import defaultdict
+from typing import List, DefaultDict
 
 
 def unique_occurrences(arr: List[int]) -> bool:
-    hash_table = dict()
-    hash_set = set()
+    frequency_map: DefaultDict[int, int] = defaultdict(int)
 
     for num in arr:
-        if num in hash_table:
-            hash_table[num] += 1
-        else:
-            hash_table[num] = 1
-        hash_set.add(hash_table[num])
+        frequency_map[num] += 1
 
-    return len(hash_set) == len(hash_table)
+    frequency_set = set(frequency_map.values())
+
+    return len(frequency_set) == len(frequency_map)
