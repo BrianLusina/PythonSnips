@@ -1,3 +1,5 @@
+# Determine if 2 strings are close
+
 Two strings are considered close if you can attain one from the other using the following operations:
 
 Operation 1: Swap any two existing characters. For example, abcde -> aecdb Operation 2: Transform every occurrence of
@@ -5,10 +7,9 @@ one existing character into another existing character, and do the same with the
 bbcbaa (all a's turn into b's, and all b's turn into a's)
 You can use the operations on either string as many times as necessary.
 
-# Determine if 2 strings are close
-
 Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 
+```plain
 Example 1:
 
 Input: word1 = "abc", word2 = "bca"
@@ -28,3 +29,10 @@ Example 4:
 
 Input: word1 = "cabbba", word2 = "aabbss"
 Output: false Explanation: It is impossible to attain word2 from word1, or vice versa, in any amount of operations.
+```
+
+## Related Topics
+
+- Hash Table
+- String
+- Sorting

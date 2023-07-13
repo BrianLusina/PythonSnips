@@ -42,7 +42,7 @@ Return true if the size of hash set freqSet is equal to the size of hash map fre
 Here, `N` is the size of array arr.
 
 - Time complexity: `O(N)`.
-
+r
   We iterate over the array arr to find the frequency and store them in the hash map freq. Then, we insert these
   frequencies in the hash set freqSet, which has the insertion complexity of O(1). Hence, the total time
   complexity is equal to O(N).

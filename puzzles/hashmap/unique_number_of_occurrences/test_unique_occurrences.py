@@ -35,7 +35,7 @@ class UniqueOccurrencesTestCase(unittest.TestCase):
         self.assertTrue(actual)
 
     def test_six(self):
-        """should return true for arr = [[-1,-1,-1,-3,-1,-1]]"""
+        """should return true for arr = [-1,-1,-1,-3,-1,-1]"""
         arr = [-1, -1, -1, -3, -1, -1]
         actual = unique_occurrences(arr)
         self.assertTrue(actual)
