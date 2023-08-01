@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.recent_counter import RecentCounter
+from . import RecentCounter
 
 
 class RecentCounterTest(unittest.TestCase):
