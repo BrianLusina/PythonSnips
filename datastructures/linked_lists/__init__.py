@@ -248,7 +248,7 @@ class LinkedList(object):
     @abstractmethod
     def delete_node_at_position(self, position: int):
         """
-        Deletes a node from the given provided position
+        Deletes a node from the given provided position.
         :param position: Position of node to delete
         """
         if not 0 <= position <= len(self) - 1:
@@ -277,6 +277,13 @@ class LinkedList(object):
         same approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list,
         we use the data attribute of a node.
         :param data: Data of Node element to be deleted
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def delete_middle_node(self) -> Optional[Node]:
+        """
+        Deletes the middle node in the linked list and returns the deleted node
         """
         raise NotImplementedError("Not yet implemented")
 

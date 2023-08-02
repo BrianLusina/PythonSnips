@@ -231,5 +231,75 @@ class SinglyLinkedListKthToLastNodeTestCases(unittest.TestCase):
         self.assertEqual(expected_a, actual)
 
 
+class SinglyLinkedDeleteMiddleNodeTestCases(unittest.TestCase):
+    """Delete Middle node test cases"""
+
+    def test_1(self):
+        """should return middle node for linked list of [1,3,4,7,1,2,6]"""
+        data = [1, 3, 4, 7, 1, 2, 6]
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        expected_middle_node = SingleNode(7)
+        actual = linked_list.delete_middle_node()
+        self.assertEqual(expected_middle_node, actual)
+
+    def test_2(self):
+        """should return middle node for linked list of [1,2,3,4]"""
+        data = [1, 2, 3, 4]
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        expected_middle_node = SingleNode(3)
+        actual = linked_list.delete_middle_node()
+        self.assertEqual(expected_middle_node, actual)
+
+    def test_3(self):
+        """should return middle node for linked list of [2,1]"""
+        data = [2, 1]
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        expected_middle_node = SingleNode(1)
+        actual = linked_list.delete_middle_node()
+        self.assertEqual(expected_middle_node, actual)
+
+    def test_1_2_pointers(self):
+        """should return middle node for linked list of [1,3,4,7,1,2,6]"""
+        data = [1, 3, 4, 7, 1, 2, 6]
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        expected_middle_node = SingleNode(7)
+        actual = linked_list.delete_middle_node_2_pointers()
+        self.assertEqual(expected_middle_node, actual)
+
+    def test_2_2_pointers(self):
+        """should return middle node for linked list of [1,2,3,4]"""
+        data = [1, 2, 3, 4]
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        expected_middle_node = SingleNode(3)
+        actual = linked_list.delete_middle_node_2_pointers()
+        self.assertEqual(expected_middle_node, actual)
+
+    def test_3_2_pointers(self):
+        """should return middle node for linked list of [2,1]"""
+        data = [2, 1]
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        expected_middle_node = SingleNode(1)
+        actual = linked_list.delete_middle_node_2_pointers()
+        self.assertEqual(expected_middle_node, actual)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -21,6 +21,19 @@ class SinglyLinkedList(LinkedList):
     def __repr__(self):
         return "->".join([str(item) for item in self])
 
+    def __len__(self):
+        """Counts the number of nodes in this singly linked list. This takes O(n) time, where n is the number of nodes
+        in the linked list"""
+        count = 0
+
+        current = self.head
+
+        while current:
+            count += 1
+            current = current.next
+
+        return count
+
     def append(self, data: Any):
         """
         Add a node to the Linked List
@@ -122,11 +135,11 @@ class SinglyLinkedList(LinkedList):
             current.next = current.next.next
             return self.head
 
-    def delete_node(self, node: SingleNode):
+    def delete_node(self, single_node: SingleNode):
         current_node = self.head
         previous_node = None
         while current_node is not None:
-            if current_node.data == node.data:
+            if current_node.data == single_node.data:
                 # if this is the first node (head)
                 if previous_node is not None:
                     previous_node.next = current_node.next
@@ -175,6 +188,64 @@ class SinglyLinkedList(LinkedList):
                 current = current.next
 
         return dummy_head.next
+
+    def delete_middle_node(self) -> Optional[SingleNode]:
+        """
+        Deletes the middle node of a linked list and returns it.
+        Note that this uses 2 passes, the first pass is to get the node count which results in a Time complexity of O(n)
+        where n is the number of nodes in the linked list. The first iteration to get the node count traverses the whole
+        linked list, the second pass, traverses half of the linked list to get to the middle node.
+
+        No extra space is used, therefore the space complexity is O(1)
+        @return: middle node
+        """
+        if not self.head or not self.head.next:
+            return None
+
+        # Node count here is obtained which results in O(n)
+        node_count = len(self)
+        middle_index = node_count // 2
+
+        current = self.head
+
+        # traversing half the linked list to get to the predecessor of the middle node(i.e. the node before the middle node)
+        for _ in range(middle_index - 1):
+            current = current.next
+
+        # we have the middle node, now we assign it and return it later
+        middle_node = current.next
+
+        # deleting is handled by moving the next pointer of the predecessor to the next pointer of the middle node
+        current.next = current.next.next
+
+        return middle_node
+
+    def delete_middle_node_2_pointers(self) -> Optional[SingleNode]:
+        """
+        Deletes the middle node of a linked list and returns it, this is a variation of delete_middle_node which uses 2
+        pointers which avoids making 2 passes like the first approach
+
+        Time complexity of O(n) where n is the number of nodes in the linked list.
+
+        No extra space is used, therefore the space complexity is O(1)
+        @return: middle node
+        """
+        if not self.head or not self.head.next:
+            return None
+
+        slow, fast = self.head, self.head.next.next
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        # we have the middle node, now we assign it and return it later
+        middle_node = slow.next
+
+        # deleting is handled by moving the next pointer of the predecessor to the next pointer of the middle node
+        slow.next = slow.next.next
+
+        return middle_node
 
     def shift(self):
         """
