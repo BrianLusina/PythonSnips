@@ -731,3 +731,21 @@ class SinglyLinkedList(LinkedList):
         left node is now the kth to last node
         """
         return left_node
+
+    def odd_even_list(self) -> Optional[SingleNode]:
+        if not self.head or not self.head.next:
+            return None
+
+        odd = self.head
+        even = self.head.next
+        even_head = even
+
+        while even and even.next:
+            odd.next = even.next
+            odd = odd.next
+            even.next = odd.next
+            even = even.next
+
+        odd.next = even_head
+
+        return self.head

@@ -33,7 +33,7 @@ class LinkedList(object):
     """
 
     __metaclass__ = ABCMeta
-    head = None
+    head: Optional[Node] = None
 
     def __init__(self):
         self.head = None
@@ -602,3 +602,11 @@ class LinkedList(object):
             fast_pointer = fast_pointer.next.next
 
         return slow_pointer
+
+    @abstractmethod
+    def odd_even_list(self) -> Optional[Node]:
+        """
+        Returns the odd even list where the even indexed nodes are grouped first and then the even indexed nodes
+        @return: New head node
+        """
+        raise NotImplementedError("not yet implemented")

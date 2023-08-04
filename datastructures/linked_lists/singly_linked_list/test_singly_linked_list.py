@@ -1,3 +1,4 @@
+from typing import List
 import unittest
 
 from . import SinglyLinkedList, SingleNode
@@ -299,6 +300,40 @@ class SinglyLinkedDeleteMiddleNodeTestCases(unittest.TestCase):
         expected_middle_node = SingleNode(1)
         actual = linked_list.delete_middle_node_2_pointers()
         self.assertEqual(expected_middle_node, actual)
+
+
+class SinglyLinkedOddEvenListTestCases(unittest.TestCase):
+    """OddEventList test cases"""
+
+    def run_test(self, data: List[int], expected: List[int]):
+        linked_list = SinglyLinkedList()
+        for d in data:
+            linked_list.append(d)
+
+        actual_head = linked_list.odd_even_list()
+        actual_nodes = []
+
+        while actual_head:
+            actual_nodes.append(actual_head.data)
+            actual_head = actual_head.next
+
+        zipped = zip(expected, actual_nodes)
+
+        for (expected, actual_node) in zipped:
+            self.assertEqual(expected, actual_node)
+
+    def test_1(self):
+        """should return [1,3,5,2,4] for linked list of [1,2,3,4,5]"""
+        data = [1, 2, 3, 4, 5]
+        expected_list = [1, 3, 5, 2, 4]
+
+        self.run_test(data, expected_list)
+
+    def test_2(self):
+        """should return [2,3,6,7,1,5,4] for linked list of [2,1,3,5,6,4,7]"""
+        data = [2, 1, 3, 5, 6, 4, 7]
+        expected_list = [2, 3, 6, 7, 1, 5, 4]
+        self.run_test(data, expected_list)
 
 
 if __name__ == "__main__":
