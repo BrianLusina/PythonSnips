@@ -610,3 +610,14 @@ class LinkedList(object):
         @return: New head node
         """
         raise NotImplementedError("not yet implemented")
+
+    @abstractmethod
+    def maximum_pair_sum(self) -> int:
+        """
+        Returns the maximum twin sum of a node and its twin, where a node's twin is at the index (n-1-i) where n is the number
+        of nodes in the linked list.
+        For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only
+        nodes with twins for n = 4.
+        @return: maximum twin sum of a node and it's twin
+        """
+        raise NotImplementedError("not yet implemented")

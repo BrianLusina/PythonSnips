@@ -385,3 +385,142 @@ All we need is the four pointers.
 - Linked List
 
 ---
+
+## Maximum Twin Sum of a Linked List
+
+In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (
+n-1-i)th node, if 0 <= i <= (n / 2) - 1.
+
+For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes
+with twins for n = 4.
+The twin sum is defined as the sum of a node and its twin.
+
+Given the head of a linked list with even length, return the maximum twin sum of the linked list.
+
+```plain
+Example 1:
+
+Input: head = [5,4,2,1]
+Output: 6
+Explanation:
+Nodes 0 and 1 are the twins of nodes 3 and 2, respectively. All have twin sum = 6.
+There are no other nodes with twins in the linked list.
+Thus, the maximum twin sum of the linked list is 6.
+
+Example 2:
+Input: head = [4,2,2,3]
+Output: 7
+Explanation:
+The nodes with twins present in this linked list are:
+- Node 0 is the twin of node 3 having a twin sum of 4 + 3 = 7.
+- Node 1 is the twin of node 2 having a twin sum of 2 + 2 = 4.
+Thus, the maximum twin sum of the linked list is max(7, 4) = 7.
+
+Example 3:
+Input: head = [1,100000]
+Output: 100001
+Explanation:
+There is only one node with a twin in the linked list having twin sum of 1 + 100000 = 100001.
+```
+
+### Solutions
+
+#### Approach 1: Using List Of Integers
+
+We can see that the `ith` node from the start is the twin of the `ith`node from the end. The first node is the twin of
+the last node, the second node is the twin of the second last node, and so on. Because we are guaranteed an even number
+of nodes in the linked list, each node in the first half has a twin in the second half.
+
+An intuitive solution is to iterate over the entire linked list and push the value of each node into a list of integers.
+The list of integers is then iterated over using two pointers, i(left) and j(right). The pointer i points to the
+beginning of the list, while j points to the end.
+
+To get the twin sum of the pair under consideration, we add the values indicated by the pointers. To get the next pair
+of twins, we increment i and decrement j and try to update the answer wherever we can with the twin sum. We repeat this
+process until we have covered all of the twin pairs, i.e., until i >= j.
+
+##### Algorithm
+
+1. Create a ListNode pointer current. Initialize it to head.
+2. Create an empty list of integers values to store the node values in the given linked list.
+3. Iterate while current is not null:
+    - Push current.val into values.
+    - Update current to current.next.
+4. Create two integer variables i = 0 and j = values.size() - 1 that will help us to get all the twin sums.
+5. Create an answer variable maximumSum to keep track of the maximum sum of a node and its twin. Initialize it to 0.
+6. While i < j:
+    - Update maximumSum if the current twin sum is greater than the previous one, i.e., maximumSum = max(maximumSum,
+      values[i] + values[j]).
+    - Increment i by 1.
+    - Decrement j by 1.
+
+7. Return maximumSum.
+
+> This is the default algorithm implemented in [SinglyLinkedList](./__init__.py) in the `maximum_pair_sum` method
+
+##### Complexity Analysis
+
+Here, `n` is the number of nodes in the linked list.
+
+1. `Time complexity: O(n)`
+
+    - Iterating over the entire linked list and pushing all the node values in values takes `O(n)` time.
+    - We iterate over the first half of the linked list to find the maximum twin sum, which also takes `O(n)` time.
+
+2. `Space complexity: O(n)`
+
+    - The values list takes `O(n)` space as we push `n` elements into it.
+
+#### Approach 2: Using Stack
+
+As you may have guessed, we require a method to obtain the values of the nodes in the second half of the linked list in
+reverse order. Getting the values of the nodes is simple. We can do so by using head, which points to the first node in
+the list and then using next we can get all the next nodes,
+
+We can use a stack to get the values of the second half nodes in reverse order. We iterate over the linked list, pushing
+all of the node values into the stack.
+
+To compute the twin sums, we iterate from the beginning of the list with head and get the values of the nodes from the
+end using the stack. We find the first half nodes using next pointers and pop from the top of the stack to get the
+second half nodes.
+
+##### Algorithm
+
+1. Create a ListNode pointer current. Initialize it equal to head.
+2. Initialize an integer stack st to store the node values in the given linked list.
+3. Iterate while current is not null:
+    - Push `current.val` into `stack`.
+    - Update `current` to `current.next`.
+4. Update current to head to iterate the list again from the start.
+5. To begin counting the number of twin pairs, create two integers size = st.size() and count. To cover all the twin
+   pairs, we start counting from 1 and go until st.size() / 2.
+6. Create an answer variable maximumSum to keep track of the maximum sum of a node and its twin. Initialize it to 0.
+7. While count <= size/2:
+    - Update maximumSum if the current twin sum is greater than the previous one, i.e.,maximumSum = max(maximumSum,
+      current.val + st.top()).
+    - Update current to current.next.
+    - Pop the top element out of the stack.
+    - Increment count by 1.
+8. Return maximumSum.
+
+##### Complexity Analysis
+
+Here, `n` is the number of nodes in the linked list.
+
+1. `Time complexity: O(n)`
+
+    - Iterating over the linked list and pushing all the node values in `stack` takes `O(n)` time.
+    - We iterate over the first half of the linked list to find the maximum twin sum, which also takes O(n)
+      time.
+
+2. Space complexity: `O(n)`
+
+    - The stack takes `O(n)` space as we push `n` elements into it.
+
+### Related Topics
+
+- Linked List
+- Two Pointers
+- Stack
+
+---

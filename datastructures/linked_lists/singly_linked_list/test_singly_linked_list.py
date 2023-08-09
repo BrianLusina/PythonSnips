@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Callable
 import unittest
 
 from . import SinglyLinkedList, SingleNode
@@ -334,6 +334,88 @@ class SinglyLinkedOddEvenListTestCases(unittest.TestCase):
         data = [2, 1, 3, 5, 6, 4, 7]
         expected_list = [2, 3, 6, 7, 1, 5, 4]
         self.run_test(data, expected_list)
+
+
+class SinglyLinkedMaximumPairSumTestCases(unittest.TestCase):
+    """Maximum Pair Sum test cases"""
+
+    def test_1_using_list_of_integers(self):
+        """should return 6 from a list of [5,4,2,1]"""
+        data = [5, 4, 2, 1]
+        expected = 6
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum()
+
+        self.assertEqual(expected, actual)
+
+    def test_2_using_list_of_integers(self):
+        """should return 7 for linked list of [4,2,2,3]"""
+        data = [4, 2, 2, 3]
+        expected = 7
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum()
+
+        self.assertEqual(expected, actual)
+
+    def test_3_using_list_of_integers(self):
+        """should return 7 for linked list of [1,100000]"""
+        data = [1, 100000]
+        expected = 100001
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum()
+
+        self.assertEqual(expected, actual)
+
+    def test_1_using_stack(self):
+        """should return 6 from a list of [5,4,2,1]"""
+        data = [5, 4, 2, 1]
+        expected = 6
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum_stack()
+
+        self.assertEqual(expected, actual)
+
+    def test_2_using_stack(self):
+        """should return 7 for linked list of [4,2,2,3]"""
+        data = [4, 2, 2, 3]
+        expected = 7
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum_stack()
+
+        self.assertEqual(expected, actual)
+
+    def test_3_using_stack(self):
+        """should return 7 for linked list of [1,100000]"""
+        data = [1, 100000]
+        expected = 100001
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum_stack()
+
+        self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":

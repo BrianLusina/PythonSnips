@@ -749,3 +749,52 @@ class SinglyLinkedList(LinkedList):
         odd.next = even_head
 
         return self.head
+
+    def maximum_pair_sum(self) -> int:
+        if not self.head:
+            return 0
+
+        current = self.head
+        values = []
+
+        while current:
+            values.append(current.data)
+            current = current.next
+
+        maximum_sum = 0
+        left = 0
+        right = len(values) - 1
+
+        while left < right:
+            maximum_sum = max(maximum_sum, values[left] + values[right])
+            left += 1
+            right -= 1
+
+        return maximum_sum
+
+    def maximum_pair_sum_stack(self) -> int:
+        """
+        Performs the same operation as maximum_pair_sum but uses a stack instead of a list of integers to keep track
+        of twin nodes
+        """
+        if not self.head:
+            return 0
+
+        current = self.head
+        stack = []
+
+        while current:
+            stack.append(current.data)
+            current = current.next
+
+        current = self.head
+        size = len(stack)
+        count = 1
+        maximum_sum = 0
+
+        while count <= size / 2:
+            maximum_sum = max(maximum_sum, current.data + stack.pop())
+            current = current.next
+            count += 1
+
+        return maximum_sum
