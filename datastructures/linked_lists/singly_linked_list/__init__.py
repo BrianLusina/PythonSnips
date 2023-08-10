@@ -798,3 +798,27 @@ class SinglyLinkedList(LinkedList):
             count += 1
 
         return maximum_sum
+
+    def maximum_pair_sum_reverse_in_place(self) -> int:
+        """
+        Performs the same operation as maximum_pair_sum but reverses 2nd half of a list of in place
+        """
+        if not self.head:
+            return 0
+
+        maximum_sum = 0
+        middle_node = self.middle_node()
+
+        # reverse the second half of linked list
+        current, previous = middle_node, None
+
+        while current:
+            current.next, previous, current = previous, current, current.next
+
+        start = self.head
+        while previous:
+            maximum_sum = max(maximum_sum, start.data + previous.data)
+            previous = previous.next
+            start = start.next
+
+        return maximum_sum

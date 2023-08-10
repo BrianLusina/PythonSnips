@@ -417,6 +417,45 @@ class SinglyLinkedMaximumPairSumTestCases(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+    def test_1_using_reverse_in_place(self):
+        """should return 6 from a list of [5,4,2,1]"""
+        data = [5, 4, 2, 1]
+        expected = 6
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum_reverse_in_place()
+
+        self.assertEqual(expected, actual)
+
+    def test_2_using_reverse_in_place(self):
+        """should return 7 for linked list of [4,2,2,3]"""
+        data = [4, 2, 2, 3]
+        expected = 7
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum_reverse_in_place()
+
+        self.assertEqual(expected, actual)
+
+    def test_3_using_reverse_in_place(self):
+        """should return 7 for linked list of [1,100000]"""
+        data = [1, 100000]
+        expected = 100001
+        linked_list = SinglyLinkedList()
+
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.maximum_pair_sum_reverse_in_place()
+
+        self.assertEqual(expected, actual)
+
 
 if __name__ == "__main__":
     unittest.main()

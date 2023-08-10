@@ -517,6 +517,74 @@ Here, `n` is the number of nodes in the linked list.
 
     - The stack takes `O(n)` space as we push `n` elements into it.
 
+#### Approach 3: Reverse Second Half in Place
+
+Another method is to flip the second half of the linked list so that the last element points to the second last element,
+which points to the third last element, and so on until the middle element.
+
+To reverse the second half of the linked list, we must first obtain the list's middle (from which the second half
+starts). To get to the middle of the list, we can use two pointers: slow and fast. We set their initial value to head.
+
+We move slow to the next node after moving fast two nodes ahead. We perform this until fast or fast.next do not become
+null. Because fast moves at twice the speed of slow, we will have the required middle node at slow.
+
+Reversing a linked list is a classic problem. We need three pointers: a) nextNode, to hold the next node so that when we
+reverse the next pointer of the previous node, we have access to the next node, b) slow, the node under consideration
+whose next must be set to the previous node, and c) prev, the previous node.
+
+We first perform nextNode = slow.next so we can still reach the next node after modifying slow.next. Then we set the
+next pointer of slow to prev.
+
+To set up the variables for next iteration, we set prev = slow and slow = nextNode. We continue doing while till slow is
+not null.
+
+Once we've reversed the second half of the list, prev will point to the first element of this reversed list. So we use
+head to iterate over the original list because the first half is unaffected, and prev to iterate over the reversed list.
+We add the corresponding node values, update the maximum twin sum with the current twin if possible, and then proceed to
+the next node in both lists.
+
+##### Algorithm
+
+1. Create two ListNode pointers slow and fast. Initialize both of them to head.
+2. To get the middle of the list, we move fast two steps ahead and slow one step ahead. We iterate until we can't move
+   two steps ahead, i.e., while fast and fast.next are not null:
+
+    - Update fast to two nodes ahead, i.e., fast = fast.next.next.
+    - Update slow to slow.next.
+
+3. The next step is to reverse the second half of the linked list. We create two pointers to null: nextNode and prev as
+   mentioned above. While slow is not null, we do the following:
+
+    - Update nextNode to nextNode = slow.next.
+    - Set pointer of slow to prev.
+    - Move prev to slow, as this will be the new previous node for the next iteration.
+    - Move slow to nextNode, since nextNode is the node being considered for the next iteration.
+
+4. Create an answer variable maximumSum to keep track of the maximum sum of a node and its twin. Initialize it to 0.
+5. Create another ListNode pointer start = head to iterate from the start of the linked list.
+6. To obtain twin sums, we use the corresponding nodes of the given linked list and the reversed linked list. We iterate
+   until we cover either of the lists, i.e., until prev is not null:
+
+    - Update maximumSum if the current twin sum is greater than the previous one, i.e.,maximumSum = max(maximumSum,
+      start.val + prev.val).
+    - Update prev to prev.next and start to start.next.
+
+7. Return maximumSum.
+
+##### Complexity Analysis
+
+Here `n` is the number of nodes in the linked list
+
+1. `Time complexity: O(n)`
+
+    - It takes O(n) time to iterate over the linked list to find the middle and then reverse the second half of
+      the linked list.
+    - We iterate over the half of the linked list to find the maximum twin sum, which also takes O(n) time.
+
+2. `Space complexity: O(1)`
+
+    - Except for a few pointers that take up constant space, we don't take up any space.
+
 ### Related Topics
 
 - Linked List
