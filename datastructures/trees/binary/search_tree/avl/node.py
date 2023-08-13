@@ -8,4 +8,3 @@ class AvlTreeNode(BinaryTreeNode):
         self.left = left
         self.right = right
         self.height = 1
-

@@ -3,6 +3,7 @@ from typing import Optional, List, Any
 from datastructures.stacks import Stack
 from datastructures.trees import Tree, TreeNode
 from datastructures.trees.binary.node import BinaryTreeNode
+from datastructures.queues.fifo import FifoQueue
 
 
 class BinaryTree(Tree):
@@ -13,7 +14,34 @@ class BinaryTree(Tree):
         pass
 
     def height(self) -> int:
-        pass
+        if self.root is None:
+            return 0
+
+        # if we don't have either left and right nodes from the root, we return 1
+        if self.root.left is None and self.root.right is None:
+            return 1
+
+        height = 0
+        queue = FifoQueue()
+        queue.enqueue(self.root)
+
+        while True:
+            current_level_nodes = queue.size
+
+            if current_level_nodes == 0:
+                return height
+
+            height += 1
+
+            while current_level_nodes > 0:
+                node = queue.dequeue()
+
+                if node.left is not None:
+                    queue.enqueue(node.left)
+
+                if node.right is not None:
+                    queue.enqueue(node.right)
+                current_level_nodes -= 1
 
     def has_next(self) -> bool:
         pass

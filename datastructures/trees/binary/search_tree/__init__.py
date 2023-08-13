@@ -37,16 +37,16 @@ class BinarySearchTree(Tree):
 
     @property
     def height(self) -> int:
-        if not self.root:
+        if self.root is None:
             return 0
 
-        # if we don't have either left and right nodes from the root, we return 0
+        # if we don't have either left and right nodes from the root, we return 1
         if not self.root.left and not self.root.right:
-            return 0
+            return 1
 
-        height = 1
+        height = 0
         queue = FifoQueue()
-        queue.add(self.root)
+        queue.enqueue(self.root)
 
         while True:
             current_level_nodes = queue.size
@@ -59,11 +59,11 @@ class BinarySearchTree(Tree):
             while current_level_nodes > 0:
                 node = queue.dequeue()
 
-                if node.left:
-                    queue.add(node.left)
+                if node.left is not None:
+                    queue.enqueue(node.left)
 
-                if node.right:
-                    queue.add(node.right)
+                if node.right is not None:
+                    queue.enqueue(node.right)
                 current_level_nodes -= 1
 
     def next(self) -> int:

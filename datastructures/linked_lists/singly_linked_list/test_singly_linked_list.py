@@ -366,7 +366,7 @@ class SinglyLinkedMaximumPairSumTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_3_using_list_of_integers(self):
-        """should return 7 for linked list of [1,100000]"""
+        """should return 100001 for linked list of [1,100000]"""
         data = [1, 100000]
         expected = 100001
         linked_list = SinglyLinkedList()
@@ -405,7 +405,7 @@ class SinglyLinkedMaximumPairSumTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_3_using_stack(self):
-        """should return 7 for linked list of [1,100000]"""
+        """should return 100001 for linked list of [1,100000]"""
         data = [1, 100000]
         expected = 100001
         linked_list = SinglyLinkedList()
@@ -444,7 +444,7 @@ class SinglyLinkedMaximumPairSumTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_3_using_reverse_in_place(self):
-        """should return 7 for linked list of [1,100000]"""
+        """should return 100001 for linked list of [1,100000]"""
         data = [1, 100000]
         expected = 100001
         linked_list = SinglyLinkedList()

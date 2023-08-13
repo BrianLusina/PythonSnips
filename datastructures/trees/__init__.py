@@ -41,7 +41,7 @@ class Tree(ABC, Generic[T]):
         """
         Returns the height of the Tree. That is, the number of edges between the root node and the furthest leaf node.
         This can also be the maximum depth of the Tree
-        This is the number of links from the root to the furthces leaf.
+        This is the number of links from the root to the furthest leaf.
         """
         raise NotImplementedError("This method has not been implemented")
 

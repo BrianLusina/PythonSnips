@@ -191,5 +191,46 @@ class BinaryTreeIsBalancedTestCases(unittest.TestCase):
         self.assertTrue(actual)
 
 
+class BinaryTreeHeight(unittest.TestCase):
+
+    def test_returns_0_for_no_root(self):
+        """should return 0 if the binary tree has no root"""
+        tree = BinaryTree()
+        actual = tree.height()
+
+        self.assertEquals(0, actual)
+
+    def test_returns_0_for_root_but_no_children(self):
+        """should return 0 if the binary tree has a root, but no left nor right subtrees"""
+        root = BinaryTreeNode(data=1)
+        tree = BinaryTree(root=root)
+
+        actual = tree.height()
+        self.assertEquals(1, actual)
+
+    def test_returns_3_for_tree_3_9_20_null_null_15_7(self):
+        """should return 3 if the binary tree [3,9,20,null,null,15,7]"""
+        left = BinaryTreeNode(data=9)
+        right_left = BinaryTreeNode(data=15)
+        right_right = BinaryTreeNode(data=7)
+        right = BinaryTreeNode(data=20, left=right_left, right=right_right)
+
+        root = BinaryTreeNode(data=3, left=left, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = tree.height()
+        self.assertEquals(3, actual)
+
+    def test_returns_2_for_tree_1_null_20(self):
+        """should return 2 if the binary tree [1,null,20]"""
+        right = BinaryTreeNode(data=2)
+
+        root = BinaryTreeNode(data=1, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = tree.height()
+        self.assertEquals(2, actual)
+
+
 if __name__ == '__main__':
     unittest.main()
