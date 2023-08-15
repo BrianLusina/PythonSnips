@@ -148,7 +148,7 @@ class BinaryTreeNode(TreeNode):
         Returns the length of this node. Length of this node is the node itself and it's children. If it has only
         a left node, then the length is 2, similar case for only having a right node
         """
-        if self.left and self.right:
+        if self.left is not None and self.right is not None:
             return 3
-        if (self.left and not self.right) or (self.right and not self.left):
+        if (self.left is not None and self.right is None) or (self.right is not None and self.left is None):
             return 2

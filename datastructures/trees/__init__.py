@@ -109,3 +109,14 @@ class Tree(ABC, Generic[T]):
         @return: True if the tree is balanced, false otherwise
         """
         raise NotImplementedError("This method has not yet been implemented")
+
+    def leaf_similar(self, other: 'Tree') -> bool:
+        """
+        Returns true if this tree has similar leaf value sequence to another tree.
+        For example: If this tree has nodes = [3,5,1,6,2,9,8,null,null,7,4] and other tree has nodes =
+        [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]. Then the leaf value sequence of both is [6,7,4,9,8] which is
+        similar
+        @param other: Other tree
+        @return: True if the sequence of both tree's leaves is similar, false otherwise
+        """
+        raise NotImplementedError("not yet implemented")

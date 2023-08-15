@@ -200,8 +200,8 @@ class BinaryTreeHeight(unittest.TestCase):
 
         self.assertEquals(0, actual)
 
-    def test_returns_0_for_root_but_no_children(self):
-        """should return 0 if the binary tree has a root, but no left nor right subtrees"""
+    def test_returns_1_for_root_but_no_children(self):
+        """should return 1 if the binary tree has a root, but no left nor right subtrees"""
         root = BinaryTreeNode(data=1)
         tree = BinaryTree(root=root)
 
@@ -230,6 +230,40 @@ class BinaryTreeHeight(unittest.TestCase):
 
         actual = tree.height()
         self.assertEquals(2, actual)
+
+
+class BinaryTreeLeafSimilarTest(unittest.TestCase):
+
+    def test_1(self):
+        """should return true for tree1=3,5,1,6,2,9,8,null,null,7,4 and tree2=3,5,1,6,7,4,2,null,null,null,null,null,null,9,8"""
+        left1 = BinaryTreeNode(5, left=BinaryTreeNode(6),
+                               right=BinaryTreeNode(2, left=BinaryTreeNode(7), right=BinaryTreeNode(4)))
+        right1 = BinaryTreeNode(1, left=BinaryTreeNode(9), right=BinaryTreeNode(8))
+
+        root1 = BinaryTreeNode(3, left=left1, right=right1)
+        tree1 = BinaryTree(root1)
+
+        left2 = BinaryTreeNode(5, left=BinaryTreeNode(6), right=BinaryTreeNode(7))
+        right2 = BinaryTreeNode(1, left=BinaryTreeNode(4),
+                                right=BinaryTreeNode(2, left=BinaryTreeNode(9), right=BinaryTreeNode(8)))
+
+        root2 = BinaryTreeNode(3, left=left2, right=right2)
+        tree2 = BinaryTree(root2)
+
+        actual = tree1.leaf_similar(tree2)
+
+        self.assertTrue(actual)
+
+    def test_2(self):
+        """should return false for tree1= and tree2= """
+        root1 = BinaryTreeNode(data=1, left=BinaryTreeNode(2), right=BinaryTreeNode(3))
+        tree1 = BinaryTree(root=root1)
+
+        root2 = BinaryTreeNode(data=1, left=BinaryTreeNode(3), right=BinaryTreeNode(2))
+        tree2 = BinaryTree(root=root2)
+
+        actual = tree1.leaf_similar(tree2)
+        self.assertFalse(actual)
 
 
 if __name__ == '__main__':

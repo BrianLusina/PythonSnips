@@ -365,7 +365,19 @@ class BinarySearchTree(Tree):
         pass
 
     def pre_order_traversal(self) -> List[Any]:
-        pass
+        data = []
+        if not self.root:
+            return data
+
+        def pre_order_helper(root: BinaryTreeNode):
+            if not root:
+                return
+            data.append(root.data)
+            pre_order_helper(root.left)
+            pre_order_helper(root.right)
+
+        pre_order_helper(self.root)
+        return data
 
     def is_binary_search_tree(self):
         """

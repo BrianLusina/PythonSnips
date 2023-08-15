@@ -1,4 +1,4 @@
-from typing import Optional, List, Any
+from typing import Optional, List, Any, Generator
 
 from datastructures.stacks import Stack
 from datastructures.trees import Tree, TreeNode
@@ -7,7 +7,7 @@ from datastructures.queues.fifo import FifoQueue
 
 
 class BinaryTree(Tree):
-    def __init__(self, root: BinaryTreeNode = None):
+    def __init__(self, root: Optional[BinaryTreeNode] = None):
         self.root = root
 
     def next(self) -> int:
@@ -87,7 +87,19 @@ class BinaryTree(Tree):
         return levels
 
     def pre_order_traversal(self) -> List[Any]:
-        pass
+        data = []
+        if not self.root:
+            return data
+
+        def pre_order_helper(root: BinaryTreeNode):
+            if not root:
+                return
+            data.append(root.data)
+            pre_order_helper(root.left)
+            pre_order_helper(root.right)
+
+        pre_order_helper(self.root)
+        return data
 
     def flatten_into_linked_list(self) -> None:
         """
@@ -294,3 +306,19 @@ class BinaryTree(Tree):
             return False
 
         return is_height_balanced(self.root)
+
+    def leaf_similar(self, other: 'BinaryTree') -> bool:
+        if (self.root is None and other.root is not None) or (other.root is None and self.root is not None):
+            return False
+
+        def dfs(node: Optional[BinaryTreeNode]) -> Generator:
+            if node is not None:
+                if node.left is None and node.right is None:
+                    yield node.data
+                yield from dfs(node.left)
+                yield from dfs(node.right)
+
+        leaves1 = list(dfs(self.root))
+        leaves2 = list(dfs(other.root))
+
+        return leaves1 == leaves2
