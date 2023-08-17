@@ -1,12 +1,13 @@
 from typing import Optional, List, Any, Generator
 
 from datastructures.stacks import Stack
-from datastructures.trees import Tree, TreeNode
+from datastructures.trees import Tree, TreeNode, T
 from datastructures.trees.binary.node import BinaryTreeNode
 from datastructures.queues.fifo import FifoQueue
 
 
 class BinaryTree(Tree):
+
     def __init__(self, root: Optional[BinaryTreeNode] = None):
         self.root = root
 
@@ -322,3 +323,23 @@ class BinaryTree(Tree):
         leaves2 = list(dfs(other.root))
 
         return leaves1 == leaves2
+
+    def number_of_good_nodes(self) -> int:
+        # no root, no nodes, therefore, return 0
+        if self.root is None:
+            return 0
+
+        # root is regarded as good, so, if there are no left & right children, return 1
+        if not self.root.left and not self.root.right:
+            return 1
+
+        def good_nodes_helper(node: BinaryTreeNode, data: T) -> int:
+            if node is not None:
+                node_count = good_nodes_helper(node.left, max(data, node.data)) + \
+                             good_nodes_helper(node.right, max(data, node.data))
+                if node.data >= data:
+                    node_count += 1
+                return node_count
+            return 0
+
+        return good_nodes_helper(self.root, self.root.data)

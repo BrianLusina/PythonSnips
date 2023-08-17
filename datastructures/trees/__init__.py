@@ -101,6 +101,7 @@ class Tree(ABC, Generic[T]):
     def pre_order_traversal(self) -> List[T]:
         raise NotImplementedError("This method has not been implemented")
 
+    @abstractmethod
     def is_balanced(self) -> bool:
         """
         Checks if this tree is balanced.
@@ -110,6 +111,7 @@ class Tree(ABC, Generic[T]):
         """
         raise NotImplementedError("This method has not yet been implemented")
 
+    @abstractmethod
     def leaf_similar(self, other: 'Tree') -> bool:
         """
         Returns true if this tree has similar leaf value sequence to another tree.
@@ -118,5 +120,14 @@ class Tree(ABC, Generic[T]):
         similar
         @param other: Other tree
         @return: True if the sequence of both tree's leaves is similar, false otherwise
+        """
+        raise NotImplementedError("not yet implemented")
+
+    @abstractmethod
+    def number_of_good_nodes(self) -> int:
+        """
+        Finds the number of good nodes in a tree. A good node is a node in which in the path from root to the node there
+        are no nodes with a value greater than it
+        @return: The number of good nodes
         """
         raise NotImplementedError("not yet implemented")

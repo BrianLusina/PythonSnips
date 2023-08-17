@@ -2,14 +2,14 @@ from collections import defaultdict
 from typing import List
 
 
-class TrieNode(object):
+class TrieNode:
     def __init__(self, char: str):
         self.char = char
         self.children = defaultdict(TrieNode)
         self.is_end = False
 
 
-class Trie(object):
+class Trie:
     def __init__(self):
         self.root = TrieNode("")
 

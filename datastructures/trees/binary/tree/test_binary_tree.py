@@ -266,5 +266,34 @@ class BinaryTreeLeafSimilarTest(unittest.TestCase):
         self.assertFalse(actual)
 
 
+class BinaryTreeGoodNodesTest(unittest.TestCase):
+
+    def test_1(self):
+        """should return 4 for tree=[3,1,4,3,null,1,5]"""
+        root = BinaryTreeNode(3, left=BinaryTreeNode(1, left=BinaryTreeNode(3)),
+                              right=BinaryTreeNode(4, left=BinaryTreeNode(1), right=BinaryTreeNode(5)))
+        tree = BinaryTree(root)
+
+        actual = tree.number_of_good_nodes()
+
+        self.assertEquals(4, actual)
+
+    def test_2(self):
+        """should return 3 for tree=[3,3,null,4,2]"""
+        root = BinaryTreeNode(data=3, left=BinaryTreeNode(3, right=BinaryTreeNode(2), left=BinaryTreeNode(4)))
+        tree = BinaryTree(root=root)
+
+        actual = tree.number_of_good_nodes()
+        self.assertEquals(3, actual)
+
+    def test_3(self):
+        """should return 1 for tree=[1]"""
+        root = BinaryTreeNode(data=1)
+        tree = BinaryTree(root=root)
+
+        actual = tree.number_of_good_nodes()
+        self.assertEquals(1, actual)
+
+
 if __name__ == '__main__':
     unittest.main()

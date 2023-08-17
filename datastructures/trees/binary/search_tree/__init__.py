@@ -3,13 +3,14 @@ from datastructures.trees.binary.node import BinaryTreeNode
 
 from datastructures.queues.fifo import FifoQueue
 from datastructures.stacks import Stack
-from datastructures.trees import Tree, T
+from datastructures.trees import T
+from datastructures.trees.binary.tree import BinaryTree
 
 
-class BinarySearchTree(Tree):
+class BinarySearchTree(BinaryTree):
 
     def __init__(self, root: Optional[BinaryTreeNode] = None):
-        self.root = root
+        super().__init__(root)
         self.stack = Stack()
 
     def insert_node(self, data: T) -> BinaryTreeNode:
