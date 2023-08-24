@@ -7,7 +7,7 @@ from urllib.parse import urljoin
 from urllib.request import urlretrieve
 
 
-class Network(object):
+class Network:
     def __init__(self, url):
         """
         Attributes:

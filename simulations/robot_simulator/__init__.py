@@ -2,7 +2,7 @@
 NORTH, EAST, SOUTH, WEST = range(4)
 
 
-class CompassPoints(object):
+class CompassPoints:
     """
     initialize the class to have a default compass bearing of NORTH
     left method subtracts a 'co-ordinate' point from the x axis
@@ -21,7 +21,7 @@ class CompassPoints(object):
         self.c_bearing = self.compass_points[(self.c_bearing + 1) % 4]
 
 
-class Robot(object):
+class Robot:
     """
     Initialize the ROBOT to have a bearing of north and x,y coordinates at the origin
     :compass_points is an instance(object) of the CompassPoints class

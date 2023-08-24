@@ -2,7 +2,7 @@ from typing import AnyStr, Dict, Any
 from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
 
 
-class LRUCache(object):
+class LRUCache:
     def __init__(self, max_size: int):
         self.max_size = max_size
         self.size = 0

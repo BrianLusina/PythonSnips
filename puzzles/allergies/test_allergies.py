@@ -70,7 +70,7 @@ class AllergiesTests(unittest.TestCase):
             Allergies(1000).allergies(), ["cats", "chocolate", "pollen", "strawberries"]
         )
 
-    class MyAllergies(object):
+    class MyAllergies:
         ALLERGY_SCORES = {
             "eggs": 1,
             "peanuts": 2,

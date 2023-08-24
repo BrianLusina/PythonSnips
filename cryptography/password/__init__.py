@@ -2,7 +2,7 @@ import random
 import string
 
 
-class Password(object):
+class Password:
     """
     static method will perform the random password generator
     get a random choice from the ascii letters and digits and symbols for range between 1-10

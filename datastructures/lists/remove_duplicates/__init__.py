@@ -1,4 +1,4 @@
-class RemoveDuplicates(object):
+class RemoveDuplicates:
     def __init__(self, duplicated_list):
         self.duplicated_list = duplicated_list
 

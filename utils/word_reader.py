@@ -1,4 +1,4 @@
-class WordData(object):
+class WordData:
     """
     TASK : File based database
               Search...

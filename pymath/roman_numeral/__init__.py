@@ -24,7 +24,7 @@ def numeral(arabic):
     return roman_number
 
 
-class Numerals(object):
+class Numerals:
     @staticmethod
     def int_to_roman(number):
         if type(number) != type(1):
@@ -41,7 +41,7 @@ class Numerals(object):
         return result
 
 
-class RomanNumeral(object):
+class RomanNumeral:
     """
     Create a dictionary that contains the Roman numerals conversions and their Arabic numbers
     the Keys will be ones, tens and hundreds and thousands

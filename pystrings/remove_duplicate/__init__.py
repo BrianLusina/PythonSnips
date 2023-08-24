@@ -1,4 +1,4 @@
-class RemoveDuplicate(object):
+class RemoveDuplicate:
     def __init__(self, strin):
         self.strin = strin
 
@@ -16,7 +16,7 @@ class RemoveDuplicate(object):
         return "".join(out)
 
 
-class RemoveDupSort(object):
+class RemoveDupSort:
     def __init__(self, sentence):
         self.sentence = sentence
 

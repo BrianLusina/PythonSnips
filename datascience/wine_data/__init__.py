@@ -2,7 +2,7 @@ import numpy as np
 from data_science.data_download import DataDownload
 
 
-class RedWineData(object):
+class RedWineData:
     """ """
 
     def __init__(self):

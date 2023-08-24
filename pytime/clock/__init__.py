@@ -1,4 +1,4 @@
-class Clock(object):
+class Clock:
     """
     Initialize the clock, such that
     __eq__ performs a comparison between the format intended and the input
@@ -28,7 +28,7 @@ class Clock(object):
         return self
 
 
-class ClockV2(object):
+class ClockV2:
     """
     Variation of clock. This is the second way of doing it
     """

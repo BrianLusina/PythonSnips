@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-class WeatherData(object):
+class WeatherData:
     def __init__(self):
         # open and read the file
         weather_file = open("weather.dat")

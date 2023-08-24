@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-class MyFileSystem(object):
+class MyFileSystem:
     """
     Simple filesystem to read files from directories it receives
     """

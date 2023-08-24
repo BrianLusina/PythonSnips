@@ -7,7 +7,7 @@ class QueueFullException(Full):
     pass
 
 
-class PriorityQueue(object):
+class PriorityQueue:
     """
     Priority Queue implementation in Python
     Methods:

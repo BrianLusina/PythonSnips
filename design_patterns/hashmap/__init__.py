@@ -1,7 +1,7 @@
 from typing import Any, List
 
 
-class Item(object):
+class Item:
     """
     Represents an item in the HashMap
     """
@@ -16,7 +16,7 @@ class Item(object):
         self.data = data
 
 
-class HashMap(object):
+class HashMap:
     """
     Represents a HashMap/HashTable storing items by Key Value pairs
     """

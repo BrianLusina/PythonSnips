@@ -1,4 +1,4 @@
-class Allergies(object):
+class Allergies:
     ALLERGY_SCORES = {
         "eggs": 1,
         "peanuts": 2,

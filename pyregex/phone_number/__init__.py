@@ -1,7 +1,7 @@
 import re
 
 
-class Phone(object):
+class Phone:
     """
     Evaluates phone numbers and returns a neat format of the number
     Also gets the area code and returns it from the phone number.

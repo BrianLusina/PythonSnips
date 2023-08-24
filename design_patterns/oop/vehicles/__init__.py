@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Vehicle(object):
+class Vehicle:
     """
     Vehicle class that is the superclass of all Vehicles in existence
     This class is abstract meaning there should not be an instance of this class, but rather an instance of its child

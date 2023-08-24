@@ -1,7 +1,7 @@
 import random
 
 
-class Ghost(object):
+class Ghost:
     @classmethod
     def color(cls):
         colors = ["red", "purple", "white", "yellow"]

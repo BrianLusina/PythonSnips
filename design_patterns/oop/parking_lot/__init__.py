@@ -5,7 +5,7 @@ from .parking_spot import ParkingSpot
 from .vehicle import Vehicle
 
 
-class ParkingLot(object):
+class ParkingLot:
     def __init__(self, num_levels: int):
         self.num_levels = num_levels
         self.levels = []
@@ -17,7 +17,7 @@ class ParkingLot(object):
         return False
 
 
-class Level(object):
+class Level:
     SPOTS_PER_ROW = 10
 
     def __init__(self, floor: int, total_spots: int):

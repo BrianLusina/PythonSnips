@@ -5,7 +5,7 @@ from string import ascii_letters
 from pymath.primes.is_prime import is_prime_with_re
 
 
-class Anagrams(object):
+class Anagrams:
     """
     Anagram class to detect anagrams for letters
     """

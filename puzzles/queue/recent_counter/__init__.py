@@ -1,7 +1,7 @@
 from collections import deque
 
 
-class RecentCounter(object):
+class RecentCounter:
     def __init__(self):
         self.sliding_window = deque()
 

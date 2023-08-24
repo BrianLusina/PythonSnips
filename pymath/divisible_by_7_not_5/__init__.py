@@ -1,4 +1,4 @@
-class Divisible7(object):
+class Divisible7:
     """
     class that gets all the numbers divisible by 7, but not by 5 in a range
     """

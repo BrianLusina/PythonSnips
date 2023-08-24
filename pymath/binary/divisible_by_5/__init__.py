@@ -1,4 +1,4 @@
-class Divisible5(object):
+class Divisible5:
     def __init__(self, binary_lst):
         self.binary_lst = binary_lst
 

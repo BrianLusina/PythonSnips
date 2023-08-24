@@ -1,4 +1,4 @@
-class Swap(object):
+class Swap:
     def __init__(self, str_input):
         self.str_input = str_input
 

@@ -1,4 +1,4 @@
-class EvenDigits(object):
+class EvenDigits:
     def __init__(self, number_range):
         self.number_range = number_range
 

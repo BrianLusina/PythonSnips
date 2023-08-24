@@ -34,7 +34,7 @@ def score(word):
     return sum(SCORE_TABLE[letter] for letter in word.lower())
 
 
-class ScrabbleScore(object):
+class ScrabbleScore:
     score = {
         "a": 1,
         "c": 3,

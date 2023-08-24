@@ -1,4 +1,4 @@
-class KeyPress(object):
+class KeyPress:
     def __init__(self, phrase):
         self.phrase = phrase
 

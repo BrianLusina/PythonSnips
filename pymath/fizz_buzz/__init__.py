@@ -1,7 +1,7 @@
 # from itertools import cycle, zip, count, islice
 
 
-class FizzBuzz(object):
+class FizzBuzz:
     def __init__(self, endpoint):
         self.endpoint = endpoint
 

@@ -1,4 +1,4 @@
-class DuplicateEncoder(object):
+class DuplicateEncoder:
     def __init__(self, encode):
         self.encode = encode
 

@@ -3,7 +3,7 @@ from .edge import Edge
 from uuid import uuid4
 
 
-class Vertex(object):
+class Vertex:
     """
     Graph Node/Vertex representing a Node/Vertex in a Graph
     """

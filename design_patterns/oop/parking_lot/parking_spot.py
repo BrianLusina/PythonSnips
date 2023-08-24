@@ -2,7 +2,7 @@ from .enums import VehicleSize
 from .vehicle import Vehicle
 
 
-class ParkingSpot(object):
+class ParkingSpot:
     def __init__(
         self,
         level: int,

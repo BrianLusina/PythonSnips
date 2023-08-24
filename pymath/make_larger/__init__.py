@@ -1,4 +1,4 @@
-class MakeLarger(object):
+class MakeLarger:
     def __init__(self, number):
         self.number = number
 

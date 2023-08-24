@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-class FileMatcher(object):
+class FileMatcher:
     """
     File matcher class that copies files to their respective directories, creates directories if none exist
     """

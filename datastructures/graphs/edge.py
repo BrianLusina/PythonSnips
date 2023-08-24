@@ -14,7 +14,7 @@ class EdgeType(Enum):
     HYPER_UNDIRECTED = 6
 
 
-class Edge(object):
+class Edge:
     """
     Edge representation of an Edge in a Graph
     """

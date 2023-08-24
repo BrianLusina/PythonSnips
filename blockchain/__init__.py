@@ -7,7 +7,7 @@ from hashlib import sha256
 from json import dumps
 
 
-class Block(object):
+class Block:
     """
     A block will contain the index, which is the location of this block in
     the block-chain timestamp will indicate the time the Block is created and
@@ -35,7 +35,7 @@ class Block(object):
                                                                                             self.hash)
 
 
-class BlockChain(object):
+class BlockChain:
     """
     Custom implementation of a block chain
     """

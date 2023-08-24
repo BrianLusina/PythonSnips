@@ -1,7 +1,7 @@
 "Class to test truths of functions"
 
 
-class Test(object):
+class Test:
     def __init__(self, n):
         self.n = n
 

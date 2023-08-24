@@ -1,7 +1,7 @@
 from functools import reduce, wraps
 
 
-class ListOps(object):
+class ListOps:
     @staticmethod
     def map_clone(function, xs):
         """

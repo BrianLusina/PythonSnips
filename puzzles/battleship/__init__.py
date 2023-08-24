@@ -1,7 +1,7 @@
 from random import randint
 
 
-class BattleShip(object):
+class BattleShip:
     def __init__(self, board):
         self.board = board
 

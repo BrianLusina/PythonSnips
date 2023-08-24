@@ -1,7 +1,7 @@
 from typing import List
 
 
-class UnionFind(object):
+class UnionFind:
     def __init__(self, size: int):
         self.root = [i for i in range(size)]
         self.rank = [1] * size

@@ -1,4 +1,4 @@
-class ConsecutiveString(object):
+class ConsecutiveString:
     def __init__(self, starr, k):
         self.starr = starr
         self.k = k

@@ -4,7 +4,7 @@ import unittest
 
 
 class Test(unittest.TestCase):
-    class BinaryTreeNode(object):
+    class BinaryTreeNode:
         def __init__(self, value):
             self.value = value
             self.left = None

@@ -2,7 +2,7 @@ from random import sample
 from string import ascii_uppercase
 
 
-class Robot(object):
+class Robot:
     def __init__(self):
         self._name = None
         self._past_names = set()

@@ -1,7 +1,7 @@
 from itertools import combinations
 
 
-class Corners(object):
+class Corners:
     def __init__(self, i, j):
         # i, j are position of corners
         self.i = i

@@ -1,4 +1,4 @@
-class QueenAttack(object):
+class QueenAttack:
     def __init__(self, pos1, pos2):
         """
         Creates a queen object with the positions of both queens

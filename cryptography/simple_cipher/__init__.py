@@ -3,7 +3,7 @@ from string import ascii_lowercase
 from time import time
 
 
-class Cipher(object):
+class Cipher:
     def __init__(self, key=None):
         if not key:
             seed(time())

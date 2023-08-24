@@ -9,7 +9,7 @@ with json_data as data_file:
     data = json.load(data_file)
 
 
-class UserData(object):
+class UserData:
     """
     Class to check the JSON file of user data,
     check if user id is an integer

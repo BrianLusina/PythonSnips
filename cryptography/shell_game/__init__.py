@@ -1,4 +1,4 @@
-class ShellGame(object):
+class ShellGame:
     def __init__(self, start, swaps):
         self.start = start
         self.swaps = swaps

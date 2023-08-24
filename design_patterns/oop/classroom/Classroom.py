@@ -1,4 +1,4 @@
-class Human(object):
+class Human:
     """
     A Human class which describes the properties of a human being
     :__init__ initialized the number of legs,eyes, hands, etc a human usually has

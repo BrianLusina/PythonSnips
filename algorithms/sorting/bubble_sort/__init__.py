@@ -1,4 +1,4 @@
-class BubbleSort(object):
+class BubbleSort:
     """
     Uses various methods to perform a bubble sort in a list in Python
     :bubbly_descend, does the opposite of bubbly_ascend

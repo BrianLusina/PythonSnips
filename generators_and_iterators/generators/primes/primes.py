@@ -20,7 +20,7 @@ def check_prime(number):
     return True
 
 
-class Primes(object):
+class Primes:
     def __init__(self, max):
         """
         Creates a Primes Object with the max number as an attribute

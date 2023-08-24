@@ -2,7 +2,7 @@ from functools import reduce
 from string import hexdigits
 
 
-class Hexadecimal(object):
+class Hexadecimal:
     """
     Class for conversion of hexadecimal characters
     initialized with the hexadecimal string

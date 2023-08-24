@@ -1,7 +1,7 @@
 from string import ascii_lowercase, ascii_uppercase
 
 
-class CaesarCipher(object):
+class CaesarCipher:
     """Encrypt and decrypt messages using Caesar Cipher. Specify
     the number of letters to shift ( key ). All alphabetical
     characters will be encrypted and decrypted using key.
@@ -73,7 +73,7 @@ class CaesarCipher(object):
         )
 
 
-class CaesarCipherV2(object):
+class CaesarCipherV2:
     """
     This implementation uses maketrans on uppercase letters
     """

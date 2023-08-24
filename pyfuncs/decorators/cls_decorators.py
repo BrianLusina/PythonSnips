@@ -4,7 +4,7 @@ Used to demonstrate decorators in classes
 from math import pi
 
 
-class Circle(object):
+class Circle:
     def __init__(self, radius):
         self.__radius = radius
 

@@ -1,3 +1,5 @@
+# Course Schedule
+
 There are a total of n courses you have to take labelled from 0 to n - 1.
 
 Some courses may have prerequisites, for example, if prerequisites[i] = [ai, bi] this means you must take the course bi

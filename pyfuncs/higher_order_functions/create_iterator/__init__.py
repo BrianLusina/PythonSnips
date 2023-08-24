@@ -1,4 +1,4 @@
-class Functions(object):
+class Functions:
     """
     Class of random functions to be called by iterator
     """

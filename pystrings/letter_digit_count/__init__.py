@@ -1,4 +1,4 @@
-class LetterDigitCount(object):
+class LetterDigitCount:
     def __init__(self, sentence):
         self.sentence = sentence
 

@@ -2,7 +2,7 @@ MAX_PINS = 10
 NUM_FRAMES = 10
 
 
-class BowlingGame(object):
+class BowlingGame:
     """This class manages the Bowling Game including the roll and score
     methods"""
 
@@ -118,7 +118,7 @@ class BowlingGame(object):
         return True if len(self.rolls) >= NUM_FRAMES else False
 
 
-class Frame(object):
+class Frame:
     """This class is for internal use only.  It divides up the array of
     rolls into Frame objects"""
 

@@ -3,7 +3,7 @@ import uuid
 import pika
 
 
-class FibonacciRpcClient(object):
+class FibonacciRpcClient:
     def __init__(self):
         self.response = body
         self.response = None

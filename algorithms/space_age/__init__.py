@@ -5,7 +5,7 @@ def converter(period):
     return inner
 
 
-class SpaceAge(object):
+class SpaceAge:
     __earth_orbital = 31557600
     SPACE_YEARS = {
         "earth": __earth_orbital,

@@ -18,7 +18,7 @@ def managed_file(name):
         f.close()
 
 
-class ManagedFile(object):
+class ManagedFile:
     """
     Managed file class that opens a file in write mode. this follows the context manager protocol
     by implementing the __enter__ and __exit__ methods

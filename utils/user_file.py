@@ -1,7 +1,7 @@
 user_name = input("Hello! What is your name?")
 
 
-class UserDatabase(object):
+class UserDatabase:
     @staticmethod
     def user_db():
         # check if user name is in file

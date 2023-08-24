@@ -1,7 +1,7 @@
 from __future__ import division
 
 
-class Rational(object):
+class Rational:
     def __init__(self, numer, denom):
         gcd, b = sorted([numer, denom])
 

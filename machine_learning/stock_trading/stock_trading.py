@@ -8,7 +8,7 @@ from sklearn import linear_model
 webbrowser.open("https://github.com/philliphsu/BottomSheetPickers")
 
 
-class ScikitBacktest(object):
+class ScikitBacktest:
     def __init__(self, sys):
         self.data = d
         self.matrix = m

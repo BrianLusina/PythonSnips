@@ -3,7 +3,7 @@ from string import punctuation
 
 
 # todo: check on this pete talk function
-class PeteTalk(object):
+class PeteTalk:
     """
     Rules
     > start of each sentence has a capitalized word at the beginning.

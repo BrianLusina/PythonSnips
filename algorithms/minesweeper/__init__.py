@@ -1,4 +1,4 @@
-class Minesweeper(object):
+class Minesweeper:
     """
     Minesweeper class
     """

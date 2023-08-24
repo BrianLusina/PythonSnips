@@ -589,7 +589,7 @@ Use Subclass(Parentclass) to define a child class.
 
 Solution:
 
-class Person(object):
+class Person:
 def getGender( self ):
 return "Unknown"
 

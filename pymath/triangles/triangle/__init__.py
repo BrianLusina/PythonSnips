@@ -2,7 +2,7 @@ from collections import Counter
 from math import pow, sqrt
 
 
-class Triangle(object):
+class Triangle:
     """
     A triangle class that returns the kinds of triangles
     :cvar TYPES: The types of triangles to evaluate. it is a dictionary, therefore the key is the first letter

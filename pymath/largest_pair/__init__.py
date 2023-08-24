@@ -1,7 +1,7 @@
 import heapq
 
 
-class MaxProd(object):
+class MaxProd:
     def __init__(self, array):
         self.array = array
 

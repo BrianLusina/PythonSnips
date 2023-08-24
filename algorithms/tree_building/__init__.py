@@ -1,4 +1,4 @@
-class Record(object):
+class Record:
     def __init__(self, record_id, parent_id):
         self.record_id = record_id
         self.parent_id = parent_id
@@ -7,7 +7,7 @@ class Record(object):
         return self.record_id == self.parent_id
 
 
-class Node(object):
+class Node:
     def __init__(self, node_id):
         self.node_id = node_id
         self.children = []

@@ -1,4 +1,4 @@
-class Censor(object):
+class Censor:
     def __init__(self, text, word):
         self.word = word
         self.text = text

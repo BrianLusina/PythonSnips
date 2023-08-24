@@ -1,7 +1,7 @@
 import sqlite3
 
 
-class AccessSimiti(object):
+class AccessSimiti:
     def __init__(self, db_name):
         """
         Creates an object of this class

@@ -5,7 +5,7 @@ from typing import Any, Union, Optional
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
 
-class Node(object):
+class Node:
     """
     Node object in the Linked List
     """
@@ -27,7 +27,7 @@ class Node(object):
         return self.data == other.data
 
 
-class LinkedList(object):
+class LinkedList:
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
     """

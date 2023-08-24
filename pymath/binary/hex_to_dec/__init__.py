@@ -1,7 +1,7 @@
 import binascii
 
 
-class HexToDex(object):
+class HexToDex:
     def __init__(self, hex_string):
         self.hex_string = hex_string
 

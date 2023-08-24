@@ -1,7 +1,7 @@
 from copy import copy
 
 
-class Point(object):
+class Point:
     """
     Defines the blueprint of a specific point on the word grid. This point will be used to mark the position of
     a word on the cartesian plane.
@@ -45,7 +45,7 @@ PLANE_LIMITS = (
 )
 
 
-class WordSearch(object):
+class WordSearch:
     def __init__(self, puzzle):
         """
         Creates a new word search object

@@ -2,7 +2,7 @@ import calendar
 from datetime import datetime, timedelta
 
 
-class Gigasecond(object):
+class Gigasecond:
     def __init__(self, birthday):
         self.birthday = birthday
 

@@ -1,7 +1,7 @@
 import math
 
 
-class QFormula(object):
+class QFormula:
     """
     calculates the square root of the value from the formula [(2 * C * D)/H]
     """

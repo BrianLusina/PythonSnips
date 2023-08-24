@@ -1,7 +1,7 @@
 import os
 
 
-class RemovalService(object):
+class RemovalService:
     """Service for removing objects from the file system"""
 
     @staticmethod
@@ -10,7 +10,7 @@ class RemovalService(object):
             os.remove(filename)
 
 
-class UploadService(object):
+class UploadService:
     """Upload service that depends on Removal Service"""
 
     def __init__(self, removal_service):

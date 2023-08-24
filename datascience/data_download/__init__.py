@@ -5,7 +5,7 @@ except ImportError:
     from urllib import urlretrieve
 
 
-class DataDownload(object):
+class DataDownload:
     """
     Downloads data from the web and stores them in a file
     """

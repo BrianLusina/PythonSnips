@@ -2,7 +2,7 @@ from itertools import count, islice
 from math import sqrt
 
 
-class Pernicious(object):
+class Pernicious:
     """
     get the range of the number from 3 to the number, converting each to binary
     for
