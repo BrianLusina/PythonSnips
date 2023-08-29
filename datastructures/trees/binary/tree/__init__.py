@@ -1,4 +1,5 @@
-from typing import Optional, List, Any, Generator
+from typing import Optional, List, Any, Generator, Dict
+from collections import defaultdict
 
 from datastructures.stacks import Stack
 from datastructures.trees import Tree, TreeNode, T
@@ -343,3 +344,31 @@ class BinaryTree(Tree):
             return 0
 
         return good_nodes_helper(self.root, self.root.data)
+
+    def path_sum(self, target: T) -> int:
+        if self.root is None:
+            return 0
+
+        def count_paths(sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode) -> int:
+            if node is None:
+                return 0
+
+            # sum of current path
+            prefix_sum += node.data
+
+            # number of paths that end at current node
+            path = sum_hash[prefix_sum - target]
+
+            # add current sum to prefix sum hash
+            sum_hash[prefix_sum] += 1
+
+            # traverse left and right of tree
+            path += count_paths(sum_hash, prefix_sum, node.left) + count_paths(sum_hash, prefix_sum, node.right)
+
+            # remove current sum from prefix sum hash
+            sum_hash[prefix_sum] -= 1
+
+            return path
+
+        # DFS, initialize sum_hash with prefix sum of 0, occurring once
+        return count_paths(defaultdict(int, {0: 1}), 0, self.root)

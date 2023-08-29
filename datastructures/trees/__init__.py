@@ -131,3 +131,15 @@ class Tree(ABC, Generic[T]):
         @return: The number of good nodes
         """
         raise NotImplementedError("not yet implemented")
+    
+    @abstractmethod
+    def path_sum(self, target: T) -> int:
+        """Returns the number of paths where the sum of the values along the path equals target
+
+        Args:
+            target (T): The target that the sum of values along the path must equal
+
+        Returns:
+            int: The number of paths along which the values equal the target
+        """
+        raise NotImplementedError("not yet implemented")

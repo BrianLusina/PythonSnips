@@ -295,5 +295,37 @@ class BinaryTreeGoodNodesTest(unittest.TestCase):
         self.assertEquals(1, actual)
 
 
+class BinaryTreePathSumTest(unittest.TestCase):
+
+    def test_1(self):
+        """should return 3 for tree=[10,5,-3,3,2,null,11,3,-2,null,1] and target=8"""
+        root = BinaryTreeNode(10, left=BinaryTreeNode(data=5, left=BinaryTreeNode(3, left=BinaryTreeNode(3),
+                                                                                  right=BinaryTreeNode(-2)),
+                                                      right=BinaryTreeNode(2, right=BinaryTreeNode(1))),
+                              right=BinaryTreeNode(-3, right=BinaryTreeNode(11)))
+        tree = BinaryTree(root)
+        target = 8
+        actual = tree.path_sum(target=target)
+        expected = 3
+
+        self.assertEquals(expected, actual)
+
+    def test_2(self):
+        """should return 3 for tree=[5,4,8,11,null,13,4,7,2,null,null,5,1] and target=22"""
+        root = BinaryTreeNode(data=5, left=BinaryTreeNode(4, left=BinaryTreeNode(11, left=BinaryTreeNode(7),
+                                                                                 right=BinaryTreeNode(2)),
+                                                          right=BinaryTreeNode(8, left=BinaryTreeNode(13,
+                                                                                                      left=BinaryTreeNode(
+                                                                                                          5),
+                                                                                                      right=BinaryTreeNode(
+                                                                                                          1)),
+                                                                               right=BinaryTreeNode(4))))
+        tree = BinaryTree(root=root)
+        target = 22
+        actual = tree.path_sum(target=target)
+        expected = 3
+        self.assertEquals(expected, actual)
+
+
 if __name__ == '__main__':
     unittest.main()

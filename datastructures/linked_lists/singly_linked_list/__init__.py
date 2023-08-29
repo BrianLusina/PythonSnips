@@ -10,6 +10,7 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
+    head: Optional[SingleNode] = None
 
     def __init__(self):
         # noinspection PyCompatibility
@@ -264,9 +265,9 @@ class SinglyLinkedList(LinkedList):
 
         if not self.head.next:
             # for instances where there is no next Node. i.e. SinglyLinkedList has a length of 1
-            node = self.head
+            node_ = self.head
             self.head = None
-            return node
+            return node_
 
         # pointer to current node
         current = self.head
@@ -348,7 +349,7 @@ class SinglyLinkedList(LinkedList):
         Ref: https://leetcode.com/problems/reverse-linked-list-ii/solution/
 
         Time Complexity: O(N) considering the list consists of N nodes.
-        We process each of the nodes at most once (we don't process the nodes after the right node from the beginning.
+        We process each of the nodes at most once (we don't process the nodes after the right node from the beginning.)
 
         Space Complexity: O(1) since we simply adjust some pointers in the original linked list and only use O(1) additional
         memory for achieving the final result.
@@ -384,26 +385,26 @@ class SinglyLinkedList(LinkedList):
         tail_pointer.next = current_pointer
         return self.head
 
-    def unshift(self, node: SingleNode) -> SingleNode:
+    def unshift(self, node_: SingleNode) -> SingleNode:
         if self.head:
-            return node
-        node.next = self.head
-        return node
+            return node_
+        node_.next = self.head
+        return node_
 
-    def insert(self, node, pos):
+    def insert(self, node_, pos):
         counter = 1
         current = self.head
 
         if pos > 1:
             while current and counter < pos:
                 if counter == pos - 1:
-                    node.next = current.next
-                    current.next = node
+                    node_.next = current.next
+                    current.next = node_
                 current = current.next
                 counter += 1
         elif pos == 1:
-            node.next = self.head
-            self.head = node
+            node_.next = self.head
+            self.head = node_
 
     def display(self):
         print("Displaying data...")
@@ -557,12 +558,12 @@ class SinglyLinkedList(LinkedList):
         for _ in range(1, k):
             a = a.next
 
-        node, a = a, a.next
+        node_, a = a, a.next
 
         while a:
             a, b = a.next, b.next
 
-        node.data, b.data = b.data, node.data
+        node_.data, b.data = b.data, node_.data
 
         return self.head
 
@@ -593,12 +594,12 @@ class SinglyLinkedList(LinkedList):
             current_left.next = right.head
             return left.head
 
-    def move_to_front(self, node: SingleNode):
+    def move_to_front(self, node_: SingleNode):
         current = self.head
         prev = None
         if current:
             # move the pointer down the LinkedList until we reach the node that we want to move to the front
-            while current and current.data != node.data:
+            while current and current.data != node_.data:
                 prev = current
                 current = current.next
 
@@ -611,7 +612,7 @@ class SinglyLinkedList(LinkedList):
             prev.next = current.next
             return
         else:
-            self.head = node
+            self.head = node_
             return
 
     def rotate(self, k: int) -> Optional[SingleNode]:
@@ -646,7 +647,7 @@ class SinglyLinkedList(LinkedList):
 
     def reverse_groups(self, k: int, head: Optional[SingleNode] = None) -> Optional[SingleNode]:
         """
-        Reverses every k groups of a linked list and returns the new head node
+        Reverses every k groups of a linked list and returns the new head node.
         @param head: Node to start reversing from
         @param k: number of groups in the linked list to reverse
         @return: new head node
