@@ -1,7 +1,7 @@
 from typing import AnyStr, Optional, Union, Dict, Any
 from enum import Enum, unique
 from uuid import uuid4
-from .node import Vertex
+from .vertex import Vertex
 
 
 @unique

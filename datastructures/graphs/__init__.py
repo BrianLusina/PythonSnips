@@ -3,7 +3,7 @@ from collections import defaultdict
 from pprint import PrettyPrinter
 from typing import List, Set, Union
 from datastructures.stacks import Stack
-from .node import Vertex
+from .vertex import Vertex
 from .edge import Edge
 
 
