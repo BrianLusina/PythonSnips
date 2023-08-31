@@ -15,6 +15,33 @@ class BinaryTree(Tree):
     def next(self) -> int:
         pass
 
+    @staticmethod
+    def create_tree(elements: List[T]) -> 'BinaryTree':
+        """
+        Factory method to creates a BinaryTree given a list of values
+        If the index of any element in the array is i, the element in the index 2i+1 will become the left child and
+        the element in the index 2i+2 will become the right child. The parent of any element at index is the lower bound
+        of (i-1)/2
+        """
+
+        if not elements:
+            return BinaryTree()
+
+        def level_order(arr: List[T], index: int):
+            node = None
+            if index < len(elements):
+                node = BinaryTreeNode(data=arr[index])
+
+                node.left = level_order(arr, 2 * index + 1)
+                node.right = level_order(arr, 2 * index + 2)
+
+            return node
+
+        root = level_order(elements, 0)
+        tree = BinaryTree(root=root)
+
+        return tree
+
     def height(self) -> int:
         if self.root is None:
             return 0
@@ -372,3 +399,6 @@ class BinaryTree(Tree):
 
         # DFS, initialize sum_hash with prefix sum of 0, occurring once
         return count_paths(defaultdict(int, {0: 1}), 0, self.root)
+
+    def longest_zig_zag(self) -> int:
+        pass

@@ -152,3 +152,6 @@ class BinaryTreeNode(TreeNode):
             return 3
         if (self.left is not None and self.right is None) or (self.right is not None and self.left is None):
             return 2
+
+    def __repr__(self):
+        return f"BinaryTreeNode(data={self.data}, left={self.left}, right={self.right})"
