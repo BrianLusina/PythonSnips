@@ -341,8 +341,16 @@ class BinaryTreeLongestZigZagTest(unittest.TestCase):
 
     def test_1(self):
         """should return 3 for tree=[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]"""
-        elements = [1, None, 1, 1, 1, None, None, 1, 1, None, 1, None, None, None, 1]
-        tree = BinaryTree.create_tree(elements)
+        right_right = BinaryTreeNode(1, left=BinaryTreeNode(1, right=BinaryTreeNode(1, right=BinaryTreeNode(1))),
+                                     right=BinaryTreeNode(1))
+
+        right_left = BinaryTreeNode(1)
+
+        right = BinaryTreeNode(1, left=right_left, right=right_right)
+
+        root = BinaryTreeNode(1, right=right)
+
+        tree = BinaryTree(root=root)
 
         actual = tree.longest_zig_zag()
         expected = 3
@@ -350,19 +358,73 @@ class BinaryTreeLongestZigZagTest(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_2(self):
-        """should return 3 for tree=[5,4,8,11,null,13,4,7,2,null,null,5,1] and target=22"""
-        root = BinaryTreeNode(data=5, left=BinaryTreeNode(4, left=BinaryTreeNode(11, left=BinaryTreeNode(7),
-                                                                                 right=BinaryTreeNode(2)),
-                                                          right=BinaryTreeNode(8, left=BinaryTreeNode(13,
-                                                                                                      left=BinaryTreeNode(
-                                                                                                          5),
-                                                                                                      right=BinaryTreeNode(
-                                                                                                          1)),
-                                                                               right=BinaryTreeNode(4))))
+        """should return 4 for tree=[1,1,1,null,1,null,null,1,1,null,1]"""
+
+        left_right = BinaryTreeNode(1, right=BinaryTreeNode(1), left=(BinaryTreeNode(1, right=BinaryTreeNode(1))))
+        left = BinaryTreeNode(1, right=left_right)
+
+        right = BinaryTreeNode(1)
+
+        root = BinaryTreeNode(data=5, left=left, right=right)
+
         tree = BinaryTree(root=root)
-        target = 22
-        actual = tree.path_sum(target=target)
+
+        actual = tree.longest_zig_zag()
+        expected = 4
+        self.assertEqual(expected, actual)
+
+    def test_3(self):
+        """should return 0 for tree=[1]"""
+        root = BinaryTreeNode(data=1)
+
+        tree = BinaryTree(root=root)
+
+        actual = tree.longest_zig_zag()
+        expected = 0
+        self.assertEqual(expected, actual)
+
+    def test_1_with_stack(self):
+        """should return 3 for tree=[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]"""
+        right_right = BinaryTreeNode(1, left=BinaryTreeNode(1, right=BinaryTreeNode(1, right=BinaryTreeNode(1))),
+                                     right=BinaryTreeNode(1))
+
+        right_left = BinaryTreeNode(1)
+
+        right = BinaryTreeNode(1, left=right_left, right=right_right)
+
+        root = BinaryTreeNode(1, right=right)
+
+        tree = BinaryTree(root=root)
+
+        actual = tree.longest_zig_zag_stack()
         expected = 3
+
+        self.assertEqual(expected, actual)
+
+    def test_2_with_stack(self):
+        """should return 4 for tree=[1,1,1,null,1,null,null,1,1,null,1]"""
+
+        left_right = BinaryTreeNode(1, right=BinaryTreeNode(1), left=(BinaryTreeNode(1, right=BinaryTreeNode(1))))
+        left = BinaryTreeNode(1, right=left_right)
+
+        right = BinaryTreeNode(1)
+
+        root = BinaryTreeNode(data=5, left=left, right=right)
+
+        tree = BinaryTree(root=root)
+
+        actual = tree.longest_zig_zag_stack()
+        expected = 4
+        self.assertEqual(expected, actual)
+
+    def test_3_with_stack(self):
+        """should return 0 for tree=[1]"""
+        root = BinaryTreeNode(data=1)
+
+        tree = BinaryTree(root=root)
+
+        actual = tree.longest_zig_zag_stack()
+        expected = 0
         self.assertEqual(expected, actual)
 
 

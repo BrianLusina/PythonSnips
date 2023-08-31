@@ -401,4 +401,51 @@ class BinaryTree(Tree):
         return count_paths(defaultdict(int, {0: 1}), 0, self.root)
 
     def longest_zig_zag(self) -> int:
-        pass
+        if self.root is None or (self.root.left is None and self.root.right is None):
+            return 0
+
+        self.path_length = 0
+
+        def dfs(node: Optional[BinaryTreeNode], go_left: bool, steps: int):
+            if node is not None:
+                self.path_length = max(self.path_length, steps)
+                if go_left:
+                    dfs(node.left, False, steps + 1)
+                    dfs(node.right, True, 1)
+                else:
+                    dfs(node.left, False, 1)
+                    dfs(node.right, True, steps + 1)
+
+        dfs(self.root, False, 0)
+        dfs(self.root, True, 0)
+
+        return self.path_length
+
+    def longest_zig_zag_stack(self) -> int:
+        if self.root is None or (self.root.left is None and self.root.right is None):
+            return 0
+
+        path_length = 0
+        stack = [(self.root, 0, None)]
+
+        while stack:
+            node, length, last = stack.pop()
+            if last is None:
+                if node.left is not None:
+                    stack.append((node.left, length + 1, "left"))
+                if node.right is not None:
+                    stack.append((node.right, length + 1, "right"))
+            elif last == "left":
+                if node.left is not None:
+                    stack.append((node.left, 1, "left"))
+                if node.right is not None:
+                    stack.append((node.right, length + 1, "right"))
+                path_length = max(path_length, length)
+            elif last == "right":
+                if node.right is not None:
+                    stack.append((node.right, 1, "right"))
+                if node.left is not None:
+                    stack.append((node.left, length + 1, "left"))
+                path_length = max(path_length, length)
+
+        return path_length
