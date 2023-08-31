@@ -203,3 +203,78 @@ to it. It would take up O(n) space in that case.
 - Tree
 - Depth First Search
 - Binary Tree
+
+--- 
+
+## Right View of Binary Tree
+
+Given a binary tree A of integers. Return an array of integers representing the right view of the Binary tree.
+
+Right view of a Binary Tree: is a set of nodes visible when the tree is visited from Right side.
+
+Return an integer array denoting the right view of the binary tree A.
+
+> Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you
+> can see ordered from top to bottom.
+
+```plain
+Example Input
+Input 1:
+
+        1
+      /   \
+     2    3
+    / \  / \
+   4   5 6  7
+  /
+ 8 
+ 
+Output 1:
+
+[1, 3, 7, 8]
+
+Input 2:
+
+    1
+   /  \
+  2    3
+   \
+    4
+     \
+      5
+Output 2:
+[1, 3, 4, 5]
+```
+
+### Solution
+
+#### Approach: Breadth-First Search
+
+A level order traversal, selecting the far right node in each level makes a lot of sense. We can perform a level order
+traversal using a queue and performing a breadth-first search.
+
+A level order traversal can be started by placing the root into the queue. Then for each iteration, we can loop over the
+length of the queue,n. By looping over n it means we only ever loop over the current level, meaning we can add nodes to
+the queue, and will never reach them as
+our for loop will stop, maintaining a perfect level order traversal.
+
+We can place the nodes from left to right, or right to left. If we place nodes right first, then left. Then on each
+iteration, our rightmost node will be first in the queue. If we place them left to right, then on each iteration the
+rightmost node will be last in our queue.
+
+Time Complexity: O(n) we have to process each node once. If we only tried to process the right node, and skip nodes when
+the rightmost node exists, we would be skipping nodes in the left subtree in the cases where the right subtree is
+shorter in height than the left subtree.
+
+Space Complexity (O(n). In the worst case, that is a full binary tree, the last level of our traversal will fill our
+queue with n/2 nodes, leading us to a O(n) space complexity.
+
+### Related Topics
+
+- Binary Tree
+- Tree
+- Dynamic Programming
+- Depth First Search
+- Breadth-first Search
+
+---

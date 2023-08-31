@@ -428,5 +428,132 @@ class BinaryTreeLongestZigZagTest(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
+class BinaryTreeRightViewTest(unittest.TestCase):
+    def test_1(self):
+        """should return list of 1 element with root data for tree with root along"""
+        root = BinaryTreeNode(1)
+
+        tree = BinaryTree(root=root)
+
+        expected = [1]
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+    def test_2(self):
+        """should return empty list for tree with no root"""
+        tree = BinaryTree()
+
+        expected = []
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+    def test_3(self):
+        """should return list [1, 3, 7, 8] for tree:
+                1
+              /   \
+             2    3
+            / \  / \
+           4   5 6  7
+          /
+         8
+        """
+
+        left = BinaryTreeNode(2, left=BinaryTreeNode(4, left=BinaryTreeNode(8)), right=BinaryTreeNode(5))
+        right = BinaryTreeNode(3, left=BinaryTreeNode(6), right=BinaryTreeNode(7))
+
+        root = BinaryTreeNode(1, left=left, right=right)
+
+        tree = BinaryTree(root)
+
+        expected = [1, 3, 7, 8]
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+    def test_4(self):
+        """should return list [1, 3, 4, 5] for tree:
+            1
+           /  \
+          2    3
+           \
+            4
+             \
+              5
+        """
+
+        left = BinaryTreeNode(2, right=BinaryTreeNode(4, right=BinaryTreeNode(5)))
+        right = BinaryTreeNode(3)
+
+        root = BinaryTreeNode(1, left=left, right=right)
+
+        tree = BinaryTree(root)
+
+        expected = [1, 3, 4, 5]
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+    def test_5(self):
+        """should return list [1, 3, 4] for tree:
+            1
+           /  \
+          2    3
+           \     \
+            5     4
+        """
+
+        left = BinaryTreeNode(2, right=BinaryTreeNode(5))
+        right = BinaryTreeNode(3, right=BinaryTreeNode(4))
+
+        root = BinaryTreeNode(1, left=left, right=right)
+
+        tree = BinaryTree(root)
+
+        expected = [1, 3, 4]
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+    def test_6(self):
+        """should return list [1, 3] for tree:
+            1
+             \
+              3
+        """
+
+        right = BinaryTreeNode(3)
+
+        root = BinaryTreeNode(1, right=right)
+
+        tree = BinaryTree(root)
+
+        expected = [1, 3]
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+    def test_7(self):
+        """should return list [3, 20, 7] for tree:
+            3       <-  3
+           / \
+          9   20    <-  20
+             /  \
+            15   7  <-  7
+        """
+        left = BinaryTreeNode(9)
+        right = BinaryTreeNode(20, left=BinaryTreeNode(15), right=BinaryTreeNode(7))
+
+        root = BinaryTreeNode(3, right=right, left=left)
+
+        tree = BinaryTree(root)
+
+        expected = [3, 20, 7]
+        actual = tree.right_view()
+
+        self.assertEqual(expected, actual)
+
+
 if __name__ == '__main__':
     unittest.main()

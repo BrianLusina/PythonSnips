@@ -11,12 +11,12 @@ def find_max_length(nums: List[int]) -> int:
     Complexity Analysis:
 
     - Time complexity : O(n). The entire array is traversed only once.
-    - Space complexity : O(n). Maximum size of the HashMap mapmap will be n, if all the elements are either 1 or 0.
+    - Space complexity : O(n). Maximum size of the HashMap map will be n, if all the elements are either 1 or 0.
 
     @param nums: Binary Array
     @return: Maximum length of contiguous sub array
     """
-    # initializing map to (0, -1) is to avoid the edge cases like [0, 1] when you only have one zero and one.
+    # initializing map to (0: -1) is to avoid the edge cases like [0, 1] when you only have one zero and one.
     hashmap = {0: -1}
     max_len, count = 0, 0
 

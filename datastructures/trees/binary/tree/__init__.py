@@ -1,5 +1,5 @@
 from typing import Optional, List, Any, Generator, Dict
-from collections import defaultdict
+from collections import defaultdict, deque
 
 from datastructures.stacks import Stack
 from datastructures.trees import Tree, TreeNode, T
@@ -449,3 +449,34 @@ class BinaryTree(Tree):
                 path_length = max(path_length, length)
 
         return path_length
+
+    def right_view(self) -> List[T]:
+        """Return a list of values representing the right view of a binary tree
+
+        Returns:
+            List: list of values in each node
+        """
+        if self.root is None:
+            return []
+
+        if self.root.left is None and self.root.right is None:
+            return [self.root.data]
+
+        result = []
+
+        queue = deque([self.root])
+        while queue:
+            level_length = len(queue)
+
+            result.append(queue[0].data)
+
+            for x in range(level_length):
+                node = queue.popleft()
+
+                if node.right is not None:
+                    queue.append(node.right)
+
+                if node.left is not None:
+                    queue.append(node.left)
+
+        return result
