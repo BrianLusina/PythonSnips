@@ -10,13 +10,13 @@ class RgbToHexTestCase(unittest.TestCase):
         return "".join(hex(min(255, max(0, x)))[2:].zfill(2).upper() for x in args)
 
     def test(self):
-        self.assertEquals(rgb_to_hex(0, 0, 0), "000000", "testing zero values")
-        self.assertEquals(rgb_to_hex(1, 2, 3), "010203", "testing near zero values")
-        self.assertEquals(rgb_to_hex(255, 255, 255), "FFFFFF", "testing max values")
-        self.assertEquals(
+        self.assertEqual(rgb_to_hex(0, 0, 0), "000000", "testing zero values")
+        self.assertEqual(rgb_to_hex(1, 2, 3), "010203", "testing near zero values")
+        self.assertEqual(rgb_to_hex(255, 255, 255), "FFFFFF", "testing max values")
+        self.assertEqual(
             rgb_to_hex(254, 253, 252), "FEFDFC", "testing near max values"
         )
-        self.assertEquals(
+        self.assertEqual(
             rgb_to_hex(-20, 275, 125), "00FF7D", "testing out of range values"
         )
 
@@ -25,7 +25,7 @@ class RgbToHexTestCase(unittest.TestCase):
             r = randint(0, 255) + (-1) ** randint(1, 2) * randint(0, 255)
             g = randint(0, 255) + (-1) ** randint(1, 2) * randint(0, 255)
             b = randint(0, 255) + (-1) ** randint(1, 2) * randint(0, 255)
-            self.assertEquals(
+            self.assertEqual(
                 rgb_to_hex(r, g, b),
                 self.test_rgb(r, g, b),
                 "Testing random values: " + " ,".join(map(str, [r, g, b])),

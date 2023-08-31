@@ -22,7 +22,7 @@ class Int32ToIpv4TestCase(unittest.TestCase):
                 ]
             )
 
-            self.assertEquals(int32_to_ip(test_n), expected)
+            self.assertEqual(int32_to_ip(test_n), expected)
 
 
 if __name__ == "__main__":

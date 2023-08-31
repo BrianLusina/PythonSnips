@@ -22,4 +22,4 @@ BASIC_TESTS = [
 class Test(unittest.TestCase):
     def test1(self):
         for input_str, result in BASIC_TESTS:
-            self.assertEquals(result, re_ordering(input_str))
+            self.assertEqual(result, re_ordering(input_str))

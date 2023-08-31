@@ -13,19 +13,19 @@ class BackspacesTestCase(unittest.TestCase):
             clean_string("831####jns###s#cas/*####-5##s##6+yqw87e##hfklsd-=-28##fds##"),
             "6+yqw8hfklsd-=-f",
         )
-        self.assertEquals(
+        self.assertEqual(
             clean_string("######831###dhkj####jd#dsfsdnjkf###d####dasns"), "jdsfdasns"
         )
-        self.assertEquals(clean_string(""), "")
-        self.assertEquals(clean_string("#######"), "")
-        self.assertEquals(
+        self.assertEqual(clean_string(""), "")
+        self.assertEqual(clean_string("#######"), "")
+        self.assertEqual(
             clean_string(
                 "####gfdsgf##hhs#dg####fjhsd###dbs########afns#######sdanfl##db#####s#a"
             ),
             "sa",
         )
-        self.assertEquals(clean_string("#hskjdf#gd"), "hskjdgd")
-        self.assertEquals(clean_string("hsk48hjjdfgd"), "hsk48hjjdfgd")
+        self.assertEqual(clean_string("#hskjdf#gd"), "hskjdgd")
+        self.assertEqual(clean_string("hsk48hjjdfgd"), "hsk48hjjdfgd")
 
     def test_random(self):
         from random import choice, randint
@@ -43,7 +43,7 @@ class BackspacesTestCase(unittest.TestCase):
                     exp.append(c)
             exp = "".join(exp)
 
-            self.assertEquals(clean_string(s), exp)
+            self.assertEqual(clean_string(s), exp)
 
 
 if __name__ == "__main__":

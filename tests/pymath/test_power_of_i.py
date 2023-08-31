@@ -12,7 +12,7 @@ class PowerOfITestCase(unittest.TestCase):
     def test_random_tests(self):
         for i in range(200):
             num = random.randint(1, 500)
-            self.assertEquals(pofi(num), self.solution(num))
+            self.assertEqual(pofi(num), self.solution(num))
 
     def test_basic_tests(self):
         self.assertEqual(pofi(0), "1")

@@ -9,7 +9,7 @@ class CascadingSubsetsTestCase(unittest.TestCase):
         lst = [3, 5, 8, 13]
         expected = [[3], [5], [8], [13]]
         actual = each_cons(lst, 1)
-        self.assertEquals(expected, actual)
+        self.assertEqual(expected, actual)
 
     def test_case2(self):
         """Should return cascading lists of 2 elements"""

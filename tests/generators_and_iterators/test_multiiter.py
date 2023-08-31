@@ -7,13 +7,13 @@ from generators_and_iterators.iterators.multiiter import multiiter
 @unittest.skip
 class MultiIterTests(unittest.TestCase):
     def test1(self):
-        self.assertEquals(multiiter(0), [])
+        self.assertEqual(multiiter(0), [])
 
     def test2(self):
-        self.assertEquals(multiiter(2), (0,), (1,))
+        self.assertEqual(multiiter(2), (0,), (1,))
 
     def test3(self):
-        self.assertEquals(
+        self.assertEqual(
             multiiter(2, 3),
             [
                 (0, 0),
@@ -26,7 +26,7 @@ class MultiIterTests(unittest.TestCase):
         )
 
     def test4(self):
-        self.assertEquals(
+        self.assertEqual(
             multiiter(3, 2),
             [
                 (0, 0),

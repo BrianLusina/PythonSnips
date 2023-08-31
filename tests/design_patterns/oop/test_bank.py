@@ -18,11 +18,11 @@ class CurrentAccountTestCases(unittest.TestCase):
 
     def test_current_account_can_deposit_valid_amounts(self):
         balance = self.ca.deposit(1500)
-        self.assertEquals(balance, 1500)
+        self.assertEqual(balance, 1500)
 
     def test_current_account_cannot_withdraw_more_than_current_balance(self):
         message = self.ca.withdraw(1500)
-        self.assertEquals(
+        self.assertEqual(
             message,
             "Cannot withdraw beyond the current account balance",
             msg="No overdrafts",
@@ -31,7 +31,7 @@ class CurrentAccountTestCases(unittest.TestCase):
     def test_current_account_can_withdraw_valid_cash_amounts(self):
         self.ca.deposit(23001)
         self.ca.withdraw(437)
-        self.assertEquals(
+        self.assertEqual(
             self.ca.balance, 22564, msg="Incorrect balance after withdrawal"
         )
 
@@ -74,13 +74,13 @@ class SavingsAccountTestCases(unittest.TestCase):
     def test_savings_account_can_deposit_valid_amounts(self):
         init_balance = self.sa.balance
         balance = self.sa.deposit(1500)
-        self.assertEquals(
+        self.assertEqual(
             balance, (1500 + init_balance), msg="Balance does not match deposit"
         )
 
     def test_savings_account_cannot_withdraw_more_than_current_balance(self):
         message = self.sa.withdraw(1500)
-        self.assertEquals(
+        self.assertEqual(
             message,
             "Cannot withdraw beyond the current account balance",
             msg="No overdrafts",
@@ -89,6 +89,6 @@ class SavingsAccountTestCases(unittest.TestCase):
     def test_savings_account_can_withdraw_valid_amounts_successfully(self):
         self.sa.deposit(2300)
         self.sa.withdraw(543)
-        self.assertEquals(
+        self.assertEqual(
             2257, self.sa.balance, msg="Incorrect balance after withdrawal"
         )

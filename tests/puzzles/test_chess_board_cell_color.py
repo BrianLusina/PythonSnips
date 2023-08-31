@@ -14,7 +14,7 @@ class ChessBoardCellColorTestCase(unittest.TestCase):
         ]
 
         for inp, exp in tests:
-            self.assertEquals(chess_board_cell_color(*inp), exp)
+            self.assertEqual(chess_board_cell_color(*inp), exp)
 
     def test_random(self):
         def get_position(occupied=None):
@@ -36,7 +36,7 @@ class ChessBoardCellColorTestCase(unittest.TestCase):
         for _ in range(100):
             bishop = get_position()
             pawn = get_position(bishop)
-            self.assertEquals(
+            self.assertEqual(
                 chess_board_cell_color(bishop, pawn), reference(bishop, pawn)
             )
 

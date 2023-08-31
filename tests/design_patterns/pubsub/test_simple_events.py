@@ -45,7 +45,7 @@ class SimpleEventsTestCase(unittest.TestCase):
         e.subscribe(f2)
         e.emit(3, "third")
 
-        self.assertEquals(
+        self.assertEqual(
             f2.calls, 2, "unsubscribed handler calls after re-subscription and emit"
         )
 
