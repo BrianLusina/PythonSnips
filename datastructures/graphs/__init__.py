@@ -1,13 +1,15 @@
 from abc import ABC, abstractmethod
 from collections import defaultdict
 from pprint import PrettyPrinter
-from typing import List, Set, Union
+from typing import List, Set, Union, Generic, TypeVar
 from datastructures.stacks import Stack
 from .vertex import Vertex
 from .edge import Edge
 
+T = TypeVar("T")
 
-class Graph(ABC):
+
+class Graph(ABC, Generic[T]):
     """
     Represents a Graph Data structure
     """
@@ -109,8 +111,7 @@ class Graph(ABC):
 
         return list(stack.stack) if is_possible else []
 
-    @property
-    def graph(self):
+    def print(self):
         pretty_print = PrettyPrinter()
         pretty_print.pprint(self.adjacency_list)
 

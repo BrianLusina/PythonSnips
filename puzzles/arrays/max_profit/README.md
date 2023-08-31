@@ -7,6 +7,7 @@ sell that stock.
 
 Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
+```plain
 Example 1:
 
 Input: prices = [7,1,5,3,6,4]
@@ -18,6 +19,7 @@ Example 2:
 Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
+```
 
 ----
 
@@ -30,6 +32,7 @@ However, you can buy it then immediately sell it on the same day.
 
 Find and return the maximum profit you can achieve.
 
+```plain
 Example 1:
 
 Input: prices = [7,1,5,3,6,4]
@@ -50,6 +53,7 @@ Example 3:
 Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
+```
 
 ---
 
@@ -61,6 +65,7 @@ Find the maximum profit you can achieve. You may complete at most two transactio
 
 Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
 
+```plain
 Example 1:
 
 Input: prices = [3,3,5,0,0,3,1,4]
@@ -79,3 +84,4 @@ Example 3:
 Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
+```

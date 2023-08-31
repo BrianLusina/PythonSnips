@@ -18,6 +18,13 @@ class ContainerWithMostWaterTestCases(unittest.TestCase):
         actual = max_area(height)
         self.assertEqual(expected, actual)
 
+    def test_three(self):
+        """should return 6 from height=[1,5, 4, 3]"""
+        height = [1, 5, 4, 3]
+        expected = 6
+        actual = max_area(height)
+        self.assertEqual(expected, actual)
+
 
 if __name__ == '__main__':
     unittest.main()

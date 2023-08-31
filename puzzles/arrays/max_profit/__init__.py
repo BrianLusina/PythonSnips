@@ -8,14 +8,14 @@ def max_profit(prices: List[int]) -> int:
     if prices is None or len(prices) < 2:
         return 0
 
-    min_price = prices[0]
+    start_price = prices[0]
     current_max_profit = 0
 
     for price in prices:
-        if price < min_price:
-            min_price = price
-        elif price - min_price > current_max_profit:
-            current_max_profit = price - min_price
+        if price < start_price:
+            start_price = price
+        elif price - start_price > current_max_profit:
+            current_max_profit = price - start_price
 
     return current_max_profit
 
@@ -68,24 +68,28 @@ def max_profit_2(prices: List[int]) -> int:
 
 
 def max_profit_3(prices: List[int]) -> int:
-    n = len(prices)
-    if prices is None or n < 2:
+    if not prices:
         return 0
 
-    forward_profit, backward_profit = [0] * n, [0] * n
+    number_of_prices = len(prices)
+
+    if number_of_prices < 2:
+        return 0
+
+    forward_profit, backward_profit = [0] * number_of_prices, [0] * number_of_prices
     earliest_price = prices[0]
 
-    for day in range(1, n):
+    for day in range(1, number_of_prices):
         earliest_price = min(prices[day], earliest_price)
         forward_profit[day] = max(forward_profit[day - 1], prices[day] - earliest_price)
 
     latest_price = prices[-1]
-    for day in range(n - 2, -1, -1):
+    for day in range(number_of_prices - 2, -1, -1):
         latest_price = max(latest_price, prices[day])
         backward_profit[day] = max(backward_profit[day + 1], latest_price - prices[day])
 
     profit = 0
-    for day in range(n):
+    for day in range(number_of_prices):
         profit = max(profit, forward_profit[day] + backward_profit[day])
 
     return profit
