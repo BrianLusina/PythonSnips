@@ -560,5 +560,5 @@ class DoublyLinkedList(LinkedList):
     def rotate(self, k: int):
         pass
 
-    def reverse_groups(self, k: int, head: Optional[Node] = None):
+    def reverse_groups(self, k: int):
         pass

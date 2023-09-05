@@ -39,10 +39,16 @@ class LinkedList:
         self.head = None
 
     def __iter__(self):
-        node = self.head
-        while node:
-            yield node.data
-            node = node.next
+        head = self.head
+
+        if head:
+            yield head.data
+
+        if head.next:
+            node = head.next
+            while node:
+                yield node.data
+                node = node.next
 
     @abstractmethod
     def __str__(self):
@@ -579,7 +585,7 @@ class LinkedList:
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
-    def reverse_groups(self, k: int, head: Optional[Node] = None):
+    def reverse_groups(self, k: int):
         """
         Reverses every k groups of a linked list
         """

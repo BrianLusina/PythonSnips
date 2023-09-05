@@ -1,4 +1,4 @@
-from typing import Any, Union, Optional
+from typing import Any, Union, Optional, Tuple
 
 from datastructures.stacks import Stack
 from .node import SingleNode
@@ -645,43 +645,90 @@ class SinglyLinkedList(LinkedList):
 
         return self.head
 
-    def reverse_groups(self, k: int, head: Optional[SingleNode] = None) -> Optional[SingleNode]:
+    def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
         Reverses every k groups of a linked list and returns the new head node.
-        @param head: Node to start reversing from
         @param k: number of groups in the linked list to reverse
         @return: new head node
         """
-        if not head:
-            head = self.head
 
-        if k == 0:
-            return head
+        def reverse_list(head_node: SingleNode) -> SingleNode:
+            # track previous node, so we can point our next pointer to it
+            previous = None
+            # track node to loop through
+            current_node = head_node
 
-        if head is None:
+            while current_node:
+                # track the next node to not lose it while adjusting pointers
+                nxt = current_node.next
+
+                # set the next pointer to the node behind it, previous
+                current_node.next = previous
+
+                # adjust the new previous node to the current node for subsequent loops
+                previous = current_node
+
+                # move our node pointer up to the next node in front of it
+                current_node = nxt
+
+            # return the new tail of the k-group which is our head
+            return head_node
+
+        if k <= 1:
+            return self.head
+
+        if self.head is None:
             return None
 
-        current = head
-        prev, next_ = None, None
-        count = 0
+        # dummy node to simplify return
+        dummy = SingleNode(None, self.head)
 
-        # Reverse first k nodes of the linked list
-        while current and count < k:
-            next_ = current.next
-            current.next = prev
-            prev = current
-            current = next_
-            count += 1
+        # tail of previous k-group to fix our linked list pointers
+        tail = dummy
 
-        # next_ is now a pointer to (k+1)th node
-        # recursively call for the list starting
-        # from current. And make rest of the list as
-        # next of first node
-        if next_:
-            head.next = self.reverse_groups(k, next_)
+        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list, current_head
+        tracking_node, current_head = self.head, self.head
 
-        # prev is new head
-        return prev
+        # while tracking node is tracking a node and hasn't reached end
+        while tracking_node:
+            # set count of current group, we start with a head so count = 1
+            count = 1
+            # loop until count reaches k nodes
+            while count < k:
+                # check if node hasn't reached end of list
+                if tracking_node:
+                    # move node up & increment counter
+                    tracking_node = tracking_node.next
+                    count += 1
+                else:
+                    # reached end without enough nodes, return early
+                    return dummy.next
+
+            # only perform below if we have enough nodes inside k-group and haven't reached end. node is currently at the
+            # tail of the k-group after reversal it will be the head of the k-group
+            if tracking_node:
+                # track head of the next k group
+                nxt = tracking_node.next if tracking_node else None
+
+                # sever the list so we can reverse it
+                tracking_node.next = None
+
+                # reverse list, which will return new tail
+                new_tail = reverse_list(current_head)
+
+                # re-attach our new tail back to the remaining linked list
+                new_tail.next = nxt
+
+                # setup prev linked list to node, which was once the k-group's tail, but after reversal became the
+                # k-group's head
+                tail.next = tracking_node
+
+                # update previous k-group tail to be the current groups tail
+                tail = new_tail
+                tracking_node, current_head = nxt, nxt
+
+        # return head
+        return dummy.next
 
     def remove_tail(self):
         pass
