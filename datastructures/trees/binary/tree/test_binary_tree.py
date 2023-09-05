@@ -555,5 +555,49 @@ class BinaryTreeRightViewTest(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
+class BinaryTreeMaxLevelSumTests(unittest.TestCase):
+    def test_1_returns_1(self):
+        """should return 1 for tree [1]"""
+        root = BinaryTreeNode(1)
+        tree = BinaryTree(root=root)
+
+        actual = tree.max_level_sum()
+        expected = 1
+        self.assertEqual(expected, actual)
+
+    def test_null_returns_0(self):
+        """should return 0 for tree [null]"""
+        tree = BinaryTree()
+
+        actual = tree.max_level_sum()
+        expected = 0
+        self.assertEqual(expected, actual)
+
+    def test_1_7_0_7_neg8_null_null_returns_2(self):
+        """should return 2 for tree 1,7,0,7,-8,null,null]"""
+        left = BinaryTreeNode(7, left=BinaryTreeNode(7), right=BinaryTreeNode(-8))
+        right = BinaryTreeNode(0)
+        root = BinaryTreeNode(1, left=left, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = tree.max_level_sum()
+        expected = 2
+        self.assertEqual(expected, actual)
+
+    def test_neg100_neg200_neg300_neg20_neg5_neg10_null_returns_3(self):
+        """should return 3 for tree [-100,-200,-300,-20,-5,-10,null]"""
+        left = BinaryTreeNode(-200, left=BinaryTreeNode(-20), right=BinaryTreeNode(-5))
+
+        right = BinaryTreeNode(-300, left=BinaryTreeNode(-10))
+
+        root = BinaryTreeNode(-100, left=left, right=right)
+
+        tree = BinaryTree(root=root)
+
+        actual = tree.max_level_sum()
+        expected = 3
+        self.assertEqual(expected, actual)
+
+
 if __name__ == '__main__':
     unittest.main()

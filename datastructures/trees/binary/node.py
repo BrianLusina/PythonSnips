@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 from datastructures.trees import TreeNode, T
 
@@ -15,7 +15,6 @@ class BinaryTreeNode(TreeNode):
         super().__init__(data)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
-        self.children = [self.left, self.right]
 
     def insert_node(self, data: T) -> None:
         """
@@ -143,15 +142,20 @@ class BinaryTreeNode(TreeNode):
             self.right = new_node
         return self.right
 
-    def __len__(self) -> int:
+    @property
+    def children(self) -> List['BinaryTreeNode']:
+        """Returns children of this node.
+        Returns:
+            List: children of this node in a list
         """
-        Returns the length of this node. Length of this node is the node itself and it's children. If it has only
-        a left node, then the length is 2, similar case for only having a right node
-        """
-        if self.left is not None and self.right is not None:
-            return 3
-        if (self.left is not None and self.right is None) or (self.right is not None and self.left is None):
-            return 2
+        if self.left and self.right:
+            return [self.left, self.right]
+        if self.left and not self.right:
+            return [self.left]
+        if not self.left and self.right:
+            return [self.right]
+        if not self.left and not self.right:
+            return []
 
     def __repr__(self):
         return f"BinaryTreeNode(data={self.data}, left={self.left}, right={self.right})"

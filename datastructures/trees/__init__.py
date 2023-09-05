@@ -16,7 +16,6 @@ class TreeNode(Generic[T]):
         Value here can be anything
         """
         self.data = value
-        self.children: List[TreeNode] = []
 
 
 class Tree(ABC, Generic[T]):
@@ -131,7 +130,7 @@ class Tree(ABC, Generic[T]):
         @return: The number of good nodes
         """
         raise NotImplementedError("not yet implemented")
-    
+
     @abstractmethod
     def path_sum(self, target: T) -> int:
         """Returns the number of paths where the sum of the values along the path equals target
@@ -141,5 +140,13 @@ class Tree(ABC, Generic[T]):
 
         Returns:
             int: The number of paths along which the values equal the target
+        """
+        raise NotImplementedError("not yet implemented")
+
+    def max_level_sum(self) -> int:
+        """Returns the smallest level x such that the sum of all the values of nodes at level x is maximal
+
+        Returns:
+            int: maximum value at level x
         """
         raise NotImplementedError("not yet implemented")

@@ -480,3 +480,37 @@ class BinaryTree(Tree):
                     queue.append(node.left)
 
         return result
+
+    def max_level_sum(self) -> int:
+        """Uses BFS to find the highest level with the maximum sum of all the nodes at that level"""
+        if self.root is None:
+            return 0
+
+        if self.root.left is None and self.root.right is None:
+            return self.root.data
+
+        maximum_sum = self.root.data
+        level = 0
+        smallest_level = 1
+
+        levels = deque()
+        levels.append(self.root)
+
+        while levels:
+            level += 1
+            sum_at_current_level_sum = 0
+
+            for _ in range(len(levels)):
+                node = levels.popleft()
+                sum_at_current_level_sum += node.data
+
+                if node.left:
+                    levels.append(node.left)
+                if node.right:
+                    levels.append(node.right)
+
+            if sum_at_current_level_sum > maximum_sum:
+                smallest_level = level
+                maximum_sum = sum_at_current_level_sum
+
+        return smallest_level
