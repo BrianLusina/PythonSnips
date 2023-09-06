@@ -1,8 +1,25 @@
 from typing import List
 
 
-def is_palindrome(a):
+def is_palindrome(a) -> bool:
     return str(a) == str(a)[::-1]
+
+
+def get_longest_palindrome(s: str, start_index:int, end_index:int) -> str:
+    """Gets the longest palindrome substring from a given string from a start index to an end index
+
+    Args:
+        s (str): string to search for palindrome substrings
+        start_index (int): start index to start search from
+        end_index (int): end index to end search for
+
+    Returns:
+        str: longest palindrome substring
+    """
+    while 0 <= start_index and end_index < len(s) and s[start_index] == s[end_index]:
+        start_index -= 1
+        end_index += 1
+    return s[start_index + 1: end_index]
 
 
 def smallest_palindrome(max_factor, min_factor=0):
@@ -38,7 +55,7 @@ def generate_palindromes(max_factor, min_factor):
 
 def largest_palindrome(max_factor, min_factor=0):
     """
-    Gets the maximum palindromr product from the generator function
+    Gets the maximum palindrome product from the generator function
     using the key to only fetch the value from the operation
     :param max_factor: The maximum factor or number to use
     :param min_factor: the minimum number to use, which defaults to 0 if there is no input

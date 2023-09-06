@@ -1,7 +1,9 @@
-from typing import List
+from typing import List, TypeVar, Generic
+
+T = TypeVar("T")
 
 
-def selection_sort(numbers: List[int]) -> List[int]:
+def selection_sort(numbers: List[Generic[T]]) -> List[Generic[T]]:
     for x in range(len(numbers)):
         lowest_number_idx = x
 
