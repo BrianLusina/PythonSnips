@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.binary_search import binary_search
+from . import binary_search
 
 
 class BinarySearchTests(unittest.TestCase):
