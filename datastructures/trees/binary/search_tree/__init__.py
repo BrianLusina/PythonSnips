@@ -36,6 +36,70 @@ class BinarySearchTree(BinaryTree):
 
         return insert_helper(data, self.root)
 
+    def delete_node(self, key: T) -> Optional[BinaryTreeNode]:
+        """Deletes a node from the Binary Search Tree. If the node is found, it is deleted and the tree re-ordered to
+        remain a valid binary search tree.
+
+        This will be typically an O(log(n) operation because deletion requires a search plus a few extra steps to deal
+        with any hanging children.
+
+        Args:
+            key (T): Value to delete from binary search tree
+
+        Return:
+            BinaryTreeNode: New root of binary search tree
+        """
+        # nothing to delete here as root is none
+        if self.root is None:
+            return self.root
+
+        def delete_helper(value: T, node: Optional[BinaryTreeNode]) -> Optional[BinaryTreeNode]:
+            # base case when we have hit the bottom of the tree, and the parent node has no children
+            if node is None:
+                return None
+            # if the value to delete is less than or greater than the current node, we set the left or right child
+            # respectively to be the return value of a recursive call of this very method on the current node's left or
+            # right subtree
+            elif value < node.data:
+                node.left = delete_helper(value, node.left)
+
+                # we return the current node (and its subtree if existent) to be used as the new value of its parent's
+                # left or right child
+                return node
+            elif value > node.data:
+                node.right = delete_helper(value, node.right)
+                return node
+            # if the current node is the one we want to delete
+            elif value == node.data:
+                # if the current node has no left child, we delete it by returning it's right child (and it's subtree if
+                # existent) to be its parent's new subtree
+                if node.left is None:
+                    return node.right
+                # if the node has no left nor right child, this ends up being None as per the first line of code in this
+                # function
+                elif node.right is None:
+                    return node.left
+                # if the current node has 2 children, we delete the current node by calling the lift function, which
+                # changes the current node's value to the value of it's successor node
+                else:
+                    node.right = lift(node.right, node)
+                    return node
+
+        def lift(node: BinaryTreeNode, node_to_delete: BinaryTreeNode) -> BinaryTreeNode:
+            # if the current node of this function has a left child, we recursively call this function to continue down
+            # the left subtree to find the successor node
+            if node.left is not None:
+                node.left = lift(node.left, node_to_delete)
+                return node
+            # if the current node has no left child, that means the current node of this function is the successor node
+            # and we take its value and make it the new value of the node that we are deleting.
+            else:
+                node_to_delete.data = node.data
+                # we return the successor node's right child to be now used as its parent's left child
+                return node.right
+
+        return delete_helper(key, self.root)
+
     @property
     def height(self) -> int:
         if self.root is None:

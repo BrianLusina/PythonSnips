@@ -487,7 +487,7 @@ class BinaryTree(Tree):
             return 0
 
         if self.root.left is None and self.root.right is None:
-            return self.root.data
+            return 1
 
         maximum_sum = self.root.data
         level = 0
