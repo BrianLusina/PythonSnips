@@ -1,5 +1,5 @@
 import unittest
-from datastructures.arrays.rotation.left_rotation import rotate_left
+from . import rotate_left
 
 
 class LeftRotationTestCase(unittest.TestCase):

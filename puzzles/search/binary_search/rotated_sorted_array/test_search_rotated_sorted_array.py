@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.binary_search.rotated_sorted_array import search
+from . import search
 
 
 class SearchRotatedSortedArrayTestCases(unittest.TestCase):

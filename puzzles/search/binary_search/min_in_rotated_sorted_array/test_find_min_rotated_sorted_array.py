@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.binary_search.min_in_rotated_sorted_array import find_min
+from . import find_min
 
 
 class TestFinMinInRotatedSortedArray(unittest.TestCase):

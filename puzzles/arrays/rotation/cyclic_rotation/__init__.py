@@ -1,9 +1,20 @@
-def cyclic_rotation(a: list, k: int) -> list:
-    """
-    Rotates an integers in array a by k number of times. Moving each element k positions to its right
-    :param: a array of integers
-    :param: k integer positions to move each element
-    :returns: list of new integers moved k positions
+from typing import List
+
+
+def cyclic_rotation(a: List, k: int) -> List:
+    """Rotates an integers in array a by k number of times. Moving each element k positions to its right with the
+    original list unmodified
+
+    Complexity:
+        Time: O(n) where n is the number of elements in the list
+        Space: O(n) a new list is created from rotating the original list. This results in extra space being used of size
+        n which is the original list's size
+
+    Args:
+        a (List): list of values to rotate
+        k (int): how many rotations to perform
+    Returns:
+        List: rotated list
     """
 
     length = len(a)
@@ -35,5 +46,5 @@ def cyclic_rotation_2(nums: list, k: int) -> list:
         return nums
 
     k = k % length
-    nums[:] = nums[length - k :] + nums[: length - k]
+    nums[:] = nums[length - k:] + nums[: length - k]
     return nums

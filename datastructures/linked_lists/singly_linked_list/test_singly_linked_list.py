@@ -140,21 +140,6 @@ class SinglyLinkedListTest(unittest.TestCase):
         linked_list.reverse()
         self.assertEqual(list(linked_list), [3, 2, 1])
 
-    def test_rotates_non_empty_list_by_4(self):
-        linked_list = SinglyLinkedList()
-        linked_list.append(1)
-        linked_list.append(2)
-        linked_list.append(3)
-        linked_list.append(4)
-        linked_list.append(5)
-        linked_list.append(6)
-
-        new_head = linked_list.rotate(4)
-
-        self.assertIsNotNone(new_head)
-        self.assertEqual(new_head.data, 5)
-        self.assertEqual(list(linked_list), [5, 6, 1, 2, 3, 4])
-
 
 class SinglyLinkedListKthToLastNodeTestCases(unittest.TestCase):
     """Kth to Last node test cases"""

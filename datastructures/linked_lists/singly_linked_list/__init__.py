@@ -616,34 +616,36 @@ class SinglyLinkedList(LinkedList):
             return
 
     def rotate(self, k: int) -> Optional[SingleNode]:
-        if k == 0:
+        if k == 0 or self.head is None:
             return self.head
 
-        if self.head is None:
-            return None
-
+        length = 1
         current = self.head
-        count = 1
 
-        while count < k and current:
-            current = current.next
-            count += 1
-
-        if current is None:
-            return self.head
-
-        kth_node = current
-
+        # get the last element
         while current.next:
             current = current.next
+            length += 1
 
+        # Set the last node to point to head node
+        # The list is now a circular linked list with last node pointing to first node
         current.next = self.head
 
-        self.head = kth_node.next
+        # If k is equal to the length of the list then k == 0
+        # ElIf k is greater than the length of the list then k = k % length
+        k = length - k % length
 
-        kth_node.next = None
+        while k > 0:
+            current = current.next
+            k -= 1
 
-        return self.head
+        # Traverse the list to get to the node just before the ( length - k )th node.
+        # Example: In 1->2->3->4->5, and k = 2
+        #          we need to get to the Node(3)
+        new_head = current.next
+        current.next = None
+
+        return new_head
 
     def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
