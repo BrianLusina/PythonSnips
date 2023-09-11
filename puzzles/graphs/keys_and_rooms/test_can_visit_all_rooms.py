@@ -15,6 +15,12 @@ class CanVisitAllRoomsTestCase(unittest.TestCase):
         actual = can_visit_all_rooms(rooms)
         self.assertFalse(actual)
 
+    def test_3(self):
+        """should return True for [[2,3],[],[2],[1,3]]"""
+        rooms = [[2, 3], [], [2], [1, 3]]
+        actual = can_visit_all_rooms(rooms)
+        self.assertTrue(actual)
+
 
 if __name__ == '__main__':
     unittest.main()
