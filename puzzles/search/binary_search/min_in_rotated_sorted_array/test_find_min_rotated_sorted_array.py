@@ -25,6 +25,20 @@ class TestFinMinInRotatedSortedArray(unittest.TestCase):
         actual = find_min(nums)
         self.assertEqual(expected, actual)
 
+    def test_nums_30_40_50_10_20(self):
+        """Should return 11 from nums = [30, 40, 50, 10, 20]"""
+        nums = [30, 40, 50, 10, 20]
+        expected = 10
+        actual = find_min(nums)
+        self.assertEqual(expected, actual)
+
+    def test_nums_3_5_7_11_13_17_19_2(self):
+        """Should return 2 from nums = [3, 5, 7, 11, 13, 17, 19, 2]"""
+        nums = [3, 5, 7, 11, 13, 17, 19, 2]
+        expected = 2
+        actual = find_min(nums)
+        self.assertEqual(expected, actual)
+
 
 if __name__ == '__main__':
     unittest.main()
