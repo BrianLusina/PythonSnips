@@ -1,13 +1,26 @@
 from typing import List, Any
 from collections import deque
-from .. import Tree, TreeNode
+from .. import Tree, T
+from .node import NAryNode
 
 
 class NAryTree(Tree):
-    def __init__(self, root: TreeNode):
+    def __init__(self, root: NAryNode):
         self.root = root
 
     def __len__(self) -> int:
+        pass
+
+    def is_balanced(self) -> bool:
+        pass
+
+    def leaf_similar(self, other: 'Tree') -> bool:
+        pass
+
+    def number_of_good_nodes(self) -> int:
+        pass
+
+    def path_sum(self, target: T) -> int:
         pass
 
     def next(self) -> int:
@@ -16,16 +29,16 @@ class NAryTree(Tree):
     def height(self) -> int:
         pass
 
-    def lowest_common_ancestor(self, node_one: TreeNode, node_two: TreeNode) -> TreeNode:
+    def lowest_common_ancestor(self, node_one: NAryNode, node_two: NAryNode) -> NAryNode:
         pass
 
     def has_next(self) -> bool:
         pass
 
-    def increasing_order_traversal(self) -> TreeNode:
+    def increasing_order_traversal(self) -> NAryNode:
         pass
 
-    def pre_order_traversal(self) -> List[Any]:
+    def pre_order_traversal(self) -> List[T]:
         stack, visited = deque([]), []
         if not self.root:
             return visited
@@ -57,7 +70,7 @@ class NAryTree(Tree):
     def get_depth(self) -> int:
         pass
 
-    def insert_node(self, value) -> TreeNode:
+    def insert_node(self, value) -> NAryNode:
         pass
 
     def paths(self) -> list:

@@ -17,6 +17,9 @@ class TreeNode(Generic[T]):
         """
         self.data = value
 
+    def __repr__(self):
+        return f"TreeNode({self.data})"
+
 
 class Tree(ABC, Generic[T]):
     """
@@ -98,6 +101,18 @@ class Tree(ABC, Generic[T]):
 
     @abstractmethod
     def pre_order_traversal(self) -> List[T]:
+        """Traverses the tree in pre-order walking the left subtree before finally walking the right subtree returning
+        a list of values on each node
+
+        Complexity:
+        Time Complexity O(n): where n is the number of nodes in the tree, as the algorithm has to traverse all the nodes
+        in the tree
+
+        Space Complexity O(h), where h is the height of the tree
+
+        Returns:
+            list: list of values of each node
+        """
         raise NotImplementedError("This method has not been implemented")
 
     @abstractmethod
