@@ -1,17 +1,6 @@
 from abc import abstractmethod, ABC
 from typing import List, Any
-from .. import HeapNode
-
-
-class FibonacciHeapNode(HeapNode):
-    def __init__(self, data):
-        super().__init__(data)
-        self.children: List[FibonacciHeapNode] = []
-        self.order = 0
-
-    def add_at_end(self, t: 'FibonacciHeapNode'):
-        self.children.append(t)
-        self.order = self.order + 1
+from .node import FibonacciHeapNode
 
 
 class FibonacciHeap(ABC):

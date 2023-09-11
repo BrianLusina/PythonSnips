@@ -1,5 +1,6 @@
 from typing import Optional, Any, List
-from .. import FibonacciHeapNode, FibonacciHeap
+from .. import FibonacciHeap
+from ..node import FibonacciHeapNode
 from ..utils import floor_log
 
 

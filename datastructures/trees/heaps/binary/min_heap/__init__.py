@@ -1,7 +1,8 @@
 from heapq import heapify, heappop
 from typing import Any, List, Union
 
-from datastructures.trees.heaps import Heap, HeapNode
+from datastructures.trees.heaps import Heap
+from datastructures.trees.heaps.node import HeapNode
 
 
 class MinHeap(Heap):

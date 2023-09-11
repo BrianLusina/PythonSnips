@@ -1,7 +1,8 @@
 from heapq import heapify, heappop
 from typing import Any, List, Union
 
-from datastructures.trees.heaps import Heap, HeapNode
+from datastructures.trees.heaps import Heap
+from datastructures.trees.heaps.node import HeapNode
 
 
 class MaxHeap(Heap):
@@ -11,7 +12,7 @@ class MaxHeap(Heap):
         self.idx_of_element = {}
         if heap is None:
             heap = []
-        self.heap = self.build_heap(heap)
+        self.heap = self.__build_heap(heap)
         heapify(self.heap)
 
     def __len__(self):
@@ -77,7 +78,7 @@ class MaxHeap(Heap):
 
             self.__bubble_up(parent_idx)
 
-    def build_heap(self, array: List[HeapNode]) -> List[HeapNode]:
+    def __build_heap(self, array: List[HeapNode]) -> List[HeapNode]:
         last_idx = len(array) - 1
         start_from = self.get_parent_index(last_idx)
 
