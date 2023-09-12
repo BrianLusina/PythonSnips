@@ -9,7 +9,7 @@ Return the maximum area of an island in grid. If there is no island, return 0.
 
 Example 1:
 
-![max_area_island](./maxarea-grid.jpg)
+![max_area_island](maxarea-grid.jpg)
 
 Input: grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0]
 ,[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]

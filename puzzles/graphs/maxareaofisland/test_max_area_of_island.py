@@ -1,6 +1,6 @@
 import unittest
 
-from puzzles.maxareaofisland import max_area_of_island
+from . import max_area_of_island
 
 
 class TestMaxAreaOfIsland(unittest.TestCase):

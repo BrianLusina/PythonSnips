@@ -10,13 +10,21 @@ Return the total number of provinces.
 
 Example 1:
 
-![example_one](./no_of_provinces_1.jpg)
+![example_one](no_of_provinces_1.jpg)
 
 Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
 Output: 2
 
-![example_two](./no_of_provinces_2.jpg)
+![example_two](no_of_provinces_2.jpg)
 
 Example 2:
 Input: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
 Output: 3
+
+## Related Topics
+
+- Breadth First Search
+- Depth First Search
+- Union Find
+- Graph
+
