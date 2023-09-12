@@ -174,44 +174,83 @@ class BinaryTree(Tree):
 
         Complexity Analysis
 
-        Time Complexity: O(N) where NN is the number of nodes in the binary tree.
+        Time Complexity: O(N) where N is the number of nodes in the binary tree.
         In the worst case we might be visiting all the nodes of the binary tree.
 
         Space Complexity: O(N).
         This is because the maximum amount of space utilized by the recursion stack would be N since the height of a
         skewed binary tree could be N.
 
+        Args:
+            node_one(BinaryTreeNode): Node 1
+            node_two(BinaryTreeNode): Node 2
+
+        Return:
+            BinaryTreeNode: if there is a lowest common ancestor node for both nodes, it is returned. if not, None is
+            returned. Note that None is returned if 1 of the nodes it not present in the tree
         """
 
         if not self.root:
             return None
 
-        lca = None
+        def lca_util(node: Optional[BinaryTreeNode], node_one_value: T, node_two_val: T, node_lookup: List[bool]) -> \
+                Optional[BinaryTreeNode]:
+            """Returns the Lowest Common Ancestor of 2 node values.This updates a node lookup list that has 2 values.
+            The first index is for node_one_value and the second index is for node_two_value. They will be updated to
+            True if either node is available in the tree. This will recursively go down the tree until a leaf node is
+            encountered
 
-        def recurse_tree(current_node):
+            Args:
+                node(BinaryTreeNode): root node of subtree
+                node_one_value(T): Value for node 1
+                node_two_val(T): Value for node 2
+                node_lookup(list): Node lookup list to update the presence of a node value in the tree
+
+            Return:
+                BinaryTreeNode: Lowest Common Ancestor for the tree if available
+            """
+
+            if node is None:
+                return None
+
+            if node.data == node_one_value:
+                node_lookup[0] = True
+                return node
+
+            if node.data == node_two_val:
+                node_lookup[1] = True
+                return node
+
+            left_lca = lca_util(node.left, node_one_value, node_two_val, node_lookup)
+            right_lca = lca_util(node.right, node_one_value, node_two_val, node_lookup)
+
+            if left_lca and right_lca:
+                return node
+
+            return left_lca if left_lca is not None else right_lca
+
+        def is_key_in_subtree(current_node: Optional[BinaryTreeNode], key: T) -> bool:
 
             # If reached the end of a branch, return False.
-            if not current_node:
+            if current_node is None:
                 return False
 
-            # Left Recursion
-            left = recurse_tree(current_node.left)
+            # If key is present at root, or if left subtree or right subtree , return true
+            if current_node.data == key or is_key_in_subtree(current_node.left, key) or is_key_in_subtree(
+                    current_node.right, key):
+                return True
 
-            # Right Recursion
-            right = recurse_tree(current_node.right)
+            return False
 
-            # If the current node is one of node_one or node_two
-            mid = current_node == node_one or current_node == node_two
+        lookup = [False, False]
+        lca = lca_util(self.root, node_one.data, node_two.data, lookup)
 
-            # If any two of the three flags left, right or mid become True.
-            if mid + left + right >= 2:
-                lca = current_node
+        if lookup[0] and lookup[1] or lookup[0] and is_key_in_subtree(lca, node_two.data) or lookup[
+            1] and is_key_in_subtree(
+            lca, node_one.data):
+            return lca
 
-            # Return True if either of the three bool values is True.
-            return mid or left or right
-
-        recurse_tree(self.root)
-        return lca
+        return None
 
     def __len__(self) -> int:
         if not self.root:
