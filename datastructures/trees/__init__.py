@@ -158,6 +158,18 @@ class Tree(ABC, Generic[T]):
         """
         raise NotImplementedError("not yet implemented")
 
+    @abstractmethod
+    def paths_to_target(self, target: T) -> List[T]:
+        """Returns the paths where the sum of the values along the path equals to the given target
+
+        Args:
+            target (T): The target that the sum of values along the path must equal
+
+        Returns:
+            list: The paths along which the values equal the target
+        """
+        raise NotImplementedError("not yet implemented")
+
     def max_level_sum(self) -> int:
         """Returns the smallest level x such that the sum of all the values of nodes at level x is maximal
 
