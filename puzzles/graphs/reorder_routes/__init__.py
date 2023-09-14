@@ -30,13 +30,13 @@ class Solution:
             connections(list): adjacency matrix for a directed graph or in this case, representation of cities
         Returns:
             int: minimum number of edges to re-arrange to ensure that each vertex is directly or indirectly connected to
-            initial vertex
+            the initial vertex
         """
 
         # Adjacency list that contains list of pairs of nodes such that adj[node] contains all the neighbours of node in the
         # form of [neighbour, sign] where neighbour is the neighbouring node and sign is the direction of the edge. If the
-        # sign is 0, it's an 'artificial' edge, meaning it was added by the algorithm in order to get to this vertex and 1
-        # denotes that it's and 'original' edge, meaning that it's the original edge and no need to re-order that connection
+        # sign is 0, it's an 'artificial' edge, meaning it was added by the algorithm in order to get to this vertex, and 1
+        # denotes that it's an 'original' edge, meaning that it's the original edge and no need to re-order that connection
         adj: Dict[int, List[List[int]]] = defaultdict(lambda: [])
 
         def dfs(node: int, parent: int, adjacency: Dict[int, List[List[int]]]):

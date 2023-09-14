@@ -29,7 +29,7 @@ class MinEatingSpeedTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_4(self):
-        """should return 23 for piles = [2, 2] h = 2"""
+        """should return 2 for piles = [2, 2] h = 2"""
         piles = [2,2]
         h = 2
         expected = 2
