@@ -35,7 +35,6 @@ def next_greater(nums: List[int]) -> List[int]:
     if len(nums) <= 1:
         return [-1]
 
-    # add the first element to the stack
     stack = deque()
     result = [0] * len(nums)
 
