@@ -159,3 +159,16 @@ class BinaryTreeNode(TreeNode):
 
     def __repr__(self):
         return f"BinaryTreeNode(data={self.data}, left={self.left}, right={self.right})"
+
+    def __eq__(self, other: 'BinaryTreeNode') -> bool:
+        """Checks if this node is equal to another node based on the data they contain
+        Args:
+            other(BinaryTreeNode): the other node to compare this node to
+        Returns:
+            bool: True if this node and the other node are equal, False otherwise
+        """
+        if other is None:
+            return False
+
+        if other.data == self.data:
+            return True

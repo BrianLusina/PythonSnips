@@ -1,3 +1,4 @@
+import math
 from typing import Optional, List, Any, Generator, Dict
 from collections import defaultdict, deque
 
@@ -642,3 +643,37 @@ class BinaryTree(Tree):
                 maximum_sum = sum_at_current_level_sum
 
         return smallest_level
+
+    def visible_tree_nodes(self) -> int:
+        """Finds the visible tree nodes. We define a node "visible" when no node on the root-to-itself path (inclusive)
+        has a strictly greater value. The root is always "visible" since there are no other nodes between the root and
+        itself
+
+        Complexity:
+
+        - Time Complexity: O(n)
+            There are n nodes and n - 1 edges in a tree so if we traverse each once then the total traversal is O(2n - 1)
+            which is O(n).
+
+        - Space Complexity: O(h)
+            stack memory where h is the height of the tree, which is O(n) in the worst case.
+
+        Returns:
+            int: number of visible nodes
+        """
+
+        def dfs(node: Optional[BinaryTreeNode], max_so_far: T) -> int:
+            if node is None:
+                return 0
+
+            total = 0
+            if node.data >= max_so_far:
+                total += 1
+
+            # max_so_far for child node is the largest of previous max and current node val
+            total += dfs(node.left, max(max_so_far, node.data))
+            total += dfs(node.right, max(max_so_far, node.data))
+
+            return total
+
+        return dfs(self.root, -math.inf)
