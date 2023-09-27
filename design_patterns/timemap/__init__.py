@@ -13,6 +13,13 @@ class TimeMap:
         self.histories[key].append((timestamp, value))
 
     def get(self, key: str, timestamp: int) -> str:
+        """To look for the location pos of the timestamp entry, we must find the timestamp pair less than or equal to
+        timestamp.
+        Hence, we repeatedly update pos to mid, if the timestamp at histories[mid] is less than or equal to the
+        given timestamp (histories[mid][0] <= timestamp),
+        to find the greatest timestamp less than or equal to timestamp.
+        In the binary search loop, we will continue to find the desired timestamp on the right side of the loop if
+        histories[mid][0] <= timestamp, and search the left side otherwise."""
         if not key in self.histories:
             return ""
 
