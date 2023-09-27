@@ -2,7 +2,8 @@ from typing import List
 
 
 def plates_between_candles(plates_and_candles: str, queries: List[List[int]]) -> List[int]:
-    """Finds the number of plates between candles on a table represented by a string where a plate is * and a candle is |
+    """ Finds the number of plates between candles on a table represented by a string where a plate is '*' and a candle
+    is |
     Args:
         plates_and_candles (str): table representing the plates and candles.
         queries (List[List[int]]): queries representing the queries between certain indices on the table
@@ -11,11 +12,14 @@ def plates_between_candles(plates_and_candles: str, queries: List[List[int]]) ->
     """
     # This will hold the indices of candles in the plates and candles
     # This allows us to do basic arithmetic on the indices to find the number of plates.
-    # also we perform a binary search on this candle list. We find the left_pos and right_pos indicating the outside
-    # candles positions in the input. Then, We know that the number of plates is given by the interval between the two
-    # bounding candles subtracted by the number of candles in between. With the indices left_pos and right_pos, we can
+    # Also, we perform a binary search on this candle list.
+    # We find the left_pos and right_pos indicating the outside candles positions in the input.
+    # Then, We know that the number of plates is given by the interval between the two
+    # bounding candles subtracted by the number of candles in between.
+    # With the indices left_pos and right_pos, we can
     # derive the number of plates to be (candles[right_pos] - candles[left_pos]) - (right_pos - left_pos).
-    # space complexity is O(c) where c is the number of candles. The worst case is that there are all candles.
+    # Space complexity is O(c) where c is the number of candles.
+    # The worst case is that there are all candles.
     candles = []
 
     # Adds all candle indices on the table to the candle list.

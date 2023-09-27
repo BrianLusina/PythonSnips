@@ -22,7 +22,7 @@ class PlatesBetweenCandlesTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_3(self):
-        """should return [9, 0, 0, 0, 0] from s = "||**||**|*", queries = [[3,8]]"""
+        """should return [2] from s = "||**||**|*", queries = [[3,8]]"""
         s = "||**||**|*"
         queries = [[3, 8]]
         expected = [2]
