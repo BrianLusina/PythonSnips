@@ -172,3 +172,5 @@ class BinaryTreeNode(TreeNode):
 
         if other.data == self.data:
             return True
+
+        return False

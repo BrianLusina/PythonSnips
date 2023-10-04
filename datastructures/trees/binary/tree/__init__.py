@@ -1,5 +1,5 @@
 import math
-from typing import Optional, List, Any, Generator, Dict
+from typing import Optional, List, Any, Generator, Dict, Iterator
 from collections import defaultdict, deque
 
 from datastructures.stacks import Stack
@@ -677,3 +677,34 @@ class BinaryTree(Tree):
             return total
 
         return dfs(self.root, -math.inf)
+
+    def serialize(self) -> str:
+        result = []
+
+        def dfs(node: BinaryTreeNode):
+            if not node:
+                # x denotes an empty value, that is None
+                result.append("x")
+                return
+            result.append(str(node.data))
+            dfs(node.left)
+            dfs(node.right)
+
+        dfs(self.root)
+
+        return " ".join(result)
+
+    @staticmethod
+    def deserialize(tree_str: str) -> Optional[BinaryTreeNode]:
+        def dfs(nodes: Iterator[str]) -> Optional[BinaryTreeNode]:
+            data = next(nodes)
+
+            if data == "x":
+                return
+
+            current = BinaryTreeNode(data)
+            current.left = dfs(nodes)
+            current.right = dfs(nodes)
+            return current
+
+        return dfs(iter(tree_str.split()))

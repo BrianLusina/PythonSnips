@@ -1,7 +1,7 @@
-from typing import List, Generic, TypeVar
+from typing import List, Generic, TypeVar, Any
 from abc import ABC, abstractmethod
 
-T = TypeVar("T")
+T = TypeVar("T", bound=Any)
 
 
 class TreeNode(Generic[T]):
@@ -175,5 +175,23 @@ class Tree(ABC, Generic[T]):
 
         Returns:
             int: maximum value at level x
+        """
+        raise NotImplementedError("not yet implemented")
+
+    @abstractmethod
+    def serialize(self) -> str:
+        """Serializes a tree into a string
+        Returns:
+            str: string representation of tree.
+        """
+        raise NotImplementedError("not yet implemented")
+
+    @staticmethod
+    def deserialize(tree_str: str) -> 'Tree':
+        """Serializes a tree into a string
+        Args:
+            tree_str (str): string representation of tree
+        Returns:
+            Tree: Tree deserialized from string
         """
         raise NotImplementedError("not yet implemented")
