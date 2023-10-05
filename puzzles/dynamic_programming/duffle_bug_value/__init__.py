@@ -2,12 +2,13 @@ from typing import List, Tuple
 
 
 def max_duffel_bag_value(cake_tuples: List[Tuple[int, int]], capacity: int):
-    """
-    Calculates the value of a duffel bag give a list of tuples of cakes which contain weight
-    of each cakes and their value(monetary) and the capacity the bag can carry
-    :param cake_tuples: list of tuples of cakes
-    :param capacity: max capacity the duffel bag can carry
-    :return: maximum value of the duffel bag
+    """ Calculates the value of a duffel bag give a list of tuples of cakes which contain the weight of all cakes and
+    their value(monetary) and the capacity the bag can carry
+    Args:
+        cake_tuples(list): a list of tuples of cakes
+        capacity(int): max capacity the duffel bag can carry
+    Returns
+        int: the maximum value of the duffel bag
     """
 
     # list to hold maximum possible value at every duffel bag weight capacity from 0 to
@@ -36,7 +37,7 @@ def max_duffel_bag_value(cake_tuples: List[Tuple[int, int]], capacity: int):
                 #  max
                 # value at that integer capacity in our list max_values_at_capacities
                 max_value_using_cake = (
-                    cake_value + max_values_at_capacity[current_capacity - cake_weight]
+                        cake_value + max_values_at_capacity[current_capacity - cake_weight]
                 )
 
                 # now we see if it's worth taking the cake. how does the
