@@ -160,6 +160,9 @@
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/utils.py)
     * Nary
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/nary/node.py)
+    * Ternary
+      * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/node.py)
+      * [Test Ternary Tree Paths](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/test_ternary_tree_paths.py)
   * Tuples
     * [Named Tuples](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/tuples/named_tuples.py)
 
