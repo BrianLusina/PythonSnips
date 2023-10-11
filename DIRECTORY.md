@@ -377,6 +377,8 @@
       * [Test Max Subsequence Score](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/maximum_subsequence_score/test_max_subsequence_score.py)
     * Min Cost Hire K Workers
       * [Test Min Cost To Hire Workers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/min_cost_hire_k_workers/test_min_cost_to_hire_workers.py)
+    * Total Cost Hire K Workers
+      * [Test Total Cost Hire K Workers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/total_cost_hire_k_workers/test_total_cost_hire_k_workers.py)
   * Hidden Cubic Numbers
     * [Hidden Cubic Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hidden_cubic_numbers/hidden_cubic_numbers.py)
   * Matrix In Spiral Form
