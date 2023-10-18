@@ -438,6 +438,8 @@
         * [Test Single Non Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/single_non_duplicate/test_single_non_duplicate.py)
       * Square Root
         * [Test Sqrt Estimate](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/square_root/test_sqrt_estimate.py)
+      * Successful Pairs Spells Potions
+        * [Test Successful Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/successful_pairs_spells_potions/test_successful_pairs.py)
   * Stack
     * Asteroid Collision
       * [Test Asteroid Collision](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/asteroid_collision/test_asteroid_collision.py)
@@ -511,6 +513,9 @@
   * Vampire Numbers
     * [Vampire Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/vampire_numbers/vampire_numbers.py)
     * [Vampires](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/vampire_numbers/vampires.py)
+  * Xbonacci
+    * Gibonacci
+      * [Test Gibonacci](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/xbonacci/gibonacci/test_gibonacci.py)
 
 ## Pyregex
   * [And Or](https://github.com/BrianLusina/PythonSnips/blob/master/pyregex/and_or.py)
