@@ -414,6 +414,8 @@
     * Binary Search
       * Big Words
         * [Big Words](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/big_words/big_words.py)
+      * Find Peak Element
+        * [Test Find Peak Element](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_peak_element/test_find_peak_element.py)
       * First Boundary
         * [Test First Boundary](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/first_boundary/test_first_boundary.py)
       * First Occurrence
