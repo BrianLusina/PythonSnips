@@ -19,7 +19,7 @@ class FindPeakElementTestCase(unittest.TestCase):
         self.assertIn(actual, [expected_1, expected_5])
 
     def test_3(self):
-        """should return either 5 or 1 for nums = [1,2,1,3,5,6,4]"""
+        """should return either 3 for nums = [0, 1, 2, 3, 2, 1, 0]"""
         nums = [0, 1, 2, 3, 2, 1, 0]
         expected = 3
         actual = find_peak_element(nums)
