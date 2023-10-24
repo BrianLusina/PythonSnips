@@ -17,6 +17,13 @@
         * [Smallest Set Of Vertices](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/bfs/graphs/smallest_set_of_vertices/smallest_set_of_vertices.py)
   * Dollar Bills
     * [Make Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dollar_bills/make_change.py)
+  * Dynamic Programming
+    * Duffle Bug Value
+      * [Test Max Duffle Bag Value](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/duffle_bug_value/test_max_duffle_bag_value.py)
+    * House Robber
+      * [Test House Robber](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/house_robber/test_house_robber.py)
+    * Knapsack 01
+      * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
@@ -336,11 +343,6 @@
     * [Test Bearamid](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/beeramid/test_bearamid.py)
   * Climb Stairs
     * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/climb_stairs/test_climb_stairs.py)
-  * Dynamic Programming
-    * Duffle Bug Value
-      * [Test Max Duffle Bag Value](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/dynamic_programming/duffle_bug_value/test_max_duffle_bag_value.py)
-    * Knapsack 01
-      * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/dynamic_programming/knapsack_01/test_knapsack_01.py)
   * Find Duplicate
     * [Test Find Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/find_duplicate/test_find_duplicate.py)
   * Find Missing Elem
