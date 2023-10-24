@@ -13,6 +13,8 @@
       * [Test Combination 3](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_3.py)
     * Letter Combination
       * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
+    * Partition String
+      * [Test Partition String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/partition_string/test_partition_string.py)
   * Bfs
     * Graphs
       * Dot Dsl
@@ -398,16 +400,6 @@
     * [Test Minimize Absolute Difference](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/minimize_the_absolute_difference/test_minimize_absolute_difference.py)
   * Next Permutation
     * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/next_permutation/test_next_permutation.py)
-  * Palindrome
-    * Largest Palindrome Product
-      * [Test Largest Palindrome Product](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/largest_palindrome_product/test_largest_palindrome_product.py)
-    * [Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/longest_palindrome.py)
-    * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/longest_palindromic_substring.py)
-    * [Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/palindrome_index.py)
-    * [Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/palindrome_pairs.py)
-    * [Test Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/test_palindrome.py)
-    * [Test Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/test_palindrome_index.py)
-    * [Test Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/palindrome/test_palindrome_pairs.py)
   * Prefix Sum
     * Find Highest Altitude
       * [Test Highest Altitude](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/prefix_sum/find_highest_altitude/test_highest_altitude.py)
@@ -550,6 +542,16 @@
     * [Test Merge Strings](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/merge_strings/test_merge_strings.py)
   * Min Distance
     * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/min_distance/test_min_distance.py)
+  * Palindrome
+    * Largest Palindrome Product
+      * [Test Largest Palindrome Product](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/largest_palindrome_product/test_largest_palindrome_product.py)
+    * [Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/longest_palindrome.py)
+    * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/longest_palindromic_substring.py)
+    * [Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/palindrome_index.py)
+    * [Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/palindrome_pairs.py)
+    * [Test Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome.py)
+    * [Test Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome_index.py)
+    * [Test Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome_pairs.py)
   * Pangram
     * [Test Pangram Checker](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/pangram/test_pangram_checker.py)
   * Reverse Vowels
