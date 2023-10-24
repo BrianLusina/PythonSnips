@@ -7,6 +7,12 @@
       * [Test Remove Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/remove_duplicates/test_remove_duplicates.py)
     * Remove Element
       * [Test Remove Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/remove_element/test_remove_element.py)
+  * Backtracking
+    * Combination
+      * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
+      * [Test Combination 3](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_3.py)
+    * Letter Combination
+      * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
   * Bfs
     * Graphs
       * Dot Dsl
@@ -330,12 +336,6 @@
         * [Test Cyclic Rotation](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/rotation/cyclic_rotation/test_cyclic_rotation.py)
       * Left Rotation
         * [Test Rotate Left](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/rotation/left_rotation/test_rotate_left.py)
-  * Backtracking
-    * Combination
-      * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/backtracking/combination/test_combination_2.py)
-      * [Test Combination 3](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/backtracking/combination/test_combination_3.py)
-    * Letter Combination
-      * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/backtracking/letter_combination/test_letter_combination.py)
   * Battleship
     * [Battleship](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/battleship/battleship.py)
   * Beeramid
