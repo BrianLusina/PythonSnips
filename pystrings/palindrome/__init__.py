@@ -1,11 +1,8 @@
-from typing import List
-
-
 def is_palindrome(a) -> bool:
     return str(a) == str(a)[::-1]
 
 
-def get_longest_palindrome(s: str, start_index:int, end_index:int) -> str:
+def get_longest_palindrome(s: str, start_index: int, end_index: int) -> str:
     """Gets the longest palindrome substring from a given string from a start index to an end index
 
     Args:
