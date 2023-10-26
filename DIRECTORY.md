@@ -18,6 +18,8 @@
   * Dollar Bills
     * [Make Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dollar_bills/make_change.py)
   * Dynamic Programming
+    * Domino Tromino Tiling
+      * [Test Domino Tromino Tiling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/domino_tromino_tiling/test_domino_tromino_tiling.py)
     * Duffle Bug Value
       * [Test Max Duffle Bag Value](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/duffle_bug_value/test_max_duffle_bag_value.py)
     * House Robber
