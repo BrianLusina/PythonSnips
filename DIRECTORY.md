@@ -26,6 +26,8 @@
       * [Test House Robber](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/house_robber/test_house_robber.py)
     * Knapsack 01
       * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
+    * Unique Paths
+      * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
