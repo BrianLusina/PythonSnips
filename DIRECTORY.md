@@ -15,6 +15,9 @@
       * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
     * Partition String
       * [Test Partition String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/partition_string/test_partition_string.py)
+    * Permutations
+      * Generate Permutations
+        * [Test Generate Permutations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/permutations/generate_permutations/test_generate_permutations.py)
   * Bfs
     * Graphs
       * Dot Dsl
@@ -34,6 +37,8 @@
       * [Test House Robber](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/house_robber/test_house_robber.py)
     * Knapsack 01
       * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
+    * Longest Common Subsequence
+      * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
   * Huffman
@@ -530,6 +535,8 @@
   * [Roman Numerals](https://github.com/BrianLusina/PythonSnips/blob/master/pyregex/roman_numerals.py)
 
 ## Pystrings
+  * Balanced Paren
+    * [Test Balanced Paren](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/balanced_paren/test_balanced_paren.py)
   * Domain Name
     * [Extract Host](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/domain_name/extract_host.py)
   * Greatest Common Divisor
@@ -859,7 +866,6 @@
     * [Test Ascii Converter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_ascii_converter.py)
     * [Test Autocomplete](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_autocomplete.py)
     * [Test Backspaces](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_backspaces.py)
-    * [Test Balanced Paren](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_balanced_paren.py)
     * [Test Bob](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_bob.py)
     * [Test Caps Counter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_caps_counter.py)
     * [Test Character Counter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pystrings/test_character_counter.py)
