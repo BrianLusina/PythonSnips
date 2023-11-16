@@ -11,6 +11,8 @@
     * Combination
       * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
       * [Test Combination 3](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_3.py)
+    * Decode Message
+      * [Test Decode Message](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/decode_message/test_decode_message.py)
     * Letter Combination
       * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
     * Partition String
