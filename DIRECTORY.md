@@ -29,6 +29,11 @@
   * Dollar Bills
     * [Make Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dollar_bills/make_change.py)
   * Dynamic Programming
+    * Buy Sell Stock
+      * [Test Max Profit](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit.py)
+      * [Test Max Profit Three](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_three.py)
+      * [Test Max Profit Two](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_two.py)
+      * [Test Max Profit With Fee](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_with_fee.py)
     * Domino Tromino Tiling
       * [Test Domino Tromino Tiling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/domino_tromino_tiling/test_domino_tromino_tiling.py)
     * Duffle Bug Value
@@ -335,10 +340,6 @@
       * [Test Max Consecutive Ones](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/max_consecutive_ones/test_max_consecutive_ones.py)
     * Max Number Of Ksum Pairs
       * [Test Max Number Of Ksum Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/max_number_of_ksum_pairs/test_max_number_of_ksum_pairs.py)
-    * Max Profit
-      * [Test Max Profit](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/max_profit/test_max_profit.py)
-      * [Test Max Profit Three](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/max_profit/test_max_profit_three.py)
-      * [Test Max Profit Two](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/max_profit/test_max_profit_two.py)
     * Maximum Average Subarray
       * [Test Max Average Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/maximum_average_subarray/test_max_average_subarray.py)
     * Maxlen Contiguous Binary Subarray
