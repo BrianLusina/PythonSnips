@@ -1,3 +1,4 @@
+import math
 from typing import List
 
 
@@ -93,3 +94,29 @@ def max_profit_3(prices: List[int]) -> int:
         profit = max(profit, forward_profit[day] + backward_profit[day])
 
     return profit
+
+
+def max_profit_with_fee(prices: List[int], fee: int) -> int:
+    # initially, there is no cash
+    initial_cash = -math.inf
+    # initial profit is 0
+    current_profit = 0
+
+    for price in prices:
+        # Maximum cash in hand with shares
+        # Either
+        # 1. withold prev share in which case your cash in hand will not change,
+        # 2. or assume there was no currently bought share but you want to buy it today -
+        #         In this case: your current cash in hand with shares will be your previous cash
+        #         in hand without shares minus buying price of the share today.
+        initial_cash = max(initial_cash, current_profit - price)
+
+        # Maximum cash in hand without shares
+        # Either
+        # 1. withold money without shares in which case your cash in hand will not change,
+        # 2. or assume you previously bought the share and you are going to sell that today -
+        #         In this case : your current cash in hand without shares will be your previous cash
+        #         in hand with shares plus the current selling price minus transaction fee
+        current_profit = max(current_profit, initial_cash + price - fee)
+
+    return current_profit
