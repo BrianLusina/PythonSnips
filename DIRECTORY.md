@@ -46,6 +46,8 @@
       * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
     * Longest Common Subsequence
       * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
+    * Min Distance
+      * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
   * Huffman
@@ -556,8 +558,6 @@
     * [Test Max Vowels In Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/max_vowels_in_substring/test_max_vowels_in_substring.py)
   * Merge Strings
     * [Test Merge Strings](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/merge_strings/test_merge_strings.py)
-  * Min Distance
-    * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/min_distance/test_min_distance.py)
   * Palindrome
     * Largest Palindrome Product
       * [Test Largest Palindrome Product](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/largest_palindrome_product/test_largest_palindrome_product.py)
