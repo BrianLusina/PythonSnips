@@ -1,7 +1,7 @@
 import unittest
 from random import randint
 
-from bit_manipulation.int32_to_ipv4 import int32_to_ip
+from . import int32_to_ip
 
 
 class Int32ToIpv4TestCase(unittest.TestCase):
@@ -12,7 +12,7 @@ class Int32ToIpv4TestCase(unittest.TestCase):
 
     def test_random(self):
         for _ in range(100):
-            test_n = randint(0, 2**32 - 1)
+            test_n = randint(0, 2 ** 32 - 1)
             expected = ".".join(
                 [
                     str(test_n >> 24 & 0xFF),

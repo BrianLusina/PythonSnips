@@ -75,6 +75,12 @@
   * Unique Bsts
     * [Unique Bsts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/unique_bsts/unique_bsts.py)
 
+## Bit Manipulation
+  * Counting Bits
+    * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/counting_bits/test_counting_bits.py)
+  * Int32 To Ipv4
+    * [Test Int32 To Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/int32_to_ipv4/test_int32_to_ipv4.py)
+
 ## [Constants](https://github.com/BrianLusina/PythonSnips/blob/master//constants.py)
 
 ## Cryptography
@@ -637,8 +643,6 @@
     * [Test Variable Length Qty](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_variable_length_qty.py)
     * [Test Word Count](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_word_count.py)
     * [Test Word Search](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_word_search.py)
-  * Bit Manipulation
-    * [Test Int32 To Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/tests/bit_manipulation/test_int32_to_ipv4.py)
   * Cryptography
     * [Test Atbash Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_atbash_cipher.py)
     * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_caeser.py)
