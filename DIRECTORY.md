@@ -80,6 +80,8 @@
     * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/counting_bits/test_counting_bits.py)
   * Int32 To Ipv4
     * [Test Int32 To Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/int32_to_ipv4/test_int32_to_ipv4.py)
+  * Single Number
+    * [Test Single Number](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/single_number/test_single_number.py)
 
 ## [Constants](https://github.com/BrianLusina/PythonSnips/blob/master//constants.py)
 
