@@ -20,6 +20,8 @@
     * Permutations
       * Generate Permutations
         * [Test Generate Permutations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/permutations/generate_permutations/test_generate_permutations.py)
+    * Restore Ip Addresses
+      * [Test Restore Ip Addresses](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/restore_ip_addresses/test_restore_ip_addresses.py)
   * Bfs
     * Graphs
       * Dot Dsl
