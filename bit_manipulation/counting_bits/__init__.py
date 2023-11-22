@@ -15,7 +15,7 @@ def count_bits(n: int) -> List[int]:
     countBits(N)+1 = countBits(2N+1)
 
     Thus, we can see that any number will have the same bit count as half that number, with an extra one if it's an odd
-    number. We iterate through the range of numbers and calculate each bit count successively in this manner:
+    number. We iterate thro.ugh the range of numbers and calculate each bit count successively in this manner:
 
         For i in range(num):
             counter[i] = counter[i // 2] + i % 2
