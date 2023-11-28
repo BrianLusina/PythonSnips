@@ -8,7 +8,7 @@ blessings==1.6
 bpython==0.16
 click==6.7
 codacy-coverage==1.3.6
-codecov==2.0.5
+codecov==2.1.13
 coverage==4.3.4
 curtsies==0.2.11
 cycler==0.10.0
