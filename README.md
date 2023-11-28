@@ -33,7 +33,7 @@ virtualenv -p python3 venv
 install the requirements
 
 ``` sh
-pip install -r requirements.txt
+poetry install
 ```
 
 **Enjoy!**

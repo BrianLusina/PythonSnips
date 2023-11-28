@@ -82,10 +82,10 @@
     * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/counting_bits/test_counting_bits.py)
   * Int32 To Ipv4
     * [Test Int32 To Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/int32_to_ipv4/test_int32_to_ipv4.py)
+  * Minflips
+    * [Test Min Flips](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/minflips/test_min_flips.py)
   * Single Number
     * [Test Single Number](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/single_number/test_single_number.py)
-
-## [Constants](https://github.com/BrianLusina/PythonSnips/blob/master//constants.py)
 
 ## Cryptography
   * Atbash Cipher
@@ -595,8 +595,6 @@
   * [Iterable Observer](https://github.com/BrianLusina/PythonSnips/blob/master/reactivex/iterable_observer.py)
   * [Multicasting](https://github.com/BrianLusina/PythonSnips/blob/master/reactivex/multicasting.py)
   * [Operators Chain](https://github.com/BrianLusina/PythonSnips/blob/master/reactivex/operators_chain.py)
-
-## [Setup](https://github.com/BrianLusina/PythonSnips/blob/master//setup.py)
 
 ## Simulations
   * Robot Mover
