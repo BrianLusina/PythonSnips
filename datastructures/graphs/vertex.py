@@ -17,6 +17,7 @@ class Vertex(Generic[T]):
         self.incoming_edges = incoming_edges
         self.outgoing_edges = outgoing_edges
         self.edges = self.incoming_edges.union(self.outgoing_edges)
+        self.adjacent_vertices: Dict[str, 'Vertex'] = {}
         self.properties = properties
 
     def __str__(self):
@@ -109,6 +110,9 @@ class Vertex(Generic[T]):
         Args:
             other (Vertex): Vertex to add as a neighbor 
         """
+        if not self.adjacent_vertices.get(other.id):
+            self.adjacent_vertices[other.id] = other
+            other.add_adjacent_vertex(self)
 
     def __eq__(self, other: 'Vertex') -> bool:
         return self.id == other.id
