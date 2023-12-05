@@ -52,6 +52,9 @@
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
+  * Greedy
+    * Min Arrows
+      * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
@@ -63,6 +66,9 @@
       * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/test_binary_search.py)
     * Interpolation
       * [Test Interpolation Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/interpolation/test_interpolation_search.py)
+    * Trie
+      * Search Suggestions
+        * [Test Search Suggestions](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/trie/search_suggestions/test_search_suggestions.py)
   * Sorting
     * Insertionsort
       * [Test Insertion Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/insertionsort/test_insertion_sort.py)
