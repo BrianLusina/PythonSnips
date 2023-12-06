@@ -78,6 +78,9 @@
       * [Test Selection Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/selection/test_selection_sort.py)
     * Shell Sort
       * [Test Shell Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/shell_sort/test_shell_sort.py)
+  * Stack
+    * Daily Temperatures
+      * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
   * Unique Bsts
