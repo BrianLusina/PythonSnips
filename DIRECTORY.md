@@ -83,6 +83,9 @@
       * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
+  * Two Pointers
+    * Merge Sorted Arrays
+      * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/merge_sorted_arrays/test_merge_sorted_arrays.py)
   * Unique Bsts
     * [Unique Bsts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/unique_bsts/unique_bsts.py)
 
@@ -694,7 +697,6 @@
       * [Test Lonely Integer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_lonely_integer.py)
       * [Test Longest Consecutive Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_longest_consecutive_sequence.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
-      * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_merge_sorted_arrays.py)
       * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_sub_array_with_sum.py)
       * [Test Three Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_three_sum.py)
       * [Test Zig Zag Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_zig_zag_sequence.py)
