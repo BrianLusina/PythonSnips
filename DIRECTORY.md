@@ -3,6 +3,8 @@
   * Arrays
     * Intersection
       * [Test Intersection](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/test_intersection.py)
+    * Majority Element
+      * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/majority_element/test_majority_element.py)
     * Remove Duplicates
       * [Test Remove Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/remove_duplicates/test_remove_duplicates.py)
     * Remove Element
