@@ -528,7 +528,14 @@ class SinglyLinkedList(LinkedList):
 
         return True
 
-    def pairwise_swap(self) -> SingleNode:
+    def pairwise_swap(self) -> Optional[SingleNode]:
+        """
+        Swaps nodes in pairs.
+        However, this swaps the values of the nodes in pairs and not the pointers
+
+        Return:
+            SingleNode: new head node or None if no head exists.
+        """
         # nothing to do here
         if not self.head:
             return self.head
@@ -551,6 +558,32 @@ class SinglyLinkedList(LinkedList):
 
         # at this point, the linked list has been swapped in pairs
         return self.head
+
+    def pairwise_swap_two(self) -> Optional[SingleNode]:
+        """
+        Swaps nodes in pairs without swapping the values in the nodes.
+
+        Return:
+            SingleNode: new head node or None if no head exists.
+        """
+        # nothing to do here
+        if not self.head:
+            return self.head
+
+        start = SingleNode(None)
+        start.next = self.head
+        self.head = start
+
+        while self.head.next and self.head.next.next:
+            temp = self.head.next.next
+
+            self.head.next.next = temp.next
+            temp.next = self.head.next
+
+            self.head.next = temp
+            self.head = self.head.next.next
+
+        return start.next
 
     def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> SingleNode:
         a, b = self.head, self.head
