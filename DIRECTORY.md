@@ -162,6 +162,7 @@
     * Singly Linked List
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/node.py)
       * [Test Singly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list.py)
+      * [Test Singly Linked List Pairwise Swap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_pairwise_swap.py)
       * [Test Singly Linked List Rotate](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_rotate.py)
   * Lists
     * Bus Stops
@@ -358,6 +359,8 @@
       * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/container_with_most_water/test_container_with_most_water.py)
     * Increasing Triplet Subsequence
       * [Test Increasing Triplet](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/increasing_triplet_subsequence/test_increasing_triplet.py)
+    * Jump Game
+      * [Test Jump Game](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/jump_game/test_jump_game.py)
     * Kid With Greatest No Of Candies
       * [Test Kids With Greatest Candies](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/kid_with_greatest_no_of_candies/test_kids_with_greatest_candies.py)
     * Longest Increasing Subsequence
