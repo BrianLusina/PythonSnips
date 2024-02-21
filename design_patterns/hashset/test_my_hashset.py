@@ -1,10 +1,10 @@
 import unittest
 
-from design_patterns.hashset import MyHashSet
+from . import HashSet
 
 
 class MyHashSetTestCase(unittest.TestCase):
-    hashset = MyHashSet()
+    hashset = HashSet()
 
     def test_add_1(self):
         self.hashset.add(1)

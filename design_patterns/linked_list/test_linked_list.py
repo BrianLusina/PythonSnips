@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.linked_list import LinkedList
+from . import LinkedList
 
 
 class LinkedListTestCases(unittest.TestCase):

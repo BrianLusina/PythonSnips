@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.browser_history import BrowserHistory
+from . import BrowserHistory
 
 
 class BrowserHistoryTestCases(unittest.TestCase):

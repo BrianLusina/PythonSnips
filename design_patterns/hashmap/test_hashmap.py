@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.hashmap import HashMap, Item
+from . import HashMap, Item
 
 
 class HashMapTestCases(unittest.TestCase):
