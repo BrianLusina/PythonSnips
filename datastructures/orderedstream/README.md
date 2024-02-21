@@ -14,7 +14,7 @@ the order.
 
 Example:
 
-![ordered_stream](./ordered_stream.gif)
+![ordered_stream](ordered_stream.gif)
 
 Input
 ["OrderedStream", "insert", "insert", "insert", "insert", "insert"]
