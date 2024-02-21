@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.oop.banker import BankAccount, current_account, savings_account
+from . import BankAccount, current_account, savings_account
 
 
 class CurrentAccountTestCases(unittest.TestCase):

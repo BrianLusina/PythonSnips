@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.pubsub.simple_events import Event
+from . import Event
 
 
 class Stub:

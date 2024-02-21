@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.oop.throne_inheritance import ThroneInheritance
+from . import ThroneInheritance
 
 
 class ThroneInheritanceTestCase(unittest.TestCase):

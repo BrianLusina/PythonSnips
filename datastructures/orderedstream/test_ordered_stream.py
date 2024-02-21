@@ -1,6 +1,6 @@
 import unittest
 
-from design_patterns.orderedstream import OrderedStream
+from . import OrderedStream
 
 
 class OrderedStreamTestCase(unittest.TestCase):
