@@ -156,6 +156,10 @@
   * Graphs
     * [Edge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge.py)
     * [Vertex](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/vertex.py)
+  * Hashmap
+    * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/test_hashmap.py)
+  * Hashset
+    * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashset/test_my_hashset.py)
   * Linked Lists
     * Doubly Linked List
       * [Test Doubly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list.py)
@@ -172,6 +176,8 @@
   * Lrucache
     * [With Internal Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lrucache/with_internal_linked_list.py)
     * [With Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lrucache/with_ordered_dict.py)
+  * Orderedstream
+    * [Test Ordered Stream](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/orderedstream/test_ordered_stream.py)
   * Queues
     * Circular
       * [Test Circular Queue](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/queues/circular/test_circular_queue.py)
@@ -182,12 +188,20 @@
       * [Test Fifodll Queue](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/queues/fifo/test_fifodll_queue.py)
     * Priority
       * [Models](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/queues/priority/models.py)
+  * Randomized Set
+    * [Test Randomized Set](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/randomized_set/test_randomized_set.py)
+  * Smallest Infinite Set
+    * [Test Smallest Infinite Set](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/smallest_infinite_set/test_smallest_infinite_set.py)
+  * Snapshot Array
+    * [Test Snapshot Array](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/snapshot_array/test_snapshot_array.py)
   * Stacks
     * Maxstack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/maxstack/test_max_stack.py)
     * Minstack
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/minstack/test_min_stack.py)
     * [Test Stacks](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/test_stacks.py)
+  * Timemap
+    * [Test Timemap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/timemap/test_timemap.py)
   * Trees
     * Binary
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/node.py)
@@ -256,6 +270,10 @@
       * [Concrete Visitor 1](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/visitor/concrete_visitor_1.py)
       * [Concrete Visitor 2](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/visitor/concrete_visitor_2.py)
       * [Visitor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/visitor/visitor.py)
+  * Browser History
+    * [Test Browser History](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/browser_history/test_browser_history.py)
+  * Linked List
+    * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/linked_list/test_linked_list.py)
   * Oop
     * Alien Game
       * [Central Corridor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/central_corridor.py)
@@ -269,6 +287,7 @@
     * Bank
       * [Current Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/bank/current_account.py)
       * [Savings Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/bank/savings_account.py)
+      * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/bank/test_bank.py)
     * Banker
       * [Current Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/banker/current_account.py)
       * [Savings Account](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/banker/savings_account.py)
@@ -289,15 +308,16 @@
     * Song
       * [Song Object](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/song/song_object.py)
       * [Song Oop Test](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/song/song_oop_test.py)
+    * Throne Inheritance
+      * [Test Throne Inheritance](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/throne_inheritance/test_throne_inheritance.py)
     * Vehicles
       * [Car](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/car.py)
       * [Jeep](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/jeep.py)
       * [Kawasaki](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/kawasaki.py)
       * [Motor Cycle](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/vehicles/motor_cycle.py)
-  * Smallest Infinite Set
-    * [Test Smallest Infinite Set](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/smallest_infinite_set/test_smallest_infinite_set.py)
-  * Snapshot Array
-    * [Test Snapshot Array](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/snapshot_array/test_snapshot_array.py)
+  * Pubsub
+    * Simple Events
+      * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/pubsub/simple_events/test_simple_events.py)
   * Structural
     * Proxy
       * Subject
@@ -305,8 +325,6 @@
         * [Proxy](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/proxy.py)
         * [Real Subject](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/real_subject.py)
         * [Subject](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/structural/proxy/subject/subject.py)
-  * Timemap
-    * [Test Timemap](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/timemap/test_timemap.py)
 
 ## Exceptions
   * [Exception Handling](https://github.com/BrianLusina/PythonSnips/blob/master/exceptions/exception_handling.py)
@@ -741,22 +759,6 @@
         * [Test Nary Preorder Traversal](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/nary/test_nary_preorder_traversal.py)
       * Trie
         * [Test Trie](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/trees/trie/test_trie.py)
-  * Design Patterns
-    * Browser History
-      * [Test Browser History](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/browser_history/test_browser_history.py)
-    * Hashmap
-      * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashmap/test_hashmap.py)
-    * Hashset
-      * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/hashset/test_my_hashset.py)
-    * Linked List
-      * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/linked_list/test_linked_list.py)
-    * Oop
-      * [Test Bank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_bank.py)
-      * [Test Throne Inheritance](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/oop/test_throne_inheritance.py)
-    * Orderedstream
-      * [Test Ordered Stream](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/orderedstream/test_ordered_stream.py)
-    * Pubsub
-      * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/tests/design_patterns/pubsub/test_simple_events.py)
   * Generators And Iterators
     * [Test Multiiter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generators_and_iterators/test_multiiter.py)
     * [Test Recur Iter](https://github.com/BrianLusina/PythonSnips/blob/master/tests/generators_and_iterators/test_recur_iter.py)
