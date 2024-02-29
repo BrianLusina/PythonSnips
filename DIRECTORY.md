@@ -373,6 +373,8 @@
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/array_3_pointers/test_array_3_pointers.py)
     * Can Place Flowers
       * [Test Can Place Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/can_place_flowers/test_can_place_flowers.py)
+    * Candy
+      * [Test Candy](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/candy/test_candy.py)
     * Container With Most Water
       * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/container_with_most_water/test_container_with_most_water.py)
     * Gas Stations
