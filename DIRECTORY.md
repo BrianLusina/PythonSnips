@@ -9,6 +9,8 @@
       * [Test Remove Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/remove_duplicates/test_remove_duplicates.py)
     * Remove Element
       * [Test Remove Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/remove_element/test_remove_element.py)
+    * Two Sum
+      * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/two_sum/test_two_sum.py)
   * Backtracking
     * Combination
       * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
@@ -373,6 +375,8 @@
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/array_3_pointers/test_array_3_pointers.py)
     * Can Place Flowers
       * [Test Can Place Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/can_place_flowers/test_can_place_flowers.py)
+    * Candy
+      * [Test Candy](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/candy/test_candy.py)
     * Container With Most Water
       * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/container_with_most_water/test_container_with_most_water.py)
     * Gas Stations
@@ -568,6 +572,8 @@
     * [Test Mini Max Sum](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/mini_max_sum/test_mini_max_sum.py)
   * Multiply 5
     * [Test Multiply 5](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/multiply_5/test_multiply_5.py)
+  * Pascals Triangle
+    * [Test Pascals Triangle](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/pascals_triangle/test_pascals_triangle.py)
   * Perfect Square
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
   * Super Size
@@ -593,6 +599,8 @@
     * [Test Balanced Paren](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/balanced_paren/test_balanced_paren.py)
   * Domain Name
     * [Extract Host](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/domain_name/extract_host.py)
+  * First Occurrence
+    * [Test First Occurrence](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/first_occurrence/test_first_occurrence.py)
   * Greatest Common Divisor
     * [Test Greatest Common Divisor](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/greatest_common_divisor/test_greatest_common_divisor.py)
   * Issubsequence
@@ -625,6 +633,8 @@
     * [Test Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/reverse_words/test_reverse_words.py)
   * String Compression
     * [Test String Compression](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/string_compression/test_string_compression.py)
+  * Text Justification
+    * [Test Text Justification](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/text_justification/test_text_justification.py)
 
 ## Reactivex
   * [Concurrency](https://github.com/BrianLusina/PythonSnips/blob/master/reactivex/concurrency.py)
@@ -986,6 +996,8 @@
     * [String1](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/string1.py)
     * [String2](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/string2.py)
     * [Wordcount](https://github.com/BrianLusina/PythonSnips/blob/master/utils/basic/wordcount.py)
+  * Benchmark
+    * [Timer](https://github.com/BrianLusina/PythonSnips/blob/master/utils/benchmark/timer.py)
   * Context Mgrs
     * [Array Init Test](https://github.com/BrianLusina/PythonSnips/blob/master/utils/context_mgrs/array_init_test.py)
     * [Perf Timer](https://github.com/BrianLusina/PythonSnips/blob/master/utils/context_mgrs/perf_timer.py)
