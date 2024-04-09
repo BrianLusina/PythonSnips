@@ -1,27 +1,15 @@
-# Ref: https://github.com/wangchucheng/git-repo-sync
 name: BitBucket RepoSync
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
-    name: Bitbucket Repo Sync
-    steps:
-
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Mirror to Bitbucket
-      uses: wangchucheng/git-repo-sync@v0.1.0
-      with:
-        # Such as https://github.com/BrianLusina/some-repo-sync.git
-        target-url: ${{ secrets.BITBUCKET_TARGET_URL }}
-        # Such as BrianLusina
-        target-username: ${{ secrets.BITBUCKET_TARGET_USERNAME }}
-        # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS_TOKEN }}
-        target-token: ${{ secrets.BITBUCKET_ACCESS_TOKEN }}
+    name: Mirror to Bitbucket
+    uses: SanctumLabs/ci-workflows/.github/workflows/repo_sync.yml@main
+    secrets:
+      url: ${{ secrets.BITBUCKET_TARGET_URL }}
+      username: ${{ secrets.BITBUCKET_TARGET_USERNAME }}
+      token: ${{ secrets.BITBUCKET_ACCESS_TOKEN }}
