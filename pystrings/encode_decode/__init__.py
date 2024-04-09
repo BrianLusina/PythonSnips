@@ -14,7 +14,7 @@ def decode(encoded_str: str) -> List[str]:
         while encoded_str[j] != "#":
             j += 1
         word_length = int(encoded_str[i:j])
-        word = encoded_str[j + 1:j + 1 + word_length]
+        word = encoded_str[j + 1 : j + 1 + word_length]
         result.append(word)
         i = j + 1 + word_length
 

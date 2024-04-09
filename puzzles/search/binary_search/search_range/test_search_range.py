@@ -4,7 +4,6 @@ from . import search_range, search_range_v3, search_range_v2
 
 
 class SearchRangeTestCases(unittest.TestCase):
-
     def test_1(self):
         """should return [3, 4] for nums=[5, 7, 7, 8, 8, 10] and target 8"""
         nums = [5, 7, 7, 8, 8, 10]
@@ -79,7 +78,6 @@ class SearchRangeTestCases(unittest.TestCase):
 
 
 class SearchRangeV2TestCases(unittest.TestCase):
-
     def test_1(self):
         """should return [3, 4] for nums=[5, 7, 7, 8, 8, 10] and target 8"""
         nums = [5, 7, 7, 8, 8, 10]
@@ -154,7 +152,6 @@ class SearchRangeV2TestCases(unittest.TestCase):
 
 
 class SearchRangeV3TestCases(unittest.TestCase):
-
     def test_1(self):
         """should return [3, 4] for nums=[5, 7, 7, 8, 8, 10] and target 8"""
         nums = [5, 7, 7, 8, 8, 10]
@@ -228,5 +225,5 @@ class SearchRangeV3TestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

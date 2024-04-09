@@ -12,7 +12,6 @@ def longest_substring_util(s: str, start: int, end: int, k: int) -> int:
 
     # iterate through the string
     for mid in range(start, end):
-
         # if we find a character that is 'invalid' i.e. the frequency of the character is less than k
         # if counter.get(s[mid]) >= k:
         if count_map[ord(s[mid]) - ord("a")] >= k:

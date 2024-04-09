@@ -52,5 +52,5 @@ class RotateSinglyLInkedListTestCase(unittest.TestCase):
         self.assertEqual(expected, list(linked_list))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

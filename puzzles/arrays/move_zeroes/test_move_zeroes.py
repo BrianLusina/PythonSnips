@@ -24,6 +24,7 @@ class MoveZeroesTestCase(unittest.TestCase):
         move_zeroes(nums)
         self.assertEqual(expected, nums)
 
+
 class MoveZeroesOneTestCase(unittest.TestCase):
     def test_0_1_0_3_12(self):
         """should modify nums = [0, 1, 0, 3, 12] in place to [1,3,12,0,0]"""
@@ -47,5 +48,5 @@ class MoveZeroesOneTestCase(unittest.TestCase):
         self.assertEqual(expected, nums)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

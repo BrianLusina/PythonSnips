@@ -1,6 +1,7 @@
 """
 Replaces && and || in a string to 'and' and 'or'
 """
+
 import re
 
 N = int(input())

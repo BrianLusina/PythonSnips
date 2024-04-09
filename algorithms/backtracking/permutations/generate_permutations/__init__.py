@@ -19,9 +19,12 @@ def generate_permutations(letters: str) -> List[str]:
         The total space complexity is given by the amount of space required by the strings we're constructing. Like the
         time complexity, the space complexity is also O(n * n!).
     """
-    def dfs(start_index: int, path: List[str], used: List[bool], res: List[str]) -> None:
+
+    def dfs(
+        start_index: int, path: List[str], used: List[bool], res: List[str]
+    ) -> None:
         if start_index == len(letters):
-            res.append(''.join(path))
+            res.append("".join(path))
             return
 
         for i, letter in enumerate(letters):

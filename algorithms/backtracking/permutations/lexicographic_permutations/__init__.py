@@ -1,6 +1,7 @@
 """
 Find the lexicographic permutations of a given list of characters
 """
+
 from itertools import permutations
 
 

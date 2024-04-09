@@ -12,7 +12,7 @@ class Int32ToIpv4TestCase(unittest.TestCase):
 
     def test_random(self):
         for _ in range(100):
-            test_n = randint(0, 2 ** 32 - 1)
+            test_n = randint(0, 2**32 - 1)
             expected = ".".join(
                 [
                     str(test_n >> 24 & 0xFF),

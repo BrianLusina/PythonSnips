@@ -1,9 +1,9 @@
 """
-    Builds statistics about soccer games from touch by touch data.
+Builds statistics about soccer games from touch by touch data.
 
-    For the public version, the raw tables aren't available, but
-    we're including the queries here in order to show what kind
-    of data is available and what kind of statistics are possible.
+For the public version, the raw tables aren't available, but
+we're including the queries here in order to show what kind
+of data is available and what kind of statistics are possible.
 """
 
 # Raw touch-by-touch BigQuery table. This table contains data licensed from Opta
@@ -65,9 +65,7 @@ WHERE blck = 0 AND og = 0 AND penfk = 0)
 WHERE dist < 40)
 GROUP BY matchid, teamid
 ORDER BY matchid, teamid
-   """ % {
-    "touch_table": _TOUCH_TABLE
-}
+   """ % {"touch_table": _TOUCH_TABLE}
 
 # Subquery to compute raw number of goals scored. Does not take
 # into account own-goals (i.e. if a player scores an own-goal against

@@ -1,6 +1,7 @@
 """
 Simple demo of named tuples
 """
+
 import random
 from collections import namedtuple
 from string import ascii_letters
@@ -22,11 +23,13 @@ def generate_tuple():
     :rtype: tuple
     """
     result = namedtuple("result", "letter number letter_num another_letter")
-    letter, number = random.choice(ascii_letters), random.choice(
-        range(len(ascii_letters))
+    letter, number = (
+        random.choice(ascii_letters),
+        random.choice(range(len(ascii_letters))),
     )
-    letter_num, another_letter = letter + str(number), random.choice(
-        ascii_letters[0:number]
+    letter_num, another_letter = (
+        letter + str(number),
+        random.choice(ascii_letters[0:number]),
     )
 
     return result(

@@ -9,7 +9,6 @@ from datastructures.queues.fifo import FifoQueue
 
 
 class BinaryTree(Tree):
-
     def __init__(self, root: Optional[BinaryTreeNode] = None):
         self.root = root
 
@@ -17,7 +16,7 @@ class BinaryTree(Tree):
         pass
 
     @staticmethod
-    def create_tree(elements: List[T]) -> 'BinaryTree':
+    def create_tree(elements: List[T]) -> "BinaryTree":
         """
         Factory method to creates a BinaryTree given a list of values
         If the index of any element in the array is i, the element in the index 2i+1 will become the left child and
@@ -151,7 +150,7 @@ class BinaryTree(Tree):
                     tree_node.left = None
 
     def lowest_common_ancestor(
-            self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
     ) -> Optional[BinaryTreeNode]:
         """
         The approach is pretty intuitive. Traverse the tree in a depth first manner. The moment you encounter either of
@@ -194,8 +193,12 @@ class BinaryTree(Tree):
         if not self.root:
             return None
 
-        def lca_util(node: Optional[BinaryTreeNode], node_one_value: T, node_two_val: T, node_lookup: List[bool]) -> \
-                Optional[BinaryTreeNode]:
+        def lca_util(
+            node: Optional[BinaryTreeNode],
+            node_one_value: T,
+            node_two_val: T,
+            node_lookup: List[bool],
+        ) -> Optional[BinaryTreeNode]:
             """Returns the Lowest Common Ancestor of 2 node values.This updates a node lookup list that has 2 values.
             The first index is for node_one_value and the second index is for node_two_value. They will be updated to
             True if either node is available in the tree. This will recursively go down the tree until a leaf node is
@@ -231,14 +234,16 @@ class BinaryTree(Tree):
             return left_lca if left_lca is not None else right_lca
 
         def is_key_in_subtree(current_node: Optional[BinaryTreeNode], key: T) -> bool:
-
             # If reached the end of a branch, return False.
             if current_node is None:
                 return False
 
             # If key is present at root, or if left subtree or right subtree , return true
-            if current_node.data == key or is_key_in_subtree(current_node.left, key) or is_key_in_subtree(
-                    current_node.right, key):
+            if (
+                current_node.data == key
+                or is_key_in_subtree(current_node.left, key)
+                or is_key_in_subtree(current_node.right, key)
+            ):
                 return True
 
             return False
@@ -246,9 +251,14 @@ class BinaryTree(Tree):
         lookup = [False, False]
         lca = lca_util(self.root, node_one.data, node_two.data, lookup)
 
-        if lookup[0] and lookup[1] or lookup[0] and is_key_in_subtree(lca, node_two.data) or lookup[
-            1] and is_key_in_subtree(
-            lca, node_one.data):
+        if (
+            lookup[0]
+            and lookup[1]
+            or lookup[0]
+            and is_key_in_subtree(lca, node_two.data)
+            or lookup[1]
+            and is_key_in_subtree(lca, node_one.data)
+        ):
             return lca
 
         return None
@@ -319,7 +329,9 @@ class BinaryTree(Tree):
             if idx >= node_count:
                 return False
 
-            return is_complete_helper(root.left, 2 * idx + 1) and is_complete_helper(root.right, 2 * index + 2)
+            return is_complete_helper(root.left, 2 * idx + 1) and is_complete_helper(
+                root.right, 2 * index + 2
+            )
 
         index = 0
         return is_complete_helper(self.root, index)
@@ -347,7 +359,9 @@ class BinaryTree(Tree):
             if root.left is None and root.right is None:
                 return False
 
-            return is_perfect_helper(root.left, level + 1) and is_perfect_helper(root.right, level + 1)
+            return is_perfect_helper(root.left, level + 1) and is_perfect_helper(
+                root.right, level + 1
+            )
 
         return is_perfect_helper(self.root, 0)
 
@@ -376,8 +390,10 @@ class BinaryTree(Tree):
 
         return is_height_balanced(self.root)
 
-    def leaf_similar(self, other: 'BinaryTree') -> bool:
-        if (self.root is None and other.root is not None) or (other.root is None and self.root is not None):
+    def leaf_similar(self, other: "BinaryTree") -> bool:
+        if (self.root is None and other.root is not None) or (
+            other.root is None and self.root is not None
+        ):
             return False
 
         def dfs(node: Optional[BinaryTreeNode]) -> Generator:
@@ -403,8 +419,9 @@ class BinaryTree(Tree):
 
         def good_nodes_helper(node: BinaryTreeNode, data: T) -> int:
             if node is not None:
-                node_count = good_nodes_helper(node.left, max(data, node.data)) + \
-                             good_nodes_helper(node.right, max(data, node.data))
+                node_count = good_nodes_helper(
+                    node.left, max(data, node.data)
+                ) + good_nodes_helper(node.right, max(data, node.data))
                 if node.data >= data:
                     node_count += 1
                 return node_count
@@ -416,7 +433,9 @@ class BinaryTree(Tree):
         if self.root is None:
             return 0
 
-        def count_paths(sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode) -> int:
+        def count_paths(
+            sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode
+        ) -> int:
             if node is None:
                 return 0
 
@@ -430,7 +449,9 @@ class BinaryTree(Tree):
             sum_hash[prefix_sum] += 1
 
             # traverse left and right of tree
-            path += count_paths(sum_hash, prefix_sum, node.left) + count_paths(sum_hash, prefix_sum, node.right)
+            path += count_paths(sum_hash, prefix_sum, node.left) + count_paths(
+                sum_hash, prefix_sum, node.right
+            )
 
             # remove current sum from prefix sum hash
             sum_hash[prefix_sum] -= 1
@@ -468,7 +489,12 @@ class BinaryTree(Tree):
         if not self.root:
             return paths
 
-        def dfs(node: Optional[BinaryTreeNode], path: List[T], result: List, remaining_sum: T):
+        def dfs(
+            node: Optional[BinaryTreeNode],
+            path: List[T],
+            result: List,
+            remaining_sum: T,
+        ):
             """Traverses the tree from root to leaf paths in a depth first search manner.
 
             The Remaining sum is subtracted from the node's value when the tree is being traversed. If a leaf node is reached

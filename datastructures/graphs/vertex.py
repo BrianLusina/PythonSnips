@@ -10,8 +10,14 @@ class Vertex(Generic[T]):
     Graph Node/Vertex representing a Node/Vertex in a Graph
     """
 
-    def __init__(self, data: T, incoming_edges: Set[Edge], outgoing_edges: Set[Edge],
-                 properties: Optional[Dict[str, Any]] = None, identifier: Any = uuid4()):
+    def __init__(
+        self,
+        data: T,
+        incoming_edges: Set[Edge],
+        outgoing_edges: Set[Edge],
+        properties: Optional[Dict[str, Any]] = None,
+        identifier: Any = uuid4(),
+    ):
         self.id = identifier
         self.data = data
         self.incoming_edges = incoming_edges
@@ -20,11 +26,13 @@ class Vertex(Generic[T]):
         self.properties = properties
 
     def __str__(self):
-        return (f"Id: {self.id}, Data: {self.data}, Properties: {self.properties}, Neighbours: {self.neighbours}. "
-                f"Degree: {self.degree}")
+        return (
+            f"Id: {self.id}, Data: {self.data}, Properties: {self.properties}, Neighbours: {self.neighbours}. "
+            f"Degree: {self.degree}"
+        )
 
     @property
-    def neighbours(self) -> List['Vertex']:
+    def neighbours(self) -> List["Vertex"]:
         """Returns a list of all the direct neighbours of this vertex
 
         Returns:
@@ -102,13 +110,13 @@ class Vertex(Generic[T]):
 
         return out_degrees
 
-    def add_adjacent_vertex(self, other: 'Vertex'):
+    def add_adjacent_vertex(self, other: "Vertex"):
         """Adds an adjacent vertex to the list of neighbors. Note that this is useful in a graph as the graph will be
         able the call this method on this vertex & the same method on the other vertex showing undirected relationship.
 
         Args:
-            other (Vertex): Vertex to add as a neighbor 
+            other (Vertex): Vertex to add as a neighbor
         """
 
-    def __eq__(self, other: 'Vertex') -> bool:
+    def __eq__(self, other: "Vertex") -> bool:
         return self.id == other.id

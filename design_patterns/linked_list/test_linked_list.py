@@ -64,5 +64,5 @@ class LinkedListTestCases(unittest.TestCase):
         self.assertEqual(3, actual_three)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

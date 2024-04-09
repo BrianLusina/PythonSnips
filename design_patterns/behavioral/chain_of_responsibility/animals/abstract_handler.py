@@ -8,6 +8,7 @@ class AbstractHandler(Handler):
     """
     Default chaining behaviour can be implemented inside a base handler class
     """
+
     _next_handler: Handler = None
 
     def set_next(self, handler: Handler) -> Handler:

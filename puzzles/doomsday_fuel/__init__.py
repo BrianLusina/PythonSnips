@@ -50,7 +50,9 @@ def transform_matrix(m: List[List]):
                 m[i][j] = Fraction(m[i][j], row_sum)
 
 
-def get_r_matrix(matrix: List[List], transient_states: List, absorbing_states: List) -> List[List]:
+def get_r_matrix(
+    matrix: List[List], transient_states: List, absorbing_states: List
+) -> List[List]:
     """
     For example matrix
     r_matrix = [
@@ -139,7 +141,9 @@ def multiply_row_of_square_matrix(matrix: List[List], row: int, k: int) -> List[
     return multiply_matrices(identity, matrix)
 
 
-def add_multiple_of_row_of_square_matrix(matrix: List[List], source_row: int, k: int, target_row: int):
+def add_multiple_of_row_of_square_matrix(
+    matrix: List[List], source_row: int, k: int, target_row: int
+):
     """
     add k * source_row to target_row of matrix m
     """
@@ -161,8 +165,12 @@ def invert_matrix(matrix: List[List]) -> List[List]:
         for target_row in range(n):
             if source_row != target_row:
                 k = -matrix[target_row][col]
-                matrix = add_multiple_of_row_of_square_matrix(matrix, source_row, k, target_row)
-                inverse = add_multiple_of_row_of_square_matrix(inverse, source_row, k, target_row)
+                matrix = add_multiple_of_row_of_square_matrix(
+                    matrix, source_row, k, target_row
+                )
+                inverse = add_multiple_of_row_of_square_matrix(
+                    inverse, source_row, k, target_row
+                )
     return inverse
 
 

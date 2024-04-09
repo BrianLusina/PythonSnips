@@ -1,6 +1,7 @@
 """
 Small demonstration on fisher yates algorithm
 """
+
 import random
 
 

@@ -2,12 +2,11 @@ from typing import Dict, List, Tuple
 
 
 class TimeMap:
-
     def __init__(self):
         self.histories: Dict[str, List[Tuple[int, str]]] = dict()
 
     def set(self, key: str, value: str, timestamp: int) -> None:
-        if not key in self.histories:
+        if key not in self.histories:
             self.histories[key] = [(timestamp, value)]
             return
         self.histories[key].append((timestamp, value))
@@ -20,7 +19,7 @@ class TimeMap:
         to find the greatest timestamp less than or equal to timestamp.
         In the binary search loop, we will continue to find the desired timestamp on the right side of the loop if
         histories[mid][0] <= timestamp, and search the left side otherwise."""
-        if not key in self.histories:
+        if key not in self.histories:
             return ""
 
         key_historical_values = self.histories[key]

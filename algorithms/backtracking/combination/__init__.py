@@ -23,6 +23,4 @@ def combination_sum_3(k: int, n: int) -> List[List[int]]:
 def combination_sum_2(candidates: List[int], target: int) -> List[List[int]]:
     result = []
 
-
-
     return result

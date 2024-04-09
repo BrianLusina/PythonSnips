@@ -21,12 +21,22 @@ class MaxDuffleBagValueTestCase(unittest.TestCase):
 
     def test_3(self):
         """should return 5057 for [(96, 359), (43, 963), (28, 465), (37, 706), (92, 146), (5, 282), (3, 828), (54, 962), (93, 492)] and capacity of 383"""
-        cake_tuples = [(96, 359), (43, 963), (28, 465), (37, 706), (92, 146), (5, 282), (3, 828), (54, 962), (93, 492)]
+        cake_tuples = [
+            (96, 359),
+            (43, 963),
+            (28, 465),
+            (37, 706),
+            (92, 146),
+            (5, 282),
+            (3, 828),
+            (54, 962),
+            (93, 492),
+        ]
         capacity = 383
         expected = 5057
         actual = max_duffel_bag_value(cake_tuples, capacity)
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

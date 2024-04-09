@@ -12,8 +12,11 @@ class BinarySearchTreeDeleteNodeTestCases(unittest.TestCase):
         search_tree = BinarySearchTree(root=root)
 
         actual = search_tree.delete_node(3)
-        expected_root = BinaryTreeNode(5, left=BinaryTreeNode(4, left=BinaryTreeNode(2)),
-                                       right=BinaryTreeNode(6, right=BinaryTreeNode(7)))
+        expected_root = BinaryTreeNode(
+            5,
+            left=BinaryTreeNode(4, left=BinaryTreeNode(2)),
+            right=BinaryTreeNode(6, right=BinaryTreeNode(7)),
+        )
 
         self.assertEqual(expected_root.data, actual.data)
         self.assertEqual(expected_root.left.data, actual.left.data)
@@ -51,5 +54,5 @@ class BinarySearchTreeDeleteNodeTestCases(unittest.TestCase):
         self.assertEqual(expected_root.data, actual.data)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

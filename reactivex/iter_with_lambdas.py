@@ -2,6 +2,7 @@
 Here we use an Observable.from_ and lambdas in the subscribe of the observer, this means we do not have to implement our own observer
 and we can simply use lambdas to call the on_next, on_error and on_completed callbacks on the subscriber
 """
+
 from rx import Observable
 
 greek_words = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"]

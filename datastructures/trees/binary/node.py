@@ -8,7 +8,12 @@ class BinaryTreeNode(TreeNode):
     Binary tree node class which will implement Binary tree
     """
 
-    def __init__(self, data: T, left: Optional['BinaryTreeNode'] = None, right: Optional['BinaryTreeNode'] = None):
+    def __init__(
+        self,
+        data: T,
+        left: Optional["BinaryTreeNode"] = None,
+        right: Optional["BinaryTreeNode"] = None,
+    ):
         """
         Value here can be anything
         """
@@ -109,7 +114,7 @@ class BinaryTreeNode(TreeNode):
         else:
             return self.data
 
-    def insert_left(self, data: T) -> 'BinaryTreeNode':
+    def insert_left(self, data: T) -> "BinaryTreeNode":
         """
         Inserts a new data(node) to the left of the current node and return the newly created node
         :param data the data to insert into the new node
@@ -126,7 +131,7 @@ class BinaryTreeNode(TreeNode):
             self.left = new_node
         return self.left
 
-    def insert_right(self, data: T) -> 'BinaryTreeNode':
+    def insert_right(self, data: T) -> "BinaryTreeNode":
         """
         Inserts a data to the right of the current node. This will check if the current node has a right child already
         and insert this node as the new right node of the current node and move the previous node (if not None) to
@@ -143,7 +148,7 @@ class BinaryTreeNode(TreeNode):
         return self.right
 
     @property
-    def children(self) -> List['BinaryTreeNode']:
+    def children(self) -> List["BinaryTreeNode"]:
         """Returns children of this node.
         Returns:
             List: children of this node in a list
@@ -160,7 +165,7 @@ class BinaryTreeNode(TreeNode):
     def __repr__(self):
         return f"BinaryTreeNode(data={self.data}, left={self.left}, right={self.right})"
 
-    def __eq__(self, other: 'BinaryTreeNode') -> bool:
+    def __eq__(self, other: "BinaryTreeNode") -> bool:
         """Checks if this node is equal to another node based on the data they contain
         Args:
             other(BinaryTreeNode): the other node to compare this node to

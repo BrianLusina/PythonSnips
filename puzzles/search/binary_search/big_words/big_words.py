@@ -6,7 +6,6 @@ def find_rotation_point(words):
     ceiling_index = len(words) - 1
 
     while floor_index < ceiling_index:
-
         # guess a point 1/2 way between floor and ceiling
         guess_index = floor_index + ((ceiling_index - floor_index) // 2)
 

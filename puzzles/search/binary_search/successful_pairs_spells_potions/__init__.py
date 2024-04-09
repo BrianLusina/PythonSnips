@@ -15,8 +15,12 @@ def successful_pairs(spells: List[int], potions: List[int], success: int) -> Lis
     return pairs
 
 
-def successful_pairs_2(spells: List[int], potions: List[int], success: int) -> List[int]:
-    def valid_position(sorted_potions: List[int], target: int, current_spell: int) -> int:
+def successful_pairs_2(
+    spells: List[int], potions: List[int], success: int
+) -> List[int]:
+    def valid_position(
+        sorted_potions: List[int], target: int, current_spell: int
+    ) -> int:
         """This retrieves the first position of a potion which if multiplied with a spell returns at least the given
         strength
 

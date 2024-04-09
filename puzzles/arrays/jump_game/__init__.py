@@ -32,13 +32,11 @@ def jump(nums: List[int]) -> int:
 
     # Greedy strategy: extend coverage as long as possible with lazy jump
     for idx in range(size):
-
         # extend coverage as far as possible
         current_coverage = max(current_coverage, idx + nums[idx])
 
         # forced to jump (by lazy jump) to extend coverage
         if idx == last_jump_index:
-
             # update last jump index
             last_jump_index = current_coverage
 

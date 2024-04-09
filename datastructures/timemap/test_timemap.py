@@ -36,5 +36,5 @@ class TimeMapTestCase(unittest.TestCase):
         self.assertEqual(expected_bar_2_3, actual_at_time_5)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

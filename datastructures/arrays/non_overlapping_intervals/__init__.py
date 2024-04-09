@@ -15,7 +15,7 @@ def erase_overlap_intervals(intervals: List[List[int]]) -> int:
 
     # end is the current minimum end interval, use to keep track of the minimal end interval seen so far
     # count is the number of intervals that need to be removed
-    end, count = float('-inf'), 0
+    end, count = float("-inf"), 0
 
     for interval_start, interval_end in sorted_intervals:
         if interval_start >= end:

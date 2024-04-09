@@ -26,8 +26,7 @@ def knight(rows, cols, initial_x, initial_y, destination_x, destination_y) -> in
     queue.append(source)
 
     # make all cells unvisited
-    visited = [[False for _ in range(cols)]
-               for _ in range(rows)]
+    visited = [[False for _ in range(cols)] for _ in range(rows)]
 
     # initial position is visited
     visited[initial_x - 1][initial_y - 1] = True

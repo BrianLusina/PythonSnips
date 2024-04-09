@@ -70,5 +70,5 @@ class CircularQueueTestCase(unittest.TestCase):
             circular_linked_list_queue.dequeue()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

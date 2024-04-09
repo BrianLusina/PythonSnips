@@ -2,7 +2,6 @@ from typing import List
 
 
 def largest_altitude(gain: List[int]) -> int:
-
     current_altitude = 0
     highest_altitude = 0
 

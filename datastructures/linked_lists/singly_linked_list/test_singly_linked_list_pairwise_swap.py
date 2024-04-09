@@ -19,7 +19,9 @@ class SinglyLinkedListPairwiseTest(unittest.TestCase):
 
         head = linked_list.pairwise_swap_two()
 
-        expected_head = SingleNode(2, next_=SingleNode(1, next_=SingleNode(4, next_=SingleNode(3))))
+        expected_head = SingleNode(
+            2, next_=SingleNode(1, next_=SingleNode(4, next_=SingleNode(3)))
+        )
 
         self.assertEqual(head, expected_head)
 

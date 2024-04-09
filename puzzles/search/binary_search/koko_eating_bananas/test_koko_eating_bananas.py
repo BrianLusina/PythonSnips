@@ -30,12 +30,12 @@ class MinEatingSpeedTestCase(unittest.TestCase):
 
     def test_4(self):
         """should return 2 for piles = [2, 2] h = 2"""
-        piles = [2,2]
+        piles = [2, 2]
         h = 2
         expected = 2
         actual = min_eating_speed(piles, h)
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

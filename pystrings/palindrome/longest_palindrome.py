@@ -9,7 +9,7 @@ def longest_palindrome(s):
     else:
         for y, _ in enumerate(s):
             for x, _ in enumerate(s):
-                tr = s[y: x + 1]
+                tr = s[y : x + 1]
                 if is_palindrome(tr) and (len(tr) > len(final_str)):
                     final_str = tr
 

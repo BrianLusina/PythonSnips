@@ -1,7 +1,9 @@
 from typing import List
 
 
-def flood_fill(image: List[List[int]], sr: int, sc: int, new_color: int) -> List[List[int]]:
+def flood_fill(
+    image: List[List[int]], sr: int, sc: int, new_color: int
+) -> List[List[int]]:
     """
     We perform the algorithm by painting the starting pixels, plus adjacent pixels of the same color, and so on.
     Say 'color' is the color of the starting pixel. Let's floodfill the starting pixel: we change the color of that

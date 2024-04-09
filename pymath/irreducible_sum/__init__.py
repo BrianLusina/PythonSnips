@@ -17,7 +17,7 @@ def sum_fracts(lst):
         total += Fraction(fract[0], fract[1])
     denom = total.denominator
     numer = total.numerator
-    if denom is 1:
+    if denom == 1:
         return numer
     else:
         return [numer, denom]

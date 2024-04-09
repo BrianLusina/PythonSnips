@@ -58,7 +58,7 @@ def word_count_dict(filename):
         for word in words:
             word = word.lower()
             # Special case if we're seeing this word for the first time.
-            if not word in word_count:
+            if word not in word_count:
                 word_count[word] = 1
             else:
                 word_count[word] = word_count[word] + 1

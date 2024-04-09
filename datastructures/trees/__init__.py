@@ -49,7 +49,7 @@ class Tree(ABC, Generic[T]):
 
     @abstractmethod
     def lowest_common_ancestor(
-            self, node_one: TreeNode, node_two: TreeNode
+        self, node_one: TreeNode, node_two: TreeNode
     ) -> TreeNode:
         """
         Returns the lowest common ancestor of 2 nodes in the Tree.
@@ -126,7 +126,7 @@ class Tree(ABC, Generic[T]):
         raise NotImplementedError("This method has not yet been implemented")
 
     @abstractmethod
-    def leaf_similar(self, other: 'Tree') -> bool:
+    def leaf_similar(self, other: "Tree") -> bool:
         """
         Returns true if this tree has similar leaf value sequence to another tree.
         For example: If this tree has nodes = [3,5,1,6,2,9,8,null,null,7,4] and other tree has nodes =
@@ -187,7 +187,7 @@ class Tree(ABC, Generic[T]):
         raise NotImplementedError("not yet implemented")
 
     @staticmethod
-    def deserialize(tree_str: str) -> 'Tree':
+    def deserialize(tree_str: str) -> "Tree":
         """Serializes a tree into a string
         Args:
             tree_str (str): string representation of tree

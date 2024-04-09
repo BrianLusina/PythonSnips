@@ -56,7 +56,9 @@ def question_logic(question_opts: QuestionOptions) -> int:
                     guess_count += 1
                     break
             else:
-                print(f"Selected answer {player_choice} is not correct. Try again. 1 more chance")
+                print(
+                    f"Selected answer {player_choice} is not correct. Try again. 1 more chance"
+                )
                 player_choice = input("Select an answer: ")
                 guess_count += 1
                 continue
@@ -83,7 +85,7 @@ def question_one() -> int:
         answer=question_answer,
         question_choices=question_choices,
         points_for_first_guess=2,
-        points_for_second_guess=1
+        points_for_second_guess=1,
     )
 
     points_scored = question_logic(question_opts)
@@ -110,7 +112,7 @@ def question_two() -> int:
         answer=question_answer,
         question_choices=question_choices,
         points_for_first_guess=3,
-        points_for_second_guess=2
+        points_for_second_guess=2,
     )
 
     points_scored = question_logic(question_opts)
@@ -138,7 +140,7 @@ def question_three() -> int:
         answer=question_answer,
         question_choices=question_choices,
         points_for_first_guess=4,
-        points_for_second_guess=3
+        points_for_second_guess=3,
     )
 
     points_scored = question_logic(question_opts)
@@ -153,7 +155,8 @@ if __name__ == "__main__":
     print(
         f"\nWelcome to the {title}. For each question, you have a maximum of 2 guesses. If you get the first guess correctly, "
         f"You score maximum points, if you guess it wrong you have 1 more chance, but with fewer points, either way"
-        f"you proceed to the next question\n")
+        f"you proceed to the next question\n"
+    )
 
     print("-----" * 10)
     print("Question 1:")

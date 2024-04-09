@@ -133,12 +133,12 @@ class Graph(ABC, Generic[T]):
 
     def is_connected(self, node_one: Vertex, node_two: Vertex) -> bool:
         return (
-                node_one in self.adjacency_list
-                and node_two in self.adjacency_list[node_two]
+            node_one in self.adjacency_list
+            and node_two in self.adjacency_list[node_two]
         )
 
     def find_path(
-            self, node_one: Vertex, node_two: Vertex, path=None
+        self, node_one: Vertex, node_two: Vertex, path=None
     ) -> Union[List, None]:
         """
         Find any path between node_one and node_two. May not be the shortest path
@@ -167,7 +167,7 @@ class Graph(ABC, Generic[T]):
         return None
 
     def find_all_paths(
-            self, node_one: Vertex, node_two: Vertex, path: List = None
+        self, node_one: Vertex, node_two: Vertex, path: List = None
     ) -> list:
         """
         Finds all paths between node_one and node_two, where node_one is the start & node_two is the end
@@ -196,7 +196,7 @@ class Graph(ABC, Generic[T]):
         return paths
 
     def find_shortest_path(
-            self, node_one: Vertex, node_two: Vertex, path: List = None
+        self, node_one: Vertex, node_two: Vertex, path: List = None
     ) -> Union[List, None]:
         """
         Finds the shortest path between 2 nodes in the graph

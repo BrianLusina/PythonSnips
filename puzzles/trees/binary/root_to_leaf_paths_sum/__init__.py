@@ -31,7 +31,9 @@ def path_sum(root: Optional[BinaryTreeNode], target_sum: T) -> List[List[T]]:
     if not root:
         return paths
 
-    def dfs(node: Optional[BinaryTreeNode], path: List[T], result: List, remaining_sum: T):
+    def dfs(
+        node: Optional[BinaryTreeNode], path: List[T], result: List, remaining_sum: T
+    ):
         """Traverses the tree from root to leaf paths in a depth first search manner.
 
         The Remaining sum is subtracted from the node's value when the tree is being traversed. If a leaf node is reached

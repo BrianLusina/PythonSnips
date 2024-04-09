@@ -19,11 +19,16 @@ class Edge:
     Edge representation of an Edge in a Graph
     """
 
-    def __init__(self, source: Vertex, destination: Vertex, weight: Optional[Union[int, float]] = None,
-                 edge_type: EdgeType = EdgeType.UNDIRECTED,
-                 relationship_type: Optional[AnyStr] = None,
-                 properties: Optional[Dict[str, Any]] = None,
-                 identifier: AnyStr = uuid4()):
+    def __init__(
+        self,
+        source: Vertex,
+        destination: Vertex,
+        weight: Optional[Union[int, float]] = None,
+        edge_type: EdgeType = EdgeType.UNDIRECTED,
+        relationship_type: Optional[AnyStr] = None,
+        properties: Optional[Dict[str, Any]] = None,
+        identifier: AnyStr = uuid4(),
+    ):
         self.id = identifier
         self.source = source
         self.destination = destination
@@ -39,8 +44,11 @@ class Edge:
             if self.destination.id != self.source.id:
                 raise ValueError(
                     f"Edge denoted as {self.type} but source node {self.source} & "
-                    f"destination node {self.destination} are not the same")
+                    f"destination node {self.destination} are not the same"
+                )
 
     def __str__(self):
-        return f"Id: {self.id}, Source: {self.source}, Destination: {self.destination}, Weight: {self.weight}, " \
-               f"Properties: {self.properties}, RelationshipType: {self.relationship_type}"
+        return (
+            f"Id: {self.id}, Source: {self.source}, Destination: {self.destination}, Weight: {self.weight}, "
+            f"Properties: {self.properties}, RelationshipType: {self.relationship_type}"
+        )

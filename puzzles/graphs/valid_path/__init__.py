@@ -3,8 +3,14 @@ from typing import List
 from collections import deque
 
 
-def valid_path(x: int, y: int, number_of_circles: int, radius_of_each_circle: int, x_coordinates: List[int],
-               y_coordinates: List[int]) -> bool:
+def valid_path(
+    x: int,
+    y: int,
+    number_of_circles: int,
+    radius_of_each_circle: int,
+    x_coordinates: List[int],
+    y_coordinates: List[int],
+) -> bool:
     centers = list(zip(x_coordinates, y_coordinates))
     visited = [[0 for _ in range(y + 1)] for _ in range(x + 1)]
 
@@ -14,7 +20,10 @@ def valid_path(x: int, y: int, number_of_circles: int, radius_of_each_circle: in
             x_coord = center[0]
             y_coord = center[1]
 
-            if pow(tx - x_coord, 2) + pow(ty - y_coord, 2) <= radius_of_each_circle * radius_of_each_circle:
+            if (
+                pow(tx - x_coord, 2) + pow(ty - y_coord, 2)
+                <= radius_of_each_circle * radius_of_each_circle
+            ):
                 return False
         return True
 

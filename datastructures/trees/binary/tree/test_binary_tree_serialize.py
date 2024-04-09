@@ -55,5 +55,5 @@ class BinaryTreeSerializeTestCases(unittest.TestCase):
         self.assertEquals(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

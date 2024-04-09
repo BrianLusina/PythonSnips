@@ -21,5 +21,5 @@ class SnapshotTestCase(unittest.TestCase):
         self.assertEqual(expected_first_snap_id, actual_first_snap_id)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

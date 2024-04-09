@@ -9,8 +9,13 @@ class DoubleNode(Node):
     Node implementation of DoubleLinkedList
     """
 
-    def __init__(self, data: Any, previous: Optional['DoubleNode'] = None, next_: Optional['DoubleNode'] = None,
-                 key=None):
+    def __init__(
+        self,
+        data: Any,
+        previous: Optional["DoubleNode"] = None,
+        next_: Optional["DoubleNode"] = None,
+        key=None,
+    ):
         super().__init__(data=data, next_=next_, key=key)
         self.previous = previous
 
@@ -404,7 +409,6 @@ class DoublyLinkedList(LinkedList):
             return node
 
         while curr is not None:
-
             for _ in range(position - 1):
                 curr = curr.next
 
@@ -417,7 +421,9 @@ class DoublyLinkedList(LinkedList):
         current_node = self.head
         while current_node is not None:
             print(
-                current_node.previous.data if hasattr(current_node.previous, "value") else None
+                current_node.previous.data
+                if hasattr(current_node.previous, "value")
+                else None
             )
             print(current_node.data)
             print(
@@ -499,7 +505,6 @@ class DoublyLinkedList(LinkedList):
 
         # loop as long as there are at least 2 nodes left
         while current and current.next:
-
             # if both nodes have the same value/data
             if current.data == current.next.data:
                 # no need to swap, move on to the next pair
