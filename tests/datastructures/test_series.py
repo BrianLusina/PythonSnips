@@ -4,6 +4,7 @@ Implementation note:
 The slices function should raise a ValueError with a meaningful error
 message if its length argument doesn't fit the series.
 """
+
 import unittest
 
 from datastructures.lists.series import slices

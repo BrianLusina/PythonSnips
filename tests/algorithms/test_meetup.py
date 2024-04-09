@@ -17,6 +17,7 @@ end in '-teenth'. Therefore, one is guaranteed that each day of the week
 (Monday, Tuesday, ...) will have exactly one date that is named with '-teenth'
 in every month.
 """
+
 import unittest
 from datetime import date
 
