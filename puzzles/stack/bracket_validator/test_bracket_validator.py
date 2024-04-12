@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.bracket_validator import (
+from . import (
     check_brackets_1,
     check_brackets_2,
     check_brackets_3,
