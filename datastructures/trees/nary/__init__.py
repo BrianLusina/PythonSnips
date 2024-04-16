@@ -14,7 +14,7 @@ class NAryTree(Tree):
     def is_balanced(self) -> bool:
         pass
 
-    def leaf_similar(self, other: 'Tree') -> bool:
+    def leaf_similar(self, other: "Tree") -> bool:
         pass
 
     def number_of_good_nodes(self) -> int:
@@ -29,7 +29,9 @@ class NAryTree(Tree):
     def height(self) -> int:
         pass
 
-    def lowest_common_ancestor(self, node_one: NAryNode, node_two: NAryNode) -> NAryNode:
+    def lowest_common_ancestor(
+        self, node_one: NAryNode, node_two: NAryNode
+    ) -> NAryNode:
         pass
 
     def has_next(self) -> bool:

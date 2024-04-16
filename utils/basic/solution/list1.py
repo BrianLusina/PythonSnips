@@ -65,6 +65,7 @@ def last(a):
 
 # LAB(end solution)
 
+
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
 # order by the last element in each tuple.

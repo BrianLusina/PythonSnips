@@ -4,7 +4,6 @@ from .max_array_heap import MaxArrayBasedHeap
 
 
 class MaxArrayBasedHeapTestCaseOne(unittest.TestCase):
-
     def setUp(self) -> None:
         self.heap = MaxArrayBasedHeap()
 
@@ -25,5 +24,5 @@ class MaxArrayBasedHeapTestCaseOne(unittest.TestCase):
         self.assertEqual(expected_last_node, actual_last_node)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

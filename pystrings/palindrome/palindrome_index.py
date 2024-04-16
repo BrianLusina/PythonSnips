@@ -30,7 +30,7 @@ def palindrome_index_two(word: str) -> int:
             continue
         if word[j:-i] == word[j:-i][::-1]:
             return len(word) - i
-        elif word[j + 1:-i + 1] == word[j + 1:-i + 1][::-1]:
+        elif word[j + 1 : -i + 1] == word[j + 1 : -i + 1][::-1]:
             return j
         return -1
     return -1

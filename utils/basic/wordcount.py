@@ -47,6 +47,7 @@ import sys
 
 ###
 
+
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
 def main():

@@ -1,0 +1,15 @@
+name: Danger CI
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  dangerci:
+    name: Danger CI
+    uses: SanctumLabs/ci-workflows/.github/workflows/dangerci.yml@main
+    with:
+      node-version: "lts/*"
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}

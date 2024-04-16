@@ -14,7 +14,7 @@ class RemoveStartsTestCase(unittest.TestCase):
             actual = remove_stars_with_stack(word)
 
         self.assertEqual(expected, actual)
-        print(f"Execution of remove_stars_with_stack(%s) took %.6f s" % timed())
+        print("Execution of remove_stars_with_stack(%s) took %.6f s" % timed())
 
     def test_two(self):
         """should return '' from erase*****"""
@@ -25,8 +25,8 @@ class RemoveStartsTestCase(unittest.TestCase):
             actual = remove_stars_with_stack(word)
 
         self.assertEqual(expected, actual)
-        print(f"Execution of remove_stars_with_stack(%s) took %.6f s" % timed())
+        print("Execution of remove_stars_with_stack(%s) took %.6f s" % timed())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

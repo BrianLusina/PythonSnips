@@ -3,7 +3,6 @@ import random
 
 
 class RandomizedSet:
-
     def __init__(self):
         # _container to store the key value pairs where the key is the value in the set and the value is the index of
         # the value in the data list

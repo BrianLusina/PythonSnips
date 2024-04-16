@@ -4,6 +4,7 @@ some pre-processing before we output it to a subscriber/observer.
 This chaining of operations creates new observables that we can subscribe to and call the same on_next, on_completed and on_error callbacks
 
 """
+
 from rx import Observable
 
 greek_words = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"]

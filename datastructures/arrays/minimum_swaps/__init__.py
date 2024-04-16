@@ -19,7 +19,6 @@ def minimum_swaps(arr: list) -> int:
     swaps = 0
 
     for x in range(length):
-
         # if we have already visited the element or at the correct position
         if visited_map[x] or array_positions[x][0] == x:
             continue

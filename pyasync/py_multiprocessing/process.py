@@ -1,6 +1,7 @@
 """
 This sample demonstrates using ProcessPoolExecutor to download landing page of sites
 """
+
 # noinspection PyCompatibility
 from concurrent.futures import ProcessPoolExecutor as Executor
 from time import time

@@ -12,6 +12,4 @@ class Test:
             actual
         ) + " passed " if actual == expected else "Test for " + str(
             actual
-        ) + " failed, expected " + str(
-            expected
-        )
+        ) + " failed, expected " + str(expected)

@@ -1,4 +1,4 @@
-MOD = 10 ** 9 + 7
+MOD = 10**9 + 7
 
 
 def num_tilings(n: int) -> int:
@@ -11,15 +11,10 @@ def num_tilings(n: int) -> int:
     dp[1][1] = dp[1][2] = 1
 
     for i in range(2, n + 1):
-        dp[i][0] = (dp[i - 1][0] +
-                    dp[i - 2][0] +
-                    dp[i - 2][1] +
-                    dp[i - 2][2]) % MOD
+        dp[i][0] = (dp[i - 1][0] + dp[i - 2][0] + dp[i - 2][1] + dp[i - 2][2]) % MOD
 
-        dp[i][1] = (dp[i - 1][0] +
-                    dp[i - 1][2]) % MOD
+        dp[i][1] = (dp[i - 1][0] + dp[i - 1][2]) % MOD
 
-        dp[i][2] = (dp[i - 1][0] +
-                    dp[i - 1][1]) % MOD
+        dp[i][2] = (dp[i - 1][0] + dp[i - 1][1]) % MOD
 
     return dp[n][0]

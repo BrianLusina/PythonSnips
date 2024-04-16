@@ -4,7 +4,6 @@ from . import quicksort
 
 
 class QuicksortTestCases(unittest.TestCase):
-
     def test_one(self):
         """should sort numbers=[0,8,1,2,7,9,3,4]"""
         numbers = [0, 8, 1, 2, 7, 9, 3, 4]
@@ -27,5 +26,5 @@ class QuicksortTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

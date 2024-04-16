@@ -26,7 +26,11 @@ def interpolation_search(collection: List[T], target: T) -> int:
     while left <= right and collection[left] <= target <= collection[right]:
         # find the midpoint
         mid_point = left + int(
-            ((float(right - left) / (collection[right] - collection[left])) * (target - collection[left])))
+            (
+                (float(right - left) / (collection[right] - collection[left]))
+                * (target - collection[left])
+            )
+        )
 
         # compare value at midpoint with target
         if collection[mid_point] == target:

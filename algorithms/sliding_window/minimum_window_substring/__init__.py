@@ -53,4 +53,4 @@ def min_window(s: str, t: str) -> str:
 
         right += 1
 
-    return "" if ans[0] == float("Inf") else s[ans[1]: ans[2] + 1]
+    return "" if ans[0] == float("Inf") else s[ans[1] : ans[2] + 1]

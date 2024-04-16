@@ -166,12 +166,12 @@ class BTree:
         btree_node.children.insert(index + 1, leaf_node)
         btree_node.add_key_at(key=child_at_index.keys[degree - 1], index=index)
 
-        leaf_node.keys = child_at_index.keys[degree: (2 * degree) - 1]
-        child_at_index.keys = child_at_index.keys[0:degree - 1]
+        leaf_node.keys = child_at_index.keys[degree : (2 * degree) - 1]
+        child_at_index.keys = child_at_index.keys[0 : degree - 1]
 
         if not child_at_index.leaf:
-            leaf_node.children = child_at_index[degree:2 * degree]
-            child_at_index.children = child_at_index.children[0:degree - 1]
+            leaf_node.children = child_at_index[degree : 2 * degree]
+            child_at_index.children = child_at_index.children[0 : degree - 1]
 
     def __insert_non_full(self, btree_node: BTreeNode, k: T):
         i = len(btree_node.keys) - 1

@@ -5,7 +5,6 @@ def clean_string(s):
     q = []
 
     for idx in range(len(s)):
-
         if s[idx] != "#":
             q.append(s[idx])
         elif len(q) != 0:

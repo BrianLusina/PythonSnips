@@ -31,7 +31,11 @@ def palindrome_pairs_2(words: List[str]) -> List[List[int]]:
 
     for index, word in enumerate(words):
         # check if empty string is in the dictionary and the current word is palindrome
-        if "" in reversed_words_map and reversed_words_map[""] != index and is_palindrome(word):
+        if (
+            "" in reversed_words_map
+            and reversed_words_map[""] != index
+            and is_palindrome(word)
+        ):
             # append the indices to the result list
             result.append([index, reversed_words_map[""]])
 
@@ -41,14 +45,20 @@ def palindrome_pairs_2(words: List[str]) -> List[List[int]]:
             right_substring = word[j:]  # get the right substring
 
             # check if left substring is in the dictionary and the right substring is palindrome
-            if left_substring in reversed_words_map and reversed_words_map[
-                left_substring] != index and is_palindrome(right_substring):
+            if (
+                left_substring in reversed_words_map
+                and reversed_words_map[left_substring] != index
+                and is_palindrome(right_substring)
+            ):
                 # append the indices to the result list
                 result.append([index, reversed_words_map[left_substring]])
 
             # check if right substring is in the dictionary and the left substring is palindrome
-            if right_substring in reversed_words_map and reversed_words_map[
-                right_substring] != index and is_palindrome(left_substring):
+            if (
+                right_substring in reversed_words_map
+                and reversed_words_map[right_substring] != index
+                and is_palindrome(left_substring)
+            ):
                 # append the indices to the ans list
                 result.append([reversed_words_map[right_substring], index])
 

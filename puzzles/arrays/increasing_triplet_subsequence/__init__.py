@@ -3,13 +3,14 @@ from typing import List
 
 def increasing_triplet(nums: List[int]) -> bool:
     for i in range(len(nums)):
-        triplets = nums[i:i + 3]
+        triplets = nums[i : i + 3]
 
         if len(triplets) == 3:
             if triplets[0] < triplets[1] < triplets[2]:
                 return True
 
     return False
+
 
 def increasingTriplet(nums: List[int]) -> bool:
     n = len(nums)

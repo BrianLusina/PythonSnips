@@ -59,5 +59,5 @@ class FindDuplicateTestCases(unittest.TestCase):
         self.assertIn(actual, [expected_1, expected_4])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import Dict
 from math import ceil
 from collections import defaultdict
 from .. import T
@@ -50,7 +50,9 @@ class BTreeNode:
         @return: Key to remove
         """
         if len(self.keys) == self.min_keys:
-            raise Exception(f"Deleting key {key} from {self} will violate minimum keys of this node.")
+            raise Exception(
+                f"Deleting key {key} from {self} will violate minimum keys of this node."
+            )
 
         key_exists = self.keys.get(key, False)
         if not key_exists:
@@ -59,7 +61,7 @@ class BTreeNode:
         data = self.keys.pop(key)
         return data
 
-    def add_child(self, node: 'BTreeNode'):
+    def add_child(self, node: "BTreeNode"):
         """
         Adds a child to the list of children on this node
         @param node to add as a child to this node
@@ -70,4 +72,6 @@ class BTreeNode:
 
     def __validate_key_size(self, key: T):
         if len(self.keys) == self.max_keys:
-            raise Exception(f"Adding key {key} to {self} will violate maximum keys of this node.")
+            raise Exception(
+                f"Adding key {key} to {self} will violate maximum keys of this node."
+            )

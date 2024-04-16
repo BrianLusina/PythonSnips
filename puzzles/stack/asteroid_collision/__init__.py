@@ -8,7 +8,6 @@ def asteroid_collision(asteroids: List[int]) -> List[int]:
 
     # time complexity incurred here is O(N) as we iterate over all the asteroids
     for asteroid in asteroids:
-
         # we only add an asteroid if it's positive(moving in the right direction) or stack is empty
         if not stack or asteroid > 0:
             stack.append(asteroid)

@@ -1,5 +1,5 @@
 import unittest
-from . import pascals_triangle, pascal_nth_row
+from . import pascal_nth_row
 
 
 class PascalsTriangleTestCase(unittest.TestCase):
@@ -11,5 +11,5 @@ class PascalsTriangleTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

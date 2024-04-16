@@ -20,9 +20,7 @@ class EvaluateDivisionTestCase(unittest.TestCase):
         expected = [3.75000, 0.40000, 5.00000, 0.20000]
         equations = [["a", "b"], ["b", "c"], ["bc", "cd"]]
         values = [1.5, 2.5, 5.0]
-        queries = [["a", "c"], ["c", "b"],
-                   ["bc", "cd"],
-                   ["cd", "bc"]]
+        queries = [["a", "c"], ["c", "b"], ["bc", "cd"], ["cd", "bc"]]
         actual = calc_equation(equations, values, queries)
         self.assertEqual(expected, actual)
 
@@ -37,5 +35,5 @@ class EvaluateDivisionTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

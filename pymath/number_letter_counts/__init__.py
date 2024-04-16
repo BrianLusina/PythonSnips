@@ -24,10 +24,10 @@ def number_letter_counts(start, end):
 
     # if invalid values used, ie. None
     if end is None or start is None:
-        raise ValueError(f"Start or end can not be None")
+        raise ValueError("Start or end can not be None")
 
     if not isinstance(start, (int, float)) or not isinstance(end, (int, float)):
-        raise ValueError(f"Expected number input")
+        raise ValueError("Expected number input")
 
     # enforce converting the input to integer
     start = int(start)

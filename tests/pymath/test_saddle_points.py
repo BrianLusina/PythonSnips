@@ -5,6 +5,7 @@ The saddle_points function must validate the input matrix and raise a
 ValueError with a meaningful error message if the matrix turns out to be
 irregular.
 """
+
 import unittest
 
 from pymath.saddle_points import saddle_points

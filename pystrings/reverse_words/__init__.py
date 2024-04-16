@@ -17,7 +17,6 @@ def reverse_words(message: str) -> str:
     current_word_start_index = 0
 
     for i in range(len(message_list) + 1):
-
         # found the end of the current word!
         if (i == len(message_list)) or (message_list[i] == " "):
             reverse_characters(message_list, current_word_start_index, i - 1)

@@ -2,6 +2,7 @@
 simple demo of creating default values in Python using defaultdict module. this allows to have
 default values for newly added keys to a dictionary
 """
+
 import random
 from collections import defaultdict
 from string import ascii_letters

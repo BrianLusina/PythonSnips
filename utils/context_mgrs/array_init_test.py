@@ -1,6 +1,7 @@
 """
 a simple demo of Context managers in Python
 """
+
 from array import array
 from perf_timer import timing
 

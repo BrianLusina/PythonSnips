@@ -7,8 +7,13 @@ class SuggestedProductsTestCase(unittest.TestCase):
         """products = ["mobile","mouse","moneypot","monitor","mousepad"], searchWord = "mouse"""
         products = ["mobile", "mouse", "moneypot", "monitor", "mousepad"]
         search_word = "mouse"
-        expected = [["mobile", "moneypot", "monitor"], ["mobile", "moneypot", "monitor"], ["mouse", "mousepad"],
-                    ["mouse", "mousepad"], ["mouse", "mousepad"]]
+        expected = [
+            ["mobile", "moneypot", "monitor"],
+            ["mobile", "moneypot", "monitor"],
+            ["mouse", "mousepad"],
+            ["mouse", "mousepad"],
+            ["mouse", "mousepad"],
+        ]
         actual = suggested_products(products, search_word)
         self.assertEqual(expected, actual)
 
@@ -16,10 +21,17 @@ class SuggestedProductsTestCase(unittest.TestCase):
         """products = ["havana"], searchWord = "havana"""
         products = ["havana"]
         search_word = "havana"
-        expected = [["havana"], ["havana"], ["havana"], ["havana"], ["havana"], ["havana"]]
+        expected = [
+            ["havana"],
+            ["havana"],
+            ["havana"],
+            ["havana"],
+            ["havana"],
+            ["havana"],
+        ]
         actual = suggested_products(products, search_word)
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -26,7 +26,28 @@ class PeakOfMountainTestCase(unittest.TestCase):
 
     def test_4(self):
         """should return 16 from 0 1 2 12 22 32 42 52 62 72 82 92 102 112 122 132 133 132 111 0"""
-        nums = [0, 1, 2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122, 132, 133, 132, 111, 0]
+        nums = [
+            0,
+            1,
+            2,
+            12,
+            22,
+            32,
+            42,
+            52,
+            62,
+            72,
+            82,
+            92,
+            102,
+            112,
+            122,
+            132,
+            133,
+            132,
+            111,
+            0,
+        ]
         expected = 16
         actual = peak_of_mountain(nums)
         self.assertEqual(expected, actual)
@@ -53,5 +74,5 @@ class PeakOfMountainTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

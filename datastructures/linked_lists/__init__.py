@@ -23,7 +23,7 @@ class Node:
     def __repr__(self):
         return f"Node({self.data})"
 
-    def __eq__(self, other: 'Node'):
+    def __eq__(self, other: "Node"):
         return self.data == other.data
 
 

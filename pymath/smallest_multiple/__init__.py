@@ -1,6 +1,7 @@
 """
 Finds the smallest multiple in a range of numbers
 """
+
 from functools import reduce
 
 try:

@@ -19,11 +19,11 @@ class SqrtEstimateTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_3(self):
-        for n in range(2 ** 10):
+        for n in range(2**10):
             expected = floor(sqrt(n))
             actual = sqrt_estimate(n)
             self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

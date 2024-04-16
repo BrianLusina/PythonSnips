@@ -512,12 +512,18 @@
   * Stack
     * Asteroid Collision
       * [Test Asteroid Collision](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/asteroid_collision/test_asteroid_collision.py)
+    * Bracket Validator
+      * [Test Bracket Validator](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/bracket_validator/test_bracket_validator.py)
+    * Decimal To Binary
+      * [Test Decimal To Binary](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/decimal_to_binary/test_decimal_to_binary.py)
     * Decode String
       * [Test Decode String](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/decode_string/test_decode_string.py)
     * Nextgreater
       * [Test Next Greater](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/nextgreater/test_next_greater.py)
     * Removing Stars
       * [Test Remove Starts](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/removing_stars/test_remove_starts.py)
+    * Reverse String
+      * [Test Reverse String](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/reverse_string/test_reverse_string.py)
   * Students And Lunch
     * [Test Students Lunch](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/students_and_lunch/test_students_lunch.py)
   * Trees
@@ -664,7 +670,6 @@
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
     * Strings
       * [Test Validate Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/strings/test_validate_ipv4.py)
-    * [Test Bracket Validator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_bracket_validator.py)
     * [Test Bubble Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_bubble_sort.py)
     * [Test Connect](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_connect.py)
     * [Test Count Vegetables](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_count_vegetables.py)

@@ -20,6 +20,7 @@ Simple sample of a url shortening server that gets requests from a client with i
     long URI.
 
 """
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
 from urllib.parse import parse_qs, unquote

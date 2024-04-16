@@ -1,6 +1,5 @@
 from datastructures.trees.heaps import Heap
 from datastructures.trees.heaps.binary.max_heap import MaxHeap
-from datastructures.trees.heaps.binary.min_heap import MinHeap
 
 
 def min_heapify(heap: MaxHeap, idx: int) -> Heap:

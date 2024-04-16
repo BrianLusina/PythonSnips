@@ -12,9 +12,7 @@ class ListOpsTest(unittest.TestCase):
     def test_map_square(self):
         self.assertEqual(
             tuple(
-                self.list_ops.map_clone(
-                    lambda x: x**2, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-                )
+                self.list_ops.map_clone(lambda x: x**2, (1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
             ),
             (1, 4, 9, 16, 25, 36, 49, 64, 81, 100),
         )

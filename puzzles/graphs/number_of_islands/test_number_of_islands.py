@@ -8,7 +8,7 @@ class NumberOfIslandsTestCase(unittest.TestCase):
             ["1", "1", "1", "1", "0"],
             ["1", "1", "0", "1", "0"],
             ["1", "1", "0", "0", "0"],
-            ["0", "0", "0", "0", "0"]
+            ["0", "0", "0", "0", "0"],
         ]
         expected = 1
         actual = num_of_islands(grid)
@@ -19,12 +19,12 @@ class NumberOfIslandsTestCase(unittest.TestCase):
             ["1", "1", "0", "0", "0"],
             ["1", "1", "0", "0", "0"],
             ["0", "0", "1", "0", "0"],
-            ["0", "0", "0", "1", "1"]
+            ["0", "0", "0", "1", "1"],
         ]
         expected = 3
         actual = num_of_islands(grid)
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

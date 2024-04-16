@@ -70,5 +70,5 @@ class ValidPathTestCases(unittest.TestCase):
         self.assertTrue(actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

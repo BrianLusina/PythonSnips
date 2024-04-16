@@ -49,7 +49,7 @@ def suggested_products(products: List[str], search_word: str) -> List[List[str]]
         # add the words with the same prefix to the result. Loop runs until i reaches the end of the input or 3 times
         # or till the prefix is the same for products[i] whichever comes first
         for i in range(start, min(start + 3, number_of_products)):
-            if len(products[i]) < len(prefix) or products[i][0:len(prefix)] != prefix:
+            if len(products[i]) < len(prefix) or products[i][0 : len(prefix)] != prefix:
                 break
             result[len(result) - 1].append(products[i])
 

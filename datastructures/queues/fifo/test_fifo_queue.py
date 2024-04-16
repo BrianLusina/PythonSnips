@@ -37,5 +37,5 @@ class FifoQueueTestCase(unittest.TestCase):
         self.assertIsNone(actual_data_6)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

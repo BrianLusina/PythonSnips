@@ -7,11 +7,7 @@ class FullJustifyTestCase(unittest.TestCase):
         """words = ["This", "is", "an", "example", "of", "text", "justification."], maxWidth = 16"""
         words = ["This", "is", "an", "example", "of", "text", "justification."]
         max_width = 16
-        expected = [
-            "This    is    an",
-            "example  of text",
-            "justification.  "
-        ]
+        expected = ["This    is    an", "example  of text", "justification.  "]
         actual = full_justify(words, max_width)
         self.assertListEqual(expected, actual)
 
@@ -19,19 +15,33 @@ class FullJustifyTestCase(unittest.TestCase):
         """words = ["What","must","be","acknowledgment","shall","be"], maxWidth = 16"""
         words = ["What", "must", "be", "acknowledgment", "shall", "be"]
         max_width = 16
-        expected = [
-            "What   must   be",
-            "acknowledgment  ",
-            "shall be        "
-        ]
+        expected = ["What   must   be", "acknowledgment  ", "shall be        "]
         actual = full_justify(words, max_width)
         self.assertListEqual(expected, actual)
 
     def test_3(self):
         """words = ["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art",
         "is","everything","else","we","do"], maxWidth = 20"""
-        words = ["Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a", "computer.",
-                 "Art", "is", "everything", "else", "we", "do"]
+        words = [
+            "Science",
+            "is",
+            "what",
+            "we",
+            "understand",
+            "well",
+            "enough",
+            "to",
+            "explain",
+            "to",
+            "a",
+            "computer.",
+            "Art",
+            "is",
+            "everything",
+            "else",
+            "we",
+            "do",
+        ]
         max_width = 20
         expected = [
             "Science  is  what we",
@@ -39,11 +49,11 @@ class FullJustifyTestCase(unittest.TestCase):
             "enough to explain to",
             "a  computer.  Art is",
             "everything  else  we",
-            "do                  "
+            "do                  ",
         ]
         actual = full_justify(words, max_width)
         self.assertListEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

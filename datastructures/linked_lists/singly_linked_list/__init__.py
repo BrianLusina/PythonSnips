@@ -10,6 +10,7 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
+
     head: Optional[SingleNode] = None
 
     def __init__(self):
@@ -182,7 +183,6 @@ class SinglyLinkedList(LinkedList):
         current = dummy_head
 
         while current.next:
-
             if current.next.data == data:
                 current.next = current.next.next
             else:
@@ -544,7 +544,6 @@ class SinglyLinkedList(LinkedList):
 
         # loop as long as there are at least 2 nodes left
         while current and current.next:
-
             # if both nodes have the same value/data
             if current.data == current.next.data:
                 # no need to swap, move on to the next pair
@@ -797,7 +796,9 @@ class SinglyLinkedList(LinkedList):
             thus, there can't be kth to the last node, we raise an error
             """
             if not right_node.next:
-                raise ValueError("K is larger than the length of the linked list %s" % k)
+                raise ValueError(
+                    "K is larger than the length of the linked list %s" % k
+                )
 
             right_node = right_node.next
 

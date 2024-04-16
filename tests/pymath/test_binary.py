@@ -4,6 +4,7 @@ Implementation note:
 If the argument to parse_binary isn't a valid binary number the
 function should raise a ValueError with a meaningful error message.
 """
+
 import unittest
 
 from pymath.binary.parse_binary import parse_binary

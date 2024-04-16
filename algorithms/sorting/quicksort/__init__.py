@@ -35,7 +35,6 @@ def partition(collection: List[T], start_index: int, end_index: int) -> int:
     right_pointer = end_index - 1
 
     while left_pointer <= right_pointer:
-
         # We move the left pointer to the right as long as the value it is pointing to is less than the pivot and is
         # less than the end index
         while left_pointer <= end_index and collection[left_pointer] < pivot:

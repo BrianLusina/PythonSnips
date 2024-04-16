@@ -3,7 +3,6 @@ from .palindrome_index import palindrome_index, palindrome_index_two
 
 
 class PalindromeIndexTests(unittest.TestCase):
-
     def test_aaab_should_return_3(self):
         word = "aaab"
         expected = 3
@@ -24,7 +23,6 @@ class PalindromeIndexTests(unittest.TestCase):
 
 
 class PalindromeIndexTwoTests(unittest.TestCase):
-
     def test_aaab_should_return_3(self):
         word = "aaab"
         expected = 3

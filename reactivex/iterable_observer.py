@@ -2,6 +2,7 @@
 In this case, we simply use Observable.from_([iterable]) which will take an observable and call on_next on each item and call on_completed
 when it reaches the end, This allows use to pass an iterable object to an obserble and subscribe an observer to it
 """
+
 from rx import Observable, Observer
 
 

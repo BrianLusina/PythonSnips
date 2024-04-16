@@ -41,7 +41,28 @@ class FindPeakElementTestCase(unittest.TestCase):
 
     def test_6(self):
         """should return 16 from 0 1 2 12 22 32 42 52 62 72 82 92 102 112 122 132 133 132 111 0"""
-        nums = [0, 1, 2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 102, 112, 122, 132, 133, 132, 111, 0]
+        nums = [
+            0,
+            1,
+            2,
+            12,
+            22,
+            32,
+            42,
+            52,
+            62,
+            72,
+            82,
+            92,
+            102,
+            112,
+            122,
+            132,
+            133,
+            132,
+            111,
+            0,
+        ]
         expected = 16
         actual = find_peak_element(nums)
         self.assertEqual(expected, actual)
@@ -68,5 +89,5 @@ class FindPeakElementTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -3,7 +3,6 @@ class Trie:
         self.root_node = {}
 
     def check_present_and_add(self, word):
-
         current_node = self.root_node
         is_new_word = False
 

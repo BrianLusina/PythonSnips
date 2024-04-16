@@ -202,7 +202,6 @@ class BinaryTreeIsBalancedTestCases(unittest.TestCase):
 
 
 class BinaryTreeHeight(unittest.TestCase):
-
     def test_returns_0_for_no_root(self):
         """should return 0 if the binary tree has no root"""
         tree = BinaryTree()
@@ -243,19 +242,24 @@ class BinaryTreeHeight(unittest.TestCase):
 
 
 class BinaryTreeLeafSimilarTest(unittest.TestCase):
-
     def test_1(self):
         """should return true for tree1=3,5,1,6,2,9,8,null,null,7,4 and tree2=3,5,1,6,7,4,2,null,null,null,null,null,null,9,8"""
-        left1 = BinaryTreeNode(5, left=BinaryTreeNode(6),
-                               right=BinaryTreeNode(2, left=BinaryTreeNode(7), right=BinaryTreeNode(4)))
+        left1 = BinaryTreeNode(
+            5,
+            left=BinaryTreeNode(6),
+            right=BinaryTreeNode(2, left=BinaryTreeNode(7), right=BinaryTreeNode(4)),
+        )
         right1 = BinaryTreeNode(1, left=BinaryTreeNode(9), right=BinaryTreeNode(8))
 
         root1 = BinaryTreeNode(3, left=left1, right=right1)
         tree1 = BinaryTree(root1)
 
         left2 = BinaryTreeNode(5, left=BinaryTreeNode(6), right=BinaryTreeNode(7))
-        right2 = BinaryTreeNode(1, left=BinaryTreeNode(4),
-                                right=BinaryTreeNode(2, left=BinaryTreeNode(9), right=BinaryTreeNode(8)))
+        right2 = BinaryTreeNode(
+            1,
+            left=BinaryTreeNode(4),
+            right=BinaryTreeNode(2, left=BinaryTreeNode(9), right=BinaryTreeNode(8)),
+        )
 
         root2 = BinaryTreeNode(3, left=left2, right=right2)
         tree2 = BinaryTree(root2)
@@ -265,7 +269,7 @@ class BinaryTreeLeafSimilarTest(unittest.TestCase):
         self.assertTrue(actual)
 
     def test_2(self):
-        """should return false for tree1= and tree2= """
+        """should return false for tree1= and tree2="""
         root1 = BinaryTreeNode(data=1, left=BinaryTreeNode(2), right=BinaryTreeNode(3))
         tree1 = BinaryTree(root=root1)
 
@@ -277,11 +281,13 @@ class BinaryTreeLeafSimilarTest(unittest.TestCase):
 
 
 class BinaryTreeGoodNodesTest(unittest.TestCase):
-
     def test_1(self):
         """should return 4 for tree=[3,1,4,3,null,1,5]"""
-        root = BinaryTreeNode(3, left=BinaryTreeNode(1, left=BinaryTreeNode(3)),
-                              right=BinaryTreeNode(4, left=BinaryTreeNode(1), right=BinaryTreeNode(5)))
+        root = BinaryTreeNode(
+            3,
+            left=BinaryTreeNode(1, left=BinaryTreeNode(3)),
+            right=BinaryTreeNode(4, left=BinaryTreeNode(1), right=BinaryTreeNode(5)),
+        )
         tree = BinaryTree(root)
 
         actual = tree.number_of_good_nodes()
@@ -290,7 +296,10 @@ class BinaryTreeGoodNodesTest(unittest.TestCase):
 
     def test_2(self):
         """should return 3 for tree=[3,3,null,4,2]"""
-        root = BinaryTreeNode(data=3, left=BinaryTreeNode(3, right=BinaryTreeNode(2), left=BinaryTreeNode(4)))
+        root = BinaryTreeNode(
+            data=3,
+            left=BinaryTreeNode(3, right=BinaryTreeNode(2), left=BinaryTreeNode(4)),
+        )
         tree = BinaryTree(root=root)
 
         actual = tree.number_of_good_nodes()
@@ -306,13 +315,19 @@ class BinaryTreeGoodNodesTest(unittest.TestCase):
 
 
 class BinaryTreePathSumTest(unittest.TestCase):
-
     def test_1(self):
         """should return 3 for tree=[10,5,-3,3,2,null,11,3,-2,null,1] and target=8"""
-        root = BinaryTreeNode(10, left=BinaryTreeNode(data=5, left=BinaryTreeNode(3, left=BinaryTreeNode(3),
-                                                                                  right=BinaryTreeNode(-2)),
-                                                      right=BinaryTreeNode(2, right=BinaryTreeNode(1))),
-                              right=BinaryTreeNode(-3, right=BinaryTreeNode(11)))
+        root = BinaryTreeNode(
+            10,
+            left=BinaryTreeNode(
+                data=5,
+                left=BinaryTreeNode(
+                    3, left=BinaryTreeNode(3), right=BinaryTreeNode(-2)
+                ),
+                right=BinaryTreeNode(2, right=BinaryTreeNode(1)),
+            ),
+            right=BinaryTreeNode(-3, right=BinaryTreeNode(11)),
+        )
         tree = BinaryTree(root)
         target = 8
         actual = tree.path_sum(target=target)
@@ -322,14 +337,22 @@ class BinaryTreePathSumTest(unittest.TestCase):
 
     def test_2(self):
         """should return 3 for tree=[5,4,8,11,null,13,4,7,2,null,null,5,1] and target=22"""
-        root = BinaryTreeNode(data=5, left=BinaryTreeNode(4, left=BinaryTreeNode(11, left=BinaryTreeNode(7),
-                                                                                 right=BinaryTreeNode(2)),
-                                                          right=BinaryTreeNode(8, left=BinaryTreeNode(13,
-                                                                                                      left=BinaryTreeNode(
-                                                                                                          5),
-                                                                                                      right=BinaryTreeNode(
-                                                                                                          1)),
-                                                                               right=BinaryTreeNode(4))))
+        root = BinaryTreeNode(
+            data=5,
+            left=BinaryTreeNode(
+                4,
+                left=BinaryTreeNode(
+                    11, left=BinaryTreeNode(7), right=BinaryTreeNode(2)
+                ),
+                right=BinaryTreeNode(
+                    8,
+                    left=BinaryTreeNode(
+                        13, left=BinaryTreeNode(5), right=BinaryTreeNode(1)
+                    ),
+                    right=BinaryTreeNode(4),
+                ),
+            ),
+        )
         tree = BinaryTree(root=root)
         target = 22
         actual = tree.path_sum(target=target)
@@ -338,11 +361,13 @@ class BinaryTreePathSumTest(unittest.TestCase):
 
 
 class BinaryTreeLongestZigZagTest(unittest.TestCase):
-
     def test_1(self):
         """should return 3 for tree=[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]"""
-        right_right = BinaryTreeNode(1, left=BinaryTreeNode(1, right=BinaryTreeNode(1, right=BinaryTreeNode(1))),
-                                     right=BinaryTreeNode(1))
+        right_right = BinaryTreeNode(
+            1,
+            left=BinaryTreeNode(1, right=BinaryTreeNode(1, right=BinaryTreeNode(1))),
+            right=BinaryTreeNode(1),
+        )
 
         right_left = BinaryTreeNode(1)
 
@@ -360,7 +385,11 @@ class BinaryTreeLongestZigZagTest(unittest.TestCase):
     def test_2(self):
         """should return 4 for tree=[1,1,1,null,1,null,null,1,1,null,1]"""
 
-        left_right = BinaryTreeNode(1, right=BinaryTreeNode(1), left=(BinaryTreeNode(1, right=BinaryTreeNode(1))))
+        left_right = BinaryTreeNode(
+            1,
+            right=BinaryTreeNode(1),
+            left=(BinaryTreeNode(1, right=BinaryTreeNode(1))),
+        )
         left = BinaryTreeNode(1, right=left_right)
 
         right = BinaryTreeNode(1)
@@ -385,8 +414,11 @@ class BinaryTreeLongestZigZagTest(unittest.TestCase):
 
     def test_1_with_stack(self):
         """should return 3 for tree=[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]"""
-        right_right = BinaryTreeNode(1, left=BinaryTreeNode(1, right=BinaryTreeNode(1, right=BinaryTreeNode(1))),
-                                     right=BinaryTreeNode(1))
+        right_right = BinaryTreeNode(
+            1,
+            left=BinaryTreeNode(1, right=BinaryTreeNode(1, right=BinaryTreeNode(1))),
+            right=BinaryTreeNode(1),
+        )
 
         right_left = BinaryTreeNode(1)
 
@@ -404,7 +436,11 @@ class BinaryTreeLongestZigZagTest(unittest.TestCase):
     def test_2_with_stack(self):
         """should return 4 for tree=[1,1,1,null,1,null,null,1,1,null,1]"""
 
-        left_right = BinaryTreeNode(1, right=BinaryTreeNode(1), left=(BinaryTreeNode(1, right=BinaryTreeNode(1))))
+        left_right = BinaryTreeNode(
+            1,
+            right=BinaryTreeNode(1),
+            left=(BinaryTreeNode(1, right=BinaryTreeNode(1))),
+        )
         left = BinaryTreeNode(1, right=left_right)
 
         right = BinaryTreeNode(1)
@@ -460,7 +496,9 @@ class BinaryTreeRightViewTest(unittest.TestCase):
          8
         """
 
-        left = BinaryTreeNode(2, left=BinaryTreeNode(4, left=BinaryTreeNode(8)), right=BinaryTreeNode(5))
+        left = BinaryTreeNode(
+            2, left=BinaryTreeNode(4, left=BinaryTreeNode(8)), right=BinaryTreeNode(5)
+        )
         right = BinaryTreeNode(3, left=BinaryTreeNode(6), right=BinaryTreeNode(7))
 
         root = BinaryTreeNode(1, left=left, right=right)
@@ -599,5 +637,5 @@ class BinaryTreeMaxLevelSumTests(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

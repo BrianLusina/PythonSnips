@@ -54,7 +54,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
             row, col = queue.popleft()
 
             # check the 4 adjacent oranges of this rotten orange
-            for (dr, dc) in directions:
+            for dr, dc in directions:
                 # position of adjacent orange
                 r, c = row + dr, col + dc
 

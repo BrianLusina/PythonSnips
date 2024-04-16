@@ -2,12 +2,11 @@ from typing import List, Tuple
 
 
 class MyCalendar:
-
     def __init__(self):
         self.calendar: List[Tuple[int, int]] = []
 
     def book(self, start: int, end: int) -> bool:
-        """ Checks if it is possible to book an event into a calendar given a start and end time.
+        """Checks if it is possible to book an event into a calendar given a start and end time.
 
         A potential insertion index idx means that the booking at calendar[idx-1] must come before the new booking,
         and the booking at calendar[idx] must come after the new booking. To simplify the searching process, we can
@@ -49,7 +48,8 @@ class MyCalendar:
 
         # check if there is an overlap of calendar[idx-1] or calendar[idx]
         if (idx > 0 and self.calendar[idx - 1][1] > start) or (
-                idx < len(self.calendar) and self.calendar[idx][0] < end):
+            idx < len(self.calendar) and self.calendar[idx][0] < end
+        ):
             return False
         self.calendar.insert(idx, (start, end))
         return True

@@ -37,11 +37,9 @@ class BubbleSort:
 
         # start counting down from length of the list to 1
         for p_num in range(sorted_len - 1, 0, -1):
-
             # doing this multiple times will move the smaller items to the left and the greater items to the right
             # count up from 0 to the first occurrence in the range, e.g. x in the 1st occurrence could be 5
             for x in range(p_num):
-
                 # compare the 2 elements that share a border
                 if self.list_sort[x] > self.list_sort[x + 1]:
                     # store the current item in a temp variable

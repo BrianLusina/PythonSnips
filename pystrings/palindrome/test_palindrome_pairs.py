@@ -3,7 +3,6 @@ from .palindrome_pairs import palindrome_pairs, palindrome_pairs_2
 
 
 class PalindromePairsTests(unittest.TestCase):
-
     def test_one(self):
         self.assertEqual(palindrome_pairs(["bat", "tab", "cat"]), [[0, 1], [1, 0]])
 

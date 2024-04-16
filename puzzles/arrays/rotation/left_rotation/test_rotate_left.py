@@ -22,5 +22,5 @@ class LeftRotationTestCase(unittest.TestCase):
         self.assertEqual(expected, actual, msg=f"Rotate {arr} by {d}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

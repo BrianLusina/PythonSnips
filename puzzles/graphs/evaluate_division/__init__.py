@@ -3,7 +3,9 @@ from typing import List, Dict, Set
 Graph = Dict[str, Dict[str, float]]
 
 
-def calc_equation(equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+def calc_equation(
+    equations: List[List[str]], values: List[float], queries: List[List[str]]
+) -> List[float]:
     # the key is the node, and the values is a list of tuples where the first element in the tuple is the neighbouring
     # node and the second element is the weight of the edge
 
@@ -52,7 +54,14 @@ def build_graph(equations: List[List[str]], values: List[float]) -> Graph:
     return graph
 
 
-def dfs(graph: Graph, source: str, destination: str, visited: Set[str], ans: List[float], temp: float):
+def dfs(
+    graph: Graph,
+    source: str,
+    destination: str,
+    visited: Set[str],
+    ans: List[float],
+    temp: float,
+):
     if source in visited:
         return
 

@@ -131,7 +131,7 @@ class RomanNumeral:
             ints = [1000, 500, 100, 50, 10, 5, 1]
             places = []
             for c in num:
-                if not c in nums:
+                if c not in nums:
                     raise ValueError(
                         "input is not a valid roman numeral: %s" % self.number
                     )

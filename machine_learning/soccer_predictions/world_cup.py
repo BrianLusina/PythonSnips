@@ -1,5 +1,5 @@
 """
-    Predicts soccer outcomes using logistic regression.
+Predicts soccer outcomes using logistic regression.
 """
 
 import math

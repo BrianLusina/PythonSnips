@@ -40,7 +40,6 @@ def next_greater(nums: List[int]) -> List[int]:
 
     # traverse the array from the last element in backward direction
     for i in range(len(nums) - 1, -1, -1):
-
         # while an element at top of stack is less than or equal to the current array element, we pop elements from the
         # stack
         while len(stack) and stack[-1] <= nums[i]:

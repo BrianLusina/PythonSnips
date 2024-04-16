@@ -235,7 +235,6 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
         """
 
         if start_row_index < end_row_index:
-
             for col_num in range(end_col_index - 1, start_col_index - 1, -1):
                 item = matrix[end_row_index - 1][col_num]
                 spiral_matrix_form.append(item)
@@ -255,7 +254,6 @@ def matrix_in_spiral_form(matrix: List[List[int]]) -> List[int]:
         We increment the start_col_index by 1 in order to move from left to right within our matrix
         """
         if start_col_index < end_col_index:
-
             for row_num in range(end_row_index - 1, start_row_index - 1, -1):
                 item = matrix[row_num][start_col_index]
                 spiral_matrix_form.append(item)

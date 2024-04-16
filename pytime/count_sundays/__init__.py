@@ -17,7 +17,6 @@ def count_sundays_in_20th_century():
 
     # check the first day of each month from 1901 to 2000, check if it is Sunday and increment the counter
     while current_date.year < 2001:
-
         # current date of the week is Sunday
         if current_date.weekday() == 6:
             counter += 1

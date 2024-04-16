@@ -37,7 +37,6 @@ class PeteTalk:
             # split the string into words, loop through each word checking if it is longer than length of 2
             # and not in ok_words then hash the middle characters
             for word in speech_words:
-
                 # check if the word is a word with no trailing punctuation marks
                 # and has a length greater than 2
                 if re.match(r"([a-zA-z]+)", word) and len(word) > 2:

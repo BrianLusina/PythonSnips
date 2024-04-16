@@ -16,7 +16,7 @@ def get_longest_palindrome(s: str, start_index: int, end_index: int) -> str:
     while 0 <= start_index and end_index < len(s) and s[start_index] == s[end_index]:
         start_index -= 1
         end_index += 1
-    return s[start_index + 1: end_index]
+    return s[start_index + 1 : end_index]
 
 
 def smallest_palindrome(max_factor, min_factor=0):
@@ -27,9 +27,7 @@ def smallest_palindrome(max_factor, min_factor=0):
     :return: Smallest palindrome pair product,
     :rtype:int
     """
-    return min(
-        generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0]
-    )
+    return min(generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0])
 
 
 def generate_palindromes(max_factor, min_factor):
@@ -59,6 +57,4 @@ def largest_palindrome(max_factor, min_factor=0):
     :return: Maximum palindrome product from the generator
     :rtype:int
     """
-    return max(
-        generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0]
-    )
+    return max(generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0])

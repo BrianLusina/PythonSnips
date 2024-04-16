@@ -4,7 +4,7 @@ from . import RandomizedSet
 
 class RandomizedSetTestCase(unittest.TestCase):
     def test_1(self):
-        """"test steps insert(1) -> remove(2) -> insert(2) -> get_random() -> remove(1) -> insert(2) -> get_random()"""
+        """ "test steps insert(1) -> remove(2) -> insert(2) -> get_random() -> remove(1) -> insert(2) -> get_random()"""
         randomized_set = RandomizedSet()
 
         # Inserts 1 to the set. Returns true as 1 was inserted successfully
@@ -37,5 +37,5 @@ class RandomizedSetTestCase(unittest.TestCase):
         self.assertEqual(expected, actual_step_7)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

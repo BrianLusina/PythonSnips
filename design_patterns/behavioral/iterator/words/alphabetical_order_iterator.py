@@ -7,6 +7,7 @@ class AlphabeticalOrderIterator(Iterator):
     Concrete Iterators implement various traversal algorithms. These classes
     store the current traversal position at all times.
     """
+
     """
     
     `_position` attribute stores the current traversal position. An iterator may

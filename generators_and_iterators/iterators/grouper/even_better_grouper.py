@@ -4,6 +4,7 @@ first input list of integers.
 This uses the zip_longest module from the itertools module to return all groupings of the inputs list of numbers.
 it has the fill_value keyword, which defaults to None to fill the remaining blanks. An example is in the doc_test
 """
+
 from itertools import zip_longest
 
 

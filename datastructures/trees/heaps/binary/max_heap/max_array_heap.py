@@ -23,10 +23,19 @@ class MaxArrayBasedHeap(ArrayBasedHeap):
 
         # the following executes the "trickle up" algorithm. If the new node is not in the root position and it's greater
         # than its parent node
-        while new_node_index > 0 and self.data[new_node_index] > self.data[self.get_parent_index(new_node_index)]:
+        while (
+            new_node_index > 0
+            and self.data[new_node_index]
+            > self.data[self.get_parent_index(new_node_index)]
+        ):
             # swap the new node with the parent node
-            self.data[self.get_parent_index(new_node_index)], self.data[new_node_index] = self.data[
-                new_node_index], self.data[self.get_parent_index(new_node_index)]
+            (
+                self.data[self.get_parent_index(new_node_index)],
+                self.data[new_node_index],
+            ) = (
+                self.data[new_node_index],
+                self.data[self.get_parent_index(new_node_index)],
+            )
 
             # update the index of the new node
             new_node_index = self.get_parent_index(new_node_index)
@@ -48,8 +57,10 @@ class MaxArrayBasedHeap(ArrayBasedHeap):
             larger_child_index = self.__calculate_larger_child_index(trickle_node_index)
 
             # swap the trickle node with its larger child
-            self.data[trickle_node_index], self.data[larger_child_index] = self.data[larger_child_index], \
-                self.data[trickle_node_index]
+            self.data[trickle_node_index], self.data[larger_child_index] = (
+                self.data[larger_child_index],
+                self.data[trickle_node_index],
+            )
 
             trickle_node_index = larger_child_index
 
@@ -94,7 +105,10 @@ class MaxArrayBasedHeap(ArrayBasedHeap):
             return self.get_left_child_index(index)
 
         # if right child value is greater than left child value
-        if self.data[self.get_right_child_index(index)] > self.data[self.get_left_child_index(index)]:
+        if (
+            self.data[self.get_right_child_index(index)]
+            > self.data[self.get_left_child_index(index)]
+        ):
             # return the right child index
             return self.get_right_child_index(index)
         else:

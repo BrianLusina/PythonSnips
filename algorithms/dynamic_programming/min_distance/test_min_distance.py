@@ -51,6 +51,7 @@ class MinDistanceTestCase(unittest.TestCase):
         actual = min_distance(a, b)
         self.assertEqual(expected, actual)
 
+
 class MinDistanceMemoTestCase(unittest.TestCase):
     def test_same_words_return_0(self):
         """should return 0 from a = abcd and b=abcd"""
@@ -101,5 +102,5 @@ class MinDistanceMemoTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

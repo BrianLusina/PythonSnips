@@ -8,7 +8,7 @@ class FlippingTheMatrixTestCase(unittest.TestCase):
             [112, 42, 83, 119],
             [56, 125, 56, 49],
             [15, 78, 101, 43],
-            [62, 98, 114, 108]
+            [62, 98, 114, 108],
         ]
         expected = 414
         actual = flipping_matrix(matrix)
@@ -21,5 +21,5 @@ class FlippingTheMatrixTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

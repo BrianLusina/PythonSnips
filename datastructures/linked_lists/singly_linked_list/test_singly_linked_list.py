@@ -1,4 +1,4 @@
-from typing import List, Callable
+from typing import List
 import unittest
 
 from . import SinglyLinkedList, SingleNode
@@ -256,7 +256,7 @@ class SinglyLinkedOddEvenListTestCases(unittest.TestCase):
 
         zipped = zip(expected, actual_nodes)
 
-        for (expected, actual_node) in zipped:
+        for expected, actual_node in zipped:
             self.assertEqual(expected, actual_node)
 
     def test_1(self):

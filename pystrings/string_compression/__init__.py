@@ -13,7 +13,9 @@ def compress(chars: List[str]) -> int:
         group_length = 1
 
         # find the length of the current group of repeating characters
-        while idx + group_length < len(chars) and chars[idx + group_length] == chars[idx]:
+        while (
+            idx + group_length < len(chars) and chars[idx + group_length] == chars[idx]
+        ):
             group_length += 1
 
         chars[res] = chars[idx]
@@ -22,7 +24,7 @@ def compress(chars: List[str]) -> int:
         # if the group length is greater than 1, add the string representation of it to the answer
         if group_length > 1:
             group_length_str = f"{group_length}"
-            chars[res: res + len(group_length_str)] = group_length_str
+            chars[res : res + len(group_length_str)] = group_length_str
             res += len(group_length_str)
 
         # proceed to the next group

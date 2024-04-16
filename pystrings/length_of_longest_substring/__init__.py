@@ -22,7 +22,6 @@ def length_of_longest_substring(s: str) -> int:
     start = 0
 
     for end in range(len(s)):
-
         # have we seen this element already?
         if s[end] in seen:
             # move the start pointer to position after last occurrence

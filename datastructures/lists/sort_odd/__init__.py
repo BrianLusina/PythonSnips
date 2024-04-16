@@ -31,11 +31,11 @@ if __name__ == "__main__":
     print(
         f"Sorted array of {source_array} using implementation 2 is {sort_array(source_array)}"
     )
-    print(f"Profile stats for 1st implementation")
+    print("Profile stats for 1st implementation")
     run("sort_array(source_array)")
     print(f"{'-' * 100}")
     print(
         f"Sorted array of {source_array} using implementation 3 is {sort_array_2(source_array)}"
     )
-    print(f"Profile stats for 2nd implementation")
+    print("Profile stats for 2nd implementation")
     run("sort_array(source_array)")

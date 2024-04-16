@@ -56,7 +56,7 @@ def mimic_dict(filename):
     words = text.split()
     prev = ""
     for word in words:
-        if not prev in mimic_dict:
+        if prev not in mimic_dict:
             mimic_dict[prev] = [word]
         else:
             mimic_dict[prev].append(word)
@@ -75,7 +75,7 @@ def print_mimic(mimic_dict, word):
     # LAB(begin solution)
     for unused_i in range(200):
         print
-        word,
+        (word,)
         nexts = mimic_dict.get(word)  # Returns None if not found
         if not nexts:
             nexts = mimic_dict[""]  # Fallback to '' if not found
