@@ -112,7 +112,7 @@ class SinglyLinkedList(LinkedList):
 
             return current
 
-    def delete_node_at_position(self, position: int) -> Union[SingleNode, None]:
+    def delete_node_at_position(self, position: int) -> Optional[SingleNode]:
         """
         Deletes a node at the specified position
         """
