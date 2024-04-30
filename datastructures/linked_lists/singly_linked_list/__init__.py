@@ -301,8 +301,8 @@ class SinglyLinkedList(LinkedList):
         At each iteration, the list_to_reverse pointer moves forward (until it reaches NULL).
         The current node becomes the head of the new reversed linked list and starts pointing to the previous head of
         the reversed linked list.
-        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at
-        the termination of the loop.
+        The loop terminates when list_to_reverse becomes NULL, and the reversed_list pointer is pointing to the new
+        head at the termination of the loop.
 
         Another implementation/variation to this approach:
           prev = None
