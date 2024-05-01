@@ -172,6 +172,7 @@
       * [Test Singly Linked Delete](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_delete.py)
       * [Test Singly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list.py)
       * [Test Singly Linked List Pairwise Swap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_pairwise_swap.py)
+      * [Test Singly Linked List Remove Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_remove_duplicates.py)
       * [Test Singly Linked List Rotate](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_rotate.py)
   * Lists
     * Bus Stops
