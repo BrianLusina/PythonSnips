@@ -578,6 +578,13 @@ class LinkedList:
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
+    def remove_duplicates(self) -> Optional[Node]:
+        """
+        Remotes the duplicates from a linked list
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
     def rotate(self, k: int):
         """
         Rotates a linked list by k nodes

@@ -1,4 +1,4 @@
-from typing import Any, Union, Optional, Tuple
+from typing import Any, Union, Optional, Dict
 
 from datastructures.stacks import Stack
 from .node import SingleNode
@@ -440,24 +440,39 @@ class SinglyLinkedList(LinkedList):
         # fast runner hit the end of the list
         return False
 
-    def remove_duplicates(self):
+    def remove_duplicates(self) -> Optional[SingleNode]:
         """
-        Removes duplicates from linked list
+        Removes duplicates from linked list. Uses a dictionary to keep track of seen values in the linked list.
+        For every encountered duplicate value, it is discarded and removed from the linked list.
+
+        Complexity:
+        Where n is the number of nodes in the linked list:
+
+        Time O(n): as this iterates through each node in the linked list checking its value against what's in the
+        dictionary
+
+        Space O(n); a dictionary is used to store duplicate values in the linked list. In the worst case no duplicates
+        exist so, the dictionary has all the values from every node in the linked list.
         """
 
         if self.head is None or self.head.next is None:
             return self.head
 
+        seen: Dict[Any, bool] = dict()
         current = self.head
-        next_ = self.head.next
+        previous: Optional[SingleNode] = None
 
-        while current and next_:
-            if next_.data == current.data:
-                current.next = next_.next
-                next_ = next_.next
+        while current:
+            if current.data in seen:
+                # remove node
+                previous.next = current.next
+                current = None
             else:
-                current = current.next
-                next_ = next_.next
+                # add node data to seen
+                seen[current.data] = True
+                previous = current
+
+            current = previous.next
 
         return self.head
 
@@ -720,7 +735,8 @@ class SinglyLinkedList(LinkedList):
         # tail of previous k-group to fix our linked list pointers
         tail = dummy
 
-        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list, current_head
+        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list,
+        # current_head
         tracking_node, current_head = self.head, self.head
 
         # while tracking node is tracking a node and hasn't reached end
