@@ -99,22 +99,37 @@ class LinkedList:
                 return head
         return None
 
-    def count(self, data):
+    def count(self, data: Any) -> int:
         """
-        Counts the number of occurrences of a data in a LinkedList
-        :param data: Data to count
-        :return:
+        Counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
+        otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
+        data element in each node already implements this operator.
+
+        Complexity:
+        The assumption here is that n is the number of nodes in the linked list.
+
+        Time O(n): This is because the algorithm iterates through each node in the linked list to find data values in
+        each node that equal the provided data argument in the function. This is both for the worst and best case as
+        each node in the linked list has to be checked
+
+        Space O(1): no extra space is required other than the value being incremented for each node whose data element
+        equals the provided data argument.
+
+        Args:
+            data(Any): the data element to count.
+        Returns:
+            int: the number of occurrences of an element in the linked list
         """
         if self.head is None:
             return 0
         else:
-            count_ = 0
-            temp = self.head
-            while temp:
-                if temp.data == data:
-                    count_ += 1
-                temp = temp.next
-            return count_
+            occurrences = 0
+            current = self.head
+            while current:
+                if current.data == data:
+                    occurrences += 1
+                current = current.next
+            return occurrences
 
     def get_last(self):
         """
