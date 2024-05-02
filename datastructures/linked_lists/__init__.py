@@ -492,12 +492,12 @@ class LinkedList:
         """
         raise NotImplementedError("Method has not been implemented")
 
-    def get_kth_to_last_node(self, k: int) -> Union[Node, None]:
+    def get_kth_to_last_node(self, k: int) -> Optional[Node]:
         """
         Gets the kth to the last node in a Linked list.
 
         Assumptions:
-        - k can be an invalid integer, less than 0. A ValueError will be raised
+        - k can not be an invalid integer, less than 0. A ValueError will be raised
 
         Algorithm:
         - set 2 pointers; fast_pointer & slow_pointer
@@ -519,7 +519,7 @@ class LinkedList:
             raise IndexError("K longer than linked list")
         fast_pointer, slow_pointer = self.head, self.head
 
-        for _ in range(k):
+        for _ in range(k - 1):
             fast_pointer = fast_pointer.next
 
             if not fast_pointer:
