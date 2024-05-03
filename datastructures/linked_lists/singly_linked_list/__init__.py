@@ -663,36 +663,46 @@ class SinglyLinkedList(LinkedList):
             return
 
     def rotate(self, k: int) -> Optional[SingleNode]:
-        if k == 0 or self.head is None:
+        if k == 0 or self.head is None or (self.head and not self.head.next):
             return self.head
 
-        length = 1
-        current = self.head
+        # initialize two pointers, a pivot node which will be set to the pivot point & last node which will be set to
+        # the tail of the linked list. count helps in making the pivot_node & the last_node point to the right nodes in
+        # the linked list.
+        pivot_node = self.head
+        last_node = self.head
+        previous: Optional[SingleNode] = None
+        count = 0
 
-        # get the last element
-        while current.next:
-            current = current.next
-            length += 1
+        # pivot_node and the last_node pointers are moved to the right positions as long as the pivot_node pointer is
+        # not None & the count is less than the k position. Additionally, previous is updated to the pivot_node to
+        # mark the previous node(or the node before the pivot point)
+        while pivot_node and count < k:
+            previous = pivot_node
+            pivot_node = pivot_node.next
+            last_node = last_node.next
+            count += 1
 
-        # Set the last node to point to head node
-        # The list is now a circular linked list with last node pointing to first node
-        current.next = self.head
+        # this positions the first pointer correctly
+        pivot_node = previous
 
-        # If k is equal to the length of the list then k == 0
-        # ElIf k is greater than the length of the list then k = k % length
-        k = length - k % length
+        # now we move the last_node pointer to the last node in the linked list. This also keeps track of the previous
+        # node before the last node
+        while last_node:
+            previous = last_node
+            last_node = last_node.next
 
-        while k > 0:
-            current = current.next
-            k -= 1
+        last_node = previous
 
-        # Traverse the list to get to the node just before the ( length - k )th node.
-        # Example: In 1->2->3->4->5, and k = 2
-        #          we need to get to the Node(3)
-        new_head = current.next
-        current.next = None
+        # make the last node's next pointer point to the head node, This temporarily makes the linked list circular
+        last_node.next = self.head
+        # the new head node is now the next node after the pivot point.
+        self.head = pivot_node.next
 
-        return new_head
+        # next we set the pivot points' next node. This breaks the circular linked list into a linear linked list
+        pivot_node.next = None
+
+        return self.head
 
     def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
