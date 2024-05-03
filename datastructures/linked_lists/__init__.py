@@ -99,7 +99,7 @@ class LinkedList:
                 return head
         return None
 
-    def count(self, data: Any) -> int:
+    def count_occurrences(self, data: Any) -> int:
         """
         Counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
         otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
