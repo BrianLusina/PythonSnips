@@ -494,6 +494,21 @@ class DoublyLinkedList(LinkedList):
         return first, second
 
     def is_palindrome(self) -> bool:
+        """
+        Uses two pointer approach to check if this is a palindrome linked list. Since this is a doubly linked list, each
+        node knows about the previous node in the linked list. Therefore, it is possible to do this in 2 passes. First
+        two pointers are initialized and set to the head node, then the last pointer is traversed until it reaches the
+        last node in the doubly linked list. This results in an O(n) computation task, where n is the number of nodes.
+
+        Second, the second pass compares the first pointer to the last pointer as long as we don't reach the middle,then
+        we can check the data item at each pointer. if they do not match, then we return false, if they do, the first
+        pointer moves 1 position, while the last pointer moves in the opposite direction using the previous pointer.
+        This continues until the two pointers reach the middle.
+
+        Space Complexity results in O(1) as no extra space is required other than reference to the pointers in the list.
+        Time is O(n) as the algorithm has to traverse the linked list to set the last pointer to the end of the linked
+        list.
+        """
         if self.head:
             # A LinkedList with 1 Node is a Palindrome
             if not self.head.next:
