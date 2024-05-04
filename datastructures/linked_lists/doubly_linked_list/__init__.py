@@ -1,4 +1,4 @@
-from typing import Any, Union, Optional
+from typing import Any, Union, Optional, List
 
 from datastructures.linked_lists import LinkedList, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
@@ -10,11 +10,11 @@ class DoubleNode(Node):
     """
 
     def __init__(
-        self,
-        data: Any,
-        previous: Optional["DoubleNode"] = None,
-        next_: Optional["DoubleNode"] = None,
-        key=None,
+            self,
+            data: Any,
+            previous: Optional["DoubleNode"] = None,
+            next_: Optional["DoubleNode"] = None,
+            key=None,
     ):
         super().__init__(data=data, next_=next_, key=key)
         self.previous = previous
@@ -494,7 +494,26 @@ class DoublyLinkedList(LinkedList):
         return first, second
 
     def is_palindrome(self) -> bool:
-        pass
+        if self.head:
+            # A LinkedList with 1 Node is a Palindrome
+            if not self.head.next:
+                return True
+
+            first_pointer = self.head
+            last_pointer = self.head
+
+            while last_pointer.next:
+                last_pointer = last_pointer.next
+
+            while first_pointer.next != last_pointer.previous:
+                if first_pointer.data != last_pointer.data:
+                    return False
+                first_pointer = first_pointer.next
+                last_pointer = last_pointer.previous
+
+            return True
+        else:
+            return True
 
     def pairwise_swap(self) -> DoubleNode:
         # nothing to do here
@@ -566,4 +585,13 @@ class DoublyLinkedList(LinkedList):
         pass
 
     def reverse_groups(self, k: int):
+        pass
+
+    def delete_middle_node(self) -> Optional[Node]:
+        pass
+
+    def odd_even_list(self) -> Optional[Node]:
+        pass
+
+    def maximum_pair_sum(self) -> int:
         pass

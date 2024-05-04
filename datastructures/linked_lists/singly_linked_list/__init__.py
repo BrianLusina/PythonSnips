@@ -1,6 +1,6 @@
 from typing import Any, Union, Optional, Dict
 
-from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from .node import SingleNode
 from .. import LinkedList
 from ..exceptions import EmptyLinkedList
@@ -516,7 +516,21 @@ class SinglyLinkedList(LinkedList):
         as we pop the data items from the stack(this will be the last added data item of the tail node)
         & check each node's value to the data item popped from the stack. If any differ, then it is not
         a Palindrome
-        :returns: True
+
+        Complexity:
+        We assume that n is the number of nodes in the linked list
+
+        Time O(n): we traverse the linked list twice, the first time is to add the nodes to the stack, the second time(
+        after the pointer has been reset to the head node) is to check each item as it's popped off from the stack if
+        it matches the current data item at the pointer's position. This is O(2*n), but since we ignore constants it is
+        O(n) as the worst case
+
+        Space O(n): a stack data structure is used to store the data items of each node in the linked list. Therefore
+        the stack needs to occupy space which results in it being the same size as the nodes in the linked list. At the
+        first pass, it will contain all the data items of each node in the linked list.
+
+        Returns:
+            bool: True if the linked list is a palindrome, false otherwise.
         """
 
         if not self.head:
@@ -533,6 +547,7 @@ class SinglyLinkedList(LinkedList):
             stack.push(current.data)
             current = current.next
 
+        # reset the pointer
         current = self.head
 
         while current:
