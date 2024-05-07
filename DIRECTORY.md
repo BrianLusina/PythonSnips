@@ -165,6 +165,7 @@
   * Linked Lists
     * Doubly Linked List
       * [Test Doubly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list.py)
+      * [Test Doubly Linked List Move Tail To Head](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list_move_tail_to_head.py)
       * [Test Doubly Linked List Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list_palindrome.py)
     * Mergeklinkedlists
       * [Test Merge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/mergeklinkedlists/test_merge.py)
