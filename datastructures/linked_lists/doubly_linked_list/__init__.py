@@ -581,6 +581,28 @@ class DoublyLinkedList(LinkedList):
             self.head.next = self.tail
             self.tail.previous = self.head
 
+    def move_tail_to_head(self):
+        if self.head and self.head.next:
+            last = self.head
+
+            while last.next:
+                last = last.next
+
+            # we can obtain the second_to_last node from the last node
+            second_to_last = last.previous
+
+            # set the current head node's second_to_last pointer to the last node
+            self.head.previous = last
+            # set the next pointer of the last node to the head node
+            last.next = self.head
+            # remove the second_to_last pointer of the last node
+            last.previous = None
+            # remove the next pointer of the second_to_last node
+            second_to_last.next = None
+
+            # set the head node as the last node
+            self.head = last
+
     def remove_tail(self):
         current = self.head
 

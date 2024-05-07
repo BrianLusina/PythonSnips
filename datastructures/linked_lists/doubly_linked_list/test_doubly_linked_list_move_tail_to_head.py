@@ -1,12 +1,12 @@
 import unittest
 
-from . import SinglyLinkedList
+from . import DoublyLinkedList
 
 
-class LinkedListMoveTailToHeadTestCase(unittest.TestCase):
+class DoublyLinkedListMoveTailToHeadTests(unittest.TestCase):
     def test_1(self):
         """should move tail of ["r", "a", "c", "e", "c", "a", "r"] to become ["r", "r", "a", "c", "e", "c", "a"]"""
-        linked_list = SinglyLinkedList()
+        linked_list = DoublyLinkedList()
         data = ["r", "a", "c", "e", "c", "a", "r"]
         expected = ["r", "r", "a", "c", "e", "c", "a"]
         expected_head = "r"
@@ -19,6 +19,7 @@ class LinkedListMoveTailToHeadTestCase(unittest.TestCase):
 
         self.assertIsNotNone(actual_head)
         self.assertEqual(expected_head, actual_head.data)
+        self.assertIsNone(actual_head.previous)
 
         actual_data = []
         while actual_head:
@@ -29,7 +30,7 @@ class LinkedListMoveTailToHeadTestCase(unittest.TestCase):
 
     def test_2(self):
         """should move tail of ["a", "b", "c", "d"] to become ["d", "a", "b", "c"]"""
-        linked_list = SinglyLinkedList()
+        linked_list = DoublyLinkedList()
         data = ["a", "b", "c", "d"]
         expected = ["d", "a", "b", "c"]
         expected_head = "d"
@@ -42,6 +43,7 @@ class LinkedListMoveTailToHeadTestCase(unittest.TestCase):
 
         self.assertIsNotNone(actual_head)
         self.assertEqual(expected_head, actual_head.data)
+        self.assertIsNone(actual_head.previous)
 
         actual_data = []
         while actual_head:
