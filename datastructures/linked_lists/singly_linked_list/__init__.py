@@ -677,6 +677,19 @@ class SinglyLinkedList(LinkedList):
             self.head = node_
             return
 
+    def move_tail_to_head(self):
+        if self.head and self.head.next:
+            last = self.head
+            previous: Optional[SingleNode] = None
+
+            while last.next:
+                previous = last
+                last = last.next
+
+            last.next = self.head
+            previous.next = None
+            self.head = last
+
     def rotate(self, k: int) -> Optional[SingleNode]:
         if k == 0 or self.head is None or (self.head and not self.head.next):
             return self.head
