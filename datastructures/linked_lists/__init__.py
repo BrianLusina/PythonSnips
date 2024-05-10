@@ -1,39 +1,40 @@
-# coding=utf-8
+from typing import Any, Union, Optional, Generic, TypeVar
 from abc import ABCMeta, abstractmethod
-from typing import Any, Union, Optional
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
+T = TypeVar("T")
 
-class Node:
+
+class Node(Generic[T]):
     """
     Node object in the Linked List
     """
 
     __metaclass__ = ABCMeta
 
-    def __init__(self, data=Optional[Any], next_=None, key=None):
+    def __init__(self, data: Optional[T] = None, next_: Optional['Node[Generic[T]]'] = None, key: Any = None):
         self.data = data
-        self.next: Optional[Node] = next_
+        self.next = next_
         self.key = key
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Node({self.data})"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Node({self.data})"
 
-    def __eq__(self, other: "Node"):
+    def __eq__(self, other: "Node") -> bool:
         return self.data == other.data
 
 
-class LinkedList:
+class LinkedList(Generic[T]):
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
     """
 
     __metaclass__ = ABCMeta
-    head: Optional[Node] = None
+    head: Optional[Node[Generic[T]]] = None
 
     def __init__(self):
         self.head = None
@@ -52,11 +53,11 @@ class LinkedList:
 
     @abstractmethod
     def __str__(self):
-        raise NotImplementedError("Not Yet implemented")
+        return "->".join([str(item) for item in self])
 
     @abstractmethod
     def __repr__(self):
-        raise NotImplementedError("Not Yet implemented")
+        return "->".join([str(item) for item in self])
 
     def __len__(self):
         """
