@@ -1,6 +1,6 @@
-from typing import Any, Union, Optional, Tuple
+from typing import Any, Union, Optional, Dict
 
-from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from .node import SingleNode
 from .. import LinkedList
 from ..exceptions import EmptyLinkedList
@@ -112,7 +112,7 @@ class SinglyLinkedList(LinkedList):
 
             return current
 
-    def delete_node_at_position(self, position: int) -> Union[SingleNode, None]:
+    def delete_node_at_position(self, position: int) -> Optional[SingleNode]:
         """
         Deletes a node at the specified position
         """
@@ -301,8 +301,8 @@ class SinglyLinkedList(LinkedList):
         At each iteration, the list_to_reverse pointer moves forward (until it reaches NULL).
         The current node becomes the head of the new reversed linked list and starts pointing to the previous head of
         the reversed linked list.
-        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at
-        the termination of the loop.
+        The loop terminates when list_to_reverse becomes NULL, and the reversed_list pointer is pointing to the new
+        head at the termination of the loop.
 
         Another implementation/variation to this approach:
           prev = None
@@ -440,24 +440,39 @@ class SinglyLinkedList(LinkedList):
         # fast runner hit the end of the list
         return False
 
-    def remove_duplicates(self):
+    def remove_duplicates(self) -> Optional[SingleNode]:
         """
-        Removes duplicates from linked list
+        Removes duplicates from linked list. Uses a dictionary to keep track of seen values in the linked list.
+        For every encountered duplicate value, it is discarded and removed from the linked list.
+
+        Complexity:
+        Where n is the number of nodes in the linked list:
+
+        Time O(n): as this iterates through each node in the linked list checking its value against what's in the
+        dictionary
+
+        Space O(n); a dictionary is used to store duplicate values in the linked list. In the worst case no duplicates
+        exist so, the dictionary has all the values from every node in the linked list.
         """
 
         if self.head is None or self.head.next is None:
             return self.head
 
+        seen: Dict[Any, bool] = dict()
         current = self.head
-        next_ = self.head.next
+        previous: Optional[SingleNode] = None
 
-        while current and next_:
-            if next_.data == current.data:
-                current.next = next_.next
-                next_ = next_.next
+        while current:
+            if current.data in seen:
+                # remove node
+                previous.next = current.next
+                current = None
             else:
-                current = current.next
-                next_ = next_.next
+                # add node data to seen
+                seen[current.data] = True
+                previous = current
+
+            current = previous.next
 
         return self.head
 
@@ -501,7 +516,21 @@ class SinglyLinkedList(LinkedList):
         as we pop the data items from the stack(this will be the last added data item of the tail node)
         & check each node's value to the data item popped from the stack. If any differ, then it is not
         a Palindrome
-        :returns: True
+
+        Complexity:
+        We assume that n is the number of nodes in the linked list
+
+        Time O(n): we traverse the linked list twice, the first time is to add the nodes to the stack, the second time(
+        after the pointer has been reset to the head node) is to check each item as it's popped off from the stack if
+        it matches the current data item at the pointer's position. This is O(2*n), but since we ignore constants it is
+        O(n) as the worst case
+
+        Space O(n): a stack data structure is used to store the data items of each node in the linked list. Therefore
+        the stack needs to occupy space which results in it being the same size as the nodes in the linked list. At the
+        first pass, it will contain all the data items of each node in the linked list.
+
+        Returns:
+            bool: True if the linked list is a palindrome, false otherwise.
         """
 
         if not self.head:
@@ -518,6 +547,7 @@ class SinglyLinkedList(LinkedList):
             stack.push(current.data)
             current = current.next
 
+        # reset the pointer
         current = self.head
 
         while current:
@@ -647,37 +677,60 @@ class SinglyLinkedList(LinkedList):
             self.head = node_
             return
 
+    def move_tail_to_head(self):
+        if self.head and self.head.next:
+            last = self.head
+            previous: Optional[SingleNode] = None
+
+            while last.next:
+                previous = last
+                last = last.next
+
+            last.next = self.head
+            previous.next = None
+            self.head = last
+
     def rotate(self, k: int) -> Optional[SingleNode]:
-        if k == 0 or self.head is None:
+        if k == 0 or self.head is None or (self.head and not self.head.next):
             return self.head
 
-        length = 1
-        current = self.head
+        # initialize two pointers, a pivot node which will be set to the pivot point & last node which will be set to
+        # the tail of the linked list. count helps in making the pivot_node & the last_node point to the right nodes in
+        # the linked list.
+        pivot_node = self.head
+        last_node = self.head
+        previous: Optional[SingleNode] = None
+        count = 0
 
-        # get the last element
-        while current.next:
-            current = current.next
-            length += 1
+        # pivot_node and the last_node pointers are moved to the right positions as long as the pivot_node pointer is
+        # not None & the count is less than the k position. Additionally, previous is updated to the pivot_node to
+        # mark the previous node(or the node before the pivot point)
+        while pivot_node and count < k:
+            previous = pivot_node
+            pivot_node = pivot_node.next
+            last_node = last_node.next
+            count += 1
 
-        # Set the last node to point to head node
-        # The list is now a circular linked list with last node pointing to first node
-        current.next = self.head
+        # this positions the first pointer correctly
+        pivot_node = previous
 
-        # If k is equal to the length of the list then k == 0
-        # ElIf k is greater than the length of the list then k = k % length
-        k = length - k % length
+        # now we move the last_node pointer to the last node in the linked list. This also keeps track of the previous
+        # node before the last node
+        while last_node:
+            previous = last_node
+            last_node = last_node.next
 
-        while k > 0:
-            current = current.next
-            k -= 1
+        last_node = previous
 
-        # Traverse the list to get to the node just before the ( length - k )th node.
-        # Example: In 1->2->3->4->5, and k = 2
-        #          we need to get to the Node(3)
-        new_head = current.next
-        current.next = None
+        # make the last node's next pointer point to the head node, This temporarily makes the linked list circular
+        last_node.next = self.head
+        # the new head node is now the next node after the pivot point.
+        self.head = pivot_node.next
 
-        return new_head
+        # next we set the pivot points' next node. This breaks the circular linked list into a linear linked list
+        pivot_node.next = None
+
+        return self.head
 
     def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
@@ -720,7 +773,8 @@ class SinglyLinkedList(LinkedList):
         # tail of previous k-group to fix our linked list pointers
         tail = dummy
 
-        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list, current_head
+        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list,
+        # current_head
         tracking_node, current_head = self.head, self.head
 
         # while tracking node is tracking a node and hasn't reached end

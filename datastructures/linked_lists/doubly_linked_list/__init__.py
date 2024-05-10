@@ -1,4 +1,4 @@
-from typing import Any, Union, Optional
+from typing import Any, Union, Optional, List
 
 from datastructures.linked_lists import LinkedList, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
@@ -10,11 +10,11 @@ class DoubleNode(Node):
     """
 
     def __init__(
-        self,
-        data: Any,
-        previous: Optional["DoubleNode"] = None,
-        next_: Optional["DoubleNode"] = None,
-        key=None,
+            self,
+            data: Any,
+            previous: Optional["DoubleNode"] = None,
+            next_: Optional["DoubleNode"] = None,
+            key=None,
     ):
         super().__init__(data=data, next_=next_, key=key)
         self.previous = previous
@@ -494,7 +494,41 @@ class DoublyLinkedList(LinkedList):
         return first, second
 
     def is_palindrome(self) -> bool:
-        pass
+        """
+        Uses two pointer approach to check if this is a palindrome linked list. Since this is a doubly linked list, each
+        node knows about the previous node in the linked list. Therefore, it is possible to do this in 2 passes. First
+        two pointers are initialized and set to the head node, then the last pointer is traversed until it reaches the
+        last node in the doubly linked list. This results in an O(n) computation task, where n is the number of nodes.
+
+        Second, the second pass compares the first pointer to the last pointer as long as we don't reach the middle,then
+        we can check the data item at each pointer. if they do not match, then we return false, if they do, the first
+        pointer moves 1 position, while the last pointer moves in the opposite direction using the previous pointer.
+        This continues until the two pointers reach the middle.
+
+        Space Complexity results in O(1) as no extra space is required other than reference to the pointers in the list.
+        Time is O(n) as the algorithm has to traverse the linked list to set the last pointer to the end of the linked
+        list.
+        """
+        if self.head:
+            # A LinkedList with 1 Node is a Palindrome
+            if not self.head.next:
+                return True
+
+            first_pointer = self.head
+            last_pointer = self.head
+
+            while last_pointer.next:
+                last_pointer = last_pointer.next
+
+            while first_pointer.next != last_pointer.previous:
+                if first_pointer.data != last_pointer.data:
+                    return False
+                first_pointer = first_pointer.next
+                last_pointer = last_pointer.previous
+
+            return True
+        else:
+            return True
 
     def pairwise_swap(self) -> DoubleNode:
         # nothing to do here
@@ -547,6 +581,28 @@ class DoublyLinkedList(LinkedList):
             self.head.next = self.tail
             self.tail.previous = self.head
 
+    def move_tail_to_head(self):
+        if self.head and self.head.next:
+            last = self.head
+
+            while last.next:
+                last = last.next
+
+            # we can obtain the second_to_last node from the last node
+            second_to_last = last.previous
+
+            # set the current head node's second_to_last pointer to the last node
+            self.head.previous = last
+            # set the next pointer of the last node to the head node
+            last.next = self.head
+            # remove the second_to_last pointer of the last node
+            last.previous = None
+            # remove the next pointer of the second_to_last node
+            second_to_last.next = None
+
+            # set the head node as the last node
+            self.head = last
+
     def remove_tail(self):
         current = self.head
 
@@ -566,4 +622,13 @@ class DoublyLinkedList(LinkedList):
         pass
 
     def reverse_groups(self, k: int):
+        pass
+
+    def delete_middle_node(self) -> Optional[Node]:
+        pass
+
+    def odd_even_list(self) -> Optional[Node]:
+        pass
+
+    def maximum_pair_sum(self) -> int:
         pass

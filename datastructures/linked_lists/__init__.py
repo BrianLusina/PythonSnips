@@ -99,22 +99,37 @@ class LinkedList:
                 return head
         return None
 
-    def count(self, data):
+    def count_occurrences(self, data: Any) -> int:
         """
-        Counts the number of occurrences of a data in a LinkedList
-        :param data: Data to count
-        :return:
+        Counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
+        otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
+        data element in each node already implements this operator.
+
+        Complexity:
+        The assumption here is that n is the number of nodes in the linked list.
+
+        Time O(n): This is because the algorithm iterates through each node in the linked list to find data values in
+        each node that equal the provided data argument in the function. This is both for the worst and best case as
+        each node in the linked list has to be checked
+
+        Space O(1): no extra space is required other than the value being incremented for each node whose data element
+        equals the provided data argument.
+
+        Args:
+            data(Any): the data element to count.
+        Returns:
+            int: the number of occurrences of an element in the linked list
         """
         if self.head is None:
             return 0
         else:
-            count_ = 0
-            temp = self.head
-            while temp:
-                if temp.data == data:
-                    count_ += 1
-                temp = temp.next
-            return count_
+            occurrences = 0
+            current = self.head
+            while current:
+                if current.data == data:
+                    occurrences += 1
+                current = current.next
+            return occurrences
 
     def get_last(self):
         """
@@ -492,12 +507,12 @@ class LinkedList:
         """
         raise NotImplementedError("Method has not been implemented")
 
-    def get_kth_to_last_node(self, k: int) -> Union[Node, None]:
+    def get_kth_to_last_node(self, k: int) -> Optional[Node]:
         """
         Gets the kth to the last node in a Linked list.
 
         Assumptions:
-        - k can be an invalid integer, less than 0. A ValueError will be raised
+        - k can not be an invalid integer, less than 0. A ValueError will be raised
 
         Algorithm:
         - set 2 pointers; fast_pointer & slow_pointer
@@ -519,7 +534,7 @@ class LinkedList:
             raise IndexError("K longer than linked list")
         fast_pointer, slow_pointer = self.head, self.head
 
-        for _ in range(k):
+        for _ in range(k - 1):
             fast_pointer = fast_pointer.next
 
             if not fast_pointer:
@@ -537,6 +552,24 @@ class LinkedList:
         Moves a node from it's current position to the head of the linked list
         @param node:
         @return:
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def move_tail_to_head(self):
+        """
+        Moves the tail node to the head node making the tail node the new head of the linked list
+        Uses two pointers where last pointer will be moved until it points to the last node in the linked list.
+        The second pointer, previous, will point to the second last node in the linked list.
+
+        Complexity Analysis:
+
+        An assumption is made where n is the number of nodes in the linked list
+        - Time: O(n) as the the pointers have to be moved through each node in the linked list until both point to the
+        last and second last nodes in the linked list
+
+        - Space O(1) as no extra space is incurred in the iteration. Only pointers are moved at the end to move the tail
+         node to the head and make the second to last node the new tail
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -574,6 +607,13 @@ class LinkedList:
     def remove_tail(self):
         """
         Remotes the tail of a linked list
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def remove_duplicates(self) -> Optional[Node]:
+        """
+        Remotes the duplicates from a linked list
         """
         raise NotImplementedError("Not yet implemented")
 
