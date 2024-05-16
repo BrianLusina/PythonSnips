@@ -41,15 +41,24 @@ class CircularLinkedList(LinkedList):
             self.head = new_node
             self.head.next = self.head
         else:
-            new_node = CircularNode(value=data)
             current = self.head
             while current.next != self.head:
                 current = current.next
             current.next = new_node
             new_node.next = self.head
 
-    def prepend(self, data):
-        pass
+    def prepend(self, data: T):
+        new_node = CircularNode(value=data)
+        current = self.head
+        new_node.next = self.head
+
+        if not self.head:
+            new_node.next = new_node
+        else:
+            while current.next != self.head:
+                current = current.next
+            current.next = new_node
+        self.head = new_node
 
     def reverse(self):
         pass
