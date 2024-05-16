@@ -48,7 +48,7 @@ class DoublyLinkedList(LinkedList):
 
         return count
 
-    def delete_nodes_by_data(self, data: Any):
+    def delete_nodes_by_key(self, key: Any):
         pass
 
     def append(self, data: Any):
@@ -264,12 +264,12 @@ class DoublyLinkedList(LinkedList):
 
             current_node = current_node.next
 
-    def delete_node_by_data(self, data: Any):
+    def delete_node_by_key(self, key: Any):
         current = self.head
 
         # in the event we have a head node and the head node's data matches the data we intend to remove from the Linked
         # List, then we simply re-assign the head node to the next node
-        if current and current.data == data:
+        if current and current.data == key:
             self.head = current.next
             current = None
             return
@@ -278,7 +278,7 @@ class DoublyLinkedList(LinkedList):
         previous = None
 
         # we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
-        while current and current.data != data:
+        while current and current.data != key:
             previous = current
             current = current.next
 

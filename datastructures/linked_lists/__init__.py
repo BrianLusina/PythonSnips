@@ -16,16 +16,17 @@ class Node(Generic[T]):
     def __init__(self, data: Optional[T] = None, next_: Optional['Node[Generic[T]]'] = None, key: Any = None):
         self.data = data
         self.next = next_
-        self.key = key
+        # if no key is provided, the hash of the data becomes the key
+        self.key = key or hash(data)
 
     def __str__(self) -> str:
-        return f"Node({self.data})"
+        return f"Node(data={self.data}, key={self.key})"
 
     def __repr__(self) -> str:
-        return f"Node({self.data})"
+        return f"Node(data={self.data}, key={self.key})"
 
     def __eq__(self, other: "Node") -> bool:
-        return self.data == other.data
+        return self.key == other.key
 
 
 class LinkedList(Generic[T]):
@@ -34,19 +35,18 @@ class LinkedList(Generic[T]):
     """
 
     __metaclass__ = ABCMeta
-    head: Optional[Node[Generic[T]]] = None
 
-    def __init__(self):
-        self.head = None
+    def __init__(self, head: Optional[Node[Generic[T]]] = None):
+        self.head: Optional[Node[Generic[T]]] = head
 
     def __iter__(self):
-        head = self.head
+        current = self.head
 
-        if head:
-            yield head.data
+        if current:
+            yield current.data
 
-        if head.next:
-            node = head.next
+        if current.next:
+            node = current.next
             while node:
                 yield node.data
                 node = node.next
@@ -282,23 +282,24 @@ class LinkedList(Generic[T]):
         # rest of the implementation is at the relevant subclasses
 
     @abstractmethod
-    def delete_node_by_data(self, data: Any):
+    def delete_node_by_key(self, key: Any):
         """
         traverses the LinkedList until we find the data in a Node that matches and deletes that node. This uses the same
         approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list, we use the
         data attribute of a node. Note that if there are duplicate Nodes in the LinkedList with the same data attributes
         only, the first Node is deleted.
-        :param data: Data of Node element to be deleted
+        Args:
+            key Any: Key of Node element to be deleted
         """
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
-    def delete_nodes_by_data(self, data: Any):
+    def delete_nodes_by_key(self, key: Any):
         """
-        traverses the LinkedList until we find the data in a Node that matches and deletes those nodes. This uses the
-        same approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list,
-        we use the data attribute of a node.
-        :param data: Data of Node element to be deleted
+        traverses the LinkedList until we find the key in a Node that matches and deletes those nodes. This uses the
+        same approach as self.delete_node_by_key(key) but instead deletes multiple nodes with the same key
+        Args:
+            key Any: Key of Node elements to be deleted
         """
         raise NotImplementedError("Not yet implemented")
 

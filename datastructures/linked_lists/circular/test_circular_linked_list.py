@@ -40,5 +40,20 @@ class CircularLinkedListPrependTestCase(unittest.TestCase):
         self.assertEqual(expected, list(linked_list))
 
 
+class CircularLinkedListDeleteNodeByKeyTestCase(unittest.TestCase):
+    def test_1(self):
+        """should delete a node 5 from linked list [1,2,3,4,5,6] to become [1,2,3,4,6]"""
+        data = [1, 2, 3, 4, 5, 6]
+        expected = [1, 2, 3, 4, 6]
+        circular_linked_list = CircularLinkedList()
+
+        for d in data:
+            circular_linked_list.append(d)
+
+        circular_linked_list.delete_node_by_key(5)
+
+        self.assertEqual(expected, list(circular_linked_list))
+
+
 if __name__ == '__main__':
     unittest.main()
