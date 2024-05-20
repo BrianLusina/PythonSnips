@@ -1,4 +1,4 @@
-from typing import Optional, Any, Union
+from typing import Optional, Any, Union, Tuple, Self
 
 from datastructures.linked_lists import LinkedList, Node, T
 from .node import CircularNode
@@ -22,6 +22,16 @@ class CircularLinkedList(LinkedList):
             if current.next == self.head:
                 break
             current = current.next
+
+    def __len__(self) -> int:
+        current = self.head
+        count = 0
+        while current:
+            count += 1
+            current = current.next
+            if current == self.head:
+                break
+        return count
 
     def append(self, data: T):
         """
@@ -143,6 +153,43 @@ class CircularLinkedList(LinkedList):
 
     def alternate_split(self):
         pass
+
+    def split_list(self) -> Optional[Tuple[Self, Optional[Self]]]:
+        """
+        Splits a circular linked list into two halves and returns the two halves in a tuple. If the size is 0, i.e. no
+        nodes are in this linked list, then it returns None. If the size is 1, then the first portion of the tuple, at
+        index 0 will be the head of this circular linked list, while the second portion will be None.
+        Returns:
+            Tuple: tuple with two circular linked lists
+        """
+        size = len(self)
+
+        if size == 0:
+            return None
+        if size == 1:
+            return self.head, None
+
+        mid = size // 2
+        count = 0
+
+        previous: Optional[CircularNode] = None
+        current = self.head
+
+        while current and count < mid:
+            count += 1
+            previous = current
+            current = current.next
+
+        previous.next = self.head
+
+        second_list = CircularLinkedList()
+        while current.next != self.head:
+            second_list.append(current.data)
+            current = current.next
+
+        second_list.append(current.data)
+
+        return self, second_list
 
     def is_palindrome(self) -> bool:
         pass

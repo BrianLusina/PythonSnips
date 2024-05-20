@@ -59,12 +59,12 @@ class LinkedList(Generic[T]):
     def __repr__(self):
         return "->".join([str(item) for item in self])
 
-    def __len__(self):
+    def __len__(self) -> int:
         """
         Implements the len() for a linked list. This counts the number of nodes in a Linked List
         This uses an iterative method to find the length of the LinkedList
-        :return: Number of nodes
-        :rtype: int
+        Returns:
+            int: Number of nodes
         """
         return len(tuple(iter(self)))
 
