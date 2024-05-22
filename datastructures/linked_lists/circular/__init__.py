@@ -86,8 +86,49 @@ class CircularLinkedList(LinkedList):
     def pop(self) -> Optional[Node]:
         pass
 
-    def delete_node(self, n: Node):
-        pass
+    def delete_node(self, node_: CircularNode):
+        if self.head:
+            # if the head node matches the node we are looking for
+            if self.head == node_:
+                # set the current pointer to the head node. This will be used to track the last node as the pointer
+                # moves through the list
+                current = self.head
+                # move through the list until we reach the pointer that points batck to the head node.
+                while current.next != self.head:
+                    current = current.next
+
+                # if the head node equals the next node, that means that this linked list has a length of 1, i.e. just 1
+                # node. The head node can be set to None
+                if self.head == self.head.next:
+                    self.head = None
+                else:
+                    # set the current pointer to point to the current head's next
+                    current.next = self.head.next
+                    # set the head to now become the next node
+                    self.head = self.head.next
+            else:
+                # we have a situation where the head node's key is not equal to the head node, therefore, we need to
+                # traverse the list to find the first node whose key matches the given key. Setting current to the head
+                # node acts as the pointer that we keep track of
+                current = self.head
+                # previous pointer helps to keep track of the previous node as we traverse, it is initially set to None
+                previous: Optional[CircularNode] = None
+
+                # we iterate through the linked list as long as the next pointer of the current head is not equal to
+                # the head node. This is to avoid an infinite loop as this is a circular linked list.
+                while current.next != self.head:
+                    # we set the previous pointer to the current node to keep track of the node before we reset the
+                    # current pointer to the next node
+                    previous = current
+                    # move the current pointer to the next node
+                    current = current.next
+                    # if the current node's key is equal to the key we are searching for
+                    if current == node_:
+                        # we set the previous node's next pointer to point to the current node's next pointer.
+                        # Essentially removing the current node from the list
+                        previous.next = current.next
+                        # set the current node to the current's next node
+                        current = current.next
 
     def delete_node_at_position(self, position: int):
         pass
