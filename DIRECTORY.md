@@ -62,6 +62,8 @@
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
+  * Josephus Circle
+    * [Test Josephus Circle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/josephus_circle/test_josephus_circle.py)
   * Memoization
     * [Fibonacci](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/memoization/fibonacci.py)
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
@@ -163,6 +165,9 @@
   * Hashset
     * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashset/test_my_hashset.py)
   * Linked Lists
+    * Circular
+      * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/circular/node.py)
+      * [Test Circular Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/circular/test_circular_linked_list.py)
     * Doubly Linked List
       * [Test Doubly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list.py)
       * [Test Doubly Linked List Move Tail To Head](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list_move_tail_to_head.py)

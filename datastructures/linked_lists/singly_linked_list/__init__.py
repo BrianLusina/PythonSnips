@@ -151,12 +151,12 @@ class SinglyLinkedList(LinkedList):
             previous_node = current_node
             current_node = current_node.next
 
-    def delete_node_by_data(self, data: Any):
+    def delete_node_by_key(self, key: Any):
         current = self.head
 
         # in the event we have a head node and the head node's data matches the data we intend to remove from the Linked
         # List, then we simply re-assign the head node to the next node
-        if current and current.data == data:
+        if current and current.data == key:
             self.head = current.next
             return
 
@@ -164,7 +164,7 @@ class SinglyLinkedList(LinkedList):
         previous = None
 
         # we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
-        while current and current.data != data:
+        while current and current.data != key:
             previous = current
             current = current.next
 
@@ -177,13 +177,13 @@ class SinglyLinkedList(LinkedList):
         previous.next = current.next
         return
 
-    def delete_nodes_by_data(self, data: Any):
+    def delete_nodes_by_key(self, key: Any):
         dummy_head = SingleNode(-1)
         dummy_head.next = self.head
         current = dummy_head
 
         while current.next:
-            if current.next.data == data:
+            if current.next.data == key:
                 current.next = current.next.next
             else:
                 current = current.next

@@ -1,69 +1,70 @@
-# coding=utf-8
+from typing import Any, Union, Optional, Generic, TypeVar
 from abc import ABCMeta, abstractmethod
-from typing import Any, Union, Optional
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
+T = TypeVar("T")
 
-class Node:
+
+class Node(Generic[T]):
     """
     Node object in the Linked List
     """
 
     __metaclass__ = ABCMeta
 
-    def __init__(self, data=Optional[Any], next_=None, key=None):
+    def __init__(self, data: Optional[T] = None, next_: Optional['Node[Generic[T]]'] = None, key: Any = None):
         self.data = data
-        self.next: Optional[Node] = next_
-        self.key = key
+        self.next = next_
+        # if no key is provided, the hash of the data becomes the key
+        self.key = key or hash(data)
 
-    def __str__(self):
-        return f"Node({self.data})"
+    def __str__(self) -> str:
+        return f"Node(data={self.data}, key={self.key})"
 
-    def __repr__(self):
-        return f"Node({self.data})"
+    def __repr__(self) -> str:
+        return f"Node(data={self.data}, key={self.key})"
 
-    def __eq__(self, other: "Node"):
-        return self.data == other.data
+    def __eq__(self, other: "Node") -> bool:
+        return self.key == other.key
 
 
-class LinkedList:
+class LinkedList(Generic[T]):
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
     """
 
     __metaclass__ = ABCMeta
-    head: Optional[Node] = None
 
-    def __init__(self):
-        self.head = None
+    def __init__(self, head: Optional[Node[Generic[T]]] = None):
+        self.head: Optional[Node[Generic[T]]] = head
 
     def __iter__(self):
-        head = self.head
+        current = self.head
 
-        if head:
-            yield head.data
+        if current:
+            yield current.data
 
-        if head.next:
-            node = head.next
+        if current.next:
+            node = current.next
             while node:
                 yield node.data
                 node = node.next
 
     @abstractmethod
     def __str__(self):
-        raise NotImplementedError("Not Yet implemented")
+        return "->".join([str(item) for item in self])
 
     @abstractmethod
     def __repr__(self):
-        raise NotImplementedError("Not Yet implemented")
+        return "->".join([str(item) for item in self])
 
-    def __len__(self):
+    def __len__(self) -> int:
         """
         Implements the len() for a linked list. This counts the number of nodes in a Linked List
         This uses an iterative method to find the length of the LinkedList
-        :return: Number of nodes
-        :rtype: int
+        Returns:
+            int: Number of nodes
         """
         return len(tuple(iter(self)))
 
@@ -281,23 +282,24 @@ class LinkedList:
         # rest of the implementation is at the relevant subclasses
 
     @abstractmethod
-    def delete_node_by_data(self, data: Any):
+    def delete_node_by_key(self, key: Any):
         """
         traverses the LinkedList until we find the data in a Node that matches and deletes that node. This uses the same
         approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list, we use the
         data attribute of a node. Note that if there are duplicate Nodes in the LinkedList with the same data attributes
         only, the first Node is deleted.
-        :param data: Data of Node element to be deleted
+        Args:
+            key Any: Key of Node element to be deleted
         """
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
-    def delete_nodes_by_data(self, data: Any):
+    def delete_nodes_by_key(self, key: Any):
         """
-        traverses the LinkedList until we find the data in a Node that matches and deletes those nodes. This uses the
-        same approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list,
-        we use the data attribute of a node.
-        :param data: Data of Node element to be deleted
+        traverses the LinkedList until we find the key in a Node that matches and deletes those nodes. This uses the
+        same approach as self.delete_node_by_key(key) but instead deletes multiple nodes with the same key
+        Args:
+            key Any: Key of Node elements to be deleted
         """
         raise NotImplementedError("Not yet implemented")
 
