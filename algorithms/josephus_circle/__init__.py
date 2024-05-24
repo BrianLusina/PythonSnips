@@ -16,3 +16,14 @@ def josephus_circle(circular_list: CircularLinkedList, step: int) -> CircularNod
         length -= 1
 
     return current
+
+
+def josephus_survivor(n: int, k: int) -> int:
+    i = 1
+    result = 0
+
+    while i <= n:
+        result = (result + k) % i
+        i += 1
+
+    return result + 1
