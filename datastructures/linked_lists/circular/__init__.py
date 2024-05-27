@@ -74,7 +74,7 @@ class CircularLinkedList(LinkedList):
     def insert(self, node, pos):
         pass
 
-    def insert_after_node(self, prev: Any, data: Any):
+    def insert_after_node(self, prev_key: Any, data: Any):
         pass
 
     def unshift(self, node):

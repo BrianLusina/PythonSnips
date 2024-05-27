@@ -1,6 +1,6 @@
-from typing import Any, Union, Optional, List
+from typing import Any, Union, Optional
 
-from datastructures.linked_lists import LinkedList, Node
+from datastructures.linked_lists import LinkedList, Node, T
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
 
@@ -14,7 +14,7 @@ class DoubleNode(Node):
             data: Any,
             previous: Optional["DoubleNode"] = None,
             next_: Optional["DoubleNode"] = None,
-            key=None,
+            key: Optional[Any] = None,
     ):
         super().__init__(data=data, next_=next_, key=key)
         self.previous = previous
@@ -51,7 +51,7 @@ class DoublyLinkedList(LinkedList):
     def delete_nodes_by_key(self, key: Any):
         pass
 
-    def append(self, data: Any):
+    def append(self, data: T):
         """
         Add a node to the end of Linked List
 
@@ -61,67 +61,66 @@ class DoublyLinkedList(LinkedList):
         Complexities:
         Space Complexity = O(1) as no new variables are used in memory, this operation is done in place
         Time Complexity = O(n) as we are traversing only 1 linked list
-        :param data: Data to add
-        :return:
         """
-        node = data if isinstance(data, DoubleNode) else DoubleNode(data)
+        new_node = data if isinstance(data, DoubleNode) else DoubleNode(data)
 
         # if the head does not exist, set the head to the node
         if not self.head:
-            self.head = node
-            self.tail = node
+            self.head = new_node
             return
         else:
-            node.previous = self.tail
-            self.tail.next = node
-            self.tail = node
-
-            # This is also viable if the doubly linked list does not have a tail node reference. This will traverse
-            # the entire list until it reaches the end and add this node to the end
-            # current = self.head
-            #
-            # while current.next:
-            #     current = current.next
-            #
-            # current.next = node
-            # node.prev = current
+            new_node.previous = self.tail
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+            new_node.previous = current
             return
 
-    def prepend(self, data: Any):
+    def prepend(self, data: T):
         node = data if isinstance(data, DoubleNode) else DoubleNode(data)
         if self.head:
             self.head.previous = node
             node.next = self.head
             self.head = node
             return
-        # no head node, means that this is a LinkedList which is empty. Thus, we set the head node to this node
+        # no head node, means that this is empty. Thus, we set the head node to this node
         self.head = node
-        self.tail = node
         return
 
-    def insert_after_node(self, prev_node: Any, data: Any):
+    def insert_after_node(self, key: Any, data: T):
         if self.is_empty():
             raise EmptyLinkedList("LinkedList has no Nodes")
-        if not prev_node:
-            raise ValueError("Prev Node can not be None")
+        if not key:
+            raise ValueError("Prev Node Key can not be None")
         if not data:
             raise ValueError("Data to insert can not be None")
-
-        prev_node = (
-            prev_node if isinstance(prev_node, DoubleNode) else DoubleNode(prev_node)
-        )
-        node_to_insert = DoubleNode(data)
 
         current = self.head
 
         # traverse the linked list until we find the node to insert
         while current:
-            if current.data == prev_node.data:
-                node_to_insert.next = current.next
-                node_to_insert.previous = current
+            # if we are at the end, then simply append the node to the end
+            if not current.next and current.key == key:
+                self.append(data)
+                return
+
+            # if the key matches the current node
+            elif current.key == key:
+                # create the new node
+                node_to_insert = DoubleNode(data)
+                # set the next node in a temporary variable, nxt in this case
+                nxt = current.next
+                # set the current next pointer to point to the new node
                 current.next = node_to_insert
-                # we have inserted the node, now we can exit
-                break
+                # set the new node's next pointer to point to the nxt variable, this represents the current node's next
+                # pointer
+                node_to_insert.next = nxt
+                # set the previous pointer of the new node to point to the current node
+                node_to_insert.previous = current
+                # we are done with insertion, we can exit the loop and function
+                return
+            # move the pointer to the next node
             current = current.next
 
     def pop(self) -> Optional[DoubleNode]:
