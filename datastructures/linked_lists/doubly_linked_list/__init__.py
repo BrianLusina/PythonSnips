@@ -123,6 +123,23 @@ class DoublyLinkedList(LinkedList):
             # move the pointer to the next node
             current = current.next
 
+    def insert_before_node(self, next_key: Any, data: T):
+        current = self.head
+        while current:
+            if not current.previous and current.key == next_key:
+                self.prepend(data)
+                return
+            elif current.key == next_key:
+                new_node = DoubleNode(data)
+                previous = current.previous
+                previous.next = new_node
+                current.previous = new_node
+                new_node.next = current
+                new_node.previous = previous
+                return
+
+            current = current.next
+
     def pop(self) -> Optional[DoubleNode]:
         """
         Removes the last item from the list and returns it. This performs the operation in O(1) time as we already know
@@ -385,8 +402,8 @@ class DoublyLinkedList(LinkedList):
 
             # we create a new node and insert it into 2 nodes iff it is less than the next node value and
             # less than the previous node value
-            if current.value <= data <= next_node.data:
-                new_node = DoubleNode(data, previous=current, next_=next_node)
+            if current.data <= data <= next_node.data:
+                new_node = DoubleNode(data=data, previous=current, next_=next_node)
                 next_node.prev = new_node
                 current.next_node = new_node
                 return node

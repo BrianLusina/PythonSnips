@@ -218,6 +218,16 @@ class LinkedList(Generic[T]):
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
+    def insert_before_node(self, next_key: Any, data: T):
+        """
+        Inserts a given node data before a node's key in the Linked List.
+        Args:
+            next_key Any: The node's next key to find
+            data T: The data to insert
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
     def unshift(self, node):
         """
         Insert a node at the beginning of the list

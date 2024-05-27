@@ -25,7 +25,7 @@ class DoublyLinkedListAppendPrependTests(unittest.TestCase):
         self.assertEqual(40, doubly_linked_list.head.data)
 
 
-class DoublyLinkedListInsertAfterNodeTests(unittest.TestCase):
+class DoublyLinkedListInsertAfterAndBeforeNodeTests(unittest.TestCase):
     def test_insert_e_after_b(self):
         """Should insert E after B in list A-B-C-D"""
         doubly_linked_list = DoublyLinkedList()
@@ -47,18 +47,26 @@ class DoublyLinkedListInsertAfterNodeTests(unittest.TestCase):
         self.assertEqual(5, len(doubly_linked_list))
         self.assertEqual(expected, list(doubly_linked_list))
 
-    def test_prepend(self):
+    def test_insert_e_before_b(self):
+        """Should insert E before B in list A-B-C-D"""
         doubly_linked_list = DoublyLinkedList()
-        doubly_linked_list.append(10)
-        doubly_linked_list.append(20)
 
-        self.assertEqual(2, len(doubly_linked_list))
+        data = ["A", "B", "C", "D"]
+        for d in data:
+            doubly_linked_list.append(d)
 
-        doubly_linked_list.prepend(30)
-        doubly_linked_list.prepend(40)
-
+        # validate that the append operation is still okay
         self.assertEqual(4, len(doubly_linked_list))
-        self.assertEqual(40, doubly_linked_list.head.data)
+        self.assertEqual(data, list(doubly_linked_list))
+
+        key = hash("B")
+        new_data = "E"
+
+        doubly_linked_list.insert_before_node(key, new_data)
+        expected = ["A", new_data, "B", "C", "D"]
+
+        self.assertEqual(5, len(doubly_linked_list))
+        self.assertEqual(expected, list(doubly_linked_list))
 
 
 class DoublyLinkedListTests(unittest.TestCase):
