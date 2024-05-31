@@ -2,7 +2,7 @@ from typing import Any, Union, Optional, Dict
 
 from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from .node import SingleNode
-from .. import LinkedList
+from .. import LinkedList, T
 from ..exceptions import EmptyLinkedList
 
 
@@ -87,6 +87,9 @@ class SinglyLinkedList(LinkedList):
                 # we have inserted the node, now we can exit
                 break
             current = current.next
+
+    def insert_before_node(self, next_key: Any, data: T):
+        pass
 
     def get_nth_node(self, position: int) -> Union[SingleNode, None]:
         """
