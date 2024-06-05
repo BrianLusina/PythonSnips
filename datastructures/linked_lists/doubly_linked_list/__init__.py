@@ -346,15 +346,16 @@ class DoublyLinkedList(LinkedList):
 
     def reverse(self) -> Optional[DoubleNode]:
         """
-        Order of operations is important here. We set the current.next to next before
-        setting previous to current.next
-        We return previous because when we exit, current is None, which means that the last
+        Order of operations is important here. We set the current node's next pointer to next before setting previous to
+        the current pointer's next
+        We return previous because when we exit, current pointer is None, which means that the last
         node we visited—previous—was the tail of the original list, and thus the head of
         our reversed list.
 
         Complexity:
-        O(n) time and O(1) space. We pass over the list only once, and maintain a
-        constant number of variables in memory.
+        O(n) time and O(1) space.
+
+        We pass over the list only once, and maintain a constant number of variables in memory.
 
         Another implementation/variation to this approach:
           prev = None
@@ -367,8 +368,8 @@ class DoublyLinkedList(LinkedList):
             cur = nxt
           self.head = prev
 
-        :return: a reversed LinkedList
-        :rtype: DoublyLinkedList
+        Returns:
+            DoublyLinkedList: reversed doubly linked list
         """
 
         if self.head is None:
@@ -379,7 +380,7 @@ class DoublyLinkedList(LinkedList):
             return self.head
 
         current = self.head
-        previous = None
+        previous: Optional[DoubleNode] = None
 
         # do this, until we are at the end of the linked list
         while current:

@@ -223,6 +223,28 @@ class DoublyLinkedListDeleteNodeTests(unittest.TestCase):
         self.assertEqual(expected, list(doubly_linked_list))
 
 
+class DoublyLinkedListReverseTests(unittest.TestCase):
+    def test_1(self):
+        """Should reverse list of A<>B<>C<>D to D<>C<>B<>A"""
+        doubly_linked_list = DoublyLinkedList()
+
+        data = ["A", "B", "C", "D"]
+        for d in data:
+            doubly_linked_list.append(d)
+
+        # validate that the append operation is still okay
+        self.assertEqual(len(data), len(doubly_linked_list))
+        self.assertEqual(data, list(doubly_linked_list))
+
+        expected = list(reversed(data))
+
+        actual = doubly_linked_list.reverse()
+        self.assertEqual(expected[0], actual.data)
+
+        self.assertEqual(len(expected), len(doubly_linked_list))
+        self.assertEqual(expected, list(doubly_linked_list))
+
+
 class DoublyLinkedListTests(unittest.TestCase):
     def setUp(self):
         self.list = DoublyLinkedList()
