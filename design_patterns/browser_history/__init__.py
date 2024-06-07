@@ -1,4 +1,4 @@
-from datastructures.linked_lists.doubly_linked_list import DoubleNode
+from datastructures.linked_lists.doubly_linked_list.node import DoubleNode
 
 
 class BrowserHistory:

@@ -1,23 +1,8 @@
-from typing import Any, Union, Optional
+from typing import Any, Union, Optional, Dict
 
 from datastructures.linked_lists import LinkedList, Node, T
 from datastructures.linked_lists.exceptions import EmptyLinkedList
-
-
-class DoubleNode(Node):
-    """
-    Node implementation of DoubleLinkedList
-    """
-
-    def __init__(
-            self,
-            data: Any,
-            previous: Optional["DoubleNode"] = None,
-            next_: Optional["DoubleNode"] = None,
-            key: Optional[Any] = None,
-    ):
-        super().__init__(data=data, next_=next_, key=key)
-        self.previous = previous
+from .node import DoubleNode
 
 
 class DoublyLinkedList(LinkedList):
@@ -276,24 +261,24 @@ class DoublyLinkedList(LinkedList):
             current.next.prev = current.previous
             return self.head
 
-    def delete_node(self, node: DoubleNode):
+    def delete_node(self, double_node: DoubleNode):
         # if it is the first node
-        if node.key == self.head.key:
+        if double_node.key == self.head.key:
             # if there is a node after the head
             if self.head.next:
                 next_node = self.head.next
                 next_node.prev = None
                 self.head = next_node
-                node.next = None
+                double_node.next = None
                 return
             self.head = None
             return
 
         current_node = self.head
         while current_node:
-            if current_node.key == node.key:
+            if current_node.key == double_node.key:
                 current_node.previous.next = current_node.next
-                current_node.next.prev = current_node.previous
+                current_node.next.previous = current_node.previous
 
             current_node = current_node.next
 
@@ -495,21 +480,29 @@ class DoublyLinkedList(LinkedList):
         """
 
         if self.head is None or self.head.next is None:
-            return self.head
+            return
 
+        seen: Dict[Any, bool] = dict()
         current = self.head
-        next_ = current.next_node
 
-        while next_:
-            if next_.data == current.data:
-                current.next_node = current.next_node.next_node
-                current = current.next_node.previous
-                next_ = current.next_node
+        while current:
+            if current.key not in seen:
+                seen[current.key] = True
+                current = current.next
             else:
-                current = next_
-                next_ = current.next_node
+                # retrieve the next and the previous pointers of the current duplicate node
+                next_ = current.next
+                previous = current.previous
 
-        return self.head
+                # set the previous node of this current node to point to the current node's next
+                previous.next = next_
+                # next_ could possibly be None and if so, this means we are at the end of the linked list. Therefore, we
+                # check that it's available and set it's previous pointer
+                if next_:
+                    next_.previous = previous
+
+                # move the pointer to the next node
+                current = next_
 
     def alternate_split(self) -> tuple:
         if not self.head or not self.head.next:

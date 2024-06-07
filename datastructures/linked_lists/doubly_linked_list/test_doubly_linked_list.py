@@ -245,6 +245,65 @@ class DoublyLinkedListReverseTests(unittest.TestCase):
         self.assertEqual(expected, list(doubly_linked_list))
 
 
+class DoublyLinkedListRemoveDuplicatesTests(unittest.TestCase):
+    def test_1(self):
+        """Should remove duplicates from list of 1<>4<>7<>4 to 1<>4<>7"""
+        doubly_linked_list = DoublyLinkedList()
+
+        data = [1, 4, 7, 4]
+        for d in data:
+            doubly_linked_list.append(d)
+
+        # validate that the append operation is still okay
+        self.assertEqual(len(data), len(doubly_linked_list))
+        self.assertEqual(data, list(doubly_linked_list))
+
+        expected = list(set(data))
+
+        doubly_linked_list.remove_duplicates()
+
+        self.assertEqual(len(expected), len(doubly_linked_list))
+        self.assertEqual(expected, list(doubly_linked_list))
+
+    def test_2(self):
+        """Should remove duplicates from list of 8-4-4-6-4-8-4-10-12-12 to 8-4-6-10-12"""
+        doubly_linked_list = DoublyLinkedList()
+
+        data = [8, 4, 4, 6, 4, 8, 4, 10, 12, 12]
+        for d in data:
+            doubly_linked_list.append(d)
+
+        # validate that the append operation is still okay
+        self.assertEqual(len(data), len(doubly_linked_list))
+        self.assertEqual(data, list(doubly_linked_list))
+
+        expected = [8, 4, 6, 10, 12]
+
+        doubly_linked_list.remove_duplicates()
+
+        self.assertEqual(len(expected), len(doubly_linked_list))
+        self.assertEqual(expected, list(doubly_linked_list))
+
+    def test_3(self):
+        """Should do nothing for an empty list i.e. no head"""
+        doubly_linked_list = DoublyLinkedList()
+
+        doubly_linked_list.remove_duplicates()
+
+        self.assertEqual(0, len(doubly_linked_list))
+        self.assertEqual([], list(doubly_linked_list))
+
+    def test_4(self):
+        """Should do nothing for a list with one node"""
+        doubly_linked_list = DoublyLinkedList()
+        doubly_linked_list.append(1)
+
+        doubly_linked_list.remove_duplicates()
+
+        self.assertEqual(1, len(doubly_linked_list))
+        self.assertEqual([1], list(doubly_linked_list))
+
+
 class DoublyLinkedListTests(unittest.TestCase):
     def setUp(self):
         self.list = DoublyLinkedList()

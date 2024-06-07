@@ -41,6 +41,8 @@ class LinkedList(Generic[T]):
 
     def __iter__(self):
         current = self.head
+        if not current:
+            return
 
         if current:
             yield current.data
