@@ -304,6 +304,31 @@ class DoublyLinkedListRemoveDuplicatesTests(unittest.TestCase):
         self.assertEqual([1], list(doubly_linked_list))
 
 
+class DoublyLinkedListPairsWithSumTests(unittest.TestCase):
+    def test_1(self):
+        """Should return [(1, 4), (2, 3)] with a target of 5 from list of [1,2,3,4,5]"""
+        doubly_linked_list = DoublyLinkedList()
+
+        data = [1, 2, 3, 4, 5]
+        for d in data:
+            doubly_linked_list.append(d)
+
+        # validate that the append operation is still okay
+        self.assertEqual(len(data), len(doubly_linked_list))
+        self.assertEqual(data, list(doubly_linked_list))
+
+        expected = [(1, 4), (2, 3)]
+        target = 5
+
+        actual = doubly_linked_list.pairs_with_sum(target)
+        actual_data = []
+        for n1, n2 in actual:
+            actual_data.append((n1.data, n2.data))
+
+        self.assertEqual(len(expected), len(actual))
+        self.assertEqual(expected, actual_data)
+
+
 class DoublyLinkedListTests(unittest.TestCase):
     def setUp(self):
         self.list = DoublyLinkedList()

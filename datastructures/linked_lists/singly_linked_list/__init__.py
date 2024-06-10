@@ -1,8 +1,8 @@
-from typing import Any, Union, Optional, Dict
+from typing import Any, Union, Optional, Dict, List, Tuple
 
 from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from .node import SingleNode
-from .. import LinkedList, T
+from .. import LinkedList, T, Node
 from ..exceptions import EmptyLinkedList
 
 
@@ -963,3 +963,6 @@ class SinglyLinkedList(LinkedList):
             start = start.next
 
         return maximum_sum
+
+    def pairs_with_sum(self, target: T) -> List[Tuple[SingleNode, SingleNode]]:
+        pass

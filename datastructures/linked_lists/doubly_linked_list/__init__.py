@@ -1,4 +1,4 @@
-from typing import Any, Union, Optional, Dict
+from typing import Any, Union, Optional, Dict, List, Tuple
 
 from datastructures.linked_lists import LinkedList, Node, T
 from datastructures.linked_lists.exceptions import EmptyLinkedList
@@ -673,3 +673,21 @@ class DoublyLinkedList(LinkedList):
 
     def maximum_pair_sum(self) -> int:
         pass
+
+    def pairs_with_sum(self, target: T) -> List[Tuple[DoubleNode, DoubleNode]]:
+        pairs: List[Tuple[DoubleNode, DoubleNode]] = []
+        current = self.head
+
+        while current:
+            nxt = current.next
+
+            while nxt:
+
+                if current.data + nxt.data == target:
+                    pairs.append((current, nxt))
+
+                nxt = nxt.next
+
+            current = current.next
+
+        return pairs

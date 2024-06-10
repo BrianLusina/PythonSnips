@@ -1,4 +1,4 @@
-from typing import Optional, Any, Union, Tuple, Self
+from typing import Optional, Any, Union, Tuple, Self, List
 
 from datastructures.linked_lists import LinkedList, Node, T
 from .node import CircularNode
@@ -270,4 +270,7 @@ class CircularLinkedList(LinkedList):
         pass
 
     def maximum_pair_sum(self) -> int:
+        pass
+
+    def pairs_with_sum(self, target: T) -> List[Tuple[CircularNode, CircularNode]]:
         pass
