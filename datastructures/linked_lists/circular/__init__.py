@@ -1,10 +1,11 @@
-from typing import Optional, Any, Union, Tuple, Self
+from typing import Optional, Any, Union, Tuple, Self, List
 
 from datastructures.linked_lists import LinkedList, Node, T
 from .node import CircularNode
 
 
 class CircularLinkedList(LinkedList):
+
     def __init__(self, head: Optional[CircularNode] = None):
         super().__init__(head)
 
@@ -74,7 +75,10 @@ class CircularLinkedList(LinkedList):
     def insert(self, node, pos):
         pass
 
-    def insert_after_node(self, prev: Any, data: Any):
+    def insert_after_node(self, prev_key: Any, data: Any):
+        pass
+
+    def insert_before_node(self, next_key: Any, data: T):
         pass
 
     def unshift(self, node):
@@ -266,4 +270,7 @@ class CircularLinkedList(LinkedList):
         pass
 
     def maximum_pair_sum(self) -> int:
+        pass
+
+    def pairs_with_sum(self, target: T) -> List[Tuple[CircularNode, CircularNode]]:
         pass

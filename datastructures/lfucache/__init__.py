@@ -1,7 +1,8 @@
 from collections import defaultdict
 from typing import Any, Union, Dict
 
-from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
+from datastructures.linked_lists.doubly_linked_list import DoublyLinkedList
+from datastructures.linked_lists.doubly_linked_list.node import DoubleNode
 
 
 class LfuCacheNode(DoubleNode):

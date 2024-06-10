@@ -1,4 +1,4 @@
-from typing import Any, Union, Optional, Generic, TypeVar
+from typing import Any, Union, Optional, Generic, TypeVar, List, Tuple
 from abc import ABCMeta, abstractmethod
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
@@ -41,6 +41,8 @@ class LinkedList(Generic[T]):
 
     def __iter__(self):
         current = self.head
+        if not current:
+            return
 
         if current:
             yield current.data
@@ -206,13 +208,24 @@ class LinkedList(Generic[T]):
         raise NotImplementedError()
 
     @abstractmethod
-    def insert_after_node(self, prev: Any, data: Any):
+    def insert_after_node(self, prev_key: Any, data: T):
         """
-        Inserts a node after a node in the Linked List. First find the node in the LinkedList,
-        Get its successor, store in temp variable and insert this node in the position,
+        Inserts a given node data after a node's key in the Linked List. First find the node in the LinkedList with the
+        provided key. Get its successor, store in temp variable and insert this node with data in the position,
         get this node's next as the successor of the current node
-        :param prev: The node to find
-        :param data: the data for the node to insert
+        Args:
+            prev_key Any: The node's previous key to find
+            data T: The data to insert
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def insert_before_node(self, next_key: Any, data: T):
+        """
+        Inserts a given node data before a node's key in the Linked List.
+        Args:
+            next_key Any: The node's next key to find
+            data T: The data to insert
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -662,10 +675,21 @@ class LinkedList(Generic[T]):
     @abstractmethod
     def maximum_pair_sum(self) -> int:
         """
-        Returns the maximum twin sum of a node and its twin, where a node's twin is at the index (n-1-i) where n is the number
-        of nodes in the linked list.
+        Returns the maximum twin sum of a node and its twin, where a node's twin is at the index (n-1-i) where n is the
+        number of nodes in the linked list.
         For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only
         nodes with twins for n = 4.
         @return: maximum twin sum of a node and it's twin
+        """
+        raise NotImplementedError("not yet implemented")
+
+    @abstractmethod
+    def pairs_with_sum(self, target: T) -> List[Tuple[Node, Node]]:
+        """
+        Returns a list of tuples which contain nodes whose data sum equal the given target.
+        Args:
+            target T: the target with which each pair's data sums up to
+        Return:
+            List: list of pairs
         """
         raise NotImplementedError("not yet implemented")

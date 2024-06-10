@@ -1,5 +1,6 @@
 from typing import AnyStr, Dict, Any
-from datastructures.linked_lists.doubly_linked_list import DoubleNode, DoublyLinkedList
+from datastructures.linked_lists.doubly_linked_list import DoublyLinkedList
+from datastructures.linked_lists.doubly_linked_list.node import DoubleNode
 
 
 class LRUCache:
