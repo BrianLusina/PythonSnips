@@ -5,8 +5,10 @@ import time
 def func_timer(func: Callable) -> Callable:
     """
     Decorator function that times the execution of a function
-    @param func: Function to time
-    @return: Callable that wraps around the function to time
+    Args:
+        func: Callable function to time
+    Returns:
+        Callable: function that wraps around the function to time
     """
 
     def timer(*args, **kwargs):
