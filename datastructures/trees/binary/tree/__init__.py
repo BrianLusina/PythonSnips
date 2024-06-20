@@ -145,6 +145,21 @@ class BinaryTree(Tree):
         inorder_helper(self.root)
         return data
 
+    def post_order_traversal(self) -> List[T]:
+        data = []
+        if not self.root:
+            return data
+
+        def post_order_helper(root: BinaryTreeNode):
+            if not root:
+                return
+            post_order_helper(root.left)
+            post_order_helper(root.right)
+            data.append(root.data)
+
+        post_order_helper(self.root)
+        return data
+
     def flatten_into_linked_list(self) -> None:
         """
         Flattens a binary tree into a linked list.

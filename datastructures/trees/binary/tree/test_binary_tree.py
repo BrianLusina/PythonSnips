@@ -665,5 +665,19 @@ class BinaryTreeInOrderTraversal(unittest.TestCase):
         self.assertListEqual(expected, actual)
 
 
+class BinaryTreePostOrderTraversal(unittest.TestCase):
+    def test_1(self):
+        """Should return [A, C, E, D, B, H, I, G, F]"""
+        expected = ["A", "C", "E", "D", "B", "H", "I", "G", "F"]
+        right = BinaryTreeNode("G", right=BinaryTreeNode("I", left=BinaryTreeNode("H")))
+        left = BinaryTreeNode("B", left=BinaryTreeNode("A"),
+                              right=BinaryTreeNode("D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")))
+        root = BinaryTreeNode("F", left=left, right=right)
+
+        tree = BinaryTree(root=root)
+        actual = tree.post_order_traversal()
+        self.assertListEqual(expected, actual)
+
+
 if __name__ == "__main__":
     unittest.main()
