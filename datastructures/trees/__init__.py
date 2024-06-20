@@ -99,6 +99,26 @@ class Tree(ABC, Generic[T]):
         """
         raise NotImplementedError("This method has not been implemented")
 
+    def inorder_traversal(self) -> List[T]:
+        """
+        Walks the left subtree first, then visits the current node, and finally walks the right subtree
+        The algorithm looks something like this:
+
+        1. Check if the current node is empty/null.
+        2. Traverse the left subtree by recursively calling the in-order method.
+        3. Display the data part of the root (or current node).
+        4. Traverse the right subtree by recursively calling the in-order method.
+
+        Complexity:
+        Where `n` is the number of nodes in the tree
+
+        Time Complexity: O(n) as each node in the tree is traversed
+        Space Complexity: O(n) as each node or node data is stored in a list/collection to be returned
+
+        Returns:
+            List: list of nodes or node values/data traversed in inorder traversal fashion.
+        """
+
     @abstractmethod
     def is_balanced(self) -> bool:
         """

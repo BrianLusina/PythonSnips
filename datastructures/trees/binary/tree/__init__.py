@@ -130,6 +130,21 @@ class BinaryTree(Tree):
         pre_order_helper(self.root)
         return data
 
+    def inorder_traversal(self) -> List[T]:
+        data = []
+        if not self.root:
+            return data
+
+        def inorder_helper(root: BinaryTreeNode):
+            if not root:
+                return
+            inorder_helper(root.left)
+            data.append(root.data)
+            inorder_helper(root.right)
+
+        inorder_helper(self.root)
+        return data
+
     def flatten_into_linked_list(self) -> None:
         """
         Flattens a binary tree into a linked list.
@@ -150,7 +165,7 @@ class BinaryTree(Tree):
                     tree_node.left = None
 
     def lowest_common_ancestor(
-        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+            self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
     ) -> Optional[BinaryTreeNode]:
         """
         The approach is pretty intuitive. Traverse the tree in a depth first manner. The moment you encounter either of
@@ -194,10 +209,10 @@ class BinaryTree(Tree):
             return None
 
         def lca_util(
-            node: Optional[BinaryTreeNode],
-            node_one_value: T,
-            node_two_val: T,
-            node_lookup: List[bool],
+                node: Optional[BinaryTreeNode],
+                node_one_value: T,
+                node_two_val: T,
+                node_lookup: List[bool],
         ) -> Optional[BinaryTreeNode]:
             """Returns the Lowest Common Ancestor of 2 node values.This updates a node lookup list that has 2 values.
             The first index is for node_one_value and the second index is for node_two_value. They will be updated to
@@ -240,9 +255,9 @@ class BinaryTree(Tree):
 
             # If key is present at root, or if left subtree or right subtree , return true
             if (
-                current_node.data == key
-                or is_key_in_subtree(current_node.left, key)
-                or is_key_in_subtree(current_node.right, key)
+                    current_node.data == key
+                    or is_key_in_subtree(current_node.left, key)
+                    or is_key_in_subtree(current_node.right, key)
             ):
                 return True
 
@@ -252,12 +267,12 @@ class BinaryTree(Tree):
         lca = lca_util(self.root, node_one.data, node_two.data, lookup)
 
         if (
-            lookup[0]
-            and lookup[1]
-            or lookup[0]
-            and is_key_in_subtree(lca, node_two.data)
-            or lookup[1]
-            and is_key_in_subtree(lca, node_one.data)
+                lookup[0]
+                and lookup[1]
+                or lookup[0]
+                and is_key_in_subtree(lca, node_two.data)
+                or lookup[1]
+                and is_key_in_subtree(lca, node_one.data)
         ):
             return lca
 
@@ -392,7 +407,7 @@ class BinaryTree(Tree):
 
     def leaf_similar(self, other: "BinaryTree") -> bool:
         if (self.root is None and other.root is not None) or (
-            other.root is None and self.root is not None
+                other.root is None and self.root is not None
         ):
             return False
 
@@ -434,7 +449,7 @@ class BinaryTree(Tree):
             return 0
 
         def count_paths(
-            sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode
+                sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode
         ) -> int:
             if node is None:
                 return 0
@@ -490,10 +505,10 @@ class BinaryTree(Tree):
             return paths
 
         def dfs(
-            node: Optional[BinaryTreeNode],
-            path: List[T],
-            result: List,
-            remaining_sum: T,
+                node: Optional[BinaryTreeNode],
+                path: List[T],
+                result: List,
+                remaining_sum: T,
         ):
             """Traverses the tree from root to leaf paths in a depth first search manner.
 
