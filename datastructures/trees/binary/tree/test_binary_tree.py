@@ -637,5 +637,19 @@ class BinaryTreeMaxLevelSumTests(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
+class BinaryTreePreOrderTraversal(unittest.TestCase):
+    def test_1(self):
+        """Should return [F,B,A,D,C,E,G,I,H]"""
+        expected = ["F", "B", "A", "D", "C", "E", "G", "I", "H"]
+        right = BinaryTreeNode("G", right=BinaryTreeNode("I", left=BinaryTreeNode("H")))
+        left = BinaryTreeNode("B", left=BinaryTreeNode("A"),
+                              right=BinaryTreeNode("D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")))
+        root = BinaryTreeNode("F", left=left, right=right)
+
+        tree = BinaryTree(root=root)
+        actual = tree.pre_order_traversal()
+        self.assertListEqual(expected, actual)
+
+
 if __name__ == "__main__":
     unittest.main()

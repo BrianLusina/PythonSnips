@@ -1,4 +1,4 @@
-from .. import TreeNode, T
+from datastructures.trees.node import TreeNode, T
 
 
 class NAryNode(TreeNode):

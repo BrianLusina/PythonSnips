@@ -1,24 +1,8 @@
 from typing import List, Generic, TypeVar, Any
 from abc import ABC, abstractmethod
+from .node import TreeNode
 
 T = TypeVar("T", bound=Any)
-
-
-class TreeNode(Generic[T]):
-    """
-    Tree node class which will implement Tree Node.
-    Note that this could be any type of tree node. Not all tree nodes have only left or right children, they could have
-    more than one child. In this case `children` property is a list of all the immediate descendants of the node.
-    """
-
-    def __init__(self, value: T):
-        """
-        Value here can be anything
-        """
-        self.data = value
-
-    def __repr__(self):
-        return f"TreeNode({self.data})"
 
 
 class Tree(ABC, Generic[T]):
@@ -49,7 +33,7 @@ class Tree(ABC, Generic[T]):
 
     @abstractmethod
     def lowest_common_ancestor(
-        self, node_one: TreeNode, node_two: TreeNode
+            self, node_one: TreeNode, node_two: TreeNode
     ) -> TreeNode:
         """
         Returns the lowest common ancestor of 2 nodes in the Tree.

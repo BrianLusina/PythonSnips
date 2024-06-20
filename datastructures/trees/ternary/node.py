@@ -1,6 +1,6 @@
 from typing import List
 
-from datastructures.trees import TreeNode, T
+from datastructures.trees.node import TreeNode, T
 
 
 class TernaryTreeNode(TreeNode):

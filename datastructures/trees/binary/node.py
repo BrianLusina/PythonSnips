@@ -1,6 +1,6 @@
-from typing import Optional, List
+from typing import Optional, List, Any
 
-from datastructures.trees import TreeNode, T
+from datastructures.trees.node import TreeNode, T
 
 
 class BinaryTreeNode(TreeNode):
@@ -9,15 +9,13 @@ class BinaryTreeNode(TreeNode):
     """
 
     def __init__(
-        self,
-        data: T,
-        left: Optional["BinaryTreeNode"] = None,
-        right: Optional["BinaryTreeNode"] = None,
+            self,
+            data: T,
+            left: Optional["BinaryTreeNode"] = None,
+            right: Optional["BinaryTreeNode"] = None,
+            key: Optional[Any] = None
     ):
-        """
-        Value here can be anything
-        """
-        super().__init__(data)
+        super().__init__(data, key)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
 
@@ -162,8 +160,13 @@ class BinaryTreeNode(TreeNode):
         if not self.left and not self.right:
             return []
 
+    @property
+    def height(self) -> int:
+        """Height of a node is the number of edges from this node to the deepest node"""
+        pass
+
     def __repr__(self):
-        return f"BinaryTreeNode(data={self.data}, left={self.left}, right={self.right})"
+        return f"BinaryTreeNode(data={self.data}, key={self.key}, left={self.left}, right={self.right})"
 
     def __eq__(self, other: "BinaryTreeNode") -> bool:
         """Checks if this node is equal to another node based on the data they contain

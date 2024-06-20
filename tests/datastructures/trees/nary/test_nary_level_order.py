@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.trees import TreeNode
+from datastructures.trees.node import TreeNode
 from datastructures.trees.nary import NAryTree
 
 
