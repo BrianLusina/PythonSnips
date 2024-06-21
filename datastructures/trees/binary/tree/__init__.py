@@ -1,6 +1,7 @@
 import math
 from typing import Optional, List, Any, Generator, Dict, Iterator
 from collections import defaultdict, deque
+from itertools import chain
 
 from datastructures.stacks import Stack
 from datastructures.trees import Tree, TreeNode, T
@@ -96,11 +97,12 @@ class BinaryTree(Tree):
         if not self.root:
             return []
 
-        current_level = [self.root]
-        levels = []
+        current_level: List[BinaryTreeNode] = [self.root]
+        levels: List[List[T]] = []
+
         while current_level:
-            level = []
-            next_level = []
+            level: List[T] = []
+            next_level: List[BinaryTreeNode] = []
 
             for node in current_level:
                 level.append(node.data)
@@ -113,7 +115,7 @@ class BinaryTree(Tree):
             levels.append(level)
             current_level = next_level
 
-        return levels
+        return list(chain.from_iterable(levels))
 
     def pre_order_traversal(self) -> List[Any]:
         data = []
