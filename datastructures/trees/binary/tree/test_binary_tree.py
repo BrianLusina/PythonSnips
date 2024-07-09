@@ -693,5 +693,19 @@ class BinaryTreeLevelOrderTraversal(unittest.TestCase):
         self.assertListEqual(expected, actual)
 
 
+class BinaryTreeReverseLevelOrderTraversal(unittest.TestCase):
+    def test_1(self):
+        """Should return [4, 5, 2, 3, 1]"""
+        expected = [4, 5, 2, 3, 1]
+        right = BinaryTreeNode(3)
+        left = BinaryTreeNode(2, left=BinaryTreeNode(4),
+                              right=BinaryTreeNode(5))
+        root = BinaryTreeNode(1, left=left, right=right)
+
+        tree = BinaryTree(root=root)
+        actual = tree.reverse_level_order_traversal()
+        self.assertListEqual(expected, actual)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -83,6 +83,22 @@ class Tree(ABC, Generic[T]):
     def level_order_traversal(self) -> List[T]:
         raise NotImplementedError("This method has not been implemented")
 
+    def reverse_level_order_traversal(self) -> List[T]:
+        """
+        Performs a level order traversal on the tree in reverse order where the leaf nodes are first iterated through
+        and then the internal nodes before the root node is added to the collection
+
+        Complexity:
+        Where `n` is the number of nodes in the tree
+
+        Time Complexity: O(n) as each node in the tree is traversed
+        Space Complexity: O(n) as each node or node data is stored in a list/collection to be returned
+
+        Returns:
+            List: list of nodes or node values/data traversed in a reverse level order fashion.
+        """
+        raise NotImplementedError("This method has not been implemented")
+
     @abstractmethod
     def pre_order_traversal(self) -> List[T]:
         """Traverses the tree in pre-order walking the left subtree before finally walking the right subtree returning

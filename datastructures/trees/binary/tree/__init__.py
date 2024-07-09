@@ -4,6 +4,7 @@ from collections import defaultdict, deque
 from itertools import chain
 
 from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack
 from datastructures.trees import Tree, TreeNode, T
 from datastructures.trees.binary.node import BinaryTreeNode
 from datastructures.queues.fifo import FifoQueue
@@ -116,6 +117,54 @@ class BinaryTree(Tree):
             current_level = next_level
 
         return list(chain.from_iterable(levels))
+
+    def reverse_level_order_traversal(self) -> List[T]:
+        """
+        Uses a combination of a dynamic sized stack and a fifo queue to return the reverse level order traversal.
+        The root is added to the queue first and the queue is iterated(as long as it is not empty), de-queueing a node
+        and adding that node to the stack. If the de-queued node has a right child, it is added to the queue, if there
+        is a left child, it is also added to the queue. This operation goes on until the queue is empty.
+
+        This is already an O(n) time complex operation where n is the number of nodes, as iteration has to happen on all
+        nodes in the tree. And in terms of space, the queue is going to occupy at most O(n) space as nodes are added to
+        it and de-queued.
+
+        Next, while the stack has items, the top item in the stack is popped and it's value/data is added to the final
+        result list. This is equally an O(n) time complex operation because the iteration has to happen on each node in
+        the stack.
+
+        Afterwards, the final result list is returned.
+
+        Overall Complexity is:
+        Space: O(n)
+        Time: O(n)
+        """
+        if not self.root:
+            return []
+
+        stack = DynamicSizeStack()
+        fifo_queue = FifoQueue()
+
+        fifo_queue.enqueue(self.root)
+
+        traversed = []
+
+        while not fifo_queue.is_empty():
+            node = fifo_queue.dequeue()
+
+            stack.push(node)
+
+            if node.right:
+                fifo_queue.enqueue(node.right)
+
+            if node.left:
+                fifo_queue.enqueue(node.left)
+
+        while not stack.is_empty():
+            node = stack.pop()
+            traversed.append(node.data)
+
+        return traversed
 
     def pre_order_traversal(self) -> List[Any]:
         data = []
