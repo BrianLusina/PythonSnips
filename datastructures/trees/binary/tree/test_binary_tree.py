@@ -220,15 +220,14 @@ class BinaryTreeHeight(unittest.TestCase):
     def test_returns_3_for_tree_3_9_20_null_null_15_7(self):
         """should return 3 if the binary tree [3,9,20,null,null,15,7]"""
         left = BinaryTreeNode(data=9)
-        right_left = BinaryTreeNode(data=15)
-        right_right = BinaryTreeNode(data=7)
-        right = BinaryTreeNode(data=20, left=right_left, right=right_right)
+        right = BinaryTreeNode(data=20, left=BinaryTreeNode(data=15), right=BinaryTreeNode(data=7))
 
         root = BinaryTreeNode(data=3, left=left, right=right)
         tree = BinaryTree(root=root)
 
         actual = tree.height()
-        self.assertEqual(3, actual)
+        expected = 2
+        self.assertEqual(expected, actual)
 
     def test_returns_2_for_tree_1_null_20(self):
         """should return 2 if the binary tree [1,null,20]"""
@@ -238,7 +237,20 @@ class BinaryTreeHeight(unittest.TestCase):
         tree = BinaryTree(root=root)
 
         actual = tree.height()
-        self.assertEqual(2, actual)
+        expected = 1
+        self.assertEqual(expected, actual)
+
+    def test_returns_2_for_tree_1_2_3_4_5(self):
+        """should return 2 if the binary tree [1,2,3,4,5]"""
+        right = BinaryTreeNode(data=3)
+        left = BinaryTreeNode(data=2, left=BinaryTreeNode(data=4), right=BinaryTreeNode(5))
+
+        root = BinaryTreeNode(data=1, left=left, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = tree.height()
+        expected = 2
+        self.assertEqual(expected, actual)
 
 
 class BinaryTreeLeafSimilarTest(unittest.TestCase):

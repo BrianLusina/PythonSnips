@@ -52,27 +52,15 @@ class BinaryTree(Tree):
         if self.root.left is None and self.root.right is None:
             return 1
 
-        height = 0
-        queue = FifoQueue()
-        queue.enqueue(self.root)
+        def height_helper(current_node: BinaryTreeNode) -> int:
+            if not current_node:
+                return -1
+            left_height = height_helper(current_node.left)
+            right_height = height_helper(current_node.right)
 
-        while True:
-            current_level_nodes = queue.size
+            return 1 + max(left_height, right_height)
 
-            if current_level_nodes == 0:
-                return height
-
-            height += 1
-
-            while current_level_nodes > 0:
-                node = queue.dequeue()
-
-                if node.left is not None:
-                    queue.enqueue(node.left)
-
-                if node.right is not None:
-                    queue.enqueue(node.right)
-                current_level_nodes -= 1
+        return height_helper(self.root)
 
     def has_next(self) -> bool:
         pass
