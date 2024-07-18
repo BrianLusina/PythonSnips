@@ -2,7 +2,7 @@ from typing import List, Any, Optional
 from datastructures.trees.binary.node import BinaryTreeNode
 
 from datastructures.queues.fifo import FifoQueue
-from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack
 from datastructures.trees import T
 from datastructures.trees.binary.tree import BinaryTree
 
@@ -10,7 +10,7 @@ from datastructures.trees.binary.tree import BinaryTree
 class BinarySearchTree(BinaryTree):
     def __init__(self, root: Optional[BinaryTreeNode] = None):
         super().__init__(root)
-        self.stack = Stack()
+        self.stack = DynamicSizeStack()
 
     def insert_node(self, data: T) -> BinaryTreeNode:
         """
