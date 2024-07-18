@@ -337,7 +337,7 @@ class BinaryTree(Tree):
             return 0
 
         counter = 1
-        stack = Stack()
+        stack = DynamicSizeStack()
         stack.push(self.root)
 
         while not stack.is_empty():

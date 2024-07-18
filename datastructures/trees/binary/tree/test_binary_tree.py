@@ -253,6 +253,58 @@ class BinaryTreeHeight(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
+class BinaryTreeSize(unittest.TestCase):
+    def test_returns_0_for_no_root(self):
+        """should return 0 if the binary tree has no root"""
+        tree = BinaryTree()
+        actual = len(tree)
+
+        self.assertEqual(0, actual)
+
+    def test_returns_1_for_root_but_no_children(self):
+        """should return 1 if the binary tree has a root, but no left nor right subtrees"""
+        root = BinaryTreeNode(data=1)
+        tree = BinaryTree(root=root)
+
+        actual = len(tree)
+        self.assertEqual(1, actual)
+
+    def test_returns_5_for_tree_3_9_20_null_null_15_7(self):
+        """should return 5 if the binary tree [3,9,20,null,null,15,7]"""
+        left = BinaryTreeNode(data=9)
+        right = BinaryTreeNode(data=20, left=BinaryTreeNode(data=15), right=BinaryTreeNode(data=7))
+
+        root = BinaryTreeNode(data=3, left=left, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = len(tree)
+        expected = 5
+        self.assertEqual(expected, actual)
+
+    def test_returns_2_for_tree_1_null_20(self):
+        """should return 2 if the binary tree [1,null,20]"""
+        right = BinaryTreeNode(data=2)
+
+        root = BinaryTreeNode(data=1, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = len(tree)
+        expected = 2
+        self.assertEqual(expected, actual)
+
+    def test_returns_5_for_tree_1_2_3_4_5(self):
+        """should return 5 if the binary tree [1,2,3,4,5]"""
+        right = BinaryTreeNode(data=3)
+        left = BinaryTreeNode(data=2, left=BinaryTreeNode(data=4), right=BinaryTreeNode(5))
+
+        root = BinaryTreeNode(data=1, left=left, right=right)
+        tree = BinaryTree(root=root)
+
+        actual = len(tree)
+        expected = 5
+        self.assertEqual(expected, actual)
+
+
 class BinaryTreeLeafSimilarTest(unittest.TestCase):
     def test_1(self):
         """should return true for tree1=3,5,1,6,2,9,8,null,null,7,4 and tree2=3,5,1,6,7,4,2,null,null,null,null,null,null,9,8"""
