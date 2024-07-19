@@ -12,7 +12,7 @@ class BinarySearchTree(BinaryTree):
         super().__init__(root)
         self.stack = DynamicSizeStack()
 
-    def insert_node(self, data: T) -> BinaryTreeNode:
+    def insert_node(self, data: T):
         """
         Inserts a node in a BST given an element
         If there is no root, then create a new root node with the data and return it
@@ -22,7 +22,8 @@ class BinarySearchTree(BinaryTree):
         then go left. Repeat this operation, until we can insert the node in the right place.
         """
         if not self.root:
-            return BinaryTreeNode(data)
+            self.root = BinaryTreeNode(data)
+            return
 
         def insert_helper(value: T, node: BinaryTreeNode) -> BinaryTreeNode:
             if not node:
@@ -33,7 +34,7 @@ class BinarySearchTree(BinaryTree):
                 node.right = insert_helper(value, node.right)
             return node
 
-        return insert_helper(data, self.root)
+        insert_helper(data, self.root)
 
     def delete_node(self, key: T) -> Optional[BinaryTreeNode]:
         """Deletes a node from the Binary Search Tree. If the node is found, it is deleted and the tree re-ordered to
@@ -53,7 +54,7 @@ class BinarySearchTree(BinaryTree):
             return self.root
 
         def delete_helper(
-            value: T, node: Optional[BinaryTreeNode]
+                value: T, node: Optional[BinaryTreeNode]
         ) -> Optional[BinaryTreeNode]:
             # base case when we have hit the bottom of the tree, and the parent node has no children
             if node is None:
@@ -87,7 +88,7 @@ class BinarySearchTree(BinaryTree):
                     return node
 
         def lift(
-            node: BinaryTreeNode, node_to_delete: BinaryTreeNode
+                node: BinaryTreeNode, node_to_delete: BinaryTreeNode
         ) -> BinaryTreeNode:
             # if the current node of this function has a left child, we recursively call this function to continue down
             # the left subtree to find the successor node
@@ -284,7 +285,7 @@ class BinarySearchTree(BinaryTree):
         tracked and printed.
         """
         result = []
-        stack = Stack()
+        stack = DynamicSizeStack()
 
         if not self.root:
             return result
@@ -343,7 +344,7 @@ class BinarySearchTree(BinaryTree):
         Iterative approach using a stack
         """
         result = []
-        stack = Stack()
+        stack = DynamicSizeStack()
         current = self.root
 
         while current or not stack.is_empty():
@@ -399,8 +400,8 @@ class BinarySearchTree(BinaryTree):
             return []
 
         # create 2 stacks
-        stack_one = Stack()
-        stack_two = Stack()
+        stack_one = DynamicSizeStack()
+        stack_two = DynamicSizeStack()
         data = []
 
         # push root to stack one
@@ -488,7 +489,7 @@ class BinarySearchTree(BinaryTree):
         return True
 
     def is_binary_search_tree_recursive(
-        self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
+            self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
     ):
         """
         This uses the call stack to check if the binary search tree node is valid.
@@ -509,10 +510,10 @@ class BinarySearchTree(BinaryTree):
             return False
 
         return not (
-            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
-            or not self.is_binary_search_tree_recursive(
-                root.right, root.data, upper_bound
-            )
+                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
+                or not self.is_binary_search_tree_recursive(
+            root.right, root.data, upper_bound
+        )
         )
 
     def search_node(self, data, node: BinaryTreeNode = None):
@@ -575,7 +576,7 @@ class BinarySearchTree(BinaryTree):
         # give the stack a maximum size of the length of the tree root
         # alternatively, we could use a list
         # nodes = []
-        nodes = Stack(len(tree_root))
+        nodes = DynamicSizeStack()
 
         # nodes.append((tree_root, 0))
         nodes.push((tree_root, 0))
@@ -594,7 +595,7 @@ class BinarySearchTree(BinaryTree):
                     #   1) more than 2 different leaf depths
                     #   2) 2 leaf depths that are more than 1 apart
                     if len(depths) > 2 or (
-                        len(depths) == 2 and abs(depths[0] - depths[1]) > 1
+                            len(depths) == 2 and abs(depths[0] - depths[1]) > 1
                     ):
                         return False
 
@@ -608,7 +609,7 @@ class BinarySearchTree(BinaryTree):
         return True
 
     def lowest_common_ancestor(
-        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+            self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
     ) -> BinaryTreeNode:
         """
         Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
@@ -657,7 +658,7 @@ class BinarySearchTree(BinaryTree):
         if not self.root:
             return []
 
-        stack = Stack()
+        stack = DynamicSizeStack()
         stack.push((self.root, ""))
         res = []
 
@@ -680,7 +681,7 @@ class BinarySearchTree(BinaryTree):
             return 0
 
         counter = 1
-        stack = Stack()
+        stack = DynamicSizeStack()
         stack.push(self.root)
 
         while not stack.is_empty():

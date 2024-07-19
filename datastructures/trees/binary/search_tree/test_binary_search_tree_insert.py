@@ -22,11 +22,11 @@ class BinarySearchTreeInsertNodeTestCases(unittest.TestCase):
             right=BinaryTreeNode(data=10),
         )
 
-        self.assertEqual(expected_root.data, 8)
-        self.assertEqual(expected_root.left.data, 3)
-        self.assertEqual(expected_root.right.data, 10)
-        self.assertEqual(expected_root.left.left.data, 1)
-        self.assertEqual(expected_root.left.right.data, 6)
+        self.assertEqual(expected_root.data, search_tree.root.data)
+        self.assertEqual(expected_root.left.data, search_tree.root.left.data)
+        self.assertEqual(expected_root.right.data, search_tree.root.right.data)
+        self.assertEqual(expected_root.left.left.data, search_tree.root.left.left.data)
+        self.assertEqual(expected_root.left.right.data, search_tree.root.left.right.data)
 
 
 if __name__ == "__main__":
