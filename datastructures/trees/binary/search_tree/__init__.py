@@ -516,45 +516,48 @@ class BinarySearchTree(BinaryTree):
         )
         )
 
-    def search_node(self, data, node: BinaryTreeNode = None):
+    def search_node(self, data: T) -> bool:
         """
         Searches for the given data in a binary search tree. If the data exists in the tree, then True is returned,
         else false
-        :param data the data to search for
-        :rtype: bool
+        Arguments:
+            data: data to search for
         """
-        if not node:
-            node = self.root
 
-        # check if the data is less than the root node and recursively check on the left of the tree
-        if data < node.data and node.left:
-            return self.search_node(data, node.left)
+        def search_helper(current: Optional[BinaryTreeNode], value: T) -> bool:
+            """
+            Search helper that is used to search the binary search tree for the given value
+            Arguments:
+                current: the current binary search tree node, could be a missing value
+                value: the value to search for
+            """
+            if current:
+                if current.data == value:
+                    return True
+                elif current.data < value:
+                    return search_helper(current.right, value)
+                else:
+                    return search_helper(current.left, value)
 
-        # check if the current data is greater than the root node and that the right node exist,
-        # then proceed to the right to perform the search
-        if data > node.data and node.right:
-            return self.search_node(data, node.right)
+        return search_helper(self.root, data)
 
-        # if the root node is equal to the data, then return True if they are equal
-        return data == node.data
-
-    def merge_trees(self, otherNode: BinaryTreeNode) -> BinaryTreeNode:
+    def merge_trees(self, other_node: BinaryTreeNode) -> BinaryTreeNode:
         """
         Merges this tree with another tree given another node
-        :param otherNode Other Root node, may be None, therefore we return the root node if availables
+        :param other_node Other Root node, may be None, therefore we return the root node if availables
         :type BinaryTreeNode
         :returns Binary Tree Node
         """
-        if not otherNode:
+        if not other_node:
             return self.root
 
         if not self.root:
-            return otherNode
+            return other_node
 
-        self.root.data += otherNode.data
+        self.root.data += other_node.data
 
-        self.root.left = self.merge_trees(otherNode.left)
-        self.root.right = self.merge_trees(otherNode.right)
+        self.root.left = self.merge_trees(other_node.left)
+        self.root.right = self.merge_trees(other_node.right)
 
         return self.root
 
