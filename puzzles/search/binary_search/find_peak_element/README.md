@@ -1,4 +1,4 @@
-# Find Peak Element
+# Find Peak Element(or Find Bitonic Peak)
 
 A peak element is an element that is strictly greater than its neighbors.
 
