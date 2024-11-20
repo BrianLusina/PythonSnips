@@ -5,10 +5,11 @@ def sqrt_estimate(x: int) -> int:
 
     while left <= right:
         mid = left + (right - left) // 2
+        mid_squared = mid * mid
 
-        if mid * mid == x:
+        if mid_squared == x:
             return mid
-        elif mid * mid < x:
+        elif mid_squared < x:
             result = mid
             left = mid + 1
         else:
