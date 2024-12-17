@@ -2,6 +2,7 @@
 import unittest
 from random import choice, randint
 from string import ascii_letters
+from typing import Union
 
 from . import is_palindrome, smallest_palindrome, largest_palindrome
 from .longest_palindrome import longest_palindrome
@@ -35,13 +36,33 @@ class IsPalindromeTests(unittest.TestCase):
         self.assertEqual(is_palindrome("walter"), False)
 
     def test_9(self):
-        self.assertEqual(is_palindrome(12321), True)
+        self.assertEqual(is_palindrome("12321"), True)
 
     def test_10(self):
-        self.assertEqual(is_palindrome(123456), False)
+        self.assertEqual(is_palindrome("123456"), False)
+
+    def test_11(self):
+        word = "Was it a cat I saw?"
+        actual = is_palindrome(word)
+        self.assertTrue(actual)
+
+    def test_12(self):
+        word = "Never odd or even"
+        actual = is_palindrome(word)
+        self.assertTrue(actual)
+
+    def test_13(self):
+        word = "radar"
+        actual = is_palindrome(word)
+        self.assertTrue(actual)
+
+    def test_14(self):
+        word = "Live on time, emit no evil"
+        actual = is_palindrome(word)
+        self.assertTrue(actual)
 
     @staticmethod
-    def generate_test_case():
+    def generate_test_case() -> Union[str, int]:
         if randint(0, 1000):
             test_case = randint(0, 10000000)
         else:
@@ -55,10 +76,10 @@ class IsPalindromeTests(unittest.TestCase):
     def reference(s):
         return str(s) == str(s)[::-1]
 
-    def test_14(self):
+    def test_15(self):
         for _ in range(100):
             test_case = self.generate_test_case()
-            self.assertEqual(is_palindrome(test_case), self.reference(test_case))
+            self.assertEqual(is_palindrome(str(test_case)), self.reference(test_case))
 
 
 class SmallestPalindromeTests(unittest.TestCase):
