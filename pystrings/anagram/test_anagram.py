@@ -1,6 +1,29 @@
 import unittest
 
-from pystrings.anagram import Anagrams
+from pystrings.anagram import Anagrams, is_anagram
+
+
+class IsAnagramTests(unittest.TestCase):
+    def test_fairy_tales_and_rail_safety(self):
+        """should return true for s1='fairy tales' and s2='rail safety'"""
+        s1 = "fairy tales"
+        s2 = "rail safety"
+        actual = is_anagram(s1, s2)
+        self.assertTrue(actual)
+
+    def test_william_shakespeare_and_i_am_a_weakish_speller(self):
+        """should return true for s1='William Shakespeare' and s2='I am a weakish speller'"""
+        s1 = "William Shakespeare"
+        s2 = "I am a weakish speller"
+        actual = is_anagram(s1, s2)
+        self.assertTrue(actual)
+
+    def test_madam_curie_and_radium_came(self):
+        """should return true for s1='Madam Curie' and s2='Radium came'"""
+        s1 = "Madam Curie"
+        s2 = "Radium came"
+        actual = is_anagram(s1, s2)
+        self.assertTrue(actual)
 
 
 class AnagramTests(unittest.TestCase):

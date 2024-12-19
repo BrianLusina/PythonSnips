@@ -1,8 +1,62 @@
-# *-coding:utf8-*
+from typing import Dict
 from functools import reduce
 from string import ascii_letters
 
 from pymath.primes.is_prime import is_prime_with_re
+
+
+def is_anagram(s1: str, s2: str) -> bool:
+    """
+    Check if s1 is an anagram of s2.
+    Args:
+        s1 (str): first string to check
+        s2 (str): second string to check
+    Return:
+        bool: Whether the strings are anagrams of each other. If they are True is returned, False otherwise
+    """
+    # first normalize the strings by removing white spaces which might result in uneven lengths if s1 and s2 are anagrams
+    # of each other
+    s1 = s1.replace(" ", "").lower()
+    s2 = s2.replace(" ", "").lower()
+
+    # check the length of the strings. If the strings are not of the same length, then it's not possible for them to be
+    # anagrams of each other
+    if len(s1) != len(s2):
+        return False
+
+    # This dictionary is used to keep track of the character count in the strings to check if the strings are anagrams
+    # of each other, the character count must be equal in both strings. This enables the algorithm to keep track of this
+    # count.
+    ht: Dict[str, int] = dict()
+
+    # Loop through each character in the first string to count the number of characters and store them in the dictionary
+    # this is linear, so, O(n) where n is the number of characters in the string as the loop has to iterate over each
+    # character
+    for char in s1:
+        if char in ht:
+            ht[char] += 1
+        else:
+            ht[char] = 1
+
+    # Loops through each character in the second string checking for the existence of that character in the already
+    # populated dictionary. If a character, exists, the count is decremented, if not, the count is incremented. This
+    # will be used to show the discrepancy in character count between the two strings
+    for char in s2:
+        if char in ht:
+            ht[char] -= 1
+        else:
+            ht[char] = 1
+
+    # Finally, check each key in the dictionary. If a given key's count is not equal to 0, then the algorithm exits
+    # early as it's not possible to have a character count of more than 0 for strings that are anagrams, since the above
+    # loop should have reduced the character count to 0. This shows a discrepancy, meaning there is an extra character
+    # in a string that is not in another string
+    for key in ht:
+        if ht[key] != 0:
+            return False
+
+    # return true if all the checks above check out.
+    return True
 
 
 class Anagrams:
@@ -25,43 +79,10 @@ class Anagrams:
         res, word = [], word.lower()
         for x in word_list:
             if len(word) == len(x.lower()) and word != x.lower():
-                if self.is_anagram(word, x.lower()):
+                if is_anagram(word, x.lower()):
                     res.append(x)
         return res
 
-    @staticmethod
-    def is_anagram(s1, s2):
-        """
-        Check if s1 is an anagram of s2
-        :param s1: String to check
-        :param s2: string to compare to
-        :return: Whether the strings are anagrams
-        :rtype: bool
-        """
-        if len(s1.lower()) != len(s2.lower()):
-            return False
-
-        a_list = list(s2)
-        pos1 = 0
-        flag = True
-
-        while pos1 < len(s1) and flag:
-            pos2 = 0
-            found = False
-            while pos2 < len(a_list) and not found:
-                if s1[pos1] == a_list[pos2]:
-                    found = True
-                else:
-                    pos2 += 1
-
-            if found:
-                a_list[pos2] = None
-            else:
-                flag = False
-
-            pos1 += 1
-
-        return flag
 
     def anagram_count(self, parent, child):
         """
@@ -87,7 +108,7 @@ class Anagrams:
         # if the child's length is the same as the parent length AND the child and parent are not the same
         # check if it is an anagram
         if len(child) == len(parent) and child != parent:
-            if self.is_anagram(child, parent):
+            if is_anagram(child, parent):
                 return 1
             else:
                 return 0
