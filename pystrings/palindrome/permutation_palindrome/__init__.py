@@ -43,7 +43,7 @@ def is_palindrome_permutation(input_string: str) -> bool:
             char_count[char] = 1
 
     odd_count = 0
-    for char, count in char_count.items():
+    for _, count in char_count.items():
         # check if the count is an odd number and odd_count equal 0. If for some char, count is odd and odd_count is 0
         # we increment odd_count by 1. In this way, we are recording for an instance if we have encountered the middle
         # element of an odd-length string. However. if count is an odd number, but odd_count equals something other
