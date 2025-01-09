@@ -4,13 +4,17 @@ from typing import List
 def three_sum(nums: List[int]) -> List[List[int]]:
     """
     Complexity Analysis:
-    Time Complexity: O(nlogn) + O(n^2) = O(n^2) the O(nlogn) is due to sorting
+
+    Time Complexity: O(nlog(n)) + O(n^2) = O(n^2) the O(nlog(n)) is due to sorting
     Space Complexity: O(1) as no extra space is taken up
-    @param nums: input list of integers
-    @return: lists of lists of integers
+
+    Args:
+        nums (list): input list of integers
+    Return:
+        list: list of lists of integers
     """
     result = []
-    # Time Complexity: O(nlogn)
+    # Time Complexity: O(nlog(n))
     nums.sort()
 
     for idx, num in enumerate(nums):

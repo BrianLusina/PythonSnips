@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.arrays.three_sum import three_sum
+from algorithms.two_pointers.three_sum import three_sum
 
 
 class ThreeSumTestCases(unittest.TestCase):
