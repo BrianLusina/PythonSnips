@@ -134,10 +134,10 @@ class SinglyLinkedList(LinkedList):
                 current = current.next
 
                 if current is None:
-                    raise ValueError("Invalid position found, reached end of list")
+                    raise ValueError(f"Invalid position {position} found, reached end of list")
 
-            current.data = current.next.data
-            current.next = current.next.next
+            current.data = current.next.data if current.next else None
+            current.next = current.next.next if current.next else None
             return self.head
 
     def delete_node(self, single_node: SingleNode):
@@ -250,6 +250,21 @@ class SinglyLinkedList(LinkedList):
         slow.next = slow.next.next
 
         return middle_node
+
+    def delete_nth_last_node(self, n: int) -> Optional[Node]:
+        length_of_linked_list = len(self)
+
+        if not 1 <= n <= length_of_linked_list:
+            raise ValueError(f"Position {n} is out of bounds")
+
+        if not self.head.next:
+            return self.head
+
+        position_of_node_to_delete = length_of_linked_list - n
+
+        self.delete_node_at_position(position_of_node_to_delete)
+
+        return self.head
 
     def shift(self):
         """

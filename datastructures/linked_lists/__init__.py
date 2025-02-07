@@ -45,12 +45,14 @@ class LinkedList(Generic[T]):
             return
 
         if current:
-            yield current.data
+            if current.data:
+                yield current.data
 
         if current.next:
             node = current.next
             while node:
-                yield node.data
+                if node.data:
+                    yield node.data
                 node = node.next
 
     @abstractmethod
@@ -287,7 +289,7 @@ class LinkedList(Generic[T]):
         :param position: Position of node to delete
         """
         if not 0 <= position <= len(self) - 1:
-            raise ValueError("Position out of bounds")
+            raise ValueError(f"Position ${position} out of bounds")
 
         if self.head is None:
             return None
@@ -320,6 +322,21 @@ class LinkedList(Generic[T]):
     def delete_middle_node(self) -> Optional[Node]:
         """
         Deletes the middle node in the linked list and returns the deleted node
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def delete_nth_last_node(self, n: int) -> Optional[Node]:
+        """
+        Deletes the nth last node of the linked list and returns the head of the linked list.
+        Example:
+            n = 1
+            43 -> 68 -> 11 -> 5 -> 69 -> 37 -> 70 -> None
+            43 -> 68 -> 11 -> 5 -> 69 -> 37 -> None
+        Args:
+            n (int): the position from the last node of the node to delete
+        Returns:
+            Node: Head of the linked list
         """
         raise NotImplementedError("Not yet implemented")
 
