@@ -35,3 +35,5 @@ No number repeats itself in the array [1, 2, 3]
 Explanation 3:
 1 and 4 repeats itself in the array [3, 4, 1, 4, 1], we can return 1 or 4
 ```
+
+> Note: You cannot modify the given array nums. You have to solve the problem using only constant extra space.
