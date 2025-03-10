@@ -8,11 +8,13 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-pytest = "^7.4.3"
-
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3.5"
+
+[tool.poetry.group.test.dependencies]
+pytest-benchmark = "^5.1.0"
+pytest = "^8.3.5"
 
 [build-system]
 requires = ["poetry-core"]

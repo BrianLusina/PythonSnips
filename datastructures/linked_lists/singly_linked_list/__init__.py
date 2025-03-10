@@ -576,6 +576,55 @@ class SinglyLinkedList(LinkedList):
 
         return True
 
+    def is_palindrome_2(self) -> bool:
+        """
+        Checks to see if a Linked list is a Palindrome.
+        Returns True if it is, false otherwise.
+        Uses two pointers approach to check if a linked list is a palindrome. First it finds the middle of the list using
+        two pointers a fast and a slow pointer and then reverses the second half of the list. Once the second half is
+        reversed, it compares the first half and the reversed second half
+
+        Complexity:
+        We assume that n is the number of nodes in the linked list
+
+        Time O(n): we traverse the linked list to check for the palindrome property.
+
+        Space O(1): No extra space is used when traversing the linked list
+
+        Returns:
+            bool: True if the linked list is a palindrome, false otherwise.
+        """
+
+        # An empty LinkedList or with 1 Node is a Palindrome
+        if not self.head or not self.head.next:
+            return True
+
+        # find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
+        # the linked list and the slow pointer will be at the middle of the linked list
+        slow, fast = self.head, self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        # reverse the second half of the list
+        prev = None
+        while slow:
+            nxt = slow.next
+            slow.next = prev
+            prev = slow
+            slow = nxt
+
+        # now prev is the head of the reversed second half
+        # compare the first half and the reversed second half
+        left, right = self.head, prev
+        while right:
+            if left.data != right.data:
+                return False
+            left = left.next
+            right = right.next
+
+        return True
+
     def pairwise_swap(self) -> Optional[SingleNode]:
         """
         Swaps nodes in pairs.
