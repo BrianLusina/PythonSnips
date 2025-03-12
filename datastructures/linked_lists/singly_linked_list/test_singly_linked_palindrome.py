@@ -180,7 +180,7 @@ class LinkedListIsPalindromeV2TestCase(unittest.TestCase):
 
     @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
     def test_8(self):
-        """should return true for [6,1,0,5,1,6]"""
+        """should return false for [6,1,0,5,1,6]"""
         linked_list = SinglyLinkedList()
         data = [6,1,0,5,1,6]
         for d in data:
