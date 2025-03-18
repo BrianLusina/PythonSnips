@@ -13,15 +13,17 @@ def length_of_longest_substring(s: str) -> int:
     Complexity Analysis:
         Time: O(n) where n is the length of the string as we travers characters in the string
         Space: O(n) as we are storing the characters visited in a dictionary
-
-    @param s: input string
-    @return: length of the longest substring without repeating characters
+    Args:
+        s (str): input string
+    Return:
+        int: length of the longest substring without repeating characters
     """
     visited = {}
     max_length = 0
     left = 0
+    length = len(s)
 
-    for right in range(len(s)):
+    for right in range(length):
         char = s[right]
 
         if char in visited:
