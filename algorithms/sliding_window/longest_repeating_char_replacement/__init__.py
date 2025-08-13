@@ -26,7 +26,7 @@ def character_replacement(s: str, k: int) -> int:
 
     At this point, the last valid window has moved one step to the right, but it might still be invalid. As explained
     earlier, we are only interested in larger windows, so we don't need to decrease the window size. We move the window
-    of size i−1 further and further to the right until it becomes valid again.
+    of size l−1 further and further to the right until it becomes valid again.
 
     If we come across a valid window, we try to expand it as much as possible, and the process continues until the right
     pointer reaches the rightmost alphabet of the string. At this point, the size of the window indicates the longest
@@ -40,9 +40,11 @@ def character_replacement(s: str, k: int) -> int:
     are m unique characters, then the memory required is proportional to m. So the space complexity is O(m). Considering
     uppercase English letters only, m=26
 
-    @param s: input string
-    @param k: number of replacements
-    @return: length of the longest substring with repeating characters after at most k replacements
+    Args:
+        s(str): input string
+        k(int): number of replacements
+    Returns:
+        int: length of the longest substring with repeating characters after at most k replacements
     """
     frequency_map = {}
     result = 0

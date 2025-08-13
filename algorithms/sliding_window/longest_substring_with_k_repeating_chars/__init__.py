@@ -60,7 +60,7 @@ def longest_substring(s: str, k: int) -> int:
 
     Complexity Analysis
 
-    Time Complexity: O(N^2), where N is the length of string ss. Though the algorithm performs better in most cases,
+    Time Complexity: O(N^2), where N is the length of string s. Though the algorithm performs better in most cases,
     the worst case time complexity is still (N ^ 2).
 
     In cases where we perform split at every index, the maximum depth of recursive call could be O(N). For each
@@ -69,9 +69,11 @@ def longest_substring(s: str, k: int) -> int:
     Space Complexity: O(N) This is the space used to store the recursive call stack. The maximum depth of recursive
     call stack would be O(N).
 
-    @param s: String to evaluate for
-    @param k: length of the longest substring
-    @return: length of longest substring with at most repeating characters of length k
-    @rtype int
+    Args:
+        s: String to evaluate for
+        k: length of the longest substring
+
+    Returns:
+        length of longest substring with at most repeating characters of length k
     """
     return longest_substring_util(s, 0, len(s), k)
