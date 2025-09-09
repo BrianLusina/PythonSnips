@@ -9,12 +9,12 @@ multiple coins of the same value).
 
 Sample Input:
 
-```plain
+```text
 coins = [5,7,1,1,2,3,22]
 ```
 
 Sample output:
 
-```plain
+```text
 20
 ```
