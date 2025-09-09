@@ -9,6 +9,8 @@
       * [Test Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/test_intersection_two.py)
     * Majority Element
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/majority_element/test_majority_element.py)
+    * Non Constructible Change
+      * [Test Non Constructible Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/non_constructible_change/test_non_constructible_change.py)
     * Optimal Task Assignment
       * [Test Optimal Task Assignment](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/optimal_task_assignment/test_optimal_task_assignment.py)
     * Remove Duplicates
