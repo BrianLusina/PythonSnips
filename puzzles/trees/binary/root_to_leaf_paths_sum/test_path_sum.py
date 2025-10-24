@@ -16,9 +16,14 @@ class PathSumTestCases(unittest.TestCase):
          /  \    / \
         7    2  5   1
         """
-        left = BinaryTreeNode(4, left=BinaryTreeNode(11, left=BinaryTreeNode(7), right=BinaryTreeNode(2)))
-        right = BinaryTreeNode(8, left=BinaryTreeNode(13),
-                               right=BinaryTreeNode(4, left=BinaryTreeNode(5), right=BinaryTreeNode(1)))
+        left = BinaryTreeNode(
+            4, left=BinaryTreeNode(11, left=BinaryTreeNode(7), right=BinaryTreeNode(2))
+        )
+        right = BinaryTreeNode(
+            8,
+            left=BinaryTreeNode(13),
+            right=BinaryTreeNode(4, left=BinaryTreeNode(5), right=BinaryTreeNode(1)),
+        )
         root = BinaryTreeNode(5, left=left, right=right)
 
         expected = [[5, 4, 11, 2], [5, 8, 4, 5]]
@@ -38,5 +43,5 @@ class PathSumTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

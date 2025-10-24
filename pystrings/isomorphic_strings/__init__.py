@@ -13,7 +13,6 @@ def is_isomorphic(s: str, t: str) -> bool:
 
     for x in range(len(t)):
         if not mapping[ord(s[x])]:
-
             if marked[ord(t[x])]:
                 return False
 

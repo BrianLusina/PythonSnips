@@ -49,21 +49,26 @@ class MaxLengthContiguousBinarySubArrayTestCases(unittest.TestCase):
         actual = find_max_length(nums)
         self.assertEqual(expected, actual)
 
+
 @test.describe("Random Tests")
 def tests():
     def check(s) -> int:
         Track, balance, index, len1 = {}, 0, 0, 0
         for i in s:
-            if i == 0: balance -= 1
-            if i == 1: balance += 1
+            if i == 0:
+                balance -= 1
+            if i == 1:
+                balance += 1
             if balance in Track:
                 Track[balance].append(index)
             else:
                 Track[balance] = [index]
             index += 1
         for i in Track:
-            if len(Track[i]) >= 2: len1 = max(len1, max(Track[i]) - min(Track[i]))
-            if i == 0: len1 = max(len1, max(Track[0]) + 1)
+            if len(Track[i]) >= 2:
+                len1 = max(len1, max(Track[i]) - min(Track[i]))
+            if i == 0:
+                len1 = max(len1, max(Track[0]) + 1)
         return len1
 
     randomizer = lambda: random.seed(random.choice(range(4, 12)))
@@ -87,15 +92,17 @@ def tests():
                     s = [random.choice([0, 1]) for _ in range(m)]
                 answer = check(s)
                 test.assert_equals(binarray(s.copy()), answer)
-                if flag: shuffs(s)
+                if flag:
+                    shuffs(s)
 
     for title, rang, size, flag in [
         ("Small", 10, 50, True),
         ("Big", 30, 100, True),
         ("Very Big", 30, 1_20_000, False),
     ]:
-        if random.choice([0, 1]): randomizer();
-        rnd_tests(title, rang, size, flag);
+        if random.choice([0, 1]):
+            randomizer()
+        rnd_tests(title, rang, size, flag)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.trees import TreeNode
+from datastructures.trees.node import TreeNode
 from datastructures.trees.nary import NAryTree
 
 
@@ -82,5 +82,5 @@ class NaryTreePreorderTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

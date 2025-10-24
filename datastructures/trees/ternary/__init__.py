@@ -4,7 +4,6 @@ from datastructures.trees.ternary.node import TernaryTreeNode
 
 
 class TernaryTree(Tree):
-
     def __init__(self, root: Optional[TernaryTreeNode] = None):
         self.root = root
 
@@ -17,7 +16,9 @@ class TernaryTree(Tree):
     def height(self) -> int:
         pass
 
-    def lowest_common_ancestor(self, node_one: TreeNode, node_two: TreeNode) -> TreeNode:
+    def lowest_common_ancestor(
+        self, node_one: TreeNode, node_two: TreeNode
+    ) -> TreeNode:
         pass
 
     def has_next(self) -> bool:
@@ -33,7 +34,6 @@ class TernaryTree(Tree):
         pass
 
     def paths(self) -> List[str]:
-
         def dfs(root: TernaryTreeNode, path: List, result: List):
             if all(c is None for c in root.children):
                 result.append("->".join(path) + "->" + str(root.data))
@@ -58,7 +58,7 @@ class TernaryTree(Tree):
     def is_balanced(self) -> bool:
         pass
 
-    def leaf_similar(self, other: 'Tree') -> bool:
+    def leaf_similar(self, other: "Tree") -> bool:
         pass
 
     def number_of_good_nodes(self) -> int:

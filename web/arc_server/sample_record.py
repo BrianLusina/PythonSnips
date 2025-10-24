@@ -2,6 +2,7 @@
 Sample client for uinames.com that fetches a fake user and parses the data.
 the data is fetched using requests module
 """
+
 import requests
 
 

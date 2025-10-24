@@ -42,7 +42,6 @@ class SchoolTest(unittest.TestCase):
         self.assertCountEqual(set(), self.school.grade(1))
 
     def test_sort_school(self):
-
         students = [
             (3, ("Kyle",)),
             (

@@ -20,7 +20,7 @@ class CaesarCipher:
         self.e = dict(
             zip(
                 ascii_lowercase,
-                ascii_lowercase[self.key:] + ascii_lowercase[: self.key],
+                ascii_lowercase[self.key :] + ascii_lowercase[: self.key],
             )
         )
 
@@ -28,7 +28,7 @@ class CaesarCipher:
             dict(
                 zip(
                     ascii_uppercase,
-                    ascii_uppercase[self.key:] + ascii_uppercase[: self.key],
+                    ascii_uppercase[self.key :] + ascii_uppercase[: self.key],
                 )
             )
         )
@@ -36,7 +36,7 @@ class CaesarCipher:
         # dict used for decryption - { cipher_text letter : plaintext letter, ... }
         self.d = dict(
             zip(
-                ascii_lowercase[self.key:] + ascii_lowercase[: self.key],
+                ascii_lowercase[self.key :] + ascii_lowercase[: self.key],
                 ascii_lowercase,
             )
         )
@@ -44,7 +44,7 @@ class CaesarCipher:
         self.d.update(
             dict(
                 zip(
-                    ascii_uppercase[self.key:] + ascii_uppercase[: self.key],
+                    ascii_uppercase[self.key :] + ascii_uppercase[: self.key],
                     ascii_uppercase,
                 )
             )

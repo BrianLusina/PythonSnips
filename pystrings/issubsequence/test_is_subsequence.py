@@ -55,5 +55,5 @@ class IsSubsequenceV2TestCases(unittest.TestCase):
         self.assertTrue(is_subsequence_v2(s, t))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

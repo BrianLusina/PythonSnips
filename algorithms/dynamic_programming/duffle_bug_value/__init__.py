@@ -2,7 +2,7 @@ from typing import List, Tuple
 
 
 def max_duffel_bag_value(cake_tuples: List[Tuple[int, int]], capacity: int):
-    """ Calculates the value of a duffel bag give a list of tuples of cakes which contain the weight of all cakes and
+    """Calculates the value of a duffel bag give a list of tuples of cakes which contain the weight of all cakes and
     their value(monetary) and the capacity the bag can carry
     Args:
         cake_tuples(list): a list of tuples of cakes
@@ -16,12 +16,10 @@ def max_duffel_bag_value(cake_tuples: List[Tuple[int, int]], capacity: int):
     max_values_at_capacity = [0] * (capacity + 1)
 
     for current_capacity in range(capacity + 1):
-
         # set a variable to hold the max monetary value so far for current_capacity
         current_max_value = 0
 
         for cake_weight, cake_value in cake_tuples:
-
             # if a cake weighs 0 and has a positive value the value of our duffel bag is
             #  infinite!
             if cake_weight == 0 and cake_value != 0:
@@ -37,7 +35,7 @@ def max_duffel_bag_value(cake_tuples: List[Tuple[int, int]], capacity: int):
                 #  max
                 # value at that integer capacity in our list max_values_at_capacities
                 max_value_using_cake = (
-                        cake_value + max_values_at_capacity[current_capacity - cake_weight]
+                    cake_value + max_values_at_capacity[current_capacity - cake_weight]
                 )
 
                 # now we see if it's worth taking the cake. how does the

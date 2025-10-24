@@ -1,6 +1,7 @@
 """
 Calculates the name scores of each name in the names.txt file
 """
+
 from collections import Iterable, OrderedDict
 from string import ascii_lowercase, ascii_uppercase
 

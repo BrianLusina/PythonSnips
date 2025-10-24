@@ -2,18 +2,17 @@ from typing import List, Any, Optional
 from datastructures.trees.binary.node import BinaryTreeNode
 
 from datastructures.queues.fifo import FifoQueue
-from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack
 from datastructures.trees import T
 from datastructures.trees.binary.tree import BinaryTree
 
 
 class BinarySearchTree(BinaryTree):
-
     def __init__(self, root: Optional[BinaryTreeNode] = None):
         super().__init__(root)
-        self.stack = Stack()
+        self.stack = DynamicSizeStack()
 
-    def insert_node(self, data: T) -> BinaryTreeNode:
+    def insert_node(self, data: T):
         """
         Inserts a node in a BST given an element
         If there is no root, then create a new root node with the data and return it
@@ -23,7 +22,8 @@ class BinarySearchTree(BinaryTree):
         then go left. Repeat this operation, until we can insert the node in the right place.
         """
         if not self.root:
-            return BinaryTreeNode(data)
+            self.root = BinaryTreeNode(data)
+            return
 
         def insert_helper(value: T, node: BinaryTreeNode) -> BinaryTreeNode:
             if not node:
@@ -34,7 +34,7 @@ class BinarySearchTree(BinaryTree):
                 node.right = insert_helper(value, node.right)
             return node
 
-        return insert_helper(data, self.root)
+        insert_helper(data, self.root)
 
     def delete_node(self, key: T) -> Optional[BinaryTreeNode]:
         """Deletes a node from the Binary Search Tree. If the node is found, it is deleted and the tree re-ordered to
@@ -53,7 +53,9 @@ class BinarySearchTree(BinaryTree):
         if self.root is None:
             return self.root
 
-        def delete_helper(value: T, node: Optional[BinaryTreeNode]) -> Optional[BinaryTreeNode]:
+        def delete_helper(
+                value: T, node: Optional[BinaryTreeNode]
+        ) -> Optional[BinaryTreeNode]:
             # base case when we have hit the bottom of the tree, and the parent node has no children
             if node is None:
                 return None
@@ -85,7 +87,9 @@ class BinarySearchTree(BinaryTree):
                     node.right = lift(node.right, node)
                     return node
 
-        def lift(node: BinaryTreeNode, node_to_delete: BinaryTreeNode) -> BinaryTreeNode:
+        def lift(
+                node: BinaryTreeNode, node_to_delete: BinaryTreeNode
+        ) -> BinaryTreeNode:
             # if the current node of this function has a left child, we recursively call this function to continue down
             # the left subtree to find the successor node
             if node.left is not None:
@@ -281,7 +285,7 @@ class BinarySearchTree(BinaryTree):
         tracked and printed.
         """
         result = []
-        stack = Stack()
+        stack = DynamicSizeStack()
 
         if not self.root:
             return result
@@ -340,7 +344,7 @@ class BinarySearchTree(BinaryTree):
         Iterative approach using a stack
         """
         result = []
-        stack = Stack()
+        stack = DynamicSizeStack()
         current = self.root
 
         while current or not stack.is_empty():
@@ -396,8 +400,8 @@ class BinarySearchTree(BinaryTree):
             return []
 
         # create 2 stacks
-        stack_one = Stack()
-        stack_two = Stack()
+        stack_one = DynamicSizeStack()
+        stack_two = DynamicSizeStack()
         data = []
 
         # push root to stack one
@@ -405,7 +409,6 @@ class BinarySearchTree(BinaryTree):
 
         # while stack 1 is not empty
         while stack_one:
-
             # pop a node from stack 1 and add it to stack 2
             node = stack_one.pop()
             stack_two.push(node)
@@ -513,45 +516,48 @@ class BinarySearchTree(BinaryTree):
         )
         )
 
-    def search_node(self, data, node: BinaryTreeNode = None):
+    def search_node(self, data: T) -> bool:
         """
         Searches for the given data in a binary search tree. If the data exists in the tree, then True is returned,
         else false
-        :param data the data to search for
-        :rtype: bool
+        Arguments:
+            data: data to search for
         """
-        if not node:
-            node = self.root
 
-        # check if the data is less than the root node and recursively check on the left of the tree
-        if data < node.data and node.left:
-            return self.search_node(data, node.left)
+        def search_helper(current: Optional[BinaryTreeNode], value: T) -> bool:
+            """
+            Search helper that is used to search the binary search tree for the given value
+            Arguments:
+                current: the current binary search tree node, could be a missing value
+                value: the value to search for
+            """
+            if current:
+                if current.data == value:
+                    return True
+                elif current.data < value:
+                    return search_helper(current.right, value)
+                else:
+                    return search_helper(current.left, value)
 
-        # check if the current data is greater than the root node and that the right node exist,
-        # then proceed to the right to perform the search
-        if data > node.data and node.right:
-            return self.search_node(data, node.right)
+        return search_helper(self.root, data)
 
-        # if the root node is equal to the data, then return True if they are equal
-        return data == node.data
-
-    def merge_trees(self, otherNode: BinaryTreeNode) -> BinaryTreeNode:
+    def merge_trees(self, other_node: BinaryTreeNode) -> BinaryTreeNode:
         """
         Merges this tree with another tree given another node
-        :param otherNode Other Root node, may be None, therefore we return the root node if availables
+        :param other_node Other Root node, may be None, therefore we return the root node if availables
         :type BinaryTreeNode
         :returns Binary Tree Node
         """
-        if not otherNode:
+        if not other_node:
             return self.root
 
         if not self.root:
-            return otherNode
+            return other_node
 
-        self.root.data += otherNode.data
+        self.root.data += other_node.data
 
-        self.root.left = self.merge_trees(otherNode.left)
-        self.root.right = self.merge_trees(otherNode.right)
+        self.root.left = self.merge_trees(other_node.left)
+        self.root.right = self.merge_trees(other_node.right)
 
         return self.root
 
@@ -573,7 +579,7 @@ class BinarySearchTree(BinaryTree):
         # give the stack a maximum size of the length of the tree root
         # alternatively, we could use a list
         # nodes = []
-        nodes = Stack(len(tree_root))
+        nodes = DynamicSizeStack()
 
         # nodes.append((tree_root, 0))
         nodes.push((tree_root, 0))
@@ -584,7 +590,6 @@ class BinarySearchTree(BinaryTree):
 
             # case, we found a leaf
             if not node.left and not node.right:
-
                 # we only care if it is a new depth
                 if depth not in depths:
                     depths.append(depth)
@@ -656,7 +661,7 @@ class BinarySearchTree(BinaryTree):
         if not self.root:
             return []
 
-        stack = Stack()
+        stack = DynamicSizeStack()
         stack.push((self.root, ""))
         res = []
 
@@ -679,7 +684,7 @@ class BinarySearchTree(BinaryTree):
             return 0
 
         counter = 1
-        stack = Stack()
+        stack = DynamicSizeStack()
         stack.push(self.root)
 
         while not stack.is_empty():

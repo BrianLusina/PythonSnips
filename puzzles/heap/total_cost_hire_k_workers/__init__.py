@@ -6,7 +6,7 @@ def total_cost(costs: List[int], k: int, candidates: int) -> int:
     # head_workers stores the first k workers
     head_workers = costs[:candidates]
     # tail_workers stores at most last k workers without any workers from the first k workers
-    tail_workers = costs[max(candidates, len(costs) - candidates):]
+    tail_workers = costs[max(candidates, len(costs) - candidates) :]
     heapify(head_workers)
     heapify(tail_workers)
 

@@ -1,13 +1,12 @@
 """
 MaxStack keeps track of the current maximum value in a Stack data structure.
 """
+
 from typing import TypeVar
-from .. import Stack
-
-T = TypeVar("T")
+from datastructures.stacks.dynamic import DynamicSizeStack, T
 
 
-class MaxStack(Stack):
+class MaxStack(DynamicSizeStack):
     """
     Works exactly like the Stack data structure with the only difference being this keeps track of the current maximum
     value in the Stack. When performing lookups, that is a Peek operation, this will still be an O(1) operation as it
@@ -18,12 +17,11 @@ class MaxStack(Stack):
     iteration has to occur to find the new maximum value.
     """
 
-    def __init__(self, maxsize: int = None):
+    def __init__(self):
         """
         Initializes a Maximum stack with a max size defaulted to None. If set to None, the ma stack has no upper bound
-        @param maxsize Maximum size of the stack
         """
-        super().__init__(maxsize)
+        super().__init__()
         # keeps track of current minimum of the stack
         self.maximum = None
 

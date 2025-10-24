@@ -15,4 +15,8 @@ def plus_minus(arr: List[int]) -> List[float]:
         if number > 0:
             positives += 1
 
-    return [round(positives / size, 6), round(negatives / size, 6), round(zeroes / size, 6)]
+    return [
+        round(positives / size, 6),
+        round(negatives / size, 6),
+        round(zeroes / size, 6),
+    ]

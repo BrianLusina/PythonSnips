@@ -2,6 +2,7 @@
 This is a simple demonstration of a custom Observable implementing on_next, on_error and on_completed callbacks
 This is used when one wants to have their own callbacks executed when a stream comes in
 """
+
 from rx import Observable, Observer
 
 

@@ -3,7 +3,7 @@ from collections import deque
 
 
 def can_visit_all_rooms(rooms: List[List[int]]) -> bool:
-    """ Checks if it's possible to visit all rooms if we have only the 1st room as open. The input rooms is a 2D array/
+    """Checks if it's possible to visit all rooms if we have only the 1st room as open. The input rooms is a 2D array/
     matrix with all the rooms with each room's number as the index and the value at each index being the list of keys
     for other room numbers.
 

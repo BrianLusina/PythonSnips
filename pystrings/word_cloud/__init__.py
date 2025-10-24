@@ -16,7 +16,6 @@ class WordCloudData:
         current_word_length = 0
 
         for i, character in enumerate(input_string):
-
             # if we reacched the end of the string, we check if the last
             # character is a letter and add the last word to our dictionary
             if i == len(input_string) - 1:

@@ -1,24 +1,8 @@
 from typing import List, Generic, TypeVar, Any
 from abc import ABC, abstractmethod
+from .node import TreeNode
 
 T = TypeVar("T", bound=Any)
-
-
-class TreeNode(Generic[T]):
-    """
-    Tree node class which will implement Tree Node.
-    Note that this could be any type of tree node. Not all tree nodes have only left or right children, they could have
-    more than one child. In this case `children` property is a list of all the immediate descendants of the node.
-    """
-
-    def __init__(self, value: T):
-        """
-        Value here can be anything
-        """
-        self.data = value
-
-    def __repr__(self):
-        return f"TreeNode({self.data})"
 
 
 class Tree(ABC, Generic[T]):
@@ -99,6 +83,22 @@ class Tree(ABC, Generic[T]):
     def level_order_traversal(self) -> List[T]:
         raise NotImplementedError("This method has not been implemented")
 
+    def reverse_level_order_traversal(self) -> List[T]:
+        """
+        Performs a level order traversal on the tree in reverse order where the leaf nodes are first iterated through
+        and then the internal nodes before the root node is added to the collection
+
+        Complexity:
+        Where `n` is the number of nodes in the tree
+
+        Time Complexity: O(n) as each node in the tree is traversed
+        Space Complexity: O(n) as each node or node data is stored in a list/collection to be returned
+
+        Returns:
+            List: list of nodes or node values/data traversed in a reverse level order fashion.
+        """
+        raise NotImplementedError("This method has not been implemented")
+
     @abstractmethod
     def pre_order_traversal(self) -> List[T]:
         """Traverses the tree in pre-order walking the left subtree before finally walking the right subtree returning
@@ -115,6 +115,46 @@ class Tree(ABC, Generic[T]):
         """
         raise NotImplementedError("This method has not been implemented")
 
+    def inorder_traversal(self) -> List[T]:
+        """
+        Walks the left subtree first, then visits the current node, and finally walks the right subtree
+        The algorithm looks something like this:
+
+        1. Check if the current node is empty/null.
+        2. Traverse the left subtree by recursively calling the in-order method.
+        3. Display the data part of the root (or current node).
+        4. Traverse the right subtree by recursively calling the in-order method.
+
+        Complexity:
+        Where `n` is the number of nodes in the tree
+
+        Time Complexity: O(n) as each node in the tree is traversed
+        Space Complexity: O(n) as each node or node data is stored in a list/collection to be returned
+
+        Returns:
+            List: list of nodes or node values/data traversed in inorder traversal fashion.
+        """
+
+    def post_order_traversal(self) -> List[T]:
+        """
+        Walks the left subtree first, then the right subtree and finally visits the current node
+        The algorithm looks something like this:
+
+        1. Check if the current node is empty/null.
+        2. Traverse the left subtree by recursively calling the post-order method.
+        3. Traverse the right subtree by recursively calling the post-order method.
+        4. Display the data part of the root (or current node).
+
+        Complexity:
+        Where `n` is the number of nodes in the tree
+
+        Time Complexity: O(n) as each node in the tree is traversed
+        Space Complexity: O(n) as each node or node data is stored in a list/collection to be returned
+
+        Returns:
+            List: list of nodes or node values/data traversed in inorder traversal fashion.
+        """
+
     @abstractmethod
     def is_balanced(self) -> bool:
         """
@@ -126,7 +166,7 @@ class Tree(ABC, Generic[T]):
         raise NotImplementedError("This method has not yet been implemented")
 
     @abstractmethod
-    def leaf_similar(self, other: 'Tree') -> bool:
+    def leaf_similar(self, other: "Tree") -> bool:
         """
         Returns true if this tree has similar leaf value sequence to another tree.
         For example: If this tree has nodes = [3,5,1,6,2,9,8,null,null,7,4] and other tree has nodes =
@@ -187,7 +227,7 @@ class Tree(ABC, Generic[T]):
         raise NotImplementedError("not yet implemented")
 
     @staticmethod
-    def deserialize(tree_str: str) -> 'Tree':
+    def deserialize(tree_str: str) -> "Tree":
         """Serializes a tree into a string
         Args:
             tree_str (str): string representation of tree

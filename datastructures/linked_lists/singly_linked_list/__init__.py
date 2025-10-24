@@ -1,8 +1,8 @@
-from typing import Any, Union, Optional, Tuple
+from typing import Any, Union, Optional, Dict, List, Tuple
 
-from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from .node import SingleNode
-from .. import LinkedList
+from .. import LinkedList, T, Node
 from ..exceptions import EmptyLinkedList
 
 
@@ -10,6 +10,7 @@ class SinglyLinkedList(LinkedList):
     """
     Implementation of a SinglyLinked List
     """
+
     head: Optional[SingleNode] = None
 
     def __init__(self):
@@ -87,6 +88,9 @@ class SinglyLinkedList(LinkedList):
                 break
             current = current.next
 
+    def insert_before_node(self, next_key: Any, data: T):
+        pass
+
     def get_nth_node(self, position: int) -> Union[SingleNode, None]:
         """
         Gets nth node in a linked list given the head of the linked list
@@ -111,7 +115,7 @@ class SinglyLinkedList(LinkedList):
 
             return current
 
-    def delete_node_at_position(self, position: int) -> Union[SingleNode, None]:
+    def delete_node_at_position(self, position: int) -> Optional[SingleNode]:
         """
         Deletes a node at the specified position
         """
@@ -130,10 +134,10 @@ class SinglyLinkedList(LinkedList):
                 current = current.next
 
                 if current is None:
-                    raise ValueError("Invalid position found, reached end of list")
+                    raise ValueError(f"Invalid position {position} found, reached end of list")
 
-            current.data = current.next.data
-            current.next = current.next.next
+            current.data = current.next.data if current.next else None
+            current.next = current.next.next if current.next else None
             return self.head
 
     def delete_node(self, single_node: SingleNode):
@@ -150,12 +154,12 @@ class SinglyLinkedList(LinkedList):
             previous_node = current_node
             current_node = current_node.next
 
-    def delete_node_by_data(self, data: Any):
+    def delete_node_by_key(self, key: Any):
         current = self.head
 
         # in the event we have a head node and the head node's data matches the data we intend to remove from the Linked
         # List, then we simply re-assign the head node to the next node
-        if current and current.data == data:
+        if current and current.data == key:
             self.head = current.next
             return
 
@@ -163,7 +167,7 @@ class SinglyLinkedList(LinkedList):
         previous = None
 
         # we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
-        while current and current.data != data:
+        while current and current.data != key:
             previous = current
             current = current.next
 
@@ -176,14 +180,13 @@ class SinglyLinkedList(LinkedList):
         previous.next = current.next
         return
 
-    def delete_nodes_by_data(self, data: Any):
+    def delete_nodes_by_key(self, key: Any):
         dummy_head = SingleNode(-1)
         dummy_head.next = self.head
         current = dummy_head
 
         while current.next:
-
-            if current.next.data == data:
+            if current.next.data == key:
                 current.next = current.next.next
             else:
                 current = current.next
@@ -248,6 +251,21 @@ class SinglyLinkedList(LinkedList):
 
         return middle_node
 
+    def delete_nth_last_node(self, n: int) -> Optional[Node]:
+        length_of_linked_list = len(self)
+
+        if not 1 <= n <= length_of_linked_list:
+            raise ValueError(f"Position {n} is out of bounds")
+
+        if not self.head.next:
+            return self.head
+
+        position_of_node_to_delete = length_of_linked_list - n
+
+        self.delete_node_at_position(position_of_node_to_delete)
+
+        return self.head
+
     def shift(self):
         """
         Since this is a singly linked list, this will have to make the head's next to the position of head
@@ -301,8 +319,8 @@ class SinglyLinkedList(LinkedList):
         At each iteration, the list_to_reverse pointer moves forward (until it reaches NULL).
         The current node becomes the head of the new reversed linked list and starts pointing to the previous head of
         the reversed linked list.
-        The loop terminates when list_to_do becomes NULL, and the reversed_list pointer is pointing to the new head at
-        the termination of the loop.
+        The loop terminates when list_to_reverse becomes NULL, and the reversed_list pointer is pointing to the new
+        head at the termination of the loop.
 
         Another implementation/variation to this approach:
           prev = None
@@ -440,24 +458,39 @@ class SinglyLinkedList(LinkedList):
         # fast runner hit the end of the list
         return False
 
-    def remove_duplicates(self):
+    def remove_duplicates(self) -> Optional[SingleNode]:
         """
-        Removes duplicates from linked list
+        Removes duplicates from linked list. Uses a dictionary to keep track of seen values in the linked list.
+        For every encountered duplicate value, it is discarded and removed from the linked list.
+
+        Complexity:
+        Where n is the number of nodes in the linked list:
+
+        Time O(n): as this iterates through each node in the linked list checking its value against what's in the
+        dictionary
+
+        Space O(n); a dictionary is used to store duplicate values in the linked list. In the worst case no duplicates
+        exist so, the dictionary has all the values from every node in the linked list.
         """
 
         if self.head is None or self.head.next is None:
             return self.head
 
+        seen: Dict[Any, bool] = dict()
         current = self.head
-        next_ = self.head.next
+        previous: Optional[SingleNode] = None
 
-        while current and next_:
-            if next_.data == current.data:
-                current.next = next_.next
-                next_ = next_.next
+        while current:
+            if current.data in seen:
+                # remove node
+                previous.next = current.next
+                current = None
             else:
-                current = current.next
-                next_ = next_.next
+                # add node data to seen
+                seen[current.data] = True
+                previous = current
+
+            current = previous.next
 
         return self.head
 
@@ -501,7 +534,21 @@ class SinglyLinkedList(LinkedList):
         as we pop the data items from the stack(this will be the last added data item of the tail node)
         & check each node's value to the data item popped from the stack. If any differ, then it is not
         a Palindrome
-        :returns: True
+
+        Complexity:
+        We assume that n is the number of nodes in the linked list
+
+        Time O(n): we traverse the linked list twice, the first time is to add the nodes to the stack, the second time(
+        after the pointer has been reset to the head node) is to check each item as it's popped off from the stack if
+        it matches the current data item at the pointer's position. This is O(2*n), but since we ignore constants it is
+        O(n) as the worst case
+
+        Space O(n): a stack data structure is used to store the data items of each node in the linked list. Therefore
+        the stack needs to occupy space which results in it being the same size as the nodes in the linked list. At the
+        first pass, it will contain all the data items of each node in the linked list.
+
+        Returns:
+            bool: True if the linked list is a palindrome, false otherwise.
         """
 
         if not self.head:
@@ -518,6 +565,7 @@ class SinglyLinkedList(LinkedList):
             stack.push(current.data)
             current = current.next
 
+        # reset the pointer
         current = self.head
 
         while current:
@@ -528,7 +576,63 @@ class SinglyLinkedList(LinkedList):
 
         return True
 
-    def pairwise_swap(self) -> SingleNode:
+    def is_palindrome_2(self) -> bool:
+        """
+        Checks to see if a Linked list is a Palindrome.
+        Returns True if it is, false otherwise.
+        Uses two pointers approach to check if a linked list is a palindrome. First it finds the middle of the list using
+        two pointers a fast and a slow pointer and then reverses the second half of the list. Once the second half is
+        reversed, it compares the first half and the reversed second half
+
+        Complexity:
+        We assume that n is the number of nodes in the linked list
+
+        Time O(n): we traverse the linked list to check for the palindrome property.
+
+        Space O(1): No extra space is used when traversing the linked list
+
+        Returns:
+            bool: True if the linked list is a palindrome, false otherwise.
+        """
+
+        # An empty LinkedList or with 1 Node is a Palindrome
+        if not self.head or not self.head.next:
+            return True
+
+        # find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
+        # the linked list and the slow pointer will be at the middle of the linked list
+        slow, fast = self.head, self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        # reverse the second half of the list
+        prev = None
+        while slow:
+            nxt = slow.next
+            slow.next = prev
+            prev = slow
+            slow = nxt
+
+        # now prev is the head of the reversed second half
+        # compare the first half and the reversed second half
+        left, right = self.head, prev
+        while right:
+            if left.data != right.data:
+                return False
+            left = left.next
+            right = right.next
+
+        return True
+
+    def pairwise_swap(self) -> Optional[SingleNode]:
+        """
+        Swaps nodes in pairs.
+        However, this swaps the values of the nodes in pairs and not the pointers
+
+        Return:
+            SingleNode: new head node or None if no head exists.
+        """
         # nothing to do here
         if not self.head:
             return self.head
@@ -537,7 +641,6 @@ class SinglyLinkedList(LinkedList):
 
         # loop as long as there are at least 2 nodes left
         while current and current.next:
-
             # if both nodes have the same value/data
             if current.data == current.next.data:
                 # no need to swap, move on to the next pair
@@ -551,6 +654,32 @@ class SinglyLinkedList(LinkedList):
 
         # at this point, the linked list has been swapped in pairs
         return self.head
+
+    def pairwise_swap_two(self) -> Optional[SingleNode]:
+        """
+        Swaps nodes in pairs without swapping the values in the nodes.
+
+        Return:
+            SingleNode: new head node or None if no head exists.
+        """
+        # nothing to do here
+        if not self.head:
+            return self.head
+
+        start = SingleNode(None)
+        start.next = self.head
+        self.head = start
+
+        while self.head.next and self.head.next.next:
+            temp = self.head.next.next
+
+            self.head.next.next = temp.next
+            temp.next = self.head.next
+
+            self.head.next = temp
+            self.head = self.head.next.next
+
+        return start.next
 
     def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> SingleNode:
         a, b = self.head, self.head
@@ -615,37 +744,60 @@ class SinglyLinkedList(LinkedList):
             self.head = node_
             return
 
+    def move_tail_to_head(self):
+        if self.head and self.head.next:
+            last = self.head
+            previous: Optional[SingleNode] = None
+
+            while last.next:
+                previous = last
+                last = last.next
+
+            last.next = self.head
+            previous.next = None
+            self.head = last
+
     def rotate(self, k: int) -> Optional[SingleNode]:
-        if k == 0 or self.head is None:
+        if k == 0 or self.head is None or (self.head and not self.head.next):
             return self.head
 
-        length = 1
-        current = self.head
+        # initialize two pointers, a pivot node which will be set to the pivot point & last node which will be set to
+        # the tail of the linked list. count helps in making the pivot_node & the last_node point to the right nodes in
+        # the linked list.
+        pivot_node = self.head
+        last_node = self.head
+        previous: Optional[SingleNode] = None
+        count = 0
 
-        # get the last element
-        while current.next:
-            current = current.next
-            length += 1
+        # pivot_node and the last_node pointers are moved to the right positions as long as the pivot_node pointer is
+        # not None & the count is less than the k position. Additionally, previous is updated to the pivot_node to
+        # mark the previous node(or the node before the pivot point)
+        while pivot_node and count < k:
+            previous = pivot_node
+            pivot_node = pivot_node.next
+            last_node = last_node.next
+            count += 1
 
-        # Set the last node to point to head node
-        # The list is now a circular linked list with last node pointing to first node
-        current.next = self.head
+        # this positions the first pointer correctly
+        pivot_node = previous
 
-        # If k is equal to the length of the list then k == 0
-        # ElIf k is greater than the length of the list then k = k % length
-        k = length - k % length
+        # now we move the last_node pointer to the last node in the linked list. This also keeps track of the previous
+        # node before the last node
+        while last_node:
+            previous = last_node
+            last_node = last_node.next
 
-        while k > 0:
-            current = current.next
-            k -= 1
+        last_node = previous
 
-        # Traverse the list to get to the node just before the ( length - k )th node.
-        # Example: In 1->2->3->4->5, and k = 2
-        #          we need to get to the Node(3)
-        new_head = current.next
-        current.next = None
+        # make the last node's next pointer point to the head node, This temporarily makes the linked list circular
+        last_node.next = self.head
+        # the new head node is now the next node after the pivot point.
+        self.head = pivot_node.next
 
-        return new_head
+        # next we set the pivot points' next node. This breaks the circular linked list into a linear linked list
+        pivot_node.next = None
+
+        return self.head
 
     def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
@@ -688,7 +840,8 @@ class SinglyLinkedList(LinkedList):
         # tail of previous k-group to fix our linked list pointers
         tail = dummy
 
-        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list, current_head
+        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list,
+        # current_head
         tracking_node, current_head = self.head, self.head
 
         # while tracking node is tracking a node and hasn't reached end
@@ -764,7 +917,9 @@ class SinglyLinkedList(LinkedList):
             thus, there can't be kth to the last node, we raise an error
             """
             if not right_node.next:
-                raise ValueError("K is larger than the length of the linked list %s" % k)
+                raise ValueError(
+                    "K is larger than the length of the linked list %s" % k
+                )
 
             right_node = right_node.next
 
@@ -872,3 +1027,6 @@ class SinglyLinkedList(LinkedList):
             start = start.next
 
         return maximum_sum
+
+    def pairs_with_sum(self, target: T) -> List[Tuple[SingleNode, SingleNode]]:
+        pass

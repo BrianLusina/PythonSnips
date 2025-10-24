@@ -33,7 +33,6 @@ def n_digit_fibonacci(n):
     term = 2
 
     while no_of_digits < n:
-
         # get the next fibonacci number
         fn = fib_list[c] + fib_list[c + 1]
 

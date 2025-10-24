@@ -22,7 +22,7 @@ class RotateSinglyLInkedListTestCase(unittest.TestCase):
         self.assertEqual(expected, list(linked_list))
 
     def test_rotates_non_empty_list_1_2_3_4_5_by_2(self):
-        """Rotates [1,2,3,4,5] by 2 to become [4,5,1,2,3]"""
+        """Rotates [1,2,3,4,5] by 2 to become [3,4,5,1,2]"""
         linked_list = SinglyLinkedList()
         linked_list.append(1)
         linked_list.append(2)
@@ -31,26 +31,26 @@ class RotateSinglyLInkedListTestCase(unittest.TestCase):
         linked_list.append(5)
 
         new_head = linked_list.rotate(2)
-        expected = [4, 5, 1, 2, 3]
+        expected = [3, 4, 5, 1, 2]
 
         self.assertIsNotNone(new_head)
-        self.assertEqual(new_head.data, 4)
+        self.assertEqual(new_head.data, 3)
         self.assertEqual(expected, list(linked_list))
 
     def test_rotates_non_empty_list_2_0_1_by_4(self):
-        """Rotates [0,1,2] by 4 to become [2,0,1]"""
+        """Rotates [0,1,2] by 4 to become [0,1,2], back to original"""
         linked_list = SinglyLinkedList()
         linked_list.append(0)
         linked_list.append(1)
         linked_list.append(2)
 
         new_head = linked_list.rotate(4)
-        expected = [2, 0, 1]
+        expected = [0, 1, 2]
 
         self.assertIsNotNone(new_head)
-        self.assertEqual(new_head.data, 4)
+        self.assertEqual(new_head.data, 0)
         self.assertEqual(expected, list(linked_list))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

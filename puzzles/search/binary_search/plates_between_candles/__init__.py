@@ -1,8 +1,10 @@
 from typing import List
 
 
-def plates_between_candles(plates_and_candles: str, queries: List[List[int]]) -> List[int]:
-    """ Finds the number of plates between candles on a table represented by a string where a plate is '*' and a candle
+def plates_between_candles(
+    plates_and_candles: str, queries: List[List[int]]
+) -> List[int]:
+    """Finds the number of plates between candles on a table represented by a string where a plate is '*' and a candle
     is |
     Args:
         plates_and_candles (str): table representing the plates and candles.
@@ -63,7 +65,9 @@ def plates_between_candles(plates_and_candles: str, queries: List[List[int]]) ->
 
         # result = range between two outermost candles - candle count in between
         if (left_pos != -1) and (right_pos != -1) and (right_pos > left_pos):
-            number_of_plates = candles[right_pos] - candles[left_pos] - (right_pos - left_pos)
+            number_of_plates = (
+                candles[right_pos] - candles[left_pos] - (right_pos - left_pos)
+            )
             result.append(number_of_plates)
         else:
             result.append(0)

@@ -1,6 +1,6 @@
-from typing import Optional, List
+from typing import Optional, List, Any
 
-from datastructures.trees import TreeNode, T
+from datastructures.trees.node import TreeNode, T
 
 
 class BinaryTreeNode(TreeNode):
@@ -8,11 +8,14 @@ class BinaryTreeNode(TreeNode):
     Binary tree node class which will implement Binary tree
     """
 
-    def __init__(self, data: T, left: Optional['BinaryTreeNode'] = None, right: Optional['BinaryTreeNode'] = None):
-        """
-        Value here can be anything
-        """
-        super().__init__(data)
+    def __init__(
+            self,
+            data: T,
+            left: Optional["BinaryTreeNode"] = None,
+            right: Optional["BinaryTreeNode"] = None,
+            key: Optional[Any] = None
+    ):
+        super().__init__(data, key)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
 
@@ -109,7 +112,7 @@ class BinaryTreeNode(TreeNode):
         else:
             return self.data
 
-    def insert_left(self, data: T) -> 'BinaryTreeNode':
+    def insert_left(self, data: T) -> "BinaryTreeNode":
         """
         Inserts a new data(node) to the left of the current node and return the newly created node
         :param data the data to insert into the new node
@@ -126,7 +129,7 @@ class BinaryTreeNode(TreeNode):
             self.left = new_node
         return self.left
 
-    def insert_right(self, data: T) -> 'BinaryTreeNode':
+    def insert_right(self, data: T) -> "BinaryTreeNode":
         """
         Inserts a data to the right of the current node. This will check if the current node has a right child already
         and insert this node as the new right node of the current node and move the previous node (if not None) to
@@ -143,7 +146,7 @@ class BinaryTreeNode(TreeNode):
         return self.right
 
     @property
-    def children(self) -> List['BinaryTreeNode']:
+    def children(self) -> List["BinaryTreeNode"]:
         """Returns children of this node.
         Returns:
             List: children of this node in a list
@@ -157,10 +160,15 @@ class BinaryTreeNode(TreeNode):
         if not self.left and not self.right:
             return []
 
-    def __repr__(self):
-        return f"BinaryTreeNode(data={self.data}, left={self.left}, right={self.right})"
+    @property
+    def height(self) -> int:
+        """Height of a node is the number of edges from this node to the deepest node"""
+        pass
 
-    def __eq__(self, other: 'BinaryTreeNode') -> bool:
+    def __repr__(self):
+        return f"BinaryTreeNode(data={self.data}, key={self.key}, left={self.left}, right={self.right})"
+
+    def __eq__(self, other: "BinaryTreeNode") -> bool:
         """Checks if this node is equal to another node based on the data they contain
         Args:
             other(BinaryTreeNode): the other node to compare this node to

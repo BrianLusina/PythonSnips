@@ -12,7 +12,9 @@ class KnightChessBoardTestCase(unittest.TestCase):
         d = 1
         e = 8
         f = 8
-        actual = knight(rows=a, cols=b, initial_x=c, initial_y=d, destination_x=e, destination_y=f)
+        actual = knight(
+            rows=a, cols=b, initial_x=c, initial_y=d, destination_x=e, destination_y=f
+        )
         expected = 6
         self.assertEqual(expected, actual)
 
@@ -24,10 +26,12 @@ class KnightChessBoardTestCase(unittest.TestCase):
         d = 6
         e = 2
         f = 4
-        actual = knight(rows=a, cols=b, initial_x=c, initial_y=d, destination_x=e, destination_y=f)
+        actual = knight(
+            rows=a, cols=b, initial_x=c, initial_y=d, destination_x=e, destination_y=f
+        )
         expected = 2
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

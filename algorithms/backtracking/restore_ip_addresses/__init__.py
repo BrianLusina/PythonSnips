@@ -8,10 +8,10 @@ def restore_ip_addresses(s: str) -> List[str]:
                 ips.append(".".join(current))
             return
         for i in range(start, min(start + 3, len(candidate))):
-            if candidate[start] == '0' and i > start:
+            if candidate[start] == "0" and i > start:
                 continue
-            if 0 <= int(candidate[start:i + 1]) <= 255:
-                backtrack(candidate, current + [candidate[start:i + 1]], i + 1, ips)
+            if 0 <= int(candidate[start : i + 1]) <= 255:
+                backtrack(candidate, current + [candidate[start : i + 1]], i + 1, ips)
 
     ip_addresses = []
     backtrack(s, [], 0, ip_addresses)

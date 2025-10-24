@@ -20,15 +20,26 @@ def nearest_exit(maze: List[List[str]], entrance: List[int]) -> int:
 
     while queue:
         step_length = len(queue)
-        for i in range(step_length):  # here, we can use length of the deque to iterate through level by level
+        for i in range(
+            step_length
+        ):  # here, we can use length of the deque to iterate through level by level
             node = queue.popleft()
-            if node[0] == 0 or node[0] == len(maze) - 1 or node[1] == 0 or node[1] == len(maze[0]) - 1:
-                if maze[node[0]][node[1]] == '.' and (node[0], node[1]) != entrance:
+            if (
+                node[0] == 0
+                or node[0] == len(maze) - 1
+                or node[1] == 0
+                or node[1] == len(maze[0]) - 1
+            ):
+                if maze[node[0]][node[1]] == "." and (node[0], node[1]) != entrance:
                     return step
             for d in directions:
                 newD = (node[0] + d[0], node[1] + d[1])
-                if newD not in visited and 0 <= newD[0] < len(maze) and 0 <= newD[1] < len(maze[0]) and maze[newD[0]][
-                    newD[1]] == '.':  # only add valid nodes to the queue!
+                if (
+                    newD not in visited
+                    and 0 <= newD[0] < len(maze)
+                    and 0 <= newD[1] < len(maze[0])
+                    and maze[newD[0]][newD[1]] == "."
+                ):  # only add valid nodes to the queue!
                     visited.add(newD)  # mark it as visited, so we don't loop forever
                     queue.append(newD)
         step += 1  # after we finish with a level, increment step by one

@@ -16,10 +16,11 @@ def intersection(a: List[T], b: List[T]) -> List[T]:
         Space Complexity:
             Again, this will depend on the sizes of each list, but it averages to O(N+M) where N is the size of the first
             list and M is the size of the second list
-
-    :param a: first collection
-    :param b: second collection
-    :return: list of all values that intersect between the 2 collections
+    Args:
+        a list: first collection
+        b list: second collectoin
+    Returns:
+        list: all values that intersect between the 2 collections
 
     >>> a1 = [3,1,4,2]
     >>> b1 = [4,5,3,6]

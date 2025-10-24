@@ -1,6 +1,7 @@
 """
 Using functools.wraps to avoid losing decorated functions metadata, __doc__, __name__ (or __qualname__)
 """
+
 from functools import wraps
 
 

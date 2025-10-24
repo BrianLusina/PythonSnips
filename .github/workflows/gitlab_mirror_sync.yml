@@ -1,27 +1,15 @@
-# Ref: https://github.com/wangchucheng/git-repo-sync
 name: Gitlab RepoSync
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
-    name: Gitlab Repo Sync
-    steps:
-
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Mirror to Gitlab
-      uses: wangchucheng/git-repo-sync@v0.1.0
-      with:
-        # Such as https://github.com/BrianLusina/some-repo-sync.git
-        target-url: ${{ secrets.GITLAB_TARGET_URL }}
-        # Such as BrianLusina
-        target-username: ${{ secrets.GITLAB_TARGET_USERNAME }}
-        # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS_TOKEN }}
-        target-token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+    name: Mirror to Gitlab
+    uses: SanctumLabs/ci-workflows/.github/workflows/repo_sync.yml@main
+    secrets:
+      url: ${{ secrets.GITLAB_TARGET_URL }}
+      username: ${{ secrets.GITLAB_TARGET_USERNAME }}
+      token: ${{ secrets.GITLAB_ACCESS_TOKEN }}

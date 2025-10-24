@@ -24,14 +24,14 @@ def number_of_ways_to_decode_message(digits: str) -> int:
         ways = 0
 
         # can't decode string with leading 0
-        if digits[start_index] == '0':
+        if digits[start_index] == "0":
             return ways
 
         # decode 1 digit
         ways += dfs(start_index + 1)
 
         # decode 2 digits
-        if 10 <= int(digits[start_index: start_index + 2]) <= 26:
+        if 10 <= int(digits[start_index : start_index + 2]) <= 26:
             ways += dfs(start_index + 2)
 
         memo[start_index] = ways

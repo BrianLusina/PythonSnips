@@ -33,6 +33,7 @@ b=2*m*n and m and n are coprime.
 
 =============================================================================
 """
+
 import unittest
 
 from pymath.pythagorean_triplet import (

@@ -31,7 +31,7 @@ class HighScores:
         latest_score = self.latest()
         maximum_score = self.personal_best()
         message = f"Your latest score was {latest_score}."
-        message_end = f"your personal best!"
+        message_end = "your personal best!"
 
         if latest_score == maximum_score:
             return f"{message} That's {message_end}"

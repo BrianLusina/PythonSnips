@@ -4,7 +4,6 @@ from . import max_area_of_island
 
 
 class TestMaxAreaOfIsland(unittest.TestCase):
-
     def test_empty_grid(self):
         """should return 0 for empty grid"""
         grid = [[]]
@@ -19,10 +18,16 @@ class TestMaxAreaOfIsland(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_should_return_max_area_of_island(self):
-        grid = [[0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-                [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
-                [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-                [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]
+        grid = [
+            [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+            [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+            [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+        ]
         expected = 6
         actual = max_area_of_island(grid)
         self.assertEqual(expected, actual)

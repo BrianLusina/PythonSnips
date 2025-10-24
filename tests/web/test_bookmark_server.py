@@ -103,7 +103,7 @@ def test_POST_bad():
     data = {"shortname": "bad", "longuri": "this is fake"}
     try:
         r = requests.post(uri, data=data, allow_redirects=False)
-    except requests.ConnectionError as e:
+    except requests.ConnectionError:
         return "Server dropped the connection. Step 1 or 4 isn't done yet?"
 
     if r.status_code == 501:
@@ -130,7 +130,7 @@ def test_POST_good():
     data = {"shortname": "google", "longuri": "http://www.google.com/"}
     try:
         r = requests.post(uri, data=data, allow_redirects=False)
-    except requests.ConnectionError as e:
+    except requests.ConnectionError:
         return "Server dropped the connection. Step 1 or 4 isn't done yet?"
 
     if r.status_code == 501:
@@ -164,7 +164,7 @@ def test_GET_path():
 
     try:
         r = requests.get(uri, allow_redirects=False)
-    except requests.ConnectionError as e:
+    except requests.ConnectionError:
         return "Server dropped the connection. Step 1 or 4 isn't done yet?"
 
     if r.status_code == 501:

@@ -1,6 +1,7 @@
 """
 Finds the maximum sub-array in an array
 """
+
 from typing import List
 
 try:

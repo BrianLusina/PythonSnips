@@ -3,7 +3,7 @@ from math import ceil
 
 
 def min_eating_speed(piles: List[int], h: int) -> int:
-    left, right = 1, 10 ** 9
+    left, right = 1, 10**9
     result = -1
 
     while left <= right:

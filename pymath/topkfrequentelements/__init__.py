@@ -113,4 +113,4 @@ def top_k_frequent_with_quick_select(nums: List[int], k: int) -> List[int]:
     # All the elements on the right are more frequent.
     quickselect(0, n - 1, n - k)
 
-    return unique[n - k:]
+    return unique[n - k :]

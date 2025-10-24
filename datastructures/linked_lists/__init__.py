@@ -1,69 +1,74 @@
-# coding=utf-8
+from typing import Any, Union, Optional, Generic, TypeVar, List, Tuple
 from abc import ABCMeta, abstractmethod
-from typing import Any, Union, Optional
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 
+T = TypeVar("T")
 
-class Node:
+
+class Node(Generic[T]):
     """
     Node object in the Linked List
     """
 
     __metaclass__ = ABCMeta
 
-    def __init__(self, data=Optional[Any], next_=None, key=None):
+    def __init__(self, data: Optional[T] = None, next_: Optional['Node[Generic[T]]'] = None, key: Any = None):
         self.data = data
-        self.next: Optional[Node] = next_
-        self.key = key
+        self.next = next_
+        # if no key is provided, the hash of the data becomes the key
+        self.key = key or hash(data)
 
-    def __str__(self):
-        return f"Node({self.data})"
+    def __str__(self) -> str:
+        return f"Node(data={self.data}, key={self.key})"
 
-    def __repr__(self):
-        return f"Node({self.data})"
+    def __repr__(self) -> str:
+        return f"Node(data={self.data}, key={self.key})"
 
-    def __eq__(self, other: 'Node'):
-        return self.data == other.data
+    def __eq__(self, other: "Node") -> bool:
+        return self.key == other.key
 
 
-class LinkedList:
+class LinkedList(Generic[T]):
     """
     The most basic LinkedList from which other types of Linked List will be subclassed
     """
 
     __metaclass__ = ABCMeta
-    head: Optional[Node] = None
 
-    def __init__(self):
-        self.head = None
+    def __init__(self, head: Optional[Node[Generic[T]]] = None):
+        self.head: Optional[Node[Generic[T]]] = head
 
     def __iter__(self):
-        head = self.head
+        current = self.head
+        if not current:
+            return
 
-        if head:
-            yield head.data
+        if current:
+            if current.data:
+                yield current.data
 
-        if head.next:
-            node = head.next
+        if current.next:
+            node = current.next
             while node:
-                yield node.data
+                if node.data:
+                    yield node.data
                 node = node.next
 
     @abstractmethod
     def __str__(self):
-        raise NotImplementedError("Not Yet implemented")
+        return "->".join([str(item) for item in self])
 
     @abstractmethod
     def __repr__(self):
-        raise NotImplementedError("Not Yet implemented")
+        return "->".join([str(item) for item in self])
 
-    def __len__(self):
+    def __len__(self) -> int:
         """
         Implements the len() for a linked list. This counts the number of nodes in a Linked List
         This uses an iterative method to find the length of the LinkedList
-        :return: Number of nodes
-        :rtype: int
+        Returns:
+            int: Number of nodes
         """
         return len(tuple(iter(self)))
 
@@ -99,22 +104,37 @@ class LinkedList:
                 return head
         return None
 
-    def count(self, data):
+    def count_occurrences(self, data: Any) -> int:
         """
-        Counts the number of occurrences of a data in a LinkedList
-        :param data: Data to count
-        :return:
+        Counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
+        otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
+        data element in each node already implements this operator.
+
+        Complexity:
+        The assumption here is that n is the number of nodes in the linked list.
+
+        Time O(n): This is because the algorithm iterates through each node in the linked list to find data values in
+        each node that equal the provided data argument in the function. This is both for the worst and best case as
+        each node in the linked list has to be checked
+
+        Space O(1): no extra space is required other than the value being incremented for each node whose data element
+        equals the provided data argument.
+
+        Args:
+            data(Any): the data element to count.
+        Returns:
+            int: the number of occurrences of an element in the linked list
         """
         if self.head is None:
             return 0
         else:
-            count_ = 0
-            temp = self.head
-            while temp:
-                if temp.data == data:
-                    count_ += 1
-                temp = temp.next
-            return count_
+            occurrences = 0
+            current = self.head
+            while current:
+                if current.data == data:
+                    occurrences += 1
+                current = current.next
+            return occurrences
 
     def get_last(self):
         """
@@ -190,13 +210,24 @@ class LinkedList:
         raise NotImplementedError()
 
     @abstractmethod
-    def insert_after_node(self, prev: Any, data: Any):
+    def insert_after_node(self, prev_key: Any, data: T):
         """
-        Inserts a node after a node in the Linked List. First find the node in the LinkedList,
-        Get its successor, store in temp variable and insert this node in the position,
+        Inserts a given node data after a node's key in the Linked List. First find the node in the LinkedList with the
+        provided key. Get its successor, store in temp variable and insert this node with data in the position,
         get this node's next as the successor of the current node
-        :param prev: The node to find
-        :param data: the data for the node to insert
+        Args:
+            prev_key Any: The node's previous key to find
+            data T: The data to insert
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def insert_before_node(self, next_key: Any, data: T):
+        """
+        Inserts a given node data before a node's key in the Linked List.
+        Args:
+            next_key Any: The node's next key to find
+            data T: The data to insert
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -258,7 +289,7 @@ class LinkedList:
         :param position: Position of node to delete
         """
         if not 0 <= position <= len(self) - 1:
-            raise ValueError("Position out of bounds")
+            raise ValueError(f"Position ${position} out of bounds")
 
         if self.head is None:
             return None
@@ -266,23 +297,24 @@ class LinkedList:
         # rest of the implementation is at the relevant subclasses
 
     @abstractmethod
-    def delete_node_by_data(self, data: Any):
+    def delete_node_by_key(self, key: Any):
         """
         traverses the LinkedList until we find the data in a Node that matches and deletes that node. This uses the same
         approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list, we use the
         data attribute of a node. Note that if there are duplicate Nodes in the LinkedList with the same data attributes
         only, the first Node is deleted.
-        :param data: Data of Node element to be deleted
+        Args:
+            key Any: Key of Node element to be deleted
         """
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
-    def delete_nodes_by_data(self, data: Any):
+    def delete_nodes_by_key(self, key: Any):
         """
-        traverses the LinkedList until we find the data in a Node that matches and deletes those nodes. This uses the
-        same approach as self.delete_node(node: Node) but instead of using the node to traverse the linked list,
-        we use the data attribute of a node.
-        :param data: Data of Node element to be deleted
+        traverses the LinkedList until we find the key in a Node that matches and deletes those nodes. This uses the
+        same approach as self.delete_node_by_key(key) but instead deletes multiple nodes with the same key
+        Args:
+            key Any: Key of Node elements to be deleted
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -290,6 +322,21 @@ class LinkedList:
     def delete_middle_node(self) -> Optional[Node]:
         """
         Deletes the middle node in the linked list and returns the deleted node
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def delete_nth_last_node(self, n: int) -> Optional[Node]:
+        """
+        Deletes the nth last node of the linked list and returns the head of the linked list.
+        Example:
+            n = 1
+            43 -> 68 -> 11 -> 5 -> 69 -> 37 -> 70 -> None
+            43 -> 68 -> 11 -> 5 -> 69 -> 37 -> None
+        Args:
+            n (int): the position from the last node of the node to delete
+        Returns:
+            Node: Head of the linked list
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -492,12 +539,12 @@ class LinkedList:
         """
         raise NotImplementedError("Method has not been implemented")
 
-    def get_kth_to_last_node(self, k: int) -> Union[Node, None]:
+    def get_kth_to_last_node(self, k: int) -> Optional[Node]:
         """
         Gets the kth to the last node in a Linked list.
 
         Assumptions:
-        - k can be an invalid integer, less than 0. A ValueError will be raised
+        - k can not be an invalid integer, less than 0. A ValueError will be raised
 
         Algorithm:
         - set 2 pointers; fast_pointer & slow_pointer
@@ -519,7 +566,7 @@ class LinkedList:
             raise IndexError("K longer than linked list")
         fast_pointer, slow_pointer = self.head, self.head
 
-        for _ in range(k):
+        for _ in range(k - 1):
             fast_pointer = fast_pointer.next
 
             if not fast_pointer:
@@ -537,6 +584,24 @@ class LinkedList:
         Moves a node from it's current position to the head of the linked list
         @param node:
         @return:
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def move_tail_to_head(self):
+        """
+        Moves the tail node to the head node making the tail node the new head of the linked list
+        Uses two pointers where last pointer will be moved until it points to the last node in the linked list.
+        The second pointer, previous, will point to the second last node in the linked list.
+
+        Complexity Analysis:
+
+        An assumption is made where n is the number of nodes in the linked list
+        - Time: O(n) as the the pointers have to be moved through each node in the linked list until both point to the
+        last and second last nodes in the linked list
+
+        - Space O(1) as no extra space is incurred in the iteration. Only pointers are moved at the end to move the tail
+         node to the head and make the second to last node the new tail
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -574,6 +639,13 @@ class LinkedList:
     def remove_tail(self):
         """
         Remotes the tail of a linked list
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def remove_duplicates(self) -> Optional[Node]:
+        """
+        Remotes the duplicates from a linked list
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -620,10 +692,21 @@ class LinkedList:
     @abstractmethod
     def maximum_pair_sum(self) -> int:
         """
-        Returns the maximum twin sum of a node and its twin, where a node's twin is at the index (n-1-i) where n is the number
-        of nodes in the linked list.
+        Returns the maximum twin sum of a node and its twin, where a node's twin is at the index (n-1-i) where n is the
+        number of nodes in the linked list.
         For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only
         nodes with twins for n = 4.
         @return: maximum twin sum of a node and it's twin
+        """
+        raise NotImplementedError("not yet implemented")
+
+    @abstractmethod
+    def pairs_with_sum(self, target: T) -> List[Tuple[Node, Node]]:
+        """
+        Returns a list of tuples which contain nodes whose data sum equal the given target.
+        Args:
+            target T: the target with which each pair's data sums up to
+        Return:
+            List: list of pairs
         """
         raise NotImplementedError("not yet implemented")

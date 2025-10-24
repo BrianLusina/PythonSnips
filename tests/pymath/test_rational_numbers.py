@@ -8,7 +8,6 @@ from pymath.rational_numbers import Rational
 
 
 class RationalTests(unittest.TestCase):
-
     # Test addition
     def test_add_two_positive(self):
         self.assertEqual(Rational(1, 2) + Rational(2, 3), Rational(7, 6))

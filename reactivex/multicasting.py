@@ -1,6 +1,7 @@
 """
 Each Subscriber to an Observable often will receive a separate stream of emissions. For instance, having two subscribers to this Observable emitting three random integers will result in both subscribers getting different numbers.
 """
+
 from random import randint
 
 from rx import Observable

@@ -30,5 +30,5 @@ class InterpolationSearchTestCase(unittest.TestCase):
             interpolation_search(collection, target)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

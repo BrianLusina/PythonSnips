@@ -15,7 +15,9 @@ from concrete_component_b import ConcreteComponentB
 
 class ConcreteVisitor1(Visitor):
     def visit_concrete_component_a(self, element: ConcreteComponentA):
-        print(f"{element.exclusive_method_of_concreate_component_a()} + ConcreteVisitor1")
+        print(
+            f"{element.exclusive_method_of_concreate_component_a()} + ConcreteVisitor1"
+        )
 
     def visit_concrete_component_b(self, element: ConcreteComponentB):
         print(f"{element.special_method_of_concreate_component_b()} + ConcreteVisitor1")

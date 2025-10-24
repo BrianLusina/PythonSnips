@@ -47,7 +47,7 @@ try:
     throws()
 except ZeroDivisionError:
     print("division by zero!")
-except ZeroDivisionError as err:
+except ZeroDivisionError:
     print("Caught an exception")
 finally:
     print("In finally block for cleanup")

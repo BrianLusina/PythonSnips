@@ -1,6 +1,7 @@
 """
 Used to demonstrate decorators in classes
 """
+
 from math import pi
 
 
@@ -24,7 +25,7 @@ class Circle:
         if value >= 0:
             self.__radius = value
         else:
-            raise ValueError(f"Radius can not be negative")
+            raise ValueError("Radius can not be negative")
 
     @property
     def area(self):

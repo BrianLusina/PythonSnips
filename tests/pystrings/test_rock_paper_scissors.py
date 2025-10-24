@@ -4,7 +4,6 @@ from pystrings.rock_paper_scissors import rps
 
 
 class RockPaperScissorsTestCase(unittest.TestCase):
-
     def test_p1_rock_p2_scissors(self):
         p1 = "rock"
         p2 = "scissors"

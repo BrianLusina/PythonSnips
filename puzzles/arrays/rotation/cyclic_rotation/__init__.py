@@ -46,5 +46,5 @@ def cyclic_rotation_2(nums: list, k: int) -> list:
         return nums
 
     k = k % length
-    nums[:] = nums[length - k:] + nums[: length - k]
+    nums[:] = nums[length - k :] + nums[: length - k]
     return nums

@@ -16,8 +16,10 @@ class FunctionalAddTestCases(unittest.TestCase):
         for i in range(100):
             a = randint(-1000, 1000)
             b = randint(-1000, 1000)
-            self.assertEqual(add(a)(b), a + b, "Wrong result for " + str(a) + " + " + str(b))
+            self.assertEqual(
+                add(a)(b), a + b, "Wrong result for " + str(a) + " + " + str(b)
+            )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

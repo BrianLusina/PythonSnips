@@ -1,6 +1,6 @@
 """
-    Ranks soccer teams by computing a power index based
-    on game outcomes.
+Ranks soccer teams by computing a power index based
+on game outcomes.
 """
 
 from numpy.linalg import LinAlgError
@@ -156,7 +156,7 @@ def add_power(data, power_train_data, cols):
 
     data = data.copy()
     competitions = data["competitionid"].unique()
-    for (col, coerce_fn, final_name) in cols:
+    for col, coerce_fn, final_name in cols:
         power = {}
         for competition in competitions:
             competition_data = power_train_data[

@@ -6,19 +6,16 @@ Complexity analysis varies when performing Pop operations(removing the current t
 a new minimum has to be iterated over the current items in the stack in order to keep track of the new minimum value.
 This will be an O(n) operation as the Pop() function has to iterate over the remaining items in the worst case.
 """
-from typing import TypeVar
-from .. import Stack
 
-T = TypeVar("T")
+from datastructures.stacks.dynamic import DynamicSizeStack, T
 
 
-class MinStack(Stack):
-    def __init__(self, maxsize: int = None):
+class MinStack(DynamicSizeStack):
+    def __init__(self):
         """
         Initializes a Minimum stack with a max size defaulted to None. If set to None, the min stack has no upper bound
-        @param maxsize Maximum size of the stack
         """
-        super().__init__(maxsize)
+        super().__init__()
         # keeps track of current minimum of the stack
         self.minimum = None
 

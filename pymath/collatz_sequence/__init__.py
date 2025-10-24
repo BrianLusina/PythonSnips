@@ -32,7 +32,6 @@ def generate_collatz_sequence(number):
 
     # if the number is already 1, return it in a list
     while number != 1:
-
         # if the number is even, ie. number %2 == 0
         if number % 2 == 0:
             number //= 2

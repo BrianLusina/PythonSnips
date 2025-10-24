@@ -2,6 +2,7 @@
 by Peter Norvig for the course "Design of Computer Programs" on Udacity.
 https://www.udacity.com/course/cs212
 """
+
 from itertools import permutations
 
 

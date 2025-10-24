@@ -11,7 +11,12 @@ def num_of_islands(grid: List[List[str]]) -> int:
     number_of_rows, number_of_cols = len(grid), len(grid[0])
 
     def dfs(r: int, c: int):
-        if r not in range(number_of_rows) or c not in range(number_of_cols) or grid[r][c] == "0" or (r, c) in visited:
+        if (
+            r not in range(number_of_rows)
+            or c not in range(number_of_cols)
+            or grid[r][c] == "0"
+            or (r, c) in visited
+        ):
             return
 
         visited.add((r, c))

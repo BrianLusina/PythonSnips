@@ -21,5 +21,5 @@ class PartitionTestCase(unittest.TestCase):
         self.assertEqual(sorted(expected), sorted(actual))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

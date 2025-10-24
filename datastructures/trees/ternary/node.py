@@ -1,6 +1,6 @@
-from typing import Optional, List
+from typing import List
 
-from datastructures.trees import TreeNode, T
+from datastructures.trees.node import TreeNode, T
 
 
 class TernaryTreeNode(TreeNode):
@@ -8,7 +8,7 @@ class TernaryTreeNode(TreeNode):
     Ternary tree node class which represents a node in a Ternary tree
     """
 
-    def __init__(self, data: T, children: List['TernaryTreeNode'] = []):
+    def __init__(self, data: T, children: List["TernaryTreeNode"] = []):
         """
         InitializesValue here can be anything
         """
@@ -22,13 +22,13 @@ class TernaryTreeNode(TreeNode):
         self._children = []
 
     @property
-    def children(self) -> List['TernaryTreeNode']:
+    def children(self) -> List["TernaryTreeNode"]:
         return self._children
 
     def __repr__(self):
         return f"TernaryTreeNode(data={self.data}, children={self._children})"
 
-    def __eq__(self, other: 'TernaryTreeNode') -> bool:
+    def __eq__(self, other: "TernaryTreeNode") -> bool:
         """Checks if this node is equal to another node based on the data they contain
         Args:
             other(TernaryTreeNode): the other node to compare this node to

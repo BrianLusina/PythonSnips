@@ -1,15 +1,16 @@
 import math
 from typing import Optional, List, Any, Generator, Dict, Iterator
 from collections import defaultdict, deque
+from itertools import chain
 
 from datastructures.stacks import Stack
+from datastructures.stacks.dynamic import DynamicSizeStack
 from datastructures.trees import Tree, TreeNode, T
 from datastructures.trees.binary.node import BinaryTreeNode
 from datastructures.queues.fifo import FifoQueue
 
 
 class BinaryTree(Tree):
-
     def __init__(self, root: Optional[BinaryTreeNode] = None):
         self.root = root
 
@@ -17,7 +18,7 @@ class BinaryTree(Tree):
         pass
 
     @staticmethod
-    def create_tree(elements: List[T]) -> 'BinaryTree':
+    def create_tree(elements: List[T]) -> "BinaryTree":
         """
         Factory method to creates a BinaryTree given a list of values
         If the index of any element in the array is i, the element in the index 2i+1 will become the left child and
@@ -51,27 +52,15 @@ class BinaryTree(Tree):
         if self.root.left is None and self.root.right is None:
             return 1
 
-        height = 0
-        queue = FifoQueue()
-        queue.enqueue(self.root)
+        def height_helper(current_node: BinaryTreeNode) -> int:
+            if not current_node:
+                return -1
+            left_height = height_helper(current_node.left)
+            right_height = height_helper(current_node.right)
 
-        while True:
-            current_level_nodes = queue.size
+            return 1 + max(left_height, right_height)
 
-            if current_level_nodes == 0:
-                return height
-
-            height += 1
-
-            while current_level_nodes > 0:
-                node = queue.dequeue()
-
-                if node.left is not None:
-                    queue.enqueue(node.left)
-
-                if node.right is not None:
-                    queue.enqueue(node.right)
-                current_level_nodes -= 1
+        return height_helper(self.root)
 
     def has_next(self) -> bool:
         pass
@@ -97,11 +86,12 @@ class BinaryTree(Tree):
         if not self.root:
             return []
 
-        current_level = [self.root]
-        levels = []
+        current_level: List[BinaryTreeNode] = [self.root]
+        levels: List[List[T]] = []
+
         while current_level:
-            level = []
-            next_level = []
+            level: List[T] = []
+            next_level: List[BinaryTreeNode] = []
 
             for node in current_level:
                 level.append(node.data)
@@ -114,7 +104,55 @@ class BinaryTree(Tree):
             levels.append(level)
             current_level = next_level
 
-        return levels
+        return list(chain.from_iterable(levels))
+
+    def reverse_level_order_traversal(self) -> List[T]:
+        """
+        Uses a combination of a dynamic sized stack and a fifo queue to return the reverse level order traversal.
+        The root is added to the queue first and the queue is iterated(as long as it is not empty), de-queueing a node
+        and adding that node to the stack. If the de-queued node has a right child, it is added to the queue, if there
+        is a left child, it is also added to the queue. This operation goes on until the queue is empty.
+
+        This is already an O(n) time complex operation where n is the number of nodes, as iteration has to happen on all
+        nodes in the tree. And in terms of space, the queue is going to occupy at most O(n) space as nodes are added to
+        it and de-queued.
+
+        Next, while the stack has items, the top item in the stack is popped and it's value/data is added to the final
+        result list. This is equally an O(n) time complex operation because the iteration has to happen on each node in
+        the stack.
+
+        Afterwards, the final result list is returned.
+
+        Overall Complexity is:
+        Space: O(n)
+        Time: O(n)
+        """
+        if not self.root:
+            return []
+
+        stack = DynamicSizeStack()
+        fifo_queue = FifoQueue()
+
+        fifo_queue.enqueue(self.root)
+
+        traversed = []
+
+        while not fifo_queue.is_empty():
+            node = fifo_queue.dequeue()
+
+            stack.push(node)
+
+            if node.right:
+                fifo_queue.enqueue(node.right)
+
+            if node.left:
+                fifo_queue.enqueue(node.left)
+
+        while not stack.is_empty():
+            node = stack.pop()
+            traversed.append(node.data)
+
+        return traversed
 
     def pre_order_traversal(self) -> List[Any]:
         data = []
@@ -129,6 +167,36 @@ class BinaryTree(Tree):
             pre_order_helper(root.right)
 
         pre_order_helper(self.root)
+        return data
+
+    def inorder_traversal(self) -> List[T]:
+        data = []
+        if not self.root:
+            return data
+
+        def inorder_helper(root: BinaryTreeNode):
+            if not root:
+                return
+            inorder_helper(root.left)
+            data.append(root.data)
+            inorder_helper(root.right)
+
+        inorder_helper(self.root)
+        return data
+
+    def post_order_traversal(self) -> List[T]:
+        data = []
+        if not self.root:
+            return data
+
+        def post_order_helper(root: BinaryTreeNode):
+            if not root:
+                return
+            post_order_helper(root.left)
+            post_order_helper(root.right)
+            data.append(root.data)
+
+        post_order_helper(self.root)
         return data
 
     def flatten_into_linked_list(self) -> None:
@@ -194,8 +262,12 @@ class BinaryTree(Tree):
         if not self.root:
             return None
 
-        def lca_util(node: Optional[BinaryTreeNode], node_one_value: T, node_two_val: T, node_lookup: List[bool]) -> \
-                Optional[BinaryTreeNode]:
+        def lca_util(
+                node: Optional[BinaryTreeNode],
+                node_one_value: T,
+                node_two_val: T,
+                node_lookup: List[bool],
+        ) -> Optional[BinaryTreeNode]:
             """Returns the Lowest Common Ancestor of 2 node values.This updates a node lookup list that has 2 values.
             The first index is for node_one_value and the second index is for node_two_value. They will be updated to
             True if either node is available in the tree. This will recursively go down the tree until a leaf node is
@@ -231,14 +303,16 @@ class BinaryTree(Tree):
             return left_lca if left_lca is not None else right_lca
 
         def is_key_in_subtree(current_node: Optional[BinaryTreeNode], key: T) -> bool:
-
             # If reached the end of a branch, return False.
             if current_node is None:
                 return False
 
             # If key is present at root, or if left subtree or right subtree , return true
-            if current_node.data == key or is_key_in_subtree(current_node.left, key) or is_key_in_subtree(
-                    current_node.right, key):
+            if (
+                    current_node.data == key
+                    or is_key_in_subtree(current_node.left, key)
+                    or is_key_in_subtree(current_node.right, key)
+            ):
                 return True
 
             return False
@@ -246,9 +320,14 @@ class BinaryTree(Tree):
         lookup = [False, False]
         lca = lca_util(self.root, node_one.data, node_two.data, lookup)
 
-        if lookup[0] and lookup[1] or lookup[0] and is_key_in_subtree(lca, node_two.data) or lookup[
-            1] and is_key_in_subtree(
-            lca, node_one.data):
+        if (
+                lookup[0]
+                and lookup[1]
+                or lookup[0]
+                and is_key_in_subtree(lca, node_two.data)
+                or lookup[1]
+                and is_key_in_subtree(lca, node_one.data)
+        ):
             return lca
 
         return None
@@ -258,7 +337,7 @@ class BinaryTree(Tree):
             return 0
 
         counter = 1
-        stack = Stack()
+        stack = DynamicSizeStack()
         stack.push(self.root)
 
         while not stack.is_empty():
@@ -319,7 +398,9 @@ class BinaryTree(Tree):
             if idx >= node_count:
                 return False
 
-            return is_complete_helper(root.left, 2 * idx + 1) and is_complete_helper(root.right, 2 * index + 2)
+            return is_complete_helper(root.left, 2 * idx + 1) and is_complete_helper(
+                root.right, 2 * index + 2
+            )
 
         index = 0
         return is_complete_helper(self.root, index)
@@ -347,7 +428,9 @@ class BinaryTree(Tree):
             if root.left is None and root.right is None:
                 return False
 
-            return is_perfect_helper(root.left, level + 1) and is_perfect_helper(root.right, level + 1)
+            return is_perfect_helper(root.left, level + 1) and is_perfect_helper(
+                root.right, level + 1
+            )
 
         return is_perfect_helper(self.root, 0)
 
@@ -376,8 +459,10 @@ class BinaryTree(Tree):
 
         return is_height_balanced(self.root)
 
-    def leaf_similar(self, other: 'BinaryTree') -> bool:
-        if (self.root is None and other.root is not None) or (other.root is None and self.root is not None):
+    def leaf_similar(self, other: "BinaryTree") -> bool:
+        if (self.root is None and other.root is not None) or (
+                other.root is None and self.root is not None
+        ):
             return False
 
         def dfs(node: Optional[BinaryTreeNode]) -> Generator:
@@ -403,8 +488,9 @@ class BinaryTree(Tree):
 
         def good_nodes_helper(node: BinaryTreeNode, data: T) -> int:
             if node is not None:
-                node_count = good_nodes_helper(node.left, max(data, node.data)) + \
-                             good_nodes_helper(node.right, max(data, node.data))
+                node_count = good_nodes_helper(
+                    node.left, max(data, node.data)
+                ) + good_nodes_helper(node.right, max(data, node.data))
                 if node.data >= data:
                     node_count += 1
                 return node_count
@@ -416,7 +502,9 @@ class BinaryTree(Tree):
         if self.root is None:
             return 0
 
-        def count_paths(sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode) -> int:
+        def count_paths(
+                sum_hash: Dict[int, int], prefix_sum: T, node: BinaryTreeNode
+        ) -> int:
             if node is None:
                 return 0
 
@@ -430,7 +518,9 @@ class BinaryTree(Tree):
             sum_hash[prefix_sum] += 1
 
             # traverse left and right of tree
-            path += count_paths(sum_hash, prefix_sum, node.left) + count_paths(sum_hash, prefix_sum, node.right)
+            path += count_paths(sum_hash, prefix_sum, node.left) + count_paths(
+                sum_hash, prefix_sum, node.right
+            )
 
             # remove current sum from prefix sum hash
             sum_hash[prefix_sum] -= 1
@@ -468,7 +558,12 @@ class BinaryTree(Tree):
         if not self.root:
             return paths
 
-        def dfs(node: Optional[BinaryTreeNode], path: List[T], result: List, remaining_sum: T):
+        def dfs(
+                node: Optional[BinaryTreeNode],
+                path: List[T],
+                result: List,
+                remaining_sum: T,
+        ):
             """Traverses the tree from root to leaf paths in a depth first search manner.
 
             The Remaining sum is subtracted from the node's value when the tree is being traversed. If a leaf node is reached

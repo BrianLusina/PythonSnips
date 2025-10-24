@@ -1,6 +1,7 @@
 """
 This sample demonstrates using ThreadPoolExecutor to download landing page of sites
 """
+
 import time
 
 # noinspection PyCompatibility

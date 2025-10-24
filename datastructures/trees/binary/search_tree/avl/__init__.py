@@ -25,7 +25,9 @@ class AVLTree(Tree):
                 root.left = insert_node_helper(root.left, data)
             else:
                 root.right = insert_node_helper(root.right, data)
-            root.height = 1 + max(self.__get_height(root.left), self.__get_height(root.right))
+            root.height = 1 + max(
+                self.__get_height(root.left), self.__get_height(root.right)
+            )
 
             # update the balance factor
             balance_factor = self.__get_balance_factor_of_node(root)
@@ -82,7 +84,9 @@ class AVLTree(Tree):
                 return root
 
             # update the balance factor of nodes
-            root.height = 1 + max(self.__get_height(root.left), self.__get_height(root.right))
+            root.height = 1 + max(
+                self.__get_height(root.left), self.__get_height(root.right)
+            )
 
             balance_factor = self.__get_balance_factor_of_node(root)
 
@@ -124,7 +128,9 @@ class AVLTree(Tree):
         t3 = y.right
         y.right = root
         root.left = t3
-        root.height = 1 + max(self.__get_height(root.left), self.__get_height(root.right))
+        root.height = 1 + max(
+            self.__get_height(root.left), self.__get_height(root.right)
+        )
         y.height = 1 + max(self.__get_height(y.left), self.__get_height(y.right))
         return y
 
@@ -134,7 +140,9 @@ class AVLTree(Tree):
         t2 = y.left
         y.left = root
         root.right = t2
-        root.height = 1 + max(self.__get_height(root.left), self.__get_height(root.right))
+        root.height = 1 + max(
+            self.__get_height(root.left), self.__get_height(root.right)
+        )
         y.height = 1 + max(self.__get_height(y.left), self.__get_height(y.right))
         return y
 
