@@ -1,8 +1,7 @@
 # Find the Closest Number
 
-we will be given a sorted array and a target number. Our goal is to find a number in the array that is closest to the
-target number. We will be making use of a binary search to solve this problem, so make sure that you have gone through
-the previous lesson.
+We will be given a sorted array and a target number. Our goal is to find a number in the array that is closest to the
+target number. We will be making use of a binary search to solve this problem.
 
 The array may contain duplicate values and negative numbers.
 
