@@ -553,6 +553,8 @@
         * [Test Cyclically Shifted Array](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/cyclically_shifted_array/test_cyclically_shifted_array.py)
       * Find Closest Number
         * [Test Find Closest Number](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_closest_number/test_find_closest_number.py)
+      * Find Closest Value
+        * [Test Find Closest Value](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_closest_value/test_find_closest_value.py)
       * Find First In Duplicate List
         * [Test Find First In Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_first_in_duplicate_list/test_find_first_in_duplicates.py)
       * Find Fixed Number
