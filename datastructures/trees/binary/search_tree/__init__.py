@@ -237,33 +237,27 @@ class BinarySearchTree(BinaryTree):
             return self.root
 
         # this keeps track of the minimum on both the left and the right
-        min_diff = min_diff_left = min_diff_right = float("inf")
-        closest_value = None
-        fifo_queue = FifoQueue()
-        fifo_queue.enqueue(self.root)
+        closest_node = self.root
+        min_diff = abs(target - self.root.data)
+        current = self.root
 
         # while the queue is not empty, we pop off nodes from the queue and check for their values
-        while not fifo_queue.is_empty():
-            current_node = fifo_queue.dequeue()
+        while current:
+            current_diff = abs(target - self.root.data)
 
-            min_diff_left = abs(target - current_node.data)
-            min_diff_right = abs(target - current_node.data)
+            if current_diff < min_diff:
+                min_diff = current_diff
+                closest_node = current
 
-            if min_diff_left < min_diff:
-                min_diff = min_diff_left
-                closest_value = current_node
+            if current.data == target:
+                return current
 
-            if min_diff_right < min_diff:
-                min_diff = min_diff_right
-                closest_value = current_node
+            if target < current.data:
+                current = current.left
+            else:
+                current = current.right
 
-            if current_node.left:
-                fifo_queue.enqueue(current_node.left)
-
-            if current_node.right:
-                fifo_queue.enqueue(current_node.right)
-
-        return closest_value
+        return closest_node
 
     def range_sum(self, low: int, high: int):
         """
