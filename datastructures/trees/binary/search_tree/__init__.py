@@ -219,6 +219,46 @@ class BinarySearchTree(BinaryTree):
 
         return current
 
+    def find_closest_value_in_bst(self, target: T) -> Optional[BinaryTreeNode]:
+        """
+        Finds the closest value in the binary search tree to the given target value.
+
+        Args:
+            target T: Value to search for
+        Returns:
+            Node with the closest value to the target
+        """
+        # edge case for empty nodes, if none is provided, we can't find a value that is close to the target
+        if not self.root:
+            return None
+
+        # if the node's data is the target, exit early by returning it
+        if self.root.data == target:
+            return self.root
+
+        # this keeps track of the minimum on both the left and the right
+        closest_node = self.root
+        min_diff = abs(target - self.root.data)
+        current = self.root
+
+        # while the queue is not empty, we pop off nodes from the queue and check for their values
+        while current:
+            current_diff = abs(target - self.root.data)
+
+            if current_diff < min_diff:
+                min_diff = current_diff
+                closest_node = current
+
+            if current.data == target:
+                return current
+
+            if target < current.data:
+                current = current.left
+            else:
+                current = current.right
+
+        return closest_node
+
     def range_sum(self, low: int, high: int):
         """
         returns the sum of datas of all nodes with a data in the range [low, high].
