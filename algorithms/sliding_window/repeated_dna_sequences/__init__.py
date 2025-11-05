@@ -13,14 +13,19 @@ def find_repeated_dna_sequences_naive(dna_sequence: str) -> List[str]:
     Returns:
         List[str]
     """
+    if len(dna_sequence) <= 10:
+        return []
+
     result_set = set()
-    seen: Dict[str, bool] = {}
+    seen = set()
     for idx in range(len(dna_sequence)):
         subsequence = dna_sequence[idx:idx+10]
+        if len(subsequence) < 10:
+            continue
         if subsequence in seen:
             result_set.add(subsequence)
         else:
-            seen[subsequence]=True
+            seen.add(subsequence)
 
     return list(result_set)
 
