@@ -35,7 +35,7 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
 
     Let’s see how we can implement the above algorithm:
 
-    - For each string, compute a 6-element list. Each element in this list represents the frequency of an English letter
+    - For each string, compute a 26-element list. Each element in this list represents the frequency of an English letter
      in the corresponding string. This frequency count will be represented as a tuple. For example, "abbccc" will be
      represented as (1, 2, 3, 0, 0, ..., 0). This mapping will generate identical lists for strings that are anagrams.
 
@@ -59,7 +59,7 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     # traversing the list of strings takes O(n) time where n is the number of strings in this list
     for word in strs:
         count = [0] * 26
-        for char in word:
+        for char in word.lower():
             index = ord(char) - ord('a')
             count[index] += 1
 
