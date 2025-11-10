@@ -676,6 +676,8 @@
 
 ## Pystrings
   * Anagram
+    * Group Anagrams
+      * [Test Group Anagrams](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/group_anagrams/test_group_anagrams.py)
     * [Test Anagram](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/test_anagram.py)
   * Balanced Paren
     * [Test Balanced Paren](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/balanced_paren/test_balanced_paren.py)
