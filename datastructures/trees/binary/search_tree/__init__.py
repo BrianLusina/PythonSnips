@@ -361,7 +361,7 @@ class BinarySearchTree(BinaryTree):
 
         return result.right
 
-    def in_order_recurse(self, node: BinaryTreeNode):
+    def in_order_recurse(self, node: BinaryTreeNode) -> List[T]:
         """
         Another type of Depth First Search (DFS) that traverses the tree from the left to middle to right of the tree.
         This type of search will begin at the left node and check if that node has a left child and continually check
@@ -378,6 +378,7 @@ class BinarySearchTree(BinaryTree):
 
             if self.root.right:
                 self.in_order_recurse(self.root.right)
+        return result
 
     def in_order_iterate(self) -> list:
         """
