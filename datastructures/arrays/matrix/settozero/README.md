@@ -5,7 +5,7 @@ should be in place, i.e., the given matrix is modified directly without allocati
 
 Constraints:
 
-Let `mat` be the matrix given as input to find the anagrams.
+Let `mat` be the matrix given as input for the zeroing operation.
 
 - 1 <= `mat.row`, `mat.col` <= 20
 - -2^31 <= `mat[i][j]` <= 2^31-1
