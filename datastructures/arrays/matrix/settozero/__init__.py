@@ -14,7 +14,7 @@ def set_matrix_zeros(mat: List[List[int]]) -> List[List[int]]:
     Args:
         mat (List): input matrix
     Returns:
-        List[List[int]]modified matrix with all elements in any row or column containing a zero element set to zero
+        List[List[int]]: modified matrix with all elements in any row or column containing a zero element set to zero
     """
     if not mat or not mat[0]:
         return mat
