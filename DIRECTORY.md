@@ -187,6 +187,9 @@
       * [Diff Elements In List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/array_diff/diff_elements_in_list.py)
     * Distinct
       * [Distinct Values](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/distinct/distinct_values.py)
+    * Matrix
+      * Settozero
+        * [Test Set Matrix Zero](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/matrix/settozero/test_set_matrix_zero.py)
     * Max Subarray
       * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/max_subarray/sub_array_maxsum.py)
     * Minincrementsforunique
