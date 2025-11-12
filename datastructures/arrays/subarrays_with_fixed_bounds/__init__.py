@@ -3,7 +3,8 @@ from typing import List
 
 def count_subarrays(nums: List[int], min_k: int, max_k: int) -> int:
     """
-    Counts the number of subarrays in the provided array which satisfies the following conditions:
+    This counts the number of subarrays in the provided array which satisfies the following conditions:
+
     1. The smallest value in the subarray equals min_k.
     2. The largest value in the subarray equals max_k.
 
@@ -14,7 +15,21 @@ def count_subarrays(nums: List[int], min_k: int, max_k: int) -> int:
 
     Returns:
         int: The number of subarrays that satisfies the conditions.
+
+    Examples:
+        >>> count_subarrays([2,1,4,3,2],2,3)
+        1
+        >>> count_subarrays([1,2,3,2,1],1,3)
+        5
+        >>> count_subarrays([4,4,4],4,4)
+        6
+        >>> count_subarrays([2,2,2],4,4)
+        0
     """
+    # edge case to handle empty arrays or invalid bounds
+    if not nums or min_k > max_k:
+        return 0
+
     last_min, last_max, last_invalid = -1, -1, -1
     count = 0
 
