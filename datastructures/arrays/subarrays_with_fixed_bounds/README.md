@@ -12,7 +12,7 @@ A subarray in nums is called a fixed-bound subarray if it satisfies the followin
 Constraints:
 
 - 2 ≤ nums.length ≤ 10^3
-- 1 ≤ nums[i], minK, maxK ≤10^3
+- 1 ≤ nums[i], minK, maxK ≤ 10^3
 
 ## Examples
 
