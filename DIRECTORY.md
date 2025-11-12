@@ -196,6 +196,8 @@
       * [Min Increment For Unique](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/minincrementsforunique/min_increment_for_unique.py)
     * Non Overlapping Intervals
       * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/non_overlapping_intervals/test_non_overlapping_intervals.py)
+    * Subarrays With Fixed Bounds
+      * [Test Subarrays With Fixed Bounds](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/subarrays_with_fixed_bounds/test_subarrays_with_fixed_bounds.py)
   * Dicts
     * [Default Dicts](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/default_dicts.py)
     * [Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/ordered_dict.py)
