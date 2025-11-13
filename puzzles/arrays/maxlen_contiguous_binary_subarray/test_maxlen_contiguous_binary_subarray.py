@@ -1,5 +1,5 @@
 import unittest
-
+import random
 from . import find_max_length
 
 
@@ -50,7 +50,6 @@ class MaxLengthContiguousBinarySubArrayTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-@test.describe("Random Tests")
 def tests():
     def check(s) -> int:
         Track, balance, index, len1 = {}, 0, 0, 0
@@ -83,7 +82,6 @@ def tests():
         test.assert_equals(binarray(s.copy()), answer)
 
     def rnd_tests(title, l, m, flag):
-        @test.it(title + " size")
         def _():
             for _ in range(l):
                 if flag:

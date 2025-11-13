@@ -47,7 +47,7 @@ def find_repeated_dna_sequences(dna_sequence: str) -> List[str]:
     # Validate input contains only valid DNA bases
     if not all(c in to_int for c in dna_sequence):
         raise ValueError(
-            f"DNA sequence contains invalid characters. Only A, C, G, T are allowed."
+            "DNA sequence contains invalid characters. Only A, C, G, T are allowed."
         )
 
     encoded_sequence = [to_int[c] for c in dna_sequence]
