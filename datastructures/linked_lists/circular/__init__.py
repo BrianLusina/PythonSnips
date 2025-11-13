@@ -5,7 +5,6 @@ from .node import CircularNode
 
 
 class CircularLinkedList(LinkedList):
-
     def __init__(self, head: Optional[CircularNode] = None):
         super().__init__(head)
 

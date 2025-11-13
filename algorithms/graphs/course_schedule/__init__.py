@@ -73,10 +73,7 @@ def find_order(num_courses: int, prerequisites: List[List[int]]) -> List[int]:
     return topological_sorted_order[::-1] if is_possible else []
 
 
-def can_finish(
-    num_courses: int,
-    prerequisites: List[List[int]]
-) -> bool:
+def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
     """
     Determines if there is a valid order of courses such that
     all prerequisites are satisfied.

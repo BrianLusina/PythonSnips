@@ -29,7 +29,7 @@ class FindRepeatedDnaSequencesTestCase(unittest.TestCase):
 
     def test_5(self):
         dna_sequence = "ACGTACGTACGTACGTACGTACGTACGTACGT"
-        expected = ["ACGTACGTAC","CGTACGTACG","GTACGTACGT","TACGTACGTA"]
+        expected = ["ACGTACGTAC", "CGTACGTACG", "GTACGTACGT", "TACGTACGTA"]
         actual = find_repeated_dna_sequences(dna_sequence)
         self.assertEqual(sorted(expected), sorted(actual))
 
@@ -38,6 +38,7 @@ class FindRepeatedDnaSequencesTestCase(unittest.TestCase):
         expected = []
         actual = find_repeated_dna_sequences(dna_sequence)
         self.assertEqual(expected, actual)
+
 
 class FindRepeatedDnaSequencesNaiveTestCase(unittest.TestCase):
     def test_1(self):
@@ -66,7 +67,7 @@ class FindRepeatedDnaSequencesNaiveTestCase(unittest.TestCase):
 
     def test_5(self):
         dna_sequence = "ACGTACGTACGTACGTACGTACGTACGTACGT"
-        expected = ["ACGTACGTAC","CGTACGTACG","GTACGTACGT","TACGTACGTA"]
+        expected = ["ACGTACGTAC", "CGTACGTACG", "GTACGTACGT", "TACGTACGTA"]
         actual = find_repeated_dna_sequences_naive(dna_sequence)
         self.assertEqual(sorted(expected), sorted(actual))
 
@@ -76,5 +77,6 @@ class FindRepeatedDnaSequencesNaiveTestCase(unittest.TestCase):
         actual = find_repeated_dna_sequences_naive(dna_sequence)
         self.assertEqual(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

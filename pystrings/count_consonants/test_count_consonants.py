@@ -1,6 +1,9 @@
 import unittest
 
-from pystrings.count_consonants import count_consonants_iterative, count_consonants_recursive
+from pystrings.count_consonants import (
+    count_consonants_iterative,
+    count_consonants_recursive,
+)
 
 
 class CountConsonantsTestCases(unittest.TestCase):
@@ -19,5 +22,5 @@ class CountConsonantsTestCases(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

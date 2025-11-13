@@ -54,7 +54,7 @@ class BinarySearchTree(BinaryTree):
             return self.root
 
         def delete_helper(
-                value: T, node: Optional[BinaryTreeNode]
+            value: T, node: Optional[BinaryTreeNode]
         ) -> Optional[BinaryTreeNode]:
             # base case when we have hit the bottom of the tree, and the parent node has no children
             if node is None:
@@ -88,7 +88,7 @@ class BinarySearchTree(BinaryTree):
                     return node
 
         def lift(
-                node: BinaryTreeNode, node_to_delete: BinaryTreeNode
+            node: BinaryTreeNode, node_to_delete: BinaryTreeNode
         ) -> BinaryTreeNode:
             # if the current node of this function has a left child, we recursively call this function to continue down
             # the left subtree to find the successor node
@@ -530,7 +530,7 @@ class BinarySearchTree(BinaryTree):
         return True
 
     def is_binary_search_tree_recursive(
-            self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
+        self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
     ):
         """
         This uses the call stack to check if the binary search tree node is valid.
@@ -551,10 +551,10 @@ class BinarySearchTree(BinaryTree):
             return False
 
         return not (
-                not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
-                or not self.is_binary_search_tree_recursive(
-            root.right, root.data, upper_bound
-        )
+            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
+            or not self.is_binary_search_tree_recursive(
+                root.right, root.data, upper_bound
+            )
         )
 
     def search_node(self, data: T) -> bool:
@@ -639,7 +639,7 @@ class BinarySearchTree(BinaryTree):
                     #   1) more than 2 different leaf depths
                     #   2) 2 leaf depths that are more than 1 apart
                     if len(depths) > 2 or (
-                            len(depths) == 2 and abs(depths[0] - depths[1]) > 1
+                        len(depths) == 2 and abs(depths[0] - depths[1]) > 1
                     ):
                         return False
 
@@ -653,7 +653,7 @@ class BinarySearchTree(BinaryTree):
         return True
 
     def lowest_common_ancestor(
-            self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
+        self, node_one: BinaryTreeNode, node_two: BinaryTreeNode
     ) -> BinaryTreeNode:
         """
         Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this

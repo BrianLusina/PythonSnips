@@ -44,5 +44,5 @@ class FindFixedPointTestCase(unittest.TestCase):
         self.assertIsNone(actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -71,5 +71,5 @@ class CircularLinkedListSplitListTestCase(unittest.TestCase):
         self.assertEqual(expected[1], list(second_list))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

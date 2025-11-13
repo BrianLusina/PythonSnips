@@ -33,5 +33,6 @@ class CheckPermutationWithMapTestCases(unittest.TestCase):
         actual = check_permutation_with_map(word_1, word_2)
         self.assertFalse(actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
