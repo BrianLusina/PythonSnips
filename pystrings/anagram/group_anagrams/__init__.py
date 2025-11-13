@@ -21,6 +21,7 @@ def group_anagrams_naive(strs: List[str]) -> List[List[str]]:
 
     return list(word_map.values())
 
+
 def group_anagrams(strs: List[str]) -> List[List[str]]:
     """
     Groups a list of strings by their anagrams.
@@ -55,12 +56,12 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     Returns:
         List[List[str]]: A list of lists, where each inner list contains strings that are anagrams of each other
     """
-    word_map: Dict[Tuple[int,...], List[str]] = defaultdict(list)
+    word_map: Dict[Tuple[int, ...], List[str]] = defaultdict(list)
     # traversing the list of strings takes O(n) time where n is the number of strings in this list
     for word in strs:
         count = [0] * 26
         for char in word.lower():
-            index = ord(char) - ord('a')
+            index = ord(char) - ord("a")
             count[index] += 1
 
         key = tuple(count)

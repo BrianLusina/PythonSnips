@@ -27,7 +27,7 @@ def look_and_say_sequence(sequence: str) -> str:
         # count is reset to one to keep track of the current count of the sequence
         count = 1
 
-        while i + 1 < len(sequence) and sequence[i] == sequence[i+1]:
+        while i + 1 < len(sequence) and sequence[i] == sequence[i + 1]:
             # here we keep track of consecutive similar characters and increase their count if we encounter them.
 
             i += 1

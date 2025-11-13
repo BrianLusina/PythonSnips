@@ -75,6 +75,9 @@
       * [Test Find Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/fast_and_slow/find_duplicate/test_find_duplicate.py)
     * Happy Number
       * [Test Happy Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/fast_and_slow/happy_number/test_happy_number.py)
+  * Graphs
+    * Course Schedule
+      * [Test Course Schedule](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/course_schedule/test_course_schedule.py)
   * Greedy
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)

@@ -3,7 +3,6 @@ from . import is_unique
 
 
 class IsUniqueTestCases(unittest.TestCase):
-
     def test_1(self):
         """should return true for abCDefGh"""
         input_string = "abCDefGh"
@@ -38,8 +37,10 @@ class IsUniqueTestCases(unittest.TestCase):
         """should return True for hi"""
         input_string = "hi"
         actual = is_unique(input_string)
-        self.assertTrue(actual,)
+        self.assertTrue(
+            actual,
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -220,7 +220,9 @@ class BinaryTreeHeight(unittest.TestCase):
     def test_returns_3_for_tree_3_9_20_null_null_15_7(self):
         """should return 3 if the binary tree [3,9,20,null,null,15,7]"""
         left = BinaryTreeNode(data=9)
-        right = BinaryTreeNode(data=20, left=BinaryTreeNode(data=15), right=BinaryTreeNode(data=7))
+        right = BinaryTreeNode(
+            data=20, left=BinaryTreeNode(data=15), right=BinaryTreeNode(data=7)
+        )
 
         root = BinaryTreeNode(data=3, left=left, right=right)
         tree = BinaryTree(root=root)
@@ -243,7 +245,9 @@ class BinaryTreeHeight(unittest.TestCase):
     def test_returns_2_for_tree_1_2_3_4_5(self):
         """should return 2 if the binary tree [1,2,3,4,5]"""
         right = BinaryTreeNode(data=3)
-        left = BinaryTreeNode(data=2, left=BinaryTreeNode(data=4), right=BinaryTreeNode(5))
+        left = BinaryTreeNode(
+            data=2, left=BinaryTreeNode(data=4), right=BinaryTreeNode(5)
+        )
 
         root = BinaryTreeNode(data=1, left=left, right=right)
         tree = BinaryTree(root=root)
@@ -272,7 +276,9 @@ class BinaryTreeSize(unittest.TestCase):
     def test_returns_5_for_tree_3_9_20_null_null_15_7(self):
         """should return 5 if the binary tree [3,9,20,null,null,15,7]"""
         left = BinaryTreeNode(data=9)
-        right = BinaryTreeNode(data=20, left=BinaryTreeNode(data=15), right=BinaryTreeNode(data=7))
+        right = BinaryTreeNode(
+            data=20, left=BinaryTreeNode(data=15), right=BinaryTreeNode(data=7)
+        )
 
         root = BinaryTreeNode(data=3, left=left, right=right)
         tree = BinaryTree(root=root)
@@ -295,7 +301,9 @@ class BinaryTreeSize(unittest.TestCase):
     def test_returns_5_for_tree_1_2_3_4_5(self):
         """should return 5 if the binary tree [1,2,3,4,5]"""
         right = BinaryTreeNode(data=3)
-        left = BinaryTreeNode(data=2, left=BinaryTreeNode(data=4), right=BinaryTreeNode(5))
+        left = BinaryTreeNode(
+            data=2, left=BinaryTreeNode(data=4), right=BinaryTreeNode(5)
+        )
 
         root = BinaryTreeNode(data=1, left=left, right=right)
         tree = BinaryTree(root=root)
@@ -706,8 +714,13 @@ class BinaryTreePreOrderTraversal(unittest.TestCase):
         """Should return [F,B,A,D,C,E,G,I,H]"""
         expected = ["F", "B", "A", "D", "C", "E", "G", "I", "H"]
         right = BinaryTreeNode("G", right=BinaryTreeNode("I", left=BinaryTreeNode("H")))
-        left = BinaryTreeNode("B", left=BinaryTreeNode("A"),
-                              right=BinaryTreeNode("D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")))
+        left = BinaryTreeNode(
+            "B",
+            left=BinaryTreeNode("A"),
+            right=BinaryTreeNode(
+                "D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")
+            ),
+        )
         root = BinaryTreeNode("F", left=left, right=right)
 
         tree = BinaryTree(root=root)
@@ -720,8 +733,13 @@ class BinaryTreeInOrderTraversal(unittest.TestCase):
         """Should return [A, B, C, D, E, F, G, H, I]"""
         expected = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
         right = BinaryTreeNode("G", right=BinaryTreeNode("I", left=BinaryTreeNode("H")))
-        left = BinaryTreeNode("B", left=BinaryTreeNode("A"),
-                              right=BinaryTreeNode("D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")))
+        left = BinaryTreeNode(
+            "B",
+            left=BinaryTreeNode("A"),
+            right=BinaryTreeNode(
+                "D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")
+            ),
+        )
         root = BinaryTreeNode("F", left=left, right=right)
 
         tree = BinaryTree(root=root)
@@ -734,8 +752,13 @@ class BinaryTreePostOrderTraversal(unittest.TestCase):
         """Should return [A, C, E, D, B, H, I, G, F]"""
         expected = ["A", "C", "E", "D", "B", "H", "I", "G", "F"]
         right = BinaryTreeNode("G", right=BinaryTreeNode("I", left=BinaryTreeNode("H")))
-        left = BinaryTreeNode("B", left=BinaryTreeNode("A"),
-                              right=BinaryTreeNode("D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")))
+        left = BinaryTreeNode(
+            "B",
+            left=BinaryTreeNode("A"),
+            right=BinaryTreeNode(
+                "D", left=BinaryTreeNode("C"), right=BinaryTreeNode("E")
+            ),
+        )
         root = BinaryTreeNode("F", left=left, right=right)
 
         tree = BinaryTree(root=root)
@@ -748,8 +771,7 @@ class BinaryTreeLevelOrderTraversal(unittest.TestCase):
         """Should return [1, 2, 3, 4, 5]"""
         expected = [1, 2, 3, 4, 5]
         right = BinaryTreeNode(3)
-        left = BinaryTreeNode(2, left=BinaryTreeNode(4),
-                              right=BinaryTreeNode(5))
+        left = BinaryTreeNode(2, left=BinaryTreeNode(4), right=BinaryTreeNode(5))
         root = BinaryTreeNode(1, left=left, right=right)
 
         tree = BinaryTree(root=root)
@@ -762,8 +784,7 @@ class BinaryTreeReverseLevelOrderTraversal(unittest.TestCase):
         """Should return [4, 5, 2, 3, 1]"""
         expected = [4, 5, 2, 3, 1]
         right = BinaryTreeNode(3)
-        left = BinaryTreeNode(2, left=BinaryTreeNode(4),
-                              right=BinaryTreeNode(5))
+        left = BinaryTreeNode(2, left=BinaryTreeNode(4), right=BinaryTreeNode(5))
         root = BinaryTreeNode(1, left=left, right=right)
 
         tree = BinaryTree(root=root)

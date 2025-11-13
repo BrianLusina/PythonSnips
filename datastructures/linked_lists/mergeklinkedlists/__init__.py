@@ -2,7 +2,9 @@ from typing import List, Optional
 from .. import Node
 
 
-def merge_two_sorted_lists(head_one: Optional[Node], head_two: Optional[Node]) -> Optional[Node]:
+def merge_two_sorted_lists(
+    head_one: Optional[Node], head_two: Optional[Node]
+) -> Optional[Node]:
     """
     Merges two sorted linked list into 1 sorted linked list. Note that the assumption here is that the 2 linked lists
     are already sorted. If either of the heads of the linked list that is provided is None, the other head node is

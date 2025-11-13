@@ -37,6 +37,7 @@ def is_valid_subsequence(array: List[int], sequence: List[int]) -> bool:
 
     return False
 
+
 def is_valid_subsequence_v2(array: List[int], sequence: List[int]) -> bool:
     """
     Returns true if a sequence is a subsequence of the provided array

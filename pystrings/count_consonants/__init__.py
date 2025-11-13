@@ -1,13 +1,15 @@
 vowels = "aeiou"
 
+
 def count_consonants_iterative(input_str: str) -> int:
     consonant_count = 0
 
     for char in input_str:
         if char.lower() not in vowels and char.isalpha():
-            consonant_count+=1
+            consonant_count += 1
 
     return consonant_count
+
 
 def count_consonants_recursive(input_str: str) -> int:
     if input_str == "":

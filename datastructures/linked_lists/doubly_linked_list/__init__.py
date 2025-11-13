@@ -682,7 +682,6 @@ class DoublyLinkedList(LinkedList):
             nxt = current.next
 
             while nxt:
-
                 if current.data + nxt.data == target:
                     pairs.append((current, nxt))
 

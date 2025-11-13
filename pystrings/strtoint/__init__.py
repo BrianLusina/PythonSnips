@@ -8,7 +8,7 @@ def str_to_int(input_str: str) -> int:
     """
     output_int = 0
 
-    if input_str[0] == '-':
+    if input_str[0] == "-":
         is_negative = True
     else:
         is_negative = False
@@ -18,17 +18,18 @@ def str_to_int(input_str: str) -> int:
     str_to_convert = input_str[1:] if is_negative else input_str
 
     for index, char in enumerate(str_to_convert):
-        unicode = ord(char) - ord('0')
+        unicode = ord(char) - ord("0")
         exponent = l - (index + 1)
         number = unicode * 10**exponent
         output_int += number
 
-    return output_int *-1 if is_negative else output_int
+    return output_int * -1 if is_negative else output_int
+
 
 def str_to_int_v2(input_str: str) -> int:
     output_int = 0
 
-    if input_str[0] == '-':
+    if input_str[0] == "-":
         start_idx = 1
         is_negative = True
     else:
@@ -36,8 +37,8 @@ def str_to_int_v2(input_str: str) -> int:
         is_negative = False
 
     for i in range(start_idx, len(input_str)):
-        place = 10**(len(input_str) - (i+1))
-        digit = ord(input_str[i]) - ord('0')
+        place = 10 ** (len(input_str) - (i + 1))
+        digit = ord(input_str[i]) - ord("0")
         output_int += place * digit
 
     if is_negative:

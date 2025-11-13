@@ -20,7 +20,7 @@ def sorted_squared_array(array: List[int]) -> List[int]:
     left, right = 0, n - 1
 
     # file result array from right to left (largest to smallest squares
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         left_abs = abs(array[left])
         right_abs = abs(array[right])
 
@@ -56,7 +56,7 @@ def sorted_squared_array_2(array: List[int]) -> List[int]:
     left, right = 0, n - 1
 
     # file result array from right to left (largest to smallest squares
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         left_square = array[left] ** 2
         right_square = array[right] ** 2
 

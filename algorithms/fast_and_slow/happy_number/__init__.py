@@ -35,6 +35,7 @@ def is_happy_number(n: int) -> bool:
 
     return n == 1
 
+
 def is_happy_number_2(n: int) -> bool:
     """
     Checks if an unsigned integer is a happy number

@@ -12,6 +12,7 @@ def iterative_string_len(input_str: str) -> int:
         count += 1
     return count
 
+
 def recursive_string_len(input_str: str) -> int:
     """
     Calculates a string's length using a recursive approach

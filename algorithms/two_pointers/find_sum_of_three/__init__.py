@@ -17,10 +17,10 @@ def find_sum_of_three(nums: List[int], target: int) -> bool:
     numbers.sort()
 
     for idx, num in enumerate(numbers):
-        if idx > 0 and num == numbers[idx-1]:
+        if idx > 0 and num == numbers[idx - 1]:
             continue
 
-        left, right = idx+1, len(numbers) - 1
+        left, right = idx + 1, len(numbers) - 1
 
         while left < right:
             current_sum = num + numbers[left] + numbers[right]

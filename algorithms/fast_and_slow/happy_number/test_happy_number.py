@@ -57,6 +57,7 @@ class HappyNumberTestCase(unittest.TestCase):
         actual = is_happy_number(number)
         self.assertFalse(actual)
 
+
 class HappyNumberTestCase2(unittest.TestCase):
     def test_1(self):
         """should return true for 23"""
@@ -113,5 +114,5 @@ class HappyNumberTestCase2(unittest.TestCase):
         self.assertFalse(actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

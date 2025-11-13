@@ -8,8 +8,8 @@ class SpreadsheetEncodeColumnTestCases(unittest.TestCase):
         column_name = "ZZ"
         expected = 702
         actual = spreadsheet_encode_column(column_name)
-        self.assertEqual(expected,actual)
+        self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
