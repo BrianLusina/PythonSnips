@@ -9,11 +9,11 @@ class DoubleNode(Node):
     """
 
     def __init__(
-            self,
-            data: Any,
-            previous: Optional["DoubleNode"] = None,
-            next_: Optional["DoubleNode"] = None,
-            key: Optional[Any] = None,
+        self,
+        data: Any,
+        previous: Optional["DoubleNode"] = None,
+        next_: Optional["DoubleNode"] = None,
+        key: Optional[Any] = None,
     ):
         super().__init__(data=data, next_=next_, key=key)
         self.previous = previous

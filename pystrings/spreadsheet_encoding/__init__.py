@@ -24,7 +24,7 @@ def spreadsheet_encode_column(column_id: str) -> int:
         # relative difference from the result given by ord & from the representation we require for base 26 system
         # Now we know that ord('A') equals 65. So if we find the Unicode code point using ord() of a character,
         # subtract ord('A') from it, and then add 1 to it, we’ll get the representation we want for the base 26 system
-        num += 26**count * (ord(char) - ord('A') + 1)
+        num += 26**count * (ord(char) - ord("A") + 1)
 
         # count is decremented by 1 as the power of the base decrements by 1 from the digits from left to right
         count -= 1

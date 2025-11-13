@@ -6,11 +6,10 @@ def check(n: int, m: int, games: List[List[int]]) -> bool:
 
     for game_round in games:
         for i, j in pairs:
-
-            if i in game_round[:n // 2] and j in game_round[:n // 2]:
+            if i in game_round[: n // 2] and j in game_round[: n // 2]:
                 return False
 
-            if i in game_round[n // 2:] and j in game_round[n // 2:]:
+            if i in game_round[n // 2 :] and j in game_round[n // 2 :]:
                 return False
 
     return True

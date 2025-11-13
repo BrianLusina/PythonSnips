@@ -134,7 +134,9 @@ class SinglyLinkedList(LinkedList):
                 current = current.next
 
                 if current is None:
-                    raise ValueError(f"Invalid position {position} found, reached end of list")
+                    raise ValueError(
+                        f"Invalid position {position} found, reached end of list"
+                    )
 
             current.data = current.next.data if current.next else None
             current.next = current.next.next if current.next else None

@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 
-def find_first_in_duplicates_linear(numbers: List[int], target:int) -> Optional[int]:
+def find_first_in_duplicates_linear(numbers: List[int], target: int) -> Optional[int]:
     """
     Finds the first duplicate number that matches the target from the sorted numbers list. if not found, None is returned.
 
@@ -26,7 +26,7 @@ def find_first_in_duplicates_linear(numbers: List[int], target:int) -> Optional[
     return None
 
 
-def find_first_in_duplicates(numbers: List[int], target:int) -> Optional[int]:
+def find_first_in_duplicates(numbers: List[int], target: int) -> Optional[int]:
     """
     Finds the first duplicate number that matches the target from the sorted numbers list. if not found, None is returned.
 
@@ -51,11 +51,11 @@ def find_first_in_duplicates(numbers: List[int], target:int) -> Optional[int]:
         # If the middle number is less than the target, we move the low/left pointer to the middle + 1, eliminating the
         # left portion of the list
         if numbers[mid] < target:
-            low = mid +1
+            low = mid + 1
         elif numbers[mid] > target:
             # if the middle number is greater than the target, we move the right/high pointer to the middle-1, removing
             # the right portion of the list
-            high = mid -1
+            high = mid - 1
         else:
             # This else block addresses finding the first occurrence of the target element. This block is entered when
             # the target is equal to numbers[mid]. Since the list is sorted in ascending order, the target is either the
@@ -66,7 +66,7 @@ def find_first_in_duplicates(numbers: List[int], target:int) -> Optional[int]:
                 return mid
             # next is to check if the element to the left of numbers[mid], i.e. numbers[mid-1] is the target or not. It
             # is not, this evaluates to true and implies that numbers[mid] is the first occurrence, so mid is returned
-            if numbers[mid -1] != target:
+            if numbers[mid - 1] != target:
                 return mid
             # However, if the element on the left is also the same as the target element, we update high to mid - 1. This
             # way, we condense our search space to find the first occurrence of the target which will be on the left of

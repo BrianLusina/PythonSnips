@@ -33,8 +33,8 @@ def set_matrix_zeros(mat: List[List[int]]) -> List[List[int]]:
             if mat[r][c] == 0:
                 # Mark this row and column by setting the corresponding
                 # positions in the first row and column to zero
-                mat[r][0] = 0 # mark row as 0
-                mat[0][c] = 0 # mark column as 0
+                mat[r][0] = 0  # mark row as 0
+                mat[0][c] = 0  # mark column as 0
 
     # Step 3: Use the markers to set zeros in the interior of the matrix
     # We process from [1][1] onwards to avoid corrupting our markers

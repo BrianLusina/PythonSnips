@@ -13,7 +13,12 @@ class Node(Generic[T]):
 
     __metaclass__ = ABCMeta
 
-    def __init__(self, data: Optional[T] = None, next_: Optional['Node[Generic[T]]'] = None, key: Any = None):
+    def __init__(
+        self,
+        data: Optional[T] = None,
+        next_: Optional["Node[Generic[T]]"] = None,
+        key: Any = None,
+    ):
         self.data = data
         self.next = next_
         # if no key is provided, the hash of the data becomes the key

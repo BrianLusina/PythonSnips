@@ -95,11 +95,12 @@ class NonConstructibleChangeTestCase(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_input_not_mutated(self):
-       """should not mutate the input coins list"""
-       coins = [5, 7, 1, 1, 2, 3, 22]
-       snapshot = coins[:]
-       _ = non_constructible_change(coins)
-       self.assertEqual(coins, snapshot)
+        """should not mutate the input coins list"""
+        coins = [5, 7, 1, 1, 2, 3, 22]
+        snapshot = coins[:]
+        _ = non_constructible_change(coins)
+        self.assertEqual(coins, snapshot)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

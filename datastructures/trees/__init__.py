@@ -33,7 +33,7 @@ class Tree(ABC, Generic[T]):
 
     @abstractmethod
     def lowest_common_ancestor(
-            self, node_one: TreeNode, node_two: TreeNode
+        self, node_one: TreeNode, node_two: TreeNode
     ) -> TreeNode:
         """
         Returns the lowest common ancestor of 2 nodes in the Tree.

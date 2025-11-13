@@ -15,9 +15,7 @@ class BinarySearchTreeInsertNodeTestCases(unittest.TestCase):
         expected_root = BinaryTreeNode(
             data=8,
             left=BinaryTreeNode(
-                data=3,
-                left=BinaryTreeNode(data=1),
-                right=BinaryTreeNode(data=6)
+                data=3, left=BinaryTreeNode(data=1), right=BinaryTreeNode(data=6)
             ),
             right=BinaryTreeNode(data=10),
         )
@@ -26,7 +24,9 @@ class BinarySearchTreeInsertNodeTestCases(unittest.TestCase):
         self.assertEqual(expected_root.left.data, search_tree.root.left.data)
         self.assertEqual(expected_root.right.data, search_tree.root.right.data)
         self.assertEqual(expected_root.left.left.data, search_tree.root.left.left.data)
-        self.assertEqual(expected_root.left.right.data, search_tree.root.left.right.data)
+        self.assertEqual(
+            expected_root.left.right.data, search_tree.root.left.right.data
+        )
 
 
 if __name__ == "__main__":

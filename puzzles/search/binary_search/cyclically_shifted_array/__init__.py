@@ -1,5 +1,6 @@
 from typing import List
 
+
 def find_index_of_smallest_number(numbers: List[int]) -> int:
     """
     Finds the index of the smallest number in a cyclically shifted array

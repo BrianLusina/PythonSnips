@@ -36,6 +36,7 @@ def check_permutation_with_sorting(input_str_1: str, input_str_2: str) -> bool:
 
     return True
 
+
 def check_permutation_with_map(input_str_1: str, input_str_2: str) -> bool:
     """
     Check if two strings are permutations of each other.

@@ -3,7 +3,9 @@ from typing import List, TypeVar
 T = TypeVar("T")
 
 
-def intersect(list_one: List[T], list_two: List[T], include_duplicates: bool = True) -> List[T]:
+def intersect(
+    list_one: List[T], list_two: List[T], include_duplicates: bool = True
+) -> List[T]:
     """
     Given two arrays, find their intersection. This assumes that the lists are not sorted. First sorting takes place
     on both lists which will incur a cost of O(nlog(n)) + O(mlog(m)) depending on the algorithm used. Time will also
@@ -35,7 +37,10 @@ def intersect(list_one: List[T], list_two: List[T], include_duplicates: bool = T
             if include_duplicates:
                 result.append(first_element)
             else:
-                if pointer_one == 0 or first_element != sorted_list_one[pointer_one - 1]:
+                if (
+                    pointer_one == 0
+                    or first_element != sorted_list_one[pointer_one - 1]
+                ):
                     result.append(first_element)
             pointer_one += 1
             pointer_two += 1

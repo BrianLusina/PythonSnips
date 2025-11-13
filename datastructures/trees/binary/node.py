@@ -9,11 +9,11 @@ class BinaryTreeNode(TreeNode):
     """
 
     def __init__(
-            self,
-            data: T,
-            left: Optional["BinaryTreeNode"] = None,
-            right: Optional["BinaryTreeNode"] = None,
-            key: Optional[Any] = None
+        self,
+        data: T,
+        left: Optional["BinaryTreeNode"] = None,
+        right: Optional["BinaryTreeNode"] = None,
+        key: Optional[Any] = None,
     ):
         super().__init__(data, key)
         self.left: Optional[BinaryTreeNode] = left

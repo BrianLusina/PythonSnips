@@ -45,7 +45,11 @@ class MergeSortedLinkedListsTestCase(unittest.TestCase):
         for data in l3:
             linked_list_three.append(data)
 
-        linked_lists = [linked_list_one.head, linked_list_two.head, linked_list_three.head]
+        linked_lists = [
+            linked_list_one.head,
+            linked_list_two.head,
+            linked_list_three.head,
+        ]
         actual = merge_k_lists(linked_lists)
         self.assertIsNotNone(actual)
 
@@ -59,5 +63,5 @@ class MergeSortedLinkedListsTestCase(unittest.TestCase):
         self.assertEqual(expected, actual_data)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

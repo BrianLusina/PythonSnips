@@ -37,6 +37,7 @@ def sort_colors(colors: List[int]) -> List[int]:
 
     return colors
 
+
 def sort_colors_v2(colors: List[int]) -> List[int]:
     """
     Sorts a list of 0s, 1s, and 2s in place using two pointers

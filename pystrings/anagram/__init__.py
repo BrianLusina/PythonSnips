@@ -83,7 +83,6 @@ class Anagrams:
                     res.append(x)
         return res
 
-
     def anagram_count(self, parent, child):
         """
         Counts the number of times the anagram of a child string appears in a parent string

@@ -124,7 +124,7 @@ class FindDuplicateWithFastAndSlowPointersTestCases(unittest.TestCase):
 
     def test_11(self):
         """nums = [1,3,4,2,2] should return 2"""
-        nums = [1,3,4,2,2]
+        nums = [1, 3, 4, 2, 2]
         expected = 2
 
         actual = find_duplicate_floyd_algo(nums)
@@ -133,7 +133,7 @@ class FindDuplicateWithFastAndSlowPointersTestCases(unittest.TestCase):
 
     def test_12(self):
         """nums = [1,3,6,2,7,3,5,4] should return 3"""
-        nums = [1,3,6,2,7,3,5,4]
+        nums = [1, 3, 6, 2, 7, 3, 5, 4]
         expected = 3
 
         actual = find_duplicate_floyd_algo(nums)
@@ -142,7 +142,7 @@ class FindDuplicateWithFastAndSlowPointersTestCases(unittest.TestCase):
 
     def test_13(self):
         """nums = [1,2,2] should return 2"""
-        nums = [1,2,2]
+        nums = [1, 2, 2]
         expected = 2
 
         actual = find_duplicate_floyd_algo(nums)
