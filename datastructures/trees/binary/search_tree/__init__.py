@@ -12,6 +12,36 @@ class BinarySearchTree(BinaryTree):
         super().__init__(root)
         self.stack = DynamicSizeStack()
 
+    @staticmethod
+    def construct_bst(items: List[T]) -> Optional['BinarySearchTree']:
+        """
+        Constructs a binary search tree from a sorted list of items.
+
+        This method works by recursively finding the middle element of the list and assigning it to the root of the tree.
+        The left and right subtrees are then constructed by recursively calling the method on the left and right halves
+        of the list.
+
+        @param items: A sorted list of items to construct the tree from.
+        @return: A binary search tree constructed from the items.
+        """
+        if not items:
+            return None
+
+        def construct_bst_helper(left: int, right: int) -> Optional[BinaryTreeNode]:
+            # base case for the method if the left is greater than the right
+            if left > right:
+                return None
+
+            # Find the middle index - this element becomes the root
+            # Using (left + right) // 2 ensures we get the left-middle for even-length arrays
+            mid = (left + right) // 2
+            root = BinaryTreeNode(items[mid])
+            root.left = construct_bst_helper(left, mid - 1)
+            root.right = construct_bst_helper(mid + 1, right)
+            return root
+
+        return BinarySearchTree(root=construct_bst_helper(0, len(items) - 1))
+
     def insert_node(self, data: T):
         """
         Inserts a node in a BST given an element
