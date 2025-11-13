@@ -1,6 +1,7 @@
 ## Python Snippets
 
 [![Build Status](https://travis-ci.org/BrianLusina/Python_Snippets.svg?branch=master)](https://travis-ci.org/BrianLusina/Python_Snippets)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/11cfc8e125c54bdb833fe19ed9ddad72)](https://app.codacy.com/gh/BrianLusina/Python_Snippets/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 Repository for some of my simple [Python](https://www.python.org/ "Python") functions and snippets. Each directory
 and/or python package has a readme for more information about the Python program
