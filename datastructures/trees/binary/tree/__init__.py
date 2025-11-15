@@ -1,5 +1,5 @@
 import math
-from typing import Optional, List, Any, Generator, Dict, Iterator
+from typing import Optional, List, Any, Generator, Dict, Iterator, Tuple
 from collections import defaultdict, deque
 from itertools import chain
 
@@ -650,7 +650,7 @@ class BinaryTree(Tree):
             return 0
 
         path_length = 0
-        stack = [(self.root, 0, None)]
+        stack: List[Tuple[BinaryTreeNode | None, int, str | None]] = [(self.root, 0, None)]
 
         while stack:
             node, length, last = stack.pop()
@@ -673,6 +673,56 @@ class BinaryTree(Tree):
                 path_length = max(path_length, length)
 
         return path_length
+
+    def zig_zag_level_order(self) -> List[List[BinaryTreeNode]]:
+        """
+        Perform zigzag level order traversal of a binary tree.
+
+        Returns:
+            List[List[BinaryTreeNode]] - zigzag level order traversal
+
+        Time Complexity: O(n) where n is the number of nodes
+        Space Complexity: O(w) where w is the maximum width of the tree
+        """
+        if not self.root:
+            return []
+        # start by adding the root node to the result
+        result: List[List[BinaryTreeNode]] = []
+
+        # traverse the tree from the root moving down level by level and adding the nodes in zig zag manner. the first
+        # level will start with the left and then go right, the iteration will change direction on each level
+        # we use a queue to traverse the tree level by level
+        queue = deque([self.root])
+
+        # starting at zero, because the tree levels are counted from 0
+        level_number = 0
+
+        while queue:
+            level_size = len(queue)
+            current_level = []
+
+            for i in range(level_size):
+                # popleft allows FIFO behavior removing from the front
+                node = queue.popleft()
+                current_level.append(node)
+
+                # add children for next level
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+
+            # if level number is odd reverse the list, every odd level is reversed
+            if level_number % 2 == 1:
+                result.append(current_level[::-1])
+            else:
+                # otherwise add the current level
+                result.append(current_level)
+
+            # add a level and proceed
+            level_number += 1
+
+        return result
 
     def right_view(self) -> List[T]:
         """Return a list of values representing the right view of a binary tree
