@@ -694,7 +694,7 @@ class BinaryTree(Tree):
         # we use a queue to traverse the tree level by level
         queue = deque([self.root])
 
-        # starting at one, because the root node is already in the result
+        # starting at zero, because the tree levels are counted from 0
         level_number = 0
 
         while queue:
@@ -715,9 +715,9 @@ class BinaryTree(Tree):
             # if level number is odd reverse the list, every odd level is reversed
             if level_number % 2 == 1:
                 result.append(current_level[::-1])
-
-            # otherwise add the current level
-            result.append(current_level)
+            else:
+                # otherwise add the current level
+                result.append(current_level)
 
             # add a level and proceed
             level_number += 1
