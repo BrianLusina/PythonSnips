@@ -22,8 +22,8 @@ class DisjointSetUnion:
         Merges the sets containing elements 'i' and 'j'.
         Returns True if a merge occurred, False if they were already in the same set.
         """
-        root_i = self.find(i) # 0
-        root_j = self.find(j) # 1
+        root_i = self.find(i)
+        root_j = self.find(j)
 
         if root_i != root_j:
             # Union by rank: attach the smaller tree to the larger tree

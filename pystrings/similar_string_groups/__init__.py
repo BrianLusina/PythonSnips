@@ -67,7 +67,10 @@ def are_similar(s1, s2):
 
 def num_similar_groups_2(strs: List[str]) -> int:
     n = len(strs)
-    uf = DisjointSetUnion(n)
+    if n == 0:
+        return 0
+
+    uf = UnionFind(n)
 
     for i in range(n):
         for j in range(i + 1, n):
