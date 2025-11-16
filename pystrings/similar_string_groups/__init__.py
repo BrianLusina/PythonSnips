@@ -36,8 +36,9 @@ def num_similar_groups(strs: List[str]) -> int:
             j = positions_that_differ[1]
             return s1[i] == s2[j] and s1[j] == s2[i]
 
-        # Must have 0 diffs (identical) or 2 diffs (one swap)
-        return diff_count == 0 or diff_count == 2
+        # At this point, diff_count is either 0 or 1
+        # Only 0 differences (identical strings) are similar
+        return diff_count == 0
 
     # Iterate over all unique pairs of strings
     for i in range(strs_len):
