@@ -11,6 +11,17 @@ def longest_self_contained_substring(s: str) -> int:
     Returns:
         int: The length of the longest self-contained substring, or -1 if no such substring exists.
 
+    Examples:
+        >>> longest_self_contained_substring("xyyx")
+        2
+        >>> longest_self_contained_substring("xyxy")
+        -1
+        >>> longest_self_contained_substring("abacd")
+        4
+
+    Note:
+        This implementation uses a brute-force approach with O(n³) time complexity.
+        For better performance, consider using max_substring_length() which runs in O(n).
     """
     n = len(s)
 
