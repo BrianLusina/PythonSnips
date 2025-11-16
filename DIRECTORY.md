@@ -729,6 +729,8 @@
     * [Test Reverse Vowels](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/reverse_vowels/test_reverse_vowels.py)
   * Reverse Words
     * [Test Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/reverse_words/test_reverse_words.py)
+  * Similar String Groups
+    * [Test Similar String Groups](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/similar_string_groups/test_similar_string_groups.py)
   * Spreadsheet Encoding
     * [Test Spreadsheet Encode](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/spreadsheet_encoding/test_spreadsheet_encode.py)
   * String Compression
