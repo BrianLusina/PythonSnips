@@ -52,24 +52,33 @@ def longest_self_contained_substring(s: str) -> int:
     return max_length
 
 
-def max_substring_length(s):
+def max_substring_length(s: str) -> int:
     """
     Finds the length of the longest substring of s that is self-contained.
 
     A self-contained substring is one in which all characters only appear within the substring.
 
-    The function works by iterating over all possible substrings of s and checking if each one is self-contained.
-
-    It does this by keeping track of the first and last occurrence of each character in s. It then checks if each
-    character in a substring appears outside of the substring's range. If it does, the substring is not self-contained.
-
-    Finally, it returns the length of the longest self-contained substring it found.
+    The function uses an optimized window expansion approach. For each unique character as a starting point,
+    it defines an initial window from the character's first to last occurrence. The window is expanded to include
+    all occurrences of characters within it, and is invalidated if any character's first occurrence lies before
+    the window start.
 
     Parameters:
         s (str): The string to find the longest self-contained substring of
 
     Returns:
         int: The length of the longest self-contained substring of s
+
+    Examples:
+        >>> max_substring_length("xyyx")
+        2
+        >>> max_substring_length("xyxy")
+        -1
+        >>> max_substring_length("abacd")
+        4
+
+    Note:
+        Time complexity: O(n), Space complexity: O(1) for fixed character set size.
     """
     first = {}
     last = {}
