@@ -711,6 +711,8 @@
     * [Test Is Unique](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/is_unique/test_is_unique.py)
   * Issubsequence
     * [Test Is Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/issubsequence/test_is_subsequence.py)
+  * Longest Self Contained Substring
+    * [Test Longest Self Contained Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_self_contained_substring/test_longest_self_contained_substring.py)
   * Look And Say Sequence
     * [Test Look And Say Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/look_and_say_sequence/test_look_and_say_sequence.py)
   * Max Vowels In Substring
