@@ -1,7 +1,7 @@
 from typing import Optional, Any, List
-from .. import FibonacciHeap
-from ..node import FibonacciHeapNode
-from ..utils import floor_log
+from datastructures.trees.heaps.fibonacci.fibonacci_heap import FibonacciHeap
+from datastructures.trees.heaps.fibonacci.node import FibonacciHeapNode
+from datastructures.trees.heaps.fibonacci.utils import floor_log
 
 
 class FibonacciMaxHeap(FibonacciHeap):

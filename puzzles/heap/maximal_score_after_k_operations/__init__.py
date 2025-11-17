@@ -10,7 +10,7 @@ def max_score(nums: List[int], k: int) -> int:
     if len(nums) == 0:
         return score
 
-    # a heapq provides a in-heap, so we'll have to use negative values to simulate a max-heap
+    # a heapq provides a min-heap, so we'll have to use negative values to simulate a max-heap
     # Create a max-heap by negating all values (heapq is a min-heap)
     # This allows us to efficiently get the maximum element each time
     max_heap = [-num for num in nums]

@@ -1,6 +1,6 @@
 from typing import Any
 
-from datastructures.trees.heaps import ArrayBasedHeap
+from datastructures.trees.heaps.array_heap import ArrayBasedHeap
 
 
 class MinArrayBasedHeap(ArrayBasedHeap):
@@ -11,7 +11,7 @@ class MinArrayBasedHeap(ArrayBasedHeap):
     def __init__(self):
         super().__init__()
 
-    def insert_data(self, value: Any):
+    def insert(self, value: Any):
         """
         Inserts a value into the heap
         """
