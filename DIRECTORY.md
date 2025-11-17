@@ -527,6 +527,8 @@
     * Unique Number Of Occurrences
       * [Test Unique Occurrences](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hashmap/unique_number_of_occurrences/test_unique_occurrences.py)
   * Heap
+    * Maximal Score After K Operations
+      * [Test Maximal Score](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/maximal_score_after_k_operations/test_maximal_score.py)
     * Maximum Subsequence Score
       * [Test Max Subsequence Score](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/maximum_subsequence_score/test_max_subsequence_score.py)
     * Min Cost Hire K Workers
