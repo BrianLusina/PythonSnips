@@ -285,16 +285,21 @@
     * Btree
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/btree/node.py)
     * Heaps
+      * [Array Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/array_heap.py)
       * Binary
         * Max Heap
           * [Max Array Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/binary/max_heap/max_array_heap.py)
+          * [Max Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/binary/max_heap/max_heap.py)
           * [Test Max Array Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/binary/max_heap/test_max_array_heap.py)
         * Min Heap
           * [Min Array Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/binary/min_heap/min_array_heap.py)
+          * [Min Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/binary/min_heap/min_heap.py)
           * [Test Min Array Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/binary/min_heap/test_min_array_heap.py)
       * Fibonacci
+        * [Fibonacci Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/fibonacci/fibonacci_heap.py)
         * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/fibonacci/node.py)
         * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/fibonacci/utils.py)
+      * [Heap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/heap.py)
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/node.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/heaps/utils.py)
     * Nary
