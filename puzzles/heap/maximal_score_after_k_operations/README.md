@@ -18,7 +18,7 @@ Repeat this process exactly k times and return the highest score you can achieve
 Constraints:
 
 - 1 ≤ nums.length, k ≤ 10^3
-- 1 ≤ nums[i] ≤ ≤10^5
+- 1 ≤ nums[i] ≤ 10^5
 
 ## Examples
 
