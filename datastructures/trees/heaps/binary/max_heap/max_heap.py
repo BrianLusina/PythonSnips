@@ -107,7 +107,7 @@ class MaxHeap(Heap):
         It is assumed that new_val is smaller than heap[i]
         """
         self.heap[index] = new_val
-        while index != 0 and self.heap[self.get_parent_index(index)] > self.heap[index]:
+        while index != 0 and self.heap[self.get_parent_index(index)].data > self.heap[index].data:
             # Swap heap[i] with heap[parent(i)]
             self.heap[index], self.heap[self.get_parent_index(index)] = (
                 self.heap[self.get_parent_index(index)],
