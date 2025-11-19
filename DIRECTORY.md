@@ -273,6 +273,9 @@
     * Minstack
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/minstack/test_min_stack.py)
     * [Test Stacks](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/test_stacks.py)
+  * Streams
+    * Stream Checker
+      * [Test Stream Checker](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/stream_checker/test_stream_checker.py)
   * Timemap
     * [Test Timemap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/timemap/test_timemap.py)
   * Trees
@@ -311,6 +314,9 @@
     * Ternary
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/node.py)
       * [Test Ternary Tree Paths](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/test_ternary_tree_paths.py)
+    * Trie
+      * [Trie](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/trie.py)
+      * [Trie Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/trie_node.py)
   * Tuples
     * [Named Tuples](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/tuples/named_tuples.py)
 
