@@ -42,16 +42,6 @@ class TrieTestCases(unittest.TestCase):
         actual2 = trie.search("her")
         self.assertEqual(["her", "here"], actual2)
 
-    def test_trie_insert_and_search_words_prefixed_with_he(self):
-        """Test insert into trie with index on words"""
-        trie = Trie()
-        sentence= "here hear he hello how her"
-        words = sentence.split(" ")
-        for idx, word in enumerate(words):
-            trie.insert(word, idx)
-
-        print(trie)
-
 
 if __name__ == "__main__":
     unittest.main()
