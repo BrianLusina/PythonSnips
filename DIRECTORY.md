@@ -715,6 +715,8 @@
     * [Test Greatest Common Divisor](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/greatest_common_divisor/test_greatest_common_divisor.py)
   * Inttostr
     * [Test Int To Str](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/inttostr/test_int_to_str.py)
+  * Is Prefix
+    * [Test Is Prefix Of Word](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/is_prefix/test_is_prefix_of_word.py)
   * Is Unique
     * [Test Is Unique](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/is_unique/test_is_unique.py)
   * Issubsequence
