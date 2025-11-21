@@ -58,7 +58,7 @@ class StreamChecker(object):
 
         # Iterate stream in reverse (newest character first)
         for character in reversed(self.stream):
-            # Check for dead end (critical for query logic)
+            # Check for dead-end (critical for query logic)
             if character not in current.children:
                 return False
 

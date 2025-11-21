@@ -113,6 +113,12 @@ class HappyNumberTestCase2(unittest.TestCase):
         actual = is_happy_number_2(number)
         self.assertFalse(actual)
 
+    def test_10(self):
+        """should return false for 20"""
+        number = 20
+        actual = is_happy_number_2(number)
+        self.assertFalse(actual)
+
 
 if __name__ == "__main__":
     unittest.main()

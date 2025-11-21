@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from datastructures.trees.trie.trie_node import TrieNode
 
 
@@ -6,24 +6,53 @@ class Trie:
     def __init__(self):
         self.root = TrieNode()
 
-    def insert(self, word: str) -> None:
+    def insert(self, word: str, index: Optional[int] = None) -> None:
+        """
+        Inserts a word into the Trie. This has an optional index argument that allows
+        us to track the index of the word in the original list. So, if inserting words from a list such as "The author
+        is smart", the index of "smart" would be 3. If this is not provided, i.e. None, then each node in the tree will
+        have an index of None. Note that for each character in the word, we update the index of the node to the index of
+        the word. For example:
+
+        sentence = "please playground player"
+
+        Insert "please" (index 0):
+            p(0) → l(0) → e(0) → a(0) → s(0) → e(0)
+
+        Insert "playground" (index 1):
+        p(0) → l(0) → a(1) → y(1) → g(1) → ...
+                 ↘
+                  e(0) → a(0) → s(0) → e(0)
+
+        Insert "player" (index 2):
+        p(0) → l(0) → a(1) → y(1) → ...
+                              ↘
+                               e(2) → r(2)
+
+        Index then tracks the earliest index of the word in the original list. So, for the example above, the index of
+        "player" would be 2, not 0.
+
+        Parameters:
+            word (str): The word to insert
+            index (Optional[int]): The index of the word (default is None)
+
+        Returns:
+            None
+        """
         curr = self.root
 
         for char in word:
-            if char in curr.children:
-                curr = curr.children[char]
-            else:
-                new_node = TrieNode()
-                curr.children[char] = new_node
-                curr = new_node
+            curr = curr.children[char]
+            if index:
+                curr.index = min(curr.index or float("inf"), index)
 
         curr.is_end = True
 
     def search(self, word: str) -> List[str]:
-        curr = self.root
-
         if len(word) == 0:
             return []
+
+        curr = self.root
 
         for char in word:
             if char in curr.children:
@@ -35,10 +64,10 @@ class Trie:
 
         def dfs(node: TrieNode, prefix: str) -> None:
             if node.is_end:
-                output.append((prefix + node.char))
+                output.append((prefix + "".join(node.children.keys())))
 
             for child in node.children.values():
-                dfs(child, prefix + node.char)
+                dfs(child, prefix + "".join(node.children.keys()))
 
         dfs(curr, word[:-1])
         return output
@@ -55,3 +84,6 @@ class Trie:
             curr = curr.children[char]
 
         return True
+
+    def __repr__(self):
+        return f"Trie(root={self.root})"
