@@ -1,4 +1,4 @@
-from typing import DefaultDict
+from typing import DefaultDict, Optional
 from collections import defaultdict
 
 
@@ -18,6 +18,45 @@ class TrieNode:
         """
         self.children: DefaultDict[str, TrieNode] = defaultdict(TrieNode)
         self.is_end = False
+        self.index: Optional[int] = None
 
     def __repr__(self):
-        return f"TrieNode({self.children.items()}, {self.is_end})"
+        return f"TrieNode(children={self.children.items()}, index={self.index}, is_end={self.is_end})"
+
+    def insert(self, word: str, index: int):
+        """
+        Inserts a word into the TrieNode.
+
+        Parameters:
+            word (str): The word to insert
+            index (int): The index of the word
+
+        Returns:
+            None
+        """
+        curr = self
+        for char in word:
+            curr = curr.children[char]
+            curr.index = min(curr.index or float("inf"), index)
+        curr.is_end = True
+
+    def search_prefix(self, prefix: str) -> int:
+        """
+        Searches for a prefix in the TrieNode.
+
+        Parameters:
+            prefix (str): The prefix to search for
+
+        Returns:
+            int: The index of the word if the prefix is found, -1 otherwise
+        """
+        current = self
+
+        for char in prefix:
+            if char not in current.children:
+                return -1
+
+            # Traverse to the next node
+            current = current.children[char]
+
+        return current.index if current.index is not None else -1
