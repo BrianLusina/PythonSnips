@@ -23,6 +23,8 @@
       * [Test Is Valid Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/subsequence/test_is_valid_subsequence.py)
     * Two Sum
       * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/two_sum/test_two_sum.py)
+    * Two Sum Less K
+      * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/two_sum_less_k/test_two_sum.py)
   * Backtracking
     * Combination
       * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
