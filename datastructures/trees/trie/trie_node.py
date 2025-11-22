@@ -59,4 +59,4 @@ class TrieNode:
             # Traverse to the next node
             current = current.children[char]
 
-        return current.index
+        return current.index if current.index is not None else -1
