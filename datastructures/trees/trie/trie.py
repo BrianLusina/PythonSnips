@@ -43,7 +43,7 @@ class Trie:
 
         for char in word:
             curr = curr.children[char]
-            if index:
+            if index is not None:
                 curr.index = min(curr.index or float("inf"), index)
 
         curr.is_end = True
