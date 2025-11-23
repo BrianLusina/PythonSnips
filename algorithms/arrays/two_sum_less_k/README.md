@@ -15,7 +15,6 @@ Constraints
 ![Example 2](./images/examples/two_sum_less_k_example_2.png)
 ![Example 3](./images/examples/two_sum_less_k_example_3.png)
 ![Example 4](./images/examples/two_sum_less_k_example_4.png)
-![Example 5](./images/examples/two_sum_less_k_example_5.png)
 
 ## Related Topics
 
