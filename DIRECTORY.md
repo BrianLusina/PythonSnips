@@ -93,6 +93,8 @@
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
   * Search
     * Binary Search
+      * Maxruntime N Computers
+        * [Test Max Runtime](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/maxruntime_n_computers/test_max_runtime.py)
       * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/test_binary_search.py)
     * Interpolation
       * [Test Interpolation Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/interpolation/test_interpolation_search.py)
