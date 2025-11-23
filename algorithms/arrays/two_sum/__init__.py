@@ -27,6 +27,7 @@ def two_sum(numbers: List[int], target: int) -> List[int]:
         if complement in m:
             return [m[complement], idx]
         m[num] = idx
+    return []
 
 
 def two_sum_with_pointers(numbers: List[int], target: int) -> List[int]:
