@@ -650,7 +650,9 @@ class BinaryTree(Tree):
             return 0
 
         path_length = 0
-        stack: List[Tuple[BinaryTreeNode | None, int, str | None]] = [(self.root, 0, None)]
+        stack: List[Tuple[BinaryTreeNode | None, int, str | None]] = [
+            (self.root, 0, None)
+        ]
 
         while stack:
             node, length, last = stack.pop()

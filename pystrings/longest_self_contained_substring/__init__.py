@@ -45,7 +45,7 @@ def longest_self_contained_substring(s: str) -> int:
                 continue
 
             # Check if this substring is self-contained
-            substring = s[start:end + 1]
+            substring = s[start : end + 1]
             is_self_contained = True
 
             # For each character in the substring, verify it doesn't appear outside

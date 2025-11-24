@@ -52,6 +52,7 @@ def num_similar_groups(strs: List[str]) -> int:
     # The final count of disjoint sets is the number of groups
     return uf.get_count()
 
+
 # Helper: Decide if two strings are similar
 def are_similar(s1, s2):
     diff = []
@@ -61,9 +62,8 @@ def are_similar(s1, s2):
             if len(diff) > 2:
                 return False
 
-    return (len(diff) == 0) or (
-        len(diff) == 2 and diff[0] == diff[1][::-1]
-    )
+    return (len(diff) == 0) or (len(diff) == 2 and diff[0] == diff[1][::-1])
+
 
 def num_similar_groups_2(strs: List[str]) -> int:
     n = len(strs)
