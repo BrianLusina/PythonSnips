@@ -28,9 +28,11 @@ class Hexadecimal:
         # if c in hexdigits[10: len(hexdigits) - 6] is equivalent to abcdef
         # converts each character in hexa to digit
         hex_list = [
-            ord(c) - ord("a") + 10
-            if c in hexdigits[10 : len(hexdigits) - 6]
-            else ord(c) - ord("0")
+            (
+                ord(c) - ord("a") + 10
+                if c in hexdigits[10 : len(hexdigits) - 6]
+                else ord(c) - ord("0")
+            )
             for c in hexa
         ]
 

@@ -1,5 +1,8 @@
 import unittest
-from datastructures.trees.binary.utils import lowest_common_ancestor, lowest_common_ancestor_ptr
+from datastructures.trees.binary.utils import (
+    lowest_common_ancestor,
+    lowest_common_ancestor_ptr,
+)
 from datastructures.trees.binary.node import BinaryTreeNode
 
 
