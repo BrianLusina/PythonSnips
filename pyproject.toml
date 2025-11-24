@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pythonsnips"
 version = "0.1.0"
-description = ""
+description = "Algorithms, data structures and code snippets written in Python"
 authors = ["BrianLusina <12752833+BrianLusina@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
@@ -12,6 +12,7 @@ parameterized = "^0.9.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3.5"
+black = "^25.11.0"
 
 [tool.poetry.group.test.dependencies]
 pytest-benchmark = "^5.1.0"

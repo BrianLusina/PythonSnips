@@ -5,7 +5,9 @@ from datastructures.trees.node import TreeNode, T
 
 class BinaryTreeNode(TreeNode):
     """
-    Binary tree node class which will implement Binary tree
+    Binary tree node class which will represents a Binary tree node in a binary tree. A binary tree node only has 2
+    children, named left and right, both are optional and if none exists, this is assumed to be a leaf node in a binary
+    tree. This allows to add a pointer to the parent node to allow for easy traversal of the tree upwards from this node
     """
 
     def __init__(
@@ -14,8 +16,21 @@ class BinaryTreeNode(TreeNode):
         left: Optional["BinaryTreeNode"] = None,
         right: Optional["BinaryTreeNode"] = None,
         key: Optional[Any] = None,
-    ):
-        super().__init__(data, key)
+        parent: Optional["BinaryTreeNode"] = None,
+    ) -> None:
+        """
+        Constructor for BinaryTreeNode class. This will create a new node with the provided data and optional
+        left and right children. The key parameter is used to set a key for the node, if not provided then a hash
+        of the data is used.
+
+        Args:
+            data (T): Value to be stored in the node
+            left (Optional[BinaryTreeNode]): Left child of the node
+            right (Optional[BinaryTreeNode]): Right child of the node
+            key (Optional[Any]): Key for the node, if not provided a hash of the data is used
+            parent (Optional[BinaryTreeNode]): Parent of the node
+        """
+        super().__init__(data, key, parent)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
 
@@ -146,7 +161,7 @@ class BinaryTreeNode(TreeNode):
         return self.right
 
     @property
-    def children(self) -> List["BinaryTreeNode"]:
+    def children(self) -> List["BinaryTreeNode"] | None:
         """Returns children of this node.
         Returns:
             List: children of this node in a list
@@ -182,3 +197,6 @@ class BinaryTreeNode(TreeNode):
             return True
 
         return False
+
+    def __hash__(self):
+        return hash(self.data)

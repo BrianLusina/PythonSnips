@@ -31,5 +31,5 @@ class StreamCheckerTestCase(unittest.TestCase):
         self.assertFalse(stream.query("b"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

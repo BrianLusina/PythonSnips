@@ -22,8 +22,14 @@ class SimilarStringGroupsTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_4(self):
-        strs = ["fgtdvepeqcfajhlzkwlpuhrwfcueqfbs","fgcdvppeqcfajhlzkwluehrwftuefqbs","fgtdvepeqcfajhlzkwlpuhrwfcuefqbs",
-                "fgcdvepeqcfajhlzkwluphrwftuefqbs","fgldvepeqcfajhlzkwcuphrwftuefqbs","fgtdvefeqcpajhlzkwlpuhrwfcuefqbs"]
+        strs = [
+            "fgtdvepeqcfajhlzkwlpuhrwfcueqfbs",
+            "fgcdvppeqcfajhlzkwluehrwftuefqbs",
+            "fgtdvepeqcfajhlzkwlpuhrwfcuefqbs",
+            "fgcdvepeqcfajhlzkwluphrwftuefqbs",
+            "fgldvepeqcfajhlzkwcuphrwftuefqbs",
+            "fgtdvefeqcpajhlzkwlpuhrwfcuefqbs",
+        ]
         expected = 2
         actual = num_similar_groups(strs)
         self.assertEqual(expected, actual)
@@ -49,12 +55,18 @@ class SimilarStringGroups2TestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_4(self):
-        strs = ["fgtdvepeqcfajhlzkwlpuhrwfcueqfbs","fgcdvppeqcfajhlzkwluehrwftuefqbs","fgtdvepeqcfajhlzkwlpuhrwfcuefqbs",
-                "fgcdvepeqcfajhlzkwluphrwftuefqbs","fgldvepeqcfajhlzkwcuphrwftuefqbs","fgtdvefeqcpajhlzkwlpuhrwfcuefqbs"]
+        strs = [
+            "fgtdvepeqcfajhlzkwlpuhrwfcueqfbs",
+            "fgcdvppeqcfajhlzkwluehrwftuefqbs",
+            "fgtdvepeqcfajhlzkwlpuhrwfcuefqbs",
+            "fgcdvepeqcfajhlzkwluphrwftuefqbs",
+            "fgldvepeqcfajhlzkwcuphrwftuefqbs",
+            "fgtdvefeqcpajhlzkwlpuhrwfcuefqbs",
+        ]
         expected = 2
         actual = num_similar_groups_2(strs)
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
