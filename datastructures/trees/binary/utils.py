@@ -45,6 +45,21 @@ def lowest_common_ancestor(
 def lowest_common_ancestor_ptr(
     node_one: BinaryTreeNode, node_two: BinaryTreeNode
 ) -> BinaryTreeNode | None:
+    """
+    Returns the lowest common ancestor of 2 nodes in the Binary Tree using a two-pointer approach.
+
+    This algorithm uses two pointers starting at node_one and node_two. Both pointers move up the tree
+    via parent pointers. When a pointer reaches the root (parent is None), it switches to the other
+    starting node. By switching starting points, both pointers travel the same total distance and meet
+    at the lowest common ancestor.
+
+    Time Complexity: O(h) where h is the height of the tree
+    Space Complexity: O(1) as only two pointers are used
+
+    :param node_one: BinaryTreeNode
+    :param node_two: BinaryTreeNode
+    :return: BinaryTreeNode | None - The lowest common ancestor, or None if not found
+    """
     ptr1, ptr2 = node_one, node_two
 
     while ptr1 != ptr2:
