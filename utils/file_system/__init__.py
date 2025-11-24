@@ -41,7 +41,8 @@ class MyFileSystem:
         :return: dict with the key as the directory name and value as the base name
         """
         return {
-            "Dir: " + os.path.dirname(self.make_absolute_path()): "Base"
+            "Dir: "
+            + os.path.dirname(self.make_absolute_path()): "Base"
             + os.path.basename(self.make_absolute_path())
         }
 

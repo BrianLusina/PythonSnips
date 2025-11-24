@@ -78,7 +78,9 @@ _TEAM_GAME_OP_SUMMARY = """
     ON cur.matchid = opp.matchid
     WHERE cur.teamid != opp.teamid
     ORDER BY cur.matchid, cur.teamid
-      """ % {"team_game_summary": match_stats.team_game_summary_query()}
+      """ % {
+    "team_game_summary": match_stats.team_game_summary_query()
+}
 
 
 def get_match_history(history_size):
@@ -284,7 +286,9 @@ def get_wc_history_query(history_size):
     return """
         SELECT * FROM (%(history_query)s) WHERE competitionid = 4
         ORDER BY timestamp DESC, matchid, is_home
-        """ % {"history_query": get_history_query(history_size)}
+        """ % {
+        "history_query": get_history_query(history_size)
+    }
 
 
 def get_wc_features(history_size):
