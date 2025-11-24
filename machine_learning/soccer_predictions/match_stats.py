@@ -65,7 +65,9 @@ WHERE blck = 0 AND og = 0 AND penfk = 0)
 WHERE dist < 40)
 GROUP BY matchid, teamid
 ORDER BY matchid, teamid
-   """ % {"touch_table": _TOUCH_TABLE}
+   """ % {
+    "touch_table": _TOUCH_TABLE
+}
 
 # Subquery to compute raw number of goals scored. Does not take
 # into account own-goals (i.e. if a player scores an own-goal against
