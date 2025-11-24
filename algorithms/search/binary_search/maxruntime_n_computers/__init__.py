@@ -49,7 +49,6 @@ def can_run_for(batteries: List[int], n: int, target_time: int) -> bool:
 
 
 def max_run_time_2(batteries: List[int], n: int) -> int:
-
     """
     Finds the maximum runtime that can power the computers for the given amount of time.
 
@@ -67,7 +66,7 @@ def max_run_time_2(batteries: List[int], n: int) -> int:
         usable = sum(min(b, mid) for b in batteries)
 
         if usable >= mid * n:
-          left = mid
+            left = mid
         else:
-          right = mid - 1
+            right = mid - 1
     return left

@@ -47,7 +47,7 @@ class DisjointSetUnion:
 
 class UnionFind:
     """A minimal Union-Find data structure with path compression."""
-    
+
     def __init__(self, size: int):
         """Initializes the data structure with 'size' elements."""
         if size <= 0:

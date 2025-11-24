@@ -4,7 +4,6 @@ from datastructures.trees.trie import TrieNode
 
 
 class StreamChecker(object):
-
     def __init__(self, words: List[str]):
         """
         Initializes a StreamChecker instance.

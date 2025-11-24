@@ -13,7 +13,7 @@ class BinarySearchTree(BinaryTree):
         self.stack = DynamicSizeStack()
 
     @staticmethod
-    def construct_bst(items: List[T]) -> Optional['BinarySearchTree']:
+    def construct_bst(items: List[T]) -> Optional["BinarySearchTree"]:
         """
         Constructs a binary search tree from a sorted list of items.
 
