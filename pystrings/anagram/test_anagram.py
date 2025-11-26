@@ -25,6 +25,20 @@ class IsAnagramTests(unittest.TestCase):
         actual = is_anagram(s1, s2)
         self.assertTrue(actual)
 
+    def test_super_and_upper(self):
+        """should return false for s1='super' and s2='upper'"""
+        s1 = "super"
+        s2 = "upper"
+        actual = is_anagram(s1, s2)
+        self.assertFalse(actual)
+
+    def test_spare_and_pears(self):
+        """should return true for s1='spare' and s2='pears'"""
+        s1 = "spare"
+        s2 = "pears"
+        actual = is_anagram(s1, s2)
+        self.assertTrue(actual)
+
 
 class AnagramTests(unittest.TestCase):
     def setUp(self):

@@ -1,5 +1,6 @@
-from typing import Dict
+from typing import DefaultDict
 from functools import reduce
+from collections import defaultdict
 from string import ascii_letters
 
 from pymath.primes.is_prime import is_prime_with_re
@@ -27,25 +28,19 @@ def is_anagram(s1: str, s2: str) -> bool:
     # This dictionary is used to keep track of the character count in the strings to check if the strings are anagrams
     # of each other, the character count must be equal in both strings. This enables the algorithm to keep track of this
     # count.
-    ht: Dict[str, int] = dict()
+    ht: DefaultDict[str, int] = defaultdict(int)
 
     # Loop through each character in the first string to count the number of characters and store them in the dictionary
     # this is linear, so, O(n) where n is the number of characters in the string as the loop has to iterate over each
     # character
     for char in s1:
-        if char in ht:
-            ht[char] += 1
-        else:
-            ht[char] = 1
+        ht[char] += 1
 
     # Loops through each character in the second string checking for the existence of that character in the already
     # populated dictionary. If a character, exists, the count is decremented, if not, the count is incremented. This
     # will be used to show the discrepancy in character count between the two strings
     for char in s2:
-        if char in ht:
-            ht[char] -= 1
-        else:
-            ht[char] = 1
+        ht[char] -= 1
 
     # Finally, check each key in the dictionary. If a given key's count is not equal to 0, then the algorithm exits
     # early as it's not possible to have a character count of more than 0 for strings that are anagrams, since the above
