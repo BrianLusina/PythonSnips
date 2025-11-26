@@ -321,6 +321,10 @@
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/node.py)
       * [Test Ternary Tree Paths](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/test_ternary_tree_paths.py)
     * Trie
+      * Suffix
+        * [Suffix Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/suffix/suffix_tree.py)
+        * [Suffix Tree Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/suffix/suffix_tree_node.py)
+        * [Types](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/suffix/types.py)
       * [Trie](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/trie.py)
       * [Trie Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/trie_node.py)
   * Tuples
@@ -727,6 +731,8 @@
     * [Test Is Unique](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/is_unique/test_is_unique.py)
   * Issubsequence
     * [Test Is Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/issubsequence/test_is_subsequence.py)
+  * Longest Common Suffix Queries
+    * [Test Longest Common Suffix Queries](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_common_suffix_queries/test_longest_common_suffix_queries.py)
   * Longest Self Contained Substring
     * [Test Longest Self Contained Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_self_contained_substring/test_longest_self_contained_substring.py)
   * Look And Say Sequence
