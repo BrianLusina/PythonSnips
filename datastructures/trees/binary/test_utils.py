@@ -8,6 +8,20 @@ from datastructures.trees.binary.node import BinaryTreeNode
 
 class LowestCommonAncestorTestCase(unittest.TestCase):
     def test_1(self):
+        """
+        Test to ensure that the lowest common ancestor function returns the correct node for a given binary tree.
+
+        The binary tree is structured as follows:
+            10
+            /   \
+           11     22
+          / \   / \
+         6   5  19  14
+        / \
+       13  15
+
+        The function should return the node with value 5, given the nodes with values 13 and 15.
+        """
         root = BinaryTreeNode(data=10)
 
         # left subtree
