@@ -249,6 +249,57 @@ class BinarySearchTree(BinaryTree):
 
         return current
 
+    def find_kth_largest(self, k: int) -> Optional[BinaryTreeNode]:
+        """
+        Finds the kth largest value in a binary search tree. This uses a reverse in order traversal moving from right
+        to root to left until the kth largest node can be found. We don't have to traverse the whole tree since binary
+        search trees are already ordered following the property of the right subtree has nodes which have the left
+        sub-tree always less than their parent and the right subtree has nodes with values that are either equal to or
+        greater than the parent. With this property in mind, we perform a reverse in order traversal to be able to move
+        from right to root to left to find the kth largest node in the tree.
+
+        Complexity:
+        Time: O(h + k): where h is the height of the tree and k is the input
+        Space: O(h): where h is the height of the tree.
+
+        Args:
+            k (int): The kth largest value to find
+        Returns:
+            Optional[BinaryTreeNode]: The kth largest node
+        """
+
+        # This is a helper class that helps to track the algorithm's progress of traversing the tree
+        class TreeInfo:
+            def __init__(self):
+                self.number_of_nodes_visited: int = 0
+                self.latest_visited_node: Optional[BinaryTreeNode] = None
+
+        def reverse_in_order_traverse(node: BinaryTreeNode, tree_information: TreeInfo):
+            """
+            Helper function to traverse the tree in reverse in order
+            Args:
+                node (BinaryTreeNode): The node to traverse
+                tree_information (TreeInfo): The tree information
+            """
+            # base case: if node is None or we've already found the kth largest
+            if not node or tree_information.number_of_nodes_visited >= k:
+                return
+
+            # traverse right subtree first for larger values
+            reverse_in_order_traverse(node.right, tree_information)
+
+            # Visit the current node if we haven't found k nodes yet
+            if tree_information.number_of_nodes_visited < k:
+                tree_information.number_of_nodes_visited += 1
+                tree_information.latest_visited_node = node
+
+            # traverse the left subtree for smaller values if needed
+            reverse_in_order_traverse(node.left, tree_information)
+
+        tree_info = TreeInfo()
+        reverse_in_order_traverse(self.root, tree_info)
+        return tree_info.latest_visited_node
+
     def find_closest_value_in_bst(self, target: T) -> Optional[BinaryTreeNode]:
         """
         Finds the closest value in the binary search tree to the given target value.
@@ -410,7 +461,7 @@ class BinarySearchTree(BinaryTree):
                 self.in_order_recurse(self.root.right)
         return result
 
-    def in_order_iterate(self) -> list:
+    def in_order_iterate(self) -> List[T]:
         """
         Iterative approach using a stack
         """
