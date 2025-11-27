@@ -12,6 +12,7 @@ class MinHeap(Heap):
         self.idx_of_element = {}
         if heap is None:
             heap = []
+        self.heap: List[HeapNode] = []
         self.heap = self.build_heap(heap)
         heapify(self.heap)
 
@@ -97,7 +98,7 @@ class MinHeap(Heap):
         """
         if data is None:
             raise TypeError("Data item can not be None")
-        node = HeapNode(data, data.__name__)
+        node = HeapNode(data)
         self.heap.append(node)
         self.__bubble_up(len(self.heap) - 1)
 
