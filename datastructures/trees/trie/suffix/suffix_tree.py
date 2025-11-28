@@ -10,6 +10,7 @@ class SuffixTree:
     Basically, this is a Trie optimized for suffix matching by storing reversed strings.
     Each node tracks the best candidate word for tie-breaking.
     """
+
     def __init__(self):
         super().__init__()
         self.root = SuffixTreeNode()
