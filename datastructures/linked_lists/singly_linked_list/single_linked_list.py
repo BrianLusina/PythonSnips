@@ -430,6 +430,67 @@ class SinglyLinkedList(LinkedList):
         tail_pointer.next = current_pointer
         return self.head
 
+    def reverse_between_with_dummy(self, left: int, right: int) -> Optional[SingleNode]:
+        """
+        Reverse linked list between left & right node positions using a dummy node
+
+        Algorithm steps:
+        - We initialize a dummy node, which will be helpful in scenarios where the reversal of the sublist starts from
+        the head of the list.
+        - We set the next node of dummy to point to the head of the list.
+        - We initialize a pointer, prev, to the dummy node. This pointer will help us reconnect the sublist to the
+        entire list after it has been reversed.
+        - We use a loop to traverse the list with the prev pointer and until it reaches the node immediately before the
+        sublist to be reversed.
+        - We initialize a curr pointer, which points to the node next to prev.
+        - Another loop is used to reverse the sublist. This loop iterates right - left times, which is the number of
+        nodes in the sublist minus one:
+            - We set next_node to curr.next, representing the node to be moved to the front of the reversed sublist.
+            - We update curr.next to next_node.next, effectively removing next_node from its current position in the
+            sublist.
+            - We set next_node.next to prev.next, inserting next_node at the beginning of the reversed sublist.
+            - We update prev.next to next_node, adjusting the pointer to next_node for the next iteration.
+
+        - Finally, we return dummy.next, which is the head of the modified linked list.
+
+        Args:
+            left (int): the starting position
+            right (int): the end position
+
+        Returns:
+            Optional[SingleNode]: the head of the reversed linked list
+        """
+        if left > right:
+            raise ValueError(f"left {left} cannot be greater than right {right}")
+
+        if self.head is None or self.head.next is None:
+            return self.head
+
+        if right > len(self):
+            raise ValueError(
+                f"right {right} cannot be greater than the length of the linked list {len(self)}"
+            )
+
+        if left == right:
+            return self.head
+
+        dummy = SingleNode(0)
+        dummy.next = self.head
+        prev = dummy
+
+        for _ in range(left - 1):
+            prev = prev.next
+
+        curr = prev.next
+
+        for _ in range(right - left):
+            next_node = curr.next
+            curr.next = next_node.next
+            next_node.next = prev.next
+            prev.next = next_node
+
+        return dummy.next
+
     def unshift(self, node_: SingleNode) -> SingleNode:
         if self.head:
             return node_
