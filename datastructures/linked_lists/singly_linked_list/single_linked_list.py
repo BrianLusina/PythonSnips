@@ -394,6 +394,9 @@ class SinglyLinkedList(LinkedList):
         if left > right:
             raise ValueError(f"left {left} cannot be greater than right {right}")
 
+        if left < 1 or right < 1:
+            raise ValueError("left and right must be positive integers")
+
         if self.head is None or self.head.next is None:
             return self.head
 
@@ -401,6 +404,9 @@ class SinglyLinkedList(LinkedList):
             raise ValueError(
                 f"right {right} cannot be greater than the length of the linked list {len(self)}"
             )
+
+        if left == right:
+            return self.head
 
         # Move the 2 pointers until they reach the proper starting point in the list
         current_pointer, previous_pointer = self.head, None
@@ -463,6 +469,9 @@ class SinglyLinkedList(LinkedList):
         if left > right:
             raise ValueError(f"left {left} cannot be greater than right {right}")
 
+        if left < 1 or right < 1:
+            raise ValueError("left and right must be positive integers")
+
         if self.head is None or self.head.next is None:
             return self.head
 
@@ -492,10 +501,9 @@ class SinglyLinkedList(LinkedList):
         return dummy.next
 
     def unshift(self, node_: SingleNode) -> SingleNode:
-        if self.head:
-            return node_
         node_.next = self.head
-        return node_
+        self.head = node_
+        return self.head
 
     def insert(self, node_, pos):
         counter = 1
