@@ -59,6 +59,7 @@ class MinHeap(Heap):
 
             self.__bubble_down(min_child_index)
 
+    # FIXME: fails on some instances with a KeyError, check the puzzle min_cost_connect_sticks
     def __bubble_up(self, idx: int):
         if idx == 0:
             return

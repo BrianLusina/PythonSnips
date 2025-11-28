@@ -1,4 +1,4 @@
-from typing import DefaultDict, Tuple
+from typing import DefaultDict
 from collections import defaultdict
 from datastructures.trees.trie.trie_node import TrieNode
 from datastructures.trees.trie.suffix.types import WordInfo, INF_WORD_INFO
@@ -10,6 +10,7 @@ class SuffixTreeNode(TrieNode):
     Each node stores its children and the index of the best word
     (shortest, earliest) that passes through this node.
     """
+
     def __init__(self):
         super().__init__()
         # index of best word passing through this node
@@ -18,4 +19,3 @@ class SuffixTreeNode(TrieNode):
         # Stores the best WordInfo (length, index) for any word that passes
         # through or ends at this node. Initialized to infinity.
         self.best_info: WordInfo = INF_WORD_INFO
-
