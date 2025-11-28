@@ -236,6 +236,7 @@
       * [Test Merge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/mergeklinkedlists/test_merge.py)
     * Singly Linked List
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/node.py)
+      * [Single Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/single_linked_list.py)
       * [Test Singly Linked Delete](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_delete.py)
       * [Test Singly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list.py)
       * [Test Singly Linked List Nth To Last](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_nth_to_last.py)
@@ -245,6 +246,7 @@
       * [Test Singly Linked List Rotate](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_rotate.py)
       * [Test Singly Linked Move Tail To Head](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_move_tail_to_head.py)
       * [Test Singly Linked Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_palindrome.py)
+      * [Test Singly Linked Revese](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_revese.py)
   * Lists
     * Bus Stops
       * [Test Bus Stops](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lists/bus_stops/test_bus_stops.py)
@@ -549,6 +551,8 @@
       * [Test Max Subsequence Score](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/maximum_subsequence_score/test_max_subsequence_score.py)
     * Min Cost Hire K Workers
       * [Test Min Cost To Hire Workers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/min_cost_hire_k_workers/test_min_cost_to_hire_workers.py)
+    * Min Cost To Connect Sticks
+      * [Test Min Cost Connect Sticks](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/min_cost_to_connect_sticks/test_min_cost_connect_sticks.py)
     * Total Cost Hire K Workers
       * [Test Total Cost Hire K Workers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/total_cost_hire_k_workers/test_total_cost_hire_k_workers.py)
   * Hidden Cubic Numbers
