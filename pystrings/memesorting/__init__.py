@@ -29,15 +29,3 @@ def memesorting(meme):
                 spelled_word += letter
 
     return receiver.get(letters[spelled_word], "Vlad")
-
-
-Test.assert_equals(memesorting("This is programmer meme ecause it has bug"), "Roma")
-Test.assert_equals(
-    memesorting("This is also programbur meme gecause it has needed key word"), "Roma"
-)
-Test.assert_equals(memesorting("This is edsigner meme cause it has key word"), "Danik")
-Test.assert_equals(
-    memesorting("This could be chemistry meme but our gey word boom is too late"),
-    "Roma",
-)
-Test.assert_equals(memesorting("This is meme"), "Vlad")
