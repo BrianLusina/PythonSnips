@@ -374,3 +374,20 @@ Visible nodes are 5, 6 & 8
 > For example: Node 4 is not visible since 5>4, similarly Node 3 is not visible since both 5>3 and 4>3. Node 8 is
 > visible since all 5<=8, 4<=8, and 8<=8.
 
+---
+
+## Minimum Camera Cover
+
+You are given the root of a binary tree. Cameras can be installed on any node, and each camera can monitor itself, its 
+parent, and its immediate children.
+
+Your task is to determine the minimum number of cameras required to monitor every node in the tree.
+
+Constraints:
+
+- The number of nodes in the tree is in the range [1, 1000].
+- Node.data == 0
+
+![Example 1](./images/examples/minimum_camera_cover_binary_tree_example_1.png)
+![Example 2](./images/examples/minimum_camera_cover_binary_tree_example_2.png)
+![Example 3](./images/examples/minimum_camera_cover_binary_tree_example_3.png)
