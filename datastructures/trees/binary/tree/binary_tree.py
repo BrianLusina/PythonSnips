@@ -862,7 +862,8 @@ class BinaryTree(Tree):
         Cameras can be placed at any node in the tree, and each camera covers its parent, itself, and its children.
         The greedy choice is made to place cameras as low as possible in the tree, ensuring that every node is monitored.
         The time complexity of this function is O(n), where n is the number of nodes in the tree.
-        The space complexity is O(h), where h is the height of the tree, since we use a recursive depth-first search approach.
+        The space complexity is O(h), where h is the height of the tree, since we use a recursive depth-first search
+        approach.
         """
         camera_count = [0]
 
