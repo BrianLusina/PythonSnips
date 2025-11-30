@@ -5,7 +5,9 @@ from datastructures.trees.binary.node import BinaryTreeNode
 
 class MinCameraCoverTestCase(unittest.TestCase):
     def test_1(self):
-        right = BinaryTreeNode(data=0, right=BinaryTreeNode(data=0), left=BinaryTreeNode(data=0))
+        right = BinaryTreeNode(
+            data=0, right=BinaryTreeNode(data=0), left=BinaryTreeNode(data=0)
+        )
         root = BinaryTreeNode(data=0, right=right)
         tree = BinaryTree(root)
         actual = tree.min_camera_cover()
@@ -20,8 +22,12 @@ class MinCameraCoverTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_3(self):
-        right = BinaryTreeNode(data=0, right=BinaryTreeNode(data=0), left=BinaryTreeNode(data=0))
-        left = BinaryTreeNode(data=0, right=BinaryTreeNode(data=0), left=BinaryTreeNode(data=0))
+        right = BinaryTreeNode(
+            data=0, right=BinaryTreeNode(data=0), left=BinaryTreeNode(data=0)
+        )
+        left = BinaryTreeNode(
+            data=0, right=BinaryTreeNode(data=0), left=BinaryTreeNode(data=0)
+        )
         root = BinaryTreeNode(data=0, right=right, left=left)
         tree = BinaryTree(root)
         actual = tree.min_camera_cover()
@@ -37,7 +43,12 @@ class MinCameraCoverTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_5(self):
-        left = BinaryTreeNode(data=0, right=BinaryTreeNode(data=0, left=BinaryTreeNode(data=0, right=BinaryTreeNode(data=0))))
+        left = BinaryTreeNode(
+            data=0,
+            right=BinaryTreeNode(
+                data=0, left=BinaryTreeNode(data=0, right=BinaryTreeNode(data=0))
+            ),
+        )
         root = BinaryTreeNode(data=0, left=left)
         tree = BinaryTree(root)
         actual = tree.min_camera_cover()
@@ -45,5 +56,5 @@ class MinCameraCoverTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
