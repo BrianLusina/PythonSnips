@@ -3,8 +3,8 @@ from collections import defaultdict
 from pprint import PrettyPrinter
 from typing import List, Set, Union, Generic, TypeVar
 from datastructures.stacks import Stack
-from .vertex import Vertex
-from .edge import Edge
+from datastructures.graphs.vertex import Vertex
+from datastructures.graphs.edge import Edge
 
 T = TypeVar("T")
 

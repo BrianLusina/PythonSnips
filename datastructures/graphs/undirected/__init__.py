@@ -1,8 +1,4 @@
-from typing import List
-
-from datastructures.graphs import Edge, Graph
+from datastructures.graphs.undirected.undirected_graph import UndirectedGraph
 
 
-class UnDirectedGraph(Graph):
-    def __init__(self, edge_list: List[Edge]):
-        super(UnDirectedGraph, self).__init__(edge_list)
+__all__ = ["UndirectedGraph"]
