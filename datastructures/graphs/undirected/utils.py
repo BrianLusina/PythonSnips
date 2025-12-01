@@ -79,7 +79,7 @@ def closest_node(n: int, edges: List[List[int]], query: List[List[int]]) -> List
 
         # Find the node on the path with minimum distance to target
         # If there's a tie, we want the one with the smallest index
-        min_distance = float('inf')
+        min_distance = float("inf")
         closest = -1
 
         for node in found_path:

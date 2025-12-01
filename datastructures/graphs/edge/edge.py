@@ -6,6 +6,7 @@ from uuid import uuid4
 
 T = TypeVar("T")
 
+
 class Edge(ABC, Generic[T]):
     """
     Edge representation of an abstract Edge in a Graph

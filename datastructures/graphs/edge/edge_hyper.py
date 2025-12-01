@@ -5,14 +5,19 @@ from .edge import Edge
 
 T = TypeVar("T")
 
+
 class HyperEdge(Edge, Generic[T]):
     """
     HyperEdge representation of a hyper-edge in a Graph where the edge connects to the multiple vertices
     """
 
-    def __init__(self, nodes: List[Any], weight: Optional[Union[int, float]] = None,
-                 properties: Optional[Dict[str, Any]] = None,
-                 identifier: AnyStr = uuid4()):
+    def __init__(
+        self,
+        nodes: List[Any],
+        weight: Optional[Union[int, float]] = None,
+        properties: Optional[Dict[str, Any]] = None,
+        identifier: AnyStr = uuid4(),
+    ):
         super().__init__(weight, properties, identifier)
         self.nodes = nodes
 

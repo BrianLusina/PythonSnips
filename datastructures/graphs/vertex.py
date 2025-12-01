@@ -27,7 +27,7 @@ class Vertex(Generic[T]):
         self.incoming_edges = incoming_edges
         self.outgoing_edges = outgoing_edges
         self.edges = self.incoming_edges.union(self.outgoing_edges)
-        self.adjacent_vertices: Dict[str, 'Vertex'] = {}
+        self.adjacent_vertices: Dict[str, "Vertex"] = {}
         self.properties = properties
 
     def __str__(self):
@@ -125,4 +125,3 @@ class Vertex(Generic[T]):
                 out_degrees += 1
 
         return out_degrees
-

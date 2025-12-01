@@ -5,14 +5,19 @@ from .edge import Edge
 
 T = TypeVar("T")
 
+
 class SelfEdge(Edge, Generic[T]):
     """
     Self-Edge representation of a self-edge in a Graph where the edge connects to the same vertex
     """
 
-    def __init__(self, node: Any, weight: Optional[Union[int, float]] = None,
-                 properties: Optional[Dict[str, Any]] = None,
-                 identifier: AnyStr = uuid4()):
+    def __init__(
+        self,
+        node: Any,
+        weight: Optional[Union[int, float]] = None,
+        properties: Optional[Dict[str, Any]] = None,
+        identifier: AnyStr = uuid4(),
+    ):
         super().__init__(weight, properties, identifier)
         self.node_one = node
 
