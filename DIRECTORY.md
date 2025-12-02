@@ -80,6 +80,8 @@
   * Graphs
     * Course Schedule
       * [Test Course Schedule](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/course_schedule/test_course_schedule.py)
+    * Frog Position After T Seconds
+      * [Test Frog Position After T Seconds](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/frog_position_after_t_seconds/test_frog_position_after_t_seconds.py)
   * Greedy
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
@@ -192,6 +194,9 @@
       * [Test Array Advance Game](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/array_advance_game/test_array_advance_game.py)
     * Array Diff
       * [Diff Elements In List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/array_diff/diff_elements_in_list.py)
+    * Contains Duplicates
+      * [Test Contains Nearby Almost Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/contains_duplicates/test_contains_nearby_almost_duplicate.py)
+      * [Test Contains Nearby Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/contains_duplicates/test_contains_nearby_duplicate.py)
     * Distinct
       * [Distinct Values](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/distinct/distinct_values.py)
     * Matrix
@@ -288,8 +293,10 @@
         * [Test Binary Search Tree Search](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_search.py)
       * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/test_utils.py)
       * Tree
+        * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
+        * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Serialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_serialize.py)
         * [Test Binary Tree Visible Nodes](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_visible_nodes.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/utils.py)
@@ -857,8 +864,6 @@
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
       * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_cascading_subsets.py)
-      * [Test Contains Nearby Almost Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_almost_duplicate.py)
-      * [Test Contains Nearby Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_contains_nearby_duplicate.py)
       * [Test Dynamic Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_dynamic_array.py)
       * [Test Find Unique](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_find_unique.py)
       * [Test Highest Rank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_highest_rank.py)
