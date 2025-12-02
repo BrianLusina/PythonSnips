@@ -24,7 +24,7 @@ Output: true
 Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such 
 that nums[i] == nums[j] and abs(i - j) <= k.
 
-Constrains:
+Constraints:
 
 - 1 <= nums.length <= 10^3
 - -10^3 <= nums[i] <= 10^3
