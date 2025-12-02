@@ -1,13 +1,60 @@
 import sys
-from typing import List
+from typing import List, Set
 
 
 def contains_nearby_duplicate(nums: List[int], k: int) -> bool:
+    """
+    Checks if there are any duplicate elements within k steps of each other
+    in the given list of numbers.
+
+    Args:
+        nums (List[int]): The list of numbers to check.
+        k (int): The maximum number of steps between duplicate elements.
+
+    Returns:
+        bool: True if there are any duplicate elements within k steps of each other, False otherwise.
+    """
+    # Dictionary to store the indices of the numbers we have seen so far
     d = dict()
     for i, n in enumerate(nums):
+        # If we have seen this number before and it is within k steps of the current position
         if n in d and i - d[n] <= k:
             return True
+        # Store the index of the current number
         d[n] = i
+    # If we have not found any duplicate elements within k steps of each other
+    return False
+
+
+def contains_nearby_duplicates_2(nums: List[int], k: int) -> bool:
+    """
+    Checks if there are any duplicate elements within k steps of each other
+    in the given list of numbers.
+
+    Args:
+        nums (List[int]): The list of numbers to check.
+        k (int): The maximum number of steps between duplicate elements.
+
+    Returns:
+        bool: True if there are any duplicate elements within k steps of each other, False otherwise.
+    """
+    # Set to store the numbers we have seen so far
+    seen: Set[int] = set()
+    # Iterate over the list of numbers
+    for idx in range(len(nums)):
+        # If we have seen this number before
+        if nums[idx] in seen:
+            # Return True
+            return True
+        # Add the current number to the set of seen numbers
+        seen.add(nums[idx])
+
+        # If we have seen more than k numbers
+        if len(seen) > k:
+            # Remove the number that is k steps behind the current number
+            seen.remove(nums[idx - k])
+
+    # If we have not found any duplicate elements within k steps of each other
     return False
 
 
