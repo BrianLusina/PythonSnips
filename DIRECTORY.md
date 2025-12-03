@@ -484,6 +484,8 @@
       * [Test Longest Increasing Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/longest_increasing_subsequence/test_longest_increasing_subsequence.py)
     * Longest Subarray Of Ones
       * [Test Longest Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/longest_subarray_of_ones/test_longest_subarray.py)
+    * Lucky Numbers In A Matrix
+      * [Test Lucky Numbers In A Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/lucky_numbers_in_a_matrix/test_lucky_numbers_in_a_matrix.py)
     * Max Consecutive Ones
       * [Test Max Consecutive Ones](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/max_consecutive_ones/test_max_consecutive_ones.py)
     * Max Number Of Ksum Pairs
