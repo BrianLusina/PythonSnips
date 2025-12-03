@@ -18,7 +18,7 @@ Constraints
 ![Example 2](./images/examples/lucky_numbers_in_a_matrix_example_2.png)
 ![Example 3](./images/examples/lucky_numbers_in_a_matrix_example_3.png)
 
-## Solution
+## Solution: Greedy
 
 The core idea behind the solution is to recognize that there can be, at most, one lucky number in the matrix. This is 
 proven by contradiction, as having two such numbers would violate the unique conditions for being a lucky number.
@@ -45,7 +45,11 @@ proven by contradiction, as having two such numbers would violate the unique con
 >   Therefore `y` > `x`
 > 
 > This leads to a contradiction, as we deduced `y<x` and `y>x`. This inconsistency implies that our initial assumption—
-> that y is a lucky number—is incorrect. Therefore, only x can be the lucky number in this configuration. 
+> that y is a lucky number—is incorrect. Therefore, only x can be the lucky number in this configuration.
+> 
+> Visually, this looks like this:
+> 
+> ![Proof by contradiction](./images/solutions/lucky_numbers_proof_of_contradiction.png)
 
 This problem can be solved using a greedy algorithm that analyzes the matrix row by row and column by column.
 
@@ -72,7 +76,8 @@ Following are the detailed steps of the algorithm that we have just discussed:
 
    - We calculate the maximum value of the column (c_max) by iterating over all rows.
    - Next, we update c_max_min to the minimum of c_smallest_max and c_max.
-   - The above steps ensure we consider only maximum values in their columns, further narrowing the candidate set for a lucky number.
+   - The above steps ensure we consider only maximum values in their columns, further narrowing the candidate set for a 
+     lucky number.
 
 4. Finally, we compare whether r_largest_min equals c_smallest_max. If TRUE, we return the value stored in [r_largest_min]. 
    Otherwise, we return an empty array []. The comparison ensures that the identified value satisfies both conditions of
@@ -103,3 +108,39 @@ rows in the matrix.
 ### Space Complexity
 
 The solution’s space complexity is O(1) as no extra space is required apart from the few variables.
+
+## Solution: Simulation
+
+We are given a matrix of size MXN with distinct integers. We need to return the list of lucky numbers in the matrix. 
+An integer in the matrix is lucky if it is the maximum integer in its column and it is the minimum value in its row.
+
+In this approach, we will simulate the process by iterating over each integer in the matrix, checking if it is the 
+maximum in its row and the minimum in its column. If it meets both criteria, we will add it to the list of lucky numbers, 
+luckyNumbers.
+
+The naive approach to check the criteria for each integer involves iterating over each integer in the current row and 
+column to verify the minimum and maximum criteria, requiring M+N operations per integer. A more efficient method is to 
+precompute the minimum of each row and the maximum of each column before processing the matrix. This allows us to check 
+the criteria for each integer in constant time. We iterate over each row to store the minimum in rowMin and each column 
+to store the maximum in colMax.
+
+### Algorithm
+
+1. Iterate over each row and store the minimum of the ith row at the ith position in the list rowMin.
+2. Iterate over each column and store the maximum of the ith column at the ith position in the list colMax.
+3. Iterate over each integer in the matrix and for each integer at (i, j), check if the integer is equal to rowMin[i] 
+   and colMax[j]. If yes, add it to the list luckyNumbers.
+4. Return luckyNumbers.
+
+### Complexity Analysis
+
+Here, N is the number of rows in the matrix and M is the number of columns in the matrix.
+
+#### Time complexity: O(N*M).
+
+To store the maximum of each row, we require N*M operations and the same for strong the maximum of each column. In the 
+end, to find the lucky numbers we again iterate over each integer. Hence, the total time complexity is equal to O(N*M).
+
+#### Space complexity: O(N+M).
+
+We require two lists, rowMin and colMax of size N and M respectively. Hence the total space complexity is equal to O(N+M).

@@ -52,3 +52,48 @@ def lucky_numbers(matrix: List[List[int]]) -> List[int]:
         return [r_largest_min]
     # Otherwise, return an empty list indicating no luky number exists
     return []
+
+
+def lucky_numbers_simulation(matrix: List[List[int]]) -> List[int]:
+    """
+    This function takes a matrix as input and returns a list containing all the lucky number(s) if they exist.
+
+    A lucky number is a number that is the maximum of the minimum values from each row and the minimum of the maximum
+    values from each column.
+
+    The function first calculates the minimum values from each row and the maximum values from each column, then compares
+    these two lists to find the lucky number(s).
+
+    Time Complexity: O(m * n) where m is the number of columns and n is the number of rows in the matrix.
+    Space Complexity: O(m + n) as we are using two lists of size m and n respectively.
+
+    Args:
+        matrix (List[List[int]]): The input matrix.
+
+    Returns:
+        List[int]: A list containing all the lucky number(s) if they exist, otherwise an empty list.
+    """
+    row_length = len(matrix)
+    col_length = len(matrix[0])
+
+    row_min = []
+    for i in range(row_length):
+        r_min = float('inf')
+        for j in range(col_length):
+            r_min = min(r_min, matrix[i][j])
+        row_min.append(r_min)
+
+    col_max = []
+    for i in range(col_length):
+        c_max = float('-inf')
+        for j in range(row_length):
+            c_max = max(c_max, matrix[j][i])
+        col_max.append(c_max)
+
+    result = []
+    for i in range(row_length):
+        for j in range(col_length):
+            if matrix[i][j] == row_min[i] and matrix[i][j] == col_max[j]:
+                result.append(matrix[i][j])
+
+    return result
