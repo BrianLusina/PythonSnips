@@ -1,7 +1,10 @@
 import unittest
 from typing import List
 from parameterized import parameterized
-from puzzles.arrays.lucky_numbers_in_a_matrix import lucky_numbers, lucky_numbers_simulation
+from puzzles.arrays.lucky_numbers_in_a_matrix import (
+    lucky_numbers,
+    lucky_numbers_simulation,
+)
 
 
 class LuckyNumbersInAMatrixTestCase(unittest.TestCase):
@@ -27,8 +30,8 @@ class LuckyNumbersInAMatrixTestCase(unittest.TestCase):
             ([[30, 20, 10], [40, 50, 60], [70, 80, 90]], [70]),
             ([[5, 1, 9], [10, 8, 2], [7, 3, 6]], []),
             ([[22, 11], [88, 77], [55, 44]], [77]),
-            ([[1,10,4,2],[9,3,8,7],[15,16,17,12]], [12]),
-            ([[7,8],[1,2]], [7]),
+            ([[1, 10, 4, 2], [9, 3, 8, 7], [15, 16, 17, 12]], [12]),
+            ([[7, 8], [1, 2]], [7]),
         ]
     )
     def test_lucky_numbers_in_matrix(
@@ -58,8 +61,8 @@ class LuckyNumbersInAMatrixTestCase(unittest.TestCase):
             ([[30, 20, 10], [40, 50, 60], [70, 80, 90]], [70]),
             ([[5, 1, 9], [10, 8, 2], [7, 3, 6]], []),
             ([[22, 11], [88, 77], [55, 44]], [77]),
-            ([[1,10,4,2],[9,3,8,7],[15,16,17,12]], [12]),
-            ([[7,8],[1,2]], [7]),
+            ([[1, 10, 4, 2], [9, 3, 8, 7], [15, 16, 17, 12]], [12]),
+            ([[7, 8], [1, 2]], [7]),
         ]
     )
     def test_lucky_numbers_in_matrix_simulation(

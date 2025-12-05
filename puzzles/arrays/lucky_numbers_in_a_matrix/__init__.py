@@ -78,14 +78,14 @@ def lucky_numbers_simulation(matrix: List[List[int]]) -> List[int]:
 
     row_min = []
     for i in range(row_length):
-        r_min = float('inf')
+        r_min = float("inf")
         for j in range(col_length):
             r_min = min(r_min, matrix[i][j])
         row_min.append(r_min)
 
     col_max = []
     for i in range(col_length):
-        c_max = float('-inf')
+        c_max = float("-inf")
         for j in range(row_length):
             c_max = max(c_max, matrix[j][i])
         col_max.append(c_max)

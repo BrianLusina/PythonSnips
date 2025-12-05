@@ -29,8 +29,8 @@ class Trie:
                               ↘
                                e(2) → r(2)
 
-        Index then tracks the earliest index of the word in the original list. So, for the example above, the index of
-        "player" would be 2, not 0.
+        The Index then tracks the earliest index of the word in the original list. So, for the example above, the index
+        of "player" would be 2, not 0.
 
         Parameters:
             word (str): The word to insert
