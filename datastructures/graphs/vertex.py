@@ -13,16 +13,21 @@ class Vertex(Generic[T]):
     def __init__(
         self,
         data: T,
-        incoming_edges: Set[Edge],
-        outgoing_edges: Set[Edge],
-        properties: Optional[Dict[str, Any]] = None,
         identifier: Any = uuid4(),
+        properties: Optional[Dict[str, Any]] = None,
+        incoming_edges: Optional[Set[Edge]] = None,
+        outgoing_edges: Optional[Set[Edge]] = None,
     ):
+        if outgoing_edges is None:
+            outgoing_edges = set()
+        if incoming_edges is None:
+            incoming_edges = set()
         self.id = identifier
         self.data = data
         self.incoming_edges = incoming_edges
         self.outgoing_edges = outgoing_edges
         self.edges = self.incoming_edges.union(self.outgoing_edges)
+        self.adjacent_vertices: Dict[str, "Vertex"] = {}
         self.properties = properties
 
     def __str__(self):
@@ -31,24 +36,35 @@ class Vertex(Generic[T]):
             f"Degree: {self.degree}"
         )
 
+    def __eq__(self, other: "Vertex") -> bool:
+        return self.id == other.id
+
+    def add_adjacent_vertex(self, other: "Vertex") -> None:
+        """Adds an adjacent vertex to the list of neighbors. Note that this is useful in a graph as the graph will be
+        able the call this method on this vertex and the same method on the other vertex showing undirected relationship.
+
+        Args:
+            other (Vertex): Vertex to add as a neighbor
+        """
+        # should not be able to add self as an adjacent vertex
+        if other is self or other.id == self.id:
+            return
+
+        # only add adjacent vertex if not already present.
+        if not self.adjacent_vertices.get(other.id):
+            self.adjacent_vertices[other.id] = other
+            other.add_adjacent_vertex(self)
+
     @property
     def neighbours(self) -> List["Vertex"]:
-        """Returns a list of all the direct neighbours of this vertex
+        """Returns a list of all the direct neighbors of this vertex
 
         Returns:
-            List: list of vertices that are direct neighbours or this vertex
+            List: list of vertices that are direct neighbors or this vertex
         """
         nodes = []
-        for edge in self.incoming_edges:
-            node = edge.source
-            if node.id != self.id:
-                nodes.append(node)
-            nodes.append(node)
-
-        for edge in self.outgoing_edges:
-            node = edge.destination
-            if node.id != self.id:
-                nodes.append(node)
+        for vertex in self.adjacent_vertices.values():
+            nodes.append(vertex)
 
         return nodes
 
@@ -61,10 +77,10 @@ class Vertex(Generic[T]):
         """
         degrees = 0
 
-        if len(self.incoming_edge) == 0 or len(self.outgoing_edges) == 0:
+        if len(self.incoming_edges) == 0 or len(self.outgoing_edges) == 0:
             return degrees
 
-        seen_edges: Set = {}
+        seen_edges: Set = set()
 
         for edge in self.edges:
             if edge not in seen_edges:
@@ -87,7 +103,7 @@ class Vertex(Generic[T]):
             return in_degrees
 
         for edge in self.edges:
-            if edge.type == EdgeType.DIRECTED and edge.destination == self:
+            if edge.type == EdgeType.DIRECTED and edge.node_two == self:
                 in_degrees += 1
 
         return in_degrees
@@ -105,18 +121,7 @@ class Vertex(Generic[T]):
             return out_degrees
 
         for edge in self.edges:
-            if edge.type == EdgeType.DIRECTED and edge.source == self:
+            if edge.type == EdgeType.DIRECTED and edge.node_one == self:
                 out_degrees += 1
 
         return out_degrees
-
-    def add_adjacent_vertex(self, other: "Vertex"):
-        """Adds an adjacent vertex to the list of neighbors. Note that this is useful in a graph as the graph will be
-        able the call this method on this vertex & the same method on the other vertex showing undirected relationship.
-
-        Args:
-            other (Vertex): Vertex to add as a neighbor
-        """
-
-    def __eq__(self, other: "Vertex") -> bool:
-        return self.id == other.id
