@@ -8,7 +8,6 @@ from puzzles.arrays.lucky_numbers_in_a_matrix import (
 
 
 class LuckyNumbersInAMatrixTestCase(unittest.TestCase):
-
     @parameterized.expand(
         [
             ([[3, 7, 8], [9, 11, 13], [15, 16, 17]], [15]),

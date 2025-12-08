@@ -90,7 +90,6 @@ class SinglyLinkedList(LinkedList):
             current = current.next
 
     def insert_before_node(self, next_key: Any, data: T):
-
         pass
 
     def get_nth_node(self, position: int) -> Union[SingleNode, None]:

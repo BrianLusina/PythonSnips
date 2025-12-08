@@ -15,7 +15,9 @@ def is_sorted_and_how_2(arr):
     return (
         "yes, ascending"
         if is_sorted_with(arr, operator.le)
-        else "yes, descending" if is_sorted_with(arr, operator.ge) else "no"
+        else "yes, descending"
+        if is_sorted_with(arr, operator.ge)
+        else "no"
     )
 
 

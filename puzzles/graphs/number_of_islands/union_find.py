@@ -1,5 +1,4 @@
 class UnionFind:
-
     # Initializing the parent list and count variable by traversing the grid
     def __init__(self, grid):
         self.parent = []

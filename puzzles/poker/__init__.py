@@ -48,7 +48,9 @@ def hand_rank(hand):
                                     else (
                                         2
                                         if counts == (2, 2, 1)
-                                        else 1 if counts == (2, 1, 1, 1) else 0
+                                        else 1
+                                        if counts == (2, 1, 1, 1)
+                                        else 0
                                     )
                                 )
                             )
