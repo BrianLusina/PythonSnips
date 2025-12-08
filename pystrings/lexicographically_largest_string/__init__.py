@@ -1,4 +1,7 @@
 def lexicographically_largest_string_from_box(word: str, num: int) -> str:
+    if num == 1:
+        return word
+
     n = len(word)
     max_substring = ""
 
@@ -35,3 +38,25 @@ def lexicographically_largest_string_from_box(word: str, num: int) -> str:
                 max_substring = candidate
 
     return max_substring
+
+# Function to find the lexicographically largest string
+def lexicographically_largest_string_from_box_2(word: str, num: int) -> str:
+    if num == 1:
+        return word
+
+    n = len(word)
+    i, j = 0, 1
+
+    while j < n:
+        k = 0
+        while j + k < n and word[i + k] == word[j + k]:
+            k += 1
+
+        if j + k < n and word[i + k] < word[j + k]:
+            temp_index = i
+            i = j
+            j = max(j + 1, temp_index + k + 1)
+        else:
+            j = j + k + 1
+
+    return word[i : min(n, i + n - num + 1)]
