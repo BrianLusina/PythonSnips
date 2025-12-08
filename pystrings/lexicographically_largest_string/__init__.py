@@ -39,24 +39,33 @@ def lexicographically_largest_string_from_box(word: str, num: int) -> str:
 
     return max_substring
 
-# Function to find the lexicographically largest string
+
 def lexicographically_largest_string_from_box_2(word: str, num: int) -> str:
+    # If there's only one friend, no split is needed; return the entire string
     if num == 1:
         return word
 
     n = len(word)
+    # i: start index of current best substring, j: candidate start index
     i, j = 0, 1
 
     while j < n:
         k = 0
+        # Compare characters at i+k and j+k as long as they're equal and in bounds
         while j + k < n and word[i + k] == word[j + k]:
             k += 1
 
+        # If the candidate substring starting at j is better, update i
         if j + k < n and word[i + k] < word[j + k]:
+            # save current i to compute safe next j
             temp_index = i
+            # move i to a better candidate
             i = j
+            # skip redundant comparisons
             j = max(j + 1, temp_index + k + 1)
         else:
+            # Otherwise, continue searching by skipping the compared section
             j = j + k + 1
 
+    # Return the best substring of required length: len(word) - numFriends + 1
     return word[i : min(n, i + n - num + 1)]
