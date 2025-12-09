@@ -1,3 +1,5 @@
+# Parenthesis Matcher
+
 I like parentheticals (a lot).
 "Sometimes (when I nest them (my parentheticals) too much (like this (and this))) they get confusing."
 
@@ -20,8 +22,10 @@ keep a count of how many additional "(" we find as open_nested_parens. When we f
 open_nested_parens. If we find a ")" and open_nested_parens is 0, we know that ")" closes our initial "(", so we return
 its position.
 
+```python
 def get_closing_paren(sentence, opening_paren_index):
-open_nested_parens = 0 position = opening_paren_index + 1
+    open_nested_parens = 0
+    position = opening_paren_index + 1
 
     while position <= len(sentence) - 1:
         char = sentence[position]
@@ -37,6 +41,7 @@ open_nested_parens = 0 position = opening_paren_index + 1
         position += 1
 
     raise Exception("No closing parenthesis :(")
+```
 
 Complexity O(n) time, where nn is the number of chars in the string. O(1)O(1) space.
 

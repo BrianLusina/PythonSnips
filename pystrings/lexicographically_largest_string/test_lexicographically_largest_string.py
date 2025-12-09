@@ -2,7 +2,7 @@ import unittest
 from parameterized import parameterized
 from pystrings.lexicographically_largest_string import (
     lexicographically_largest_string_from_box,
-    lexicographically_largest_string_from_box_2
+    lexicographically_largest_string_from_box_2,
 )
 
 

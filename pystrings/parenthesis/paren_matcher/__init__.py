@@ -1,4 +1,4 @@
-def closing_paren(sentence, open_paren_index):
+def closing_paren(sentence: str, open_paren_index: int) -> int:
     """
 
     :param: sentence the sentence to search through

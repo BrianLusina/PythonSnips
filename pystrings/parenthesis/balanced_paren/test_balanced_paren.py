@@ -1,10 +1,10 @@
 import unittest
 
-from pystrings.balanced_paren import balanced_parens
+from pystrings.parenthesis.balanced_paren import balanced_parens
 
 
 class BalancedParensTestCase(unittest.TestCase):
-    def sample_tests(self):
+    def test_sample(self):
         for n, exp in [
             [0, [""]],
             [1, ["()"]],
@@ -15,7 +15,7 @@ class BalancedParensTestCase(unittest.TestCase):
             actual.sort()
             self.assertEqual(actual, exp)
 
-    def random_tests(self):
+    def test_random(self):
         def ref_sol(n):
             return list(dfs([], 0, 0, n))
 
@@ -37,14 +37,14 @@ class BalancedParensTestCase(unittest.TestCase):
         rng = list(range(13))
         shuffle(rng)
         for n in rng:
-            exp = ref_sol(n)
-            act = balanced_parens(n)
-            exp.sort()
-            act.sort()
-            if len(exp) > 1000:
-                self.assertEqual(exp == act, "Nope...(n={})".format(n))
+            expected = ref_sol(n)
+            actual = balanced_parens(n)
+            expected.sort()
+            actual.sort()
+            if len(expected) > 1000:
+                self.assertEqual(expected, actual, "Nope...(n={})".format(n))
             else:
-                self.assertEqual(act, exp)
+                self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":
