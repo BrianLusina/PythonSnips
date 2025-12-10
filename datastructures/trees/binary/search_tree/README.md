@@ -300,3 +300,65 @@ When the traversal hits the rightmost node, the stack will hold half of the n to
 so our worst case space cost is O(n).
 
 Bonus What if the input tree has duplicate values?
+
+---
+
+## Inorder Successor in BST
+
+You are given the root node of a binary search tree and a specific node p. Your task is to return the inorder successor 
+of this p node. If there is no inorder successor of the given node, return NULL.
+
+> Note: The inorder successor of p is the node with the smallest value greater than p.data in the binary search tree.
+
+**Constraints**
+
+- The tree contains nodes in the range [1, 500]
+- −10^4 ≤ `Node.data` ≤ 10^4 
+- All Nodes will have unique values. 
+- `p` should exist in the tree.
+
+### Examples
+
+![Example 1](./images/examples/inorder_successor_in_bst_example_1.png)
+![Example 2](./images/examples/inorder_successor_in_bst_example_2.png)
+![Example 3](./images/examples/inorder_successor_in_bst_example_3.png)
+
+## Solution
+
+To solve this problem, we will use the depth-first search pattern because it allows us to perform an inorder traversal 
+of the tree, which is necessary to find the inorder successor of a given node. 
+The properties of the BST allow us to make an efficient search by discarding half of the tree at each step. We start 
+from the root node and compare the value of the current node with p. It helps us decide whether to move to the left or 
+right subtree. If p is greater than or equal to the current node’s value, we move to the right subtree, as the in-order 
+successor must be in the right subtree or above the current node. Otherwise, we explore the left subtree to find a 
+potentially smaller successor. This way, we efficiently find the inorder successor of the given node. 
+
+Let’s go through the algorithm to see how we will reach the solution:
+
+- Initialize a variable successor to NULL. It stores the potential inorder successor as we traverse the tree. 
+- Traverse the tree starting from the root, and for each node, compare the values of p and root:
+  - If the value of p is greater than or equal to the value of the root, the inorder successor must be in the right 
+    subtree or higher up in the tree. We move to the right subtree by setting root = root.right. 
+  - Otherwise, we update the successor to the current node, as this node is a potential in-order successor. Then, move 
+    to the left subtree by setting root = root.left.
+
+- After the loop ends, we return the successor. This contains the inoder successor of the given node.
+
+> Note: If there was no in-order successor of the given node, the successor will remain NULL.
+
+![Solution 1](./images/solutions/inorder_successor_in_bst_solution_1.png)
+![Solution 2](./images/solutions/inorder_successor_in_bst_solution_2.png)
+![Solution 3](./images/solutions/inorder_successor_in_bst_solution_3.png)
+![Solution 4](./images/solutions/inorder_successor_in_bst_solution_4.png)
+![Solution 5](./images/solutions/inorder_successor_in_bst_solution_5.png)
+![Solution 6](./images/solutions/inorder_successor_in_bst_solution_6.png)
+![Solution 7](./images/solutions/inorder_successor_in_bst_solution_7.png)
+
+### Time Complexity
+
+The time complexity of this solution is O(n) in the worst-case scenario where the given tree is skewed. However, for a 
+balanced binary search tree, it will be O(logn).
+
+### Space Complexity
+
+The space complexity of the solution is O(1) because we don’t use any additional space.

@@ -12,6 +12,27 @@ class BinarySearchTree(BinaryTree):
         super().__init__(root)
         self.stack = DynamicSizeStack()
 
+    def __len__(self) -> int:
+        if not self.root:
+            return 0
+
+        counter = 1
+        stack = DynamicSizeStack()
+        stack.push(self.root)
+
+        while not stack.is_empty():
+            node = stack.pop()
+
+            if node.left:
+                counter += 1
+                stack.push(node.left)
+
+            if node.right:
+                counter += 1
+                stack.push(node.right)
+
+        return counter
+
     @staticmethod
     def construct_bst(items: List[T]) -> Optional["BinarySearchTree"]:
         """
@@ -42,7 +63,7 @@ class BinarySearchTree(BinaryTree):
 
         return BinarySearchTree(root=construct_bst_helper(0, len(items) - 1))
 
-    def insert_node(self, data: T):
+    def insert_node(self, data: Optional[T]):
         """
         Inserts a node in a BST given an element
         If there is no root, then create a new root node with the data and return it
@@ -64,7 +85,8 @@ class BinarySearchTree(BinaryTree):
                 node.right = insert_helper(value, node.right)
             return node
 
-        insert_helper(data, self.root)
+        if data:
+            insert_helper(data, self.root)
 
     def delete_node(self, key: T) -> Optional[BinaryTreeNode]:
         """Deletes a node from the Binary Search Tree. If the node is found, it is deleted and the tree re-ordered to
@@ -116,6 +138,7 @@ class BinarySearchTree(BinaryTree):
                 else:
                     node.right = lift(node.right, node)
                     return node
+            return None
 
         def lift(
             node: BinaryTreeNode, node_to_delete: BinaryTreeNode
@@ -660,6 +683,7 @@ class BinarySearchTree(BinaryTree):
                     return search_helper(current.right, value)
                 else:
                     return search_helper(current.left, value)
+            return False
 
         return search_helper(self.root, data)
 
@@ -801,23 +825,43 @@ class BinarySearchTree(BinaryTree):
 
         return [list(map(int, x.split("->"))) for x in res]
 
-    def __len__(self) -> int:
+    def inorder_successor(self, node: BinaryTreeNode) -> Optional[BinaryTreeNode]:
+        """
+        Returns the inorder successor of the node. If there is no node, None is returned. The inorder successor of the
+        node is the node with the smallest value greater than node.data in the binary search tree.
+
+        This assumes that the node is in the tree already.
+
+        Complexity:
+
+        Time Complexity: The time complexity of this solution is O(n) in the worst-case scenario where the given tree
+        is skewed. However, for a balanced binary search tree, it will be O(logn).
+
+        Space Complexity: O(1) because we don't use any additional space.
+
+        Args:
+            node (BinaryTreeNode): node to search for inorder successor
+        Returns:
+            Optional[BinaryTreeNode]: returns inorder successor of node if available, else None
+        """
         if not self.root:
-            return 0
+            return None
 
-        counter = 1
-        stack = DynamicSizeStack()
-        stack.push(self.root)
+        successor = None
+        current = self.root
 
-        while not stack.is_empty():
-            node = stack.pop()
+        # current is the best candidate so far
+        while current:
+            # when current.data is greater than the node.data, we have found a valid successor, so, we save it in the
+            # successor variable
+            if current.data > node.data:
+                successor = current
+                # Move left to find a better(smaller) candidate. By moving to current.left, we are exploring values that
+                # are smaller than current.data. Since we want the smallest possible successor, we must check the left
+                # side of current to see if there is a node that is still greater than node.data, but close to node.data
+                current = current.left
+            else:
+                # this node is too small, so we must go right to find a larger value
+                current = current.right
 
-            if node.left:
-                counter += 1
-                stack.push(node.left)
-
-            if node.right:
-                counter += 1
-                stack.push(node.right)
-
-        return counter
+        return successor
