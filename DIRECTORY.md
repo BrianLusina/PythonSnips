@@ -88,6 +88,9 @@
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
+  * Intervals
+    * Task Scheduler
+      * [Test Task Scheduler](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/task_scheduler/test_task_scheduler.py)
   * Josephus Circle
     * [Test Josephus Circle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/josephus_circle/test_josephus_circle.py)
   * Memoization
@@ -266,6 +269,10 @@
       * [Models](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/queues/priority/models.py)
   * Randomized Set
     * [Test Randomized Set](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/randomized_set/test_randomized_set.py)
+  * Sets
+    * Union Find
+      * [Disjoint Set Union](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/sets/union_find/disjoint_set_union.py)
+      * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/sets/union_find/union_find.py)
   * Smallest Infinite Set
     * [Test Smallest Infinite Set](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/smallest_infinite_set/test_smallest_infinite_set.py)
   * Snapshot Array
@@ -289,6 +296,7 @@
           * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/avl/node.py)
         * [Bst Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/bst_iterator.py)
         * [Test Binary Search Tree Delete Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_delete_node.py)
+        * [Test Binary Search Tree Inorder Successor](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_inorder_successor.py)
         * [Test Binary Search Tree Insert](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_insert.py)
         * [Test Binary Search Tree Search](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_search.py)
       * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/test_utils.py)
@@ -528,6 +536,7 @@
       * [Test Nearest Exit From Entrance](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/nearest_exit_from_entrance_in_maze/test_nearest_exit_from_entrance.py)
     * Number Of Islands
       * [Test Number Of Islands](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/number_of_islands/test_number_of_islands.py)
+      * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/number_of_islands/union_find.py)
     * Number Of Provinces
       * [Test Number Of Provinces](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/number_of_provinces/test_number_of_provinces.py)
     * Reorder Routes
@@ -718,8 +727,6 @@
     * Group Anagrams
       * [Test Group Anagrams](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/group_anagrams/test_group_anagrams.py)
     * [Test Anagram](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/test_anagram.py)
-  * Balanced Paren
-    * [Test Balanced Paren](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/balanced_paren/test_balanced_paren.py)
   * Count Consonants
     * [Test Count Consonants](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/count_consonants/test_count_consonants.py)
   * Domain Name
@@ -736,8 +743,14 @@
     * [Test Is Unique](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/is_unique/test_is_unique.py)
   * Issubsequence
     * [Test Is Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/issubsequence/test_is_subsequence.py)
+  * Lexicographically Largest String
+    * [Test Lexicographically Largest String](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/lexicographically_largest_string/test_lexicographically_largest_string.py)
+  * Longest Common Prefix
+    * [Test Longest Common Prefix](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_common_prefix/test_longest_common_prefix.py)
   * Longest Common Suffix Queries
     * [Test Longest Common Suffix Queries](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_common_suffix_queries/test_longest_common_suffix_queries.py)
+  * Longest Happy String
+    * [Test Longest Happy String](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_happy_string/test_longest_happy_string.py)
   * Longest Self Contained Substring
     * [Test Longest Self Contained Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_self_contained_substring/test_longest_self_contained_substring.py)
   * Look And Say Sequence
@@ -760,6 +773,11 @@
     * [Test Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome_pairs.py)
   * Pangram
     * [Test Pangram Checker](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/pangram/test_pangram_checker.py)
+  * Parenthesis
+    * Balanced Paren
+      * [Test Balanced Paren](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/parenthesis/balanced_paren/test_balanced_paren.py)
+    * Remove Invalid Parenthesis
+      * [Test Remove Invalid Parenthesis](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/parenthesis/remove_invalid_parenthesis/test_remove_invalid_parenthesis.py)
   * Permutation
     * [Test Check Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/permutation/test_check_permutation.py)
   * Reverse Vowels
