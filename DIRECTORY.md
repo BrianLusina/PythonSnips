@@ -704,6 +704,8 @@
     * [Test Pascals Triangle](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/pascals_triangle/test_pascals_triangle.py)
   * Perfect Square
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
+  * Rectangle Area
+    * [Test Compute Area](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/rectangle_area/test_compute_area.py)
   * Super Size
     * [Test Super Size](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/super_size/test_super_size.py)
   * Triangles
