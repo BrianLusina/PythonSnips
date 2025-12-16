@@ -21,6 +21,7 @@ def longest_ones(nums: List[int], k: int) -> int:
 
     return right - left + 1
 
+
 def find_max_consecutive_ones(nums: List[int]) -> int:
     """
     Finds the maximum consecutive ones in a binary array and returns it.
