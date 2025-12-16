@@ -58,9 +58,13 @@ def find_minimum_meeting_rooms_priority_queue(meetings: List[List[int]]) -> int:
     for start, end in meetings[1:]:
         # top of the heap is the meeting that will end soonest, we can remove it if it ends before the next meeting
         # starts
+        # Check if the minimum element of the heap (i.e., the earliest ending meeting) is free
         if rooms[0] <= start:
+            # If the room is free, extract the earliest ending meeting and add the ending time of the current meeting
             heapq.heappop(rooms)
 
+        # Add the ending time of the current meeting to the heap
         heapq.heappush(rooms, end)
 
+    # The size of the heap tells us the number of rooms allocated
     return len(rooms)
