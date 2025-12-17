@@ -66,7 +66,7 @@ def word_break_trie(s: str, word_dict: List[str]) -> List[str]:
     return results.get(0, [])
 
 
-def word_break_dp(s: str, word_dict: List[str]) -> List[str]:
+def word_break_dp_tabulation(s: str, word_dict: List[str]) -> List[str]:
     """
     This adds spaces to s to break it up into a sequence of valid words from word_dict.
 
@@ -112,7 +112,7 @@ def word_break_dp(s: str, word_dict: List[str]) -> List[str]:
     return dp[len(s)]
 
 
-def word_break_dp_2(s: str, word_dict: List[str]) -> List[str]:
+def word_break_dp_tabulation_2(s: str, word_dict: List[str]) -> List[str]:
     """
     This adds spaces to s to break it up into a sequence of valid words from word_dict.
 
@@ -160,6 +160,62 @@ def word_break_dp_2(s: str, word_dict: List[str]) -> List[str]:
     return dp.get(0, [])
 
 
+def word_break_dp_memoization(s: str, word_dict: List[str]) -> List[str]:
+    """
+    This adds spaces to s to break it up into a sequence of valid words from word_dict.
+
+    This uses dynamic programming with memoization to store the words in the dictionary and a map to store the results
+    of subproblems.
+
+    Complexity:
+    Time: O(n*2^n): where n is the length of the string
+    Space: O(n*2^n): where n is the length of the string
+
+    Args:
+        s: The input string
+        word_dict: The dictionary of words
+    Returns:
+        List of valid sentences
+    """
+    word_set: Set[str] = set(word_dict)
+    memoization: Dict[str, List[str]] = dict()
+
+    def dfs(remaining_str: str, words_set: Set[str], memo: Dict) -> List[str]:
+        """
+        Depth-first search to find all possible word combinations
+        Args:
+            remaining_str(str): the remaining string to search through
+            words_set(set): set of dictionary words to use to construct sentences
+            memo(dict): dictionary to improve computation of already processed words
+        Returns:
+            list: possible word combinations
+        """
+        # check if the result for this substring is already memoized
+        if remaining_str in memo:
+            return memo[remaining_str]
+
+        # base case: when the string is empty, return a list containing an empty string
+        if not remaining_str:
+            return [""]
+
+        results = []
+        for i in range(1, len(remaining_str) + 1):
+            current_word = remaining_str[:i]
+            # if the current substring is a valid word in the word set
+            if current_word in words_set:
+                for next_word in dfs(remaining_str[i:], words_set, memo):
+                    # append current word and next word
+                    results.append(
+                        f"{current_word}{" " + next_word if next_word else ""}"
+                    )
+
+        # memoize the results for the current substring
+        memo[remaining_str] = results
+        return results
+
+    return dfs(s, word_set, memoization)
+
+
 def word_break_backtrack(s: str, word_dict: List[str]) -> List[str]:
     """
     This adds spaces to s to break it up into a sequence of valid words from word_dict.
@@ -176,7 +232,13 @@ def word_break_backtrack(s: str, word_dict: List[str]) -> List[str]:
     word_set = set(word_dict)
     results = []
 
-    def backtrack(sentence: str, words_set: Set[str], current_sentence: List[str], result: List[str], start_index: int):
+    def backtrack(
+        sentence: str,
+        words_set: Set[str],
+        current_sentence: List[str],
+        result: List[str],
+        start_index: int,
+    ):
         # If we've reached the end of the string, add the current sentence to results
         if start_index == len(sentence):
             result.append(" ".join(current_sentence))
@@ -189,9 +251,7 @@ def word_break_backtrack(s: str, word_dict: List[str]) -> List[str]:
             if word in words_set:
                 current_sentence.append(word)
                 # Recursively call backtrack with the new end index
-                backtrack(
-                    sentence, words_set, current_sentence, result, end_index
-                )
+                backtrack(sentence, words_set, current_sentence, result, end_index)
                 # Remove the last word to backtrack
                 current_sentence.pop()
 
