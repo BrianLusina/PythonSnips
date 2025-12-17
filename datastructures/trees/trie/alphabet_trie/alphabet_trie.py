@@ -6,7 +6,7 @@ class AlphabetTrie:
         self.root = AlphabetTrieNode()
 
     def insert(self, word: str) -> None:
-        if not word or not all('a' <= char.lower() <= 'z' for char in word):
+        if not word or not all("a" <= char.lower() <= "z" for char in word):
             raise ValueError("Word must contain only English letters (a-z)")
         node = self.root
         for char in word:
