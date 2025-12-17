@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Set
 from datastructures.trees.trie import AlphabetTrie
 
 
@@ -158,3 +158,42 @@ def word_break_dp_2(s: str, word_dict: List[str]) -> List[str]:
 
     # returning all the sentences formed from the complete string s
     return dp.get(0, [])
+
+
+def word_break_backtrack(s: str, word_dict: List[str]) -> List[str]:
+    """
+    This adds spaces to s to break it up into a sequence of valid words from word_dict.
+
+    Uses backtracking to solve the problem.
+
+    Args:
+        s: The input string
+        word_dict: The dictionary of words
+    Returns:
+        List of valid sentences
+    """
+    # convert word dict into a set for O(1) lookups
+    word_set = set(word_dict)
+    results = []
+
+    def backtrack(sentence: str, words_set: Set[str], current_sentence: List[str], result: List[str], start_index: int):
+        # If we've reached the end of the string, add the current sentence to results
+        if start_index == len(sentence):
+            result.append(" ".join(current_sentence))
+            return
+
+        # Iterate over possible end indices
+        for end_index in range(start_index + 1, len(sentence) + 1):
+            word = s[start_index:end_index]
+            # If the word is in the set, proceed with backtracking
+            if word in words_set:
+                current_sentence.append(word)
+                # Recursively call backtrack with the new end index
+                backtrack(
+                    sentence, words_set, current_sentence, result, end_index
+                )
+                # Remove the last word to backtrack
+                current_sentence.pop()
+
+    backtrack(s, word_set, [], results, 0)
+    return results

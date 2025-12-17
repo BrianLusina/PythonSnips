@@ -26,6 +26,12 @@ sequences of words (sentences). The order in which the sentences are listed is n
 
 ## Solutions
 
+1. [Naive Approach](#naive-approach)
+2. [Backtracking](#backtracking)
+3. [Dynamic Programming - tabulation](#optimized-approach-using-dynamic-programming---tabulation)
+4. [Dynamic Programming - memoization](#dynamic-programming---memoization)
+5. [Trie Optimization](#trie-optimization)
+
 ### Naive Approach
 
 The naive approach to solve this problem is to use a traditional recursive strategy in which we take each prefix of the 
@@ -57,6 +63,68 @@ The time complexity of this solution is O(k^n * m), where k is the number of wor
 of the string, and `m` is the length of the longest word in the dictionary.
 
 The space complexity is O(k^n * n), where k is the number of words in the dictionary and `n` is the length of the string.
+
+### Backtracking
+
+Initially, we might think of a brute-force approach where we systematically explore all possible ways to break the 
+string into words from the dictionary. This leads us to the backtracking strategy, where we recursively try to form 
+words from the string and add them to a current sentence if they are in the dictionary. If the current prefix doesn't 
+lead to a valid solution, we backtrack by removing the last added word and trying the next possible word. This ensures 
+we explore all possible segmentations of the string.
+
+At each step, we consider all possible end indices for substrings starting from the current index. For each substring, 
+we check if it exists in the dictionary. If the substring is a valid word, we append it to the current sentence and 
+recursively call the function with the updated index, which is the end index of the substring plus one.
+
+If we reach the end of the string, it means we have found a valid segmentation, and we can add the current sentence to 
+the results. However, if we encounter a substring that is not a valid word, we backtrack by returning from that 
+recursive call and trying the next possible end index.
+
+The backtracking approach will be inefficient due to the large number of recursive calls, especially for longer strings. 
+To increase efficiency, we will convert the word dictionary into a set for constant-time lookups. However, the overall 
+time complexity remains high because we explore all possible partitions.
+
+The process is visualized below:
+
+![Backtracking Solution](./images/solution/word_break_backtracking_solution_1.png)
+
+#### Algorithm
+
+- Convert the `word_dict` array into an unordered set `word_set` for efficient lookups.
+- Initialize an empty array `results` to store valid sentences.
+- Initialize an empty string currentSentence to keep track of the sentence being constructed.
+- Call the `backtrack` function with the input string `s`, `word_set`, `current_sentence`, `results`, and a starting 
+  index set to 0, the beginning of the input string.
+  - Base case: If the `start_index` is equal to the length of the string, add the `current_sentence` to `results` and 
+    return as it means that `current_sentence` represents a valid sentence.
+  - Iterate over possible `end_index` values from `start_index` + 1 to the end of the string.
+    - Extract the substring word from startIndex to `end_index - 1`. 
+    - If word is found in `word_set`:
+      - Store the current currentSentence in `original_sentence`. 
+      - Append word to `current_sentence` (with a space if needed). 
+      - Recursively call `backtrack` with the updated `current_sentence` and `end_index`. 
+      - Reset `current_sentence` to its original value (`original_sentence`) to backtrack and try the next `end_index`. 
+    - Return from the backtrack function.
+- Return results.
+
+#### Complexity Analysis
+
+Let n be the length of the input string.
+
+##### Time complexity: O(n⋅2^n)
+
+The algorithm explores all possible ways to break the string into words. In the worst case, where each character can be 
+treated as a word, the recursion tree has 2^n leaf nodes, resulting in an exponential time complexity. For each leaf 
+node, O(n) work is performed, so the overall complexity is O(n⋅2^n).
+
+##### Space complexity: O(2^n)
+
+The recursion stack can grow up to a depth of n, where each recursive call consumes additional space for storing the 
+current state.
+
+Since each position in the string can be a split point or not, and for n positions, there are 2^n possible combinations 
+of splits. Thus, in the worst case, each combination generates a different sentence that needs to be stored, leading to 
+exponential space complexity.
 
 ### Optimized approach using dynamic programming - tabulation
 
@@ -162,3 +230,7 @@ combinations
 
 The space complexity is O(n * v), where n is the length of the string and v is the number of valid combinations stored in
 the `dp` array.
+
+### Dynamic Programming - Memoization
+
+### Trie Optimization
