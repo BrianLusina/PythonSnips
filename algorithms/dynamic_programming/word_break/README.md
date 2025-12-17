@@ -135,7 +135,7 @@ it has the properties needed for conversion to dynamic programming.
 - **Optimal substructure**: Given an input string ,s, that we want to break up into dictionary words, we find the first 
     word that matches a word from the dictionary, and then repeat the process for the remaining, shorter input string. 
     This means that, to solve the problem for input `q`, we need to solve the same problem for `p`, where `p` is at 
-  least one character shorter than`q`. Therefore, this problem obeys the optimal substructure property.
+  least one character shorter than `q`. Therefore, this problem obeys the optimal substructure property.
 
 - **Overlapping subproblems**: The algorithm solves the same subproblems repeatedly. Consider input string “ancookbook” 
   and the dictionary [“an”, “book”, “cook”, “cookbook”]. The following is the partial call tree for the naive recursive 

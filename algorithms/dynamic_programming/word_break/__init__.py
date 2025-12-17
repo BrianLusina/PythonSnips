@@ -37,7 +37,7 @@ def word_break_trie(s: str, word_dict: List[str]) -> List[str]:
         # iterate from start_idx to the end of the string
         for end_idx in range(start_idx, len(s)):
             char = s[end_idx]
-            index = ord(char) - ord("a")
+            index = ord(char.lower()) - ord("a")
 
             # check if the current character exists in the trie
             if not current_node.children[index]:
@@ -84,7 +84,7 @@ def word_break_dp_tabulation(s: str, word_dict: List[str]) -> List[str]:
         List of valid sentences
     """
     # Initializing the dp table of size s.length + 1
-    dp = [[]] * (len(s) + 1)
+    dp = [[] for _ in range(len(s) + 1)]
     # Setting the base case
     dp[0] = [""]
 
@@ -246,7 +246,7 @@ def word_break_backtrack(s: str, word_dict: List[str]) -> List[str]:
 
         # Iterate over possible end indices
         for end_index in range(start_index + 1, len(sentence) + 1):
-            word = s[start_index:end_index]
+            word = sentence[start_index:end_index]
             # If the word is in the set, proceed with backtracking
             if word in words_set:
                 current_sentence.append(word)
