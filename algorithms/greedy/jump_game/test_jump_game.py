@@ -1,7 +1,7 @@
 import unittest
 from typing import List
 from parameterized import parameterized
-from algorithms.greedy.jump_game import can_jump, jump, can_jump_2
+from algorithms.greedy.jump_game import can_jump, jump, can_jump_2, jump_2
 
 CAN_JUMP_TEST_DATA = [
     ([2, 3, 1, 1, 4], True),
@@ -15,6 +15,7 @@ CAN_JUMP_TEST_DATA = [
     ([1], True),
 ]
 
+
 class CanJumpTestCase(unittest.TestCase):
     @parameterized.expand(CAN_JUMP_TEST_DATA)
     def test_can_jump(self, nums: List[int], expected: bool):
@@ -27,19 +28,24 @@ class CanJumpTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
+JUMP_GAME_TEST_DATA = [
+    ([2, 3, 1, 1, 4], 2),
+    ([2, 3, 1, 1, 9], 2),
+    ([3, 2, 1, 1, 4], 2),
+    ([4, 0, 0, 0, 4], 1),
+    ([1], 0),
+]
+
+
 class JumpTestCase(unittest.TestCase):
-    def test_1(self):
-        """nums = [2,3,1,1,4] should return 2"""
-        nums = [2, 3, 1, 1, 4]
+    @parameterized.expand(JUMP_GAME_TEST_DATA)
+    def test_jump_game(self, nums: List[int], expected: int):
         actual = jump(nums)
-        expected = 2
         self.assertEqual(expected, actual)
 
-    def test_3(self):
-        """nums = [2, 3, 0, 1, 4] should return 2"""
-        nums = [2, 3, 0, 1, 4]
-        actual = jump(nums)
-        expected = 2
+    @parameterized.expand(JUMP_GAME_TEST_DATA)
+    def test_jump_game_2(self, nums: List[int], expected: int):
+        actual = jump_2(nums)
         self.assertEqual(expected, actual)
 
 

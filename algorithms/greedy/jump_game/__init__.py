@@ -22,6 +22,7 @@ def can_jump(nums: List[int]) -> bool:
 
     return True
 
+
 def can_jump_2(nums: List[int]) -> bool:
     """
     This function checks if it is possible to reach the last index of the array from the first index.
@@ -46,7 +47,18 @@ def can_jump_2(nums: List[int]) -> bool:
 
 
 def jump(nums: List[int]) -> int:
+    """
+    This function returns the minimum number of jumps needed to reach the last index of the array from the first index.
+    Args:
+        nums(list): list of integers
+    Returns:
+        int: minimum number of jumps needed to reach the last index
+    """
     size = len(nums)
+    # if start index == destination index == 0
+    if size == 1:
+        return 0
+
     # destination is last index
     destination = size - 1
 
@@ -55,10 +67,6 @@ def jump(nums: List[int]) -> int:
 
     # min number of jumps
     min_jumps = 0
-
-    # if start index == destination index == 0
-    if size == 1:
-        return 0
 
     # Greedy strategy: extend coverage as long as possible with lazy jump
     for idx in range(size):
@@ -77,4 +85,43 @@ def jump(nums: List[int]) -> int:
             if current_coverage >= destination:
                 return min_jumps
 
+    return min_jumps
+
+
+def jump_2(nums: List[int]) -> int:
+    """
+    This function returns the minimum number of jumps needed to reach the last index of the array from the first index.
+    Args:
+        nums(list): list of integers
+    Returns:
+        int: minimum number of jumps needed to reach the last index
+    """
+    # Store the length of the input array
+    size = len(nums)
+
+    # if start index == destination index == 0
+    if size == 1:
+        return 0
+
+    # Initialize the variables to track the number of jumps,
+    # the current jump's limit, and the farthest reachable index
+    min_jumps = 0
+    current_jump_boundary = 0
+    furthest_jump_index = 0
+
+    # Iterate through the array, stopping before the last element
+    for idx in range(size - 1):
+        # Update the farthest_jump_index to be the maximum of its current value
+        # and the index we can reach from the current position
+        furthest_jump_index = max(furthest_jump_index, idx + nums[idx])
+
+        # If we have reached the limit of the current jump
+        if idx == current_jump_boundary:
+            # update counter of jump by +1
+            min_jumps += 1
+
+            # Update the current_jump_boundary to the farthest we can reach
+            current_jump_boundary = furthest_jump_index
+
+    # Return the total number of jumps needed to reach the end of the array
     return min_jumps

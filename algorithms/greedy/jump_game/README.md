@@ -22,44 +22,6 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 to reach the last index.
 ```
 
----
-
-## Jump Game II
-
-You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
-
-Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at
-nums[i], you can jump to any nums[i + j] where:
-
-0 <= j <= nums[i] and
-i + j < n
-Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach
-nums[n - 1].
-
-```text
-Example 1:
-
-Input: nums = [2,3,1,1,4]
-Output: 2
-Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to
-the last index.
-```
-
-```text
-Example 2:
-
-Input: nums = [2,3,0,1,4]
-Output: 2
-```
-
----
-
-## Topics
-
-- Array
-- Dynamic Programming
-- Greedy
-
 ## Solutions
 
 1. [Naive Approach](#naive-approach)
@@ -140,3 +102,104 @@ elements in the array.
 #### Space Complexity
 
 The space complexity of the above solution is O(1), because we do not use any extra space.
+
+
+---
+
+# Jump Game II
+
+You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
+
+Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at
+nums[i], you can jump to any nums[i + j] where:
+
+0 <= j <= nums[i] and
+i + j < n
+Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach
+nums[n - 1].
+
+```text
+Example 1:
+
+Input: nums = [2,3,1,1,4]
+Output: 2
+Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to
+the last index.
+```
+
+```text
+Example 2:
+
+Input: nums = [2,3,0,1,4]
+Output: 2
+```
+
+![Example 1](./images/examples/jump_game_2_example_1.png)
+![Example 2](./images/examples/jump_game_2_example_2.png)
+![Example 3](./images/examples/jump_game_2_example_3.png)
+![Example 4](./images/examples/jump_game_2_example_4.png)
+![Example 5](./images/examples/jump_game_2_example_5.png)
+![Example 6](./images/examples/jump_game_2_example_6.png)
+
+## Solution
+
+We’ll solve this problem using a greedy approach. At each step, we choose the jump that allows us to reach the farthest 
+point. The objective is to minimize the number of jumps required to reach the end of the array. This strategy is 
+considered greedy because it selects the best possible move at each step without considering the impact on future jumps.
+By always jumping as far as possible, we cover more distance and use fewer jumps to reach the end.
+
+To find the minimum number of jumps needed to reach the end of the array, keep track of how far you can go with the 
+current number of jumps. As you progress through the array, update this maximum reach based on your current position. 
+When you reach the limit of your current jump range, increase your jump count and adjust the range to the farthest 
+position you can reach with the next jump. Continue this process until you reach or exceed the end of the array.
+
+The steps of the algorithm are given below:
+
+1. Initialize three variables, all set to 0. 
+   - `jumps`: This variable tracks the minimum number of jumps required to reach the end of the array and will be 
+    returned as the final output.
+   - `current_jump_boundary`: This represents the maximum index we can reach with the current number of jumps. It acts 
+     as the boundary of how far we can go before making another jump.
+   - `farthest_jump_index`: This tracks the farthest index we can reach from the current position by considering all 
+     possible jumps within the current jump’s range.
+
+2. Iterate through the nums array and perform the following steps:
+   - Update `farthest_jump_index`: For each index i, calculate i + nums[i], which represents the farthest index we can
+    reach from i. Update farthest_jump_index to be the maximum of its current value and i + nums[i].
+   - Check if a new jump is needed: If i equals current_jump_boundary, it means we’ve reached the limit of the current 
+     jump. Increment jumps by 1, and update current_jump_boundary to farthest_jump_index to set up for the next jump.
+
+3. After iterating through the array, jumps will contain the minimum number of jumps needed to reach the end. Return 
+   this value as the output.
+
+Let’s look at the following illustration to get a better understanding of the solution:
+
+![Solution 1](./images/solutions/jump_game_2_solution_1.png)
+![Solution 2](./images/solutions/jump_game_2_solution_2.png)
+![Solution 3](./images/solutions/jump_game_2_solution_3.png)
+![Solution 4](./images/solutions/jump_game_2_solution_4.png)
+![Solution 5](./images/solutions/jump_game_2_solution_5.png)
+![Solution 6](./images/solutions/jump_game_2_solution_6.png)
+![Solution 7](./images/solutions/jump_game_2_solution_7.png)
+![Solution 8](./images/solutions/jump_game_2_solution_8.png)
+![Solution 9](./images/solutions/jump_game_2_solution_9.png)
+![Solution 10](./images/solutions/jump_game_2_solution_10.png)
+![Solution 11](./images/solutions/jump_game_2_solution_11.png)
+![Solution 12](./images/solutions/jump_game_2_solution_12.png)
+![Solution 13](./images/solutions/jump_game_2_solution_13.png)
+
+### Time Complexity
+
+The time complexity of the above solution is O(n), where n is the length of nums because we are iterating the array once.
+
+### Space Complexity
+
+The space complexity of the above solution is O(1), because we are not using any extra space.
+
+---
+
+# Topics
+
+- Array
+- Dynamic Programming
+- Greedy
