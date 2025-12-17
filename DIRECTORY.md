@@ -85,6 +85,8 @@
   * Greedy
     * Gas Stations
       * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/gas_stations/test_gas_stations.py)
+    * Jump Game
+      * [Test Jump Game](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/jump_game/test_jump_game.py)
     * Majority Element
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
@@ -497,8 +499,6 @@
       * [Test H Index](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/h_index/test_h_index.py)
     * Increasing Triplet Subsequence
       * [Test Increasing Triplet](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/increasing_triplet_subsequence/test_increasing_triplet.py)
-    * Jump Game
-      * [Test Jump Game](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/jump_game/test_jump_game.py)
     * Kid With Greatest No Of Candies
       * [Test Kids With Greatest Candies](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/kid_with_greatest_no_of_candies/test_kids_with_greatest_candies.py)
     * Longest Increasing Subsequence
