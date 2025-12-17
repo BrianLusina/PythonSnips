@@ -95,6 +95,8 @@
   * Intervals
     * Insert Interval
       * [Test Insert Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/insert_interval/test_insert_interval.py)
+    * Interval Intersection
+      * [Test Intervals Intersection](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/interval_intersection/test_intervals_intersection.py)
     * Meeting Rooms
       * [Test Min Meeting Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/meeting_rooms/test_min_meeting_rooms.py)
     * Merge Intervals
