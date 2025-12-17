@@ -7,8 +7,6 @@
       * [Test Intersection](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/test_intersection.py)
       * [Test Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/test_intersection_one.py)
       * [Test Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/test_intersection_two.py)
-    * Majority Element
-      * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/majority_element/test_majority_element.py)
     * Non Constructible Change
       * [Test Non Constructible Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/non_constructible_change/test_non_constructible_change.py)
     * Optimal Task Assignment
@@ -70,6 +68,8 @@
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
+    * Word Break
+      * [Test Word Break](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/word_break/test_word_break.py)
   * Fast And Slow
     * Circular Array Loop
       * [Test Circular Array Loop](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/fast_and_slow/circular_array_loop/test_circular_array_loop.py)
@@ -83,12 +83,22 @@
     * Frog Position After T Seconds
       * [Test Frog Position After T Seconds](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/frog_position_after_t_seconds/test_frog_position_after_t_seconds.py)
   * Greedy
+    * Gas Stations
+      * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/gas_stations/test_gas_stations.py)
+    * Majority Element
+      * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
   * Intervals
+    * Insert Interval
+      * [Test Insert Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/insert_interval/test_insert_interval.py)
+    * Meeting Rooms
+      * [Test Min Meeting Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/meeting_rooms/test_min_meeting_rooms.py)
+    * Merge Intervals
+      * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/merge_intervals/test_merge_intervals.py)
     * Task Scheduler
       * [Test Task Scheduler](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/task_scheduler/test_task_scheduler.py)
   * Josephus Circle
@@ -330,6 +340,9 @@
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/node.py)
       * [Test Ternary Tree Paths](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/test_ternary_tree_paths.py)
     * Trie
+      * Alphabet Trie
+        * [Alphabet Trie](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/alphabet_trie/alphabet_trie.py)
+        * [Alphabet Trie Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/alphabet_trie/alphabet_trie_node.py)
       * Suffix
         * [Suffix Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/suffix/suffix_tree.py)
         * [Suffix Tree Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/suffix/suffix_tree_node.py)
@@ -478,8 +491,6 @@
       * [Test Candy](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/candy/test_candy.py)
     * Container With Most Water
       * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/container_with_most_water/test_container_with_most_water.py)
-    * Gas Stations
-      * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/gas_stations/test_gas_stations.py)
     * H Index
       * [Test H Index](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/h_index/test_h_index.py)
     * Increasing Triplet Subsequence
@@ -569,8 +580,6 @@
     * [Hidden Cubic Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hidden_cubic_numbers/hidden_cubic_numbers.py)
   * Matrix In Spiral Form
     * [Test Make Spiral](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/matrix_in_spiral_form/test_make_spiral.py)
-  * Meeting Rooms
-    * [Test Min Meeting Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/meeting_rooms/test_min_meeting_rooms.py)
   * Minimize The Absolute Difference
     * [Test Minimize Absolute Difference](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/minimize_the_absolute_difference/test_minimize_absolute_difference.py)
   * Next Permutation
@@ -824,7 +833,6 @@
       * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sliding_window/test_min_window_substring.py)
     * Sorting
       * [Test Counting Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_counting_sort.py)
-      * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_merge_intervals.py)
     * Strings
       * [Test Validate Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/strings/test_validate_ipv4.py)
     * [Test Bubble Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_bubble_sort.py)
