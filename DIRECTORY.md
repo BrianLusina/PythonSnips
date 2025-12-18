@@ -83,6 +83,8 @@
     * Frog Position After T Seconds
       * [Test Frog Position After T Seconds](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/frog_position_after_t_seconds/test_frog_position_after_t_seconds.py)
   * Greedy
+    * Boats
+      * [Test Boats To Save People](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/boats/test_boats_to_save_people.py)
     * Gas Stations
       * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/gas_stations/test_gas_stations.py)
     * Jump Game
