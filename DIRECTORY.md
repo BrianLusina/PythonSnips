@@ -83,6 +83,8 @@
     * Frog Position After T Seconds
       * [Test Frog Position After T Seconds](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/frog_position_after_t_seconds/test_frog_position_after_t_seconds.py)
   * Greedy
+    * Boats
+      * [Test Boats To Save People](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/boats/test_boats_to_save_people.py)
     * Gas Stations
       * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/gas_stations/test_gas_stations.py)
     * Jump Game
@@ -91,6 +93,8 @@
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
+    * Spread Stones
+      * [Test Minimum Moves To Spread Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/spread_stones/test_minimum_moves_to_spread_stones.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
