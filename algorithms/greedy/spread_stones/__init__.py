@@ -35,7 +35,9 @@ def minimum_moves(grid: List[List[int]]) -> int:
         # calculate the total number of moves for this permutation
         total_moves = 0
         for i in range(len(perms)):
-            total_moves += abs(perms[i][0] - empty_list[i][0]) + abs(perms[i][1] - empty_list[i][1])
+            total_moves += abs(perms[i][0] - empty_list[i][0]) + abs(
+                perms[i][1] - empty_list[i][1]
+            )
         # return the minimum number of moves
         minimum_number_of_moves = min(minimum_number_of_moves, total_moves)
 
