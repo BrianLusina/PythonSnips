@@ -592,3 +592,29 @@ Here `n` is the number of nodes in the linked list
 - Stack
 
 ---
+
+## Reorder List
+
+Given the head of a singly linked list, reorder the list as if it were folded on itself. For example, if the list is 
+represented as follows:
+
+L0 -> L1 -> L2 -> L3 -> L4 -> L5
+
+The reordered list should be:
+
+L0 -> L5 -> L1 -> L4 -> L2 -> L3
+
+You don’t need to modify the values in the list’s nodes; only the links between nodes need to be changed.
+
+### Constraints
+
+- The range of number of nodes in the list is [1, 500]
+- -5000 <= `node.value` <= 5000
+
+### Examples
+
+![Example 1](./images/examples/singly_linked_list_reorder_list_example_1.png)
+![Example 2](./images/examples/singly_linked_list_reorder_list_example_2.png)
+![Example 3](./images/examples/singly_linked_list_reorder_list_example_3.png)
+![Example 4](./images/examples/singly_linked_list_reorder_list_example_4.png)
+![Example 5](./images/examples/singly_linked_list_reorder_list_example_5.png)
