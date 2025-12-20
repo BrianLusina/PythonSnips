@@ -2,8 +2,10 @@
 Finds the maximum path sum in a given triangle of numbers
 """
 
+from typing import List
 
-def max_path_sum_in_triangle(triangle):
+
+def max_path_sum_in_triangle(triangle: List[List[int]]) -> int:
     """
     Finds the maximum sum path in a triangle(tree) and returns it
     :param triangle:
