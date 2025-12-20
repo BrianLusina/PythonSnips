@@ -715,3 +715,36 @@ class LinkedList(Generic[T]):
             List: list of pairs
         """
         raise NotImplementedError("not yet implemented")
+
+    @staticmethod
+    def reverse_list(head: Node) -> Optional[Node]:
+        """
+        Reverses a linked list given the head node
+        Args:
+            head Node: the head node of the linked list
+        Returns:
+            Optional[Node]: the new head node of the reversed linked list
+        """
+        if head is None or head.next is None:
+            return head
+
+        # track previous node, so we can point our next pointer to it
+        previous = None
+        # track node to loop through
+        current_node = head
+
+        while current_node:
+            # track the next node to not lose it while adjusting pointers
+            nxt = current_node.next
+
+            # set the next pointer to the node behind it, previous
+            current_node.next = previous
+
+            # adjust the new previous node to the current node for subsequent loops
+            previous = current_node
+
+            # move our node pointer up to the next node in front of it
+            current_node = nxt
+
+        # return the new tail of the k-group which is our head
+        return previous

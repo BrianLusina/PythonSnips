@@ -4,6 +4,10 @@ from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from datastructures.linked_lists.singly_linked_list.node import SingleNode
 from datastructures.linked_lists import LinkedList, T, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
+from datastructures.linked_lists.singly_linked_list.single_linked_list_utils import (
+    reverse_list,
+    merge_and_weave,
+)
 
 
 class SinglyLinkedList(LinkedList):
@@ -982,6 +986,36 @@ class SinglyLinkedList(LinkedList):
 
     def remove_tail(self):
         pass
+
+    def reorder_list(self) -> Optional[SingleNode]:
+        """
+        Reorders the linked list in place.
+        Returns:
+            head node of reversed linked list
+        """
+        # return early if there is no head node
+        if self.head is None:
+            return None
+
+        # first split the linked list into two halves. To do this without knowing the length of the linked list beforehand
+        # we must first find the middle node. This uses the slow & fast pointer approach
+        middle_node = self.middle_node()
+
+        # Store the second half head node
+        second_half_head = middle_node.next
+        # cut the connection between the first half and the second half
+        middle_node.next = None
+
+        # Now, we need to reverse the second half of the linked list in place
+        # The reversal step involves taking the second half of the linked list and reversing it in place
+        # for example, if the linked list is 1 -> 2 -> 3 -> 4 -> 5, the second half is 3 -> 4 -> 5
+        # after reversing, it becomes 5 -> 4 -> 3
+        reversed_second_half = self.reverse_list(second_half_head)
+
+        # now we can merge and weave the first half and the reversed second half
+        reordered_list = merge_and_weave(self.head, reversed_second_half)
+
+        return reordered_list
 
     def kth_to_last_node(self, k: int) -> Optional[SingleNode]:
         """
