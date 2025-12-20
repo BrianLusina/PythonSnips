@@ -66,6 +66,8 @@
       * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
     * Min Distance
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
+    * Min Path Sum
+      * [Test Min Path Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_path_sum/test_min_path_sum.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
     * Word Break
@@ -250,6 +252,7 @@
       * [Test Doubly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list.py)
       * [Test Doubly Linked List Move Tail To Head](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list_move_tail_to_head.py)
       * [Test Doubly Linked List Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list_palindrome.py)
+    * [Linked List Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/linked_list_utils.py)
     * Mergeklinkedlists
       * [Test Merge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/mergeklinkedlists/test_merge.py)
     * Singly Linked List
