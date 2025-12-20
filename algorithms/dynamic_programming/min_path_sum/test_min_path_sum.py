@@ -1,4 +1,5 @@
 import unittest
+import copy
 from typing import List
 from parameterized import parameterized
 from algorithms.dynamic_programming.min_path_sum import min_path_sum, min_path_sum_2
@@ -15,12 +16,14 @@ TEST_CASES = [
 class MinPathSumInTriangleTestCase(unittest.TestCase):
     @parameterized.expand(TEST_CASES)
     def test_min_path_sum_in_triangle(self, triangle: List[List[int]], expected: int):
-        actual = min_path_sum(triangle)
+        input_triangle = copy.deepcopy(triangle)
+        actual = min_path_sum(input_triangle)
         self.assertEqual(expected, actual)
 
     @parameterized.expand(TEST_CASES)
     def test_min_path_sum_2_in_triangle(self, triangle: List[List[int]], expected: int):
-        actual = min_path_sum_2(triangle)
+        input_triangle = copy.deepcopy(triangle)
+        actual = min_path_sum_2(input_triangle)
         self.assertEqual(expected, actual)
 
 

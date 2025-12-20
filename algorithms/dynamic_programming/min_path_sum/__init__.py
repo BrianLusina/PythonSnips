@@ -41,7 +41,7 @@ def min_path_sum_2(triangle: List[List[int]]) -> int:
     Complexity:
     Time Complexity results in O(n^2), since we visit every number in the triangle exactly once. For n rows, there are
     roughtl n^2/2 elements.
-    Space Complexity is O(1) since the triangle input array is updated in place
+    Space Complexity is O(n) since the triangle input array's last row is copied over
 
     Args:
         triangle(list): A list of lists of integers representing the triangle

@@ -52,4 +52,4 @@ grows quadratically.
 
 ### Space Complexity
 
-The space complexity is O(n) since we only maintain a single working array `dp` with on entry per row.
+The space complexity is O(n) since we only maintain a single working array `dp` with one entry per row.
