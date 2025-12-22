@@ -156,6 +156,8 @@
       * [Test Find Sum Of Three](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/find_sum_of_three/test_find_sum_of_three.py)
     * Merge Sorted Arrays
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/merge_sorted_arrays/test_merge_sorted_arrays.py)
+    * Next Permutation
+      * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/next_permutation/test_next_permutation.py)
     * Pair With Sum In Array
       * [Test Pair With Sum In Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/pair_with_sum_in_array/test_pair_with_sum_in_array.py)
     * Reverse Array
@@ -596,8 +598,6 @@
     * [Test Make Spiral](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/matrix_in_spiral_form/test_make_spiral.py)
   * Minimize The Absolute Difference
     * [Test Minimize Absolute Difference](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/minimize_the_absolute_difference/test_minimize_absolute_difference.py)
-  * Next Permutation
-    * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/next_permutation/test_next_permutation.py)
   * Permutations Check
     * [Test Check](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/permutations_check/test_check.py)
   * Prefix Sum
