@@ -109,6 +109,8 @@
       * [Test Min Meeting Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/meeting_rooms/test_min_meeting_rooms.py)
     * Merge Intervals
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/merge_intervals/test_merge_intervals.py)
+    * Remove Intervals
+      * [Test Remove Covered Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/remove_intervals/test_remove_covered_intervals.py)
     * Task Scheduler
       * [Test Task Scheduler](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/task_scheduler/test_task_scheduler.py)
   * Josephus Circle
