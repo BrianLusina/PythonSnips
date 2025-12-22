@@ -156,8 +156,8 @@
       * [Test Find Sum Of Three](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/find_sum_of_three/test_find_sum_of_three.py)
     * Merge Sorted Arrays
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/merge_sorted_arrays/test_merge_sorted_arrays.py)
-  * Next Permutation
-    * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/next_permutation/test_next_permutation.py)
+    * Next Permutation
+      * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/next_permutation/test_next_permutation.py)
     * Pair With Sum In Array
       * [Test Pair With Sum In Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/pair_with_sum_in_array/test_pair_with_sum_in_array.py)
     * Reverse Array
