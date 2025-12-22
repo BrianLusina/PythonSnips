@@ -1,6 +1,6 @@
 import unittest
 
-from puzzles.next_permutation import next_permutation
+from algorithms.two_pointers.next_permutation import next_permutation
 
 
 class NextPermutationTestCase(unittest.TestCase):
