@@ -120,6 +120,8 @@
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
   * Search
     * Binary Search
+      * Divide Chocolate
+        * [Test Divide Chocolate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/divide_chocolate/test_divide_chocolate.py)
       * Maxruntime N Computers
         * [Test Max Runtime](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/maxruntime_n_computers/test_max_runtime.py)
       * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/test_binary_search.py)
