@@ -54,7 +54,7 @@ def maximize_sweetness_2(sweetness: List[int], k: int) -> int:
     return result
 
 
-def can_divide(sweetness: List[int], k: int, min_sweetness: int):
+def can_divide(sweetness: List[int], k: int, min_sweetness: int) -> bool:
     total_sweetness, pieces = 0, 0
     for sweet in sweetness:
         total_sweetness += sweet
