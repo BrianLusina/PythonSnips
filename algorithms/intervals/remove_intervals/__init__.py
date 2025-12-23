@@ -30,7 +30,7 @@ def remove_covered_intervals(intervals: List[List[int]]) -> int:
     intervals.sort(key=lambda x: (x[0], -x[1]))
 
     # keep track of the last max end seen so far, we use a large negative infinity to cover all possible numbers
-    max_end_seen = float('-inf')
+    max_end_seen = float("-inf")
     count = 0
 
     # We then iterate through the given intervals
