@@ -37,6 +37,11 @@ def num_squares(n: int) -> int:
     Returns:
         int: The least number of perfect square numbers that sum to n.
     """
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    if n == 0:
+        return 0
+    
     dp = [float("inf")] * (n + 1)
     dp[0] = 0
 
