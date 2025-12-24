@@ -1,7 +1,10 @@
 import unittest
 from typing import List
 from parameterized import parameterized
-from algorithms.search.binary_search.divide_chocolate import maximize_sweetness, maximize_sweetness_2
+from algorithms.search.binary_search.divide_chocolate import (
+    maximize_sweetness,
+    maximize_sweetness_2,
+)
 
 TEST_CASES = [
     ([1, 2, 3, 4, 5, 6, 7, 8, 9], 5, 6),
