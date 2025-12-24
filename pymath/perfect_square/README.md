@@ -7,7 +7,7 @@ Given an integer, n, return the least number of perfect square numbers that sum 
 
 ## Constraints 
 
-- 1 < `n` < 10^3
+- 1 <= `n` < 10^3
 
 ## Solution
 

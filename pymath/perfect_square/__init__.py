@@ -41,7 +41,7 @@ def num_squares(n: int) -> int:
         raise ValueError("n must be non-negative")
     if n == 0:
         return 0
-    
+
     dp = [float("inf")] * (n + 1)
     dp[0] = 0
 
@@ -62,6 +62,11 @@ def num_squares_2(n: int) -> int:
     Returns:
         int: The least number of perfect square numbers that sum to n.
     """
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    if n == 0:
+        return 0
+
     # Apply reduction by removing factors of 4
     while n % 4 == 0:
         n = n // 4
