@@ -57,12 +57,12 @@ def count_days(days: int, meetings: List[List[int]]) -> int:
 def count_days_2(days: int, meetings: List[List[int]]) -> int:
     """
     Counts the number of days the employee is available for work but has no scheduled meetings.
-    
+
     This implementation merges overlapping meetings and counts total occupied days.
-    
+
     Time Complexity: O(n log n) due to sorting
     Space Complexity: O(1) excluding sort overhead
-    
+
     Args:
         days (int): The total number of days the employee is available for work
         meetings (List[List[int]]): A list of meetings, where each meeting is represented as a list of two integers [start, end]
