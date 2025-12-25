@@ -101,6 +101,8 @@
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
   * Intervals
+    * Count Days
+      * [Test Count Days Without Meetings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/count_days/test_count_days_without_meetings.py)
     * Insert Interval
       * [Test Insert Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/insert_interval/test_insert_interval.py)
     * Interval Intersection

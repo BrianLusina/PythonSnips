@@ -22,12 +22,18 @@ def merge(intervals: List[List[int]]) -> List[List[int]]:
     merged = []
 
     for interval in closed_intervals:
+        current_interval_start_time = interval[0]
+        current_interval_end_time = interval[1]
+        last_merged_interval_end_time = merged[-1][1] if merged else float("-inf")
+
         # if the merged array is empty or the last interval in the merged array does not overlap with the current interval
-        if not merged or merged[-1][1] < interval[0]:
+        if not merged or last_merged_interval_end_time < current_interval_start_time:
             # add it to the merged list
             merged.append(interval)
         else:
             # else we merge the intervals, by updating the max end time of the last interval in the merged list
-            merged[-1][1] = max(merged[-1][1], interval[1])
+            merged[-1][1] = max(
+                last_merged_interval_end_time, current_interval_end_time
+            )
 
     return merged
