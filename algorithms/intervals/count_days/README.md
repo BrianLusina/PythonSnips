@@ -12,7 +12,7 @@ Your task is to count the days when the employee is available for work but has n
 
 - 1 <= days <= 10^5
 - 1 <= meetings.length <= 10^3
-- meetings.length == 2
+- meetings[i].length == 2
 - 1 <= `meetings[i][0]` <= `meetings[i][1]` <= days
 
 ## Examples
