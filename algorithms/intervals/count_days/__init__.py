@@ -77,6 +77,17 @@ def count_days_2(days: int, meetings: List[List[int]]) -> int:
     occupied = 0
 
     # Initialize two variables with the first meeting’s start and end times
+    # Sort the meetings based on their start time to process them in order
+    meetings.sort()
+
+    # Handle edge case of empty meetings
+    if not meetings:
+        return days
+
+    # Initialize a variable with 0 to count the number of days when the employee has meetings scheduled
+    occupied = 0
+
+    # Initialize two variables with the first meeting's start and end times
     start, end = meetings[0]
 
     # Iterate through the remaining meetings
