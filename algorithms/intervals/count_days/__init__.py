@@ -1,7 +1,7 @@
 from typing import List
 
 
-def count_days(days: int, meetings: List[List[int]]):
+def count_days(days: int, meetings: List[List[int]]) -> int:
     """
     Counts the number of days the employee is available for work but has no scheduled meetings.
 
