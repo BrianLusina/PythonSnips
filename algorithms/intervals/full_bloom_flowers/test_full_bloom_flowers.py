@@ -24,7 +24,7 @@ class FullBloomFlowersTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     @parameterized.expand(TEST_CASES)
-    def test_full_bloom_flowers(
+    def test_full_bloom_flowers_2(
         self, flowers: List[List[int]], people: List[int], expected: List[int]
     ):
         actual = full_bloom_flowers_2(flowers, people)
