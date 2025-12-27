@@ -250,6 +250,10 @@
       * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/non_overlapping_intervals/test_non_overlapping_intervals.py)
     * Subarrays With Fixed Bounds
       * [Test Subarrays With Fixed Bounds](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/subarrays_with_fixed_bounds/test_subarrays_with_fixed_bounds.py)
+  * Circular Buffer
+    * [Circular Buffer](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/circular_buffer/circular_buffer.py)
+    * [Exceptions](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/circular_buffer/exceptions.py)
+    * [Test Circular Buffer](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/circular_buffer/test_circular_buffer.py)
   * Dicts
     * [Default Dicts](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/default_dicts.py)
     * [Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/ordered_dict.py)
@@ -325,6 +329,12 @@
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/minstack/test_min_stack.py)
     * [Test Stacks](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/test_stacks.py)
   * Streams
+    * Moving Average
+      * [Exponential Moving Average](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/moving_average/exponential_moving_average.py)
+      * [Moving Average](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/moving_average/moving_average.py)
+      * [Moving Average With Buffer](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/moving_average/moving_average_with_buffer.py)
+      * [Test Moving Average](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/moving_average/test_moving_average.py)
+      * [Weighted Moving Average](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/moving_average/weighted_moving_average.py)
     * Stream Checker
       * [Test Stream Checker](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/stream_checker/test_stream_checker.py)
   * Timemap
@@ -930,7 +940,6 @@
     * Linked List
       * [Test Reorder List](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/linked_list/test_reorder_list.py)
     * [Test Build One 2 3](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_build_one_2_3.py)
-    * [Test Circular Buffer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_circular_buffer.py)
     * [Test Consecutive](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_consecutive.py)
     * [Test Data Reverse](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_data_reverse.py)
     * [Test Dominator](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_dominator.py)
