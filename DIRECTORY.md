@@ -325,6 +325,8 @@
       * [Test Min Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/minstack/test_min_stack.py)
     * [Test Stacks](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/test_stacks.py)
   * Streams
+    * Moving Average
+      * [Test Moving Average](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/moving_average/test_moving_average.py)
     * Stream Checker
       * [Test Stream Checker](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/streams/stream_checker/test_stream_checker.py)
   * Timemap
