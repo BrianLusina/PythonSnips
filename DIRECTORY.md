@@ -106,6 +106,8 @@
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
   * Intervals
+    * Car Pooling
+      * [Test Car Pooling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/car_pooling/test_car_pooling.py)
     * Count Days
       * [Test Count Days Without Meetings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/count_days/test_count_days_without_meetings.py)
     * Full Bloom Flowers
