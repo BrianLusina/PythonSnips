@@ -3,7 +3,7 @@ from typing import List, Tuple
 
 def car_pooling(trips: List[List[int]], capacity: int) -> bool:
     """
-    Calculates and checks whether it is possible to pick and drop of passengers on the given trips given the cars
+    Calculates and checks whether it is possible to pick up and drop off passengers on the given trips given the car's
     capacity
     Args:
         trips(list): The trips that the car makes while collecting passengers on the route
