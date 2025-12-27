@@ -2,6 +2,9 @@ import unittest
 from typing import List, Tuple
 from parameterized import parameterized
 from datastructures.streams.moving_average import MovingAverage
+from datastructures.streams.moving_average.moving_average_with_buffer import (
+    MovingAverageWithBuffer,
+)
 
 
 TEST_CASES = [
@@ -17,6 +20,16 @@ class MyTestCase(unittest.TestCase):
     @parameterized.expand(TEST_CASES)
     def test_moving_average(self, size: int, data_to_expected: List[Tuple[int, float]]):
         moving_average = MovingAverage(size)
+        for data, expected in data_to_expected:
+            actual = moving_average.next(data)
+            round(actual, 5)
+            self.assertEqual(expected, round(actual, 5))
+
+    @parameterized.expand(TEST_CASES)
+    def test_moving_average_with_buffer(
+        self, size: int, data_to_expected: List[Tuple[int, float]]
+    ):
+        moving_average = MovingAverageWithBuffer(size)
         for data, expected in data_to_expected:
             actual = moving_average.next(data)
             round(actual, 5)
