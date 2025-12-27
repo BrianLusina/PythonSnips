@@ -260,7 +260,19 @@
     * [Default Dicts](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/default_dicts.py)
     * [Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/ordered_dict.py)
   * Graphs
-    * [Edge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge.py)
+    * Edge
+      * [Edge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge.py)
+      * [Edge Directed](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge_directed.py)
+      * [Edge Hyper](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge_hyper.py)
+      * [Edge Self](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge_self.py)
+      * [Edge Type](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge_type.py)
+      * [Edge Undirected](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge_undirected.py)
+    * [Graph](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/graph.py)
+    * [Test Vertex](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/test_vertex.py)
+    * Undirected
+      * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/test_utils.py)
+      * [Undirected Graph](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/undirected_graph.py)
+      * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/utils.py)
     * [Vertex](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/vertex.py)
   * Hashmap
     * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/test_hashmap.py)
