@@ -81,6 +81,9 @@ def find_strings(grid: List[List[str]], words: List[str]) -> List[str]:
     for word in words:
         trie.insert(word)
 
+    if not grid or not grid[0]:
+        return []
+
     rows_count, cols_count = len(grid), len(grid[0])
     result = []
 
