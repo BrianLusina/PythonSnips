@@ -38,6 +38,11 @@
         * [Test Generate Permutations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/permutations/generate_permutations/test_generate_permutations.py)
     * Restore Ip Addresses
       * [Test Restore Ip Addresses](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/restore_ip_addresses/test_restore_ip_addresses.py)
+    * Word Search
+      * [Constants](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/word_search/constants.py)
+      * [Point](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/word_search/point.py)
+      * [Test Word Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/word_search/test_word_search.py)
+      * [Test Word Search Two](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/word_search/test_word_search_two.py)
   * Bfs
     * Graphs
       * Dot Dsl
@@ -174,6 +179,8 @@
       * [Test Three Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/three_sum/test_three_sum.py)
   * Unique Bsts
     * [Unique Bsts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/unique_bsts/unique_bsts.py)
+  * Word Count
+    * [Test Word Count](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/word_count/test_word_count.py)
 
 ## Bit Manipulation
   * Counting Bits
@@ -882,8 +889,6 @@
     * [Test Transpose](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_transpose.py)
     * [Test Tree Building](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_tree_building.py)
     * [Test Variable Length Qty](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_variable_length_qty.py)
-    * [Test Word Count](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_word_count.py)
-    * [Test Word Search](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_word_search.py)
   * Cryptography
     * [Test Atbash Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_atbash_cipher.py)
     * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_caeser.py)

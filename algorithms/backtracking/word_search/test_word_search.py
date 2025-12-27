@@ -1,6 +1,6 @@
 import unittest
-
-from algorithms.word_search import Point, WordSearch
+from algorithms.backtracking.word_search.point import Point
+from algorithms.backtracking.word_search import WordSearch
 
 
 class WordSearchTests(unittest.TestCase):

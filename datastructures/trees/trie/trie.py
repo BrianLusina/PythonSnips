@@ -85,5 +85,25 @@ class Trie:
 
         return True
 
+    def remove_characters(self, string_to_delete: str):
+        """
+        Removes a string from the trie
+        """
+        node = self.root
+        child_list = []
+
+        for c in string_to_delete:
+            child_list.append([node, c])
+            node = node.children[c]
+
+        for pair in reversed(child_list):
+            parent = pair[0]
+            child_char = pair[1]
+            target = parent.children[child_char]
+
+            if target.children:
+                return
+            del parent.children[child_char]
+
     def __repr__(self):
         return f"Trie(root={self.root})"
