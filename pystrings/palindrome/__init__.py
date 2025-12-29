@@ -108,3 +108,57 @@ def largest_palindrome(max_factor, min_factor=0):
     :rtype:int
     """
     return max(generate_palindromes(max_factor, min_factor), key=lambda tup: tup[0])
+
+
+def is_palindrome_number(x: int) -> bool:
+    """
+    Checks if a number is a palindrome
+    Args:
+        x(int): number
+    Returns:
+        bool: True if it is a palindrome, False otherwise
+    """
+    # Negative numbers are never palindromes.
+    # Also, any number ending in 0 (except 0 itself) cannot be a palindrome.
+    if x < 0 or (x % 10 == 0 and x != 0):
+        return False
+
+    reversed_half = 0  # This will store the reversed last half of the digits.
+
+    # Reverse only half of the number.
+    # Stop when the reversed half becomes >= the remaining half.
+    while x > reversed_half:
+        last_digit = x % 10  # Extract last digit
+        reversed_half = reversed_half * 10 + last_digit  # Build reversed number
+        x //= 10  # Remove last digit from x
+
+    # If the number has even digits, check x == reversedHalf.
+    # If odd digits, the middle digit doesn't matter, so remove it using //10.
+    # If either of the above are True, return True. Otherwise, False
+    if x == reversed_half or x == reversed_half // 10:
+        return True
+    else:
+        return False
+
+
+def is_palindrome_number_2(x: int) -> bool:
+    """
+    Checks if a number is a palindrome
+    Args:
+        x(int): number
+    Returns:
+        bool: True if it is a palindrome, False otherwise
+    """
+    if x < 0 or (x % 10 == 0 and x != 0):
+        return False
+
+    num_str = str(x)
+    left = 0
+    right = len(num_str) - 1
+
+    while left < right:
+        if num_str[left] != num_str[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
