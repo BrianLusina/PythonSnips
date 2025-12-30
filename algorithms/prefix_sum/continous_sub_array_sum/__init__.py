@@ -12,8 +12,9 @@ def check_subarray_sum(nums: List[int], k: int) -> bool:
     remainder_map: Dict[int, int] = {0: -1}
 
     for idx, num in enumerate(nums):
+        cumulative_sum += num
         # Compute the remainder of the cumulative sum with k
-        remainder = (cumulative_sum + num) % k
+        remainder = cumulative_sum % k
 
         # Check if the remainder has been seen before
         if remainder in remainder_map:
