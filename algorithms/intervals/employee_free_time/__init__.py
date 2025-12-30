@@ -25,6 +25,9 @@ def employee_free_time(schedules: List[List[Interval]]) -> List[Interval]:
         for schedule_interval in schedule:
             all_schedules.append(schedule_interval)
 
+    if not all_schedules:
+        return []
+
     # sort by start time
     all_schedules.sort(key=lambda x: x.start)
 
