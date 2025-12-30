@@ -110,6 +110,9 @@
       * [Test Car Pooling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/car_pooling/test_car_pooling.py)
     * Count Days
       * [Test Count Days Without Meetings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/count_days/test_count_days_without_meetings.py)
+    * Employee Free Time
+      * [Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/employee_free_time/interval.py)
+      * [Test Employee Free Time](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/employee_free_time/test_employee_free_time.py)
     * Full Bloom Flowers
       * [Test Full Bloom Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/full_bloom_flowers/test_full_bloom_flowers.py)
     * Insert Interval
@@ -129,6 +132,9 @@
   * Memoization
     * [Fibonacci](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/memoization/fibonacci.py)
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
+  * Prefix Sum
+    * Continous Sub Array Sum
+      * [Test Check Subarray Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/prefix_sum/continous_sub_array_sum/test_check_subarray_sum.py)
   * Search
     * Binary Search
       * Divide Chocolate
@@ -250,6 +256,8 @@
       * [Min Increment For Unique](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/minincrementsforunique/min_increment_for_unique.py)
     * Non Overlapping Intervals
       * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/non_overlapping_intervals/test_non_overlapping_intervals.py)
+    * Sub Array With Sum
+      * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/sub_array_with_sum/test_sub_array_with_sum.py)
     * Subarrays With Fixed Bounds
       * [Test Subarrays With Fixed Bounds](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/subarrays_with_fixed_bounds/test_subarrays_with_fixed_bounds.py)
   * Circular Buffer
@@ -937,7 +945,6 @@
       * [Test Lonely Integer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_lonely_integer.py)
       * [Test Longest Consecutive Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_longest_consecutive_sequence.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
-      * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_sub_array_with_sum.py)
       * [Test Zig Zag Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_zig_zag_sequence.py)
     * Linked List
       * [Test Reorder List](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/linked_list/test_reorder_list.py)

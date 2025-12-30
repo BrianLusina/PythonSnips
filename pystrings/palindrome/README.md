@@ -126,7 +126,73 @@ Example Output
 Example Explanation
 We can see that longest palindromic substring is of length 7 and the string is "aaabaaa".
 
-### Related Topics
+
+## Palindrome Number
+
+Given an integer, x, return TRUE if it is a palindrome; otherwise, FALSE.
+
+> A palindrome integer is one whose digits read the same from left to right and right to left.
+
+### Constraints
+
+- -2^-31 <= x <= 2^31-1
+
+### Solution
+
+One of the first solutions that comes to mind is converting the number to a string and checking if it reads the same 
+backward and forward. While that works, it’s not the most efficient way, as it uses extra memory. Instead, we can solve 
+this problem mathematically, using only the digits of the number itself.
+
+A palindrome number remains the same when its digits are reversed. For example, 121 or 1221. Before checking deeper logic,
+we can immediately rule out two cases where an integer can never be a palindrome:
+
+1. **Negative numbers**: They can’t be palindromes because of the leading minus sign, which doesn’t appear at the end 
+    when reversed.
+2. **Numbers ending with 0 (except 0 itself)**: A number like 10 or 100 can’t be a palindrome because palindrome integers 
+   can’t start with a zero.
+
+For the remaining cases, the natural idea is to reverse the entire number and check whether it matches the original.
+However, reversing the whole integer can lead to integer overflow. To avoid this problem, we reverse only half of the
+number instead. The process works by repeatedly taking the last digit of x (using x % 10) and attaching it to a new
+number that we are building in reverse order. Each time we take a digit from the end, we also shorten x by removing that
+digit (using integer division by 10). We continue doing this until the reversed portion becomes at least as long as what’s
+left of the original number.
+
+At that stage, the number is naturally divided into two halves:
+
+- The first half is what remains of the original number. 
+- The second half is represented by the reversed digits we collected.
+
+If the number has an odd count of digits, the middle digit doesn’t affect whether it’s a palindrome, so we simply ignore
+it (using integer division by 10).
+
+Eventually, if the two halves match, then the number reads the same forward and backward, representing a palindrome. If
+they don’t match, then it is not.
+
+Let’s look at the algorithm steps:
+
+1. Handle special cases. If x is negative, or ends with 0 but is not 0 itself, it’s not a palindrome. Return FALSE. 
+2. Initialize a variable, reversedHalf, to 0. This will store the reversed digits of the last half of the number.
+3. While x is greater than reversedHalf:
+   - Take the last digit of x using x % 10.
+   - Add this digit to reversedHalf as reversedHalf = reversedHalf * 10 + x % 10.
+   - Remove the last digit from x using integer division x //= 10.
+4. Once we have the last half of the number in reversedHalf, compare the two halves:
+   - If the length of the reversedHalf is even, then compare x == reversedHalf. If it’s a valid match, return TRUE.
+   - If the length of the reversedHalf is odd, then compare x == reversedHalf // 10 to ignoring the middle digit. If
+     it’s a valid match, return TRUE.
+5. If neither condition is TRUE, return FALSE.
+
+### Time Complexity
+
+The time complexity of this solution O(log₁₀(n)) because the input is divided by 10 for every iteration.
+
+### Space Complexity
+
+As only a few variables are used, the space complexity of this solution is O(1).
+
+## Related Topics
 
 - String
 - Dynamic Programming
+- Two Pointers

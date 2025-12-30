@@ -3,9 +3,15 @@ import unittest
 from random import choice, randint
 from string import ascii_letters
 from typing import Union
-
-from . import is_palindrome, smallest_palindrome, largest_palindrome
-from .longest_palindrome import longest_palindrome
+from parameterized import parameterized
+from pystrings.palindrome import (
+    is_palindrome,
+    smallest_palindrome,
+    largest_palindrome,
+    is_palindrome_number,
+    is_palindrome_number_2,
+)
+from pystrings.palindrome.longest_palindrome import longest_palindrome
 
 
 class LongestPalindromeTests(unittest.TestCase):
@@ -80,6 +86,30 @@ class IsPalindromeTests(unittest.TestCase):
         for _ in range(100):
             test_case = self.generate_test_case()
             self.assertEqual(is_palindrome(str(test_case)), self.reference(test_case))
+
+
+IS_PALINDROME_TEST_CASES = [
+    (353, True),
+    (-353, False),
+    (90, False),
+    (12321, True),
+    (10101, True),
+    (1000021, False),
+    (0, True),
+    (2147447412, True),
+]
+
+
+class IsPalindromeNumber(unittest.TestCase):
+    @parameterized.expand(IS_PALINDROME_TEST_CASES)
+    def test_is_palindrome_number(self, x: int, expected: bool):
+        actual = is_palindrome_number(x)
+        self.assertEqual(actual, expected)
+
+    @parameterized.expand(IS_PALINDROME_TEST_CASES)
+    def test_is_palindrome_number_2(self, x: int, expected: bool):
+        actual = is_palindrome_number_2(x)
+        self.assertEqual(actual, expected)
 
 
 class SmallestPalindromeTests(unittest.TestCase):
