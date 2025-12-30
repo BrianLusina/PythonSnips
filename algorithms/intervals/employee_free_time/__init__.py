@@ -70,10 +70,15 @@ def employee_free_time_heap(schedules: List[List[Interval]]) -> List[Interval]:
     # and add start of each schedule's first interval along with
     # its index value and a value 0.
     for i in range(len(schedules)):
-        heap.append((schedules[i][0].start, i, 0))
+        if schedules[i]:  # Only add if employee has at least one interval
+            heap.append((schedules[i][0].start, i, 0))
 
     # Create heap from array elements.
     heapq.heapify(heap)
+
+    # Handle empty heap
+    if not heap:
+        return []
 
     # Take an empty array to store results.
     free_time_slots = []
