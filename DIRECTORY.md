@@ -110,6 +110,9 @@
       * [Test Car Pooling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/car_pooling/test_car_pooling.py)
     * Count Days
       * [Test Count Days Without Meetings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/count_days/test_count_days_without_meetings.py)
+    * Employee Free Time
+      * [Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/employee_free_time/interval.py)
+      * [Test Employee Free Time](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/employee_free_time/test_employee_free_time.py)
     * Full Bloom Flowers
       * [Test Full Bloom Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/full_bloom_flowers/test_full_bloom_flowers.py)
     * Insert Interval
