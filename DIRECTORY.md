@@ -87,8 +87,31 @@
   * Graphs
     * Course Schedule
       * [Test Course Schedule](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/course_schedule/test_course_schedule.py)
+    * Evaluate Division
+      * [Test Evaluate Division](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/evaluate_division/test_evaluate_division.py)
     * Frog Position After T Seconds
       * [Test Frog Position After T Seconds](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/frog_position_after_t_seconds/test_frog_position_after_t_seconds.py)
+    * Keys And Rooms
+      * [Test Can Visit All Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/keys_and_rooms/test_can_visit_all_rooms.py)
+    * Knight On Chess Board
+      * [Test Knight On Chess Board](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/knight_on_chess_board/test_knight_on_chess_board.py)
+    * Maxareaofisland
+      * [Test Max Area Of Island](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/maxareaofisland/test_max_area_of_island.py)
+    * Min Cost To Supply
+      * [Test Min Cost To Supply](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/min_cost_to_supply/test_min_cost_to_supply.py)
+    * Nearest Exit From Entrance In Maze
+      * [Test Nearest Exit From Entrance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/nearest_exit_from_entrance_in_maze/test_nearest_exit_from_entrance.py)
+    * Number Of Islands
+      * [Test Number Of Islands](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/test_number_of_islands.py)
+      * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/union_find.py)
+    * Number Of Provinces
+      * [Test Number Of Provinces](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_provinces/test_number_of_provinces.py)
+    * Reorder Routes
+      * [Test Reorder Routes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reorder_routes/test_reorder_routes.py)
+    * Rotting Oranges
+      * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/rotting_oranges/test_rotting_oranges.py)
+    * Valid Path
+      * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
   * Greedy
     * Boats
       * [Test Boats To Save People](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/boats/test_boats_to_save_people.py)
@@ -583,28 +606,6 @@
     * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/climb_stairs/test_climb_stairs.py)
   * Find Missing Elem
     * [Test Find Missing Elem](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/find_missing_elem/test_find_missing_elem.py)
-  * Graphs
-    * Evaluate Division
-      * [Test Evaluate Division](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/evaluate_division/test_evaluate_division.py)
-    * Keys And Rooms
-      * [Test Can Visit All Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/keys_and_rooms/test_can_visit_all_rooms.py)
-    * Knight On Chess Board
-      * [Test Knight On Chess Board](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/knight_on_chess_board/test_knight_on_chess_board.py)
-    * Maxareaofisland
-      * [Test Max Area Of Island](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/maxareaofisland/test_max_area_of_island.py)
-    * Nearest Exit From Entrance In Maze
-      * [Test Nearest Exit From Entrance](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/nearest_exit_from_entrance_in_maze/test_nearest_exit_from_entrance.py)
-    * Number Of Islands
-      * [Test Number Of Islands](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/number_of_islands/test_number_of_islands.py)
-      * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/number_of_islands/union_find.py)
-    * Number Of Provinces
-      * [Test Number Of Provinces](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/number_of_provinces/test_number_of_provinces.py)
-    * Reorder Routes
-      * [Test Reorder Routes](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/reorder_routes/test_reorder_routes.py)
-    * Rotting Oranges
-      * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/rotting_oranges/test_rotting_oranges.py)
-    * Valid Path
-      * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/graphs/valid_path/test_valid_path.py)
   * Hashmap
     * Close Strings
       * [Test Close Strings](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hashmap/close_strings/test_close_strings.py)
