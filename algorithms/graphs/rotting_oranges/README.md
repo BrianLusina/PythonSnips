@@ -12,7 +12,7 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
 
 Example 1
 
-![Rotting Oranges](./rotting_oranges.png)
+![Rotting Oranges](rotting_oranges.png)
 
 ```plain
 

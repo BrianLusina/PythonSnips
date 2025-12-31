@@ -1,7 +1,7 @@
 from typing import List
 import unittest
 from parameterized import parameterized
-from puzzles.graphs.number_of_islands import num_of_islands, num_islands_union_find
+from algorithms.graphs.number_of_islands import num_of_islands, num_islands_union_find
 
 
 class NumberOfIslandsTestCase(unittest.TestCase):
