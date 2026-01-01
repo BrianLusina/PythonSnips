@@ -1,30 +1,25 @@
 import unittest
-from . import Solution
+from typing import List
+from parameterized import parameterized
+from algorithms.graphs.reorder_routes import min_reorder
+
+REORDER_ROUTES_TEST_CASES = [
+    (6, [[0, 1], [1, 3], [2, 3], [4, 0], [4, 5]], 3),
+    (5, [[1, 0], [1, 2], [3, 2], [3, 4]], 2),
+    (3, [[1, 0], [2, 0]], 0),
+    (4, [[0, 1], [1, 2], [2, 3]], 3),
+    (6, [[0, 1], [2, 0], [3, 2], [4, 3], [5, 4]], 1),
+    (5, [[1, 0], [2, 1], [3, 2], [4, 3]], 0),
+    (7, [[0, 1], [2, 0], [3, 2], [4, 3], [5, 3], [6, 5]], 1),
+]
 
 
 class ReorderRoutesTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return 3 from input n = 6, connections = [[0,1],[1,3],[2,3],[4,0],[4,5]]"""
-        connections = [[0, 1], [1, 3], [2, 3], [4, 0], [4, 5]]
-        n = 6
-        expected = 3
-        actual = Solution().min_reorder(n, connections)
-        self.assertEqual(expected, actual)
-
-    def test_2(self):
-        """should return 2 from input n = 5, connections = [[1,0],[1,2],[3,2],[3,4]]"""
-        connections = [[1, 0], [1, 2], [3, 2], [3, 4]]
-        n = 5
-        expected = 2
-        actual = Solution().min_reorder(n, connections)
-        self.assertEqual(expected, actual)
-
-    def test_3(self):
-        """should return 0 from input n = 3, connections = [[1,0],[2,0]]"""
-        connections = [[1, 0], [2, 0]]
-        n = 3
-        expected = 0
-        actual = Solution().min_reorder(n, connections)
+    @parameterized.expand(REORDER_ROUTES_TEST_CASES)
+    def test_min_reorder_routes(
+        self, n: int, connections: List[List[int]], expected: int
+    ):
+        actual = min_reorder(n, connections)
         self.assertEqual(expected, actual)
 
 
