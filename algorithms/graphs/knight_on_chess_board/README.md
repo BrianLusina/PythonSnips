@@ -3,7 +3,7 @@
 Given any source point, (C, D) and destination point, (E, F) on a chess board, we need to find whether Knight can move
 to the destination or not.
 
-![knight_on_chess_board](./knight_on_chess_board.jpg)
+![knight_on_chess_board](knight_on_chess_board.jpg)
 
 The above figure details the movements for a knight ( 8 possibilities ).
 

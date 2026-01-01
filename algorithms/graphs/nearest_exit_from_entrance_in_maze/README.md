@@ -12,7 +12,7 @@ Return the number of steps in the shortest path from the entrance to the nearest
 
 Example 1:
 
-![nearest-grid-1](./nearest1-grid.jpg)
+![nearest-grid-1](nearest1-grid.jpg)
 
 ```plain
 Input: maze = [["+","+",".","+"],[".",".",".","+"],["+","+","+","."]], entrance = [1,2]
@@ -26,7 +26,7 @@ Thus, the nearest exit is [0,2], which is 1 step away.
 ```
 
 Example 2:
-![nearest-grid-2](./nearest2-grid.jpg)
+![nearest-grid-2](nearest2-grid.jpg)
 
 ```plain
 Input: maze = [["+","+","+"],[".",".","."],["+","+","+"]], entrance = [1,0]
@@ -39,7 +39,7 @@ Thus, the nearest exit is [1,2], which is 2 steps away.
 ```
 
 Example 3:
-![nearest-grid-3](./nearest3-grid.jpg)
+![nearest-grid-3](nearest3-grid.jpg)
 
 ```plain
 Input: maze = [[".","+"]], entrance = [0,0]

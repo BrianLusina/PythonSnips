@@ -1,5 +1,5 @@
 from typing import List, Tuple, Set
-from puzzles.graphs.number_of_islands.union_find import UnionFind
+from algorithms.graphs.number_of_islands.union_find import UnionFind
 
 
 def num_of_islands(grid: List[List[str]]) -> int:
