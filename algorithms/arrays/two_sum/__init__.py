@@ -97,8 +97,10 @@ def two_sum_find_target(root: BinaryTreeNode, k: int) -> bool:
             seen.add(curr.data)
 
             # enqueue the left and right children of the current node
-            queue.append(curr.left)
-            queue.append(curr.right)
+            if curr.left:
+                queue.append(curr.left)
+            if curr.right:
+                queue.append(curr.right)
 
     # if we reach here, we have not found two nodes that add up to the target
     return False
