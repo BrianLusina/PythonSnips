@@ -618,3 +618,68 @@ You don’t need to modify the values in the list’s nodes; only the links betw
 ![Example 3](./images/examples/singly_linked_list_reorder_list_example_3.png)
 ![Example 4](./images/examples/singly_linked_list_reorder_list_example_4.png)
 ![Example 5](./images/examples/singly_linked_list_reorder_list_example_5.png)
+
+---
+## Swap Nodes in Pairs
+
+Given a singly linked list, swap every two adjacent nodes of the linked list. After the swap, return the head of the 
+linked list.
+
+Note: Solve the problem without modifying the values in the list’s nodes. In other words, only the nodes themselves can 
+be changed.
+
+### Constraints
+
+- The number  of nodes in the list is in the range [0,100]
+- 0 <= `node.value` <= 100
+
+### Solution
+
+The essence of this solution lies in understanding that we need to swap nodes in pairs without altering the values within
+the nodes. To accomplish this, we use an in-place reversal approach, manipulating pointers to rearrange the nodes while 
+preserving the overall structure of the linked list. By adjusting the pointers of each node, we can efficiently swap the 
+nodes in place in linear time without needing extra space or altering the data. This method ensures that the linked list 
+remains intact and correctly ordered, with each pair of nodes swapped seamlessly as we progress through the list.
+
+The algorithm for this problem is as follows:
+
+- Initialize a dummy node that would reference the first node of the linked list, which is the head of the linked list. 
+  We’ll use prev_node to update the pointer of the dummy node.
+
+- Next, we iterate over the linked list and swap the pairs of nodes as we proceed. The two nodes to be swapped can be
+  represented as first_node and second_node.
+
+These steps are represented in the following illustration:
+
+![Solution 1](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_1.png)
+![Solution 2](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_2.png)
+![Solution 3](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_3.png)
+![Solution 4](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_4.png)
+![Solution 5](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_5.png)
+
+- After the swap, update the position of the previous node and the head node for the next swap. 
+- Reinitialize first_node to prev_node to ensure that the nodes are swapped on the go and attached to the previously
+  swapped list. Ultimately, we’ll get the final reversed pairs of linked lists.
+
+> Note: Ultimately, we have to return the second node because, at the end of the final iteration, the second node of the
+> list would have technically become the first node of the list. 
+> The reference of the first node is secured by the previous node in the first swap when we assign prev_node = first_node.
+
+The following illustration shows these steps in detail:
+
+![Solution 6](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_6.png)
+![Solution 7](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_7.png)
+![Solution 8](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_8.png)
+![Solution 9](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_9.png)
+![Solution 10](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_10.png)
+![Solution 11](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_11.png)
+![Solution 12](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_12.png)
+![Solution 13](./images/solutions/singly_linked_list_swap_nodes_in_pairs_solution_13.png)
+
+#### Time Complexity
+
+The time complexity of the solution above is O(n), where n is the number of nodes in the linked list.
+
+#### Space Complexity
+
+The space complexity of the solution above is O(1).
