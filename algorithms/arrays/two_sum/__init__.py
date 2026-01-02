@@ -1,4 +1,6 @@
-from typing import List
+from typing import List, Deque, Set
+from collections import deque
+from datastructures.trees.binary.node import BinaryTreeNode
 
 
 def two_sum(numbers: List[int], target: int) -> List[int]:
@@ -59,3 +61,44 @@ def two_sum_with_pointers(numbers: List[int], target: int) -> List[int]:
             first_pointer += 1
         else:
             last_pointer -= 1
+    return []
+
+
+def two_sum_find_target(root: BinaryTreeNode, k: int) -> bool:
+    """
+    Checks if two nodes in the binary search tree add up to the given target number
+
+    Args:
+        root (BinaryTreeNode): root of the binary search tree
+        k (int): target number
+    Returns:
+        bool: True if there are two nodes in the binary search tree that add up to the target, False otherwise
+    """
+    if not root:
+        return False
+
+    # store the seen values so far during the traversal
+    seen: Set[int] = set()
+
+    # Keep track of visited nodes, we start with the root node. We use a FIFO queue here
+    queue: Deque[BinaryTreeNode] = deque()
+    queue.append(root)
+
+    while queue:
+        # dequeue the first node, the front of the queue.
+        curr = queue.popleft()
+
+        if curr:
+            # check if the complement of this node's value exists in the values we have seen so far
+            if (k - curr.data) in seen:
+                return True
+
+            # if not, add the value
+            seen.add(curr.data)
+
+            # enqueue the left and right children of the current node
+            queue.append(curr.left)
+            queue.append(curr.right)
+
+    # if we reach here, we have not found two nodes that add up to the target
+    return False
