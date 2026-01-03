@@ -724,7 +724,7 @@ class SinglyLinkedList(LinkedList):
 
         return True
 
-    def pairwise_swap(self) -> Optional[SingleNode]:
+    def pairwise_swap_with_modification(self) -> Optional[SingleNode]:
         """
         Swaps nodes in pairs.
         However, this swaps the values of the nodes in pairs and not the pointers
@@ -754,7 +754,7 @@ class SinglyLinkedList(LinkedList):
         # at this point, the linked list has been swapped in pairs
         return self.head
 
-    def pairwise_swap_two(self) -> Optional[SingleNode]:
+    def pairwise_swap(self) -> Optional[SingleNode]:
         """
         Swaps nodes in pairs without swapping the values in the nodes.
 
@@ -765,20 +765,32 @@ class SinglyLinkedList(LinkedList):
         if not self.head:
             return self.head
 
-        start = SingleNode(None)
-        start.next = self.head
-        self.head = start
+        # Create a dummy node with a value of None
+        dummy_node = SingleNode(None)
+        # This dummy node acts as the prev_node for the head node
+        # of the list and hence stores pointer to the head node
+        dummy_node.next = self.head
+        prev_node = dummy_node
 
-        while self.head.next and self.head.next.next:
-            temp = self.head.next.next
+        # While the head node and the next node exist
+        while self.head and self.head.next:
+            # nodes to be swapped
+            first_node = self.head
+            second_node = self.head.next
 
-            self.head.next.next = temp.next
-            temp.next = self.head.next
+            # perform swapping of nodes
+            # i. Set the previous node's next node to be the second node
+            prev_node.next = second_node
+            # ii. Set the first node's next node to be the second node's next node
+            first_node.next = second_node.next
+            # iii. Set the second node's next node to be the first node
+            second_node.next = first_node
 
-            self.head.next = temp
-            self.head = self.head.next.next
+            # re-initialise the head and the previous node for next swap
+            prev_node = first_node
+            self.head = first_node.next
 
-        return start.next
+        return dummy_node.next
 
     def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> SingleNode:
         a, b = self.head, self.head
