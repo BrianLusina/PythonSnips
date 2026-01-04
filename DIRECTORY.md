@@ -73,6 +73,8 @@
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Min Path Sum
       * [Test Min Path Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_path_sum/test_min_path_sum.py)
+    * Shortest Common Supersequence
+      * [Test Shortest Common Supersequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/shortest_common_supersequence/test_shortest_common_supersequence.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
     * Word Break
@@ -182,8 +184,12 @@
     * Repeated Dna Sequences
       * [Test Repeated Dna Sequences](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/repeated_dna_sequences/test_repeated_dna_sequences.py)
   * Sorting
+    * Heapsort
+      * [Test Heap Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/heapsort/test_heap_sort.py)
     * Insertionsort
       * [Test Insertion Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/insertionsort/test_insertion_sort.py)
+    * Mergesort
+      * [Test Merge Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/mergesort/test_merge_sort.py)
     * Quicksort
       * [Test Quicksort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/quicksort/test_quicksort.py)
     * Selection
