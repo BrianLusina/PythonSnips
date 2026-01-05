@@ -120,3 +120,40 @@ def employee_free_time_heap(schedules: List[List[Interval]]) -> List[Interval]:
 
     # When the heap is empty, return result.
     return free_time_slots
+
+
+def employee_free_time_2(schedules: List[List[Interval]]) -> List[Interval]:
+    """
+    Finds intervals where employees have free time
+
+    Args:
+        schedules(list): a list of lists, where each inner list contains `Interval` objects representing an employee's schedule.
+    Returns:
+        list: Intervals of employee free time
+    """
+    # Flatten the list into a single list to make the merging process easier
+    flattened_schedules: List[Interval] = [
+        i for schedule in schedules for i in schedule
+    ]
+    # sort the flattened list
+    intervals = sorted(flattened_schedules, key=lambda i: i.start)
+
+    # This will contain the merged overlapping intervals
+    merged: List[Interval] = []
+    for current_interval in intervals:
+        if not merged or merged[-1].end < current_interval.start:
+            merged.append(current_interval)
+        else:
+            merged[-1].end = max(merged[-1].end, current_interval.end)
+
+    free_time_slots: List[Interval] = []
+    # We iterate through the merged intervals finding the gaps between the intervals. A free slot is created by making
+    # the end of the current merged interval the start and the start of the next interval the end.
+    # So, if we have this [[1,2][3,4][5,6]], the free time slots are [[2,3],[4,5]]
+    for idx in range(1, len(merged)):
+        start = merged[idx - 1].end
+        end = merged[idx].start
+        free_interval = Interval(start=start, end=end)
+        free_time_slots.append(free_interval)
+
+    return free_time_slots

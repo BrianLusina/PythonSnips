@@ -17,3 +17,6 @@ class Interval:
 
     def __eq__(self, other: "Interval") -> bool:
         return self.start == other.start and self.end == other.end
+
+    def __repr__(self) -> str:
+        return f"Interval(start={self.start}, end={self.end}, closed={self.closed})"

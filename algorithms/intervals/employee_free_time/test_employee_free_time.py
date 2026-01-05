@@ -5,9 +5,18 @@ from algorithms.intervals.employee_free_time.interval import Interval
 from algorithms.intervals.employee_free_time import (
     employee_free_time,
     employee_free_time_heap,
+    employee_free_time_2,
 )
 
 EMPLOYEE_FREE_TIME_TEST_CASES = [
+    (
+        [
+            [Interval(start=1, end=2), Interval(start=5, end=6)],
+            [Interval(start=1, end=3)],
+            [Interval(start=4, end=10)],
+        ],
+        [Interval(start=3, end=4)],
+    ),
     (
         [
             [Interval(start=1, end=2), Interval(start=5, end=6)],
@@ -98,6 +107,13 @@ class EmployeeFreeTimeTestCase(unittest.TestCase):
         self, schedule: List[List[Interval]], expected: List[Interval]
     ):
         actual = employee_free_time_heap(schedule)
+        self.assertListEqual(expected, actual)
+
+    @parameterized.expand(EMPLOYEE_FREE_TIME_TEST_CASES)
+    def test_employee_free_time_2(
+        self, schedule: List[List[Interval]], expected: List[Interval]
+    ):
+        actual = employee_free_time_2(schedule)
         self.assertListEqual(expected, actual)
 
 

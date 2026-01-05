@@ -18,7 +18,7 @@ across all employees.
 ![Example 2](./images/examples/employee_free_time_example_2.png)
 ![Example 3](./images/examples/employee_free_time_example_3.png)
 
-## Solution
+## Solution 1
 
 The solution’s core revolves around merging overlapping intervals of employees and identifying the free time gaps 
 between these merged intervals. Using a min-heap, we arrange the intervals based on when they start, sorting them 
@@ -66,3 +66,64 @@ complexity of processing the heap is O(mlog(n)).
 
 We use a heap in the solution, which can have a maximum of n elements. Hence, the space complexity of this solution is 
 O(n), where n is the number of employees.
+
+---
+
+## Solution 2
+
+This problems builds upon the concept of merging intervals. We can solve this problem by first merging all the employee 
+meeting intervals into a single list. The free times are then the gaps between those merged intervals.
+
+> Important Note on Boundaries: In this problem, we only consider the gaps between busy intervals as free time. We do not consider:
+> 1. Time before the earliest busy interval (e.g., if the first meeting starts at 9:00 AM, we don't count 8:00-9:00 AM as "free time")
+> 2. Time after the latest busy interval (e.g., if the last meeting ends at 5:00 PM, we don't count 5:00-6:00 PM as "free time")
+
+This is because the problem asks for common free time when all employees are available, and we're only given their 
+scheduled busy intervals within a certain working timeframe.
+
+### Phase 1
+
+We first want to flatten the list of intervals into a single list, and then sorting them by their start time to make the
+merge process easier.
+
+![Solution 2.1](./images/solutions/employee_free_time_2_solution_1.png)
+![Solution 2.2](./images/solutions/employee_free_time_2_solution_2.png)
+
+### Phase 2
+
+Next, we want to merge all the intervals into a single list. We can do this by iterating through the list of intervals 
+and comparing the end time of the current interval with the start time of the next interval. If the end time of the
+current interval is greater than or equal to the start time of the next interval, we merge the two intervals. Otherwise,
+we add the current interval to the merged list.
+
+![Solution 2.3](./images/solutions/employee_free_time_2_solution_3.png)
+![Solution 2.4](./images/solutions/employee_free_time_2_solution_4.png)
+![Solution 2.5](./images/solutions/employee_free_time_2_solution_5.png)
+![Solution 2.6](./images/solutions/employee_free_time_2_solution_6.png)
+![Solution 2.7](./images/solutions/employee_free_time_2_solution_7.png)
+![Solution 2.8](./images/solutions/employee_free_time_2_solution_8.png)
+![Solution 2.9](./images/solutions/employee_free_time_2_solution_9.png)
+![Solution 2.10](./images/solutions/employee_free_time_2_solution_10.png)
+![Solution 2.11](./images/solutions/employee_free_time_2_solution_11.png)
+
+### Phase 3
+
+In this phase, we return the employee free times by finding the gaps between the merged intervals. We can do this by
+iterating through the merged intervals, and creating a new interval from the end time of the current interval and the
+start time of the next interval.
+
+![Solution 2.12](./images/solutions/employee_free_time_2_solution_12.png)
+![Solution 2.13](./images/solutions/employee_free_time_2_solution_13.png)
+![Solution 2.14](./images/solutions/employee_free_time_2_solution_14.png)
+![Solution 2.15](./images/solutions/employee_free_time_2_solution_15.png)
+![Solution 2.16](images/solutions/employee_free_time_2_solution_15.png)
+
+### Complexity Analysis
+
+#### Time Complexity
+
+O(n * logn) where n is the number of intervals. The time complexity is dominated by the sorting step.
+
+#### Space Complexity
+
+O(n) where n is the number of intervals. We need space for the free_times output array.
