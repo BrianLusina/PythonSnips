@@ -514,6 +514,8 @@
   * Pubsub
     * Simple Events
       * [Test Simple Events](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/pubsub/simple_events/test_simple_events.py)
+  * Request Logger
+    * [Test Request Logger](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/request_logger/test_request_logger.py)
   * Structural
     * Proxy
       * Subject
