@@ -370,8 +370,8 @@ class SinglyLinkedList(LinkedList):
 
     def reverse_between(self, left: int, right: int) -> Optional[SingleNode]:
         """
-        Reverse linked list between left & right node positions.
-        This uses the iterative link reversal to reverse a sublist of the linked list between the left & the right
+        Reverse linked list between left and right node positions.
+        This uses the iterative link reversal to reverse a sublist of the linked list between the left and the right
         positions in the linked list.
         This is based on the assumption that we don't have access to the data in the nodes themselves,
         but instead we can change the links between the nodes.
@@ -441,7 +441,7 @@ class SinglyLinkedList(LinkedList):
 
     def reverse_between_with_dummy(self, left: int, right: int) -> Optional[SingleNode]:
         """
-        Reverse linked list between left & right node positions using a dummy node
+        Reverse linked list between left and right node positions using a dummy node
 
         Algorithm steps:
         - We initialize a dummy node, which will be helpful in scenarios where the reversal of the sublist starts from
@@ -486,21 +486,26 @@ class SinglyLinkedList(LinkedList):
         if left == right:
             return self.head
 
+        # Create a dummy node to handle edge case when left = 1
         dummy = SingleNode(0)
         dummy.next = self.head
         prev = dummy
 
+        # Move prev to the node just before the left position
         for _ in range(left - 1):
             prev = prev.next
 
+        # Current node is the node at left position
         curr = prev.next
 
+        # Reverse the portion of the linked list between left and right positions
         for _ in range(right - left):
             next_node = curr.next
             curr.next = next_node.next
             next_node.next = prev.next
             prev.next = next_node
 
+        # Return the updated head of the linked list
         return dummy.next
 
     def unshift(self, node_: SingleNode) -> SingleNode:
