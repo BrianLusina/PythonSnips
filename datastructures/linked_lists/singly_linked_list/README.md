@@ -683,3 +683,84 @@ The time complexity of the solution above is O(n), where n is the number of node
 #### Space Complexity
 
 The space complexity of the solution above is O(1).
+
+---
+
+## Reverse Nodes in a Linked List Between left and right
+
+Given a singly linked list with n nodes and two positions, left and right, the objective is to reverse the nodes of the 
+list from left to right. Return the modified list.
+
+### Constraints
+
+- 1 ≤ n ≤ 500 
+- -5000 ≤ `node.value` ≤ 5000
+- 1 ≤ `left` ≤ `right` ≤ n
+
+### Solution
+
+The essence of this algorithm lies in refining the process of reversing specific sublists within a linked list by 
+directly adjusting the pointer of the nodes, ensuring efficient in-place manipulation without using additional memory.
+It begins with the initialization of a dummy node, placed before the head of the list, to simplify edge cases, such as
+sublist reversals starting from the first node of the list. The algorithm starts by linking the dummy node to the head
+of the list and iterating the list until reaching the node immediately preceding the sublist to be reversed, marking it
+as the previous node. Then, for each node in the sublist, it moves that node to the front of the sublist and connects it
+to the previous node, effectively reversing its order and seamlessly integrating the reversed sublist back into the main
+list. The algorithm returns the dummy next as the head of the newly reversed linked list.
+
+Now, let’s look at this algorithm in detail:
+
+This optimized approach directly modifies the pointers of the nodes within the linked list. It achieves this by carefully
+tracking the sublist’s current, next, and previous nodes within the sublist to be reversed.
+
+The algorithm steps are given below:
+
+- We initialize a dummy node, which will be helpful in scenarios where the reversal of the sublist starts from the head
+  of the list.
+- We set the next node of dummy to point to the head of the list.
+- We initialize a pointer, prev, to the dummy node. This pointer will help us reconnect the sublist to the entire list
+  after it has been reversed.
+- We use a loop to traverse the list with the prev pointer and until it reaches the node immediately before the sublist
+  to be reversed.
+- We initialize a curr pointer, which points to the node next to prev. This will point to the 'head' node of the sub list
+  to be reversed
+- Another loop is used to reverse the sublist. This loop iterates right - left times, which is the number of nodes in the
+  sublist minus one:
+  - We set next_node to curr.next, representing the node to be moved to the front of the reversed sublist.
+  - We update curr.next to next_node.next, effectively removing next_node from its current position in the sublist.
+  - We set next_node.next to prev.next, inserting next_node at the beginning of the reversed sublist.
+  - We update prev.next to next_node, adjusting the pointer to next_node for the next iteration.
+- Finally, we return dummy.next, which is the head of the modified linked list.
+
+![Solution 1](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_1.png)
+![Solution 2](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_2.png)
+![Solution 3](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_3.png)
+![Solution 4](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_4.png)
+![Solution 5](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_5.png)
+![Solution 6](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_6.png)
+![Solution 7](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_7.png)
+![Solution 8](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_8.png)
+![Solution 9](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_9.png)
+![Solution 10](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_10.png)
+![Solution 11](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_11.png)
+![Solution 12](./images/solutions/singly_linked_list_reverse_between_left_and_right_solution_12.png)
+
+#### Solution Summary
+
+To recap, the solution to this problem can be divided into the following five main steps:
+
+- We initialize a dummy node and link it to the head of the linked list. 
+- We locate the node preceding the sublist to be reversed by traversing the list. 
+- We set a pointer to the starting node of the sublist to be reversed. 
+- Within a loop, we iteratively reverse the sublist by adjusting pointers, moving one node at a time. 
+- We return the head of the reversed sublist, ensuring the original list remains intact.
+
+#### Time Complexity
+
+The time complexity of this solution is O(n), where n is the number of nodes in the linked list. This is because each
+node will be processed at most one time.
+
+#### Space Complexity
+
+The space complexity of this solution is O(1), since we are using a constant number of additional variables to maintain
+the connections between the nodes during the reversal process.
