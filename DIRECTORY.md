@@ -137,6 +137,8 @@
       * [Test Car Pooling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/car_pooling/test_car_pooling.py)
     * Count Days
       * [Test Count Days Without Meetings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/count_days/test_count_days_without_meetings.py)
+    * Count Non Overlapping Intervals
+      * [Test Count Min Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/count_non_overlapping_intervals/test_count_min_non_overlapping_intervals.py)
     * Data Stream
       * [Test Data Stream As Disjoint Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/data_stream/test_data_stream_as_disjoint_intervals.py)
     * Employee Free Time
