@@ -131,6 +131,8 @@
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
   * Intervals
+    * Can Attend Meetings
+      * [Test Can Attend Meetings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/can_attend_meetings/test_can_attend_meetings.py)
     * Car Pooling
       * [Test Car Pooling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/car_pooling/test_car_pooling.py)
     * Count Days
