@@ -1,5 +1,5 @@
 from typing import List, Optional
-from .. import Node
+from datastructures.linked_lists import Node
 
 
 def merge_two_sorted_lists(
@@ -15,7 +15,7 @@ def merge_two_sorted_lists(
     This is because both linked lists have to be traversed to merge into a single linked list
 
     Space O(n+m) where n & m are the number of nodes in the respective linked list. This is because a new linked list
-    is created from both linked lists and the nodes from each are merged into a single linke list.
+    is created from both linked lists and the nodes from each are merged into a single linked list.
 
     Args:
         head_one(Node): optional head node of linked list one

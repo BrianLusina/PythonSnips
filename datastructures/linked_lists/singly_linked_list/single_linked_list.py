@@ -153,6 +153,11 @@ class SinglyLinkedList(LinkedList):
         if not self.head:
             return
 
+        # if the node we are deleting is the head node
+        if self.head == single_node:
+            self.head = self.head.next
+            return
+
         current_node = self.head
         previous_node = None
         while current_node is not None:
@@ -542,11 +547,26 @@ class SinglyLinkedList(LinkedList):
     def display_forward(self):
         pass
 
-    def contains_cycle(self):
+    def contains_cycle(self) -> bool:
         """
-        Check if the SinglyLinkedList contains a cycle
-        :return:
+        Check if the SinglyLinkedList contains a cycle, This uses floyd's cycle detection algorithm to check if a linked
+        list contains a cycle. A cycle in a linked list is determined by a node in the linked list having its next pointer
+        point to a node in the same liked list.
+
+        Complexity Analysis:
+        n is the number of nodes in the linked list
+
+        Time: O(n), we traverse the nodes in the linked list iteratively, at the worst case, we traverse all the nodes
+        in the linked list until we reach the end of the linked list
+
+        Space: O(1) as there is no extra space used other than the pointers used to traverse the linked list.
+
+        Returns:
+            bool: True if the linked list contains a cycle, False otherwise
         """
+        if not self.head or not self.head.next:
+            return False
+
         fast_runner = self.head
         slow_runner = self.head
 
@@ -655,11 +675,8 @@ class SinglyLinkedList(LinkedList):
             bool: True if the linked list is a palindrome, false otherwise.
         """
 
-        if not self.head:
-            return False
-
-        # A LinkedList with 1 Node is a Palindrome
-        if not self.head.next:
+        # an empty linked list is consided a palindrome
+        if not self.head or not self.head.next:
             return True
 
         current = self.head
@@ -682,17 +699,18 @@ class SinglyLinkedList(LinkedList):
 
     def is_palindrome_2(self) -> bool:
         """
-        Checks to see if a Linked list is a Palindrome.
-        Returns True if it is, false otherwise.
+        Checks to see if a Linked list is a Palindrome. Returns True if it is, false otherwise.
+
         Uses two pointers approach to check if a linked list is a palindrome. First it finds the middle of the list using
         two pointers a fast and a slow pointer and then reverses the second half of the list. Once the second half is
         reversed, it compares the first half and the reversed second half
+
+        This modifies the linked list
 
         Complexity:
         We assume that n is the number of nodes in the linked list
 
         Time O(n): we traverse the linked list to check for the palindrome property.
-
         Space O(1): No extra space is used when traversing the linked list
 
         Returns:
@@ -703,20 +721,12 @@ class SinglyLinkedList(LinkedList):
         if not self.head or not self.head.next:
             return True
 
-        # find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
+        # Find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
         # the linked list and the slow pointer will be at the middle of the linked list
-        slow, fast = self.head, self.head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
+        middle_node = self.middle_node()
 
         # reverse the second half of the list
-        prev = None
-        while slow:
-            nxt = slow.next
-            slow.next = prev
-            prev = slow
-            slow = nxt
+        prev = self.reverse_list(middle_node)
 
         # now prev is the head of the reversed second half
         # compare the first half and the reversed second half
