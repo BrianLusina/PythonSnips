@@ -6,7 +6,7 @@ def merge_and_weave(
     first_half_head: SingleNode, second_half_head: SingleNode
 ) -> Optional[SingleNode]:
     """
-    Merges and weaves the first half and the reversed second half of the linked list in place.
+    Merges and weaves the first half and the second half of a linked list in place.
     Args:
         first_half_head: head node of the first half of the linked list
         second_half_head: head node of the reversed second half of the linked list

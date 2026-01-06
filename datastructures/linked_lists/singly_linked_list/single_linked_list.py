@@ -1015,7 +1015,7 @@ class SinglyLinkedList(LinkedList):
             return None
 
         # first split the linked list into two halves. To do this without knowing the length of the linked list beforehand
-        # we must first find the middle node. This uses the slow & fast pointer approach
+        # we must first find the middle node. This uses the slow and fast pointer approach
         middle_node = self.middle_node()
 
         # Store the second half head node
