@@ -108,6 +108,8 @@
       * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/union_find.py)
     * Number Of Provinces
       * [Test Number Of Provinces](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_provinces/test_number_of_provinces.py)
+    * Reconstruct Itinerary
+      * [Test Reconstruct Itinerary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reconstruct_itinerary/test_reconstruct_itinerary.py)
     * Reorder Routes
       * [Test Reorder Routes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reorder_routes/test_reorder_routes.py)
     * Rotting Oranges
@@ -321,6 +323,8 @@
     * [Linked List Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/linked_list_utils.py)
     * Mergeklinkedlists
       * [Test Merge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/mergeklinkedlists/test_merge.py)
+    * Reorder List
+      * [Test Reorder List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/reorder_list/test_reorder_list.py)
     * Singly Linked List
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/node.py)
       * [Single Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/single_linked_list.py)
@@ -961,8 +965,6 @@
       * [Test Longest Consecutive Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_longest_consecutive_sequence.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Zig Zag Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_zig_zag_sequence.py)
-    * Linked List
-      * [Test Reorder List](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/linked_list/test_reorder_list.py)
     * [Test Build One 2 3](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_build_one_2_3.py)
     * [Test Consecutive](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_consecutive.py)
     * [Test Data Reverse](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_data_reverse.py)
