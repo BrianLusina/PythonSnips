@@ -44,7 +44,7 @@ def cat_mouse_game(graph: List[List[int]]) -> int:
         # for every parent of this node i, j, t :
         for i2, j2, t2 in parents(i, j, t):
             # if this parent is not colored :
-            if color[i2, j2, t2] is draw:
+            if color[i2, j2, t2] == draw:
                 # if the parent can make a winning move (ie. mouse to MOUSE), do so
                 if t2 == c:  # winning move
                     color[i2, j2, t2] = c
