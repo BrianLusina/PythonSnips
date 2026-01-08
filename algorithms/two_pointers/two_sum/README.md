@@ -51,9 +51,9 @@ equals k. Return TRUE if such elements exist or FALSE otherwise.
 
 ## Examples
 
-![Example 1](./images/examples/two_sum_4_input_is_bst_example_1.png)
-![Example 2](./images/examples/two_sum_4_input_is_bst_example_2.png)
-![Example 3](./images/examples/two_sum_4_input_is_bst_example_3.png)
+![Example 1](images/examples/two_sum_4_input_is_bst_example_1.png)
+![Example 2](images/examples/two_sum_4_input_is_bst_example_2.png)
+![Example 3](images/examples/two_sum_4_input_is_bst_example_3.png)
 
 ## Solution
 
@@ -78,20 +78,20 @@ Using the intuition above, the solution can be implemented as follows:
 
 Let’s look at the following illustration to get a better understanding of the solution:
 
-![Solution 1](./images/solutions/two_sum_4_input_is_bst_solution_1.png)
-![Solution 2](./images/solutions/two_sum_4_input_is_bst_solution_2.png)
-![Solution 3](./images/solutions/two_sum_4_input_is_bst_solution_3.png)
-![Solution 4](./images/solutions/two_sum_4_input_is_bst_solution_4.png)
-![Solution 5](./images/solutions/two_sum_4_input_is_bst_solution_5.png)
-![Solution 6](./images/solutions/two_sum_4_input_is_bst_solution_6.png)
-![Solution 7](./images/solutions/two_sum_4_input_is_bst_solution_7.png)
-![Solution 8](./images/solutions/two_sum_4_input_is_bst_solution_8.png)
-![Solution 9](./images/solutions/two_sum_4_input_is_bst_solution_9.png)
-![Solution 10](./images/solutions/two_sum_4_input_is_bst_solution_10.png)
-![Solution 11](./images/solutions/two_sum_4_input_is_bst_solution_11.png)
-![Solution 12](./images/solutions/two_sum_4_input_is_bst_solution_12.png)
-![Solution 13](./images/solutions/two_sum_4_input_is_bst_solution_13.png)
-![Solution 14](./images/solutions/two_sum_4_input_is_bst_solution_14.png)
+![Solution 1](images/solutions/two_sum_4_input_is_bst_solution_1.png)
+![Solution 2](images/solutions/two_sum_4_input_is_bst_solution_2.png)
+![Solution 3](images/solutions/two_sum_4_input_is_bst_solution_3.png)
+![Solution 4](images/solutions/two_sum_4_input_is_bst_solution_4.png)
+![Solution 5](images/solutions/two_sum_4_input_is_bst_solution_5.png)
+![Solution 6](images/solutions/two_sum_4_input_is_bst_solution_6.png)
+![Solution 7](images/solutions/two_sum_4_input_is_bst_solution_7.png)
+![Solution 8](images/solutions/two_sum_4_input_is_bst_solution_8.png)
+![Solution 9](images/solutions/two_sum_4_input_is_bst_solution_9.png)
+![Solution 10](images/solutions/two_sum_4_input_is_bst_solution_10.png)
+![Solution 11](images/solutions/two_sum_4_input_is_bst_solution_11.png)
+![Solution 12](images/solutions/two_sum_4_input_is_bst_solution_12.png)
+![Solution 13](images/solutions/two_sum_4_input_is_bst_solution_13.png)
+![Solution 14](images/solutions/two_sum_4_input_is_bst_solution_14.png)
 
 ### Time Complexity
 

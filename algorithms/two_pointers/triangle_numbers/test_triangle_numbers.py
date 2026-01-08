@@ -5,8 +5,8 @@ from algorithms.two_pointers.triangle_numbers import triangle_number
 
 TRIANGLE_NUMBER_TEST_CASES = [
     ([11, 4, 9, 6, 15, 18], 10),
-    ([2,2,3,4], 3),
-    ([4,2,3,4], 4),
+    ([2, 2, 3, 4], 3),
+    ([4, 2, 3, 4], 4),
 ]
 
 

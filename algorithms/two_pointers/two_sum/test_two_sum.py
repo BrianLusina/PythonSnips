@@ -2,7 +2,7 @@ import unittest
 from typing import List
 from parameterized import parameterized
 from datastructures.trees.binary.node import BinaryTreeNode
-from algorithms.arrays.two_sum import (
+from algorithms.two_pointers.two_sum import (
     two_sum,
     two_sum_with_pointers,
     two_sum_find_target,

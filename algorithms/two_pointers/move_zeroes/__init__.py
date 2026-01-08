@@ -19,11 +19,12 @@ def move_zeroes(nums: List[int]) -> None:
     if len(nums) == 1:
         return
 
-    left_pointer = 0
-    for current in range(len(nums)):
-        if nums[current] != 0:
-            nums[left_pointer], nums[current] = nums[current], nums[left_pointer]
-            left_pointer += 1
+    next_non_zero = 0
+    for idx in range(len(nums)):
+        if nums[idx] != 0:
+            if idx != next_non_zero:
+                nums[next_non_zero], nums[idx] = nums[idx], nums[next_non_zero]
+            next_non_zero += 1
 
 
 def move_zeroes_one(nums: List[int]) -> None:

@@ -11,10 +11,10 @@ Constraints
 
 ## Examples
 
-![Example 1](./images/examples/two_sum_less_k_example_1.png)
-![Example 2](./images/examples/two_sum_less_k_example_2.png)
-![Example 3](./images/examples/two_sum_less_k_example_3.png)
-![Example 4](./images/examples/two_sum_less_k_example_4.png)
+![Example 1](images/examples/two_sum_less_k_example_1.png)
+![Example 2](images/examples/two_sum_less_k_example_2.png)
+![Example 3](images/examples/two_sum_less_k_example_3.png)
+![Example 4](images/examples/two_sum_less_k_example_4.png)
 
 ## Related Topics
 
