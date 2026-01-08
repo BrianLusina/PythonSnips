@@ -4,7 +4,7 @@ from typing import List
 def three_sum(nums: List[int]) -> List[List[int]]:
     """
     Complexity Analysis:
-    Ww assume that n is the length of the input array
+    We assume that n is the length of the input array
 
     Time Complexity: O(nlog(n)) + O(n^2) = O(n^2) the O(nlog(n)) is due to sorting, overall, the time complexity is O(n²).
     This is due to the nested loops in the algorithm. We perform n iterations of the outer loop, and each iteration
