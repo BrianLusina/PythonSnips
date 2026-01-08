@@ -39,6 +39,6 @@ the zeroes to the end of the array.
 ![Solution 8](./images/solutions/move_zeroes_solution_8.png)
 ![Solution 9](./images/solutions/move_zeroes_solution_9.png)
 ![Solution 10](./images/solutions/move_zeroes_solution_10.png)
-![Solution 11](./images/solutions/move_zeroes_solution_1.png)
+![Solution 11](./images/solutions/move_zeroes_solution_11.png)
 ![Solution 12](./images/solutions/move_zeroes_solution_12.png)
 ![Solution 13](./images/solutions/move_zeroes_solution_13.png)
