@@ -87,6 +87,8 @@
     * Happy Number
       * [Test Happy Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/fast_and_slow/happy_number/test_happy_number.py)
   * Graphs
+    * Cat And Mouse
+      * [Test Cat And Mouse](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/cat_and_mouse/test_cat_and_mouse.py)
     * Course Schedule
       * [Test Course Schedule](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/course_schedule/test_course_schedule.py)
     * Evaluate Division
