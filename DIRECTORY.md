@@ -19,10 +19,6 @@
       * [Test Sorted Squared Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/sorted_squared_array/test_sorted_squared_array.py)
     * Subsequence
       * [Test Is Valid Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/subsequence/test_is_valid_subsequence.py)
-    * Two Sum
-      * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/two_sum/test_two_sum.py)
-    * Two Sum Less K
-      * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/two_sum_less_k/test_two_sum.py)
   * Backtracking
     * Combination
       * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
@@ -210,10 +206,14 @@
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
   * Two Pointers
+    * Array 3 Pointers
+      * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
     * Find Sum Of Three
       * [Test Find Sum Of Three](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/find_sum_of_three/test_find_sum_of_three.py)
     * Merge Sorted Arrays
       * [Test Merge Sorted Arrays](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/merge_sorted_arrays/test_merge_sorted_arrays.py)
+    * Move Zeroes
+      * [Test Move Zeroes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/move_zeroes/test_move_zeroes.py)
     * Next Permutation
       * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/next_permutation/test_next_permutation.py)
     * Pair With Sum In Array
@@ -226,6 +226,10 @@
       * [Test Three Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/three_sum/test_three_sum.py)
     * Triangle Numbers
       * [Test Triangle Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/triangle_numbers/test_triangle_numbers.py)
+    * Two Sum
+      * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/two_sum/test_two_sum.py)
+    * Two Sum Less K
+      * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/two_sum_less_k/test_two_sum.py)
   * Unique Bsts
     * [Unique Bsts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/unique_bsts/unique_bsts.py)
   * Word Count
@@ -579,8 +583,6 @@
   * Allergies
     * [Test Allergies](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/allergies/test_allergies.py)
   * Arrays
-    * Array 3 Pointers
-      * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/array_3_pointers/test_array_3_pointers.py)
     * Can Place Flowers
       * [Test Can Place Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/can_place_flowers/test_can_place_flowers.py)
     * Candy
@@ -607,8 +609,6 @@
       * [Test Max Average Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/maximum_average_subarray/test_max_average_subarray.py)
     * Maxlen Contiguous Binary Subarray
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/maxlen_contiguous_binary_subarray/test_maxlen_contiguous_binary_subarray.py)
-    * Move Zeroes
-      * [Test Move Zeroes](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/move_zeroes/test_move_zeroes.py)
     * Product Of Array Except Self
       * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/product_of_array_except_self/test_product_except_self.py)
     * Rain Water Trapped
