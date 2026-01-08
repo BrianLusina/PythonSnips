@@ -32,7 +32,7 @@ def find_itinerary(tickets: List[List[str]]) -> List[str]:
     # for the last airport at the top of the stack. If we reach to an airport from where
     # we can't go further then add it to the result. This airport should be the last to go
     # since we can't go anywhere from here. That's why we return the reverse of the result
-    # After this backtrack to the top airport in the stack and continue to traaverse it's children
+    # After this backtrack to the top airport in the stack and continue to traverse its children
 
     while len(stack) > 0:
         elem = stack[-1]
