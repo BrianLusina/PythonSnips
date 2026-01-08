@@ -17,7 +17,7 @@ MOVE_ZEROES_TEST_CASES = [
 
 class MoveZeroesTestCase(unittest.TestCase):
     @parameterized.expand(MOVE_ZEROES_TEST_CASES)
-    def test_move_zeroes(self, nums: List[int], expected: [List]):
+    def test_move_zeroes(self, nums: List[int], expected: List[int]):
         move_zeroes(nums)
         self.assertEqual(expected, nums)
 
