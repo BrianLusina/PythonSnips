@@ -224,6 +224,8 @@
       * [Test Sort Colors](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/sort_colors/test_sort_colors.py)
     * Three Sum
       * [Test Three Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/three_sum/test_three_sum.py)
+    * Triangle Numbers
+      * [Test Triangle Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/triangle_numbers/test_triangle_numbers.py)
   * Unique Bsts
     * [Unique Bsts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/unique_bsts/unique_bsts.py)
   * Word Count
