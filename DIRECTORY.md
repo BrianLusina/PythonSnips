@@ -218,6 +218,8 @@
       * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/next_permutation/test_next_permutation.py)
     * Pair With Sum In Array
       * [Test Pair With Sum In Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/pair_with_sum_in_array/test_pair_with_sum_in_array.py)
+    * Rain Water Trapped
+      * [Test Trapped Rain Water](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/rain_water_trapped/test_trapped_rain_water.py)
     * Reverse Array
       * [Test Reverse Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_array/test_reverse_array.py)
     * Sort Colors
@@ -611,8 +613,6 @@
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/maxlen_contiguous_binary_subarray/test_maxlen_contiguous_binary_subarray.py)
     * Product Of Array Except Self
       * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/product_of_array_except_self/test_product_except_self.py)
-    * Rain Water Trapped
-      * [Test Trapped Rain Water](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/rain_water_trapped/test_trapped_rain_water.py)
     * Rotation
       * Cyclic Rotation
         * [Test Cyclic Rotation](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/rotation/cyclic_rotation/test_cyclic_rotation.py)
