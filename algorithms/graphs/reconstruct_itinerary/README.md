@@ -31,7 +31,7 @@ a single string.
 
 ## Related Topics
 
-- Depth First Search
+- Depth-First Search
 - Graph
 - Eulerian Circuit
 
