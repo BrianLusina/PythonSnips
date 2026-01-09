@@ -244,6 +244,8 @@
     * [Test Int32 To Ipv4](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/int32_to_ipv4/test_int32_to_ipv4.py)
   * Minflips
     * [Test Min Flips](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/minflips/test_min_flips.py)
+  * Number Of 1 Bits
+    * [Test Number Of One Bits](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/number_of_1_bits/test_number_of_one_bits.py)
   * Single Number
     * [Test Single Number](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/single_number/test_single_number.py)
 
