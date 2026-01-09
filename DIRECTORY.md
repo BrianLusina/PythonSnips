@@ -222,6 +222,8 @@
       * [Test Trapped Rain Water](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/rain_water_trapped/test_trapped_rain_water.py)
     * Reverse Array
       * [Test Reverse Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_array/test_reverse_array.py)
+    * Reverse Words
+      * [Test Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_words/test_reverse_words.py)
     * Sort Colors
       * [Test Sort Colors](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/sort_colors/test_sort_colors.py)
     * Three Sum
@@ -865,8 +867,6 @@
     * [Test Check Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/permutation/test_check_permutation.py)
   * Reverse Vowels
     * [Test Reverse Vowels](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/reverse_vowels/test_reverse_vowels.py)
-  * Reverse Words
-    * [Test Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/reverse_words/test_reverse_words.py)
   * Similar String Groups
     * [Test Similar String Groups](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/similar_string_groups/test_similar_string_groups.py)
   * Spreadsheet Encoding

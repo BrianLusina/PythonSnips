@@ -41,3 +41,15 @@ def reverse_characters(message_list: List[str], front_index: int, back_index: in
         back_index -= 1
 
     return message_list
+
+
+def reverse_words_two_pointers(sentence: str) -> str:
+    result = sentence.split()
+    left = 0
+    right = len(result) - 1
+    while left <= right:
+        result[left], result[right] = result[right], result[left]
+        left += 1
+        right -= 1
+
+    return " ".join(result)
