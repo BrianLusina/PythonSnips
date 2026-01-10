@@ -67,17 +67,17 @@ target remains beyond index 0, then no path exists from the start to the end, an
 
 #### Algorithm
 
-1. We begin by setting the last index of the array as our initial target using the variable target = len(nums) - 1. This 
+1. We begin by setting the last index of the array as our initial target using the variable `target = len(nums) - 1`. This 
     target represents the position we are trying to reach, starting from the end and working backward. By initializing the 
     target this way, we define our goal: to find out if there is any index i from which the target is reachable based on the
     value at that position, nums[i]. This also sets the stage for updating the target if such an index is found.
 
-2. Next, we loop backward through the array using for i in range(len(nums) - 2, -1, -1). Here, i represents the current 
+2. Next, we loop backward through the array using `for i in range(len(nums) - 2, -1, -1)`. Here, `i` represents the current 
    index we are analyzing. At each index i, the value nums[i] tells us how far we can jump forward from that position. 
-   By checking whether i + nums[i] >= target, we determine whether it can reach the current target from index i. This 
+   By checking whether `i + nums[i] >= target`, we determine whether it can reach the current target from index i. This 
    step allows us to use the jump range at each position to decide if it can potentially lead us to the end.
 
-3. If the condition i + nums[i] >= target is TRUE, the current index i can jump far enough to reach the current target. 
+3. If the condition `i + nums[i] >= target` is TRUE, the current index i can jump far enough to reach the current target. 
    In that case, we update target = i, effectively saying, “Now we just need to reach index i instead.” If the condition
    fails, we move back in the array one step further and try again with the previous index. 
    We repeat this process until we either:
