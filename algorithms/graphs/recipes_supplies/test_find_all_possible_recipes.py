@@ -56,12 +56,12 @@ class FindAllPossibleRecipesTestCase(unittest.TestCase):
     @parameterized.expand(FIND_ALL_POSSIBLE_RECIPES_TEST_CASES)
     def test_find_recipes(
         self,
-        recipies: List[str],
+        recipes: List[str],
         ingredients: List[List[str]],
         supplies: List[str],
         expected: List[str],
     ):
-        actual = find_recipes(recipies, ingredients, supplies)
+        actual = find_recipes(recipes, ingredients, supplies)
         self.assertEqual(expected, actual)
 
 
