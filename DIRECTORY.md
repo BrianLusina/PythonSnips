@@ -106,6 +106,8 @@
       * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/union_find.py)
     * Number Of Provinces
       * [Test Number Of Provinces](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_provinces/test_number_of_provinces.py)
+    * Recipes Supplies
+      * [Test Find All Possible Recipes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/recipes_supplies/test_find_all_possible_recipes.py)
     * Reconstruct Itinerary
       * [Test Reconstruct Itinerary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reconstruct_itinerary/test_reconstruct_itinerary.py)
     * Reorder Routes
