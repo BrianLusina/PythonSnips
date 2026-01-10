@@ -36,12 +36,12 @@ When they meet, that meeting point is their lowest common ancestor.
 
 The steps of the algorithm are as follows:
 
-1. Initialize two pointers: ptr1 starting at p and ptr2 starting at q. 
-2. While ptr1 and ptr2 are not pointing to the same node:
-   - If ptr1 has a parent, move ptr1 to ptr1.parent; otherwise, set ptr1 = q.
-   - If ptr2 has a parent, move ptr2 to ptr2.parent; otherwise, set ptr2 = p.
+1. Initialize two pointers: `ptr1` starting at `p` and `ptr2` starting at `q`. 
+2. While `ptr1` and `ptr2` are not pointing to the same node:
+   - If `ptr1` has a parent, move `ptr1` to `ptr1.parent;` otherwise, set `ptr1 = q`.
+   - If `ptr2` has a parent, move `ptr2` to `ptr2.parent`; otherwise, set `ptr2 = p`.
 
-3. When ptr1 == ptr2, return ptr1. This node is the lowest common ancestor (LCA) of p and q.
+3. When `ptr1 == ptr2`, return `ptr1`. This node is the lowest common ancestor (LCA) of p and q.
 
 Let’s look at the following illustration to get a better understanding of the solution:
 

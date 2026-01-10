@@ -218,6 +218,18 @@
       * [Test Next Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/next_permutation/test_next_permutation.py)
     * Pair With Sum In Array
       * [Test Pair With Sum In Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/pair_with_sum_in_array/test_pair_with_sum_in_array.py)
+    * Palindrome
+      * Largest Palindrome Product
+        * [Test Largest Palindrome Product](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/largest_palindrome_product/test_largest_palindrome_product.py)
+      * [Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/longest_palindrome.py)
+      * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/longest_palindromic_substring.py)
+      * [Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/palindrome_index.py)
+      * [Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/palindrome_pairs.py)
+      * Permutation Palindrome
+        * [Test Permutation Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/permutation_palindrome/test_permutation_palindrome.py)
+      * [Test Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/test_palindrome.py)
+      * [Test Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/test_palindrome_index.py)
+      * [Test Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/test_palindrome_pairs.py)
     * Rain Water Trapped
       * [Test Trapped Rain Water](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/rain_water_trapped/test_trapped_rain_water.py)
     * Reverse Array
@@ -844,18 +856,6 @@
     * [Test Max Vowels In Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/max_vowels_in_substring/test_max_vowels_in_substring.py)
   * Merge Strings
     * [Test Merge Strings](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/merge_strings/test_merge_strings.py)
-  * Palindrome
-    * Largest Palindrome Product
-      * [Test Largest Palindrome Product](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/largest_palindrome_product/test_largest_palindrome_product.py)
-    * [Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/longest_palindrome.py)
-    * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/longest_palindromic_substring.py)
-    * [Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/palindrome_index.py)
-    * [Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/palindrome_pairs.py)
-    * Permutation Palindrome
-      * [Test Permutation Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/permutation_palindrome/test_permutation_palindrome.py)
-    * [Test Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome.py)
-    * [Test Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome_index.py)
-    * [Test Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/palindrome/test_palindrome_pairs.py)
   * Pangram
     * [Test Pangram Checker](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/pangram/test_pangram_checker.py)
   * Parenthesis

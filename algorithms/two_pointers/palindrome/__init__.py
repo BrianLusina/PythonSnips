@@ -162,3 +162,45 @@ def is_palindrome_number_2(x: int) -> bool:
         left += 1
         right -= 1
     return True
+
+
+def is_valid_palindrome_with_one_char_removal(s: str) -> bool:
+    """
+    Checks if a string s can become a valid palindrome with at most one character removal. Returns True if it can, False
+    otherwise
+    Args:
+        s (str): string to check
+    Returns:
+        bool: True if after removal of at most one character, the string becomes a valid palindrome, otherwise False
+    """
+    left_pointer = 0
+    right_pointer = len(s) - 1
+
+    def is_substring_palindrome(left: int, right: int) -> bool:
+        """
+        Checks if a given substring is a valid palindrome
+        Args:
+            left(int): the left index on the string to check
+            right(int): the right index on the string to check
+        Returns:
+            bool: True if the substring is a valid palindrome, else False
+        """
+        while left < right:
+            if s[left] != s[right]:
+                return False
+            left += 1
+            right -= 1
+        return True
+
+    while left_pointer < right_pointer:
+        if s[left_pointer] != s[right_pointer]:
+            # validate that the substrings are valid palindromes
+            return is_substring_palindrome(
+                left_pointer + 1, right_pointer
+            ) or is_substring_palindrome(left_pointer, right_pointer - 1)
+
+        # move the pointers as the characters are equal
+        left_pointer += 1
+        right_pointer -= 1
+
+    return True

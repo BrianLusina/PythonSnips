@@ -196,3 +196,82 @@ As only a few variables are used, the space complexity of this solution is O(1).
 - String
 - Dynamic Programming
 - Two Pointers
+
+---
+
+## Valid Palindrome II
+
+Write a function that takes a string as input and checks whether it can be a valid palindrome by removing at most one
+character from it.
+
+### Constraints
+
+- 1 <= `s.length` <= 10^5
+- The string only consists of English letters
+
+### Examples
+
+Example 1:
+
+```text
+Input: s = "aba"
+Output: true
+```
+
+Example 2:
+
+```text
+Input: s = "abca"
+Output: true
+Explanation: You could delete the character 'c'.
+```
+
+Example 3:
+
+```text
+Input: s = "abc"
+Output: false
+```
+
+### Solution
+
+The algorithm uses a two-pointer technique to determine whether a string is a palindrome or can be transformed into it
+by removing at most one character, where one pointer starts at the beginning and the other at the end. As the pointers
+move toward each other, they compare the corresponding characters. If all pairs match, the string is a palindrome.
+However, if a mismatch is detected, the algorithm explores two possibilities: removing the character at either pointer
+and checking if the resulting substring forms a palindrome. If either check passes, the function returns TRUE; otherwise,
+it returns FALSE.
+
+The algorithm consists of two functions:
+
+- `is_substring_palindrome(left, right)`: This helper function checks if a substring of the input string, defined by 
+  `left` and `right` indexes, is a palindrome. It uses a two-pointer approach, comparing characters from both ends
+  inward. If any mismatch is found, it returns FALSE; otherwise, it returns TRUE.
+- `is_valid_palindrome_with_one_char_removal(string)`: This function checks if the entire string is a palindrome or can
+  become one by removing one character. It initializes two pointers, `left_pointer` at the start and `right_pointer` at 
+  end of the string:
+  - If the characters at the `left_pointer` and `right_pointer` are the same, it moves both pointers inward.
+  - If the characters differ, it checks two cases by calling is_substring_palindrome:
+    - The substring from `left_pointer + 1` to `right_pointer`
+    - The substring from `left_pointer` to `right_pointer - 1`
+  - If either case returns TRUE, the function returns TRUE; otherwise, it returns FALSE. 
+
+If the traversal completes without finding a mismatch, the string is a palindrome, and the function returns TRUE.
+
+![Solution 1](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_1.png)
+![Solution 2](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_2.png)
+![Solution 3](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_3.png)
+![Solution 4](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_4.png)
+![Solution 5](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_5.png)
+![Solution 6](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_6.png)
+![Solution 7](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_7.png)
+![Solution 8](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_8.png)
+![Solution 9](./images/solutions/is_valid_palindrome_with_one_char_removal_solution_9.png)
+
+#### Time Complexity
+
+The time complexity of the solution above is O(n), where n is the length of the string
+
+#### Space Complexity
+
+The space complexity of solution above is O(1).

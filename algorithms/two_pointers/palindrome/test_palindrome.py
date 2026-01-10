@@ -1,17 +1,17 @@
-# -*- coding: utf-8 -*-
 import unittest
 from random import choice, randint
 from string import ascii_letters
 from typing import Union
 from parameterized import parameterized
-from pystrings.palindrome import (
+from algorithms.two_pointers.palindrome import (
     is_palindrome,
     smallest_palindrome,
     largest_palindrome,
     is_palindrome_number,
     is_palindrome_number_2,
+    is_valid_palindrome_with_one_char_removal,
 )
-from pystrings.palindrome.longest_palindrome import longest_palindrome
+from algorithms.two_pointers.palindrome.longest_palindrome import longest_palindrome
 
 
 class LongestPalindromeTests(unittest.TestCase):
@@ -139,6 +139,25 @@ class LargestPalindromeTests(unittest.TestCase):
         value, factors = largest_palindrome(max_factor=999, min_factor=100)
         self.assertEqual(906609, value)
         self.assertEqual({913, 993}, set(factors))
+
+
+IS_PALINDROME_WITH_ONE_CHAR_REMOVAL_TEST_CASES = [
+    ("aba", True),
+    ("abca", True),
+    ("abc", False),
+    ("abccbxa", True),
+    ("madame", True),
+    ("dead", True),
+    ("tebbem", False),
+    ("eeccccbebaeeabebccceea", False),
+]
+
+
+class IsPalindromeWithOneCharRemoval(unittest.TestCase):
+    @parameterized.expand(IS_PALINDROME_WITH_ONE_CHAR_REMOVAL_TEST_CASES)
+    def test_is_palindrome_with_one_char_removal(self, s: str, expected: bool):
+        actual = is_valid_palindrome_with_one_char_removal(s)
+        self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":
