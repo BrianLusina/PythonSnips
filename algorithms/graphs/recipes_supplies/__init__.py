@@ -22,7 +22,7 @@ def find_recipes(
             recipe_graph[ingredient].append(recipe)
 
     # List to store the possible recipes that can be made
-    possible_recipies: List[str] = []
+    possible_recipes: List[str] = []
 
     # Process the queue until it's empty
     while recipe_queue:
@@ -34,7 +34,7 @@ def find_recipes(
             recipe_in_degrees[recipe] -= 1
             # If a recipe's indegree reaches 0, all its ingredients are available, so add it to the queue
             if recipe_in_degrees[recipe] == 0:
-                possible_recipies.append(recipe)
+                possible_recipes.append(recipe)
                 recipe_queue.append(recipe)
 
-    return possible_recipies
+    return possible_recipes
