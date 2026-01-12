@@ -71,3 +71,35 @@ def alien_order(words: List[str]) -> str:
                 queue.append(next_character)
 
     return "" if len(word) < len(in_degree.keys()) else word
+
+
+def alien_order_2(words: List[str]) -> str:
+    adj_list: DefaultDict[str, Set[str]] = defaultdict(set)
+    counts: Counter[str] = Counter({c: 0 for word in words for c in word})
+
+    for word1, word2 in zip(words, words[1:]):
+        for c, d in zip(word1, word2):
+            if c != d:
+                if d not in adj_list[c]:
+                    adj_list[c].add(d)
+                    counts[d] += 1
+                break
+
+        else:
+            if len(word2) < len(word1):
+                return ""
+
+    result: List[str] = []
+    sources_queue: Deque[str] = deque([c for c in counts if counts[c] == 0])
+    while sources_queue:
+        c = sources_queue.popleft()
+        result.append(c)
+
+        for d in adj_list[c]:
+            counts[d] -= 1
+            if counts[d] == 0:
+                sources_queue.append(d)
+
+    if len(result) < len(counts):
+        return ""
+    return "".join(result)
