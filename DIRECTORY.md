@@ -83,6 +83,8 @@
     * Happy Number
       * [Test Happy Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/fast_and_slow/happy_number/test_happy_number.py)
   * Graphs
+    * Alien Dictionary
+      * [Test Alien Dictionary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/alien_dictionary/test_alien_dictionary.py)
     * Cat And Mouse
       * [Test Cat And Mouse](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/cat_and_mouse/test_cat_and_mouse.py)
     * Course Schedule
@@ -205,6 +207,11 @@
   * Stack
     * Daily Temperatures
       * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
+  * Subsets
+    * Cascading Subsets
+      * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/subsets/cascading_subsets/test_cascading_subsets.py)
+    * Find All Subsets
+      * [Test Find All Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/subsets/find_all_subsets/test_find_all_subsets.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
   * Two Pointers
@@ -965,7 +972,6 @@
       * [Test Array From Permutation](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_from_permutation.py)
       * [Test Array Pair Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_array_pair_sum.py)
       * [Test Build Tower](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_build_tower.py)
-      * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_cascading_subsets.py)
       * [Test Dynamic Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_dynamic_array.py)
       * [Test Find Unique](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_find_unique.py)
       * [Test Highest Rank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_highest_rank.py)
