@@ -1,4 +1,5 @@
 import unittest
+from typing import List
 from parameterized import parameterized
 from datastructures.trees.binary.utils import (
     lowest_common_ancestor,
@@ -196,48 +197,29 @@ CONNECT_ALL_SIBLINGS_TEST_CASES = [
                 data=200, left=BinaryTreeNode(data=300), right=BinaryTreeNode(data=10)
             ),
         ),
-        BinaryTreeNode(
-            data=100,
-            left=BinaryTreeNode(
-                data=50, left=BinaryTreeNode(data=25), right=BinaryTreeNode(data=75)
-            ),
-            right=BinaryTreeNode(
-                data=200, left=BinaryTreeNode(data=300), right=BinaryTreeNode(data=10)
-            ),
-            next=BinaryTreeNode(
-                data=50,
-                left=BinaryTreeNode(data=300),
-                right=BinaryTreeNode(data=10),
-                next=BinaryTreeNode(
-                    data=200,
-                    left=BinaryTreeNode(data=300),
-                    right=BinaryTreeNode(data=10),
-                    next=BinaryTreeNode(
-                        data=25,
-                        next=BinaryTreeNode(
-                            data=75,
-                            next=BinaryTreeNode(data=300, next=BinaryTreeNode(data=10)),
-                        ),
-                    ),
-                ),
-            ),
-        ),
+        [100, 50, 200, 25, 75, 300, 10],
     ),
 ]
 
 
 class ConnectAllSiblingsTestCase(unittest.TestCase):
     @parameterized.expand(CONNECT_ALL_SIBLINGS_TEST_CASES)
-    def test_connect_all_siblings(self, root: BinaryTreeNode, expected: BinaryTreeNode):
+    def test_connect_all_siblings(self, root: BinaryTreeNode, expected: List[int]):
         actual = connect_all_siblings(root)
-        self.assertEqual(expected, actual)
+        current = actual
+        for expected_val in expected:
+            self.assertEqual(current.data, expected_val)
+            current = current.next
+        self.assertIsNone(current)
 
     @parameterized.expand(CONNECT_ALL_SIBLINGS_TEST_CASES)
-    def test_connect_all_siblings_ptr(
-        self, root: BinaryTreeNode, expected: BinaryTreeNode
-    ):
+    def test_connect_all_siblings_ptr(self, root: BinaryTreeNode, expected: List[int]):
         actual = connect_all_siblings_ptr(root)
-        self.assertEqual(expected, actual)
+        current = actual
+        for expected_val in expected:
+            self.assertEqual(current.data, expected_val)
+            current = current.next
+        self.assertIsNone(current)
 
 
 if __name__ == "__main__":
