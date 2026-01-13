@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.arrays.cascading_subsets import each_cons
+from algorithms.subsets.cascading_subsets import each_cons
 
 
 class CascadingSubsetsTestCase(unittest.TestCase):
