@@ -71,7 +71,7 @@ def lowest_common_ancestor_ptr(
     return ptr1
 
 
-def connect_all_siblings(root: BinaryTreeNode) -> Optional[BinaryTreeNode]:
+def connect_all_siblings(root: Optional[BinaryTreeNode]) -> Optional[BinaryTreeNode]:
     """
     Connects all siblings of a binary tree given the root, such that, the right most node is connected to the first node
     on the next level using a 'next' pointer forming a kind of linked list data structure. The right most node on the
