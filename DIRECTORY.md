@@ -69,6 +69,12 @@
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Min Path Sum
       * [Test Min Path Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_path_sum/test_min_path_sum.py)
+    * Palindromic Substring
+      * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/longest_palindromic_substring.py)
+      * [Test Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/test_longest_palindromic_substring.py)
+      * [Test Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/test_palindromic_substring.py)
+    * Pascals Triangle
+      * [Test Pascals Triangle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/pascals_triangle/test_pascals_triangle.py)
     * Shortest Common Supersequence
       * [Test Shortest Common Supersequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/shortest_common_supersequence/test_shortest_common_supersequence.py)
     * Unique Paths
@@ -231,7 +237,6 @@
       * Largest Palindrome Product
         * [Test Largest Palindrome Product](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/largest_palindrome_product/test_largest_palindrome_product.py)
       * [Longest Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/longest_palindrome.py)
-      * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/longest_palindromic_substring.py)
       * [Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/palindrome_index.py)
       * [Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/palindrome_pairs.py)
       * Permutation Palindrome
@@ -804,8 +809,6 @@
     * [Test Mini Max Sum](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/mini_max_sum/test_mini_max_sum.py)
   * Multiply 5
     * [Test Multiply 5](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/multiply_5/test_multiply_5.py)
-  * Pascals Triangle
-    * [Test Pascals Triangle](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/pascals_triangle/test_pascals_triangle.py)
   * Perfect Square
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
   * Rectangle Area
