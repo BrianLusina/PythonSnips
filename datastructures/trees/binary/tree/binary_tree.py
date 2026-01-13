@@ -86,10 +86,10 @@ class BinaryTree(Tree):
             return []
 
         current_level: List[BinaryTreeNode] = [self.root]
-        levels: List[List[T]] = []
+        levels: List[List[Any]] = []
 
         while current_level:
-            level: List[T] = []
+            level: List[Any] = []
             next_level: List[BinaryTreeNode] = []
 
             for node in current_level:

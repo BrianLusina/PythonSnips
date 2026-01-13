@@ -1,3 +1,5 @@
+from typing import Optional, Deque, List
+from collections import deque
 from datastructures.trees.binary.node import BinaryTreeNode
 
 
@@ -67,3 +69,96 @@ def lowest_common_ancestor_ptr(
         ptr2 = ptr2.parent if ptr2.parent else node_one
 
     return ptr1
+
+
+def connect_all_siblings(root: Optional[BinaryTreeNode]) -> Optional[BinaryTreeNode]:
+    """
+    Connects all siblings of a binary tree given the root, such that, the right most node is connected to the first node
+    on the next level using a 'next' pointer forming a kind of linked list data structure. The right most node on the
+    last level is set to None. On each level the nodes are pointed to each other via the next pointer
+    This assumes that the provided root is part of a perfect binary tree.
+
+    This uses a level order traversal utilizing a queue to traverse the nodes from the first level to the last level
+    adding the nodes to a list for further traversal. The levels list is then traversed connecting nodes to the next
+    node in the list via the next pointer. At this point the levels list will have the nodes in the correct order using
+    the level order traversal technique.
+
+    After the traversal, the root node will be the first element in the levels list and we simply return that which
+    will contain the modified tree with all siblings connected
+
+    This uses Space of O(n) as the levels list is required to handle the final iteration for the connections.
+    Time complexity is O(n) as we travers all the nodes in the tree.
+
+    Args:
+        root(BinaryTreeNode): root of a perfect binary tree
+    Returns:
+        BinaryTreeNode root such that the next pointer has been set to point to siblings
+    """
+    if not root:
+        return root
+
+    # Queue will have the root node initially
+    queue: Deque[BinaryTreeNode] = deque([root])
+    levels: List[BinaryTreeNode] = [root]
+
+    while queue:
+        node = queue.popleft()
+        if node.left:
+            queue.append(node.left)
+            levels.append(node.left)
+        if node.right:
+            queue.append(node.right)
+            levels.append(node.right)
+
+    for idx in range(len(levels) - 1):
+        levels[idx].next = levels[idx + 1]
+
+    return levels[0]
+
+
+def connect_all_siblings_ptr(
+    root: Optional[BinaryTreeNode],
+) -> Optional[BinaryTreeNode]:
+    """
+    Connects all siblings of a binary tree given the root, such that, the right most node is connected to the first node
+    on the next level using a 'next' pointer forming a kind of linked list data structure. The right most node on the
+    last level is set to None. On each level the nodes are pointed to each other via the next pointer
+    This assumes that the provided root is part of a perfect binary tree.
+
+    This performs a level order traversal using two pointers to traverse the tree utilizing constant space in the process
+    making it efficient in terms of space. However, this incurs a time complexity of O(n) as all the nodes in the tree
+     have to be traversed from the root to make the connections
+
+    Args:
+        root(BinaryTreeNode): root of a perfect binary tree
+    Returns:
+        BinaryTreeNode root such that the next pointer has been set to point to siblings
+
+    """
+    # If the tree is empty, there's nothing to connect
+    if root is None:
+        return root
+
+    # Initialize two pointers:
+    # 'current' points to the current node being processed
+    # 'last' keeps track of the last node that was connected
+    current = root
+    last = root
+
+    # Loop continues until there are no more left children in the current level
+    while current.left:
+        # Connect the last node's 'next' to the current node's left child
+        last.next = current.left
+        # Update 'last' to point to this left child
+        last = last.next
+
+        # Connect the last node's 'next' to the current node's right child
+        last.next = current.right
+        # Update 'last' to point to this right child
+        last = last.next
+
+        # Move 'current' to the next node at the same level
+        current = current.next
+
+    # Return the root of the modified tree
+    return root

@@ -17,6 +17,7 @@ class BinaryTreeNode(TreeNode):
         right: Optional["BinaryTreeNode"] = None,
         key: Optional[Any] = None,
         parent: Optional["BinaryTreeNode"] = None,
+        next: Optional["BinaryTreeNode"] = None,
     ) -> None:
         """
         Constructor for BinaryTreeNode class. This will create a new node with the provided data and optional
@@ -29,10 +30,19 @@ class BinaryTreeNode(TreeNode):
             right (Optional[BinaryTreeNode]): Right child of the node
             key (Optional[Any]): Key for the node, if not provided a hash of the data is used
             parent (Optional[BinaryTreeNode]): Parent of the node
+            next (Optional[BinaryTreeNode]): Next child of the node which is the sibling of the node. The sibling is the
+            node on the same level as this node. If this is the rightmost node in the tree that is not on the last level
+            of the tree, then this is the next node on the next level starting from the left. If this is the last node
+            in the tree, then this is None.
         """
         super().__init__(data, key, parent)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
+        # Next is a pointer that connects this node to it's right sibling in the tree. If this node is the right most
+        # node on a given level, then it is connected to the first node on the next level. If this node is the last node
+        # in the tree on the last node, then it is pointed to None. By default, it is set to None.
+        # Note that if this is the root node, it is connected to the left most node on the next level.
+        self.next: Optional[BinaryTreeNode] = next
 
     def insert_node(self, data: T) -> None:
         """
@@ -181,7 +191,9 @@ class BinaryTreeNode(TreeNode):
         pass
 
     def __repr__(self):
-        return f"BinaryTreeNode(data={self.data}, key={self.key}, left={self.left}, right={self.right})"
+        parent_data = self.parent.data if self.parent else None
+        next_data = self.next.data if self.next else None
+        return f"BinaryTreeNode(data={self.data}, key={self.key}, left={self.left}, right={self.right}, parent={parent_data}, next={next_data})"
 
     def __eq__(self, other: "BinaryTreeNode") -> bool:
         """Checks if this node is equal to another node based on the data they contain
@@ -193,7 +205,11 @@ class BinaryTreeNode(TreeNode):
         if other is None:
             return False
 
-        if other.data == self.data:
+        if (
+            other.data == self.data
+            and self.left == other.left
+            and self.right == other.right
+        ):
             return True
 
         return False
