@@ -180,10 +180,7 @@ It will look like this:
 
 ![Solution 10](./images/solutions/alien_dictionary_solution_10.png)
 
-Now, we can decrement the in-degree count of a node instead of removing it from the reverse adjacency list. When the in-degree of the node reaches 
-0
-0
-, this represents that this particular node has no incoming links left.
+Now, we can decrement the in-degree count of a node instead of removing it from the reverse adjacency list. When the in-degree of the node reaches 0, this particular node has no incoming links left.
 
 We perform BFS on all the letters that are reachable, that is, the in-degree count of the letters is zero. A letter is
 only reachable once the letters that need to be before it have been added to the output, result.
