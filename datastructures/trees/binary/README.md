@@ -81,7 +81,7 @@ The next pointer of the last node of the binary tree (i.e., the rightmost node o
 ### Constraints
 
 - The number of nodes in the tree is in the range [0,500].
-- 1000 <= `node.data` <= 1000
+- -1000 <= `node.data` <= 1000
 
 ### Examples
 
