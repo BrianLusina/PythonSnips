@@ -65,3 +65,80 @@ entire height of the tree, including `h` steps.
 The space complexity of this solution is `O(1)` as there is no additional space being used. Only two pointers are being 
 maintained requiring constant space.
 
+---
+
+## Connect All Siblings of a Binary Tree
+
+Given the root of a perfect binary tree, where each node is equipped with an additional pointer, next, connect all nodes
+from left to right. Do so in such a way that the next pointer of each node points to its immediate right sibling except
+for the rightmost node, which points to the first node of the next level.
+
+The next pointer of the last node of the binary tree (i.e., the rightmost node of the last level) should be set to NULL.
+
+> A binary tree in which all the levels are completely filled with nodes, and all leaf nodes (nodes with no children)
+> are at the same level.
+
+### Constraints
+
+- The number of nodes in the tree is in the range [0,500].
+- 1000 <= `node.data` <= 1000
+
+### Examples
+
+![Example 1](./images/examples/connect_all_siblings_of_binary_tree_example_1.png)
+![Example 2](./images/examples/connect_all_siblings_of_binary_tree_example_2.png)
+
+### Solution
+
+The algorithm connects all nodes by utilizing the structure of the perfect binary tree, where each non-leaf node has
+exactly two children. Using this property, the algorithm connects nodes without needing extra space. It uses two pointers:
+one to traverse the current level and another to connect nodes at the next level. Starting from the root, the algorithm
+links each node’s left child to its right child and then connects the right child to the next node’s left child on the
+same level, continuing this process across all nodes at that level. If no adjacent node is on the same level, the right
+child’s next pointer is connected to the first node on the next lower level. This process continues until all nodes are
+connected in a manner that reflects level-order traversal.
+
+The steps of the algorithm are given below:
+
+1. If the root is None, the tree is empty. In this case, return immediately.
+2. Initialize two pointers current and last to the root node. The current pointer traverses the nodes level by level,
+   while the last keeps track of the last node connected via the next pointer.
+3. The loop continues as long as current.left exists. In a perfect binary tree, all non-leaf nodes have a left child,
+   so this condition ensures that the loop continues until all levels are processed.
+   - First connection: last.next = current.left connects the last node (initially the root) to the current.left child.
+     After this, last is updated to current.left.
+   - Second connection: last.next = current.right connects current.left (now pointed to by last) to current.right. last
+     is then updated to current.right.
+   - Move to the next node: current = current.next moves the current pointer to the next node.
+4. Finally, return the modified root of the tree, where all nodes are connected to their next sibling in the level-order
+   traversal.
+
+Let’s look at the following illustration(s) to get a better understanding of the solution:
+
+![Solution 1](./images/solutions/connect_all_siblings_of_binary_tree_solution_1.png)
+![Solution 2](./images/solutions/connect_all_siblings_of_binary_tree_solution_2.png)
+![Solution 3](./images/solutions/connect_all_siblings_of_binary_tree_solution_3.png)
+![Solution 4](./images/solutions/connect_all_siblings_of_binary_tree_solution_4.png)
+![Solution 5](./images/solutions/connect_all_siblings_of_binary_tree_solution_5.png)
+![Solution 6](./images/solutions/connect_all_siblings_of_binary_tree_solution_6.png)
+![Solution 7](./images/solutions/connect_all_siblings_of_binary_tree_solution_7.png)
+![Solution 8](./images/solutions/connect_all_siblings_of_binary_tree_solution_8.png)
+![Solution 9](./images/solutions/connect_all_siblings_of_binary_tree_solution_9.png)
+![Solution 10](./images/solutions/connect_all_siblings_of_binary_tree_solution_10.png)
+![Solution 11](./images/solutions/connect_all_siblings_of_binary_tree_solution_11.png)
+![Solution 12](./images/solutions/connect_all_siblings_of_binary_tree_solution_12.png)
+![Solution 13](./images/solutions/connect_all_siblings_of_binary_tree_solution_13.png)
+![Solution 14](./images/solutions/connect_all_siblings_of_binary_tree_solution_14.png)
+![Solution 15](./images/solutions/connect_all_siblings_of_binary_tree_solution_15.png)
+![Solution 16](./images/solutions/connect_all_siblings_of_binary_tree_solution_16.png)
+![Solution 17](./images/solutions/connect_all_siblings_of_binary_tree_solution_17.png)
+
+#### Time Complexity
+
+The time complexity of the solution is O(N), where N is the number of nodes in the binary tree. The algorithm traverses
+each node exactly once, connecting the left and right children as it moves through the tree.
+
+#### Space Complexity
+
+The space complexity of the solution is O(1) because the algorithm uses only a constant amount of extra space,
+specifically the pointers current and last, regardless of the size of the tree.

@@ -1,7 +1,10 @@
 import unittest
+from parameterized import parameterized
 from datastructures.trees.binary.utils import (
     lowest_common_ancestor,
     lowest_common_ancestor_ptr,
+    connect_all_siblings,
+    connect_all_siblings_ptr,
 )
 from datastructures.trees.binary.node import BinaryTreeNode
 
@@ -179,6 +182,61 @@ class LowestCommonAncestorPtrTestCase(unittest.TestCase):
         node_two = root.right.left
         expected = root
         actual = lowest_common_ancestor_ptr(node_one, node_two)
+        self.assertEqual(expected, actual)
+
+
+CONNECT_ALL_SIBLINGS_TEST_CASES = [
+    (
+        BinaryTreeNode(
+            data=100,
+            left=BinaryTreeNode(
+                data=50, left=BinaryTreeNode(data=25), right=BinaryTreeNode(data=75)
+            ),
+            right=BinaryTreeNode(
+                data=200, left=BinaryTreeNode(data=300), right=BinaryTreeNode(data=10)
+            ),
+        ),
+        BinaryTreeNode(
+            data=100,
+            left=BinaryTreeNode(
+                data=50, left=BinaryTreeNode(data=25), right=BinaryTreeNode(data=75)
+            ),
+            right=BinaryTreeNode(
+                data=200, left=BinaryTreeNode(data=300), right=BinaryTreeNode(data=10)
+            ),
+            next=BinaryTreeNode(
+                data=50,
+                left=BinaryTreeNode(data=300),
+                right=BinaryTreeNode(data=10),
+                next=BinaryTreeNode(
+                    data=200,
+                    left=BinaryTreeNode(data=300),
+                    right=BinaryTreeNode(data=10),
+                    next=BinaryTreeNode(
+                        data=25,
+                        next=BinaryTreeNode(
+                            data=75,
+                            next=BinaryTreeNode(data=300, next=BinaryTreeNode(data=10)),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    ),
+]
+
+
+class ConnectAllSiblingsTestCase(unittest.TestCase):
+    @parameterized.expand(CONNECT_ALL_SIBLINGS_TEST_CASES)
+    def test_connect_all_siblings(self, root: BinaryTreeNode, expected: BinaryTreeNode):
+        actual = connect_all_siblings(root)
+        self.assertEqual(expected, actual)
+
+    @parameterized.expand(CONNECT_ALL_SIBLINGS_TEST_CASES)
+    def test_connect_all_siblings_ptr(
+        self, root: BinaryTreeNode, expected: BinaryTreeNode
+    ):
+        actual = connect_all_siblings_ptr(root)
         self.assertEqual(expected, actual)
 
 
