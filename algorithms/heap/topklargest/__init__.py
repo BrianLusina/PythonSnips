@@ -12,6 +12,13 @@ def k_largest(nums: List[int], k: int = 3) -> List[int]:
     Returns:
         list: top k largest elements
     """
+    # input validation to ensure we don't get unexpected results
+    if not nums or k <= 0:
+        return []
+    
+    # Adjust k if it exceeds the length of nums
+    k = min(k, len(nums))
+    
     # create a minimum heap with the first k elements
     min_heap = nums[:k]
     heapq.heapify(min_heap)
