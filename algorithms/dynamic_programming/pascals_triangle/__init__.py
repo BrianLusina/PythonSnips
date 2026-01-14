@@ -29,7 +29,7 @@ def pascal_nth_row(nth: int) -> List[int]:
     We instead use the formula:
         NCr = (NCr - 1 * (N - r + 1)) / r where 1 ≤ r ≤ N
         as the nth row consists of the following sequence:
-        NC0, NC1, ......, NCN - 1, NCN
+        NC0, NC1, ..., NCN - 1, NCN
     """
     ncr_1 = 1
     row: List[int] = [ncr_1]

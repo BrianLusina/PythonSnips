@@ -1,8 +1,9 @@
-from . import is_palindrome
+from algorithms.two_pointers.palindrome import is_palindrome
 
 
 def longest_palindromic_substring(phrase: str) -> str:
-    """Finds the longest palindromic substring from a given string and returns it. If the string has
+    """
+    Finds the longest palindromic substring from a given string and returns it. If the string has
     more than 1 palindromic substring, the first is returned, that is, the first with the lowest index.
 
     Args:
