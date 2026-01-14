@@ -137,6 +137,9 @@
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
     * Spread Stones
       * [Test Minimum Moves To Spread Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/spread_stones/test_minimum_moves_to_spread_stones.py)
+  * Heap
+    * Schedule Tasks
+      * [Test Schedule Tasks On Minimum Machines](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/schedule_tasks/test_schedule_tasks_on_minimum_machines.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
