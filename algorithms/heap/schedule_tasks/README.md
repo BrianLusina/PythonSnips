@@ -13,7 +13,7 @@ Find the minimum number of machines required to complete these n tasks.
 
 - n == `tasks.length`
 - 1 <= `tasks.length` <= 10^3
-- 0 <= `tasksi.start` < `tasksi.end` <= 10^4
+- 0 <= `tasks[i].start` < `tasks[i].end` <= 10^4
 
 ## Examples
 
