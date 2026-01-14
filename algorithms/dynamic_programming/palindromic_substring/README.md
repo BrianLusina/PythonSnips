@@ -65,7 +65,7 @@ To recap, the solution to this problem can be divided into the following five ma
 1. We count all one-letter substrings since any one-letter string is always a palindrome. These results are also stored
    in a lookup table to be used later.
 2. Next, the algorithm checks all two-letter substrings and updates the count and the lookup table accordingly.
-3. After these base cases, the algorithm checks all possible substrings of lengths greater than three. However, it only
+3. After these base cases, the algorithm checks all possible substrings of lengths greater than two. However, it only
    compares the first and last characters, and the rest of the substring is checked using the lookup table.
 4. Whenever a palindromic substring is found, the count and the lookup table are updated accordingly.
 5. After checking all possible substrings, the algorithm terminates and returns the count of the palindromic substrings.
