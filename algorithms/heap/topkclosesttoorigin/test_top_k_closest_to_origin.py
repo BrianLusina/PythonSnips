@@ -20,8 +20,8 @@ class TopKClosestToOriginTestCase(unittest.TestCase):
     ):
         actual = k_closest_to_origin(points, k)
 
-        sorted_expected = sorted(expected, key=lambda x: x[0])
-        sorted_actual = sorted(actual, key=lambda x: x[0])
+        sorted_expected = sorted(expected, key=lambda x: (x[0], x[1]))
+        sorted_actual = sorted(actual, key=lambda x: (x[0], x[1]))
         self.assertEqual(sorted_expected, sorted_actual)
 
     @parameterized.expand(TOP_K_CLOSEST_TO_ORIGIN)
