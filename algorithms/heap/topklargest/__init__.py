@@ -76,8 +76,8 @@ def kth_largest_sorting(nums: List[int], k: int) -> int:
     if not nums or k <= 0 or k > len(nums):
         return -1
 
-    # Sort the list in place which incurs a time complexity cost of O(n log(n)). Space complexity is O(n) due to using
-    # an in-memory data structure to store the elements during sorting using timsort in Python
-    nums.sort(reverse=True)
+    # Sort the list which incurs a time complexity cost of O(n log(n)). Space complexity is O(n) due to creating
+    # a new sorted list
+    sorted_nums = sorted(nums, reverse=True)
     # Return the kth largest element
-    return nums[k - 1]
+    return sorted_nums[k - 1]
