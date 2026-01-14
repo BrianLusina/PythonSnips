@@ -31,6 +31,6 @@ def k_closest_to_origin(points: List[List[int]], k: int) -> List[List[int]]:
 def k_closest_to_origin_sorting(points: List[List[int]], k: int) -> List[List[int]]:
     # Sort the points by the distance from the origin. This incurs a cost of O(n log(n)) and space cost of O(n) due to
     # timsort
-    points.sort(key=lambda p: p[0] ** 2 + p[1] ** 2)
+    sorted_points = sorted(points, key=lambda p: p[0] ** 2 + p[1] ** 2)
     # Retrieve the top k points closest to the origin
-    return points[:k]
+    return sorted_points[:k]
