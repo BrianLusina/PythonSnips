@@ -140,6 +140,8 @@
   * Heap
     * Schedule Tasks
       * [Test Schedule Tasks On Minimum Machines](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/schedule_tasks/test_schedule_tasks_on_minimum_machines.py)
+    * Topkclosesttoorigin
+      * [Test Top K Closest To Origin](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/topkclosesttoorigin/test_top_k_closest_to_origin.py)
     * Topklargest
       * [Test Top K Largest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/topklargest/test_top_k_largest_elements.py)
   * Huffman
