@@ -5,6 +5,10 @@ from algorithms.dynamic_programming.palindromic_substring.longest_palindromic_su
 )
 
 LONGEST_PALINDROMIC_SUBSTRING_TEST_CASES = [
+    ("", ""),
+    ("a", "a"),
+    ("aab", "aa"),
+    ("baa", "aa"),
     ("mnm", "mnm"),
     ("zzz", "zzz"),
     ("cat", "c"),
