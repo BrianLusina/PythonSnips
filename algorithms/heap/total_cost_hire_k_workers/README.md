@@ -58,32 +58,32 @@ worker, a spot will open up for another worker to be among the first or last m c
 distinguish between the first m candidates and the last m candidates. That way, when we choose a worker, we know if a
 spot was opened in the first m candidates or the last m candidates.
 
-![Step 1](./total_cost_hire_k_workers_step_1.png)
+![Step 1](total_cost_hire_k_workers_step_1.png)
 
 To store the workers in two sections separately, we can use two priority queues, head_workers and tail_workers, where
 the worker with the lowest cost has the highest priority.
 
-![Step 2](./total_cost_hire_k_workers_step_2.png)
+![Step 2](total_cost_hire_k_workers_step_2.png)
 
 Throughout the process, after we hire a worker from a section, we need to add an additional candidate to this section.
 Therefore, we need two pointers, next_head and next_tail, that denotes the next worker to be added to the respective
 queues.
 
-![Step 3](./total_cost_hire_k_workers_step_3.png)
+![Step 3](total_cost_hire_k_workers_step_3.png)
 
 Just like in this situation shown in the picture, if two workers with the same cost appear at the top of both queues, we
 will hire the one from head_workers, since this worker has a smaller index compared with the other one from
 tail_workers. Afterwards, we need to refill head_workers with the worker at next_head to ensure that it still contains
 the first m unselected candidates.
 
-![Step 4](./total_cost_hire_k_workers_step_4.png)
+![Step 4](total_cost_hire_k_workers_step_4.png)
 
 However, if we encounter the condition next_tail < next_head, it indicates that all the workers have been selected as
 candidates and there are no more workers outside the two queues. To avoid double counting, we should not add a worker to
 both queues or update either pointer. Therefore, we can simply move on without making any updates to the queues or
 pointers.
 
-![Step 5](./total_cost_hire_k_workers_step_5.png)
+![Step 5](total_cost_hire_k_workers_step_5.png)
 
 #### Algorithm
 
