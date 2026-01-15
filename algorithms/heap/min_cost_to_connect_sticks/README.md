@@ -16,7 +16,7 @@ Constraints:
 
 ## Examples
 
-![Example 1](./images/examples/min_cost_to_connect_sticks_1.png)
-![Example 2](./images/examples/min_cost_to_connect_sticks_2.png)
-![Example 3](./images/examples/min_cost_to_connect_sticks_3.png)
-![Example 4](./images/examples/min_cost_to_connect_sticks_4.png)
+![Example 1](images/examples/min_cost_to_connect_sticks_1.png)
+![Example 2](images/examples/min_cost_to_connect_sticks_2.png)
+![Example 3](images/examples/min_cost_to_connect_sticks_3.png)
+![Example 4](images/examples/min_cost_to_connect_sticks_4.png)

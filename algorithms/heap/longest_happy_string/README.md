@@ -22,9 +22,9 @@ strings, return any one of them. If no such string can be formed, return an empt
 
 ## Examples
 
-![Example 1](./images/examples/longest_happy_string_example_1.png)
-![Example 2](./images/examples/longest_happy_string_example_2.png)
-![Example 3](./images/examples/longest_happy_string_example_3.png)
+![Example 1](images/examples/longest_happy_string_example_1.png)
+![Example 2](images/examples/longest_happy_string_example_2.png)
+![Example 3](images/examples/longest_happy_string_example_3.png)
 
 
 ## Solution
@@ -55,21 +55,21 @@ Note: In Python, strings are immutable, so we construct the result as a list and
 
 Let’s look at the following illustration to get a better understanding of the solution:
 
-![Longest Happy String Solution 1](./images/solutions/longest_happy_string_solution_1.png)
-![Longest Happy String Solution 2](./images/solutions/longest_happy_string_solution_2.png)
-![Longest Happy String Solution 3](./images/solutions/longest_happy_string_solution_3.png)
-![Longest Happy String Solution 4](./images/solutions/longest_happy_string_solution_4.png)
-![Longest Happy String Solution 5](./images/solutions/longest_happy_string_solution_5.png)
-![Longest Happy String Solution 6](./images/solutions/longest_happy_string_solution_6.png)
-![Longest Happy String Solution 7](./images/solutions/longest_happy_string_solution_7.png)
-![Longest Happy String Solution 8](./images/solutions/longest_happy_string_solution_8.png)
-![Longest Happy String Solution 9](./images/solutions/longest_happy_string_solution_9.png)
-![Longest Happy String Solution 10](./images/solutions/longest_happy_string_solution_10.png)
-![Longest Happy String Solution 11](./images/solutions/longest_happy_string_solution_11.png)
-![Longest Happy String Solution 12](./images/solutions/longest_happy_string_solution_12.png)
-![Longest Happy String Solution 13](./images/solutions/longest_happy_string_solution_13.png)
-![Longest Happy String Solution 14](./images/solutions/longest_happy_string_solution_14.png)
-![Longest Happy String Solution 15](./images/solutions/longest_happy_string_solution_15.png)
+![Longest Happy String Solution 1](images/solutions/longest_happy_string_solution_1.png)
+![Longest Happy String Solution 2](images/solutions/longest_happy_string_solution_2.png)
+![Longest Happy String Solution 3](images/solutions/longest_happy_string_solution_3.png)
+![Longest Happy String Solution 4](images/solutions/longest_happy_string_solution_4.png)
+![Longest Happy String Solution 5](images/solutions/longest_happy_string_solution_5.png)
+![Longest Happy String Solution 6](images/solutions/longest_happy_string_solution_6.png)
+![Longest Happy String Solution 7](images/solutions/longest_happy_string_solution_7.png)
+![Longest Happy String Solution 8](images/solutions/longest_happy_string_solution_8.png)
+![Longest Happy String Solution 9](images/solutions/longest_happy_string_solution_9.png)
+![Longest Happy String Solution 10](images/solutions/longest_happy_string_solution_10.png)
+![Longest Happy String Solution 11](images/solutions/longest_happy_string_solution_11.png)
+![Longest Happy String Solution 12](images/solutions/longest_happy_string_solution_12.png)
+![Longest Happy String Solution 13](images/solutions/longest_happy_string_solution_13.png)
+![Longest Happy String Solution 14](images/solutions/longest_happy_string_solution_14.png)
+![Longest Happy String Solution 15](images/solutions/longest_happy_string_solution_15.png)
 
 ### Time complexity
 
