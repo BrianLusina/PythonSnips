@@ -16,6 +16,10 @@ def is_valid_sudoku(board: List[List[str]]) -> bool:
     if len(board) != 9:
         return False
 
+    # Validate each row has exactly 9 columns
+    if any(len(row) != 9 for row in board):
+        return False
+
     number_of_rows = len(board)
     number_of_columns = len(board[0])
     row_sets: List[Set[str]] = [set() for _ in range(number_of_rows)]
