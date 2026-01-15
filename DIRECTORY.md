@@ -138,12 +138,24 @@
     * Spread Stones
       * [Test Minimum Moves To Spread Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/spread_stones/test_minimum_moves_to_spread_stones.py)
   * Heap
+    * Longest Happy String
+      * [Test Longest Happy String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/longest_happy_string/test_longest_happy_string.py)
+    * Maximal Score After K Operations
+      * [Test Maximal Score](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/maximal_score_after_k_operations/test_maximal_score.py)
+    * Maximum Subsequence Score
+      * [Test Max Subsequence Score](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/maximum_subsequence_score/test_max_subsequence_score.py)
+    * Min Cost Hire K Workers
+      * [Test Min Cost To Hire Workers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/min_cost_hire_k_workers/test_min_cost_to_hire_workers.py)
+    * Min Cost To Connect Sticks
+      * [Test Min Cost Connect Sticks](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/min_cost_to_connect_sticks/test_min_cost_connect_sticks.py)
     * Schedule Tasks
       * [Test Schedule Tasks On Minimum Machines](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/schedule_tasks/test_schedule_tasks_on_minimum_machines.py)
     * Topkclosesttoorigin
       * [Test Top K Closest To Origin](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/topkclosesttoorigin/test_top_k_closest_to_origin.py)
     * Topklargest
       * [Test Top K Largest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/topklargest/test_top_k_largest_elements.py)
+    * Total Cost Hire K Workers
+      * [Test Total Cost Hire K Workers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/total_cost_hire_k_workers/test_total_cost_hire_k_workers.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
@@ -177,6 +189,9 @@
       * [Test Task Scheduler](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/task_scheduler/test_task_scheduler.py)
   * Josephus Circle
     * [Test Josephus Circle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/josephus_circle/test_josephus_circle.py)
+  * Matrix
+    * Isvalidsudoku
+      * [Test Is Valid Sudoku](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/isvalidsudoku/test_is_valid_sudoku.py)
   * Memoization
     * [Fibonacci](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/memoization/fibonacci.py)
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
@@ -674,17 +689,6 @@
       * [Test Find Difference](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hashmap/find_difference_of_two_arrays/test_find_difference.py)
     * Unique Number Of Occurrences
       * [Test Unique Occurrences](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hashmap/unique_number_of_occurrences/test_unique_occurrences.py)
-  * Heap
-    * Maximal Score After K Operations
-      * [Test Maximal Score](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/maximal_score_after_k_operations/test_maximal_score.py)
-    * Maximum Subsequence Score
-      * [Test Max Subsequence Score](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/maximum_subsequence_score/test_max_subsequence_score.py)
-    * Min Cost Hire K Workers
-      * [Test Min Cost To Hire Workers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/min_cost_hire_k_workers/test_min_cost_to_hire_workers.py)
-    * Min Cost To Connect Sticks
-      * [Test Min Cost Connect Sticks](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/min_cost_to_connect_sticks/test_min_cost_connect_sticks.py)
-    * Total Cost Hire K Workers
-      * [Test Total Cost Hire K Workers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/heap/total_cost_hire_k_workers/test_total_cost_hire_k_workers.py)
   * Hidden Cubic Numbers
     * [Hidden Cubic Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hidden_cubic_numbers/hidden_cubic_numbers.py)
   * Matrix In Spiral Form
@@ -865,8 +869,6 @@
     * [Test Longest Common Prefix](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_common_prefix/test_longest_common_prefix.py)
   * Longest Common Suffix Queries
     * [Test Longest Common Suffix Queries](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_common_suffix_queries/test_longest_common_suffix_queries.py)
-  * Longest Happy String
-    * [Test Longest Happy String](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_happy_string/test_longest_happy_string.py)
   * Longest Self Contained Substring
     * [Test Longest Self Contained Substring](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/longest_self_contained_substring/test_longest_self_contained_substring.py)
   * Look And Say Sequence
