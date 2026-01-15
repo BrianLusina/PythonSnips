@@ -1,7 +1,7 @@
 # Find K Closest Elements
 
 Given a sorted array nums, a target value target, and an integer k, find the k closest elements to target in the array,
-where "closest" is the absolute difference between each element and target. Return these elements in array, sorted in
+where "closest" is the absolute difference between each element and target. Return these elements in an array, sorted in
 ascending order.
 
 ## Examples
