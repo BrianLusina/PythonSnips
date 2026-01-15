@@ -1,6 +1,6 @@
 import unittest
 from parameterized import parameterized
-from pystrings.longest_happy_string import longest_diverse_string
+from algorithms.heap.longest_happy_string import longest_diverse_string
 
 
 class LongestHappyStringTestCase(unittest.TestCase):

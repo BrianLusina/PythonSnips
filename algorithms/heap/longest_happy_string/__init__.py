@@ -20,8 +20,8 @@ def longest_diverse_string(a: int, b: int, c: int) -> str:
     # Process the heap until it's empty or no valid character can be added
     while max_heap:
         # Pop the character with the highest remaining frequency
-        count, character = heappop(max_heap)
-        count = -count  # Convert back to positive
+        negative_count, character = heappop(max_heap)
+        count = -negative_count  # Convert back to positive
 
         # Check if adding this character violates the "no three consecutive" rule
         if len(result) >= 2 and result[-1] == character and result[-2] == character:
