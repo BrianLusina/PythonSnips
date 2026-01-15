@@ -13,7 +13,7 @@ MERGE_K_LISTS_TEST_CASES = [
 ]
 
 
-class MegeKListsTestCase(unittest.TestCase):
+class MergeKListsTestCase(unittest.TestCase):
     @parameterized.expand(MERGE_K_LISTS_TEST_CASES)
     def test_merge_k_lists(self, lists: List[List[int]], expected: List[int]):
         actual = merge_k_lists(lists)
