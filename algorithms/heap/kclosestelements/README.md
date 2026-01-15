@@ -15,7 +15,7 @@ Output
 [-1, 0, 1]
 
 Explanation
-Explanation: -1 is 2 away from 1, 0 is 1 away from 1, and 1 is 0 away from 1. All other elements are more than 2 away. 
+-1 is 2 away from 1, 0 is 1 away from 1, and 1 is 0 away from 1. All other elements are more than 2 away. 
 Since we need to return the elements in ascending order, the answer is [-1, 0, 1]
 ```
 
