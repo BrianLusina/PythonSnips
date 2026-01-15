@@ -73,6 +73,8 @@
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Min Path Sum
       * [Test Min Path Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_path_sum/test_min_path_sum.py)
+    * Painthouse
+      * [Test Min Cost To Paint Houses](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/painthouse/test_min_cost_to_paint_houses.py)
     * Palindromic Substring
       * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/longest_palindromic_substring.py)
       * [Test Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/test_longest_palindromic_substring.py)
