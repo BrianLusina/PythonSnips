@@ -43,7 +43,7 @@ def merge_k_lists(lists: List[List[int]]) -> List[int]:
         result.append(value)
 
         # We check if the element index is less than the current list it can be found in. This means that there are
-        # still other elements withing this list
+        # still other elements within this list
         if element_index + 1 < len(lists[list_index]):
             # We add the next value to the heap
             next_value = lists[list_index][element_index + 1]
