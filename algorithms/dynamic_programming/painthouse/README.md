@@ -72,7 +72,7 @@ min(prev_min_cost_red, prev_min_cost_green) + cost_blue, min(prev_min_cost_red, 
 
 Breaking this down:
 
-- New `prev_min_cost_red` (cost if current house is red): `min(prev_min_cost_blue, prev_min_cost_gree) + cost_red` 
+- New `prev_min_cost_red` (cost if current house is red): `min(prev_min_cost_blue, prev_min_cost_green) + cost_red` 
   We take the minimum of the previous costs where the house was NOT red (either blue or green)
   Add the cost of painting the current house red
 
@@ -80,7 +80,7 @@ Breaking this down:
   We take the minimum of the previous costs where the house was NOT blue (either red or green)
   Add the cost of painting the current house blue
 
-- New `prev_min_cost_green` (cost if current house is green): `min(prev_min_cost_red, prev_min_cost_blue) + cost_blue`
+- New `prev_min_cost_green` (cost if current house is green): `min(prev_min_cost_red, prev_min_cost_blue) + cost_green`
   We take the minimum of the previous costs where the house was NOT green (either red or blue)
   Add the cost of painting the current house green
 
@@ -90,7 +90,7 @@ Final Result: After processing all houses, `prev_min_cost_red`, `prev_min_cost_b
 the minimum costs to paint all houses with the last house being red, blue, or green respectively. The answer is the
 minimum among these three values:
 
-`return min(prev_mins_cost_red, prev_min_cost_blue, prev_min_cost_green)`
+`return min(prev_min_cost_red, prev_min_cost_blue, prev_min_cost_green)`
 
 ### Complexity Analysis
 
