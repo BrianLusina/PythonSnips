@@ -55,6 +55,10 @@
       * [Test Max Profit Three](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_three.py)
       * [Test Max Profit Two](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_two.py)
       * [Test Max Profit With Fee](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_with_fee.py)
+    * Climb Stairs
+      * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/climb_stairs/test_climb_stairs.py)
+    * Countingbits
+      * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/countingbits/test_counting_bits.py)
     * Domino Tromino Tiling
       * [Test Domino Tromino Tiling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/domino_tromino_tiling/test_domino_tromino_tiling.py)
     * Duffle Bug Value
@@ -69,6 +73,8 @@
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Min Path Sum
       * [Test Min Path Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_path_sum/test_min_path_sum.py)
+    * Painthouse
+      * [Test Min Cost To Paint Houses](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/painthouse/test_min_cost_to_paint_houses.py)
     * Palindromic Substring
       * [Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/longest_palindromic_substring.py)
       * [Test Longest Palindromic Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/palindromic_substring/test_longest_palindromic_substring.py)
@@ -138,12 +144,16 @@
     * Spread Stones
       * [Test Minimum Moves To Spread Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/spread_stones/test_minimum_moves_to_spread_stones.py)
   * Heap
+    * Kclosestelements
+      * [Test Find K Closest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/kclosestelements/test_find_k_closest_elements.py)
     * Longest Happy String
       * [Test Longest Happy String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/longest_happy_string/test_longest_happy_string.py)
     * Maximal Score After K Operations
       * [Test Maximal Score](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/maximal_score_after_k_operations/test_maximal_score.py)
     * Maximum Subsequence Score
       * [Test Max Subsequence Score](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/maximum_subsequence_score/test_max_subsequence_score.py)
+    * Mergeksortedlists
+      * [Test Merge K Sorted Lists](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/mergeksortedlists/test_merge_k_sorted_lists.py)
     * Min Cost Hire K Workers
       * [Test Min Cost To Hire Workers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/min_cost_hire_k_workers/test_min_cost_to_hire_workers.py)
     * Min Cost To Connect Sticks
@@ -676,8 +686,6 @@
     * [Battleship](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/battleship/battleship.py)
   * Beeramid
     * [Test Bearamid](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/beeramid/test_bearamid.py)
-  * Climb Stairs
-    * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/climb_stairs/test_climb_stairs.py)
   * Find Missing Elem
     * [Test Find Missing Elem](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/find_missing_elem/test_find_missing_elem.py)
   * Hashmap
