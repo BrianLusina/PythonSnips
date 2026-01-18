@@ -59,6 +59,8 @@
       * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/climb_stairs/test_climb_stairs.py)
     * Countingbits
       * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/countingbits/test_counting_bits.py)
+    * Decodeways
+      * [Test Num Decodings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/decodeways/test_num_decodings.py)
     * Domino Tromino Tiling
       * [Test Domino Tromino Tiling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/domino_tromino_tiling/test_domino_tromino_tiling.py)
     * Duffle Bug Value
@@ -214,6 +216,8 @@
         * [Test Divide Chocolate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/divide_chocolate/test_divide_chocolate.py)
       * Maxruntime N Computers
         * [Test Max Runtime](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/maxruntime_n_computers/test_max_runtime.py)
+      * Split Array Largest Sum
+        * [Test Split Array Largest Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/split_array_largest_sum/test_split_array_largest_sum.py)
       * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/test_binary_search.py)
     * Interpolation
       * [Test Interpolation Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/interpolation/test_interpolation_search.py)
