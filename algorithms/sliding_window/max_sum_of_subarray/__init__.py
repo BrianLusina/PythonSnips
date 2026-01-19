@@ -22,6 +22,7 @@ def max_sum_subarray(nums: List[int], k: int) -> int:
 
     return max_sum
 
+
 def max_sum_subarray_2(nums: List[int], k: int) -> int:
     n = len(nums)
 

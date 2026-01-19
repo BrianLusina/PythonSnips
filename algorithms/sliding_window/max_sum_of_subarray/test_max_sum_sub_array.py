@@ -4,7 +4,7 @@ from parameterized import parameterized
 from algorithms.sliding_window.max_sum_of_subarray import (
     max_sum_subarray,
     max_sum_subarray_2,
-    max_sum_subarray_3
+    max_sum_subarray_3,
 )
 
 MAX_SUM_SUBARRAY_OF_SIZE_K = [
