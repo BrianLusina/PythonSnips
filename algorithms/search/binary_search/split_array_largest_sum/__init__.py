@@ -40,18 +40,21 @@ def split_array(nums: List[int], k: int) -> int:
 
 
 def split_array_2(nums, k):
+    if not nums:
+        return -1
+
     # Set the initial search range for the largest sum:
     # Minimum is the largest number in the array, and maximum is the sum of all numbers
     left, right = max(nums), sum(nums)
 
-    def can_split(mid):
+    def can_split(middle: int):
         # Initialize the count of subarrays and the current sum of the current subarray
         subarrays = 1
         current_sum = 0
 
         for num in nums:
             # Check if adding the current number exceeds the allowed sum (mid)
-            if current_sum + num > mid:
+            if current_sum + num > middle:
                 # Increment the count of subarrays
                 subarrays += 1
                 # Start a new subarray with the current number
