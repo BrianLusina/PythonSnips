@@ -259,6 +259,8 @@
   * Two Pointers
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
+    * Count Pairs
+      * [Test Count Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/count_pairs/test_count_pairs.py)
     * Find Sum Of Three
       * [Test Find Sum Of Three](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/find_sum_of_three/test_find_sum_of_three.py)
     * Merge Sorted Arrays
