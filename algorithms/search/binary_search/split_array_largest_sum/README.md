@@ -97,7 +97,7 @@ Here’s the step-by-step implementation of the solution:
 
 The time complexity of this solution is O(n log(m)), where n is the length of the input array, and m is the difference
 between `max(nums)` and `sum(nums)` because the range of possible sums considered during the binary search is from
-`max(nums)`to `sum(nums)`. This range size determines the number of iterations in the binary search. The tighter this
+`max(nums)` to `sum(nums)`. This range size determines the number of iterations in the binary search. The tighter this
 range, the fewer iterations are needed. However, in the worst case, it spans the full difference: `sum(nums) - max(nums)`.
 The time complexity becomes `n log(m)` because the `can_split` function is called `n` times for each iteration.
 
