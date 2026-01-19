@@ -1,7 +1,9 @@
 import unittest
 from typing import List
 from parameterized import parameterized
-from algorithms.dynamic_programming.painthouse import min_cost_to_paint_houses_alternate_colors
+from algorithms.dynamic_programming.painthouse import (
+    min_cost_to_paint_houses_alternate_colors,
+)
 
 MIN_COST_PAINT_HOUSE = [
     ([[8, 4, 15], [10, 7, 3], [6, 9, 12]], 13),
@@ -16,5 +18,5 @@ class MinCostToPaintHouseTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
