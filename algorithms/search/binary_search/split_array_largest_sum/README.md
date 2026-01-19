@@ -1,4 +1,4 @@
-#  Split Array Largest Sum
+# Split Array Largest Sum
 
 Given an integer list nums and an integer k, split nums into k non-empty subarrays such that the largest sum among these
 subarrays is minimized. The task is to find the minimized largest sum by choosing the split such that the largest sum of
