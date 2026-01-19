@@ -103,4 +103,4 @@ The time complexity becomes `n log(m)` because the `can_split` function is calle
 
 ### Space Complexity
 
-The time complexity of this solution is O(1) because only constant space is used.
+The space complexity of this solution is O(1) because only constant space is used.
