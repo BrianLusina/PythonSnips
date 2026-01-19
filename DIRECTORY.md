@@ -231,6 +231,8 @@
       * [Test Longest Substring K Repeating Chars](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_substring_with_k_repeating_chars/test_longest_substring_k_repeating_chars.py)
     * Longest Substring Without Repeating Characters
       * [Test Longest Substring Without Repeating Characters](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_substring_without_repeating_characters/test_longest_substring_without_repeating_characters.py)
+    * Max Points From Cards
+      * [Test Max Points From Cards](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_points_from_cards/test_max_points_from_cards.py)
     * Max Sum Of Subarray
       * [Test Max Sum Sub Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_sum_of_subarray/test_max_sum_sub_array.py)
     * Repeated Dna Sequences
