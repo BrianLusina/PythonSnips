@@ -486,9 +486,11 @@
         * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
+        * [Test Binary Tree Invert Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_invert_tree.py)
         * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Serialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_serialize.py)
         * [Test Binary Tree Visible Nodes](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_visible_nodes.py)
+        * [Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/tree_utils.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/utils.py)
     * Btree
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/btree/node.py)
