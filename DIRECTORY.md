@@ -133,6 +133,8 @@
     * Valid Path
       * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
   * Greedy
+    * Assign Cookies
+      * [Test Assign Cookies](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/assign_cookies/test_assign_cookies.py)
     * Boats
       * [Test Boats To Save People](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/boats/test_boats_to_save_people.py)
     * Gas Stations
