@@ -22,10 +22,14 @@ def can_complete_circuit(gas: List[int], cost: List[int]) -> int:
 
     gas_tank, start_index = 0, 0
 
-    for i in range(len(gas)):
-        gas_tank += gas[i] - cost[i]
+    for gas_station in range(len(gas)):
+        # can reach next station:
+        # update remaining fuel
+        gas_tank += gas[gas_station] - cost[gas_station]
 
         if gas_tank < 0:
-            start_index = i + 1
+            # can't reach next station:
+            # try starting from next station
+            start_index = gas_station + 1
             gas_tank = 0
     return start_index

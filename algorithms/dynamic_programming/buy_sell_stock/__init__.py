@@ -5,6 +5,13 @@ from typing import List
 def max_profit(prices: List[int]) -> int:
     """
     Find the maximum profit that can be made from buying and selling a stock once
+
+    Time complexity is O(n) as we iterate through each price to get the maximum profit
+    Space complexity is O(1) as no extra space is used
+    Args:
+        prices(list): list of prices
+    Returns:
+        int: maximum profit that can be made
     """
     if prices is None or len(prices) < 2:
         return 0
@@ -12,11 +19,9 @@ def max_profit(prices: List[int]) -> int:
     start_price = prices[0]
     current_max_profit = 0
 
-    for price in prices:
-        if price < start_price:
-            start_price = price
-        elif price - start_price > current_max_profit:
-            current_max_profit = price - start_price
+    for price in prices[1:]:
+        start_price = min(start_price, price)
+        current_max_profit = max(current_max_profit, price - start_price)
 
     return current_max_profit
 
@@ -28,13 +33,14 @@ def max_profit_two_pointers(prices: List[int]) -> int:
     Space: O(1), no extra memory is used
     Time: O(n), where n is the size of the input list & we iterate through the list only once
     """
-    if prices is None or len(prices) < 2:
+    number_of_prices = len(prices)
+    if prices is None or number_of_prices < 2:
         return 0
 
     left, right = 0, 1
     current_max_profit = 0
 
-    while right < len(prices):
+    while right < number_of_prices:
         low = prices[left]
         high = prices[right]
 
