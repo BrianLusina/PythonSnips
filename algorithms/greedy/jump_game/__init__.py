@@ -10,15 +10,13 @@ def can_jump(nums: List[int]) -> bool:
         bool: True if can jump to the last index, False otherwise
     """
 
-    current_position = nums[0]
+    max_reach = 0
 
-    for idx in range(1, len(nums)):
-        if current_position == 0:
+    for i in range(len(nums)):
+        if i > max_reach:
             return False
 
-        current_position -= 1
-
-        current_position = max(current_position, nums[idx])
+        max_reach = max(max_reach, i + nums[i])
 
     return True
 
