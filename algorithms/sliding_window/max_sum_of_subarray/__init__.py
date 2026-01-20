@@ -10,7 +10,7 @@ def max_sum_subarray(nums: List[int], k: int) -> int:
 
     start = 0
     state = 0
-    max_sum = float('-inf')
+    max_sum = float("-inf")
 
     for end in range(n):
         state += nums[end]

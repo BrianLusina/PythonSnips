@@ -912,3 +912,24 @@ class BinaryTree(Tree):
             camera_count[0] += 1
 
         return camera_count[0]
+
+    def invert_tree(self) -> Optional[BinaryTreeNode]:
+        """
+        Inverts this binary tree by swapping each node's left and right subtrees thus creating a mirror image of the
+        original tree
+        """
+        if not self.root:
+            return self.root
+
+        def invert_tree_helper(
+            node: Optional[BinaryTreeNode],
+        ) -> Optional[BinaryTreeNode]:
+            if not node:
+                return node
+
+            inverted_left = invert_tree_helper(node.left)
+            inverted_right = invert_tree_helper(node.right)
+            node.left, node.right = inverted_right, inverted_left
+            return node
+
+        return invert_tree_helper(self.root)

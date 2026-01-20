@@ -391,3 +391,65 @@ Constraints:
 ![Example 1](./images/examples/minimum_camera_cover_binary_tree_example_1.png)
 ![Example 2](./images/examples/minimum_camera_cover_binary_tree_example_2.png)
 ![Example 3](./images/examples/minimum_camera_cover_binary_tree_example_3.png)
+
+---
+
+## Invert Binary Tree
+
+Given the root node of a binary tree, transform the tree by swapping each node’s left and right subtrees, thus creating
+a mirror image of the original tree. Return the root of the transformed tree.
+
+### Constraints
+
+- 0 <= `Number of nodes in the tree` <= 100
+- -1000 <= `node.value` <= 1000
+
+### Examples
+
+![Example 1](./images/examples/mirror_binary_tree_example_1.png)
+![Example 2](./images/examples/mirror_binary_tree_example_2.png)
+![Example 3](./images/examples/mirror_binary_tree_example_3.png)
+
+### Solution
+
+For this solution, we do a post-order (left, right, parent) traversal of the binary tree. The algorithm is as follows:
+
+- Perform post-order traversal on the left child of the root node.
+- Perform post-order traversal on the right child of the root node.
+- Swap the left and right children of the root node.
+
+Since we perform a depth-first search traversal, the children of any node are already mirrored even before we return the
+node itself.
+
+Let’s look at an example below:
+
+> Note: In this example, the node at the top of the stack is the current node.
+
+![Solution 1](./images/solutions/mirror_binary_tree_solution_1.png)
+![Solution 2](./images/solutions/mirror_binary_tree_solution_2.png)
+![Solution 3](./images/solutions/mirror_binary_tree_solution_3.png)
+![Solution 4](./images/solutions/mirror_binary_tree_solution_4.png)
+![Solution 5](./images/solutions/mirror_binary_tree_solution_5.png)
+![Solution 6](./images/solutions/mirror_binary_tree_solution_6.png)
+![Solution 7](./images/solutions/mirror_binary_tree_solution_7.png)
+![Solution 8](./images/solutions/mirror_binary_tree_solution_8.png)
+![Solution 9](./images/solutions/mirror_binary_tree_solution_9.png)
+![Solution 10](./images/solutions/mirror_binary_tree_solution_10.png)
+![Solution 11](./images/solutions/mirror_binary_tree_solution_11.png)
+![Solution 12](./images/solutions/mirror_binary_tree_solution_12.png)
+![Solution 13](./images/solutions/mirror_binary_tree_solution_13.png)
+![Solution 14](./images/solutions/mirror_binary_tree_solution_14.png)
+![Solution 15](./images/solutions/mirror_binary_tree_solution_15.png)
+![Solution 16](./images/solutions/mirror_binary_tree_solution_16.png)
+
+#### Time Complexity
+
+The time complexity of this solution is linear O(n), where n is the number of nodes in the tree.
+
+> Note:  Every subtree needs to be mirrored, so we visit every node once. Because of that, the runtime complexity is O(n).
+
+#### Space Complexity
+
+The space complexity of this solution is O(h), where h is the height of the tree. This is because our recursive
+algorithm uses space on the call stack, which can grow to the height of the binary tree. The complexity will be O(log(n))
+for a balanced tree and O(n) for a degenerate tree.
