@@ -1,6 +1,6 @@
 from typing import List, Optional, Any
 from datastructures.trees.binary.node import BinaryTreeNode
-from queue import Queue
+from collections import deque
 from itertools import chain
 
 
@@ -12,31 +12,30 @@ def create_tree_from_nodes(nodes: List[Any]) -> Optional[BinaryTreeNode]:
     Returns:
         Optional[BinaryTreeNode]: The root of the created tree
     """
-    if len(nodes) == 0:
+    if not nodes or nodes[0] is None:
         return None
 
     root = BinaryTreeNode(nodes[0])
 
-    queue: Queue[BinaryTreeNode] = Queue()
-    queue.put(root)
+    queue = deque([root])
 
     i = 1
     while i < len(nodes):
         # Get the next node from the queue
-        curr = queue.get()
+        curr = queue.popleft()
 
         # If the node is not None, create a new TreeNode object for its left child,
         # set it as the left child of the current node, and add it to the queue
         if nodes[i] is not None:
             curr.left = BinaryTreeNode(nodes[i])
-            queue.put(curr.left)
+            queue.append(curr.left)
 
         i += 1
         # If there are more nodes in the list and the next node is not None, create a new BinaryTreeNode for its
         # right child, set it as the right child of the current node, and add it to the queue
         if i < len(nodes) and nodes[i] is not None:
             curr.right = BinaryTreeNode(nodes[i])
-            queue.put(curr.right)
+            queue.append(curr.right)
 
         i += 1
 
