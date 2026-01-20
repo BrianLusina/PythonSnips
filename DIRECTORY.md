@@ -145,8 +145,12 @@
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
+    * Minimum Refuel Stops
+      * [Test Min Refueling Stops](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/minimum_refuel_stops/test_min_refueling_stops.py)
     * Spread Stones
       * [Test Minimum Moves To Spread Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/spread_stones/test_minimum_moves_to_spread_stones.py)
+    * Two City Scheduling
+      * [Test Two City Scheduling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/two_city_scheduling/test_two_city_scheduling.py)
   * Heap
     * Kclosestelements
       * [Test Find K Closest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/kclosestelements/test_find_k_closest_elements.py)
