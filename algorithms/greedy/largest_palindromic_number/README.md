@@ -60,7 +60,7 @@ Let’s review the algorithm to reach the solution:
 
 ### Time Complexity
 
-The time complexity of the solution is O(n), where n is the length of the nums string.
+The time complexity of the solution is O(n), where n is the length of the num string.
 
 ### Space Complexity
 
