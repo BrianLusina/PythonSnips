@@ -71,6 +71,8 @@
       * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
     * Longest Common Subsequence
       * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
+    * Maximal Square
+      * [Test Maximal Square](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/maximal_square/test_maximal_square.py)
     * Min Distance
       * [Test Min Distance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/min_distance/test_min_distance.py)
     * Min Path Sum
