@@ -141,6 +141,8 @@
       * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/gas_stations/test_gas_stations.py)
     * Jump Game
       * [Test Jump Game](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/jump_game/test_jump_game.py)
+    * Largest Palindromic Number
+      * [Test Largest Palindromic Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/largest_palindromic_number/test_largest_palindromic_number.py)
     * Majority Element
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
