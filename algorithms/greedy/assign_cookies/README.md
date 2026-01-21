@@ -11,7 +11,7 @@ Your goal is to maximize the number of your content children and output the maxi
 
 - 1 <= greed.length <= 3 * 104
 - 0 <= cookies.length <= 3 * 104
-- 1 <= greed[i], cookies[j] <= 231 - 1
+- 1 <= greed[i], cookies[j] <= 2^31 - 1
 
 ## Examples
 
