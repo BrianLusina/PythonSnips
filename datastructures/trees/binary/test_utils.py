@@ -6,8 +6,13 @@ from datastructures.trees.binary.utils import (
     lowest_common_ancestor_ptr,
     connect_all_siblings,
     connect_all_siblings_ptr,
+    mirror_binary_tree,
 )
 from datastructures.trees.binary.node import BinaryTreeNode
+from datastructures.trees.binary.tree.tree_utils import (
+    create_tree_from_nodes,
+    level_order_traversal,
+)
 
 
 class LowestCommonAncestorTestCase(unittest.TestCase):
@@ -220,6 +225,26 @@ class ConnectAllSiblingsTestCase(unittest.TestCase):
             self.assertEqual(current.data, expected_val)
             current = current.next
         self.assertIsNone(current)
+
+
+MIRROR_BINARY_TREE_TEST_CASES = [
+    ([100, 50, 200, 25, 75, 125, 350], [100, 200, 50, 350, 125, 75, 25]),
+    ([1, 2, None, 3, None, 4], [1, None, 2, None, 3, None, 4]),
+    ([25, 50, 75, 100, 125, 350], [25, 75, 50, None, 350, 125, 100]),
+    ([100], [100]),
+    ([4, 2, 7, 1, 3, 6, 9], [4, 7, 2, 9, 6, 3, 1]),
+    ([], []),
+    ([2, 1, 3], [2, 3, 1]),
+]
+
+
+class MirrorBinaryTreeTestCase(unittest.TestCase):
+    @parameterized.expand(MIRROR_BINARY_TREE_TEST_CASES)
+    def test_mirror_binary_tree(self, data: List[int], expected: List[int]):
+        root = create_tree_from_nodes(data)
+        actual = mirror_binary_tree(root)
+        actual_data = level_order_traversal(actual)
+        self.assertEqual(expected, actual_data)
 
 
 if __name__ == "__main__":

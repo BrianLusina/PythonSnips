@@ -126,5 +126,3 @@ Output: 6
 - Arrays
 - Dynamic Programming
 - Greedy
-
-

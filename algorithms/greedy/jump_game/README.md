@@ -25,7 +25,9 @@ to reach the last index.
 ## Solutions
 
 1. [Naive Approach](#naive-approach)
-1. [Optimized Approach using Greedy Pattern](#optimized-approach-using-greedy-pattern)
+2. [Optimized Approach using Greedy Pattern](#optimized-approach-using-greedy-pattern)
+   - [Variation 1](#variation-1)
+   - [Variation 2](#variation-2)
 
 ### Naive Approach
 
@@ -39,6 +41,8 @@ redundant or dead-end routes. The time complexity of this backtracking approach 
 for large inputs.
 
 ### Optimized Approach using Greedy Pattern
+
+#### Variation 1
 
 An optimized way to solve this problem is using a greedy approach that works in reverse. Instead of trying every 
 possible forward jump, we flip the logic: start from the end and ask, “Can we reach this position from any earlier index?”
@@ -65,7 +69,7 @@ target remains beyond index 0, then no path exists from the start to the end, an
 ![Solution 10](./images/solutions/jump_game_1_solution_10.png)
 ![Solution 11](./images/solutions/jump_game_1_solution_11.png)
 
-#### Algorithm
+###### Algorithm
 
 1. We begin by setting the last index of the array as our initial target using the variable `target = len(nums) - 1`. This 
     target represents the position we are trying to reach, starting from the end and working backward. By initializing the 
@@ -86,13 +90,52 @@ target remains beyond index 0, then no path exists from the start to the end, an
    - Or reach the start without ever being able to update the target to 0, which means there is no valid path. In this 
      case, we return FALSE.
 
-#### Solution Summary
+###### Solution Summary
 
 1. Set the last index of the array as the target index.
 2. Traverse the array backward and verify if we can reach the target index from any of the previous indexes. 
    - If we can reach it, we update the target index with the index that allows us to jump to the target index. 
    - We repeat this process until we’ve traversed the entire array.
 3. Return TRUE if, through this process, we can reach the first index of the array. Otherwise, return FALSE.
+
+#### Variation 2
+
+Think of each index as a platform. The value at each platform tells you the maximum distance you can jump from there.
+You need to figure out: can you reach the goal?
+
+![Solution 2.1](./images/solutions/jump_game_1_solution_2.1.png)
+
+The question isn't about how to get there - just whether it's possible.
+
+We don't need to track every possible path. We just need to track the farthest position we can reach so far.
+
+![Solution 2.2](./images/solutions/jump_game_1_solution_2.2.png)
+
+As we iterate through the array:
+- At each position i, update max_reach = max(max_reach, i + nums[i])
+- If i > max_reach, we're stuck - return false
+- If we finish the loop, return true
+
+- Let's trace through nums = [2, 3, 1, 1, 4]:
+
+![Solution 2.3](./images/solutions/jump_game_1_solution_2.3.png)
+
+i=0: Can we reach index 0? Yes (we start here). From here, we can reach up to index 2. max_reach = 2.
+
+![Solution 2.4](./images/solutions/jump_game_1_solution_2.4.png)
+
+i=1: Can we reach index 1? Yes (1 ≤ 2). From here, we can reach up to index 4! max_reach = 4.
+
+![Solution 2.5](./images/solutions/jump_game_1_solution_2.5.png)
+
+i=2: Can we reach index 2? Yes (2 ≤ 4). max_reach stays 4.
+We continue... max_reach = 4 >= n-1 = 4. Answer: true!
+
+What if we can't reach the end? Consider nums = [3, 2, 1, 0, 4]:
+
+![Solution 2.6](./images/solutions/jump_game_1_solution_2.6.png)
+
+At index 3, nums[3] = 0 means we can't jump anywhere. Since max_reach = 3 and we need to reach index 4, we're stuck.
 
 #### Time Complexity
 
@@ -102,7 +145,6 @@ elements in the array.
 #### Space Complexity
 
 The space complexity of the above solution is O(1), because we do not use any extra space.
-
 
 ---
 

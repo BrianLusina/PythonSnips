@@ -133,6 +133,8 @@
     * Valid Path
       * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
   * Greedy
+    * Assign Cookies
+      * [Test Assign Cookies](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/assign_cookies/test_assign_cookies.py)
     * Boats
       * [Test Boats To Save People](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/boats/test_boats_to_save_people.py)
     * Gas Stations
@@ -143,8 +145,12 @@
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
+    * Minimum Refuel Stops
+      * [Test Min Refueling Stops](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/minimum_refuel_stops/test_min_refueling_stops.py)
     * Spread Stones
       * [Test Minimum Moves To Spread Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/spread_stones/test_minimum_moves_to_spread_stones.py)
+    * Two City Scheduling
+      * [Test Two City Scheduling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/two_city_scheduling/test_two_city_scheduling.py)
   * Heap
     * Kclosestelements
       * [Test Find K Closest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/kclosestelements/test_find_k_closest_elements.py)
@@ -231,6 +237,10 @@
       * [Test Longest Substring K Repeating Chars](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_substring_with_k_repeating_chars/test_longest_substring_k_repeating_chars.py)
     * Longest Substring Without Repeating Characters
       * [Test Longest Substring Without Repeating Characters](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_substring_without_repeating_characters/test_longest_substring_without_repeating_characters.py)
+    * Max Points From Cards
+      * [Test Max Points From Cards](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_points_from_cards/test_max_points_from_cards.py)
+    * Max Sum Of Subarray
+      * [Test Max Sum Sub Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_sum_of_subarray/test_max_sum_sub_array.py)
     * Repeated Dna Sequences
       * [Test Repeated Dna Sequences](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/repeated_dna_sequences/test_repeated_dna_sequences.py)
   * Sorting
@@ -482,9 +492,11 @@
         * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
+        * [Test Binary Tree Invert Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_invert_tree.py)
         * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Serialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_serialize.py)
         * [Test Binary Tree Visible Nodes](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_visible_nodes.py)
+        * [Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/tree_utils.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/utils.py)
     * Btree
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/btree/node.py)

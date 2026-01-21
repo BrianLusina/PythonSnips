@@ -1,6 +1,9 @@
 import unittest
 
-from . import max_profit, max_profit_two_pointers
+from algorithms.dynamic_programming.buy_sell_stock import (
+    max_profit,
+    max_profit_two_pointers,
+)
 
 
 class MaxProfitTestCases(unittest.TestCase):

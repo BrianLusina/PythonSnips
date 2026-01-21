@@ -162,3 +162,28 @@ def connect_all_siblings_ptr(
 
     # Return the root of the modified tree
     return root
+
+
+def mirror_binary_tree(root: Optional[BinaryTreeNode]) -> Optional[BinaryTreeNode]:
+    """
+    Inverts a binary tree such that the left subtree becomes the right and vice versa.
+    Args:
+        root(BinaryTreeNode): Root of the binary tree
+    Returns:
+        BinaryTreeNode: root of the inverted binary tree
+    """
+    if not root:
+        return None
+
+    # Perform a post order traversal of the tree, starting from the left subtree and then the right subtree and then
+    # the current node
+    if root.left:
+        mirror_binary_tree(root.left)
+
+    if root.right:
+        mirror_binary_tree(root.right)
+
+    # Swap left and right at the current level
+    root.left, root.right = root.right, root.left
+
+    return root
