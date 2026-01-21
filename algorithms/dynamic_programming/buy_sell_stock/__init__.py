@@ -33,20 +33,12 @@ def max_profit_two_pointers(prices: List[int]) -> int:
     Space: O(1), no extra memory is used
     Time: O(n), where n is the size of the input list & we iterate through the list only once
     """
-def max_profit_two_pointers(prices: List[int]) -> int:
-    """
-    Variation of max_profit using 2 pointers
-    Complexity Analysis:
-    Space: O(1), no extra memory is used
-    Time: O(n), where n is the size of the input list & we iterate through the list only once
-    """
     if prices is None or len(prices) < 2:
         return 0
 
     number_of_prices = len(prices)
 
     left, right = 0, 1
-        return 0
 
     left, right = 0, 1
     current_max_profit = 0
