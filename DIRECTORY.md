@@ -67,6 +67,8 @@
       * [Test Max Duffle Bag Value](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/duffle_bug_value/test_max_duffle_bag_value.py)
     * House Robber
       * [Test House Robber](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/house_robber/test_house_robber.py)
+    * Interleaving String
+      * [Test Interleaving String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/interleaving_string/test_interleaving_string.py)
     * Knapsack 01
       * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
     * Longest Common Subsequence
