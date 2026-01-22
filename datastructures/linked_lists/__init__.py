@@ -2,6 +2,12 @@ from typing import Any, Union, Optional, Generic, TypeVar, List, Tuple
 from abc import ABCMeta, abstractmethod
 
 from datastructures.linked_lists.exceptions import EmptyLinkedList
+from datastructures.linked_lists.linked_list_utils import (
+    has_cycle,
+    detect_node_with_cycle,
+    cycle_length,
+    remove_cycle,
+)
 
 T = TypeVar("T")
 
@@ -379,14 +385,7 @@ class LinkedList(Generic[T]):
         :return: True if there is a cycle, False otherwise
         :rtype: bool
         """
-        fast_pointer = slow_pointer = self.head
-        while fast_pointer and slow_pointer and fast_pointer.next:
-            fast_pointer = fast_pointer.next.next
-            slow_pointer = slow_pointer.next
-
-            if slow_pointer == fast_pointer:
-                return True
-        return False
+        return has_cycle(self.head)
 
     def cycle_length(self) -> int:
         """
@@ -395,105 +394,25 @@ class LinkedList(Generic[T]):
         Returns:
             int: length of the cycle or number of nodes in the cycle
         """
-        if not self.head:
-            return 0
-        slow_pointer = fast_pointer = self.head
-
-        while fast_pointer and fast_pointer.next:
-            slow_pointer = slow_pointer.next
-            fast_pointer = fast_pointer.next.next
-
-            # Cycle detected
-            if slow_pointer is fast_pointer:
-                length = 1
-                # Move slow pointer by one step to start counting
-                slow_pointer = slow_pointer.next
-
-                # Continue moving the slow pointer until it meets the fast pointer again
-                while slow_pointer != fast_pointer:
-                    length += 1
-                    slow_pointer = slow_pointer.next
-
-                return length
-
-        return 0
+        return cycle_length(self.head)
 
     def detect_node_with_cycle(self) -> Optional[Node]:
         """
         Detects the node with a cycle and returns it
         """
-        if not self.has_cycle():
-            return None
-        else:
-            slow_pointer = fast_pointer = self.head
+        return detect_node_with_cycle(self.head)
 
-            while fast_pointer and slow_pointer and fast_pointer.next:
-                fast_pointer = fast_pointer.next.next
-                slow_pointer = slow_pointer.next
-
-                if slow_pointer == fast_pointer:
-                    break
-            else:
-                return None
-
-            while self.head != slow_pointer:
-                slow_pointer = slow_pointer.next
-                self.head = self.head.next
-            return self.head
-
-    def remove_cycle(self):
+    def remove_cycle(self) -> Optional[Node]:
         """
         Removes cycle if there exists. This will use the same concept as has_cycle method to check if there is a loop
         and remove the cycle
-        if one is found.
-        1) Detect Loop using Floyd’s Cycle detection algo and get the pointer to a loop node.
-        2) Count the number of nodes in loop. Let the count be k.
-        3) Fix one pointer to the head and another to kth node from head.
-        4) Move both pointers at the same pace, they will meet at loop starting node.
-        5) Get pointer to the last node of loop and make next of it as NULL.
-        :return: True if the cycle has been removed, False otherwise
-        :rtype: bool
+        Returns:
+            Node: head node with cycle removed
         """
-        fast_pointer = slow_pointer = self.head
+        if not self.head or not self.head.next:
+            return self.head
 
-        while fast_pointer and slow_pointer and fast_pointer.next:
-            fast_pointer = fast_pointer.next.next
-            slow_pointer = slow_pointer.next
-
-            if slow_pointer == fast_pointer:
-                pointer_1 = pointer_2 = slow_pointer
-
-                # Count the number of nodes in loop
-                k = 1
-                while pointer_1.next != pointer_2:
-                    pointer_1 = pointer_1.next
-                    k += 1
-
-            # Fix one pointer to head
-            pointer_1 = self.head
-
-            # And the other pointer to k nodes after head
-            pointer_2 = self.head
-            for _ in range(k):
-                pointer_2 = pointer_2.next
-
-            # Move both pointers at the same place
-            # they will meet at loop starting node
-            while pointer_2 != pointer_1:
-                pointer_1 = pointer_1.next
-                pointer_2 = pointer_2.next
-
-            # Get pointer to the last node
-            pointer_2 = pointer_2.next
-            while pointer_2.next != pointer_1:
-                pointer_2 = pointer_2.next
-
-            # Set the next node of the loop ending node
-            # to fix the loop
-            pointer_2.next = None
-            return True
-
-        return False
+        return remove_cycle(self.head)
 
     @abstractmethod
     def alternate_split(self):
