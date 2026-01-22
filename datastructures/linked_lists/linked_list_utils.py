@@ -36,7 +36,7 @@ def has_cycle(
     if not head or not head.next:
         return False
 
-    fast_pointer, slow_pointer = head
+    fast_pointer, slow_pointer = head, head
     while fast_pointer and fast_pointer.next:
         slow_pointer = slow_pointer.next
         fast_pointer = fast_pointer.next.next
@@ -45,8 +45,7 @@ def has_cycle(
             # do something after detecting cycle passing in the two nodes
             if func:
                 func(slow_pointer, fast_pointer)
-            else:
-                return True
+            return True
     return False
 
 
@@ -74,7 +73,7 @@ def cycle_length(head: Optional[Node]) -> int:
             slow_pointer = slow_pointer.next
 
             # Continue moving the slow pointer until it meets the fast pointer again
-            while slow_pointer != fast_pointer:
+            while slow_pointer is not fast_pointer:
                 length += 1
                 slow_pointer = slow_pointer.next
 
@@ -102,7 +101,7 @@ def detect_node_with_cycle(head: Optional[Node]) -> Optional[Node]:
         return None
 
     current = head
-    while current != slow_pointer:
+    while current is not slow_pointer:
         slow_pointer = slow_pointer.next
         current = current.next
     return current
@@ -129,10 +128,48 @@ def remove_cycle(head: Optional[Node]) -> Optional[Node]:
     fixed_pointer = node_with_cycle
 
     # Move the pointer on this current until the next pointer reaches the fixed pointer
-    while current.next != fixed_pointer:
+    while current.next is not fixed_pointer:
         current = current.next
 
     # Remove the cycle by setting the next to None
     current.next = None
 
     return head
+
+def remove_nth_from_end(head: Optional[Node], n: int) -> Optional[Node]:
+    """
+    Removes the nth node from a linked list from the head given the head of the linked list and the position from the
+    end of the linked list to remove.
+    Args:
+        head(Node): head node of linkedlist
+        n(int): the position of the last node from the tail in the linked list to remove
+    Returns:
+        Node: head node of modified linked list
+    """
+    if not head:
+        return head
+
+    # Initialize two pointers, both starting at the head node
+    fast = slow = head
+
+    # Move the fast pointer until it reaches position n in the linked list
+    for _ in range(n):
+        fast = fast.next
+
+    # If there is no node at this pointers position, then we have reached the end of the linked list and we return the
+    # next node from the head. This means, we are removing the head node
+    if not fast:
+        return head.next
+
+    # Move the fast pointer, until it reaches the end of the linked list and until the slow pointer reaches n nodes from
+    # the end of the linked list
+    while fast.next:
+        fast = fast.next
+        slow = slow.next
+
+    # Set the next pointer of the node at the slow pointer's position to the next node's next pointer, removing the node in the middle
+    slow.next = slow.next.next
+
+    # Return the modified head node of the linked list with the node removed
+    return head
+
