@@ -388,12 +388,42 @@ class LinkedList(Generic[T]):
                 return True
         return False
 
-    def detect_node_with_cycle(self):
+    def cycle_length(self) -> int:
+        """
+        Determines the length of the cycle in a linked list if it has one. The length of the cycle is the number
+        of nodes that are 'caught' in the cycle
+        Returns:
+            int: length of the cycle or number of nodes in the cycle
+        """
+        if not self.head:
+            return 0
+        slow_pointer = fast_pointer = self.head
+
+        while fast_pointer and fast_pointer.next:
+            slow_pointer = slow_pointer.next
+            fast_pointer = fast_pointer.next.next
+
+            # Cycle detected
+            if slow_pointer is fast_pointer:
+                length = 1
+                # Move slow pointer by one step to start counting
+                slow_pointer = slow_pointer.next
+
+                # Continue moving the slow pointer until it meets the fast pointer again
+                while slow_pointer != fast_pointer:
+                    length += 1
+                    slow_pointer = slow_pointer.next
+
+                return length
+
+        return 0
+
+    def detect_node_with_cycle(self) -> Optional[Node]:
         """
         Detects the node with a cycle and returns it
         """
         if not self.has_cycle():
-            return False
+            return None
         else:
             slow_pointer = fast_pointer = self.head
 
