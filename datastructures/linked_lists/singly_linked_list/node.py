@@ -1,9 +1,9 @@
-from .. import Node
+from datastructures.linked_lists import Node
 
 
 class SingleNode(Node):
     """
-    SingleNode implementation in a single linked list
+    SingleNode implementation in a single-linked list
     """
 
     def __init__(self, value, next_=None):
