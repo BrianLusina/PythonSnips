@@ -1,5 +1,5 @@
 import unittest
-from . import CircularLinkedList
+from datastructures.linked_lists.circular import CircularLinkedList
 
 
 class CircularLinkedListAppendTestCase(unittest.TestCase):
@@ -65,10 +65,13 @@ class CircularLinkedListSplitListTestCase(unittest.TestCase):
         for d in data:
             circular_linked_list.append(d)
 
-        first_list, second_list = circular_linked_list.split_list()
+        result = circular_linked_list.split_list()
+        self.assertIsNotNone(result)
 
-        self.assertEqual(expected[0], list(first_list))
-        self.assertEqual(expected[1], list(second_list))
+        first_list_head, second_list_head = result
+
+        self.assertEqual(expected[0], list(first_list_head))
+        self.assertEqual(expected[1], list(second_list_head))
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
-from typing import Optional, Any, Union, Tuple, Self, List
+from typing import Optional, Any, Union, Tuple, List
 
-from datastructures.linked_lists import LinkedList, Node, T
-from .node import CircularNode
+from datastructures.linked_lists import LinkedList, T
+from datastructures.linked_lists.circular.node import CircularNode
 
 
 class CircularLinkedList(LinkedList):
@@ -86,7 +86,7 @@ class CircularLinkedList(LinkedList):
     def shift(self):
         pass
 
-    def pop(self) -> Optional[Node]:
+    def pop(self) -> Optional[CircularNode]:
         pass
 
     def delete_node(self, node_: CircularNode):
@@ -183,7 +183,7 @@ class CircularLinkedList(LinkedList):
     def delete_nodes_by_key(self, key: T):
         pass
 
-    def delete_middle_node(self) -> Optional[Node]:
+    def delete_middle_node(self) -> Optional[CircularNode]:
         pass
 
     def display(self):
@@ -198,7 +198,7 @@ class CircularLinkedList(LinkedList):
     def alternate_split(self):
         pass
 
-    def split_list(self) -> Optional[Tuple[Self, Optional[Self]]]:
+    def split_list(self) -> Optional[Tuple[CircularNode, Optional[CircularNode]]]:
         """
         Splits a circular linked list into two halves and returns the two halves in a tuple. If the size is 0, i.e. no
         nodes are in this linked list, then it returns None. If the size is 1, then the first portion of the tuple, at
@@ -233,30 +233,30 @@ class CircularLinkedList(LinkedList):
 
         second_list.append(current.data)
 
-        return self, second_list
+        return self.head, second_list
 
     def is_palindrome(self) -> bool:
         pass
 
-    def pairwise_swap(self) -> Node:
+    def pairwise_swap(self) -> CircularNode:
         pass
 
-    def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> Node:
+    def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> CircularNode:
         pass
 
-    def move_to_front(self, node: Node):
+    def move_to_front(self, node: CircularNode):
         pass
 
     def move_tail_to_head(self):
         pass
 
-    def partition(self, data: Any) -> Union[Node, None]:
+    def partition(self, data: Any) -> Union[CircularNode, None]:
         pass
 
     def remove_tail(self):
         pass
 
-    def remove_duplicates(self) -> Optional[Node]:
+    def remove_duplicates(self) -> Optional[CircularNode]:
         pass
 
     def rotate(self, k: int):
@@ -265,7 +265,7 @@ class CircularLinkedList(LinkedList):
     def reverse_groups(self, k: int):
         pass
 
-    def odd_even_list(self) -> Optional[Node]:
+    def odd_even_list(self) -> Optional[CircularNode]:
         pass
 
     def maximum_pair_sum(self) -> int:
