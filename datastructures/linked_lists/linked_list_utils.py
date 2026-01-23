@@ -199,7 +199,7 @@ def sum_of_linked_lists(
         head_one(Node): head node of the first linked list
         head_two(Node): head node of the second linked list
     Returns:
-        Node: head node of newly crewted linked list
+        Node: head node of newly created linked list
     """
     if not head_one and not head_two:
         return None
