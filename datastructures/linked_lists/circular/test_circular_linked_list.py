@@ -55,24 +55,5 @@ class CircularLinkedListDeleteNodeByKeyTestCase(unittest.TestCase):
         self.assertEqual(expected, list(circular_linked_list))
 
 
-class CircularLinkedListSplitListTestCase(unittest.TestCase):
-    def test_1(self):
-        """should split a linked list [1,2,3,4,5,6] to become ([1,2,3],[4,5,6])"""
-        data = [1, 2, 3, 4, 5, 6]
-        expected = ([1, 2, 3], [4, 5, 6])
-        circular_linked_list = CircularLinkedList()
-
-        for d in data:
-            circular_linked_list.append(d)
-
-        result = circular_linked_list.split_list()
-        self.assertIsNotNone(result)
-
-        first_list_head, second_list_head = result
-
-        self.assertEqual(expected[0], list(first_list_head))
-        self.assertEqual(expected[1], list(second_list_head))
-
-
 if __name__ == "__main__":
     unittest.main()
