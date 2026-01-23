@@ -412,6 +412,7 @@
     * Circular
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/circular/node.py)
       * [Test Circular Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/circular/test_circular_linked_list.py)
+      * [Test Circular Linked List Split](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/circular/test_circular_linked_list_split.py)
     * Doubly Linked List
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/node.py)
       * [Test Doubly Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/doubly_linked_list/test_doubly_linked_list.py)
