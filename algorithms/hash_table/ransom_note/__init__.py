@@ -29,9 +29,6 @@ def can_construct(ransom_note: str, magazine: str) -> bool:
     # Count the number of occurrences of each letter in the magazine. This will be used to keep track of the number of
     # letters we can use when constructing the ransom note
     occurrences = Counter(magazine)
-    # Count the number of letters in the ransom note. This will be used to track how many letters are left when constructing
-    # the ransom note from the letters in the magazine
-    count = len(ransom_note)
 
     # Iterate through each letter in the ransom note to check if it is in the magazine
     for letter in ransom_note:
@@ -44,11 +41,8 @@ def can_construct(ransom_note: str, magazine: str) -> bool:
         # if the letter is in the occurrences, we decrease the count of the occurrences of the letter and the number
         # of letters left to construct the ransom note
         occurrences[letter] -= 1
-        count -= 1
 
-    # If we have no letters left, then we can construct the ransom note from the letters, else we can't so, we check to
-    # see if the count equals 0
-    return count == 0
+    return True
 
 
 def can_construct_2(ransom_note: str, magazine: str) -> bool:
@@ -66,7 +60,6 @@ def can_construct_2(ransom_note: str, magazine: str) -> bool:
             frequency[char] = 1
 
     for char in ransom_note:
-
         # if the character is not in the hash map or its count is 0, return False
         if char not in frequency or frequency[char] == 0:
             return False
