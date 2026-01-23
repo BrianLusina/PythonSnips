@@ -136,6 +136,7 @@ def remove_cycle(head: Optional[Node]) -> Optional[Node]:
 
     return head
 
+
 def remove_nth_from_end(head: Optional[Node], n: int) -> Optional[Node]:
     """
     Removes the nth node from a linked list from the head given the head of the linked list and the position from the
@@ -172,4 +173,3 @@ def remove_nth_from_end(head: Optional[Node], n: int) -> Optional[Node]:
 
     # Return the modified head node of the linked list with the node removed
     return head
-
