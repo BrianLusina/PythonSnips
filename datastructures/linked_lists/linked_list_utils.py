@@ -201,10 +201,6 @@ def sum_of_linked_lists(
     Returns:
         Node: head node of newly crewted linked list
     """
-    if not head_one and head_two:
-        return head_two
-    if not head_two and head_one:
-        return head_one
     if not head_one and not head_two:
         return None
 
