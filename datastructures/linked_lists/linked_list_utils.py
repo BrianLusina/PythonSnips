@@ -173,3 +173,60 @@ def remove_nth_from_end(head: Optional[Node], n: int) -> Optional[Node]:
 
     # Return the modified head node of the linked list with the node removed
     return head
+
+
+def sum_of_linked_lists(
+    head_one: Optional[Node], head_two: Optional[Node]
+) -> Optional[Node]:
+    """
+    Sums two linked lists together to create a new linked list. The two heads of the two linked lists provided represent
+    two non-negative integers. The digits are in reverse order and each of their nodes contains a single digit. This
+    adds the two numbers and returns the sum as a linked list. This assumes that the two numbers do not contain any
+    leading zero, except the number 0 itself.
+
+    Example:
+        Input: l1 = [2,4,3], l2 = [5,6,4]
+        Output: [7,0,8]
+        Explanation: 342 + 465 = 807.
+
+    Complexity:
+    Time: O(max(m, n)). Assume that m and n represent the lengths of the first and the second linked lists respectively,
+    the algorithm iterates at most max(m, n) times
+
+    Space: O(1). The length of the new linked list is at most max(m, n) + 1
+
+    Args:
+        head_one(Node): head node of the first linked list
+        head_two(Node): head node of the second linked list
+    Returns:
+        Node: head node of newly crewted linked list
+    """
+    if not head_one and head_two:
+        return head_two
+    if not head_two and head_one:
+        return head_one
+    if not head_one and not head_two:
+        return None
+
+    dummy_head = Node(0)
+    carry = 0
+    pointer_one, pointer_two = head_one, head_two
+    current = dummy_head
+
+    while pointer_one or pointer_two:
+        x = pointer_one.data if pointer_one else 0
+        y = pointer_two.data if pointer_two else 0
+        current_sum = carry + x + y
+        carry = current_sum // 10
+        current.next = Node(current_sum % 10)
+        current = current.next
+
+        if pointer_one:
+            pointer_one = pointer_one.next
+        if pointer_two:
+            pointer_two = pointer_two.next
+
+        if carry > 0:
+            current.next = Node(carry)
+
+    return dummy_head.next
