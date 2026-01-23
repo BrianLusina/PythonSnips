@@ -485,8 +485,8 @@ class LinkedList(Generic[T]):
         @return: Kth node from the end
         @rtype: Node
         """
-        if k < 0:
-            raise ValueError("Invalid K value")
+        if k < 1:
+            raise ValueError("K must be >= 1")
         if k > len(self):
             raise IndexError("K longer than linked list")
         fast_pointer, slow_pointer = self.head, self.head
@@ -500,7 +500,6 @@ class LinkedList(Generic[T]):
         while fast_pointer.next:
             fast_pointer = fast_pointer.next
             slow_pointer = slow_pointer.next
-
         return slow_pointer
 
     @abstractmethod
