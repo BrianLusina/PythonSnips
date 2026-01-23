@@ -272,8 +272,7 @@ class LinkedList(Generic[T]):
         :param position: Position of node to delete
         """
         if not 0 <= position <= len(self) - 1:
-            raise ValueError(f"Position ${position} out of bounds")
-
+            raise ValueError(f"Position {position} out of bounds")
         if self.head is None:
             return None
 
