@@ -57,6 +57,8 @@
       * [Test Max Profit With Fee](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/buy_sell_stock/test_max_profit_with_fee.py)
     * Climb Stairs
       * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/climb_stairs/test_climb_stairs.py)
+    * Coin Change
+      * [Test Coin Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/coin_change/test_coin_change.py)
     * Countingbits
       * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/countingbits/test_counting_bits.py)
     * Decodeways
@@ -1076,7 +1078,6 @@
     * [Test Bowling](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_bowling.py)
     * [Test Cake Is Not A Lie](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_cake_is_not_a_lie.py)
     * [Test Chess Board Cell Color](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_chess_board_cell_color.py)
-    * [Test Coin Change](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_change.py)
     * [Test Coin Flip](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_coin_flip.py)
     * [Test Count Vegetables](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_count_vegetables.py)
     * [Test Doomsday Fuel](https://github.com/BrianLusina/PythonSnips/blob/master/tests/puzzles/test_doomsday_fuel.py)
