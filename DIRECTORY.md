@@ -27,6 +27,8 @@
       * [Test Decode Message](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/decode_message/test_decode_message.py)
     * Letter Combination
       * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
+    * Optimal Account Balancing
+      * [Test Optimal Account Balancing](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/optimal_account_balancing/test_optimal_account_balancing.py)
     * Partition String
       * [Test Partition String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/partition_string/test_partition_string.py)
     * Permutations
