@@ -26,7 +26,7 @@ FIND_MINIMUM_COINS_TEST_CASES = [
 class FindMinimumCoinsTest(unittest.TestCase):
     @parameterized.expand(FIND_MINIMUM_COINS_TEST_CASES)
     def test_find_minimum_coins(
-        self, total_change: int, coins: List[int], expected: int
+        self, total_change: int, coins: List[int], expected: List[int]
     ):
         actual = find_minimum_coins(total_change, coins)
         self.assertEqual(expected, actual)
