@@ -71,7 +71,7 @@ Min(total)= -1, for n=0
 
 > Recursive tree for finding minimum number of coins for the total 5 with the coins [1,2,3]
 
-### Step by Step solution construction
+### Step-by-step solution construction
 
 The idea is to solve the problem using the top-down technique of dynamic programming. If the required total is less than
 the number that’s being evaluated, the algorithm doesn’t make any more recursive calls. Moreover, the recursive tree
