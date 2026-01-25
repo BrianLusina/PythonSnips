@@ -1,5 +1,5 @@
 from typing import Dict, Tuple
-
+from functools import lru_cache
 
 def unique_paths_math(m: int, n: int) -> int:
     """Uses math formula"""
@@ -28,6 +28,7 @@ def unique_paths_top_down(m: int, n: int) -> int:
     """
     cache: Dict[Tuple[int, int], int] = {}
 
+    @lru_cache(None)
     def unique_path_helper(row: int, col: int) -> int:
         # If already calculated, re-use those
         if (row, col) in cache:
@@ -48,28 +49,30 @@ def unique_paths_top_down(m: int, n: int) -> int:
     return unique_path_helper(m, n)
 
 
-def unique_paths_bottom_up(m: int, n: int) -> int:
+def unique_paths_bottom_up(rows: int, cols: int) -> int:
     """Uses bottom-up approach
 
-    Complexity Analysis:
-    - Time Complexity: O(m*n)
-    - Space Complexity: O(n)
+    Complexity Analysis
+
+    Time Complexity: O(m * n) where m and n are the dimensions of the grid. For both the recursive and iterative
+    solutions, we need to fill in a table of size m x n.
+
+    Space Complexity: O(m * n) where m and n are the dimensions of the grid. The recursive solution uses O(m * n) space
+    due to the call stack, while the iterative solution uses O(m * n) space for the dp table.
     """
-    row = [1] * n
+    dp = [[0] * cols for _ in range(rows)]
 
-    # go through all rows except the last one
-    for i in range(m - 1):
-        new_row = [1] * n
+    # Set base case: there is only one way to reach any cell in the first row (moving only right)
+    for r in range(cols):
+        dp[0][r] = 1
 
-        # go through every column except the right most column
-        # because the last value in every row is 1
-        # start at second to last position and
-        # keep going until we get to the beginning (reverse order)
+    # Set base case: there is only one way to reach any cell in the first column (moving only down)
+    for r in range(rows):
+        dp[r][0] = 1
 
-        for j in range(n - 2, -1, -1):
-            # right value + value below
-            new_row[j] = new_row[j + 1] + row[j]
-        # update the row
-        row = new_row
+    # Fill in the rest of the table
+    for i in range(1, rows):
+        for j in range(1, cols):
+            dp[i][j] = dp[i-1][j] + dp[i][j-1]
 
-    return row[0]
+    return dp[rows-1][cols-1]
