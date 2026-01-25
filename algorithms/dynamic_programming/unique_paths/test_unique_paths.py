@@ -1,57 +1,35 @@
 import unittest
-from . import unique_paths_top_down, unique_paths_math, unique_paths_bottom_up
+from parameterized import parameterized
+from algorithms.dynamic_programming.unique_paths import (
+    unique_paths_top_down,
+    unique_paths_math,
+    unique_paths_bottom_up,
+)
+
+UNIQUE_PATHS_TEST_CASES = [
+    (3, 7, 28),
+    (3, 2, 3),
+    (2, 2, 2),
+    (3, 3, 6),
+    (1, 1, 1),
+    (10, 10, 48620),
+    (20, 20, 35345263800),
+]
 
 
-class UniquePathsTopDownTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return 28 for m=3 and n=7"""
-        m = 3
-        n = 7
-        expected = 28
+class UniquePathsTestCase(unittest.TestCase):
+    @parameterized.expand(UNIQUE_PATHS_TEST_CASES)
+    def test_unique_paths_top_down(self, m: int, n: int, expected: int):
         actual = unique_paths_top_down(m, n)
         self.assertEqual(expected, actual)
 
-    def test_2(self):
-        """should return 3 for m=3 and n=2"""
-        m = 3
-        n = 2
-        expected = 3
-        actual = unique_paths_top_down(m, n)
-        self.assertEqual(expected, actual)
-
-
-class UniquePathsBottomUpTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return 28 for m=3 and n=7"""
-        m = 3
-        n = 7
-        expected = 28
+    @parameterized.expand(UNIQUE_PATHS_TEST_CASES)
+    def test_unique_paths_bottom_up(self, m: int, n: int, expected: int):
         actual = unique_paths_bottom_up(m, n)
         self.assertEqual(expected, actual)
 
-    def test_2(self):
-        """should return 3 for m=3 and n=2"""
-        m = 3
-        n = 2
-        expected = 3
-        actual = unique_paths_bottom_up(m, n)
-        self.assertEqual(expected, actual)
-
-
-class UniquePathsMathTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return 28 for m=3 and n=7"""
-        m = 3
-        n = 7
-        expected = 28
-        actual = unique_paths_math(m, n)
-        self.assertEqual(expected, actual)
-
-    def test_2(self):
-        """should return 3 for m=3 and n=2"""
-        m = 3
-        n = 2
-        expected = 3
+    @parameterized.expand(UNIQUE_PATHS_TEST_CASES)
+    def test_unique_paths_math(self, m: int, n: int, expected: int):
         actual = unique_paths_math(m, n)
         self.assertEqual(expected, actual)
 
