@@ -1,23 +1,34 @@
 import unittest
+from parameterized import parameterized
+from algorithms.dynamic_programming.climb_stairs import (
+    climb_stairs,
+    climb_stairs_dp_bottom_up,
+    climb_stairs_dp_top_down,
+)
 
-from . import climb_stairs
+CLIMB_STAIRS_TEST_CASES = [
+    (2, 2),
+    (3, 3),
+    (4, 5),
+    (4, 5),
+    (5, 8),
+]
 
 
 class ClimbStairsTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return 2 for n = 2"""
-        n = 2
-        expected = 2
+    @parameterized.expand(CLIMB_STAIRS_TEST_CASES)
+    def test_climb_stairs(self, n: int, expected: int):
         actual = climb_stairs(n)
-
         self.assertEqual(expected, actual)
 
-    def test_2(self):
-        """should return 3 for n = 3"""
-        n = 3
-        expected = 3
-        actual = climb_stairs(n)
+    @parameterized.expand(CLIMB_STAIRS_TEST_CASES)
+    def test_climb_stairs_dp_bottom_up(self, n: int, expected: int):
+        actual = climb_stairs_dp_bottom_up(n)
+        self.assertEqual(expected, actual)
 
+    @parameterized.expand(CLIMB_STAIRS_TEST_CASES)
+    def test_climb_stairs_dp_top_down(self, n: int, expected: int):
+        actual = climb_stairs_dp_top_down(n)
         self.assertEqual(expected, actual)
 
 
