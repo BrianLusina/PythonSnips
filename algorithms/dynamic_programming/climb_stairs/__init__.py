@@ -14,7 +14,9 @@ def climb_stairs(n: int) -> int:
 
 
 def climb_stairs_dp_bottom_up(n: int) -> int:
-    if n == 1:
+    if n < 0:
+        return 0
+    if n <= 1:
         return 1
 
     dp = [0] * (n + 1)
