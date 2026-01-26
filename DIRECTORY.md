@@ -77,6 +77,8 @@
       * [Test Knapsack 01](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/knapsack_01/test_knapsack_01.py)
     * Longest Common Subsequence
       * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
+    * Longest Increasing Subsequence
+      * [Test Longest Increasing Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_increasing_subsequence/test_longest_increasing_subsequence.py)
     * Maximal Square
       * [Test Maximal Square](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/maximal_square/test_maximal_square.py)
     * Min Distance
@@ -155,6 +157,8 @@
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
+    * Minimum Number Of Pushes
+      * [Test Minimum Number Of Pushes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/minimum_number_of_pushes/test_minimum_number_of_pushes.py)
     * Minimum Refuel Stops
       * [Test Min Refueling Stops](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/minimum_refuel_stops/test_min_refueling_stops.py)
     * Spread Stones
@@ -695,8 +699,6 @@
       * [Test Increasing Triplet](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/increasing_triplet_subsequence/test_increasing_triplet.py)
     * Kid With Greatest No Of Candies
       * [Test Kids With Greatest Candies](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/kid_with_greatest_no_of_candies/test_kids_with_greatest_candies.py)
-    * Longest Increasing Subsequence
-      * [Test Longest Increasing Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/longest_increasing_subsequence/test_longest_increasing_subsequence.py)
     * Longest Subarray Of Ones
       * [Test Longest Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/longest_subarray_of_ones/test_longest_subarray.py)
     * Lucky Numbers In A Matrix
