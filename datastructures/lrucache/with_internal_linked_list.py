@@ -11,7 +11,7 @@ class LRUCache:
         self.head = DoubleNode(0)
         self.tail = DoubleNode(0)
         self.head.next = self.tail
-        self.tail.prev = self.head
+        self.tail.previous = self.head
 
     @staticmethod
     def __delete_node(node: DoubleNode):
