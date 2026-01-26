@@ -109,7 +109,7 @@ optimal for minimizing key presses.
 - Iterate through the sorted frequency vector:
   - If the frequency of a letter is zero, break the loop as there are no more letters to process.
   - Calculate the number of pushes for each letter based on its position in the sorted list: (i / 8 + 1) * frequency[i].
-    >  the number of pushes required to obtain a single instance of it is (i / 8 + 1). Because there are 8 available
+    > the number of pushes required to obtain a single instance of it is (i / 8 + 1). Because there are 8 available
     > keys (2 − 9), for the first 8 values of i (i = 0 to i = 7) corresponding to the first 8 frequent letters,
     > (i / 8 + 1) will give 1. For the next 8 values of i (i=8 to i=15) corresponding to the next 8 frequent letters,
     > (i / 8 + 1) will give 2, and this pattern continues.
