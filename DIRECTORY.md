@@ -588,6 +588,8 @@
       * [Visitor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/visitor/visitor.py)
   * Browser History
     * [Test Browser History](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/browser_history/test_browser_history.py)
+  * Continuous Median
+    * [Test Continuous Median Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/continuous_median/test_continuous_median_handler.py)
   * Linked List
     * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/linked_list/test_linked_list.py)
   * Oop
