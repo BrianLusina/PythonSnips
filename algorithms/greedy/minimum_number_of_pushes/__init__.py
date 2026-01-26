@@ -3,11 +3,11 @@ import heapq
 
 
 def minimum_pushes_greedy_with_sorting(word: str) -> int:
-    # frequency vector of size 26 that storees the count of each letter in the word
+    # frequency vector of size 26 that stores the count of each letter in the word
     # Space complexity here is O(1) because we have a constant space for the given list, i.e. 26
     frequency = [0] * 26
 
-    # Iterate throuch each character and increment the count in the frequency at the index corresponding to char - "a"
+    # Iterate through each character and increment the count in the frequency at the index corresponding to char - "a"
     # since we know from the given constraints that we will have lowercase English letters, this will work fine
     # This is an O(n) operation, as each character in the word is iterated through
     for char in word:
