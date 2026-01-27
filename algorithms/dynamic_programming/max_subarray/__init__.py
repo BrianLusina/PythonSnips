@@ -46,3 +46,17 @@ def find_max_sub_array(array: List[int]) -> int:
             max_ending = 0
 
     return max_so_far
+
+
+def max_sub_array(nums: List[int]) -> int:
+    if not nums:
+        return 0
+
+    max_sum = current_sum = nums[0]
+
+    for num in nums[1:]:
+        current_sum = max(current_sum, 0) + num
+
+        max_sum = max(max_sum, current_sum)
+
+    return max_sum

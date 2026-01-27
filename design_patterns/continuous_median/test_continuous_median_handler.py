@@ -4,15 +4,15 @@ from parameterized import parameterized
 from design_patterns.continuous_median import ContinuousMedianHandler
 
 CONTINUOUS_MEDIA_HANDLER_TESTS = [
-    (
-        ([(1, 2), 1.50000], [(3), 2.00000]),
-    ),
+    (([(1, 2), 1.50000], [(3), 2.00000]),),
 ]
 
 
 class ContinuousMedianHandlerTestCase(unittest.TestCase):
     @parameterized.expand(CONTINUOUS_MEDIA_HANDLER_TESTS)
-    def test_continuous_median_handler(self, requests: List[Tuple[List[Tuple[int]] | int, int | float]]):
+    def test_continuous_median_handler(
+        self, requests: List[Tuple[List[Tuple[int]] | int, int | float]]
+    ):
         median_handler = ContinuousMedianHandler()
         for request in requests:
             data, expected = request

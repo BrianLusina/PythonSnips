@@ -1,6 +1,7 @@
 from typing import Dict, Optional, Any
 from datastructures.linked_lists.doubly_linked_list.node import DoubleNode
 
+
 class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity

@@ -48,8 +48,3 @@ def find_sub_arr_maxsum(array):
             maximum = 0
 
     return sub_array_dict
-
-
-if __name__ == "__main__":
-    arr = [4, -1, 2, 1, -40, 1, 2, -1, 4]
-    print(f"Sub arrays for {arr} are {find_sub_arr_maxsum(arr)}")

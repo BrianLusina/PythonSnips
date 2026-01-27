@@ -1,6 +1,7 @@
 from typing import Dict, Tuple
 from functools import lru_cache
 
+
 def unique_paths_math(m: int, n: int) -> int:
     """Uses math formula"""
     ans = 1
@@ -73,6 +74,6 @@ def unique_paths_bottom_up(rows: int, cols: int) -> int:
     # Fill in the rest of the table
     for i in range(1, rows):
         for j in range(1, cols):
-            dp[i][j] = dp[i-1][j] + dp[i][j-1]
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
 
-    return dp[rows-1][cols-1]
+    return dp[rows - 1][cols - 1]

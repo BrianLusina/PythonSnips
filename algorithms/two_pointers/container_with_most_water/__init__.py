@@ -17,6 +17,7 @@ def max_area(height: List[int]) -> int:
 
     return result
 
+
 def max_area_2(heights: List[int]) -> int:
     """
     Finds the container that can contain the most water.
