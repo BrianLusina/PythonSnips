@@ -166,6 +166,8 @@
     * Two City Scheduling
       * [Test Two City Scheduling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/two_city_scheduling/test_two_city_scheduling.py)
   * Hash Table
+    * First Unique Character
+      * [Test First Unique Character](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/first_unique_character/test_first_unique_character.py)
     * Ransom Note
       * [Test Ransom Note](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/ransom_note/test_ransom_note.py)
   * Heap
