@@ -31,12 +31,47 @@ def longest_palindromic_substring(phrase: str) -> str:
             dp[i][i + 1] = True
             result = [i, i + i]
 
-    for diff in range(2, n):
-        for i in range(n - diff):
-            j = i + diff
+    # Substrings of length greater than 2
+    for length in range(2, n):
+        for i in range(n - length):
+            j = i + length
             if phrase[i] == phrase[j] and dp[i + 1][j - 1]:
                 dp[i][j] = True
                 result = [i, j]
 
     i, j = result
     return phrase[i : j + 1]
+
+
+def longest_palindromic_substring_2(s):
+    # To store the starting and ending indexes of LPS
+    res = [0, 0]
+
+    n = len(s)
+
+    # Initialize a lookup table of dimensions len(s) * len(s)
+    dp = [[False for _ in range(n)] for _ in range(n)]
+
+    # Base case: A string with one letter is always a palindrome
+    for i in range(n):
+        dp[i][i] = True
+
+    # Base case: Substrings of length 2
+    for i in range(n - 1):
+        dp[i][i + 1] = s[i] == s[i + 1]  # Check if two characters are equal
+        if dp[i][i + 1]:
+            res = [i, i + 1]  # Update the resultant array
+
+    # Substrings of lengths greater than 2
+    for length in range(3, n + 1):
+        i = 0
+        # Checking every possible substring of any specific length
+        for j in range(length - 1, len(s)):  # Iterate over possible ending indexes
+            dp[i][j] = dp[i + 1][j - 1] and (s[i] == s[j])
+            if dp[i][j]:
+                res = [i, j]
+            i += 1
+
+    i, j = res
+    # Return the longest palindromic substring
+    return s[i : j + 1]

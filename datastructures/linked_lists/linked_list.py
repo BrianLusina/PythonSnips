@@ -581,9 +581,13 @@ class LinkedList(Generic[T]):
         raise NotImplementedError("Not yet implemented")
 
     @abstractmethod
-    def reverse_groups(self, k: int):
+    def reverse_groups(self, k: int) -> Optional[Node]:
         """
         Reverses every k groups of a linked list
+        Args:
+            k(int): number of groups to reverse
+        Returns:
+            Node: head node of linked list
         """
         raise NotImplementedError("Not yet implemented")
 

@@ -764,3 +764,157 @@ node will be processed at most one time.
 
 The space complexity of this solution is O(1), since we are using a constant number of additional variables to maintain
 the connections between the nodes during the reversal process.
+
+---
+
+# Reverse Nodes in k-Group
+
+The task is to reverse the nodes in groups of k in a given linked list, where k is a positive integer, and at most the
+length of the linked list. If any remaining nodes are not part of a group of k, they should remain in their original
+order.
+
+It is not allowed to change the values of the nodes in the linked list. Only the order of the nodes can be modified.
+
+> Note: Use only O(1) extra memory space
+
+## Constraints
+
+Let `n` bt the number of nodes in a linked list
+- 1 <= `k` <= `n` <= 500
+- 0 <= `Node.value` <= 1000
+
+## Solution
+
+- [Naive Approach](#naive-approach)
+- [Optimized Approach Using In-Place Manipulation of Linked List](#optimized-approach-using-in-place-manipulation-of-a-linked-list)
+
+### Naive Approach
+
+A naive approach would be to use another data structure—like a stack—to reverse the nodes of the linked list and then
+create a new linked list with reversed nodes. Here’s how the algorithm works:
+
+- We iterate the linked list. 
+- We push the k group of nodes to the stack. 
+- We pop all k numbers of nodes from the stack and add the nodes to a new linked list. When we do this, the stack will
+  give us the reversed nodes in the k group.
+- We repeat the above steps for every group of size k present in our linked list.
+- In the end, if there are less than k nodes left in the original linked list, we’ll point the tail of the reversed
+  linked list to the remaining nodes of the original linked list.
+
+The time complexity of this solution is O(n), since we traverse the linked list once. However, the space complexity is 
+O(n+k), where n is the length of the linked list to store the reversed elements and k is the length of the stack. If a
+linked list contains thousands of nodes, we need to allocate a lot of memory resources to solve this problem. Let’s see
+if we can use the in-place linked list manipulation pattern to reduce the space complexity of our solution.
+
+### Optimized approach using in-place manipulation of a linked list
+
+This approach optimizes space by reversing groups of k nodes directly within the linked list, treating each group as a
+mini-linked list for in-place reversal. The approach progresses by first identifying contiguous groups of exactly k nodes.
+Upon finding such a group, it reverses the nodes within the group in place, ensuring an efficient reorganization without
+using extra memory. After each reversal, the algorithm reattaches the reversed group segment back to the body of the list,
+maintaining the overall remaining structure. This process is repeated until it encounters a segment with fewer than k
+nodes.
+
+![Solution Reverse K Groups 1](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_1.png)
+![Solution Reverse K Groups 2](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_2.png)
+![Solution Reverse K Groups 3](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_3.png)
+![Solution Reverse K Groups 4](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_4.png)
+![Solution Reverse K Groups 5](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_5.png)
+![Solution Reverse K Groups 6](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_6.png)
+![Solution Reverse K Groups 7](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_7.png)
+![Solution Reverse K Groups 8](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_8.png)
+![Solution Reverse K Groups 9](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_9.png)
+![Solution Reverse K Groups 10](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_10.png)
+![Solution Reverse K Groups 11](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_11.png)
+![Solution Reverse K Groups 12](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_12.png)
+![Solution Reverse K Groups 13](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_13.png)
+![Solution Reverse K Groups 14](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_14.png)
+![Solution Reverse K Groups 15](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_15.png)
+![Solution Reverse K Groups 16](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_16.png)
+![Solution Reverse K Groups 16](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_17.png)
+![Solution Reverse K Groups 17](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_18.png)
+![Solution Reverse K Groups 18](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_19.png)
+![Solution Reverse K Groups 20](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_20.png)
+![Solution Reverse K Groups 21](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_21.png)
+![Solution Reverse K Groups 22](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_22.png)
+![Solution Reverse K Groups 23](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_23.png)
+![Solution Reverse K Groups 24](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_24.png)
+![Solution Reverse K Groups 25](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_25.png)
+![Solution Reverse K Groups 26](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_26.png)
+![Solution Reverse K Groups 27](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_27.png)
+![Solution Reverse K Groups 28](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_28.png)
+![Solution Reverse K Groups 29](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_29.png)
+![Solution Reverse K Groups 30](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_30.png)
+![Solution Reverse K Groups 31](./images/solutions/singly_linked_list_reverse_nodes_in_k_group_solution_31.png)
+
+#### Step-by-step solution construction
+
+We will first traverse the linked list and check which groups of k nodes can be reversed. Here is how the algorithm works:
+
+- We initialize a node, `dummy`, and attach it to the start of the linked list, i.e., by setting its next pointer equal to 
+  the head.
+- We set a pointer, `ptr`, equal to the `dummy` node. We will use this pointer to traverse the linked list.
+- We traverse the linked list till `ptr` becomes NULL:
+  - We initialize a pointer, tracker, to ptr. This pointer will be used to keep track of the number of nodes in the
+    current group in the linked list.
+  - We use a nested loop to try to move `tracker` _k_ nodes forward in the linked list. If tracker becomes NULL before
+    moving _k_ nodes forward, the end of the linked list has been reached and the current group can not be traversed,
+    since it contains less than k nodes. Therefore, we break out of the nested loop. Otherwise, the current group contains 
+    k nodes and tracker will point to the kth node of the current group.
+- After the completion of the nested loop, we check if `tracker` points to NULL:
+  - If it does, we’ve reached the end of the linked list. The current group contains less than k nodes and cannot be
+    reversed. Therefore, we break out of the outer loop, and the algorithm ends.
+  - If it does not, the current group contains `k` nodes and can therefore be reversed.
+
+The next step is to reverse the first group of `k` nodes. Here is how the algorithm works:
+
+- For the case where tracker does not point to NULL, we declare three pointers:
+  - current 
+  - previous 
+  - next
+- We call the `reverse_linked_list` function, which reverses the current group of nodes and updates the above three
+  pointers by returning their values.
+- After the reversal, we have a fragmented group that has been separated from the rest of the list. The `previous` pointer
+  now points to the first node of the reversed group while the `current` and `next` pointers now point to the first
+  node of the next group.
+- We break out of the outer loop to end the algorithm once the first group has been reversed.
+
+After reversing the first group of k nodes, we need to reattach it to the rest of the linked list. Here is how the
+algorithm works:
+
+- We first need to access the last node in the reversed group. The `ptr` pointer is currently pointing to the node
+  immediately before the last node of the reversed group. We initialize a new pointer, `last_node_of_reversed_group`,
+  and set it equal to the next node of `ptr`. This node now points to the last node of the reversed group.
+- We now need to link the last node of the reversed group to the first node of the linked list coming after it. The
+  `current` pointer is currently pointing to the first node of the next group. We set the next node of
+  `last_node_of_reversed_group` to the `current` pointer.
+- We now need to link the first node of the reversed group to the last node of the linked list that comes before it.
+  The `previous` node is currently pointing to the first node of the reversed group. We set the next node of `ptr` equal
+  to the previous pointer.
+- Lastly, we need to set the `ptr` pointer equal to the last node of the reversed group, which resets its position so
+  that we can attempt to reverse the next group. We do this by setting the `ptr` pointer equal to the
+  `last_node_of_reversed_group` pointer.
+- We break out of the outer loop to end the algorithm once the first reversed group has been reattached to the linked
+  list.
+
+Finally, the last step is to repeat the above process for all groups of k nodes. This is done by simply not breaking
+out of the outer loop once the first group has been reversed and attached. After the linked list has been traversed,
+i.e., ptr becomes NULL, we return the next node of dummy, which contains the reversed linked list attached to it.
+
+#### Solution Summary
+
+To recap, the solution to this problem can be divided into the following four main parts:
+
+- Check if there are `k` nodes present in the current group. 
+- If the current group contains `k` nodes, reverse it. 
+- Reattach the reversed group to the rest of the linked list. 
+- Repeat the process above until there are less than `k` nodes left in the linked list.
+
+#### Time Complexity
+
+The time complexity of this solution is O(n), where n is the number of nodes in the list
+
+#### Space complexity
+
+The space complexity of this solution is O(1), since we'll use a constant number of additional variables to maintain the
+connections between the nodes during reversal

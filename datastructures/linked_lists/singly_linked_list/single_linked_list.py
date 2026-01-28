@@ -928,11 +928,9 @@ class SinglyLinkedList(LinkedList):
     def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
         Reverses every k groups of a linked list and returns the new head node.
-        @param k: number of groups in the linked list to reverse
-        @return: new head node
         """
 
-        def reverse_list(head_node: SingleNode) -> SingleNode:
+        def reverse_list_helper(head_node: SingleNode) -> SingleNode:
             # track previous node, so we can point our next pointer to it
             previous = None
             # track node to loop through
@@ -954,25 +952,22 @@ class SinglyLinkedList(LinkedList):
             # return the new tail of the k-group which is our head
             return head_node
 
-        if k <= 1:
+        if k <= 1 or not self.head:
             return self.head
 
-        if self.head is None:
-            return None
-
-        # dummy node to simplify return
-        dummy = SingleNode(None, self.head)
+        # sentinel node to simplify return
+        dummy_head = SingleNode(None, self.head)
 
         # tail of previous k-group to fix our linked list pointers
-        tail = dummy
+        tail = dummy_head
 
-        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list,
+        # set a tracking node, to cycle through the linked list and a head of current linked list,
         # current_head
         tracking_node, current_head = self.head, self.head
 
         # while tracking node is tracking a node and hasn't reached end
         while tracking_node:
-            # set count of current group, we start with a head so count = 1
+            # set count of the current group, we start with a head so count = 1
             count = 1
             # loop until count reaches k nodes
             while count < k:
@@ -983,19 +978,19 @@ class SinglyLinkedList(LinkedList):
                     count += 1
                 else:
                     # reached end without enough nodes, return early
-                    return dummy.next
+                    return dummy_head.next
 
             # only perform below if we have enough nodes inside k-group and haven't reached end. node is currently at the
             # tail of the k-group after reversal it will be the head of the k-group
             if tracking_node:
                 # track head of the next k group
-                nxt = tracking_node.next if tracking_node else None
+                nxt = tracking_node.next
 
                 # sever the list so we can reverse it
                 tracking_node.next = None
 
                 # reverse list, which will return new tail
-                new_tail = reverse_list(current_head)
+                new_tail = reverse_list_helper(current_head)
 
                 # re-attach our new tail back to the remaining linked list
                 new_tail.next = nxt
@@ -1009,7 +1004,7 @@ class SinglyLinkedList(LinkedList):
                 tracking_node, current_head = nxt, nxt
 
         # return head
-        return dummy.next
+        return dummy_head.next
 
     def remove_tail(self):
         pass
