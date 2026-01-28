@@ -59,3 +59,36 @@ def length_of_longest_substring_2(s: str) -> int:
         max_length = max(max_length, end - start + 1)
 
     return max_length
+
+
+def longest_substring_without_duplication(s: str) -> str:
+    """
+    This returns the longest substring without duplicate or repeating characters from the given substring.
+    Args:
+         s(str): provided string
+    Returns:
+        str: substring without repeating characters
+    """
+    # creating a dictionary to store last positions of occurrence
+    seen: Dict[str, int] = {}
+    longest_substring = ""
+    # staring the initial window at 0
+    start = 0
+
+    for end, ch in enumerate(s):
+        # have we seen this element already?
+        if ch in seen:
+            # last_index is the previous appearance of character 'ch'
+            last_index = seen[ch]
+            # move the start pointer to position after the last occurrence
+            # We use max() to ensure start never moves backward (the previous occurrence might be before the current
+            # window)
+            start = max(start, last_index + 1)
+
+        # update last seen value of character
+        seen[ch] = end
+        # We check if the substring we have so far is longer than the previous substring and set that before continuing
+        # with the iteration
+        longest_substring = max(longest_substring, s[start : end + 1], key=len)
+
+    return longest_substring

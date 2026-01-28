@@ -2,10 +2,11 @@ import unittest
 from parameterized import parameterized
 from algorithms.sliding_window.length_of_longest_substring import (
     length_of_longest_substring,
-    length_of_longest_substring_2
+    length_of_longest_substring_2,
 )
 
 LENGTH_OF_LONGEST_SUBSTRING = [
+    ("clementisacap", 8),
     ("abcabcbb", 3),
     ("bbbbb", 1),
     ("pwwkew", 3),
