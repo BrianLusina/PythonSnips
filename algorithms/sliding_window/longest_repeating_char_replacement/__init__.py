@@ -1,3 +1,7 @@
+from typing import DefaultDict, Dict
+from collections import defaultdict
+
+
 def character_replacement(s: str, k: int) -> int:
     """
     finds the length of the longest substring with repeating characters after performing at most k replacements.
@@ -42,25 +46,44 @@ def character_replacement(s: str, k: int) -> int:
 
     Args:
         s(str): input string
-        k(int): number of replacements
+        k(int): number of replacements.
     Returns:
         int: length of the longest substring with repeating characters after at most k replacements
     """
-    frequency_map = {}
+    if not s:
+        return 0
+
+    frequency_map: DefaultDict[str, int] = defaultdict(int)
     result = 0
     left = 0
     max_frequency = 0
 
-    for right in range(len(s)):
-        char = s[right]
-        frequency_map[char] = 1 + frequency_map.get(char, 0)
+    for idx, char in enumerate(s):
+        frequency_map[char] += 1
         max_frequency = max(max_frequency, frequency_map[char])
 
-        while (right - left + 1) - max_frequency > k:
+        while (idx - left + 1) - max_frequency > k:
             frequency_map[s[left]] -= 1
             left += 1
 
-        window_size = right - left + 1
+        window_size = idx - left + 1
         result = max(result, window_size)
 
     return result
+
+
+def character_replacement_2(s: str, k: int) -> int:
+    state: Dict[str, int] = {}
+    max_freq = 0
+    max_length = 0
+    start = 0
+
+    for end, char in enumerate(s):
+        state[char] = state.get(char, 0) + 1
+        max_freq = max(max_freq, state[char])
+
+        if k + max_freq < end - start + 1:
+            state[s[start]] -= 1
+            start += 1
+        max_length = max(max_length, end - start + 1)
+    return max_length
