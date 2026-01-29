@@ -933,3 +933,20 @@ class BinaryTree(Tree):
             return node
 
         return invert_tree_helper(self.root)
+
+    def sum_nodes_in_range(self, low: int, high: int) -> int:
+        """
+        Finds and sums all the nodes in the range [low, high].
+        Args:
+             low (int): Lower bound.
+             high (int): Upper bound.
+        Returns:
+            int: Total sum of nodes within the range [low, high].
+        """
+
+        def dfs(node: Optional[BinaryTreeNode]):
+            if not node or node.data < low or node.data > high:
+                return 0
+            return node.data + dfs(node.left) + dfs(node.right)
+
+        return dfs(self.root)
