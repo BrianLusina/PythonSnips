@@ -950,3 +950,12 @@ class BinaryTree(Tree):
             return node.data + dfs(node.left) + dfs(node.right)
 
         return dfs(self.root)
+
+    def longest_uni_value_path(self) -> int:
+        """
+        Returns the length of the longest path, where each node in the path has the same value. This path may or may
+        not pass through the root.
+
+        The length of the path between two nodes is represented by the number of edges between them.
+        """
+        pass

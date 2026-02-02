@@ -592,7 +592,7 @@ class BinarySearchTree(BinaryTree):
         pre_order_helper(self.root)
         return data
 
-    def is_binary_search_tree(self):
+    def is_valid(self):
         """
         Checks if a binary search tree is valid. A data of None is a valid Binary Search Tree
         Complexity Analysis:
@@ -633,33 +633,47 @@ class BinarySearchTree(BinaryTree):
         # at this point we have checked all the nodes
         return True
 
-    def is_binary_search_tree_recursive(
-        self, root: BinaryTreeNode, lower_bound=-float("inf"), upper_bound=float("inf")
-    ):
+    def is_valid_recursive(self):
         """
         This uses the call stack to check if the binary search tree node is valid.
         This will work, but is vulnerable to stack overflow error
         Possible :exception: OverflowError
-        :param root: Binary search tree node to check for
-        :param lower_bound: the lower bound set arbitrarily
-        :param upper_bound: upper bound set arbitrarily
         :return: True/False if the root is a valid binary search tree
         :rtype: bool
         """
 
-        if not root:
+        if not self.root:
             return True
 
-        # if the data is out of bounds
-        if root.data > upper_bound or root.data < lower_bound:
-            return False
+        def is_valid_recursive_helper(
+            node: BinaryTreeNode, low=-float("inf"), high=float("inf")
+        ):
+            """
+            This uses the call stack to check if the binary search tree node is valid.
+            This will work, but is vulnerable to stack overflow error
+            Possible :exception: OverflowError
+            :param node: Binary search tree node to check for
+            :param low: the lower bound set arbitrarily
+            :param high: upper bound set arbitrarily
+            :return: True/False if the root is a valid binary search tree
+            :rtype: bool
+            """
 
-        return not (
-            not self.is_binary_search_tree_recursive(root.left, lower_bound, root.data)
-            or not self.is_binary_search_tree_recursive(
-                root.right, root.data, upper_bound
+            if not node:
+                return True
+
+            # if the data is out of bounds
+            if node.data >= high or node.data <= low:
+                return False
+
+            return not (
+                not is_valid_recursive_helper(node.left, low, node.data)
+                or not is_valid_recursive_helper(node.right, node.data, high)
             )
-        )
+
+        lower_bound = float("-inf")
+        upper_bound = float("inf")
+        return is_valid_recursive_helper(self.root, lower_bound, upper_bound)
 
     def search_node(self, data: T) -> bool:
         """
