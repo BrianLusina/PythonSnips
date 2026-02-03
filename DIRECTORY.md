@@ -27,6 +27,8 @@
       * [Test Decode Message](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/decode_message/test_decode_message.py)
     * Letter Combination
       * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
+    * Letter Tile Possibilities
+      * [Test Num Tile Possibilities](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_tile_possibilities/test_num_tile_possibilities.py)
     * Optimal Account Balancing
       * [Test Optimal Account Balancing](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/optimal_account_balancing/test_optimal_account_balancing.py)
     * Partition String
@@ -69,6 +71,8 @@
       * [Test Domino Tromino Tiling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/domino_tromino_tiling/test_domino_tromino_tiling.py)
     * Duffle Bug Value
       * [Test Max Duffle Bag Value](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/duffle_bug_value/test_max_duffle_bag_value.py)
+    * Frog Jump
+      * [Test Frog Jump](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/frog_jump/test_frog_jump.py)
     * House Robber
       * [Test House Robber](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/house_robber/test_house_robber.py)
     * Interleaving String
@@ -79,9 +83,13 @@
       * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
     * Longest Increasing Subsequence
       * [Test Longest Increasing Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_increasing_subsequence/test_longest_increasing_subsequence.py)
+    * Max Profit In Job Scheduling
+      * [Test Job Scheduling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/max_profit_in_job_scheduling/test_job_scheduling.py)
     * Max Subarray
       * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/max_subarray/sub_array_maxsum.py)
       * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/max_subarray/test_max_subarray.py)
+    * Maximal Rectangle
+      * [Test Maximal Rectangle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/maximal_rectangle/test_maximal_rectangle.py)
     * Maximal Square
       * [Test Maximal Square](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/maximal_square/test_maximal_square.py)
     * Min Distance
@@ -130,6 +138,8 @@
       * [Test Min Cost To Supply](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/min_cost_to_supply/test_min_cost_to_supply.py)
     * Nearest Exit From Entrance In Maze
       * [Test Nearest Exit From Entrance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/nearest_exit_from_entrance_in_maze/test_nearest_exit_from_entrance.py)
+    * Network Delay Time
+      * [Test Network Delay Time](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/network_delay_time/test_network_delay_time.py)
     * Number Of Islands
       * [Test Number Of Islands](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/test_number_of_islands.py)
       * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/union_find.py)
@@ -143,8 +153,12 @@
       * [Test Reorder Routes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reorder_routes/test_reorder_routes.py)
     * Rotting Oranges
       * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/rotting_oranges/test_rotting_oranges.py)
+    * Single Cycle Check
+      * [Test Single Cycle Check](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/single_cycle_check/test_single_cycle_check.py)
     * Valid Path
       * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
+    * Valid Tree
+      * [Test Graph Valid Tree](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_tree/test_graph_valid_tree.py)
   * Greedy
     * Assign Cookies
       * [Test Assign Cookies](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/assign_cookies/test_assign_cookies.py)
@@ -517,20 +531,22 @@
           * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/avl/node.py)
         * [Binary Search Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/binary_search_tree.py)
         * [Bst Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/bst_iterator.py)
+        * [Bst Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/bst_utils.py)
         * [Test Binary Search Tree Delete Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_delete_node.py)
         * [Test Binary Search Tree Inorder Successor](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_inorder_successor.py)
         * [Test Binary Search Tree Insert](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_insert.py)
         * [Test Binary Search Tree Search](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_search.py)
+        * [Test Binary Search Tree Valid](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_valid.py)
       * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/test_utils.py)
       * Tree
         * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
+        * [Binary Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree_utils.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
         * [Test Binary Tree Invert Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_invert_tree.py)
         * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Serialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_serialize.py)
         * [Test Binary Tree Visible Nodes](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_visible_nodes.py)
-        * [Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/tree_utils.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/utils.py)
     * Btree
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/btree/node.py)
