@@ -7,6 +7,7 @@ SINGLE_CYCLE_CHECK_TEST_CASES = [
     ([2, 3, 1, -4, -4, 2], True),
 ]
 
+
 class SingleCycleCheckTestCase(unittest.TestCase):
     @parameterized.expand(SINGLE_CYCLE_CHECK_TEST_CASES)
     def test_has_single_cycle(self, array: List[int], expected: bool):
@@ -14,5 +15,5 @@ class SingleCycleCheckTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
