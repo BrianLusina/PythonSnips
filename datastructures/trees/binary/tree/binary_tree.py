@@ -6,6 +6,7 @@ from itertools import chain
 from datastructures.stacks.dynamic import DynamicSizeStack
 from datastructures.trees import Tree, TreeNode, T
 from datastructures.trees.binary.node import BinaryTreeNode
+from datastructures.trees.binary.tree.binary_tree_utils import longest_uni_value_path
 from datastructures.queues.fifo import FifoQueue
 
 
@@ -958,4 +959,4 @@ class BinaryTree(Tree):
 
         The length of the path between two nodes is represented by the number of edges between them.
         """
-        pass
+        return longest_uni_value_path(self.root)

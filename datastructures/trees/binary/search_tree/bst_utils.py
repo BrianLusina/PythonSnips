@@ -23,6 +23,8 @@ def is_valid_bst(root: Optional[BinaryTreeNode]) -> bool:
             # If not, return False immediately
             return False
 
-        return dfs(node.left, min_value, node.data) and dfs(node.right, node.data, max_value)
+        return dfs(node.left, min_value, node.data) and dfs(
+            node.right, node.data, max_value
+        )
 
     return dfs(root, float("-inf"), float("inf"))

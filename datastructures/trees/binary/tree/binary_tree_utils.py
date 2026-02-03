@@ -70,3 +70,34 @@ def level_order_traversal(root: Optional[BinaryTreeNode]) -> List[Any]:
         current_level = next_level
 
     return list(chain.from_iterable(levels))
+
+
+def longest_uni_value_path(root: Optional[BinaryTreeNode]) -> int:
+    """
+    Returns the length of the longest path, where each node in the path has the same value. This path may or may
+    not pass through the root.
+
+    The length of the path between two nodes is represented by the number of edges between them.
+    """
+    max_length = 0
+
+    def dfs(node: Optional[BinaryTreeNode]) -> int:
+        nonlocal max_length
+
+        if not node:
+            return 0
+
+        left_value = dfs(node.left)
+        right_value = dfs(node.right)
+
+        left_arrow, right_arrow = 0, 0
+        if node.left and node.left.data == node.data:
+            left_arrow = left_value + 1
+        if node.right and node.right.data == node.data:
+            right_arrow = right_value + 1
+
+        max_length = max(max_length, left_arrow + right_arrow)
+        return max(left_arrow, right_arrow)
+
+    dfs(root)
+    return max_length
