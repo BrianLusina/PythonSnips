@@ -2,8 +2,8 @@ from typing import Optional, Dict
 from datastructures.graphs.undirected.clone_graph.node import Node
 
 
-def clone(root: Node) -> Optional[Node]:
-    def clone_helper(n: Node, nodes_cloned: Dict[Node, Node]):
+def clone(root: Optional[Node]) -> Optional[Node]:
+    def clone_helper(n: Optional[Node], nodes_cloned: Dict[Node, Node]) -> Optional[Node]:
         # If the node is None, return None
         if n is None:
             return None
