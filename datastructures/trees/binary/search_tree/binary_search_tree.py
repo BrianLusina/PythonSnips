@@ -406,6 +406,7 @@ class BinarySearchTree(BinaryTree):
         Performs a breadth first search through a Binary Tree
         This will traverse the tree level by level and depth by depth. Using a Queue to put elements into the queue
         """
+        result = []
         queue = FifoQueue()
 
         # start off by adding the root node
@@ -414,12 +415,15 @@ class BinarySearchTree(BinaryTree):
         # while the queue is not empty, we want to traverse the tree and add elements to the queue,
         while not queue.is_empty():
             current_node = queue.dequeue()
+            result.append(current_node.data)
 
             if current_node.left:
                 queue.enqueue(current_node.left)
 
             if current_node.right:
                 queue.enqueue(current_node.right)
+
+        return result
 
     def pre_order(self) -> List[Any]:
         """
