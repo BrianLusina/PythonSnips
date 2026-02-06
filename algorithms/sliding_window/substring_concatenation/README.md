@@ -7,7 +7,7 @@ without any intervening characters.
 
 Formally, a concatenated string is a permutation of all words joined together. For example, if words = ["ab", "cd", "ef"],
 then the following are all valid concatenated strings: "abcdef", "abefcd", "cdabef", "cdefab", "efabcd", "efcdab".
-However,z"acdbef" is not valid because it is not formed by concatenating all the words in any order.
+However, "acdbef" is not valid because it is not formed by concatenating all the words in any order.
 
 Your task is to return all starting indices of substrings in s that are concatenated strings.
 
