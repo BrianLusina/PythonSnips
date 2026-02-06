@@ -347,7 +347,7 @@ class BinarySearchTree(BinaryTree):
 
         # while the queue is not empty, we pop off nodes from the queue and check for their values
         while current:
-            current_diff = abs(target - self.root.data)
+            current_diff = abs(target - current.data)
 
             if current_diff < min_diff:
                 min_diff = current_diff
