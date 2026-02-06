@@ -31,9 +31,9 @@ def is_self_crossing(distance: List[int]) -> bool:
         # - The fifth step is less than or equal to the third step.
         # - The sum of the fifth step and the first step is greater than or equal to the third step.
         if (
-                i >= 5
-                and distance[i - 4] <= distance[i - 2] <= distance[i] + distance[i - 4]
-                and distance[i - 1] <= distance[i - 3] <= distance[i - 1] + distance[i - 5]
+            i >= 5
+            and distance[i - 4] <= distance[i - 2] <= distance[i] + distance[i - 4]
+            and distance[i - 1] <= distance[i - 3] <= distance[i - 1] + distance[i - 5]
         ):
             return True
 
