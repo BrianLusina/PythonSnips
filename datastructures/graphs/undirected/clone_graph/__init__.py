@@ -20,7 +20,7 @@ def clone(root: Optional[Node]) -> Optional[Node]:
             # This checks if the neighbour node neighbour has already been cloned.
             cloned_neighbour = nodes_cloned.get(neighbour)
             # If the neighbour is not cloned yet, recursively clone it
-            if not cloned_neighbour:
+            if cloned_neighbour is None:
                 cloned_node.neighbors += [clone_helper(neighbour, nodes_cloned)]
             # If the neighbour is already cloned, add the cloned neighbour to the new
             # node's neighbors
