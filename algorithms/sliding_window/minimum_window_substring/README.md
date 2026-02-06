@@ -22,8 +22,8 @@ The testcases will be generated such that the answer is unique.
 ## Examples
 
 ![Example 1](./images/examples/min_window_substring_example_1.png)
-![Example 3](./images/examples/min_window_substring_example_2.png)
-![Example 4](./images/examples/min_window_substring_example_3.png)
+![Example 2](./images/examples/min_window_substring_example_2.png)
+![Example 3](./images/examples/min_window_substring_example_3.png)
 
 Example 1:
 
