@@ -111,7 +111,7 @@ Let k be the current number of disjoint intervals stored in the intervals map.
 - Get Intervals(): `O(k)`
   - We iterate over every stored interval once to build the output.
 
-- Worst case relation to n: If there are n Add Num(int value) calls and nothing ever merges, then k=`O(n)`, giving 
+- Worst-case relation to n: If there are n Add Num(int value) calls and nothing ever merges, then k=`O(n)`, giving 
   Add Num(int value) `O(log(n))` and Get Intervals() `O(n)`.
 
 ### Space Complexity
