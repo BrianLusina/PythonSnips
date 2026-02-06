@@ -83,13 +83,14 @@ def word_break_dp_tabulation(s: str, word_dict: List[str]) -> List[str]:
     Returns:
         List of valid sentences
     """
+    word_len = len(s)
     # Initializing the dp table of size s.length + 1
-    dp = [[] for _ in range(len(s) + 1)]
+    dp = [[] for _ in range(word_len + 1)]
     # Setting the base case
     dp[0] = [""]
 
     # For each substring in the input string, repeat the process.
-    for i in range(1, len(s) + 1):
+    for i in range(1, word_len + 1):
         prefix = s[:i]
 
         # An array to store the valid sentences formed from the current prefix being checked.
@@ -109,7 +110,7 @@ def word_break_dp_tabulation(s: str, word_dict: List[str]) -> List[str]:
         dp[i] = temp
 
     # returning all the sentences formed from the complete string s
-    return dp[len(s)]
+    return dp[word_len]
 
 
 def word_break_dp_tabulation_2(s: str, word_dict: List[str]) -> List[str]:

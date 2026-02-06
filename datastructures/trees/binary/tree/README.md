@@ -453,3 +453,24 @@ The time complexity of this solution is linear O(n), where n is the number of no
 The space complexity of this solution is O(h), where h is the height of the tree. This is because our recursive
 algorithm uses space on the call stack, which can grow to the height of the binary tree. The complexity will be O(log(n))
 for a balanced tree and O(n) for a degenerate tree.
+
+---
+
+## Longest Univalue Path
+
+Given the root of the binary tree, find the longest path where all nodes along the path have the same value. This path
+doesn't have to include the root node. Return the number of edges on that path, not the number of nodes.
+
+### Examples
+
+![Example Longest univalue path 1](./images/examples/longest_univalue_path_example_1.png)
+
+Input: [1,4,5,4,4,5]
+Output: 2
+Explanation: The longest path of the same value is the path [4,4,4], which has a total of 2 edges.
+
+![Example Longest univalue path 2](./images/examples/longest_univalue_path_example_2.png)
+
+Input: [1,1,1,1,1,1,1]
+Output: 4
+Explanation: The longest path of the same value is the path [1,1,1,1,1], which has a length of 4.

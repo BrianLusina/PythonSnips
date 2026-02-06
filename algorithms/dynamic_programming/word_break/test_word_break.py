@@ -42,6 +42,9 @@ WORD_BREAK_TEST_DATA = [
         ["pine apple pen apple", "pineapple pen apple", "pine applepen apple"],
     ),
     ("catsandog", ["cats", "dog", "sand", "and", "cat"], []),
+    ("leetcode", ["leet", "code"], ["leet code"]),
+    ("applepenapple", ["apple", "pen"], ["apple pen apple"]),
+    ("applepenapple", ["apple", "pen"], ["apple pen apple"]),
 ]
 
 

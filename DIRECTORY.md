@@ -27,6 +27,8 @@
       * [Test Decode Message](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/decode_message/test_decode_message.py)
     * Letter Combination
       * [Test Letter Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_combination/test_letter_combination.py)
+    * Letter Tile Possibilities
+      * [Test Num Tile Possibilities](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/letter_tile_possibilities/test_num_tile_possibilities.py)
     * Optimal Account Balancing
       * [Test Optimal Account Balancing](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/optimal_account_balancing/test_optimal_account_balancing.py)
     * Partition String
@@ -69,6 +71,8 @@
       * [Test Domino Tromino Tiling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/domino_tromino_tiling/test_domino_tromino_tiling.py)
     * Duffle Bug Value
       * [Test Max Duffle Bag Value](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/duffle_bug_value/test_max_duffle_bag_value.py)
+    * Frog Jump
+      * [Test Frog Jump](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/frog_jump/test_frog_jump.py)
     * House Robber
       * [Test House Robber](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/house_robber/test_house_robber.py)
     * Interleaving String
@@ -79,6 +83,13 @@
       * [Test Longest Common Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_common_subsequence/test_longest_common_subsequence.py)
     * Longest Increasing Subsequence
       * [Test Longest Increasing Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/longest_increasing_subsequence/test_longest_increasing_subsequence.py)
+    * Max Profit In Job Scheduling
+      * [Test Job Scheduling](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/max_profit_in_job_scheduling/test_job_scheduling.py)
+    * Max Subarray
+      * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/max_subarray/sub_array_maxsum.py)
+      * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/max_subarray/test_max_subarray.py)
+    * Maximal Rectangle
+      * [Test Maximal Rectangle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/maximal_rectangle/test_maximal_rectangle.py)
     * Maximal Square
       * [Test Maximal Square](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/maximal_square/test_maximal_square.py)
     * Min Distance
@@ -127,6 +138,8 @@
       * [Test Min Cost To Supply](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/min_cost_to_supply/test_min_cost_to_supply.py)
     * Nearest Exit From Entrance In Maze
       * [Test Nearest Exit From Entrance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/nearest_exit_from_entrance_in_maze/test_nearest_exit_from_entrance.py)
+    * Network Delay Time
+      * [Test Network Delay Time](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/network_delay_time/test_network_delay_time.py)
     * Number Of Islands
       * [Test Number Of Islands](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/test_number_of_islands.py)
       * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/union_find.py)
@@ -140,13 +153,19 @@
       * [Test Reorder Routes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reorder_routes/test_reorder_routes.py)
     * Rotting Oranges
       * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/rotting_oranges/test_rotting_oranges.py)
+    * Single Cycle Check
+      * [Test Single Cycle Check](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/single_cycle_check/test_single_cycle_check.py)
     * Valid Path
       * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
+    * Valid Tree
+      * [Test Graph Valid Tree](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_tree/test_graph_valid_tree.py)
   * Greedy
     * Assign Cookies
       * [Test Assign Cookies](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/assign_cookies/test_assign_cookies.py)
     * Boats
       * [Test Boats To Save People](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/boats/test_boats_to_save_people.py)
+    * Create Maximum Number
+      * [Test Create Maximum Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/create_maximum_number/test_create_maximum_number.py)
     * Gas Stations
       * [Test Gas Stations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/gas_stations/test_gas_stations.py)
     * Jump Game
@@ -220,6 +239,8 @@
       * [Test Min Meeting Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/meeting_rooms/test_min_meeting_rooms.py)
     * Merge Intervals
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/merge_intervals/test_merge_intervals.py)
+    * Non Overlapping Intervals
+      * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/non_overlapping_intervals/test_non_overlapping_intervals.py)
     * Remove Intervals
       * [Test Remove Covered Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/remove_intervals/test_remove_covered_intervals.py)
     * Task Scheduler
@@ -250,18 +271,23 @@
       * Search Suggestions
         * [Test Search Suggestions](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/trie/search_suggestions/test_search_suggestions.py)
   * Sliding Window
+    * Length Of Longest Substring
+      * [Test Length Of Longest Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/length_of_longest_substring/test_length_of_longest_substring.py)
+      * [Test Longest Substring Without Repeating Characters](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/length_of_longest_substring/test_longest_substring_without_repeating_characters.py)
     * Longest Repeating Char Replacement
       * [Test Longest Repeating Character Replacement](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_repeating_char_replacement/test_longest_repeating_character_replacement.py)
     * Longest Substring With K Repeating Chars
       * [Test Longest Substring K Repeating Chars](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_substring_with_k_repeating_chars/test_longest_substring_k_repeating_chars.py)
-    * Longest Substring Without Repeating Characters
-      * [Test Longest Substring Without Repeating Characters](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/longest_substring_without_repeating_characters/test_longest_substring_without_repeating_characters.py)
     * Max Points From Cards
       * [Test Max Points From Cards](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_points_from_cards/test_max_points_from_cards.py)
     * Max Sum Of Subarray
       * [Test Max Sum Sub Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_sum_of_subarray/test_max_sum_sub_array.py)
+    * Minimum Window Substring
+      * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/minimum_window_substring/test_min_window_substring.py)
     * Repeated Dna Sequences
       * [Test Repeated Dna Sequences](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/repeated_dna_sequences/test_repeated_dna_sequences.py)
+    * Substring Concatenation
+      * [Test Substring With Concatenation Of Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/substring_concatenation/test_substring_with_concatenation_of_words.py)
   * Sorting
     * Heapsort
       * [Test Heap Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/heapsort/test_heap_sort.py)
@@ -288,6 +314,8 @@
   * Two Pointers
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
+    * Container With Most Water
+      * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/container_with_most_water/test_container_with_most_water.py)
     * Count Pairs
       * [Test Count Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/count_pairs/test_count_pairs.py)
     * Find Sum Of Three
@@ -317,6 +345,8 @@
       * [Test Reverse Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_array/test_reverse_array.py)
     * Reverse Words
       * [Test Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_words/test_reverse_words.py)
+    * Sort By Parity
+      * [Test Sort By Parity](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/sort_by_parity/test_sort_by_parity.py)
     * Sort Colors
       * [Test Sort Colors](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/sort_colors/test_sort_colors.py)
     * Three Sum
@@ -327,6 +357,8 @@
       * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/two_sum/test_two_sum.py)
     * Two Sum Less K
       * [Test Two Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/two_sum_less_k/test_two_sum.py)
+    * Valid Word Abbreviation
+      * [Test Valid Word Abbreviation](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/valid_word_abbreviation/test_valid_word_abbreviation.py)
   * Unique Bsts
     * [Unique Bsts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/unique_bsts/unique_bsts.py)
   * Word Count
@@ -394,12 +426,8 @@
     * Matrix
       * Settozero
         * [Test Set Matrix Zero](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/matrix/settozero/test_set_matrix_zero.py)
-    * Max Subarray
-      * [Sub Array Maxsum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/max_subarray/sub_array_maxsum.py)
     * Minincrementsforunique
       * [Min Increment For Unique](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/minincrementsforunique/min_increment_for_unique.py)
-    * Non Overlapping Intervals
-      * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/non_overlapping_intervals/test_non_overlapping_intervals.py)
     * Sub Array With Sum
       * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/sub_array_with_sum/test_sub_array_with_sum.py)
     * Subarrays With Fixed Bounds
@@ -446,6 +474,7 @@
       * [Test Singly Linked List Remove Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_remove_duplicates.py)
       * [Test Singly Linked List Remove Nth Last Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_remove_nth_last_node.py)
       * [Test Singly Linked List Reorder List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_reorder_list.py)
+      * [Test Singly Linked List Reverse K Group](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_reverse_k_group.py)
       * [Test Singly Linked List Rotate](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_list_rotate.py)
       * [Test Singly Linked Merge And Weave](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_merge_and_weave.py)
       * [Test Singly Linked Move Tail To Head](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/singly_linked_list/test_singly_linked_move_tail_to_head.py)
@@ -506,21 +535,24 @@
       * Search Tree
         * Avl
           * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/avl/node.py)
+        * [Binary Search Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/binary_search_tree.py)
         * [Bst Iterator](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/bst_iterator.py)
+        * [Bst Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/bst_utils.py)
         * [Test Binary Search Tree Delete Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_delete_node.py)
         * [Test Binary Search Tree Inorder Successor](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_inorder_successor.py)
         * [Test Binary Search Tree Insert](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_insert.py)
         * [Test Binary Search Tree Search](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_search.py)
+        * [Test Binary Search Tree Valid](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_valid.py)
       * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/test_utils.py)
       * Tree
         * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
+        * [Binary Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree_utils.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
         * [Test Binary Tree Invert Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_invert_tree.py)
         * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Serialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_serialize.py)
         * [Test Binary Tree Visible Nodes](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_visible_nodes.py)
-        * [Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/tree_utils.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/utils.py)
     * Btree
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/btree/node.py)
@@ -695,8 +727,6 @@
       * [Test Can Place Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/can_place_flowers/test_can_place_flowers.py)
     * Candy
       * [Test Candy](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/candy/test_candy.py)
-    * Container With Most Water
-      * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/container_with_most_water/test_container_with_most_water.py)
     * H Index
       * [Test H Index](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/h_index/test_h_index.py)
     * Increasing Triplet Subsequence
@@ -874,6 +904,10 @@
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
   * Rectangle Area
     * [Test Compute Area](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/rectangle_area/test_compute_area.py)
+  * Reverse Integer
+    * [Test Reverse Integer](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/reverse_integer/test_reverse_integer.py)
+  * Self Crossing
+    * [Test Is Self Crossing](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/self_crossing/test_is_self_crossing.py)
   * Super Size
     * [Test Super Size](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/super_size/test_super_size.py)
   * Triangles
@@ -972,8 +1006,6 @@
     * Bfs
       * Graphs
         * [Test Find If Path Exists](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/bfs/graphs/test_find_if_path_exists.py)
-    * Sliding Window
-      * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sliding_window/test_min_window_substring.py)
     * Sorting
       * [Test Counting Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_counting_sort.py)
     * Strings
@@ -1039,7 +1071,6 @@
       * [Test Highest Rank](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_highest_rank.py)
       * [Test Lonely Integer](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_lonely_integer.py)
       * [Test Longest Consecutive Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_longest_consecutive_sequence.py)
-      * [Test Max Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_max_subarray.py)
       * [Test Zig Zag Sequence](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/arrays/test_zig_zag_sequence.py)
     * [Test Build One 2 3](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_build_one_2_3.py)
     * [Test Consecutive](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_consecutive.py)

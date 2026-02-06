@@ -9,7 +9,7 @@ from datastructures.trees.binary.utils import (
     mirror_binary_tree,
 )
 from datastructures.trees.binary.node import BinaryTreeNode
-from datastructures.trees.binary.tree.tree_utils import (
+from datastructures.trees.binary.tree.binary_tree_utils import (
     create_tree_from_nodes,
     level_order_traversal,
 )

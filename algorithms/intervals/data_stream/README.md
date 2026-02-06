@@ -104,17 +104,17 @@ Let’s look at the following illustration to get a better understanding of the 
 
 Let k be the current number of disjoint intervals stored in the intervals map.
 
-- Add Num(int value): O(logk):
-  - One upper bound O(logk), at most one predecessor check O(1), and up to one erase (of the next interval) plus one 
-    insert/update (each O(logk).
+- Add Num(int value): `O(log(k))`:
+  - One upper bound `O(log(k))`, at most one predecessor check `O(1)`, and up to one erase (of the next interval) plus
+    one insert/update (each `O(log(k))`).
 
-- Get Intervals(): O(k)
+- Get Intervals(): `O(k)`
   - We iterate over every stored interval once to build the output.
 
-- Worst case relation to n: If there are n Add Num(int value) calls and nothing ever merges, then k=O(n), giving 
-  Add Num(int value) O(logn) and Get Intervals() O(n).
+- Worst-case relation to n: If there are n Add Num(int value) calls and nothing ever merges, then k=`O(n)`, giving 
+  Add Num(int value) `O(log(n))` and Get Intervals() `O(n)`.
 
 ### Space Complexity
 
-As we store only interval boundaries (start → end) rather than every number seen, the space complexity is O(k). In the 
-worst case with no merges, k=O(n), so space becomes O(n).
+As we store only interval boundaries (start → end) rather than every number seen, the space complexity is `O(k)`. In the 
+worst case with no merges, k=`O(n)`, so space becomes `O(n)`.

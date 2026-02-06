@@ -6,6 +6,7 @@ from itertools import chain
 from datastructures.stacks.dynamic import DynamicSizeStack
 from datastructures.trees import Tree, TreeNode, T
 from datastructures.trees.binary.node import BinaryTreeNode
+from datastructures.trees.binary.tree.binary_tree_utils import longest_uni_value_path
 from datastructures.queues.fifo import FifoQueue
 
 
@@ -933,3 +934,29 @@ class BinaryTree(Tree):
             return node
 
         return invert_tree_helper(self.root)
+
+    def sum_nodes_in_range(self, low: int, high: int) -> int:
+        """
+        Finds and sums all the nodes in the range [low, high].
+        Args:
+             low (int): Lower bound.
+             high (int): Upper bound.
+        Returns:
+            int: Total sum of nodes within the range [low, high].
+        """
+
+        def dfs(node: Optional[BinaryTreeNode]):
+            if not node or node.data < low or node.data > high:
+                return 0
+            return node.data + dfs(node.left) + dfs(node.right)
+
+        return dfs(self.root)
+
+    def longest_uni_value_path(self) -> int:
+        """
+        Returns the length of the longest path, where each node in the path has the same value. This path may or may
+        not pass through the root.
+
+        The length of the path between two nodes is represented by the number of edges between them.
+        """
+        return longest_uni_value_path(self.root)

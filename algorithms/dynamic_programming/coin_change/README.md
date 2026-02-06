@@ -55,7 +55,7 @@ solutions of its subproblems.
 To split the problem into subproblems, let's assume we know the number of coins required for some total value and the
 last coin denomination is C. Because of the optimal substructure property, the following equation will be true:
 
-Min(total)=Min(total−C)+1
+`Min(total) = Min(total − C) + 1`
 
 But, we don't know what is the value of C yet, so we compute it for each element of the coins array and select the
 minimum from among them. This creates the following recurrence relation:
@@ -84,13 +84,13 @@ three base cases to cover about what to return if the remaining amount is:
 
 - Less than zero
 - Equal to zero
-- Neither less than zero nor equal to zero
+- Neither less than zero nor equal to zero (Greater than 0)
 
 > The top-down solution, commonly known as the memoization technique, is an enhancement of the recursive solution. It
 > solves the problem of calculating redundant solutions over and over by storing them in an array.
 
 In the last case, when the remaining amount is neither of the base cases, we traverse the coins array, and at each
-element, we recursively call the calculate_minimum_coins() function, passing the updated remaining amount remaining_amount
+element, we recursively call the `calculate_minimum_coins()` function, passing the updated remaining amount remaining_amount
 minus the value of the current coin. This step effectively evaluates the number of coins needed for each possible
 denomination to make up the remaining amount. We store the return value of the base cases for each subproblem in a
 variable named result. We then add 1 to the result variable indicating that we're using this coin denomination in the
