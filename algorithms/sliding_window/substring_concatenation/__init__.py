@@ -46,6 +46,9 @@ def find_substring(s: str, words: List[str]) -> List[int]:
 
 
 def find_substring_2(s: str, words: List[str]) -> List[int]:
+    if not s or not words:
+        return []
+
     # Each word has the same length
     word_len = len(words[0])
     # Total number of words
