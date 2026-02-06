@@ -282,8 +282,12 @@
       * [Test Max Points From Cards](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_points_from_cards/test_max_points_from_cards.py)
     * Max Sum Of Subarray
       * [Test Max Sum Sub Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_sum_of_subarray/test_max_sum_sub_array.py)
+    * Minimum Window Substring
+      * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/minimum_window_substring/test_min_window_substring.py)
     * Repeated Dna Sequences
       * [Test Repeated Dna Sequences](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/repeated_dna_sequences/test_repeated_dna_sequences.py)
+    * Substring Concatenation
+      * [Test Substring With Concatenation Of Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/substring_concatenation/test_substring_with_concatenation_of_words.py)
   * Sorting
     * Heapsort
       * [Test Heap Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/heapsort/test_heap_sort.py)
@@ -341,6 +345,8 @@
       * [Test Reverse Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_array/test_reverse_array.py)
     * Reverse Words
       * [Test Reverse Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/reverse_words/test_reverse_words.py)
+    * Sort By Parity
+      * [Test Sort By Parity](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/sort_by_parity/test_sort_by_parity.py)
     * Sort Colors
       * [Test Sort Colors](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/sort_colors/test_sort_colors.py)
     * Three Sum
@@ -900,6 +906,8 @@
     * [Test Compute Area](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/rectangle_area/test_compute_area.py)
   * Reverse Integer
     * [Test Reverse Integer](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/reverse_integer/test_reverse_integer.py)
+  * Self Crossing
+    * [Test Is Self Crossing](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/self_crossing/test_is_self_crossing.py)
   * Super Size
     * [Test Super Size](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/super_size/test_super_size.py)
   * Triangles
@@ -998,8 +1006,6 @@
     * Bfs
       * Graphs
         * [Test Find If Path Exists](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/bfs/graphs/test_find_if_path_exists.py)
-    * Sliding Window
-      * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sliding_window/test_min_window_substring.py)
     * Sorting
       * [Test Counting Sort](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/sorting/test_counting_sort.py)
     * Strings
