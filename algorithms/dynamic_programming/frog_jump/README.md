@@ -81,4 +81,4 @@ previous jump lengths, and for each valid state, it performs constant-time looku
 
 ### Space Complexity
 
-The algorithm’s space complexity is `O(n)` occupied by the mapper map.
+The algorithm's space complexity is `O(n)` for the mapper map, plus `O(1)` for the fixed-size 2D DP array (1001 x 1001), assuming the constraints guarantee `n ≤ 1000`.
