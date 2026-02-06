@@ -66,8 +66,8 @@ arrays (height, left, right) to efficiently compute the maximal rectangle’s ar
    - **Second pass (right to left)**: We iterate backward to update the right boundaries and calculate the area.
      - If `matrix[i][j]` is ‘1’:
        - The new `right[j]` is the minimum of its existing value and `current_right`.
-     - Otherwise, the `matrix[i][j]` is ‘0’:
-       - `right[j]` is reset to ~, and `current_right` is updated to `j`.
+     - Otherwise, the `matrix[i][j]` is '0':
+       - `right[j]` is reset to `n`, and `current_right` is updated to `j`.
      - With `height`, `left`, and `right` updated for position `j`, we can calculate the area of the rectangle with 
        height `height[j]` and width `right[j] - left[j]`. We update maxArea with the maximum area found so far.
 - After iterating through all rows, `max_area` holds the result, which we return.
