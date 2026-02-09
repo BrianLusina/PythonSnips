@@ -109,5 +109,5 @@ def most_booked(meetings: List[List[int]], rooms: int) -> int:
         heapq.heappush(used_rooms, (current_end_time, available_room))
         counter[available_room] += 1
 
-    # Once all meetings are processed, return the room with the highest numer of meetings from the counter array
+    # Once all meetings are processed, return the room with the highest number of meetings from the counter array
     return counter.index(max(counter))
