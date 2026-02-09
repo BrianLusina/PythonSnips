@@ -75,7 +75,7 @@ def most_booked(meetings: List[List[int]], rooms: int) -> int:
     counter = [0] * rooms
     # Min heap to keep track of free rooms
     available = [i for i in range(rooms)]
-    # Min hip for rooms currently in use
+    # Min heap for rooms currently in use
     used_rooms: List[Tuple[int, int]] = []
 
     # Sort the meetings by their start times to process them in chronological order. This uses additional space as we
