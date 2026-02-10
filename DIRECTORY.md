@@ -312,6 +312,9 @@
       * [Test Find All Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/subsets/find_all_subsets/test_find_all_subsets.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
+  * Top K Elements
+    * Smallest Range Covering K Lists
+      * [Test Smallest Range Covering Elements From K Lists](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/top_k_elements/smallest_range_covering_k_lists/test_smallest_range_covering_elements_from_k_lists.py)
   * Two Pointers
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
