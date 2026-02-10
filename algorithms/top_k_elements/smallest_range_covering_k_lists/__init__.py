@@ -55,7 +55,7 @@ def smallest_range_two_pointer(nums: List[List[int]]) -> List[int]:
         for num in num_list:
             merged.append((num, list_idx))
 
-    # sor the merged list
+    # sort the merged list
     merged.sort()
 
     # Two pointers to track the smallest range
