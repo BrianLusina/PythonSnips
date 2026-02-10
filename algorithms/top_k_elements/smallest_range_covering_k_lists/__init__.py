@@ -1,4 +1,5 @@
-from typing import List, Tuple
+from collections import defaultdict
+from typing import List, Tuple, DefaultDict
 import heapq
 
 
@@ -44,3 +45,78 @@ def smallest_range(nums: List[List[int]]) -> List[int]:
 
     # Return the smallest range found
     return [range_start, range_end]
+
+
+def smallest_range_two_pointer(nums: List[List[int]]) -> List[int]:
+    merged: List[Tuple[int, int]] = []
+
+    # merge all lists with their list index
+    for list_idx, num_list in enumerate(nums):
+        for num in num_list:
+            merged.append((num, list_idx))
+
+    # sor the merged list
+    merged.sort()
+
+    # Two pointers to track the smallest range
+    freq: DefaultDict[int, int] = defaultdict(int)
+    left, count = 0, 0
+    range_start, range_end = 0, float("inf")
+
+    for right in range(len(merged)):
+        val = merged[right][1]
+        freq[val] += 1
+        if freq[val] == 1:
+            count += 1
+
+        # when all lists are represented, try to shrink the window
+        while count == len(nums):
+            current_range = merged[right][0] - merged[left][0]
+            if current_range < range_end - range_start:
+                range_start = merged[left][0]
+                range_end = merged[right][0]
+
+            freq[merged[left][1]] -= 1
+            if freq[merged[left][1]] == 0:
+                count -= 1
+
+            left += 1
+
+    return [range_start, range_end]
+
+
+def smallest_range_brute_force(nums: List[List[int]]) -> List[int]:
+    k = len(nums)
+    # Stores the current index of each list
+    indices = [0] * k
+    # To track the smallest range
+    range_list = [0, float("inf")]
+
+    while True:
+        cur_min, cur_max = float("inf"), float("-inf")
+        min_list_index = 0
+
+        # Find the current minimum and maximum values across the lists
+        for i in range(k):
+            current_element = nums[i][indices[i]]
+
+            # Update the current minimum
+            if current_element < cur_min:
+                cur_min = current_element
+                min_list_index = i
+
+            # Update the current maximum
+            if current_element > cur_max:
+                cur_max = current_element
+
+        # Update the range if a smaller one is found
+        if cur_max - cur_min < range_list[1] - range_list[0]:
+            range_list[0] = cur_min
+            range_list[1] = cur_max
+
+        # Move to the next element in the list that had the minimum value
+        indices[min_list_index] += 1
+        if indices[min_list_index] == len(nums[min_list_index]):
+            break
+
+    return range_list
