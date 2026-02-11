@@ -174,6 +174,8 @@
       * [Test Largest Palindromic Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/largest_palindromic_number/test_largest_palindromic_number.py)
     * Majority Element
       * [Test Majority Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/majority_element/test_majority_element.py)
+    * Maximum Swap
+      * [Test Maximum Swap](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/maximum_swap/test_maximum_swap.py)
     * Min Arrows
       * [Test Find Min Arrows](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/min_arrows/test_find_min_arrows.py)
     * Minimum Number Of Pushes
