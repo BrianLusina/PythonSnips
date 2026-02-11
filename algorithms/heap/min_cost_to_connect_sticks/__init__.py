@@ -80,7 +80,7 @@ def connect_sticks_2(sticks: List[int]) -> int:
         # Add the cost to the total cost
         total_cost += cost
         # Push the connected stick back into the heap
-        min_heap.insert_data(cost)
+        min_heap.insert(cost)
 
     # Return the total cost
     return total_cost
