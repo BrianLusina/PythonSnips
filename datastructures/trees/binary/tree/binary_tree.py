@@ -960,3 +960,144 @@ class BinaryTree(Tree):
         The length of the path between two nodes is represented by the number of edges between them.
         """
         return longest_uni_value_path(self.root)
+
+    def branch_sum(self) -> List[Any]:
+        """
+        Retrieves the sum of branches ordered from left most branch sum to right most branch sum. A branch sum is the
+        sum of all values in a binary tree branch. A binary tree branch is a path of nodes in a tree that starts at the
+        root node and ends at any leaf node.
+
+        For example given the tree below
+
+                   1
+                /     \
+               2       3
+             /   \    /  \
+            4     5  6    7
+          /   \  /
+         8    9 10
+
+        The output should be:
+        [15, 16, 18, 10, 11]
+
+        15 == 1 + 2 + 4 + 8
+        16 == 1 + 2 + 4 + 9
+        18 == 1 + 2 + 5 + 10
+        10 == 1 + 3 + 6
+        11 == 1 + 3 + 7
+
+        The time complexity for the solution is O(n) because we have to traverse each element in the tree and the space
+        complexity is also O(n) because of the recursion.
+        """
+        if not self.root:
+            return []
+
+        branch_totals = []
+
+        def preorder_traversal(
+            node: Optional[BinaryTreeNode], running_sum: Any
+        ) -> None:
+            nonlocal branch_totals
+            if not node:
+                return
+
+            total_sum = running_sum + node.data
+            if not node.left and not node.right:
+                branch_totals.append(total_sum)
+
+            preorder_traversal(node.left, total_sum)
+            preorder_traversal(node.right, total_sum)
+
+        preorder_traversal(self.root, 0)
+        return branch_totals
+
+    def sum_of_node_depths(self) -> int:
+        """
+        Returns the sum of depths of all nodes in the binary tree.
+        Node Depth is the distance between a node in a binary tree and the tree's root.
+        For example given the tree below
+
+                   1
+                /     \
+               2       3
+             /   \    /  \
+            4     5  6    7
+          /   \
+         8    9
+        Output should be: 16
+        The depth of node with value 2 is 1
+        The depth of node with value 3 is 1
+        The depth of node with value 4 is 2
+        The depth of node with value 5 is 2
+        etc ...
+        Summing all of these depths yields 16
+
+        This uses an iterative approach with a stack to get the sum of all the node depths. The stack will store the
+        node alongside the depth of the node and be used to calculate the total depth. This incurs a time complexity
+        cost of O(n) as we traverse all the nodes of the tree and space complexity cost of O(h) where h is the height
+        of the tree as we store all the nodes in the stack.
+
+        Returns:
+            int: Sum of depths of all nodes in the binary tree.
+        """
+
+        if not self.root:
+            return 0
+
+        stack: List[Tuple[BinaryTreeNode, int]] = [(self.root, 0)]
+        total_depth: int = 0
+
+        while stack:
+            node, depth = stack.pop()
+            total_depth += depth
+            if node.left:
+                stack.append((node.left, depth + 1))
+            if node.right:
+                stack.append((node.right, depth + 1))
+
+        return total_depth
+
+    def sum_of_node_depths_recursive(self) -> int:
+        """
+        Returns the sum of depths of all nodes in the binary tree using recursion.
+        Node Depth is the distance between a node in a binary tree and the tree's root.
+        For example given the tree below
+
+                   1
+                /     \
+               2       3
+             /   \    /  \
+            4     5  6    7
+          /   \
+         8    9
+        Output should be: 16
+        The depth of node with value 2 is 1
+        The depth of node with value 3 is 1
+        The depth of node with value 4 is 2
+        The depth of node with value 5 is 2
+        etc ...
+        Summing all of these depths yields 16
+
+        This uses a recursive approach to get the sum of all the node depths. This incurs a time complexity
+        cost of O(n) as we traverse all the nodes of the tree and space complexity cost of O(h) where h is the height
+        of the tree as we call the recursion stack h times on the height of the tree.
+
+        Returns:
+            int: Sum of depths of all nodes in the binary tree.
+        """
+
+        if not self.root:
+            return 0
+
+        def sum_of_node_depths_helper(
+            node: Optional[BinaryTreeNode], depth: int
+        ) -> int:
+            if not node:
+                return 0
+            return (
+                depth
+                + sum_of_node_depths_helper(node.left, depth)
+                + sum_of_node_depths_helper(node.right, depth)
+            )
+
+        return sum_of_node_depths_helper(self.root, 0)

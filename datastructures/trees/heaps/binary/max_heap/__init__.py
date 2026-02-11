@@ -91,7 +91,7 @@ class MaxHeap(Heap):
 
         return array
 
-    def insert_data(self, data: Any):
+    def insert(self, data: Any):
         """
         Inserts a value into the heap
         """

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Any, List
+from typing import Any, List, Optional
 
 
 class Heap(ABC):
@@ -8,9 +8,16 @@ class Heap(ABC):
     """
 
     @abstractmethod
-    def insert_data(self, data: Any):
+    def insert(self, data: Any):
         """
         Inserts a data value into the heap
+        """
+        raise NotImplementedError("Not yet implemented")
+
+    @abstractmethod
+    def peak(self) -> Optional[Any]:
+        """
+        Returns data at the top of the heap without removing it
         """
         raise NotImplementedError("Not yet implemented")
 
@@ -38,25 +45,34 @@ class Heap(ABC):
 
 class ArrayBasedHeap(Heap):
     """
-    Heap datastructure that uses an array as the underlying datastructure to build a heap.
+    Heap data structure that uses an array as the underlying data structure to build a heap.
     """
 
-    def __init__(self):
+    def __init__(self, data: Optional[List[Any]] = None):
         super().__init__()
-        self.data: List[Any] = []
+        if data is None:
+            data = []
+        self.heap: List[Any] = data
 
     def __len__(self):
-        return len(self.data)
+        return len(self.heap)
 
     @property
-    def root_node(self):
+    def root_node(self) -> Optional[Any]:
         """
         Retrieves the root node of the Heap
-        :return:
         """
-        if len(self.data) == 0:
+        if len(self.heap) == 0:
             raise Exception("Heap is empty")
-        return self.data[0]
+        return self.heap[0]
+
+    def peak(self) -> Optional[Any]:
+        """
+        Retrieves the root node of the Heap
+        """
+        if len(self.heap) == 0:
+            raise Exception("Heap is empty")
+        return self.heap[0]
 
     @property
     def last_node(self):
@@ -64,11 +80,11 @@ class ArrayBasedHeap(Heap):
         Returns the last node of the heap
         :return:
         """
-        if len(self.data) == 0:
+        if len(self.heap) == 0:
             raise Exception("Heap is empty")
-        return self.data[len(self.data) - 1]
+        return self.heap[len(self.heap) - 1]
 
-    def insert_data(self, data: Any):
+    def insert(self, data: Any):
         """
         Inserts a value into the heap
         :param data: element to insert into the heap
