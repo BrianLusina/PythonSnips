@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms.subsets.cascading_subsets import each_cons
+from algorithms.backtracking.subsets.cascading_subsets import each_cons
 
 
 class CascadingSubsetsTestCase(unittest.TestCase):
