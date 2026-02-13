@@ -345,6 +345,8 @@
       * [Test Palindrome](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/test_palindrome.py)
       * [Test Palindrome Index](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/test_palindrome_index.py)
       * [Test Palindrome Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/palindrome/test_palindrome_pairs.py)
+    * Product Of Array Except Self
+      * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/product_of_array_except_self/test_product_except_self.py)
     * Rain Water Trapped
       * [Test Trapped Rain Water](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/rain_water_trapped/test_trapped_rain_water.py)
     * Reverse Array
@@ -756,8 +758,6 @@
       * [Test Max Average Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/maximum_average_subarray/test_max_average_subarray.py)
     * Maxlen Contiguous Binary Subarray
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/maxlen_contiguous_binary_subarray/test_maxlen_contiguous_binary_subarray.py)
-    * Product Of Array Except Self
-      * [Test Product Except Self](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/product_of_array_except_self/test_product_except_self.py)
     * Rotation
       * Cyclic Rotation
         * [Test Cyclic Rotation](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/arrays/rotation/cyclic_rotation/test_cyclic_rotation.py)
