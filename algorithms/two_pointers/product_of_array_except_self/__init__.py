@@ -20,7 +20,7 @@ def product_except_self_prefix_sums(nums: List[int]) -> List[int]:
     return result
 
 
-def product_except_self_two_pointers(nums):
+def product_except_self_two_pointers(nums: List[int]) -> List[int]:
     # Get the length of the input list
     n = len(nums)
 
