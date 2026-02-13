@@ -22,3 +22,20 @@ Given an array of integers, nums, find all possible subsets of nums, including t
 - Bit Manipulation
 - Backtracking
 - Arrays
+
+---
+# Subsets II
+
+Given an integer array nums, that can contain duplicate elements,  return all possible subsets while ensuring that each
+subset is unique. The output must include unique subsets, and you may return them in any order.
+
+## Constraints
+
+- 1 <= `nums.length` <= 10
+- -10 <= `nums[i]` <= 10
+
+## Examples
+
+![Example 1](images/examples/find_all_subsets_ii_example_1.png)
+![Example 2](images/examples/find_all_subsets_ii_example_2.png)
+![Example 3](images/examples/find_all_subsets_ii_example_3.png)

@@ -38,6 +38,11 @@
         * [Test Generate Permutations](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/permutations/generate_permutations/test_generate_permutations.py)
     * Restore Ip Addresses
       * [Test Restore Ip Addresses](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/restore_ip_addresses/test_restore_ip_addresses.py)
+    * Subsets
+      * Cascading Subsets
+        * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/subsets/cascading_subsets/test_cascading_subsets.py)
+      * Find All Subsets
+        * [Test Find All Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/subsets/find_all_subsets/test_find_all_subsets.py)
     * Word Search
       * [Constants](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/word_search/constants.py)
       * [Point](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/word_search/point.py)
@@ -307,11 +312,6 @@
   * Stack
     * Daily Temperatures
       * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
-  * Subsets
-    * Cascading Subsets
-      * [Test Cascading Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/subsets/cascading_subsets/test_cascading_subsets.py)
-    * Find All Subsets
-      * [Test Find All Subsets](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/subsets/find_all_subsets/test_find_all_subsets.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
   * Top K Elements
