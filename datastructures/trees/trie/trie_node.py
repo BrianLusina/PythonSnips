@@ -60,3 +60,25 @@ class TrieNode:
             current = current.children[char]
 
         return current.index if current.index is not None else -1
+
+    def search(self, word: str) -> bool:
+        """
+        Check if a word can be built character by character, where each prefix is also a word.
+
+        Args:
+            word: The word to search for
+
+        Returns:
+            True if every prefix of the word (including the word itself) exists as a complete word
+        """
+        current_node = self
+
+        for char in word:
+            # Move to the child node
+            current_node = current_node.children[char]
+
+            # Check if this prefix is a complete word
+            if not current_node.is_end:
+                return False
+
+        return True
