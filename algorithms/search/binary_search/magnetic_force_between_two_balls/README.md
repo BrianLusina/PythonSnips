@@ -49,5 +49,5 @@ Explanation: We can use baskets 1 and 1000000000.
 ## Hints
 
 - If you can place balls such that the answer is x then you can do it for y where y < x.
-- Similarly if you cannot place balls such that the answer is x then you can do it for y where y > x.
+- Similarly if you cannot place balls such that the answer is x then you cannot do it for y where y > x.
 - Binary search on the answer and greedily see if it is possible.
