@@ -14,9 +14,7 @@ def max_distance(position: List[int], m: int) -> int:
     high = int(sorted_positions[-1] / (m - 1.0)) + 1
 
     def can_place_balls(x: int) -> bool:
-        """ "
-        Check if we can place 'm' balls at 'position' with each ball having at least 'x' gap.
-        """
+        """Check if we can place 'm' balls at 'position' with each ball having at least 'x' gap."""
 
         # place first ball at the first positions
         prev_ball_position = sorted_positions[0]
