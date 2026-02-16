@@ -178,7 +178,7 @@ After processing all characters, the position of writePtr tells us the length of
 we want to keep are now at the beginning of the array, up to the position of writePtr.
 
 ![Solution 1](./images/solutions/minimum_string_length_after_removing_substrings_in-place_solution_1.png)
-![Solution 2](images/solutions/minimum_string_length_after_removing_substrings_in-place_solution_1.png)
+![Solution 2](./images/solutions/minimum_string_length_after_removing_substrings_in-place_solution_2.png)
 ![Solution 3](./images/solutions/minimum_string_length_after_removing_substrings_in-place_solution_3.png)
 ![Solution 4](./images/solutions/minimum_string_length_after_removing_substrings_in-place_solution_4.png)
 ![Solution 5](./images/solutions/minimum_string_length_after_removing_substrings_in-place_solution_5.png)
