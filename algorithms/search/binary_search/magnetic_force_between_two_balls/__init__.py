@@ -4,6 +4,8 @@ from typing import List
 def max_distance(position: List[int], m: int) -> int:
     if not position:
         return 0
+    if m <= 1:
+        return 0
 
     result = 0
     n = len(position)
