@@ -268,6 +268,8 @@
     * Binary Search
       * Divide Chocolate
         * [Test Divide Chocolate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/divide_chocolate/test_divide_chocolate.py)
+      * Magnetic Force Between Two Balls
+        * [Test Magnetic Force Between Two Balls](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/magnetic_force_between_two_balls/test_magnetic_force_between_two_balls.py)
       * Maxruntime N Computers
         * [Test Max Runtime](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/maxruntime_n_computers/test_max_runtime.py)
       * Split Array Largest Sum
@@ -312,11 +314,16 @@
   * Stack
     * Daily Temperatures
       * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
+    * Minimum String Length After Removing Substrings
+      * [Test Min Str Length After Removing Substrings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/minimum_string_length_after_removing_substrings/test_min_str_length_after_removing_substrings.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
   * Top K Elements
     * Smallest Range Covering K Lists
       * [Test Smallest Range Covering Elements From K Lists](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/top_k_elements/smallest_range_covering_k_lists/test_smallest_range_covering_elements_from_k_lists.py)
+  * Trie
+    * Longest Word With Prefixes
+      * [Test Longest Word With Prefixes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/longest_word_with_prefixes/test_longest_word_with_prefixes.py)
   * Two Pointers
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
@@ -440,6 +447,8 @@
       * [Test Sub Array With Sum](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/sub_array_with_sum/test_sub_array_with_sum.py)
     * Subarrays With Fixed Bounds
       * [Test Subarrays With Fixed Bounds](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/arrays/subarrays_with_fixed_bounds/test_subarrays_with_fixed_bounds.py)
+  * Bloom Filter
+    * [Bloom Filter](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/bloom_filter/bloom_filter.py)
   * Circular Buffer
     * [Circular Buffer](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/circular_buffer/circular_buffer.py)
     * [Exceptions](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/circular_buffer/exceptions.py)
