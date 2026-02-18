@@ -19,3 +19,24 @@ Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [0..100,000]; the elements of A are all distinct; each element of array A is an integer
 within the range [1..(N + 1)].
+
+## Constraints
+
+- n = `nums.length`
+- 1 ≤ n 10^3
+- 0 ≤ `nums[i]` ≤ n
+- There are no duplicates in the array
+
+## Examples
+
+![Example 1](images/examples/find_missing_element_example_1.png)
+![Example 2](images/examples/find_missing_element_example_2.png)
+
+## Topics
+
+- Array
+- Hash Table
+- Math
+- Binary Search
+- Bit Manipulation
+- Sorting
