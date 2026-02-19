@@ -855,7 +855,7 @@ We will first traverse the linked list and check which groups of k nodes can be 
   the head.
 - We set a pointer, `ptr`, equal to the `dummy` node. We will use this pointer to traverse the linked list.
 - We traverse the linked list till `ptr` becomes NULL:
-  - We initialize a pointer, tracker, to ptr. This pointer will be used to keep track of the number of nodes in the
+  - We initialize a pointer, `tracker`, to `ptr`. This pointer will be used to keep track of the number of nodes in the
     current group in the linked list.
   - We use a nested loop to try to move `tracker` _k_ nodes forward in the linked list. If tracker becomes NULL before
     moving _k_ nodes forward, the end of the linked list has been reached and the current group can not be traversed,

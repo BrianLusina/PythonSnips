@@ -6,6 +6,9 @@ class Trie:
     def __init__(self):
         self.root = TrieNode()
 
+    def __repr__(self):
+        return f"Trie(root={self.root})"
+
     def insert(self, word: str, index: Optional[int] = None) -> None:
         """
         Inserts a word into the Trie. This has an optional index argument that allows
@@ -40,37 +43,43 @@ class Trie:
             None
         """
         curr = self.root
+        stripped_word = word.strip()
 
-        for char in word:
+        for char in stripped_word:
+            if char not in curr.children:
+                curr.children[char] = TrieNode()
             curr = curr.children[char]
             if index is not None:
-                curr.index = min(curr.index or float("inf"), index)
-
+                if curr.index is None or index < curr.index:
+                    curr.index = index
         curr.is_end = True
 
-    def search(self, word: str) -> List[str]:
-        if len(word) == 0:
+    def search_exact(self, word: str) -> bool:
+        """
+        Returns true if the exact word exists in the trie
+        """
+        curr = self.root
+        for char in word:
+            if char not in curr.children:
+                return False
+            curr = curr.children[char]
+        return curr.is_end
+
+    def get_completions(self, prefix: str) -> List[str]:
+        if len(prefix) == 0:
             return []
 
         curr = self.root
 
-        for char in word:
-            if char in curr.children:
-                curr = curr.children[char]
-            else:
+        for char in prefix:
+            if char not in curr.children:
                 return []
+            curr = curr.children[char]
 
-        output = []
+        words = []
 
-        def dfs(node: TrieNode, prefix: str) -> None:
-            if node.is_end:
-                output.append((prefix + "".join(node.children.keys())))
-
-            for child in node.children.values():
-                dfs(child, prefix + "".join(node.children.keys()))
-
-        dfs(curr, word[:-1])
-        return output
+        self._dfs(curr, list(prefix), words)
+        return words
 
     def starts_with(self, prefix: str) -> bool:
         """
@@ -105,5 +114,52 @@ class Trie:
                 return
             del parent.children[child_char]
 
-    def __repr__(self):
-        return f"Trie(root={self.root})"
+    def get_all_words(self) -> List[str]:
+        """
+        Retrieves a list of all words in the trie
+        """
+        result: List[str] = []
+        self._dfs(self.root, [], result)
+        return result
+
+    def _dfs(self, node: TrieNode, path: List[str], result: List[str]):
+        """
+        Helper method to traverse the trie
+        Args:
+            node (TrieNode): The node to traverse.
+            path (List[str]): The list of characters building the current word
+            result (List[str]): The resulting word
+        """
+        if node.is_end:
+            result.append("".join(path))
+
+        # sort keys if you want alphabetical order
+        sorted_keys = sorted(node.children.keys())
+        for char in sorted_keys:
+            path.append(char)  # choose
+            self._dfs(node.children[char], path, result)  # explore
+            path.pop()  # backtrack
+
+    def delete(self, word: str) -> bool:
+        """Deletes a word from the trie. Returns True if successful."""
+
+        def _delete_helper(node: TrieNode, w: str, depth: int) -> bool:
+            if depth == len(w):
+                if not node.is_end:
+                    return False  # Word doesn't exist
+                node.is_end = False
+                return len(node.children) == 0  # Delete node if it has no children
+
+            char = w[depth]
+            if char not in node.children:
+                return False
+
+            should_delete_child = _delete_helper(node.children[char], w, depth + 1)
+
+            if should_delete_child:
+                del node.children[char]
+                # Return True if this node is not the end of another word and has no other children
+                return not node.is_end and len(node.children) == 0
+            return False
+
+        return _delete_helper(self.root, word, 0)

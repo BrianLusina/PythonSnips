@@ -11,7 +11,7 @@ class TrieTestCases(unittest.TestCase):
         trie = Trie()
         trie.insert("apple")
 
-        first_search_result = trie.search("apple")
+        first_search_result = trie.get_completions("apple")
 
         self.assertEqual(["apple"], first_search_result)
 
@@ -22,7 +22,7 @@ class TrieTestCases(unittest.TestCase):
         trie = Trie()
         trie.insert("apple")
 
-        second_search_result = trie.search("")
+        second_search_result = trie.get_completions("")
 
         self.assertEqual([], second_search_result)
 
@@ -35,12 +35,27 @@ class TrieTestCases(unittest.TestCase):
         trie.insert("how ")
         trie.insert("her")
 
-        actual = trie.search("he")
+        actual = trie.get_completions("he")
+        expected = sorted(["he", "her", "here", "hear", "hello"])
 
-        self.assertEqual(["he", "her", "here", "hear", "hello"], actual)
+        self.assertEqual(expected, actual)
 
-        actual2 = trie.search("her")
+        actual2 = trie.get_completions("her")
         self.assertEqual(["her", "here"], actual2)
+
+    def test_trie_insert_and_get_words(self):
+        trie = Trie()
+        trie.insert("here")
+        trie.insert("hear")
+        trie.insert("he")
+        trie.insert("hello")
+        trie.insert("how")
+        trie.insert("her")
+
+        actual = sorted(trie.get_all_words())
+        expected = sorted(["here", "hear", "he", "hello", "how", "her"])
+
+        self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":

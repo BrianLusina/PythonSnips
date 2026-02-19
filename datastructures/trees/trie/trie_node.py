@@ -21,9 +21,9 @@ class TrieNode:
         self.index: Optional[int] = None
 
     def __repr__(self):
-        return f"TrieNode(children={self.children.items()}, index={self.index}, is_end={self.is_end})"
+        return f"TrieNode(index={self.index}, is_end={self.is_end})"
 
-    def insert(self, word: str, index: int):
+    def insert(self, word: str, index: Optional[int] = None):
         """
         Inserts a word into the TrieNode.
 
@@ -37,7 +37,7 @@ class TrieNode:
         curr = self
         for char in word:
             curr = curr.children[char]
-            curr.index = min(curr.index or float("inf"), index)
+            curr.index = min(curr.index or float("inf"), index) if index else index
         curr.is_end = True
 
     def search_prefix(self, prefix: str) -> int:

@@ -1,4 +1,4 @@
-# Find Missing element
+# Find Missing Element
 
 An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which
 means that exactly one element is missing.
@@ -40,3 +40,8 @@ within the range [1..(N + 1)].
 - Binary Search
 - Bit Manipulation
 - Sorting
+
+---
+
+Find Missing Numbers
+

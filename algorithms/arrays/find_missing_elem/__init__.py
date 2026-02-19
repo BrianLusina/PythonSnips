@@ -55,3 +55,7 @@ def find_missing_number_sum_of_n_terms(nums):
     expected_sum = len_nums * (len_nums + 1) // 2
 
     return expected_sum - total_sum
+
+
+def find_missing_numbers(nums: List[int]) -> List[int]:
+    pass

@@ -1,7 +1,7 @@
 from typing import List
 
 
-def min_path_sum(triangle: List[List[int]]) -> int:
+def min_path_sum_in_triangle(triangle: List[List[int]]) -> int:
     """
     Finds the minimum path sum in a given triangle of numbers
     This uses bottom up dynamic programming by starting at the bottom, we ensure that every decision made at a higher row
@@ -32,7 +32,7 @@ def min_path_sum(triangle: List[List[int]]) -> int:
     return triangle[0][0]
 
 
-def min_path_sum_2(triangle: List[List[int]]) -> int:
+def min_path_sum_in_triangle_2(triangle: List[List[int]]) -> int:
     """
     Finds the minimum path sum in a given triangle of numbers
     This uses bottom up dynamic programming by starting at the bottom, we ensure that every decision made at a higher row
@@ -60,3 +60,46 @@ def min_path_sum_2(triangle: List[List[int]]) -> int:
 
     # the result trickles to the apex
     return dp[0]
+
+
+def min_path_sum_grid(grid: List[List[int]]) -> int:
+    # m = number of rows, n = number of columns
+    m = len(grid)
+    n = len(grid[0])
+
+    # Iterate over every cell in row-major order
+    for i in range(m):
+        for j in range(n):
+            if i == 0 and j > 0:
+               # First row but not [0][0]: we can only come from the left
+                grid[i][j] += grid[i][j - 1]
+            elif j == 0 and i > 0:
+                # First column but not [0][0]: we can only come from above
+                grid[i][j] += grid[i - 1][j]
+            elif i > 0 and j > 0:
+                 # For all other cells, choose the minimum of:
+                # - the path sum from above (i-1, j)
+                # - the path sum from the left (i, j-1)
+                grid[i][j] += min(grid[i - 1][j], grid[i][j - 1])
+
+    # The bottom-right cell now contains the minimum path sum
+    return grid[m - 1][n - 1]
+
+
+def min_path_sum_grid_2(grid: List[List[int]]) -> int:
+    if not grid or not grid[0]:
+        return 0
+
+    n_rows, n_cols = len(grid), len(grid[0])
+
+    for i in range(1, n_rows):
+        grid[i][0] += grid[i - 1][0]
+
+    for i in range(1, n_cols):
+        grid[0][i] += grid[0][i - 1]
+
+    for r in range(1, n_rows):
+        for c in range(1, n_cols):
+            grid[r][c] += min(grid[r - 1][c], grid[r][c - 1])
+
+    return grid[-1][-1]
