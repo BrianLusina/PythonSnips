@@ -1,6 +1,8 @@
 
 ## Algorithms
   * Arrays
+    * Find Missing Elem
+      * [Test Find Missing Elem](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/find_missing_elem/test_find_missing_elem.py)
     * Intersection
       * [Intersection One](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/intersection_one.py)
       * [Intersection Two](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/intersection/intersection_two.py)
@@ -247,6 +249,8 @@
       * [Test Most Booked Meeting Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/meeting_rooms/test_most_booked_meeting_rooms.py)
     * Merge Intervals
       * [Test Merge Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/merge_intervals/test_merge_intervals.py)
+    * Min Intervals For Queries
+      * [Test Min Intervals To Include Query](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/min_intervals_for_queries/test_min_intervals_to_include_query.py)
     * Non Overlapping Intervals
       * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/non_overlapping_intervals/test_non_overlapping_intervals.py)
     * Remove Intervals
@@ -324,6 +328,8 @@
   * Trie
     * Longest Word With Prefixes
       * [Test Longest Word With Prefixes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/longest_word_with_prefixes/test_longest_word_with_prefixes.py)
+    * Topkfreqwords
+      * [Test Top K Frequent Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/topkfreqwords/test_top_k_frequent_words.py)
   * Two Pointers
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
@@ -607,6 +613,9 @@
         * [Types](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/suffix/types.py)
       * [Trie](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/trie.py)
       * [Trie Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/trie_node.py)
+      * Word Dictionary
+        * [Test Word Dictionary](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/word_dictionary/test_word_dictionary.py)
+        * [Word Dictionary Trie Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/word_dictionary/word_dictionary_trie_node.py)
   * Tuples
     * [Named Tuples](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/tuples/named_tuples.py)
 
@@ -644,8 +653,32 @@
       * [Visitor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/behavioral/visitor/visitor.py)
   * Browser History
     * [Test Browser History](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/browser_history/test_browser_history.py)
+  * Circuit Breaker
+    * [Circuit Breaker](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/circuit_breaker/circuit_breaker.py)
   * Continuous Median
     * [Test Continuous Median Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/continuous_median/test_continuous_median_handler.py)
+  * Event Stream
+    * [Audit Logger](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/audit_logger.py)
+    * [Batch Event Processor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/batch_event_processor.py)
+    * [Event](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/event.py)
+    * [Event Priority Mapper](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/event_priority_mapper.py)
+    * [Event Type](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/event_type.py)
+    * Handlers
+      * [Event Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/event_handler.py)
+      * [Handlers](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/handlers.py)
+      * [Message Delivered Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/message_delivered_handler.py)
+      * [Message Failed Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/message_failed_handler.py)
+      * [Message Read Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/message_read_handler.py)
+      * [Message Revoked Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/message_revoked_handler.py)
+      * [Message Sent Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/message_sent_handler.py)
+      * [Typing Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/handlers/typing_handler.py)
+    * [Logger](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/logger.py)
+    * [Message Context](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/message_context.py)
+    * [Message State](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/message_state.py)
+    * [Message State Manager](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/message_state_manager.py)
+    * [Prioritized Event](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/prioritized_event.py)
+    * [Processor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/processor.py)
+    * [State Transition Config](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/state_transition_config.py)
   * Linked List
     * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/linked_list/test_linked_list.py)
   * Oop
@@ -778,8 +811,6 @@
     * [Battleship](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/battleship/battleship.py)
   * Beeramid
     * [Test Bearamid](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/beeramid/test_bearamid.py)
-  * Find Missing Elem
-    * [Test Find Missing Elem](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/find_missing_elem/test_find_missing_elem.py)
   * Hashmap
     * Close Strings
       * [Test Close Strings](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/hashmap/close_strings/test_close_strings.py)
