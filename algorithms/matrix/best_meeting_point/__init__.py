@@ -1,7 +1,7 @@
 from typing import List
 
 
-def min_total_distance(grid):
+def min_total_distance(grid: List[List[int]]) -> int:
     rows, cols = [], []
 
     # Helper function to calculate total distance to the median
