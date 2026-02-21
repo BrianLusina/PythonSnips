@@ -71,13 +71,13 @@ def min_path_sum_grid(grid: List[List[int]]) -> int:
     for i in range(m):
         for j in range(n):
             if i == 0 and j > 0:
-               # First row but not [0][0]: we can only come from the left
+                # First row but not [0][0]: we can only come from the left
                 grid[i][j] += grid[i][j - 1]
             elif j == 0 and i > 0:
                 # First column but not [0][0]: we can only come from above
                 grid[i][j] += grid[i - 1][j]
             elif i > 0 and j > 0:
-                 # For all other cells, choose the minimum of:
+                # For all other cells, choose the minimum of:
                 # - the path sum from above (i-1, j)
                 # - the path sum from the left (i, j-1)
                 grid[i][j] += min(grid[i - 1][j], grid[i][j - 1])

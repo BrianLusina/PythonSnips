@@ -3,7 +3,7 @@ import heapq
 
 
 def min_interval(intervals: List[List[int]], queries: List[int]) -> List[int]:
-    query_len=len(queries)
+    query_len = len(queries)
 
     query_indexes = list(range(query_len))
     query_indexes.sort(key=lambda q: queries[q])

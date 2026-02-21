@@ -260,6 +260,8 @@
   * Josephus Circle
     * [Test Josephus Circle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/josephus_circle/test_josephus_circle.py)
   * Matrix
+    * Best Meeting Point
+      * [Test Best Meeting Point](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/best_meeting_point/test_best_meeting_point.py)
     * Isvalidsudoku
       * [Test Is Valid Sudoku](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/isvalidsudoku/test_is_valid_sudoku.py)
   * Memoization
