@@ -14,7 +14,7 @@ The **Manhattan Distance** between two points `(x1, y1)` and `(x2, y2)` is calcu
 - m == grid.length
 - n == grid[i].length
 - 1 ≤ m, n ≤ 50
-- grid[i][j] is either 0 or 1.
+- `grid[i][j]` is either 0 or 1.
 - There will be at least two friends in the grid.
 
 ## Examples
