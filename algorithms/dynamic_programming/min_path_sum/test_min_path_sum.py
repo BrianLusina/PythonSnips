@@ -2,7 +2,12 @@ import unittest
 import copy
 from typing import List
 from parameterized import parameterized
-from algorithms.dynamic_programming.min_path_sum import min_path_sum_in_triangle, min_path_sum_in_triangle_2, min_path_sum_grid, min_path_sum_grid_2
+from algorithms.dynamic_programming.min_path_sum import (
+    min_path_sum_in_triangle,
+    min_path_sum_in_triangle_2,
+    min_path_sum_grid,
+    min_path_sum_grid_2,
+)
 
 MIN_PATH_SUM_TRIANGLE_TEST_CASES = [
     ([[5]], 5),
@@ -13,8 +18,8 @@ MIN_PATH_SUM_TRIANGLE_TEST_CASES = [
 ]
 
 MIN_PATH_SUM_GRID_TEST_CASES = [
-    ([[1,3,1],[1,5,1],[4,2,1]], 7),
-    ([[1,2,3],[4,5,6]], 12),
+    ([[1, 3, 1], [1, 5, 1], [4, 2, 1]], 7),
+    ([[1, 2, 3], [4, 5, 6]], 12),
     ([[1, 2, 5], [3, 2, 1]], 6),
     ([[5, 9, 1, 3], [4, 2, 1, 7], [3, 1, 1, 2]], 15),
     ([[5]], 5),
