@@ -143,6 +143,8 @@
       * [Test Max Area Of Island](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/maxareaofisland/test_max_area_of_island.py)
     * Min Cost To Supply
       * [Test Min Cost To Supply](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/min_cost_to_supply/test_min_cost_to_supply.py)
+    * Min Cost Valid Path
+      * [Test Min Cost To Make Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/min_cost_valid_path/test_min_cost_to_make_valid_path.py)
     * Nearest Exit From Entrance In Maze
       * [Test Nearest Exit From Entrance](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/nearest_exit_from_entrance_in_maze/test_nearest_exit_from_entrance.py)
     * Network Delay Time
