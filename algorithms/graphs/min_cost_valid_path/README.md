@@ -82,7 +82,7 @@ Output: 1
 1. [Dynamic Programming](#dynamic-programming)
 2. [Dijkstra's Algorithm](#dijkstras-algorithm)
 3. [0-1 Breadth-First Search](#0-1-breadth-first-search)
-4. 
+4. [Depth-First Search and Breadth First Search](#depth-first-search--breadth-first-search)
 
 
 ### Dynamic Programming
