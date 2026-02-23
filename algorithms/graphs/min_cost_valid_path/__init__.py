@@ -145,6 +145,8 @@ def min_cost_0_1_bfs(grid: List[List[int]]) -> int:
 
 
 def min_cost_0_1_bfs_2(grid: List[List[int]]) -> int:
+    if not grid:
+        return 0
     # Store the number of rows and columns of grid
     num_rows, num_cols = len(grid), len(grid[0])
 
