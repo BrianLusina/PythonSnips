@@ -204,6 +204,8 @@ def min_cost_0_1_bfs_2(grid: List[List[int]]) -> int:
 
 
 def min_cost_dfs_and_bfs(grid: List[List[int]]) -> int:
+    if not grid:
+        return 0
     # Direction vectors: right, left, down, up (matching grid values 1,2,3,4)
     dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
     num_rows = len(grid)
