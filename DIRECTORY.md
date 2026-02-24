@@ -302,6 +302,8 @@
       * [Test Max Sum Sub Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/max_sum_of_subarray/test_max_sum_sub_array.py)
     * Minimum Window Substring
       * [Test Min Window Substring](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/minimum_window_substring/test_min_window_substring.py)
+    * Permutation In String
+      * [Test Permutation In String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/permutation_in_string/test_permutation_in_string.py)
     * Repeated Dna Sequences
       * [Test Repeated Dna Sequences](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sliding_window/repeated_dna_sequences/test_repeated_dna_sequences.py)
     * Substring Concatenation
