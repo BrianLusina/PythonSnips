@@ -6,7 +6,7 @@ from algorithms.graphs.min_cost_valid_path import (
     min_cost_dijkstra,
     min_cost_0_1_bfs,
     min_cost_0_1_bfs_2,
-    min_cost_dfs_and_bfs
+    min_cost_dfs_and_bfs,
 )
 
 MIN_COST_TO_MAKE_VALID_PATH_IN_GRID_TEST_CASES = [
