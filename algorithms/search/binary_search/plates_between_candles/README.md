@@ -13,7 +13,7 @@ in this substring is 2, as each of the two plates has at least one candle in the
 Return an integer array answer where answer[i] is the answer to the ith query.
 
 Example 1
-![Plates Between Candles Example 1](./plates_between_candles_example_1.png)
+![Plates Between Candles Example 1](plates_between_candles_example_1.png)
 
 ```plain
 Input: s = "**|**|***|", queries = [[2,5],[5,9]]
@@ -24,7 +24,7 @@ Explanation:
 ```
 
 Example 2:
-![Plates Between Candles Example 2](./plates_between_candles_example_2.png)
+![Plates Between Candles Example 2](plates_between_candles_example_2.png)
 
 ```plain
 Input: s = "***|**|*****|**||**|*", queries = [[1,17],[4,5],[14,17],[5,11],[15,16]]
