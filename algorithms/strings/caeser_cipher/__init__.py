@@ -82,7 +82,7 @@ class CaesarCipherV2:
         self.alpha = ascii_uppercase
         self.new_alpha = self.alpha[shift:] + self.alpha[:shift]
 
-    def encode(self, plaintext):
+    def encode(self, plaintext: str):
         t = plaintext.maketrans(self.alpha, self.new_alpha)
         return plaintext.upper().translate(t)
 
