@@ -371,8 +371,8 @@
     * Minimum String Length After Removing Substrings
       * [Test Min Str Length After Removing Substrings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/minimum_string_length_after_removing_substrings/test_min_str_length_after_removing_substrings.py)
   * Strings
-    * Caesar Cipher
-      * [Test Caesar](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/caesar_cipher/test_caesar.py)
+    * Caeser Cipher
+      * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/caeser_cipher/test_caeser.py)
     * Run Length Encoding
       * [Test Run Length](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/run_length_encoding/test_run_length.py)
   * Taxi Numbers
