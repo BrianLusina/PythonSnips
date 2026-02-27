@@ -29,10 +29,10 @@ class HashMap:
 
     def set(self, key: int, value: Any) -> None:
         """
-        Used to add an item to the HashMap/HashTable given it's unique Key and it's value. if the item is already in the
+        Used to add an item to the HashMap/HashTable given its unique Key and its value. If the item is already in the
         HashMap, then an update to its value is performed.
-        @param key: Key used to identify the item
-        @param value: Represents the data of the Item
+        `@param` key: Key used to identify the item
+        `@param` value: Represents the data of the Item
         """
         hash_key = self.__hash_function(key)
         self.buckets[hash_key].update(key, value)
