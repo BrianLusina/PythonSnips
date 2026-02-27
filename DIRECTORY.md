@@ -198,6 +198,8 @@
   * Hash Table
     * First Unique Character
       * [Test First Unique Character](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/first_unique_character/test_first_unique_character.py)
+    * Jewels And Stones
+      * [Test Jewels And Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/jewels_and_stones/test_jewels_and_stones.py)
     * Ransom Note
       * [Test Ransom Note](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/ransom_note/test_ransom_note.py)
   * Heap
@@ -274,14 +276,56 @@
       * [Test Check Subarray Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/prefix_sum/continous_sub_array_sum/test_check_subarray_sum.py)
   * Search
     * Binary Search
+      * Big Words
+        * [Big Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/big_words/big_words.py)
+      * Cyclically Shifted Array
+        * [Test Cyclically Shifted Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/cyclically_shifted_array/test_cyclically_shifted_array.py)
       * Divide Chocolate
         * [Test Divide Chocolate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/divide_chocolate/test_divide_chocolate.py)
+      * Find Closest Number
+        * [Test Find Closest Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/find_closest_number/test_find_closest_number.py)
+      * Find Closest Value
+        * [Test Find Closest Value](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/find_closest_value/test_find_closest_value.py)
+      * Find First In Duplicate List
+        * [Test Find First In Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/find_first_in_duplicate_list/test_find_first_in_duplicates.py)
+      * Find Fixed Number
+        * [Test Find Fixed Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/find_fixed_number/test_find_fixed_number.py)
+      * Find Peak Element
+        * [Test Find Peak Element](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/find_peak_element/test_find_peak_element.py)
+      * First Boundary
+        * [Test First Boundary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/first_boundary/test_first_boundary.py)
+      * First Occurrence
+        * [Test Find First Occurrence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/first_occurrence/test_find_first_occurrence.py)
+      * Integer Square Root
+        * [Test Integer Square Root](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/integer_square_root/test_integer_square_root.py)
+      * Koko Eating Bananas
+        * [Test Koko Eating Bananas](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/koko_eating_bananas/test_koko_eating_bananas.py)
       * Magnetic Force Between Two Balls
         * [Test Magnetic Force Between Two Balls](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/magnetic_force_between_two_balls/test_magnetic_force_between_two_balls.py)
       * Maxruntime N Computers
         * [Test Max Runtime](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/maxruntime_n_computers/test_max_runtime.py)
+      * Min In Rotated Sorted Array
+        * [Test Find Min Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/min_in_rotated_sorted_array/test_find_min_rotated_sorted_array.py)
+      * My Calendar
+        * [Test My Calendar](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/my_calendar/test_my_calendar.py)
+      * Next Greatest Letter
+        * [Test Next Greatest Letter](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/next_greatest_letter/test_next_greatest_letter.py)
+      * Peak Of Mountain
+        * [Test Peak Of Mountain](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/peak_of_mountain/test_peak_of_mountain.py)
+      * Plates Between Candles
+        * [Test Plates Between Candles](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/plates_between_candles/test_plates_between_candles.py)
+      * Rotated Sorted Array
+        * [Test Search Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/rotated_sorted_array/test_search_rotated_sorted_array.py)
+      * Search Range
+        * [Test Search Range](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/search_range/test_search_range.py)
+      * Single Non Duplicate
+        * [Test Single Non Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/single_non_duplicate/test_single_non_duplicate.py)
       * Split Array Largest Sum
         * [Test Split Array Largest Sum](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/split_array_largest_sum/test_split_array_largest_sum.py)
+      * Square Root
+        * [Test Sqrt Estimate](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/square_root/test_sqrt_estimate.py)
+      * Successful Pairs Spells Potions
+        * [Test Successful Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/successful_pairs_spells_potions/test_successful_pairs.py)
       * [Test Binary Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/test_binary_search.py)
     * Interpolation
       * [Test Interpolation Search](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/interpolation/test_interpolation_search.py)
@@ -326,6 +370,11 @@
       * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
     * Minimum String Length After Removing Substrings
       * [Test Min Str Length After Removing Substrings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/minimum_string_length_after_removing_substrings/test_min_str_length_after_removing_substrings.py)
+  * Strings
+    * Caeser Cipher
+      * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/caeser_cipher/test_caeser.py)
+    * Run Length Encoding
+      * [Test Run Length](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/run_length_encoding/test_run_length.py)
   * Taxi Numbers
     * [Taxi Numbers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/taxi_numbers/taxi_numbers.py)
   * Top K Elements
@@ -475,6 +524,9 @@
         * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/clone_graph/node.py)
     * [Vertex](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/vertex.py)
   * Hashmap
+    * [Bucket](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/bucket.py)
+    * [Hash Map](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/hash_map.py)
+    * [Item](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/item.py)
     * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/test_hashmap.py)
   * Hashset
     * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashset/test_my_hashset.py)
@@ -844,50 +896,6 @@
   * Queue
     * Recent Counter
       * [Test Recent Calls](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/queue/recent_counter/test_recent_calls.py)
-  * Search
-    * Binary Search
-      * Big Words
-        * [Big Words](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/big_words/big_words.py)
-      * Cyclically Shifted Array
-        * [Test Cyclically Shifted Array](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/cyclically_shifted_array/test_cyclically_shifted_array.py)
-      * Find Closest Number
-        * [Test Find Closest Number](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_closest_number/test_find_closest_number.py)
-      * Find Closest Value
-        * [Test Find Closest Value](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_closest_value/test_find_closest_value.py)
-      * Find First In Duplicate List
-        * [Test Find First In Duplicates](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_first_in_duplicate_list/test_find_first_in_duplicates.py)
-      * Find Fixed Number
-        * [Test Find Fixed Number](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_fixed_number/test_find_fixed_number.py)
-      * Find Peak Element
-        * [Test Find Peak Element](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/find_peak_element/test_find_peak_element.py)
-      * First Boundary
-        * [Test First Boundary](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/first_boundary/test_first_boundary.py)
-      * First Occurrence
-        * [Test Find First Occurrence](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/first_occurrence/test_find_first_occurrence.py)
-      * Integer Square Root
-        * [Test Integer Square Root](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/integer_square_root/test_integer_square_root.py)
-      * Koko Eating Bananas
-        * [Test Koko Eating Bananas](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/koko_eating_bananas/test_koko_eating_bananas.py)
-      * Min In Rotated Sorted Array
-        * [Test Find Min Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/min_in_rotated_sorted_array/test_find_min_rotated_sorted_array.py)
-      * My Calendar
-        * [Test My Calendar](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/my_calendar/test_my_calendar.py)
-      * Next Greatest Letter
-        * [Test Next Greatest Letter](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/next_greatest_letter/test_next_greatest_letter.py)
-      * Peak Of Mountain
-        * [Test Peak Of Mountain](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/peak_of_mountain/test_peak_of_mountain.py)
-      * Plates Between Candles
-        * [Test Plates Between Candles](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/plates_between_candles/test_plates_between_candles.py)
-      * Rotated Sorted Array
-        * [Test Search Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/rotated_sorted_array/test_search_rotated_sorted_array.py)
-      * Search Range
-        * [Test Search Range](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/search_range/test_search_range.py)
-      * Single Non Duplicate
-        * [Test Single Non Duplicate](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/single_non_duplicate/test_single_non_duplicate.py)
-      * Square Root
-        * [Test Sqrt Estimate](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/square_root/test_sqrt_estimate.py)
-      * Successful Pairs Spells Potions
-        * [Test Successful Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/search/binary_search/successful_pairs_spells_potions/test_successful_pairs.py)
   * Stack
     * Asteroid Collision
       * [Test Asteroid Collision](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/asteroid_collision/test_asteroid_collision.py)
@@ -1100,7 +1108,6 @@
     * [Test Variable Length Qty](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_variable_length_qty.py)
   * Cryptography
     * [Test Atbash Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_atbash_cipher.py)
-    * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_caeser.py)
     * [Test Crypto Square](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_crypto_square.py)
     * [Test Diffie Hellman](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_diffie_hellman.py)
     * [Test Handhsake](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_handhsake.py)
@@ -1111,7 +1118,6 @@
     * [Test Pig Latin](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_pig_latin.py)
     * [Test Rail Fence Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_rail_fence_cipher.py)
     * [Test Rot13](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_rot13.py)
-    * [Test Run Length](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_run_length.py)
     * [Test Shell Game](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_shell_game.py)
     * [Test Simple Cipher](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_simple_cipher.py)
     * [Test Vigenere](https://github.com/BrianLusina/PythonSnips/blob/master/tests/cryptography/test_vigenere.py)
