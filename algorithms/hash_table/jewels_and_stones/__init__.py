@@ -1,5 +1,5 @@
-from typing import Set, Counter
 from collections import Counter
+from typing import Set
 
 
 def num_jewels_in_stones_with_set(jewels: str, stones: str) -> int:
