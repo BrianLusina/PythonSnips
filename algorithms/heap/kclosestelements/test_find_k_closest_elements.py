@@ -1,7 +1,7 @@
 import unittest
 from typing import List
 from parameterized import parameterized
-from algorithms.heap.kclosestelements import k_closest
+from algorithms.heap.kclosestelements import k_closest, find_closest_elements
 
 K_CLOSEST_ELEMENTS_TEST_CASES = [
     ([1, 2, 3, 4, 5], 4, 3, [1, 2, 3, 4]),
@@ -19,6 +19,13 @@ class KClosestElementsTestCase(unittest.TestCase):
         self, nums: List[int], k: int, target: int, expected: List[int]
     ):
         actual = k_closest(nums, k, target)
+        self.assertEqual(expected, actual)
+
+    @parameterized.expand(K_CLOSEST_ELEMENTS_TEST_CASES)
+    def test_find_closest_elements(
+        self, nums: List[int], k: int, target: int, expected: List[int]
+    ):
+        actual = find_closest_elements(nums, k, target)
         self.assertEqual(expected, actual)
 
 
