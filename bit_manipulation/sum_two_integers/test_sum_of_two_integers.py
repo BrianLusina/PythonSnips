@@ -8,6 +8,9 @@ SUM_OF_TWO_INTEGERS_TEST_CASES = [
     (3, 10, 13),
     (-10, -40, -50),
     (13, 16, 29),
+    (2147483647, 0, 2147483647),
+    (-2147483648, 0, -2147483648),
+    (2147483647, 1, -2147483648),
 ]
 
 class SumOfTwoIntegersTestCase(unittest.TestCase):
