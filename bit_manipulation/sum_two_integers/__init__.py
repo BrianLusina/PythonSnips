@@ -17,7 +17,7 @@ def integer_addition(a: int, b: int):
 
     # We check if the result is greater than the maximum integer value
     # Return the result as is if result is not greater than max_int
-    if a < max_int:
+    if a <= max_int:
         return a
 
     # If it is, then return the two's complement of the result
