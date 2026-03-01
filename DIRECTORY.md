@@ -451,6 +451,8 @@
     * [Test Number Of One Bits](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/number_of_1_bits/test_number_of_one_bits.py)
   * Single Number
     * [Test Single Number](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/single_number/test_single_number.py)
+  * Sum Two Integers
+    * [Test Sum Of Two Integers](https://github.com/BrianLusina/PythonSnips/blob/master/bit_manipulation/sum_two_integers/test_sum_of_two_integers.py)
 
 ## Cryptography
   * Atbash Cipher
