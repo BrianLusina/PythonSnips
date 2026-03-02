@@ -268,6 +268,9 @@
       * [Test Best Meeting Point](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/best_meeting_point/test_best_meeting_point.py)
     * Isvalidsudoku
       * [Test Is Valid Sudoku](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/isvalidsudoku/test_is_valid_sudoku.py)
+    * Transpose
+      * [Test Transpose](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/transpose/test_transpose.py)
+      * [Test Transpose Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/transpose/test_transpose_matrix.py)
   * Memoization
     * [Fibonacci](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/memoization/fibonacci.py)
   * [Petethebaker](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/petethebaker.py)
@@ -1105,7 +1108,6 @@
     * [Test Robot Name](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_robot_name.py)
     * [Test Say Number](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_say_number.py)
     * [Test Space Age](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_space_age.py)
-    * [Test Transpose](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_transpose.py)
     * [Test Tree Building](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_tree_building.py)
     * [Test Variable Length Qty](https://github.com/BrianLusina/PythonSnips/blob/master/tests/algorithms/test_variable_length_qty.py)
   * Cryptography
