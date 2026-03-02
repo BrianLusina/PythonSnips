@@ -13,6 +13,7 @@ SUM_OF_TWO_INTEGERS_TEST_CASES = [
     (2147483647, 1, -2147483648),
 ]
 
+
 class SumOfTwoIntegersTestCase(unittest.TestCase):
     @parameterized.expand(SUM_OF_TWO_INTEGERS_TEST_CASES)
     def test_integer_addition(self, a: int, b: int, expected: int):
@@ -25,5 +26,5 @@ class SumOfTwoIntegersTestCase(unittest.TestCase):
         self.assertEqual(result, expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
