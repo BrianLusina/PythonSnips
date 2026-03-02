@@ -27,7 +27,7 @@ def integer_addition(a: int, b: int):
 
 def integer_addition_2(a: int, b: int) -> int:
     mask = 0xFFFFFFFF
-    max_int = 2 ** 31 - 1
+    max_int = 2**31 - 1
     while b != 0:
         sum_ = (a ^ b) & mask
         carry = (a & b) & mask

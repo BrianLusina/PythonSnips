@@ -1,8 +1,6 @@
 import unittest
 
-from algorithms.transpose import transpose
-
-# test cases adapted from `x-common//canonical-data.json` @ version: 1.0.0
+from algorithms.matrix.transpose import transpose
 
 
 class TransposeTests(unittest.TestCase):
