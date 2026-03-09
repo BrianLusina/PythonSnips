@@ -369,10 +369,24 @@
     * Shell Sort
       * [Test Shell Sort](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/sorting/shell_sort/test_shell_sort.py)
   * Stack
+    * Asteroid Collision
+      * [Test Asteroid Collision](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/asteroid_collision/test_asteroid_collision.py)
+    * Bracket Validator
+      * [Test Bracket Validator](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/bracket_validator/test_bracket_validator.py)
     * Daily Temperatures
       * [Test Daily Temperatures](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/daily_temperatures/test_daily_temperatures.py)
+    * Decimal To Binary
+      * [Test Decimal To Binary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/decimal_to_binary/test_decimal_to_binary.py)
+    * Decode String
+      * [Test Decode String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/decode_string/test_decode_string.py)
     * Minimum String Length After Removing Substrings
       * [Test Min Str Length After Removing Substrings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/minimum_string_length_after_removing_substrings/test_min_str_length_after_removing_substrings.py)
+    * Nextgreater
+      * [Test Next Greater](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/nextgreater/test_next_greater.py)
+    * Removing Stars
+      * [Test Remove Starts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/removing_stars/test_remove_starts.py)
+    * Reverse String
+      * [Test Reverse String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/reverse_string/test_reverse_string.py)
   * Strings
     * Caeser Cipher
       * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/caeser_cipher/test_caeser.py)
@@ -901,21 +915,6 @@
   * Queue
     * Recent Counter
       * [Test Recent Calls](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/queue/recent_counter/test_recent_calls.py)
-  * Stack
-    * Asteroid Collision
-      * [Test Asteroid Collision](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/asteroid_collision/test_asteroid_collision.py)
-    * Bracket Validator
-      * [Test Bracket Validator](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/bracket_validator/test_bracket_validator.py)
-    * Decimal To Binary
-      * [Test Decimal To Binary](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/decimal_to_binary/test_decimal_to_binary.py)
-    * Decode String
-      * [Test Decode String](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/decode_string/test_decode_string.py)
-    * Nextgreater
-      * [Test Next Greater](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/nextgreater/test_next_greater.py)
-    * Removing Stars
-      * [Test Remove Starts](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/removing_stars/test_remove_starts.py)
-    * Reverse String
-      * [Test Reverse String](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/stack/reverse_string/test_reverse_string.py)
   * Students And Lunch
     * [Test Students Lunch](https://github.com/BrianLusina/PythonSnips/blob/master/puzzles/students_and_lunch/test_students_lunch.py)
   * Trees
@@ -972,6 +971,10 @@
     * [Test Multiply 5](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/multiply_5/test_multiply_5.py)
   * Perfect Square
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
+  * Power Of I
+    * [Test Power Of I](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/power_of_i/test_power_of_i.py)
+  * Power Of Two
+    * [Test Power Of Two](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/power_of_two/test_power_of_two.py)
   * Rectangle Area
     * [Test Compute Area](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/rectangle_area/test_compute_area.py)
   * Reverse Integer
@@ -1263,7 +1266,6 @@
     * [Test Plus Minus](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_plus_minus.py)
     * [Test Population Growth](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_population_growth.py)
     * [Test Power Digit Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_digit_sum.py)
-    * [Test Power Of I](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_of_i.py)
     * [Test Power Of Sum](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_power_of_sum.py)
     * [Test Product Fib](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_product_fib.py)
     * [Test Pythagorean Triplet](https://github.com/BrianLusina/PythonSnips/blob/master/tests/pymath/test_pythagorean_triplet.py)
