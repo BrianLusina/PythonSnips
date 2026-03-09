@@ -33,7 +33,22 @@ def reverse_string(text: str) -> str:
     return reversed_string
 
 
-def reverse_string_char_array(s: List[str]):
+def reverse_string_char_array(s: List[str]) -> None:
+    """
+    Reverses a character array in place using two-pointer technique.
+    
+    Reference: https://leetcode.com/problems/reverse-string/
+    
+    Complexity:
+    Where n is the length of the input list
+    Time: O(n), each character is visited at most once
+    Space: O(1), only two pointers used, no extra data structures
+    
+    Args:
+        s (List[str]): character array to reverse in place
+    Returns:
+        None: modifies the input list in place
+    """
     if not s or len(s) == 1:
         return
 
