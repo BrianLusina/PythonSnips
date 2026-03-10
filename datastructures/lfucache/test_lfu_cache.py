@@ -1,6 +1,6 @@
 import unittest
 
-from datastructures.lfucache import LFUCache
+from datastructures.lfucache.lfu_cache import LFUCache
 
 
 class LFUCacheTestCases(unittest.TestCase):
