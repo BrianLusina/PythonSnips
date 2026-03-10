@@ -549,6 +549,11 @@
     * [Test Hashmap](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashmap/test_hashmap.py)
   * Hashset
     * [Test My Hashset](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/hashset/test_my_hashset.py)
+  * Lfucache
+    * [Lfu Cache](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lfucache/lfu_cache.py)
+    * [Lfu Cache Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lfucache/lfu_cache_node.py)
+    * [Lfu Cache V2](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lfucache/lfu_cache_v2.py)
+    * [Test Lfu Cache](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lfucache/test_lfu_cache.py)
   * Linked Lists
     * Circular
       * [Circular Linked List Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/linked_lists/circular/circular_linked_list_utils.py)
@@ -1154,7 +1159,6 @@
     * [Test Flatten Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_flatten_array.py)
     * [Test Is Sorted How](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_is_sorted_how.py)
     * [Test Length Of Missing Array](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_length_of_missing_array.py)
-    * [Test Lfu Cache](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_lfu_cache.py)
     * [Test List Ops](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_list_ops.py)
     * [Test Manipulate Data](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_manipulate_data.py)
     * [Test Min Max](https://github.com/BrianLusina/PythonSnips/blob/master/tests/datastructures/test_min_max.py)
