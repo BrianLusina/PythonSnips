@@ -76,18 +76,18 @@ class LFUCacheV2:
             2 Facts:
             a. we maintain self._minimum_frequency, minimum possible frequency in cache
             b. All cache with the same frequency are stored as a DoublyLinkedList, with recently used order (Always
-                append to head).
+                insert at tail).
 
-            Consequence is that the tail of the DoublyLinkedList with self._minimum_frequency is the least recently used
-            one, pop it.
+            Consequence is that the head of the DoublyLinkedList with self._minimum_frequency is the least recently used
+            one, remove it.
 
         2. Add new node to self._lookup
         3. add new node to DoublyLinkedList with frequency of 1
         4. reset minimum_frequency to 1
 
-        @param key: Key to use for lookup
-        @param value: Value to store in the cache
-        @return: None
+        `@param` key: Key to use for lookup
+        `@param` value: Value to store in the cache
+        `@return`: None
         """
 
         if self.capacity == 0:
