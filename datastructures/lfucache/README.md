@@ -64,9 +64,10 @@ After implementing `PromoteKey()`, the LFU cache functions are implemented as fo
 - `Put`: We check if the key exists in the cache. 
   - If it doesn't, we must add this (key, value) pair to our cache. 
     - Before adding it, we check if the cache has already reached capacity. If it has, we remove the LFU key. To do that,
-      we remove the head node of the linked list accociated with the frequency equal to `minimum_frequency`. 
-    - If it does, we simply update key with the value. 
-    - At the end of both steps, we adjust the frequency order of the key using `PromoteKey()`.
+      we remove the head node of the linked list associated with the frequency equal to `minimum_frequency`.
+    - Then we add the new key.
+  - If the key already exists, we simply update its value. 
+  - At the end of both cases, we adjust the frequency order of the key using `PromoteKey()`.
 
 ![Solution 1](./images/solutions/lfu_cache_solution_1.png)
 ![Solution 2](./images/solutions/lfu_cache_solution_2.png)
