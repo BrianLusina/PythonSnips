@@ -117,7 +117,7 @@ class LFUCache:
 
             node = LfuCacheNode(data=value, key=key)
             self._lookup[key] = node
-            self._frequency[1].append(node)
+            self._frequency[1].prepend(node)
             self._minimum_frequency = 1
             self._current_size += 1
             return None
