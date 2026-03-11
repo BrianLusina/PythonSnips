@@ -49,3 +49,37 @@ def three_sum(nums: List[int]) -> List[List[int]]:
                 right -= 1
 
     return result
+
+
+def three_number_sum(array: List[int], target_sum: int) -> List[List[int]]:
+    if not array:
+        return []
+
+    # Sort the array and store the result in nums to avoid side effects to the caller of this
+    # function. This incurs a a time complexity of O(n (log(n))) and a space complexity of O(n)
+    # where n is the number of elements in the array
+    nums = sorted(array)
+    n = len(nums)
+    result = []
+
+    for idx, num in enumerate(nums):
+        left = idx + 1
+        right = n - 1
+
+        while left < right:
+            total = num + nums[left] + nums[right]
+            if total == target_sum:
+                result.append([num, nums[left], nums[right]])
+                # move the left pointer to avoid duplicates while it is still less than the right
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+                left += 1
+                right -= 1
+            elif total > target_sum:
+                right -= 1
+            else:
+                left += 1
+
+    return result
