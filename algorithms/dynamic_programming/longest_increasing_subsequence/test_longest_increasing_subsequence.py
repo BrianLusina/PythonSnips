@@ -1,63 +1,37 @@
 import unittest
+from typing import List
+from parameterized import parameterized
+from algorithms.dynamic_programming.longest_increasing_subsequence import (
+    longest_increasing_subsequence,
+    find_number_of_lis,
+)
 
-from . import longest_increasing_subsequence
+LONGEST_INCREASING_SUBSEQUENCE_TEST = [
+    ([1, 2, 1, 5], 3),
+    ([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], 6),
+    ([3, 10, 2, 1, 20], 3),
+    ([3, 2], 1),
+    ([50, 3, 10, 7, 40, 80], 4),
+    ([10, 9, 2, 5, 3, 7, 101, 18], 4),
+    ([0, 1, 0, 3, 2, 3], 4),
+    ([7, 7, 7, 7, 7, 7, 7], 1),
+]
+
+FIND_NUMBER_OF_LONGEST_INCREASING_SUBSEQUENCE_TEST_CASES = [
+    ([1, 3, 5, 4, 7], 2),
+    ([2, 2, 2, 2, 2], 5),
+]
 
 
 class LongestIncreasingSubsequenceTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return 3 from input of [1, 2, 1, 5]"""
-        nums = [1, 2, 1, 5]
-        expected = 3
+    @parameterized.expand(LONGEST_INCREASING_SUBSEQUENCE_TEST)
+    def test_longest_increasing_subsequence(self, nums: List[int], expected: int):
         actual = longest_increasing_subsequence(nums)
         self.assertEqual(expected, actual)
 
-    def test_2(self):
-        """should return 6 from input of [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]"""
-        nums = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]
-        expected = 6
-        actual = longest_increasing_subsequence(nums)
-        self.assertEqual(expected, actual)
-
-    def test_3(self):
-        """should return 3 from input of [3, 10, 2, 1, 20]"""
-        nums = [3, 10, 2, 1, 20]
-        expected = 3
-        actual = longest_increasing_subsequence(nums)
-        self.assertEqual(expected, actual)
-
-    def test_4(self):
-        """should return 1 from input of [3, 2]"""
-        nums = [3, 2]
-        expected = 1
-        actual = longest_increasing_subsequence(nums)
-        self.assertEqual(expected, actual)
-
-    def test_5(self):
-        """should return 4 from input of [50, 3, 10, 7, 40, 80]"""
-        nums = [50, 3, 10, 7, 40, 80]
-        expected = 4
-        actual = longest_increasing_subsequence(nums)
-        self.assertEqual(expected, actual)
-
-    def test_6(self):
-        """should return 4 from input of [10,9,2,5,3,7,101,18]"""
-        nums = [10, 9, 2, 5, 3, 7, 101, 18]
-        expected = 4
-        actual = longest_increasing_subsequence(nums)
-        self.assertEqual(expected, actual)
-
-    def test_7(self):
-        """should return 4 from input of [0,1,0,3,2,3]"""
-        nums = [0, 1, 0, 3, 2, 3]
-        expected = 4
-        actual = longest_increasing_subsequence(nums)
-        self.assertEqual(expected, actual)
-
-    def test_8(self):
-        """should return 4 from input of [7,7,7,7,7,7,7]"""
-        nums = [7, 7, 7, 7, 7, 7, 7]
-        expected = 1
-        actual = longest_increasing_subsequence(nums)
+    @parameterized.expand(FIND_NUMBER_OF_LONGEST_INCREASING_SUBSEQUENCE_TEST_CASES)
+    def test_find_number_of_lis(self, nums: List[int], expected: int):
+        actual = find_number_of_lis(nums)
         self.assertEqual(expected, actual)
 
 
