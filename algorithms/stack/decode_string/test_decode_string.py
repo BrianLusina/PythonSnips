@@ -1,28 +1,25 @@
 import unittest
+from parameterized import parameterized
+from algorithms.stack.decode_string import decode_string, decode_string_2
 
-from . import decode_string
+DECODE_STRING_TEST_CASES = [
+    ("3[a]2[bc]", "aaabcbc"),
+    ("3[a2[c]]", "accaccacc"),
+    ("2[abc]3[cd]ef", "abcabccdcdcdef"),
+    ("1[abc]2[def]3[ghi]", "abcdefdefghighighi"),
+    ("1[a2[b3[c4[d]]]]", "abcddddcddddcddddbcddddcddddcdddd"),
+]
 
 
 class DecodeStringTestCases(unittest.TestCase):
-    def test_one(self):
-        """should return aaabcbc from 3[a]2[bc]"""
-        encoded_string = "3[a]2[bc]"
-        expected = "aaabcbc"
+    @parameterized.expand(DECODE_STRING_TEST_CASES)
+    def test_decode_string(self, encoded_string: str, expected: str):
         actual = decode_string(encoded_string)
         self.assertEqual(expected, actual)
 
-    def test_two(self):
-        """should return aaabcbc from 3[a2[c]]"""
-        encoded_string = "3[a2[c]]"
-        expected = "accaccacc"
-        actual = decode_string(encoded_string)
-        self.assertEqual(expected, actual)
-
-    def test_three(self):
-        """should return abcabccdcdcdef from 2[abc]3[cd]ef"""
-        encoded_string = "2[abc]3[cd]ef"
-        expected = "abcabccdcdcdef"
-        actual = decode_string(encoded_string)
+    @parameterized.expand(DECODE_STRING_TEST_CASES)
+    def test_decode_string_2(self, encoded_string: str, expected: str):
+        actual = decode_string_2(encoded_string)
         self.assertEqual(expected, actual)
 
 
