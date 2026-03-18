@@ -23,6 +23,7 @@
       * [Test Is Valid Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/subsequence/test_is_valid_subsequence.py)
   * Backtracking
     * Combination
+      * [Test Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination.py)
       * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
       * [Test Combination 3](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_3.py)
     * Decode Message
@@ -139,6 +140,8 @@
       * [Test Can Visit All Rooms](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/keys_and_rooms/test_can_visit_all_rooms.py)
     * Knight On Chess Board
       * [Test Knight On Chess Board](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/knight_on_chess_board/test_knight_on_chess_board.py)
+    * Last Day Where You Can Still Cross
+      * [Test Last Day You Can Still Cross](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/last_day_where_you_can_still_cross/test_last_day_you_can_still_cross.py)
     * Maxareaofisland
       * [Test Max Area Of Island](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/maxareaofisland/test_max_area_of_island.py)
     * Min Cost To Supply
@@ -203,6 +206,8 @@
     * Ransom Note
       * [Test Ransom Note](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/ransom_note/test_ransom_note.py)
   * Heap
+    * Construct Target With Sums
+      * [Test Construct Target With Sums](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/construct_target_with_sums/test_construct_target_with_sums.py)
     * Kclosestelements
       * [Test Find K Closest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/kclosestelements/test_find_k_closest_elements.py)
     * Longest Happy String
@@ -403,6 +408,8 @@
     * Topkfreqwords
       * [Test Top K Frequent Words](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/topkfreqwords/test_top_k_frequent_words.py)
   * Two Pointers
+    * Append Chars To Make Subsequence
+      * [Test Append Chars To Make Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/append_chars_to_make_subsequence/test_append_chars_to_make_subsequence.py)
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
     * Container With Most Water
@@ -600,6 +607,8 @@
   * Lrucache
     * [With Internal Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lrucache/with_internal_linked_list.py)
     * [With Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/lrucache/with_ordered_dict.py)
+  * Map Sum
+    * [Test Map Sum Pairs](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/map_sum/test_map_sum_pairs.py)
   * Orderedstream
     * [Test Ordered Stream](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/orderedstream/test_ordered_stream.py)
   * Queues
