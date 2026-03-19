@@ -167,6 +167,8 @@
       * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/rotting_oranges/test_rotting_oranges.py)
     * Single Cycle Check
       * [Test Single Cycle Check](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/single_cycle_check/test_single_cycle_check.py)
+    * Sort Items By Group
+      * [Test Sort Items By Groups](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/sort_items_by_group/test_sort_items_by_groups.py)
     * Valid Path
       * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
     * Valid Tree
