@@ -139,16 +139,9 @@ topological order using Kahn’s algorithm. It performs the following steps:
 
 ### Time Complexity
 
-The solution’s time complexity is O(n.2^n) because in the worst case, when the array contains 
-n distinct elements, the recursion tree generates all 2^n possible subsets, resulting in 2^n recursive calls. In each call,
-we create a copy of the current subset, which can take up to O(n) time when the subset is at its largest. Therefore, the
-overall time complexity of this approach is O(n.2^n).
+Time: O(n + m + E) where E is the total number of edges (sum of all beforeItems[i] lengths), since we process each node
+and edge once in both graphs.
 
 ### Space Complexity
 
-The space complexity of the sorting step depends on the specific sorting algorithm used by the language or library, but
-most standard comparison-based sorts require O(log(n)) auxiliary space. The recursive backtracking process uses up to 
-O(n) space on the call stack, as the maximum depth of recursion corresponds to building subsets of length n. The space
-used to store the final list of subsets is not counted toward auxiliary space.
-
-Therefore, the overall auxiliary space complexity of this approach is O(n).
+O(n + m + E) for storing the adjacency lists, in-degree arrays, and the queue used in topological sort.
