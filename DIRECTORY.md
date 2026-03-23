@@ -386,6 +386,8 @@
       * [Test Decimal To Binary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/decimal_to_binary/test_decimal_to_binary.py)
     * Decode String
       * [Test Decode String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/decode_string/test_decode_string.py)
+    * Longest Valid Parentheses
+      * [Test Longest Valid Parentheses](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/longest_valid_parentheses/test_longest_valid_parentheses.py)
     * Minimum String Length After Removing Substrings
       * [Test Min Str Length After Removing Substrings](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/minimum_string_length_after_removing_substrings/test_min_str_length_after_removing_substrings.py)
     * Nextgreater
