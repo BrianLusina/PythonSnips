@@ -32,7 +32,7 @@ def is_valid_bst(root: Optional[BinaryTreeNode]) -> bool:
 
 def kth_smallest_element(root: BinaryTreeNode, k: int) -> Optional[BinaryTreeNode]:
     """
-    Finds the Kth smallest element in a binary search tree.
+    Finds the  Kth smallest element in a binary search tree.
 
     This function recursively performs the inorder traversal(left subtree, root, right subtree) on the binary search
     tree. We will use the inorder traversal to get elements in sorted order.
