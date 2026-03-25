@@ -270,6 +270,9 @@
       * [Test Task Scheduler](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/task_scheduler/test_task_scheduler.py)
   * Josephus Circle
     * [Test Josephus Circle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/josephus_circle/test_josephus_circle.py)
+  * K Way Merge
+    * Kth Smallest Element In Matrix
+      * [Test Kth Smallest Element In Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/k_way_merge/kth_smallest_element_in_matrix/test_kth_smallest_element_in_matrix.py)
   * Matrix
     * Best Meeting Point
       * [Test Best Meeting Point](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/best_meeting_point/test_best_meeting_point.py)
