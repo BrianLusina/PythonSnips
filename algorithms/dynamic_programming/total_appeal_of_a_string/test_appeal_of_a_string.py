@@ -1,6 +1,9 @@
 import unittest
 from parameterized import parameterized
-from algorithms.dynamic_programming.total_appeal_of_a_string import appeal_sum_dp, appeal_sum_hash_table
+from algorithms.dynamic_programming.total_appeal_of_a_string import (
+    appeal_sum_dp,
+    appeal_sum_hash_table,
+)
 
 APPEAL_SUM_TEST_CASES = [
     ("abbca", 28),
@@ -11,6 +14,7 @@ APPEAL_SUM_TEST_CASES = [
     ("madam", 30),
     ("hippopotamus", 279),
 ]
+
 
 class AppealSumTestCase(unittest.TestCase):
     @parameterized.expand(APPEAL_SUM_TEST_CASES)
@@ -23,5 +27,6 @@ class AppealSumTestCase(unittest.TestCase):
         actual = appeal_sum_hash_table(s)
         self.assertEqual(expected, actual)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

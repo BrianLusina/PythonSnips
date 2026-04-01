@@ -1,4 +1,14 @@
 def longest_valid_parentheses(s: str) -> int:
+    """
+    Return the length of the longest valid parentheses substring.
+
+    >>> longest_valid_parentheses("(()")
+    2
+    >>> longest_valid_parentheses(")()())")
+    4
+    >>> longest_valid_parentheses("")
+    0
+    """
     # Stack to store indexes. We initialize it with -1 to serve as a
     # sentinel value. This handles the edge case of a valid substring
     # starting from index 0, allowing us to calculate its length correctly.

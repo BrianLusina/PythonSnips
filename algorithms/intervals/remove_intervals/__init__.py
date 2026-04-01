@@ -24,7 +24,7 @@ def remove_covered_intervals(intervals: List[List[int]]) -> int:
 
     # Sort intervals by start time in ascending order and then by end time in descending order. We sort by the end time
     # to remove a tie-breaker where two intervals have the same start time.
-    # This will incur a time complexity of O(nlogn). We sort in place, so, we do not
+    # This will incur a time complexity of O(nlog(n)). We sort in place, so, we do not
     # incur any additional space complexity by copying over to a new list. The assumption made here is that it is okay
     # to mutate the input list.
     intervals.sort(key=lambda x: (x[0], -x[1]))

@@ -12,7 +12,7 @@ def appeal_sum_dp(s: str) -> int:
 
     for idx, char in enumerate(s):
         # Convert character to index (0-25 for a-z)
-        char_index = ord(char) - ord('a')
+        char_index = ord(char) - ord("a")
         # Calculate new substrings that include current character
         # These are all substrings from (last occurrence of char + 1) to current_index
         # Each adds 1 to the appeal count if char wasn't in that substring before
@@ -25,6 +25,7 @@ def appeal_sum_dp(s: str) -> int:
         last_position[char_index] = idx
 
     return total_appeal_sum
+
 
 def appeal_sum_hash_table(s: str) -> int:
     # Create a hash map to track the last occurrence index of each character

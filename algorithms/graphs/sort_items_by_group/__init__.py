@@ -5,7 +5,6 @@ from collections import deque, defaultdict
 def sort_items(
     n: int, m: int, group: List[int], before_items: List[List[int]]
 ) -> List[int]:
-
     # Assign new group IDs to ungrouped items. -1 means ungrouped
     for i in range(n):
         if group[i] == -1:
@@ -32,7 +31,9 @@ def sort_items(
                 group_graph[group[previous]].append(group[current])
                 group_indegree[group[current]] += 1
 
-    def topological_sort(total_nodes: int, graph: DefaultDict[int, List[int]], in_degree: List[int]) -> List[int]:
+    def topological_sort(
+        total_nodes: int, graph: DefaultDict[int, List[int]], in_degree: List[int]
+    ) -> List[int]:
         queue = deque()
 
         # Add all nodes with 0 in-degree to the queue

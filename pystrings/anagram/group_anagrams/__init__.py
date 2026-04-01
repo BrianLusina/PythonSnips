@@ -1,4 +1,4 @@
-from typing import List, Dict, Tuple
+from typing import List, Tuple, DefaultDict
 from collections import defaultdict
 
 
@@ -12,7 +12,7 @@ def group_anagrams_naive(strs: List[str]) -> List[List[str]]:
     Returns:
         List[List[str]]: A list of lists, where each inner list contains strings that are anagrams of each other
     """
-    word_map: Dict[str, List[str]] = defaultdict(list)
+    word_map: DefaultDict[str, List[str]] = defaultdict(list)
     # traversing the list of strings takes O(n) time where n is the number of strings in this list
     for word in strs:
         # Note that the sorting here takes O(nlog(n)) time were n is the number of characters in this string
@@ -56,7 +56,7 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     Returns:
         List[List[str]]: A list of lists, where each inner list contains strings that are anagrams of each other
     """
-    word_map: Dict[Tuple[int, ...], List[str]] = defaultdict(list)
+    word_map: DefaultDict[Tuple[int, ...], List[str]] = defaultdict(list)
     # traversing the list of strings takes O(n) time where n is the number of strings in this list
     for word in strs:
         count = [0] * 26

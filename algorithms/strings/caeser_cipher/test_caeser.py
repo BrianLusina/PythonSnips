@@ -1,6 +1,6 @@
 import unittest
 
-from cryptography.caeser_cipher import CaesarCipher, CaesarCipherV2
+from algorithms.strings.caeser_cipher import CaesarCipher, CaesarCipherV2
 
 
 class CaeserCipherTests(unittest.TestCase):
