@@ -30,7 +30,7 @@ def min_cost_to_hire_workers_2(quality, wage, k):
 
     heap = []  # A max-heap (using negative values for qualities)
     total_quality = 0  # Sum of the qualities of the selected workers
-    min_cost = float('inf')  # Initialize the minimum cost to infinity
+    min_cost = float("inf")  # Initialize the minimum cost to infinity
 
     # Step 2: Iterate through each worker sorted by their wage-to-quality ratio
     for ratio, q in workers:

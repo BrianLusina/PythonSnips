@@ -1,7 +1,10 @@
 import unittest
 from typing import List
 from parameterized import parameterized
-from algorithms.heap.min_cost_hire_k_workers import min_cost_to_hire_workers, min_cost_to_hire_workers_2
+from algorithms.heap.min_cost_hire_k_workers import (
+    min_cost_to_hire_workers,
+    min_cost_to_hire_workers_2,
+)
 
 MIN_COST_TO_HIRE_K_WORKERS_TEST_CASES = [
     ([10, 20, 5], [70, 50, 30], 2, 105.00000),
