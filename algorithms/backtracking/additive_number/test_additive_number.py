@@ -13,6 +13,8 @@ IS_ADDITIVE_NUMBER_TEST_CASES = [
     ("000", True),
     ("1", False),
     ("0", False),
+    ("101", True),
+    ("1023", False),
 ]
 
 

@@ -11,7 +11,7 @@ def is_additive_number_dfs(num: str) -> bool:
         if a + b > 0 and number[0] == "0":
             return False
 
-        for i in range(1, n + 1):
+        for i in range(1, len(number) + 1):
             if a + b == int(number[:i]):
                 if dfs(b, a + b, number[i:]):
                     return True

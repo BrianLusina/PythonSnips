@@ -74,10 +74,8 @@ Now, let's look at the solution steps below:
 
 ### Time Complexity
 
-The time complexity of the solution is O(n^3) in the worst case, where n is the length of the string num. The outer two
-levels of recursion effectively choose the lengths of the first two numbers, which gives O(n^2) combinations. For each
-combination, verifying the rest of the string takes O(n) time since the additive property uniquely determines each
-subsequent number. Additionally, converting substrings to integers takes up to O(n) per conversion.
+The time complexity is commonly described as O(n^3): O(n^2) choices for the first two numbers, and O(n) to validate the
++rest for each choice. If you also account for substring-to-integer parsing cost, the practical bound can be higher.
 
 > Note that Python natively handles arbitrarily large integers, which addresses the follow-up question about overflow
 > for very large inputs, no special handling is needed.
