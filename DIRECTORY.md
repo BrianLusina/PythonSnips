@@ -22,6 +22,8 @@
     * Subsequence
       * [Test Is Valid Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/arrays/subsequence/test_is_valid_subsequence.py)
   * Backtracking
+    * Additive Number
+      * [Test Additive Number](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/additive_number/test_additive_number.py)
     * Combination
       * [Test Combination](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination.py)
       * [Test Combination 2](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/backtracking/combination/test_combination_2.py)
@@ -59,6 +61,9 @@
         * [Shortest Reach](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/bfs/graphs/shortest_reach/shortest_reach.py)
       * Smallest Set Of Vertices
         * [Smallest Set Of Vertices](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/bfs/graphs/smallest_set_of_vertices/smallest_set_of_vertices.py)
+  * Counting
+    * Rank Teams By Votes
+      * [Test Rank Teams By Votes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/counting/rank_teams_by_votes/test_rank_teams_by_votes.py)
   * Dollar Bills
     * [Make Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dollar_bills/make_change.py)
   * Dynamic Programming
@@ -114,6 +119,8 @@
       * [Test Pascals Triangle](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/pascals_triangle/test_pascals_triangle.py)
     * Shortest Common Supersequence
       * [Test Shortest Common Supersequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/shortest_common_supersequence/test_shortest_common_supersequence.py)
+    * Total Appeal Of A String
+      * [Test Appeal Of A String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/total_appeal_of_a_string/test_appeal_of_a_string.py)
     * Unique Paths
       * [Test Unique Paths](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/unique_paths/test_unique_paths.py)
     * Word Break
@@ -153,6 +160,7 @@
     * Network Delay Time
       * [Test Network Delay Time](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/network_delay_time/test_network_delay_time.py)
     * Number Of Islands
+      * [Test Number Of Distinct Islands](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/test_number_of_distinct_islands.py)
       * [Test Number Of Islands](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/test_number_of_islands.py)
       * [Union Find](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/number_of_islands/union_find.py)
     * Number Of Provinces
@@ -165,6 +173,8 @@
       * [Test Reorder Routes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/reorder_routes/test_reorder_routes.py)
     * Rotting Oranges
       * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/rotting_oranges/test_rotting_oranges.py)
+    * Shortest Path Length
+      * [Test Shortest Path Length](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/shortest_path_length/test_shortest_path_length.py)
     * Single Cycle Check
       * [Test Single Cycle Check](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/single_cycle_check/test_single_cycle_check.py)
     * Sort Items By Group
@@ -249,6 +259,8 @@
     * Employee Free Time
       * [Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/employee_free_time/interval.py)
       * [Test Employee Free Time](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/employee_free_time/test_employee_free_time.py)
+    * Find Right Interval
+      * [Test Find Right Interval](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/find_right_interval/test_find_right_interval.py)
     * Full Bloom Flowers
       * [Test Full Bloom Flowers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/full_bloom_flowers/test_full_bloom_flowers.py)
     * Insert Interval
@@ -266,6 +278,8 @@
       * [Test Non Overlapping Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/non_overlapping_intervals/test_non_overlapping_intervals.py)
     * Remove Intervals
       * [Test Remove Covered Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/remove_intervals/test_remove_covered_intervals.py)
+    * Remove Min Intervals
+      * [Test Remove Min Intervals](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/remove_min_intervals/test_remove_min_intervals.py)
     * Task Scheduler
       * [Test Task Scheduler](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/intervals/task_scheduler/test_task_scheduler.py)
   * Josephus Circle
@@ -755,6 +769,13 @@
     * [Circuit Breaker](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/circuit_breaker/circuit_breaker.py)
   * Continuous Median
     * [Test Continuous Median Handler](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/continuous_median/test_continuous_median_handler.py)
+  * Creational
+    * Factory
+      * Notification
+        * [Email Notification](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/creational/factory/notification/email_notification.py)
+        * [Notification](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/creational/factory/notification/notification.py)
+        * [Notification Factory](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/creational/factory/notification/notification_factory.py)
+        * [Sms Notification](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/creational/factory/notification/sms_notification.py)
   * Event Stream
     * [Audit Logger](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/audit_logger.py)
     * [Batch Event Processor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/batch_event_processor.py)
