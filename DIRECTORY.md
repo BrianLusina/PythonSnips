@@ -137,6 +137,8 @@
       * [Test Alien Dictionary](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/alien_dictionary/test_alien_dictionary.py)
     * Cat And Mouse
       * [Test Cat And Mouse](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/cat_and_mouse/test_cat_and_mouse.py)
+    * Cheapest Flights With K Stops
+      * [Test Cheapest Flights With K Stops](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/cheapest_flights_with_k_stops/test_cheapest_flights_with_k_stops.py)
     * Course Schedule
       * [Test Course Schedule](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/course_schedule/test_course_schedule.py)
     * Evaluate Division
