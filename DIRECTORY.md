@@ -426,6 +426,8 @@
     * Smallest Range Covering K Lists
       * [Test Smallest Range Covering Elements From K Lists](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/top_k_elements/smallest_range_covering_k_lists/test_smallest_range_covering_elements_from_k_lists.py)
   * Trie
+    * Index Pairs Of A String
+      * [Test Index Pairs Of A String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/index_pairs_of_a_string/test_index_pairs_of_a_string.py)
     * Longest Word With Prefixes
       * [Test Longest Word With Prefixes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/longest_word_with_prefixes/test_longest_word_with_prefixes.py)
     * Topkfreqwords
