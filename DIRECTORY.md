@@ -217,6 +217,8 @@
       * [Test First Unique Character](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/first_unique_character/test_first_unique_character.py)
     * Jewels And Stones
       * [Test Jewels And Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/jewels_and_stones/test_jewels_and_stones.py)
+    * Powerful Integers
+      * [Test Powerful Integers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/powerful_integers/test_powerful_integers.py)
     * Ransom Note
       * [Test Ransom Note](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/ransom_note/test_ransom_note.py)
   * Heap
