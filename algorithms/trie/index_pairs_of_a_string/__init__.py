@@ -1,6 +1,7 @@
 from typing import List
 from datastructures.trees.trie import Trie
 
+
 def index_pairs(text: str, words: List[str]) -> List[List[int]]:
     trie = Trie()
 
