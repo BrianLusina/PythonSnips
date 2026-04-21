@@ -47,7 +47,7 @@ The steps of the algorithm are given below:
    subarray within the input list.
 
 ### Time Complexity
-The time complexity of this solution is O(n), because we are iterating the array once, where n is the total number of
+The time complexity of this solution is O(n) because we are iterating the array once, where n is the total number of
 elements in the array.
 
 ### Space Complexity
