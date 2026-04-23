@@ -1051,6 +1051,8 @@
 
 ## Pystrings
   * Anagram
+    * Count Anagrams
+      * [Test Count Anagrams](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/count_anagrams/test_count_anagrams.py)
     * Group Anagrams
       * [Test Group Anagrams](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/group_anagrams/test_group_anagrams.py)
     * [Test Anagram](https://github.com/BrianLusina/PythonSnips/blob/master/pystrings/anagram/test_anagram.py)
