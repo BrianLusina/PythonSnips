@@ -1,65 +1,37 @@
 import unittest
+from typing import List
+from parameterized import parameterized
+from utils.test_utils import custom_test_name_func
+from algorithms.graphs.number_of_provinces import (
+    number_of_provinces,
+    number_of_provinces_dfs,
+)
 
-from . import number_of_provinces, number_of_provinces_dfs
+NUMBER_OF_PROVINCES_TEST_CASES = [
+    ([], 0),
+    ([[1, 1, 0], [1, 1, 0], [0, 0, 1]], 2),
+    ([[1, 0, 0], [0, 1, 0], [0, 0, 1]], 3),
+    ([[1, 1, 1], [1, 1, 1], [1, 1, 1]], 1),
+]
 
 
 class NumberOfProvincesTestCase(unittest.TestCase):
-    def test_empty_grid(self):
-        """returns 0 for an empty grid"""
-        is_connected = []
+    @parameterized.expand(
+        NUMBER_OF_PROVINCES_TEST_CASES, name_func=custom_test_name_func
+    )
+    def test_number_of_provinces_union_find(
+        self, is_connected: List[List[int]], expected: int
+    ):
         actual = number_of_provinces(is_connected)
-        expected = 0
         self.assertEqual(expected, actual)
 
-    def test_returns_2_for_3_cities_in_grid(self):
-        """returns 2 for a grid of  [[1,1,0],[1,1,0],[0,0,1]]"""
-        is_connected = [[1, 1, 0], [1, 1, 0], [0, 0, 1]]
-        actual = number_of_provinces(is_connected)
-        expected = 2
-        self.assertEqual(expected, actual)
-
-    def test_returns_3_for_3_cities_in_grid(self):
-        """returns 3 for a grid of [[1,0,0],[0,1,0],[0,0,1]]"""
-        is_connected = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
-        actual = number_of_provinces(is_connected)
-        expected = 3
-        self.assertEqual(expected, actual)
-
-    def test_returns_1_for_3_cities_in_grid(self):
-        """returns 1 for a grid of [[1,1,1],[1,1,1],[1,1,1]]"""
-        is_connected = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
-        actual = number_of_provinces(is_connected)
-        expected = 1
-        self.assertEqual(expected, actual)
-
-
-class NumberOfProvincesDfsTestCase(unittest.TestCase):
-    def test_empty_grid(self):
-        """returns 0 for an empty grid"""
-        is_connected = []
+    @parameterized.expand(
+        NUMBER_OF_PROVINCES_TEST_CASES, name_func=custom_test_name_func
+    )
+    def test_number_of_provinces_dfs(
+        self, is_connected: List[List[int]], expected: int
+    ):
         actual = number_of_provinces_dfs(is_connected)
-        expected = 0
-        self.assertEqual(expected, actual)
-
-    def test_returns_2_for_3_cities_in_grid(self):
-        """returns 2 for a grid of  [[1,1,0],[1,1,0],[0,0,1]]"""
-        is_connected = [[1, 1, 0], [1, 1, 0], [0, 0, 1]]
-        actual = number_of_provinces_dfs(is_connected)
-        expected = 2
-        self.assertEqual(expected, actual)
-
-    def test_returns_3_for_3_cities_in_grid(self):
-        """returns 3 for a grid of [[1,0,0],[0,1,0],[0,0,1]]"""
-        is_connected = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
-        actual = number_of_provinces_dfs(is_connected)
-        expected = 3
-        self.assertEqual(expected, actual)
-
-    def test_returns_1_for_3_cities_in_grid(self):
-        """returns 1 for a grid of [[1,1,1],[1,1,1],[1,1,1]]"""
-        is_connected = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
-        actual = number_of_provinces_dfs(is_connected)
-        expected = 1
         self.assertEqual(expected, actual)
 
 
