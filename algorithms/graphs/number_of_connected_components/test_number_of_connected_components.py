@@ -5,7 +5,7 @@ from utils.test_utils import custom_test_name_func
 from algorithms.graphs.number_of_connected_components import (
     count_components_union_find,
     count_components_dfs,
-    count_components_dfs_iterative
+    count_components_dfs_iterative,
 )
 
 COUNT_COMPONENTS_TEST_CASES = [
@@ -31,7 +31,9 @@ class NumberOfConnectedComponentsInUndirectedGraphTestCase(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     @parameterized.expand(COUNT_COMPONENTS_TEST_CASES, name_func=custom_test_name_func)
-    def test_count_components_dfs_iterative(self, n: int, edges: List[List[int]], expected: int):
+    def test_count_components_dfs_iterative(
+        self, n: int, edges: List[List[int]], expected: int
+    ):
         actual = count_components_dfs_iterative(n, edges)
         self.assertEqual(expected, actual)
 

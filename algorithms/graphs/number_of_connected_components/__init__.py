@@ -75,6 +75,7 @@ def count_components_dfs(n: int, edges: List[List[int]]) -> int:
 
     return total
 
+
 def count_components_dfs_iterative(n: int, edges: List[List[int]]) -> int:
     """
     Count the number of connected components in an undirected graph.
