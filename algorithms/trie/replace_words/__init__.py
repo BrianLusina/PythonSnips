@@ -1,6 +1,7 @@
 import collections
 from functools import reduce
 from typing import List
+from datastructures import Trie, TrieNode
 
 
 def replace_words_with_prefix_hash(dictionary: List[str], sentence: str) -> str:
@@ -74,3 +75,44 @@ def replace_words_with_trie(dictionary: List[str], sentence: str) -> str:
         return cur.get(end, word)
 
     return " ".join(map(replace, sentence.split()))
+
+
+def replace_words_with_trie_2(sentence: str, dictionary: List[str]) -> str:
+    trie = Trie()
+
+    # iterate over the prefixes in the dictionary and insert them into the trie
+    for prefix in dictionary:
+        trie.insert(prefix)
+
+    # Store each of the word in the sentence in a new list
+    word_list = sentence.split()
+
+    # iterate over all the words in the list
+    for idx in range(len(word_list)):
+
+        def replace(root: TrieNode, word: str) -> str:
+            """
+            This replaces each word in the sentence with the smallest word from the dictionary
+            """
+            curr = root
+            # iterate over each dictionary word along with the index of that character
+            for i, char in enumerate(word):
+                # If the character does not belong to the current node's children, then return the word
+                if char not in curr.children:
+                    return word
+
+                # Move to the child of the current node corresponding to the current character
+                curr = curr.children[char]
+
+                # When the flag is_end becomes true, this means we have reached the end of the word in the trie. If this is
+                # the case, then return this word
+                if curr.is_end:
+                    return word[: i + 1]
+
+            return word
+
+        # replace each word in the word_list with the shortest prefix from the trie
+        word_list[idx] = replace(trie.root, word_list[idx])
+
+    # After replacing each word with the shortest matching prefix, convert the list of words back to a single sentence.
+    return " ".join(word_list)

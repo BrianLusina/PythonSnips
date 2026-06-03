@@ -43,15 +43,22 @@ class Trie:
             None
         """
         curr = self.root
+        # Strip the word of any leading or trailing white spaces
         stripped_word = word.strip()
 
+        # Iterate through each character in the word
         for char in stripped_word:
+            # If the character does not belong to any child of the current trie node, then create a new trie node for
+            # this character as a child of the current node
             if char not in curr.children:
                 curr.children[char] = TrieNode()
+
+            # move to the child of the current node (either already present or just added)
             curr = curr.children[char]
             if index is not None:
                 if curr.index is None or index < curr.index:
                     curr.index = index
+        # Set a flag as the end of the inserted word
         curr.is_end = True
 
     def search_exact(self, word: str) -> bool:
