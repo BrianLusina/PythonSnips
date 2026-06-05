@@ -8,6 +8,6 @@ def custom_test_name_func(testcase_func, param_num, param):
 
     formatted_test_input = ""
     for idx, test_input in enumerate(test_inputs):
-        formatted_test_input += f"(argument={idx}, input={test_input}) "
+        formatted_test_input += f"(argument={idx}, value={test_input}) "
 
     return f"{testcase_func.__name__}, test_number={param_num} inputs={formatted_test_input}, expected={expected}"
