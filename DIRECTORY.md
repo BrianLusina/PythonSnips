@@ -1061,6 +1061,8 @@
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
   * Power Of I
     * [Test Power Of I](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/power_of_i/test_power_of_i.py)
+  * Power Of Three
+    * [Test Power Of Three](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/power_of_three/test_power_of_three.py)
   * Power Of Two
     * [Test Power Of Two](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/power_of_two/test_power_of_two.py)
   * Rectangle Area
