@@ -78,6 +78,8 @@
       * [Test Climb Stairs](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/climb_stairs/test_climb_stairs.py)
     * Coin Change
       * [Test Coin Change](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/coin_change/test_coin_change.py)
+    * Count Number Of Good Subsequences
+      * [Test Count Number Of Good Subsequences](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/count_number_of_good_subsequences/test_count_number_of_good_subsequences.py)
     * Countingbits
       * [Test Counting Bits](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/dynamic_programming/countingbits/test_counting_bits.py)
     * Decodeways
