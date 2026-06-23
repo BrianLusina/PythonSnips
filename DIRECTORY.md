@@ -466,6 +466,8 @@
       * [Test Append Chars To Make Subsequence](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/append_chars_to_make_subsequence/test_append_chars_to_make_subsequence.py)
     * Array 3 Pointers
       * [Test Array 3 Pointers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/array_3_pointers/test_array_3_pointers.py)
+    * Backspace String Compare
+      * [Test Backspace String Compare](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/backspace_string_compare/test_backspace_string_compare.py)
     * Container With Most Water
       * [Test Container With Most Water](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/two_pointers/container_with_most_water/test_container_with_most_water.py)
     * Count Pairs
