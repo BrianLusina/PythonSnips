@@ -18,6 +18,9 @@ class BinaryTreeNode(TreeNode):
         key: Optional[Any] = None,
         parent: Optional["BinaryTreeNode"] = None,
         nxt: Optional["BinaryTreeNode"] = None,
+        depth: Optional[int] = None,
+        height: Optional[int] = None,
+        degree: Optional[int] = None,
     ) -> None:
         """
         Constructor for BinaryTreeNode class. This will create a new node with the provided data and optional
@@ -35,7 +38,7 @@ class BinaryTreeNode(TreeNode):
             of the tree, then this is the next node on the next level starting from the left. If this is the last node
             in the tree, then this is None.
         """
-        super().__init__(data, key, parent)
+        super().__init__(data, key, parent, depth, height, degree)
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
         # Next is a pointer that connects this node to it's right sibling in the tree. If this node is the right most

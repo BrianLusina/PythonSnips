@@ -13,7 +13,13 @@ class TreeNode(Generic[T]):
     """
 
     def __init__(
-        self, value: T, key: Optional[Any] = None, parent: Optional["TreeNode"] = None
+        self,
+        value: T,
+        key: Optional[Any] = None,
+        parent: Optional["TreeNode"] = None,
+        depth: Optional[int] = None,
+        height: Optional[int] = None,
+        degree: Optional[int] = None,
     ):
         """
         Initialises a tree node with a value, key and a parent node.
@@ -23,6 +29,9 @@ class TreeNode(Generic[T]):
             value (T): The value of the node
             key (Optional[Any]): The key of the node. If not provided, a hash of the data is used.
             parent (Optional[TreeNode]): The parent node of the current node.
+            depth (int): The depth of the current node.
+            height (int): The height of the current node.
+            degree (int): The degree of the current node.
 
         Notes:
             The key is used to identify the node in the tree. If not key is provided, a hash of the data is used.
@@ -30,9 +39,12 @@ class TreeNode(Generic[T]):
         self.data = value
         self.key = key or hash(value)
         self.parent = parent
+        self.depth = depth
+        self.height = height
+        self.degree = degree
 
     def __repr__(self):
-        return f"TreeNode(data={self.data}, key={self.key})"
+        return f"TreeNode(data={self.data}, key={self.key}, depth={self.depth}, height={self.height}, degree={self.degree})"
 
     def __eq__(self, other: "TreeNode[T]") -> bool:
         """Checks if this node is equal to another node based on the data they contain
