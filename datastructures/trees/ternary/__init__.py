@@ -1,5 +1,5 @@
 from typing import Optional, List
-from datastructures.trees import Tree, TreeNode, T
+from datastructures.trees.tree import Tree, TreeNode, T
 from datastructures.trees.ternary.node import TernaryTreeNode
 
 

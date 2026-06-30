@@ -1,6 +1,6 @@
 from typing import List, Any
 from collections import deque
-from .. import Tree, T
+from datastructures.trees.tree import Tree, T
 from .node import NAryNode
 
 

@@ -4,7 +4,8 @@ from collections import defaultdict, deque
 from itertools import chain
 
 from datastructures.stacks.dynamic import DynamicSizeStack
-from datastructures.trees import Tree, TreeNode, T
+from datastructures.trees.tree import Tree, T
+from datastructures.trees.node import TreeNode
 from datastructures.trees.binary.node import BinaryTreeNode
 from datastructures.trees.binary.tree.binary_tree_utils import longest_uni_value_path
 from datastructures.queues.fifo import FifoQueue
@@ -159,7 +160,7 @@ class BinaryTree(Tree):
         if not self.root:
             return data
 
-        def pre_order_helper(root: BinaryTreeNode):
+        def pre_order_helper(root: Optional[BinaryTreeNode]):
             if not root:
                 return
             data.append(root.data)
@@ -174,7 +175,7 @@ class BinaryTree(Tree):
         if not self.root:
             return data
 
-        def inorder_helper(root: BinaryTreeNode):
+        def inorder_helper(root: Optional[BinaryTreeNode]):
             if not root:
                 return
             inorder_helper(root.left)
@@ -189,7 +190,7 @@ class BinaryTree(Tree):
         if not self.root:
             return data
 
-        def post_order_helper(root: BinaryTreeNode):
+        def post_order_helper(root: Optional[BinaryTreeNode]):
             if not root:
                 return
             post_order_helper(root.left)

@@ -1,5 +1,5 @@
 from typing import Optional, List
-from datastructures.trees import Tree, T
+from datastructures.trees.tree import Tree, T
 from .node import AvlTreeNode
 
 

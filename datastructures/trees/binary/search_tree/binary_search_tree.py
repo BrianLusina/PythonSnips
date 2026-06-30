@@ -456,7 +456,7 @@ class BinarySearchTree(BinaryTree):
         if not self.root:
             return None
 
-        def inorder(node: BinaryTreeNode):
+        def inorder(node: Optional[BinaryTreeNode]):
             if node:
                 yield from inorder(node.left)
                 yield node.data
