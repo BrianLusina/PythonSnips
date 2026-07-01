@@ -1,8 +1,7 @@
-from typing import List, Generic, TypeVar, Any
+from typing import List, Generic
 from abc import ABC, abstractmethod
 from .node import TreeNode
-
-T = TypeVar("T", bound=Any)
+from datastructures.trees.types import T
 
 
 class Tree(ABC, Generic[T]):

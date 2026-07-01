@@ -3,8 +3,8 @@ from datastructures.trees.binary.node import BinaryTreeNode
 
 from datastructures.queues.fifo import FifoQueue
 from datastructures.stacks.dynamic import DynamicSizeStack
-from datastructures.trees import T
 from datastructures.trees.binary.tree import BinaryTree
+from datastructures.trees.types import T
 
 
 class BinarySearchTree(BinaryTree):

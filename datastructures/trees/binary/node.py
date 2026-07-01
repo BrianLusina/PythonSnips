@@ -1,6 +1,7 @@
 from typing import Optional, List, Any
 
-from datastructures.trees.node import TreeNode, T
+from datastructures.trees.node import TreeNode
+from datastructures.trees.types import T
 
 
 class BinaryTreeNode(TreeNode):
@@ -21,6 +22,8 @@ class BinaryTreeNode(TreeNode):
         depth: Optional[int] = None,
         height: Optional[int] = None,
         degree: Optional[int] = None,
+        left_thread: Optional[bool] = False,
+        right_thread: Optional[bool] = False,
     ) -> None:
         """
         Constructor for BinaryTreeNode class. This will create a new node with the provided data and optional
@@ -38,7 +41,16 @@ class BinaryTreeNode(TreeNode):
             of the tree, then this is the next node on the next level starting from the left. If this is the last node
             in the tree, then this is None.
         """
-        super().__init__(data, key, parent, depth, height, degree)
+        super().__init__(
+            data,
+            key,
+            parent,
+            depth,
+            height,
+            degree,
+            left_thread=left_thread,
+            right_thread=right_thread,
+        )
         self.left: Optional[BinaryTreeNode] = left
         self.right: Optional[BinaryTreeNode] = right
         # Next is a pointer that connects this node to it's right sibling in the tree. If this node is the right most
@@ -187,11 +199,6 @@ class BinaryTreeNode(TreeNode):
             return [self.right]
         if not self.left and not self.right:
             return []
-
-    @property
-    def height(self) -> int:
-        """Height of a node is the number of edges from this node to the deepest node"""
-        pass
 
     def __repr__(self):
         parent_data = self.parent.data if self.parent else None

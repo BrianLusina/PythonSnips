@@ -1,6 +1,5 @@
-from typing import Generic, TypeVar, Any, Optional
-
-T = TypeVar("T", bound=Any)
+from typing import Generic, Any, Optional
+from datastructures.trees.types import T
 
 
 class TreeNode(Generic[T]):
@@ -20,6 +19,8 @@ class TreeNode(Generic[T]):
         depth: Optional[int] = None,
         height: Optional[int] = None,
         degree: Optional[int] = None,
+        left_thread: Optional[bool] = False,
+        right_thread: Optional[bool] = False,
     ):
         """
         Initialises a tree node with a value, key and a parent node.
@@ -32,6 +33,10 @@ class TreeNode(Generic[T]):
             depth (int): The depth of the current node.
             height (int): The height of the current node.
             degree (int): The degree of the current node.
+            left_thread (bool): Whether this node has a thread pointer to its inorder predecessor. Defaults to False. If
+                True, the pointer is a thread (predecessor). False indicates the pointer is a real child link or None
+            right_thread (bool): Whether this node has a thread pointer to its successor. Defaulted to False. If True, the
+                pointer is a thread to the inorder successor.
 
         Notes:
             The key is used to identify the node in the tree. If not key is provided, a hash of the data is used.
@@ -42,9 +47,14 @@ class TreeNode(Generic[T]):
         self.depth = depth
         self.height = height
         self.degree = degree
+        self.left_thread = left_thread
+        self.right_thread = right_thread
 
     def __repr__(self):
-        return f"TreeNode(data={self.data}, key={self.key}, depth={self.depth}, height={self.height}, degree={self.degree})"
+        return (
+            f"TreeNode(data={self.data}, key={self.key}, depth={self.depth}, height={self.height}, degree={self.degree}, "
+            f"left_thread={self.left_thread}, right_thread={self.right_thread})"
+        )
 
     def __eq__(self, other: "TreeNode[T]") -> bool:
         """Checks if this node is equal to another node based on the data they contain

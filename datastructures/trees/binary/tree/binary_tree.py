@@ -4,7 +4,8 @@ from collections import defaultdict, deque
 from itertools import chain
 
 from datastructures.stacks.dynamic import DynamicSizeStack
-from datastructures.trees.tree import Tree, T
+from datastructures.trees.tree import Tree
+from datastructures.trees.types import T
 from datastructures.trees.node import TreeNode
 from datastructures.trees.binary.node import BinaryTreeNode
 from datastructures.trees.binary.tree.binary_tree_utils import longest_uni_value_path
@@ -66,7 +67,7 @@ class BinaryTree(Tree):
     def has_next(self) -> bool:
         pass
 
-    def increasing_order_traversal(self) -> TreeNode:
+    def increasing_order_traversal(self) -> BinaryTreeNode:
         pass
 
     def get_depth(self) -> int:
