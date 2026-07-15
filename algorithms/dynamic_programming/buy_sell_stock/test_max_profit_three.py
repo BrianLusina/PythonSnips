@@ -1,65 +1,28 @@
 import unittest
+from typing import List
+from parameterized import parameterized
+from algorithms.dynamic_programming.buy_sell_stock import (
+    max_profit_3,
+    max_profit_3_state_compressed_dp,
+)
 
-from . import max_profit_3
 
-
-class MaxProfit3TestCases(unittest.TestCase):
-    def test_empty_array(self):
-        nums = []
-        expected = 0
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_are_same(self):
-        nums = [1, 1, 1, 1]
-        expected = 0
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_single_element_array(self):
-        nums = [1]
-        expected = 0
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_7_1_5_3_6_4_should_return_7(self):
-        nums = [7, 1, 5, 3, 6, 4]
-        expected = 7
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_7_6_4_3_1_should_return_0(self):
-        nums = [7, 6, 4, 3, 1]
-        expected = 0
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_1_2_3_4_5_should_return_4(self):
-        nums = [1, 2, 3, 4, 5]
-        expected = 4
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_3_3_5_0_0_3_1_4_should_return_6(self):
-        nums = [3, 3, 5, 0, 0, 3, 1, 4]
-        expected = 6
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_1_2_1_2_should_return_2(self):
-        nums = [1, 2, 1, 2]
-        expected = 2
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_7_2_4_8_7_should_return_6(self):
-        nums = [7, 2, 4, 8, 7]
-        expected = 6
-        actual = max_profit_3(nums)
-        self.assertEqual(expected, actual)
-
-    def test_prices_should_return_19838139(self):
-        nums = [
+MAX_PROFIT_3_TEST_CASES = [
+    ("empty array", [], 0),
+    ("prices are same", [1, 1, 1, 1], 0),
+    ("single element array", [1], 0),
+    ("prices=[7, 1, 5, 3, 6, 4]", [7, 1, 5, 3, 6, 4], 7),
+    ("prices=[7, 6, 4, 3, 1]", [7, 6, 4, 3, 1], 0),
+    ("prices=[1, 2, 3, 4, 5]", [1, 2, 3, 4, 5], 4),
+    ("prices=[3, 3, 5, 0, 0, 3, 1, 4]", [3, 3, 5, 0, 0, 3, 1, 4], 6),
+    ("prices=[1, 2, 1, 2]", [1, 2, 1, 2], 2),
+    ("prices=[3,3,5,0,0,3,1,4]", [3, 3, 5, 0, 0, 3, 1, 4], 6),
+    ("prices=[2,4,1,7,3,6]", [2, 4, 1, 7, 3, 6], 9),
+    ("prices=[1,5,2,8,3,10]", [1, 5, 2, 8, 3, 10], 14),
+    ("prices=[7, 2, 4, 8, 7]", [7, 2, 4, 8, 7], 6),
+    (
+        "prices=large array",
+        [
             7551982,
             8124939,
             4023780,
@@ -367,9 +330,23 @@ class MaxProfit3TestCases(unittest.TestCase):
             8447466,
             4985240,
             4176179,
-        ]
-        expected = 19838139
-        actual = max_profit_3(nums)
+        ],
+        19838139,
+    ),
+]
+
+
+class MaxProfit3TestCases(unittest.TestCase):
+    @parameterized.expand(MAX_PROFIT_3_TEST_CASES)
+    def test_max_profit_3(self, _: str, prices: List[int], expected: int):
+        actual = max_profit_3(prices)
+        self.assertEqual(expected, actual)
+
+    @parameterized.expand(MAX_PROFIT_3_TEST_CASES)
+    def test_max_profit_3_state_compressed_dp(
+        self, _: str, prices: List[int], expected: int
+    ):
+        actual = max_profit_3_state_compressed_dp(prices)
         self.assertEqual(expected, actual)
 
 

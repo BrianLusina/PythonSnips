@@ -6,6 +6,9 @@ class Trie:
     def __init__(self):
         self.root = TrieNode()
 
+    def __repr__(self):
+        return f"Trie(root={self.root})"
+
     def insert(self, word: str, index: Optional[int] = None) -> None:
         """
         Inserts a word into the Trie. This has an optional index argument that allows
@@ -29,8 +32,8 @@ class Trie:
                               ↘
                                e(2) → r(2)
 
-        Index then tracks the earliest index of the word in the original list. So, for the example above, the index of
-        "player" would be 2, not 0.
+        The Index then tracks the earliest index of the word in the original list. So, for the example above, the index
+        of "player" would be 2, not 0.
 
         Parameters:
             word (str): The word to insert
@@ -40,37 +43,50 @@ class Trie:
             None
         """
         curr = self.root
+        # Strip the word of any leading or trailing white spaces
+        stripped_word = word.strip()
 
-        for char in word:
+        # Iterate through each character in the word
+        for char in stripped_word:
+            # If the character does not belong to any child of the current trie node, then create a new trie node for
+            # this character as a child of the current node
+            if char not in curr.children:
+                curr.children[char] = TrieNode()
+
+            # move to the child of the current node (either already present or just added)
             curr = curr.children[char]
             if index is not None:
-                curr.index = min(curr.index or float("inf"), index)
-
+                if curr.index is None or index < curr.index:
+                    curr.index = index
+        # Set a flag as the end of the inserted word
         curr.is_end = True
 
-    def search(self, word: str) -> List[str]:
-        if len(word) == 0:
+    def search_exact(self, word: str) -> bool:
+        """
+        Returns true if the exact word exists in the trie
+        """
+        curr = self.root
+        for char in word:
+            if char not in curr.children:
+                return False
+            curr = curr.children[char]
+        return curr.is_end
+
+    def get_completions(self, prefix: str) -> List[str]:
+        if len(prefix) == 0:
             return []
 
         curr = self.root
 
-        for char in word:
-            if char in curr.children:
-                curr = curr.children[char]
-            else:
+        for char in prefix:
+            if char not in curr.children:
                 return []
+            curr = curr.children[char]
 
-        output = []
+        words = []
 
-        def dfs(node: TrieNode, prefix: str) -> None:
-            if node.is_end:
-                output.append((prefix + "".join(node.children.keys())))
-
-            for child in node.children.values():
-                dfs(child, prefix + "".join(node.children.keys()))
-
-        dfs(curr, word[:-1])
-        return output
+        self._dfs(curr, list(prefix), words)
+        return words
 
     def starts_with(self, prefix: str) -> bool:
         """
@@ -85,5 +101,72 @@ class Trie:
 
         return True
 
-    def __repr__(self):
-        return f"Trie(root={self.root})"
+    def remove_characters(self, string_to_delete: str):
+        """
+        Removes a string from the trie
+        """
+        node = self.root
+        child_list = []
+
+        for c in string_to_delete:
+            child_list.append([node, c])
+            node = node.children[c]
+
+        for pair in reversed(child_list):
+            parent = pair[0]
+            child_char = pair[1]
+            target = parent.children[child_char]
+
+            if target.children:
+                return
+            del parent.children[child_char]
+
+    def get_all_words(self) -> List[str]:
+        """
+        Retrieves a list of all words in the trie
+        """
+        result: List[str] = []
+        self._dfs(self.root, [], result)
+        return result
+
+    def _dfs(self, node: TrieNode, path: List[str], result: List[str]):
+        """
+        Helper method to traverse the trie
+        Args:
+            node (TrieNode): The node to traverse.
+            path (List[str]): The list of characters building the current word
+            result (List[str]): The resulting word
+        """
+        if node.is_end:
+            result.append("".join(path))
+
+        # sort keys if you want alphabetical order
+        sorted_keys = sorted(node.children.keys())
+        for char in sorted_keys:
+            path.append(char)  # choose
+            self._dfs(node.children[char], path, result)  # explore
+            path.pop()  # backtrack
+
+    def delete(self, word: str) -> bool:
+        """Deletes a word from the trie. Returns True if successful."""
+
+        def _delete_helper(node: TrieNode, w: str, depth: int) -> bool:
+            if depth == len(w):
+                if not node.is_end:
+                    return False  # Word doesn't exist
+                node.is_end = False
+                return len(node.children) == 0  # Delete node if it has no children
+
+            char = w[depth]
+            if char not in node.children:
+                return False
+
+            should_delete_child = _delete_helper(node.children[char], w, depth + 1)
+
+            if should_delete_child:
+                del node.children[char]
+                # Return True if this node is not the end of another word and has no other children
+                return not node.is_end and len(node.children) == 0
+            return False
+
+        return _delete_helper(self.root, word, 0)

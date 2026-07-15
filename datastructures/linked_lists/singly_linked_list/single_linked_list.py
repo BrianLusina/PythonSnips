@@ -4,6 +4,10 @@ from datastructures.stacks.dynamic import DynamicSizeStack as Stack
 from datastructures.linked_lists.singly_linked_list.node import SingleNode
 from datastructures.linked_lists import LinkedList, T, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
+from datastructures.linked_lists.singly_linked_list.single_linked_list_utils import (
+    reverse_list,
+    merge_and_weave,
+)
 
 
 class SinglyLinkedList(LinkedList):
@@ -90,7 +94,6 @@ class SinglyLinkedList(LinkedList):
             current = current.next
 
     def insert_before_node(self, next_key: Any, data: T):
-
         pass
 
     def get_nth_node(self, position: int) -> Union[SingleNode, None]:
@@ -148,6 +151,11 @@ class SinglyLinkedList(LinkedList):
 
     def delete_node(self, single_node: SingleNode):
         if not self.head:
+            return
+
+        # if the node we are deleting is the head node
+        if self.head == single_node:
+            self.head = self.head.next
             return
 
         current_node = self.head
@@ -367,8 +375,8 @@ class SinglyLinkedList(LinkedList):
 
     def reverse_between(self, left: int, right: int) -> Optional[SingleNode]:
         """
-        Reverse linked list between left & right node positions.
-        This uses the iterative link reversal to reverse a sublist of the linked list between the left & the right
+        Reverse linked list between left and right node positions.
+        This uses the iterative link reversal to reverse a sublist of the linked list between the left and the right
         positions in the linked list.
         This is based on the assumption that we don't have access to the data in the nodes themselves,
         but instead we can change the links between the nodes.
@@ -438,7 +446,7 @@ class SinglyLinkedList(LinkedList):
 
     def reverse_between_with_dummy(self, left: int, right: int) -> Optional[SingleNode]:
         """
-        Reverse linked list between left & right node positions using a dummy node
+        Reverse linked list between left and right node positions using a dummy node
 
         Algorithm steps:
         - We initialize a dummy node, which will be helpful in scenarios where the reversal of the sublist starts from
@@ -483,21 +491,26 @@ class SinglyLinkedList(LinkedList):
         if left == right:
             return self.head
 
+        # Create a dummy node to handle edge case when left = 1
         dummy = SingleNode(0)
         dummy.next = self.head
         prev = dummy
 
+        # Move prev to the node just before the left position
         for _ in range(left - 1):
             prev = prev.next
 
+        # Current node is the node at left position
         curr = prev.next
 
+        # Reverse the portion of the linked list between left and right positions
         for _ in range(right - left):
             next_node = curr.next
             curr.next = next_node.next
             next_node.next = prev.next
             prev.next = next_node
 
+        # Return the updated head of the linked list
         return dummy.next
 
     def unshift(self, node_: SingleNode) -> SingleNode:
@@ -534,11 +547,26 @@ class SinglyLinkedList(LinkedList):
     def display_forward(self):
         pass
 
-    def contains_cycle(self):
+    def contains_cycle(self) -> bool:
         """
-        Check if the SinglyLinkedList contains a cycle
-        :return:
+        Check if the SinglyLinkedList contains a cycle, This uses floyd's cycle detection algorithm to check if a linked
+        list contains a cycle. A cycle in a linked list is determined by a node in the linked list having its next pointer
+        point to a node in the same liked list.
+
+        Complexity Analysis:
+        n is the number of nodes in the linked list
+
+        Time: O(n), we traverse the nodes in the linked list iteratively, at the worst case, we traverse all the nodes
+        in the linked list until we reach the end of the linked list
+
+        Space: O(1) as there is no extra space used other than the pointers used to traverse the linked list.
+
+        Returns:
+            bool: True if the linked list contains a cycle, False otherwise
         """
+        if not self.head or not self.head.next:
+            return False
+
         fast_runner = self.head
         slow_runner = self.head
 
@@ -647,11 +675,8 @@ class SinglyLinkedList(LinkedList):
             bool: True if the linked list is a palindrome, false otherwise.
         """
 
-        if not self.head:
-            return False
-
-        # A LinkedList with 1 Node is a Palindrome
-        if not self.head.next:
+        # an empty linked list is consided a palindrome
+        if not self.head or not self.head.next:
             return True
 
         current = self.head
@@ -674,17 +699,18 @@ class SinglyLinkedList(LinkedList):
 
     def is_palindrome_2(self) -> bool:
         """
-        Checks to see if a Linked list is a Palindrome.
-        Returns True if it is, false otherwise.
+        Checks to see if a Linked list is a Palindrome. Returns True if it is, false otherwise.
+
         Uses two pointers approach to check if a linked list is a palindrome. First it finds the middle of the list using
         two pointers a fast and a slow pointer and then reverses the second half of the list. Once the second half is
         reversed, it compares the first half and the reversed second half
+
+        This modifies the linked list
 
         Complexity:
         We assume that n is the number of nodes in the linked list
 
         Time O(n): we traverse the linked list to check for the palindrome property.
-
         Space O(1): No extra space is used when traversing the linked list
 
         Returns:
@@ -695,20 +721,12 @@ class SinglyLinkedList(LinkedList):
         if not self.head or not self.head.next:
             return True
 
-        # find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
+        # Find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
         # the linked list and the slow pointer will be at the middle of the linked list
-        slow, fast = self.head, self.head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
+        middle_node = self.middle_node()
 
         # reverse the second half of the list
-        prev = None
-        while slow:
-            nxt = slow.next
-            slow.next = prev
-            prev = slow
-            slow = nxt
+        prev = self.reverse_list(middle_node)
 
         # now prev is the head of the reversed second half
         # compare the first half and the reversed second half
@@ -721,7 +739,7 @@ class SinglyLinkedList(LinkedList):
 
         return True
 
-    def pairwise_swap(self) -> Optional[SingleNode]:
+    def pairwise_swap_with_modification(self) -> Optional[SingleNode]:
         """
         Swaps nodes in pairs.
         However, this swaps the values of the nodes in pairs and not the pointers
@@ -751,7 +769,7 @@ class SinglyLinkedList(LinkedList):
         # at this point, the linked list has been swapped in pairs
         return self.head
 
-    def pairwise_swap_two(self) -> Optional[SingleNode]:
+    def pairwise_swap(self) -> Optional[SingleNode]:
         """
         Swaps nodes in pairs without swapping the values in the nodes.
 
@@ -762,20 +780,32 @@ class SinglyLinkedList(LinkedList):
         if not self.head:
             return self.head
 
-        start = SingleNode(None)
-        start.next = self.head
-        self.head = start
+        # Create a dummy node with a value of None
+        dummy_node = SingleNode(None)
+        # This dummy node acts as the prev_node for the head node
+        # of the list and hence stores pointer to the head node
+        dummy_node.next = self.head
+        prev_node = dummy_node
 
-        while self.head.next and self.head.next.next:
-            temp = self.head.next.next
+        # While the head node and the next node exist
+        while self.head and self.head.next:
+            # nodes to be swapped
+            first_node = self.head
+            second_node = self.head.next
 
-            self.head.next.next = temp.next
-            temp.next = self.head.next
+            # perform swapping of nodes
+            # i. Set the previous node's next node to be the second node
+            prev_node.next = second_node
+            # ii. Set the first node's next node to be the second node's next node
+            first_node.next = second_node.next
+            # iii. Set the second node's next node to be the first node
+            second_node.next = first_node
 
-            self.head.next = temp
-            self.head = self.head.next.next
+            # re-initialise the head and the previous node for next swap
+            prev_node = first_node
+            self.head = first_node.next
 
-        return start.next
+        return dummy_node.next
 
     def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> SingleNode:
         a, b = self.head, self.head
@@ -898,11 +928,9 @@ class SinglyLinkedList(LinkedList):
     def reverse_groups(self, k: int) -> Optional[SingleNode]:
         """
         Reverses every k groups of a linked list and returns the new head node.
-        @param k: number of groups in the linked list to reverse
-        @return: new head node
         """
 
-        def reverse_list(head_node: SingleNode) -> SingleNode:
+        def reverse_list_helper(head_node: SingleNode) -> SingleNode:
             # track previous node, so we can point our next pointer to it
             previous = None
             # track node to loop through
@@ -924,25 +952,22 @@ class SinglyLinkedList(LinkedList):
             # return the new tail of the k-group which is our head
             return head_node
 
-        if k <= 1:
+        if k <= 1 or not self.head:
             return self.head
 
-        if self.head is None:
-            return None
-
-        # dummy node to simplify return
-        dummy = SingleNode(None, self.head)
+        # sentinel node to simplify return
+        dummy_head = SingleNode(None, self.head)
 
         # tail of previous k-group to fix our linked list pointers
-        tail = dummy
+        tail = dummy_head
 
-        # set a tracking node, tracking_node, to cycle through linked list and a head of current linked list,
+        # set a tracking node, to cycle through the linked list and a head of current linked list,
         # current_head
         tracking_node, current_head = self.head, self.head
 
         # while tracking node is tracking a node and hasn't reached end
         while tracking_node:
-            # set count of current group, we start with a head so count = 1
+            # set count of the current group, we start with a head so count = 1
             count = 1
             # loop until count reaches k nodes
             while count < k:
@@ -953,19 +978,19 @@ class SinglyLinkedList(LinkedList):
                     count += 1
                 else:
                     # reached end without enough nodes, return early
-                    return dummy.next
+                    return dummy_head.next
 
             # only perform below if we have enough nodes inside k-group and haven't reached end. node is currently at the
             # tail of the k-group after reversal it will be the head of the k-group
             if tracking_node:
                 # track head of the next k group
-                nxt = tracking_node.next if tracking_node else None
+                nxt = tracking_node.next
 
                 # sever the list so we can reverse it
                 tracking_node.next = None
 
                 # reverse list, which will return new tail
-                new_tail = reverse_list(current_head)
+                new_tail = reverse_list_helper(current_head)
 
                 # re-attach our new tail back to the remaining linked list
                 new_tail.next = nxt
@@ -979,10 +1004,40 @@ class SinglyLinkedList(LinkedList):
                 tracking_node, current_head = nxt, nxt
 
         # return head
-        return dummy.next
+        return dummy_head.next
 
     def remove_tail(self):
         pass
+
+    def reorder_list(self) -> Optional[SingleNode]:
+        """
+        Reorders the linked list in place.
+        Returns:
+            head node of reversed linked list
+        """
+        # return early if there is no head node
+        if self.head is None:
+            return None
+
+        # first split the linked list into two halves. To do this without knowing the length of the linked list beforehand
+        # we must first find the middle node. This uses the slow and fast pointer approach
+        middle_node = self.middle_node()
+
+        # Store the second half head node
+        second_half_head = middle_node.next
+        # cut the connection between the first half and the second half
+        middle_node.next = None
+
+        # Now, we need to reverse the second half of the linked list in place
+        # The reversal step involves taking the second half of the linked list and reversing it in place
+        # for example, if the linked list is 1 -> 2 -> 3 -> 4 -> 5, the second half is 3 -> 4 -> 5
+        # after reversing, it becomes 5 -> 4 -> 3
+        reversed_second_half = self.reverse_list(second_half_head)
+
+        # now we can merge and weave the first half and the reversed second half
+        reordered_list = merge_and_weave(self.head, reversed_second_half)
+
+        return reordered_list
 
     def kth_to_last_node(self, k: int) -> Optional[SingleNode]:
         """

@@ -1,6 +1,9 @@
 import unittest
-from . import merge_two_sorted_lists, merge_k_lists
-from ..singly_linked_list import SinglyLinkedList
+from datastructures.linked_lists.mergeklinkedlists import (
+    merge_two_sorted_lists,
+    merge_k_lists,
+)
+from datastructures.linked_lists.singly_linked_list import SinglyLinkedList
 
 
 class MergeSortedLinkedListsTestCase(unittest.TestCase):

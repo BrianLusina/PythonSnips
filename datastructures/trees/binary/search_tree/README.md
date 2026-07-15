@@ -300,3 +300,180 @@ When the traversal hits the rightmost node, the stack will hold half of the n to
 so our worst case space cost is O(n).
 
 Bonus What if the input tree has duplicate values?
+
+---
+
+## Inorder Successor in BST
+
+You are given the root node of a binary search tree and a specific node p. Your task is to return the inorder successor 
+of this p node. If there is no inorder successor of the given node, return NULL.
+
+> Note: The inorder successor of p is the node with the smallest value greater than p.data in the binary search tree.
+
+**Constraints**
+
+- The tree contains nodes in the range [1, 500]
+- −10^4 ≤ `Node.data` ≤ 10^4 
+- All Nodes will have unique values. 
+- `p` should exist in the tree.
+
+### Examples
+
+![Example 1](./images/examples/inorder_successor_in_bst_example_1.png)
+![Example 2](./images/examples/inorder_successor_in_bst_example_2.png)
+![Example 3](./images/examples/inorder_successor_in_bst_example_3.png)
+
+## Solution
+
+To solve this problem, we will use the depth-first search pattern because it allows us to perform an inorder traversal 
+of the tree, which is necessary to find the inorder successor of a given node. 
+The properties of the BST allow us to make an efficient search by discarding half of the tree at each step. We start 
+from the root node and compare the value of the current node with p. It helps us decide whether to move to the left or 
+right subtree. If p is greater than or equal to the current node’s value, we move to the right subtree, as the in-order 
+successor must be in the right subtree or above the current node. Otherwise, we explore the left subtree to find a 
+potentially smaller successor. This way, we efficiently find the inorder successor of the given node. 
+
+Let’s go through the algorithm to see how we will reach the solution:
+
+- Initialize a variable successor to NULL. It stores the potential inorder successor as we traverse the tree. 
+- Traverse the tree starting from the root, and for each node, compare the values of p and root:
+  - If the value of p is greater than or equal to the value of the root, the inorder successor must be in the right 
+    subtree or higher up in the tree. We move to the right subtree by setting root = root.right. 
+  - Otherwise, we update the successor to the current node, as this node is a potential in-order successor. Then, move 
+    to the left subtree by setting root = root.left.
+
+- After the loop ends, we return the successor. This contains the inoder successor of the given node.
+
+> Note: If there was no in-order successor of the given node, the successor will remain NULL.
+
+![Solution 1](./images/solutions/inorder_successor_in_bst_solution_1.png)
+![Solution 2](./images/solutions/inorder_successor_in_bst_solution_2.png)
+![Solution 3](./images/solutions/inorder_successor_in_bst_solution_3.png)
+![Solution 4](./images/solutions/inorder_successor_in_bst_solution_4.png)
+![Solution 5](./images/solutions/inorder_successor_in_bst_solution_5.png)
+![Solution 6](./images/solutions/inorder_successor_in_bst_solution_6.png)
+![Solution 7](./images/solutions/inorder_successor_in_bst_solution_7.png)
+
+### Time Complexity
+
+The time complexity of this solution is O(n) in the worst-case scenario where the given tree is skewed. However, for a 
+balanced binary search tree, it will be O(logn).
+
+### Space Complexity
+
+The space complexity of the solution is O(1) because we don’t use any additional space.
+
+---
+
+## Is Valid Binary Search Tree
+
+Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+A tree is a BST if the following conditions are met:
+
+Every node on the left subtree has a value less than the value of the current node.
+Every node on the right subtree has a value greater than the value of the current node.
+The left and right subtrees must also be valid BSTs.
+
+### Examples
+
+![Example Valid BST 1](./images/examples/is_valid_bst_example_1.png)
+
+Input: [2,1,4]
+Output: True
+
+![Example Valid BST 2](./images/examples/is_valid_bst_example_2.png)
+
+Input: [4,1,5,null,null,3,6]
+Output: False. 3 is the the root node's right subtree, but it is less than the root node 4.
+
+### Solution
+
+Let's think about what it means for a binary tree to be a valid binary search tree. For a binary tree to be a valid
+binary search tree, the following conditions must be true:
+
+- Every node in the left subtree of the root node must have a value less than the value of the root node.
+- Every node in the right subtree of the root node must have a value greater than the value of the root node.
+
+This definition is true for every subtree in the node.
+
+We can use that definition to validate a binary search tree by having parents pass values down to their children. Let's
+say we are validating this binary search tree:
+
+![Solution Valid BST 1](./images/solutions/is_valid_bst_solution_1.png)
+
+Based on the definition of a valid binary search tree, any value in the left subtree must be less than 4, but there is
+no limit to how small the values are.
+
+So we can pass max = 4 and min = -inf to the left child as a range of valid values of the left subtree.
+
+![Solution Valid BST 2](./images/solutions/is_valid_bst_solution_2.png)
+
+From there, for the subtree rooted at node 2:
+The max value of any node in the left subtree 2 is 2, and the min value is still -inf.
+
+![Solution Valid BST 3](./images/solutions/is_valid_bst_solution_3.png)
+
+Any value in the right subtree must be greater than the 2, but also less than 4 (the value of the root node). So we can
+pass max = 4 and min = 2 to the right child as a range of valid values of the right subtree.
+
+![Solution Valid BST 4](./images/solutions/is_valid_bst_solution_4.png)
+
+We can visit each node in the tree, and have the parent pass down the range of valid values to their children in this
+fashion. If the current node's value falls outside of the valid range, we can return False immediately. If we reach the
+empty subtree, this means that we have not yet found an invalid node yet, and we can return True.
+
+#### Return Values
+
+If I'm at a node in the tree, what values do I need from my left and right children to tell if the current subtree is a
+valid binary search tree?
+
+The current subtree is a valid binary search tree if:
+- The left subtree is a valid binary search tree.
+- The right subtree is a valid binary search tree.
+- And the value of the current node falls within the valid range.
+
+This tells me that each recursive call should return a boolean value indicating whether the current subtree is a valid
+binary search tree.
+
+#### Base Case
+
+An empty tree is a valid binary search tree.
+
+#### Extra Work
+
+The work that we need to do at each node is to check if the current node's value falls within the valid range. If it
+doesn't we can return False immediately.
+
+#### Helper Functions
+
+Since we need to pass the minimum and maximum values down to their children, we need to introduce a helper function to
+keep track of these values.
+
+This helper function will introduce two parameters, min_ and max_, which represent the range of values that the current
+subtree's nodes can take on. The helper function will return a boolean value indicating whether the current subtree is
+a valid binary search tree.
+
+When we recurse to our left child, we:
+- Pass the current node's value as the new max_ value, since the left child's value must be less than the current node's
+  value. min_ remains the same.
+
+When we recurse to our right child, we:
+- Pass the current node's value as the new min_ value, since the right child's value must be greater than the current
+  node's value. max_ remains the same.
+
+#### Global Variables
+
+The return value of the helper function matches the answer to the problem, so we don't need to use any global variables.
+
+#### Complexity Analysis
+
+##### Time Complexity
+
+O(N) where N is the number of nodes in the binary tree. We visit each node via each recursive call to dfs exactly once.
+Each recursive call does a constant amount of work.
+
+##### Space Complexity
+
+O(N) where N is the number of nodes in the binary tree, for the space that it takes to allocate each recursive call
+frame on the call stack.

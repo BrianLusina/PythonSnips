@@ -38,13 +38,19 @@ def remove_duplicates_from_sorted_list(nums: List[int]) -> int:
     if not nums:
         return 0
 
+    # i tracks the position where the next unique element should be placed.
+    # Start j from index 1 and iterate through the list to find unique elements.
     i, j = 0, 1
 
     while j < len(nums):
+        # If the current element is different from the last unique element found:
         if nums[i] != nums[j]:
+            # Move i forward to store the new unique element
             i += 1
+            # Place the unique element in its correct position
             nums[i] = nums[j]
         j += 1
+    # Return the count of unique elements (index i + 1 because i is zero-based)
     return i + 1
 
 

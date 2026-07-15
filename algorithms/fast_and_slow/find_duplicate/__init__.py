@@ -26,20 +26,38 @@ def find_duplicate_floyd_algo(numbers: List[int]) -> int:
 
     if len(numbers) <= 1:
         return -1
+    # Initialize the fast and slow pointers and make them point the first
+    # element of the array
+    slow = fast = numbers[0]
 
-    slow = numbers[0]
-    fast = numbers[numbers[0]]
-
-    while slow != fast:
+    # PART #1
+    # Traverse in array until the intersection point is found
+    while True:
+        # Move the slow pointer using the nums[slow] flow
         slow = numbers[slow]
+        # Move the fast pointer two times fast as the slow pointer using the
+        # nums[nums[fast]] flow
         fast = numbers[numbers[fast]]
+        # Break the loop when slow pointer becomes equal to the fast pointer, i.e.,
+        # if the intersection is found
+        if slow == fast:
+            break
 
-    fast = 0
+    # PART #2
+    # Make the slow pointer point the starting position of an array again, i.e.,
+    # start the slow pointer from starting position
+    slow = numbers[0]
+    # Traverse in the array until the slow pointer becomes equal to the
+    # fast pointer
     while fast != slow:
+        # Move the slow pointer using the nums[slow] flow
         slow = numbers[slow]
+        # Move the fast pointer slower than before, i.e., move the fast pointer
+        # using the nums[fast] flow
         fast = numbers[fast]
 
-    return slow
+    # Return the fast pointer as it points the duplicate number of the array
+    return fast
 
 
 def find_duplicate(numbers: List[int]) -> int:

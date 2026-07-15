@@ -1,5 +1,5 @@
 from heapq import heapify, heappop
-from typing import Any, List, Union
+from typing import Any, List, Union, Optional
 
 from datastructures.trees.heaps import Heap
 from datastructures.trees.heaps.node import HeapNode
@@ -93,7 +93,7 @@ class MinHeap(Heap):
 
         return array
 
-    def insert_data(self, data: Any):
+    def insert(self, data: Any):
         """
         Inserts a value into the heap
         """

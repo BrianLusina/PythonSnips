@@ -19,12 +19,16 @@ def generate_permutations(letters: str) -> List[str]:
         The total space complexity is given by the amount of space required by the strings we're constructing. Like the
         time complexity, the space complexity is also O(n * n!).
     """
+    result = []
+    word_len = len(letters)
+    used_letters = [False] * word_len
+    start = 0
+    path_taken = []
 
-    def dfs(
-        start_index: int, path: List[str], used: List[bool], res: List[str]
-    ) -> None:
-        if start_index == len(letters):
-            res.append("".join(path))
+    def dfs(start_index: int, path: List[str], used: List[bool]) -> None:
+        nonlocal result
+        if start_index == word_len:
+            result.append("".join(path))
             return
 
         for i, letter in enumerate(letters):
@@ -35,16 +39,43 @@ def generate_permutations(letters: str) -> List[str]:
             # add the letter to permutation, mark the letter as used
             path.append(letter)
             used[i] = True
-            dfs(start_index + 1, path, used, res)
+            dfs(start_index + 1, path, used)
             # remove the letter from permutation, mark the letter as unused
             path.pop()
             used[i] = False
 
+    dfs(start, path_taken, used_letters)
+
+    return result
+
+
+def permute_word(word: str) -> List[str]:
     result = []
-    used_letters = [False] * len(letters)
-    start = 0
-    path_taken = []
+    word_len = len(word)
 
-    dfs(start, path_taken, used_letters, result)
+    def permute_str(letters: str, current_index):
+        nonlocal result
+        if current_index == word_len - 1:
+            result.append(letters)
+            return
 
+        for idx in range(current_index, word_len):
+            swapped_str = swap_char(letters, current_index, idx)
+            permute_str(swapped_str, current_index + 1)
+
+    def swap_char(letters: str, i: int, j: int) -> str:
+        """
+        Swaps ith and jth indexes of the given string
+        Args:
+            letters (str): letters to find permutations for
+            i (int): index of the first letter
+            j (int): index of the second letter
+        Returns:
+            str: string with the letters at the ith and jth position swapped
+        """
+        swap_index = list(letters)
+        swap_index[i], swap_index[j] = swap_index[j], swap_index[i]
+        return "".join(swap_index)
+
+    permute_str(word, 0)
     return result

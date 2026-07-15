@@ -1,16 +1,15 @@
 from typing import Optional
-from datastructures.trees.binary.tree import BinaryTreeNode, T
+from datastructures.trees.binary.node import BinaryTreeNode, T
 
 
 class HeapNode(BinaryTreeNode):
     """
-    Represents a Heap node in a Heap datastructure. Heap nodes have either a left or right child so, they inherit from
+    Represents a Heap node in a Heap data structure. Heap nodes have either a left or a right child, so they inherit from
     a Binary Tree Node which exhibit similar properties.
     """
 
     def __init__(self, data: T, key: Optional[T] = None):
-        super().__init__(data)
-        self.key = key
+        super().__init__(data, key=key)
 
     @property
     def name(self):

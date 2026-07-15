@@ -39,7 +39,9 @@ and 4 respectively. It doesn't matter what values are set beyond the returned le
 
 Constraints:
 
-0 <= nums.length <= 3 * 104 -104 <= nums[i] <= 104 nums is sorted in ascending order.
+- 0 <= nums.length <= 3 * 10^4 
+- -10^4 <= nums[i] <= 10^4 
+- nums is sorted in ascending order.
 
 ---
 

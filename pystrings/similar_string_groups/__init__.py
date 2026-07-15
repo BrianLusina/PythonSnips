@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple
 from datastructures import DisjointSetUnion, UnionFind
 
 
@@ -54,8 +54,8 @@ def num_similar_groups(strs: List[str]) -> int:
 
 
 # Helper: Decide if two strings are similar
-def are_similar(s1, s2):
-    diff = []
+def are_similar(s1: str, s2: str):
+    diff: List[Tuple[str, str]] = []
     for a, b in zip(s1, s2):
         if a != b:
             diff.append((a, b))

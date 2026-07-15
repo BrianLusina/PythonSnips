@@ -1,5 +1,5 @@
 from typing import List
-from pystrings.palindrome import is_palindrome
+from algorithms.two_pointers.palindrome import is_palindrome
 
 
 def partition(s: str) -> List[List[str]]:

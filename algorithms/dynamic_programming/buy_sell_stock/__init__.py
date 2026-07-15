@@ -5,6 +5,13 @@ from typing import List
 def max_profit(prices: List[int]) -> int:
     """
     Find the maximum profit that can be made from buying and selling a stock once
+
+    Time complexity is O(n) as we iterate through each price to get the maximum profit
+    Space complexity is O(1) as no extra space is used
+    Args:
+        prices(list): list of prices
+    Returns:
+        int: maximum profit that can be made
     """
     if prices is None or len(prices) < 2:
         return 0
@@ -12,11 +19,9 @@ def max_profit(prices: List[int]) -> int:
     start_price = prices[0]
     current_max_profit = 0
 
-    for price in prices:
-        if price < start_price:
-            start_price = price
-        elif price - start_price > current_max_profit:
-            current_max_profit = price - start_price
+    for price in prices[1:]:
+        start_price = min(start_price, price)
+        current_max_profit = max(current_max_profit, price - start_price)
 
     return current_max_profit
 
@@ -31,10 +36,14 @@ def max_profit_two_pointers(prices: List[int]) -> int:
     if prices is None or len(prices) < 2:
         return 0
 
+    number_of_prices = len(prices)
+
+    left, right = 0, 1
+
     left, right = 0, 1
     current_max_profit = 0
 
-    while right < len(prices):
+    while right < number_of_prices:
         low = prices[left]
         high = prices[right]
 
@@ -69,12 +78,9 @@ def max_profit_2(prices: List[int]) -> int:
 
 
 def max_profit_3(prices: List[int]) -> int:
-    if not prices:
-        return 0
-
     number_of_prices = len(prices)
 
-    if number_of_prices < 2:
+    if not prices or number_of_prices < 2:
         return 0
 
     forward_profit, backward_profit = [0] * number_of_prices, [0] * number_of_prices
@@ -94,6 +100,38 @@ def max_profit_3(prices: List[int]) -> int:
         profit = max(profit, forward_profit[day] + backward_profit[day])
 
     return profit
+
+
+def max_profit_3_state_compressed_dp(prices: List[int]) -> int:
+    # t1_cost: minimum price paid for the first buy
+    # t2_cost: effective minimum price paid for the second buy
+    #          (price reduced by the profit from the first transaction)
+    t1_cost, t2_cost = float("inf"), float("inf")
+
+    # t1_profit: maximum profit achievable after the first sell
+    # t2_profit: maximum profit achievable after the second sell
+    t1_profit, t2_profit = 0, 0
+
+    # Iterate through each day's stock price
+    for price in prices:
+        # Update the minimum cost of the first buy
+        # We always want to buy at the lowest price seen so far
+        t1_cost = min(t1_cost, price)
+
+        # Update the maximum profit after the first sell
+        # Selling today gives profit = price - t1_cost
+        t1_profit = max(t1_profit, price - t1_cost)
+
+        # Update the effective cost of the second buy
+        # The profit from the first transaction reduces the net cost
+        t2_cost = min(t2_cost, price - t1_profit)
+
+        # Update the maximum profit after the second sell
+        # Selling today after the second buy gives total profit
+        t2_profit = max(t2_profit, price - t2_cost)
+
+    # t2_profit contains the maximum profit with at most two transactions
+    return t2_profit
 
 
 def max_profit_with_fee(prices: List[int], fee: int) -> int:

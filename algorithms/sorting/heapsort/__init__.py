@@ -1,12 +1,15 @@
-def left_child_index(parent_index):
+from typing import List, Any
+
+
+def left_child_index(parent_index: int) -> int:
     return parent_index * 2 + 1
 
 
-def right_child_index(parent_index):
+def right_child_index(parent_index: int) -> int:
     return parent_index * 2 + 2
 
 
-def bubble_down(heap, heap_length, index):
+def bubble_down(heap: List, heap_length: int, index: int):
     """
     Restore a max heap where the value at index may be out of place
     """
@@ -37,7 +40,7 @@ def bubble_down(heap, heap_length, index):
             break
 
 
-def remove_max(heap, heap_length):
+def remove_max(heap: List, heap_length: int):
     """
     Remove and return the largest item from a heap
     Updates the heap in-place, maintaining validity
@@ -54,13 +57,37 @@ def remove_max(heap, heap_length):
     return max_value
 
 
-def heapify(the_list):
+def heapify(the_list: List[Any]):
     # bubble down from the leaf nodes up to the top
     for index in range(len(the_list) - 1, -1, -1):
         bubble_down(the_list, len(the_list), index)
 
 
-def heapsort(the_list: list):
+def heapify_2(the_list: List[Any], n: int, i: int):
+    # Assume the current index i is the largest
+    largest = i
+    # index of left child
+    left = 2 * i + 1
+    # index of right child
+    right = 2 * i + 2
+
+    # Check if the left child exists and is greater than the current largest
+    if left < n and the_list[left] > the_list[largest]:
+        largest = left
+
+    # Check if the right child exists and is greater than the current largest
+    if right < n and the_list[right] > the_list[largest]:
+        largest = right
+
+    # If the largest is not the root, swap and continue heapifying the affected subtree
+    if largest != i:
+        # swap
+        the_list[i], the_list[largest] = the_list[largest], the_list[i]
+        # recursively heapify the sub-tree
+        heapify_2(the_list, n, largest)
+
+
+def heapsort(the_list: List[Any]):
     heapify(the_list)
 
     heap_size = len(the_list)
@@ -73,3 +100,21 @@ def heapsort(the_list: list):
         # store the removed value at the end of the list,
         # after the entries used by the heap
         the_list[heap_size] = largest_size
+
+
+def heapsort_2(the_list: List[Any]) -> List[Any]:
+    n = len(the_list)
+    # Step 1: Build a max heap from the input array
+    # (Start from the last non-leaf node and heapify each one)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify_2(the_list, n, i)
+    # Step 2: Extract elements one by one from the heap
+    # Move the current root (largest element) to the end,
+    # then reduce the heap size and re-heapify the root
+    for i in range(n - 1, 0, -1):
+        # move current max to the end
+        the_list[0], the_list[i] = the_list[i], the_list[0]
+        # heapify reduced heap
+        heapify_2(the_list, i, 0)
+    # Return the sorted array (ascending order)
+    return the_list

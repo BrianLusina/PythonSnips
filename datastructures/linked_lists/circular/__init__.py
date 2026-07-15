@@ -1,7 +1,7 @@
-from typing import Optional, Any, Union, Tuple, Self, List
+from typing import Optional, Any, Union, Tuple, List
 
-from datastructures.linked_lists import LinkedList, Node, T
-from .node import CircularNode
+from datastructures.linked_lists import LinkedList, T
+from datastructures.linked_lists.circular.node import CircularNode
 
 
 class CircularLinkedList(LinkedList):
@@ -86,7 +86,7 @@ class CircularLinkedList(LinkedList):
     def shift(self):
         pass
 
-    def pop(self) -> Optional[Node]:
+    def pop(self) -> Optional[CircularNode]:
         pass
 
     def delete_node(self, node_: CircularNode):
@@ -183,7 +183,7 @@ class CircularLinkedList(LinkedList):
     def delete_nodes_by_key(self, key: T):
         pass
 
-    def delete_middle_node(self) -> Optional[Node]:
+    def delete_middle_node(self) -> Optional[CircularNode]:
         pass
 
     def display(self):
@@ -198,7 +198,7 @@ class CircularLinkedList(LinkedList):
     def alternate_split(self):
         pass
 
-    def split_list(self) -> Optional[Tuple[Self, Optional[Self]]]:
+    def split_list(self) -> Optional[Tuple[CircularNode, Optional[CircularNode]]]:
         """
         Splits a circular linked list into two halves and returns the two halves in a tuple. If the size is 0, i.e. no
         nodes are in this linked list, then it returns None. If the size is 1, then the first portion of the tuple, at
@@ -206,57 +206,77 @@ class CircularLinkedList(LinkedList):
         Returns:
             Tuple: tuple with two circular linked lists
         """
-        size = len(self)
-
-        if size == 0:
+        # If there is no head node, there is nothing more to do here
+        if not self.head:
             return None
-        if size == 1:
-            return self.head, None
 
-        mid = size // 2
-        count = 0
+        # Get the middle of the linked list
+        middle_node = self.middle_node()
 
-        previous: Optional[CircularNode] = None
-        current = self.head
+        # Set the head node to head_one and head_two will be the head node of the second linked list
+        head_one = self.head
+        head_two = middle_node.next
+        # Set the middle node's next pointer to cycle back to the head_one node
+        middle_node.next = head_one
 
-        while current and count < mid:
-            count += 1
-            previous = current
+        # Assign a pointer to the second head node and move it along the linked list as long as it's next pointer is not
+        # equal to the head node
+        current = head_two
+        while current.next is not self.head:
             current = current.next
 
-        previous.next = self.head
+        # Now since we are at the tail of the linked list, we assign the next pointer to point to the second head node
+        current.next = head_two
 
-        second_list = CircularLinkedList()
-        while current.next != self.head:
-            second_list.append(current.data)
-            current = current.next
+        # Now we have split the linked list into two halves.
+        return head_one, head_two
 
-        second_list.append(current.data)
+    def middle_node(self) -> Optional[CircularNode]:
+        """
+        Traverse the linked list to find the middle node. For a circular linked list, the tail node points back to the
+        head node, to prevent this from continuously looping, we have to break the cycle once the tail node's next pointer
+        points back to the head node
+        Time Complexity: O(n) where n is the number of nodes in the linked list
+        Space Complexity: O(1) as constant extra space is needed
+        Return:
+            CircularNode: middle node of linked list
+        """
+        if not self.head:
+            return None
 
-        return self, second_list
+        fast_pointer, slow_pointer = self.head, self.head
+
+        while (
+            fast_pointer.next is not self.head
+            and fast_pointer.next.next is not self.head
+        ):
+            slow_pointer = slow_pointer.next
+            fast_pointer = fast_pointer.next.next
+
+        return slow_pointer
 
     def is_palindrome(self) -> bool:
         pass
 
-    def pairwise_swap(self) -> Node:
+    def pairwise_swap(self) -> CircularNode:
         pass
 
-    def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> Node:
+    def swap_nodes_at_kth_and_k_plus_1(self, k: int) -> CircularNode:
         pass
 
-    def move_to_front(self, node: Node):
+    def move_to_front(self, node: CircularNode):
         pass
 
     def move_tail_to_head(self):
         pass
 
-    def partition(self, data: Any) -> Union[Node, None]:
+    def partition(self, data: Any) -> Union[CircularNode, None]:
         pass
 
     def remove_tail(self):
         pass
 
-    def remove_duplicates(self) -> Optional[Node]:
+    def remove_duplicates(self) -> Optional[CircularNode]:
         pass
 
     def rotate(self, k: int):
@@ -265,7 +285,7 @@ class CircularLinkedList(LinkedList):
     def reverse_groups(self, k: int):
         pass
 
-    def odd_even_list(self) -> Optional[Node]:
+    def odd_even_list(self) -> Optional[CircularNode]:
         pass
 
     def maximum_pair_sum(self) -> int:

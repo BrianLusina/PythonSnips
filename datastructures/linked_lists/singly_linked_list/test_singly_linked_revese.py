@@ -4,6 +4,34 @@ from parameterized import parameterized
 from datastructures.linked_lists.singly_linked_list.single_linked_list import (
     SinglyLinkedList,
 )
+from datastructures.linked_lists.singly_linked_list.single_linked_list_utils import (
+    reverse_list,
+)
+
+TEST_CASES = [
+    ([1, 2, 3, 4, 5, 4, 3, 2, 1], 1, 9, [1, 2, 3, 4, 5, 4, 3, 2, 1]),
+    ([1, 2, 3, 4, 5], 2, 4, [1, 4, 3, 2, 5]),
+    ([1, 2, 3, 4, 5], 1, 5, [5, 4, 3, 2, 1]),
+    (
+        [103, 7, 10, -9, 105, 67, 31, 63],
+        1,
+        8,
+        [63, 31, 67, 105, -9, 10, 7, 103],
+    ),
+    (
+        [103, 7, 10, -9, 105, 67, 31, 63],
+        1,
+        8,
+        [63, 31, 67, 105, -9, 10, 7, 103],
+    ),
+    ([-499, 399, -299, 199, -99, 9], 3, 5, [-499, 399, -99, 199, -299, 9]),
+    ([7, -9, 2, -10, 1, -8, 6], 2, 5, [7, 1, -10, 2, -9, -8, 6]),
+    ([6, 8, 7], 1, 2, [8, 6, 7]),
+    ([9, 0, 8, 2], 2, 4, [9, 2, 8, 0]),
+    ([7, 4, 6, 1, 5, 8], 2, 5, [7, 5, 1, 6, 4, 8]),
+    ([3, 7, 12, 2, 5, 1], 3, 6, [3, 7, 1, 5, 2, 12]),
+    ([3, 6, 7, 4, 2], 2, 4, [3, 4, 7, 6, 2]),
+]
 
 
 class ReverseBetweenSinglyLinkedListTestCase(unittest.TestCase):
@@ -11,8 +39,9 @@ class ReverseBetweenSinglyLinkedListTestCase(unittest.TestCase):
         """should return none for an empty linked list when attempting to reverse"""
         linked_list = SinglyLinkedList()
 
-        actual = linked_list.reverse_between(0, 1)
-        self.assertIsNone(actual)
+        with self.assertRaises(ValueError):
+            actual = linked_list.reverse_between(0, 1)
+            self.assertIsNone(actual)
 
     def test_raises_exception_for_invalid_arguments(self):
         """should raise an exception for invalid left and right arguments"""
@@ -21,32 +50,7 @@ class ReverseBetweenSinglyLinkedListTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             linked_list.reverse_between(10, 9)
 
-    @parameterized.expand(
-        [
-            ([1, 2, 3, 4, 5, 4, 3, 2, 1], 1, 9, [1, 2, 3, 4, 5, 4, 3, 2, 1]),
-            ([1, 2, 3, 4, 5], 2, 4, [1, 4, 3, 2, 5]),
-            ([1, 2, 3, 4, 5], 1, 5, [5, 4, 3, 2, 1]),
-            (
-                [103, 7, 10, -9, 105, 67, 31, 63],
-                1,
-                8,
-                [63, 31, 67, 105, -9, 10, 7, 103],
-            ),
-            (
-                [103, 7, 10, -9, 105, 67, 31, 63],
-                1,
-                8,
-                [63, 31, 67, 105, -9, 10, 7, 103],
-            ),
-            ([-499, 399, -299, 199, -99, 9], 3, 5, [-499, 399, -99, 199, -299, 9]),
-            ([7, -9, 2, -10, 1, -8, 6], 2, 5, [7, 1, -10, 2, -9, -8, 6]),
-            ([6, 8, 7], 1, 2, [8, 6, 7]),
-            ([9, 0, 8, 2], 2, 4, [9, 2, 8, 0]),
-            ([7, 4, 6, 1, 5, 8], 2, 5, [7, 5, 1, 6, 4, 8]),
-            ([3, 7, 12, 2, 5, 1], 3, 6, [3, 7, 1, 5, 2, 12]),
-            ([3, 6, 7, 4, 2], 2, 4, [3, 4, 7, 6, 2]),
-        ]
-    )
+    @parameterized.expand(TEST_CASES)
     def test_reverse_between(
         self, data: List[int], left: int, right: int, expected: List[int]
     ):
@@ -70,32 +74,7 @@ class ReverseBetweenSinglyLinkedListTestCase(unittest.TestCase):
         # perform assertion
         self.assertEqual(expected, actual_list)
 
-    @parameterized.expand(
-        [
-            ([1, 2, 3, 4, 5, 4, 3, 2, 1], 1, 9, [1, 2, 3, 4, 5, 4, 3, 2, 1]),
-            ([1, 2, 3, 4, 5], 2, 4, [1, 4, 3, 2, 5]),
-            ([1, 2, 3, 4, 5], 1, 5, [5, 4, 3, 2, 1]),
-            (
-                [103, 7, 10, -9, 105, 67, 31, 63],
-                1,
-                8,
-                [63, 31, 67, 105, -9, 10, 7, 103],
-            ),
-            (
-                [103, 7, 10, -9, 105, 67, 31, 63],
-                1,
-                8,
-                [63, 31, 67, 105, -9, 10, 7, 103],
-            ),
-            ([-499, 399, -299, 199, -99, 9], 3, 5, [-499, 399, -99, 199, -299, 9]),
-            ([7, -9, 2, -10, 1, -8, 6], 2, 5, [7, 1, -10, 2, -9, -8, 6]),
-            ([6, 8, 7], 1, 2, [8, 6, 7]),
-            ([9, 0, 8, 2], 2, 4, [9, 2, 8, 0]),
-            ([7, 4, 6, 1, 5, 8], 2, 5, [7, 5, 1, 6, 4, 8]),
-            ([3, 7, 12, 2, 5, 1], 3, 6, [3, 7, 1, 5, 2, 12]),
-            ([3, 6, 7, 4, 2], 2, 4, [3, 4, 7, 6, 2]),
-        ]
-    )
+    @parameterized.expand(TEST_CASES)
     def test_reverse_between_with_dummy(
         self, data: List[int], left: int, right: int, expected: List[int]
     ):
@@ -117,6 +96,42 @@ class ReverseBetweenSinglyLinkedListTestCase(unittest.TestCase):
             curr = curr.next
 
         # perform assertion
+        self.assertEqual(expected, actual_list)
+
+    def test_reverse_linked_list(self):
+        data = [1, 2, 3]
+        expected = [3, 2, 1]
+        linked_list = SinglyLinkedList()
+        # add the data to the linked list
+        for d in data:
+            linked_list.append(d)
+
+        actual = linked_list.reverse()
+
+        actual_list: List[int] = []
+        curr = actual
+        while curr:
+            actual_list.append(curr.data)
+            curr = curr.next
+
+        self.assertEqual(expected, actual_list)
+
+    def test_reverse_linked_list_static(self):
+        data = [1, 2, 3]
+        expected = [3, 2, 1]
+        linked_list = SinglyLinkedList()
+        # add the data to the linked list
+        for d in data:
+            linked_list.append(d)
+
+        actual = reverse_list(linked_list.head)
+
+        actual_list: List[int] = []
+        curr = actual
+        while curr:
+            actual_list.append(curr.data)
+            curr = curr.next
+
         self.assertEqual(expected, actual_list)
 
 

@@ -1,205 +1,46 @@
 import unittest
-
+from typing import List, Any
+from parameterized import parameterized
 import pytest
 
-from . import SinglyLinkedList
+from datastructures.linked_lists.singly_linked_list import SinglyLinkedList
+
+IS_LINKED_LIST_PALINDROME_TEST_CASES = [
+    (["r", "a", "c", "e", "c", "a", "r"], True),
+    ([2, 4, 6, 4, 2], True),
+    ([0, 3, 5, 5, 0], False),
+    ([9, 7, 4, 4, 7, 9], True),
+    ([1, 2, 3, 2, 1], True),
+    ([4, 7, 9, 5, 4], False),
+    ([2, 3, 5, 5, 3, 2], True),
+    ([6, 1, 0, 5, 1, 6], False),
+    ([3, 6, 9, 8, 4, 8, 9, 6, 3], True),
+    ([1, 2], False),
+    ([1, 2, 3, 4, 5], False),
+]
 
 
 class LinkedListIsPalindromeTestCase(unittest.TestCase):
-    def test_1(self):
-        """should return true for ["r", "a", "c", "e", "c", "a", "r"]"""
+    @parameterized.expand(IS_LINKED_LIST_PALINDROME_TEST_CASES)
+    def test_is_palindrome_using_stack(self, data: List[Any], expected: bool):
+        """Tests to check if a linked list is a palindrome using a stack approach"""
         linked_list = SinglyLinkedList()
-        data = ["r", "a", "c", "e", "c", "a", "r"]
         for d in data:
             linked_list.append(d)
 
         actual = linked_list.is_palindrome()
-        self.assertTrue(actual)
-
-    def test_2(self):
-        """should return true for [2, 4, 6, 4, 2]"""
-        linked_list = SinglyLinkedList()
-        data = [2, 4, 6, 4, 2]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertTrue(actual)
-
-    def test_3(self):
-        """should return true for [0, 3, 5, 5, 0]"""
-        linked_list = SinglyLinkedList()
-        data = [0, 3, 5, 5, 0]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertFalse(actual)
-
-    def test_4(self):
-        """should return true for [9, 7, 4, 4, 7, 9]"""
-        linked_list = SinglyLinkedList()
-        data = [9, 7, 4, 4, 7, 9]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertTrue(actual)
-
-    def test_5(self):
-        """should return true for [1,2,3,2,1]"""
-        linked_list = SinglyLinkedList()
-        data = [1, 2, 3, 2, 1]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertTrue(actual)
-
-    def test_6(self):
-        """should return true for [4,7,9,5,4]"""
-        linked_list = SinglyLinkedList()
-        data = [4, 7, 9, 5, 4]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertFalse(actual)
-
-    def test_7(self):
-        """should return true for [2,3,5,5,3,2]"""
-        linked_list = SinglyLinkedList()
-        data = [2, 3, 5, 5, 3, 2]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertTrue(actual)
-
-    def test_8(self):
-        """should return true for [6,1,0,5,1,6]"""
-        linked_list = SinglyLinkedList()
-        data = [6, 1, 0, 5, 1, 6]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertFalse(actual)
-
-    def test_9(self):
-        """should return true for [3,6,9,8,4,8,9,6,3]"""
-        linked_list = SinglyLinkedList()
-        data = [3, 6, 9, 8, 4, 8, 9, 6, 3]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome()
-        self.assertTrue(actual)
-
-
-class LinkedListIsPalindromeV2TestCase(unittest.TestCase):
-    """
-    Tests to check if a linked list is a palindrome using fast and slow pointers approach
-    """
+        self.assertEqual(expected, actual)
 
     @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_1(self):
-        """should return true for ["r", "a", "c", "e", "c", "a", "r"]"""
+    @parameterized.expand(IS_LINKED_LIST_PALINDROME_TEST_CASES)
+    def test_is_palindrome_using_two_pointers(self, data: List[Any], expected: bool):
+        """Tests to check if a linked list is a palindrome using fast and slow pointers approach"""
         linked_list = SinglyLinkedList()
-        data = ["r", "a", "c", "e", "c", "a", "r"]
         for d in data:
             linked_list.append(d)
 
         actual = linked_list.is_palindrome_2()
-        self.assertTrue(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_2(self):
-        """should return true for [2, 4, 6, 4, 2]"""
-        linked_list = SinglyLinkedList()
-        data = [2, 4, 6, 4, 2]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertTrue(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_3(self):
-        """should return true for [0, 3, 5, 5, 0]"""
-        linked_list = SinglyLinkedList()
-        data = [0, 3, 5, 5, 0]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertFalse(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_4(self):
-        """should return true for [9, 7, 4, 4, 7, 9]"""
-        linked_list = SinglyLinkedList()
-        data = [9, 7, 4, 4, 7, 9]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertTrue(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_5(self):
-        """should return true for [1,2,3,2,1]"""
-        linked_list = SinglyLinkedList()
-        data = [1, 2, 3, 2, 1]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertTrue(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_6(self):
-        """should return true for [4,7,9,5,4]"""
-        linked_list = SinglyLinkedList()
-        data = [4, 7, 9, 5, 4]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertFalse(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_7(self):
-        """should return true for [2,3,5,5,3,2]"""
-        linked_list = SinglyLinkedList()
-        data = [2, 3, 5, 5, 3, 2]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertTrue(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_8(self):
-        """should return false for [6,1,0,5,1,6]"""
-        linked_list = SinglyLinkedList()
-        data = [6, 1, 0, 5, 1, 6]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertFalse(actual)
-
-    @pytest.mark.linked_list_is_palindrome_fast_and_slow_pointer
-    def test_9(self):
-        """should return true for [3,6,9,8,4,8,9,6,3]"""
-        linked_list = SinglyLinkedList()
-        data = [3, 6, 9, 8, 4, 8, 9, 6, 3]
-        for d in data:
-            linked_list.append(d)
-
-        actual = linked_list.is_palindrome_2()
-        self.assertTrue(actual)
+        self.assertEqual(expected, actual)
 
 
 if __name__ == "__main__":

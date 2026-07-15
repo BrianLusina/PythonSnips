@@ -122,6 +122,15 @@ class DoublyLinkedList(LinkedList):
 
             current = current.next
 
+    # Inserts a node at the tail of the doubly linked list
+    def insert_at_tail(self, new_node: DoubleNode):
+        if self.tail is None:
+            self.head = self.tail = new_node
+        else:
+            self.tail.next = new_node
+            new_node.previous = self.tail
+            self.tail = new_node
+
     def pop(self) -> Optional[DoubleNode]:
         """
         Removes the last item from the list and returns it. This performs the operation in O(1) time as we already know
@@ -166,6 +175,25 @@ class DoublyLinkedList(LinkedList):
         # # return the last node
         # return current
 
+    def remove_head_node(self) -> Optional[DoubleNode]:
+        """
+        Removes the head node from the doubly linked list and returns it
+        """
+        if not self.head:
+            return None
+
+        head_node = self.head
+
+        next_node = self.head.next
+        self.head = next_node
+
+        if self.head is None:
+            self.tail = None
+        else:
+            self.head.previous = None
+
+        return head_node
+
     def shift(self) -> Optional[Any]:
         """
         Removes value at the front of the doubly linked list. If there is no head node, None is returned.
@@ -173,13 +201,13 @@ class DoublyLinkedList(LinkedList):
         """
         if self.head:
             data = self.head.data
-            new_head_ = self.head.next
+            new_head = self.head.next
 
             # set the previous pointer for the head node to None if one exists.
-            if new_head_:
-                new_head_.prev = None
+            if new_head:
+                new_head.previous = None
 
-            self.head = new_head_
+            self.head = new_head
             return data
         return None
 
@@ -246,7 +274,7 @@ class DoublyLinkedList(LinkedList):
         # position 0
         if position == 0:
             self.head = current.next
-            current.next.prev = self.head
+            current.next.previous = self.head
             return current
 
         while current is not None:
@@ -258,16 +286,20 @@ class DoublyLinkedList(LinkedList):
 
             current.data = current.next.data
             current.next = current.next.next
-            current.next.prev = current.previous
+            current.next.previous = current.previous
             return self.head
 
     def delete_node(self, double_node: DoubleNode):
+        if self.head is double_node and self.tail is double_node:
+            self.head = self.tail = None
+            return
+
         # if it is the first node
-        if double_node.key == self.head.key:
+        if double_node.key == self.head.key or self.head is double_node:
             # if there is a node after the head
             if self.head.next:
                 next_node = self.head.next
-                next_node.prev = None
+                next_node.previous = None
                 self.head = next_node
                 double_node.next = None
                 return
@@ -324,10 +356,30 @@ class DoublyLinkedList(LinkedList):
         # it is possible that this is the tail node, so, the current pointer, may not have a next set, we check if
         # there is a next and set that node to point to the previous
         if current.next:
-            current.next.prev = previous
+            current.next.previous = previous
         # set the current pointer to None to complete the deletion
         current = None
         return
+
+    def detach_node(self, n: DoubleNode) -> bool:
+        """
+        Detaches the given node from the doubly linked list
+        """
+        if self.head == n and self.tail == n:
+            self.head = self.tail = None
+            return True
+        elif self.head == n:
+            self.head = self.head.next
+            self.head.previous = None
+        elif self.tail == n:
+            self.tail = self.tail.previous
+            self.tail.next = None
+        else:
+            n.previous.next = n.next
+            n.next.previous = n.previous
+
+        n.previous = n.next = None
+        return False
 
     def reverse(self) -> Optional[DoubleNode]:
         """
@@ -348,7 +400,7 @@ class DoublyLinkedList(LinkedList):
           while cur:
             nxt = cur.next
             cur.next = prev
-            cur.prev = nxt
+            cur.previous = nxt
             prev = cur
             cur = nxt
           self.head = prev
@@ -424,7 +476,7 @@ class DoublyLinkedList(LinkedList):
             # less than the previous node value
             if current.data <= data <= next_node.data:
                 new_node = DoubleNode(data=data, previous=current, next_=next_node)
-                next_node.prev = new_node
+                next_node.previous = new_node
                 current.next_node = new_node
                 return node
 
@@ -616,7 +668,7 @@ class DoublyLinkedList(LinkedList):
         if self.head:
             prev = node.previous
             prev.next = node.next
-            node.next.prev = prev
+            node.next.previous = prev
             node.next = self.head
             self.head.previous = node
         else:

@@ -17,13 +17,13 @@ class SinglyLinkedListPairwiseTest(unittest.TestCase):
         linked_list.append(3)
         linked_list.append(4)
 
-        head = linked_list.pairwise_swap_two()
+        actual = linked_list.pairwise_swap()
 
         expected_head = SingleNode(
             2, next_=SingleNode(1, next_=SingleNode(4, next_=SingleNode(3)))
         )
 
-        self.assertEqual(head, expected_head)
+        self.assertEqual(expected_head, actual)
 
     def test_three(self):
         """7 -> 2 -> 1 should become 2 -> 7 -> 1"""
@@ -32,11 +32,11 @@ class SinglyLinkedListPairwiseTest(unittest.TestCase):
         linked_list.append(2)
         linked_list.append(1)
 
-        head = linked_list.pairwise_swap_two()
+        actual = linked_list.pairwise_swap()
 
         expected_head = SingleNode(2, next_=SingleNode(7, next_=SingleNode(1)))
 
-        self.assertEqual(head, expected_head)
+        self.assertEqual(expected_head, actual)
 
 
 if __name__ == "__main__":
