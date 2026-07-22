@@ -25,7 +25,7 @@ class HyperEdge(Edge, Generic[T]):
         return f"{super().__str__()}, Nodes: {self.nodes}"
 
     def edge_type(self) -> EdgeType:
-        return EdgeType.SELF
+        return EdgeType.HYPER_DIRECTED
 
     def vertices(self) -> List[Any]:
         return self.nodes

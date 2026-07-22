@@ -4,7 +4,6 @@ from datastructures.graphs import Edge, Graph, Vertex
 
 
 class UndirectedGraph(Graph):
-
     def __init__(self, edge_list: List[Edge]):
         super(UndirectedGraph, self).__init__(edge_list)
 

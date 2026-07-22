@@ -5,7 +5,6 @@ from datastructures.graphs.undirected.utils import closest_node
 
 
 class ClosestNodeToPathInTreeTestCase(unittest.TestCase):
-
     @parameterized.expand(
         [
             (3, [[0, 1], [1, 2]], [[0, 2, 1]], [1]),
