@@ -193,8 +193,6 @@
       * [Test Valid Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_path/test_valid_path.py)
     * Valid Tree
       * [Test Graph Valid Tree](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/valid_tree/test_graph_valid_tree.py)
-    * Frog Position After T Seconds
-      * [Test Frog Position After T Seconds](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/graphs/frog_position_after_t_seconds/test_frog_position_after_t_seconds.py)
   * Greedy
     * Assign Cookies
       * [Test Assign Cookies](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/greedy/assign_cookies/test_assign_cookies.py)
@@ -318,6 +316,8 @@
       * [Test Is Valid Sudoku](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/isvalidsudoku/test_is_valid_sudoku.py)
     * Rotting Oranges
       * [Test Rotting Oranges](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/rotting_oranges/test_rotting_oranges.py)
+    * Solve Sudoku
+      * [Test Solve Sudoku](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/solve_sudoku/test_solve_sudoku.py)
     * Transpose
       * [Test Transpose](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/transpose/test_transpose.py)
       * [Test Transpose Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/matrix/transpose/test_transpose_matrix.py)
@@ -444,6 +444,8 @@
       * [Test Remove Starts](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/removing_stars/test_remove_starts.py)
     * Reverse String
       * [Test Reverse String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/reverse_string/test_reverse_string.py)
+    * Simplify Path
+      * [Test Simplify Path](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/stack/simplify_path/test_simplify_path.py)
   * Strings
     * Caeser Cipher
       * [Test Caeser](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/strings/caeser_cipher/test_caeser.py)
@@ -611,10 +613,6 @@
     * [Default Dicts](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/default_dicts.py)
     * [Ordered Dict](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/dicts/ordered_dict.py)
   * Graphs
-    * [Edge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge.py)
-    * Undirected
-      * Clone Graph
-        * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/clone_graph/node.py)
     * Edge
       * [Edge](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge.py)
       * [Edge Directed](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/edge/edge_directed.py)
@@ -625,6 +623,8 @@
     * [Graph](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/graph.py)
     * [Test Vertex](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/test_vertex.py)
     * Undirected
+      * Clone Graph
+        * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/clone_graph/node.py)
       * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/test_utils.py)
       * [Undirected Graph](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/undirected_graph.py)
       * [Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/graphs/undirected/utils.py)
@@ -716,6 +716,12 @@
   * Sparse Vector
     * [Test Sparse Vector](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/sparse_vector/test_sparse_vector.py)
   * Stacks
+    * Freqstack
+      * [Freq Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/freqstack/freq_stack.py)
+      * [Max Freq Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/freqstack/max_freq_stack.py)
+      * [Min Freq Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/freqstack/min_freq_stack.py)
+      * [Test Max Freq Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/freqstack/test_max_freq_stack.py)
+      * [Test Min Freq Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/freqstack/test_min_freq_stack.py)
     * Maxstack
       * [Test Max Stack](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/stacks/maxstack/test_max_stack.py)
     * Minstack
@@ -747,14 +753,16 @@
         * [Test Binary Search Tree Search](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_search.py)
         * [Test Binary Search Tree Valid](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/search_tree/test_binary_search_tree_valid.py)
       * [Test Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/test_utils.py)
+      * Threaded
+        * [Test Threaded Bst Inorder](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/threaded/test_threaded_bst_inorder.py)
+        * [Threaded Binary Search Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/threaded/threaded_binary_search_tree.py)
       * Tree
         * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
         * [Binary Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree_utils.py)
-        * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
+        * [Test Binary Tree Inorder Traversal](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_inorder_traversal.py)
         * [Test Binary Tree Invert Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_invert_tree.py)
-        * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Min Camera Cover](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_min_camera_cover.py)
         * [Test Binary Tree Serialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_serialize.py)
         * [Test Binary Tree Visible Nodes](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_visible_nodes.py)
@@ -780,6 +788,7 @@
     * Ternary
       * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/node.py)
       * [Test Ternary Tree Paths](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/ternary/test_ternary_tree_paths.py)
+    * [Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/tree.py)
     * Trie
       * Alphabet Trie
         * [Alphabet Trie](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/alphabet_trie/alphabet_trie.py)
@@ -793,6 +802,7 @@
       * Word Dictionary
         * [Test Word Dictionary](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/word_dictionary/test_word_dictionary.py)
         * [Word Dictionary Trie Node](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/trie/word_dictionary/word_dictionary_trie_node.py)
+    * [Types](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/types.py)
   * Tuples
     * [Named Tuples](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/tuples/named_tuples.py)
 

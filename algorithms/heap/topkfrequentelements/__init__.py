@@ -1,7 +1,7 @@
 import random
 from collections import Counter
 from typing import List
-
+from heapq import heappop, heappush
 from datastructures.trees.heaps.binary.min_heap import MinHeap
 
 
@@ -29,6 +29,30 @@ def top_k_frequent_with_min_heap(nums: List[int], k: int) -> List[int]:
         ans.append(a[1])
 
     return ans
+
+
+def top_k_frequent_with_min_heap_2(arr: List[int], k: int) -> List[int]:
+    # find the frequency of each number
+    num_frequency_map = {}
+    for num in arr:
+        num_frequency_map[num] = num_frequency_map.get(num, 0) + 1
+    top_k_elements = []
+
+    # go through all numbers of the num_frequency_map
+    # and push them in the top_k_elements, which will have
+    # top k frequent numbers. If the heap size is more than k,
+    # we remove the smallest(top) number
+    for num, frequency in num_frequency_map.items():
+        heappush(top_k_elements, (frequency, num))
+        if len(top_k_elements) > k:
+            heappop(top_k_elements)
+
+    # create a list of top k numbers
+    top_numbers = []
+    while top_k_elements:
+        top_numbers.append(heappop(top_k_elements)[1])
+
+    return top_numbers
 
 
 def top_k_frequent_with_quick_select(nums: List[int], k: int) -> List[int]:
