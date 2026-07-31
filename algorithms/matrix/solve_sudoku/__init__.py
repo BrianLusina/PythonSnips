@@ -82,6 +82,7 @@ def solve_sudoku(board: List[List[str]]) -> None:
     # Start solving from the first empty cell
     backtrack(0)
 
+
 def solve_sudoku_2(board: List[List[str]]) -> None:
     """
     Solves a Sudoku puzzle using backtracking.
@@ -109,7 +110,11 @@ def solve_sudoku_2(board: List[List[str]]) -> None:
         invalid_entries = row_entries + col_entries + subox_entries
 
         # Return all possible numbers
-        return [e for e in ['1', '2', '3', '4', '5', '6', '7', '8', '9'] if e not in invalid_entries]
+        return [
+            e
+            for e in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            if e not in invalid_entries
+        ]
 
     def solve_sudoku_rec(i, j):
         # All rows have been traversed representing the board has been completely filled
@@ -121,7 +126,7 @@ def solve_sudoku_2(board: List[List[str]]) -> None:
             return solve_sudoku_rec(i + 1, 0)
 
         # Continue to the next cell if the current cell is already fill
-        if board[i][j] != '.':
+        if board[i][j] != ".":
             return solve_sudoku_rec(i, j + 1)
 
         # Find all possible numbers for the empty cell
@@ -132,7 +137,7 @@ def solve_sudoku_2(board: List[List[str]]) -> None:
             board[i][j] = n
             if solve_sudoku_rec(i, j):
                 return True
-            board[i][j] = '.'
+            board[i][j] = "."
 
         # Backtrack
         return False
