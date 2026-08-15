@@ -19,6 +19,6 @@ jobs:
     name: Ruff Check
     uses: SanctumLabs/ci-workflows/.github/workflows/python-lint-ruff.yml@main
     with:
-      command: check
+      ruff-args: check
       python-version: ${{ matrix.python-version }}
       packager: poetry
