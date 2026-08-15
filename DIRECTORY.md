@@ -262,6 +262,8 @@
       * [Test Top K Largest Elements](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/topklargest/test_top_k_largest_elements.py)
     * Total Cost Hire K Workers
       * [Test Total Cost Hire K Workers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/total_cost_hire_k_workers/test_total_cost_hire_k_workers.py)
+    * Trapping Rain Water Ii
+      * [Test Trapping Rain Water Ii](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/heap/trapping_rain_water_ii/test_trapping_rain_water_ii.py)
   * Huffman
     * [Decoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/decoding.py)
     * [Encoding](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/huffman/encoding.py)
@@ -459,6 +461,8 @@
   * Trie
     * Index Pairs Of A String
       * [Test Index Pairs Of A String](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/index_pairs_of_a_string/test_index_pairs_of_a_string.py)
+    * Kth Smallest In Lexicographic Order
+      * [Test Kth Smallest In Lexicographic Order](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/kth_smallest_in_lexicographic_order/test_kth_smallest_in_lexicographic_order.py)
     * Longest Word With Prefixes
       * [Test Longest Word With Prefixes](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/trie/longest_word_with_prefixes/test_longest_word_with_prefixes.py)
     * Replace Words
@@ -810,6 +814,10 @@
   * [Debug Sample](https://github.com/BrianLusina/PythonSnips/blob/master/debugging_tools/debug_sample.py)
 
 ## Design Patterns
+  * All O One
+    * [All One](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/all_o_one/all_one.py)
+    * [Node](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/all_o_one/node.py)
+    * [Test All O One](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/all_o_one/test_all_o_one.py)
   * Behavioral
     * Chain Of Responsibility
       * Animals
@@ -1086,6 +1094,8 @@
     * [Test Mini Max Sum](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/mini_max_sum/test_mini_max_sum.py)
   * Multiply 5
     * [Test Multiply 5](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/multiply_5/test_multiply_5.py)
+  * My Pow
+    * [Test My Pow](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/my_pow/test_my_pow.py)
   * Perfect Square
     * [Test Perfect Squares](https://github.com/BrianLusina/PythonSnips/blob/master/pymath/perfect_square/test_perfect_squares.py)
   * Power Of I
