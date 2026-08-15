@@ -24,7 +24,7 @@ def find_middle_node(head: Optional[Node]) -> Optional[Node]:
 def has_cycle(
     head: Optional[Node], func: Optional[Callable[[Node, Node], Any]] = None
 ) -> bool:
-    f"""
+    """
     Checks if a given linked list has a cycle if a head node is provided. A cycle is when a linked list node can be
     reached again after traversing the entire linked list
     Args:

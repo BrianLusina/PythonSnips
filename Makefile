@@ -51,6 +51,10 @@ format-ruff: ## Runs formatting with ruff
 fix-ruff: ## Runs check with ruff & fixes files
 	poetry run ruff check --fix .
 
+.PHONY: check-ruff
+check-ruff: ## Runs check with ruff
+	poetry run ruff check .
+
 .PHONY: lint-flake8
 lint-flake8: ## lints project using flake8
 	poetry run pre-commit run -a flake8

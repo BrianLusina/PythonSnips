@@ -1,7 +1,6 @@
 import unittest
 
 from datastructures.trees.binary.tree import BinaryTree
-from datastructures.trees.binary.node import BinaryTreeNode
 
 
 class BinaryTreeCreateTreeTestCases(unittest.TestCase):

@@ -5,7 +5,6 @@ from datastructures.linked_lists.singly_linked_list.node import SingleNode
 from datastructures.linked_lists import LinkedList, T, Node
 from datastructures.linked_lists.exceptions import EmptyLinkedList
 from datastructures.linked_lists.singly_linked_list.single_linked_list_utils import (
-    reverse_list,
     merge_and_weave,
 )
 
