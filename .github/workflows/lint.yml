@@ -1,8 +1,11 @@
 name: Lint
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - '**'
+  pull_request:
+    types: [ opened, synchronize, reopened ]
 
 permissions:
   contents: read

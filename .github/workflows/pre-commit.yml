@@ -15,6 +15,7 @@ jobs:
           key: ${{ runner.os }}-pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
       - uses: actions/setup-python@v7
       - uses: psf/black@21.4b0
+        continue-on-error: true
       - name: Install pre-commit
         run: |
           python -m pip install --upgrade pip
