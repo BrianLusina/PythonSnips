@@ -1,8 +1,6 @@
 from typing import Any, List, Optional
 
-from algorithms.sorting.heapsort import heapsort, heapify, right_child_index
 from datastructures.trees.heaps import ArrayBasedHeap
-from datastructures.trees.heaps.utils import has_smaller_child
 
 
 class MinArrayBasedHeap(ArrayBasedHeap):

@@ -1,4 +1,4 @@
-from typing import Dict, Callable, Awaitable, Any
+from typing import Dict, Callable, Awaitable
 from design_patterns.event_stream.event_type import EventType
 from design_patterns.event_stream.message_context import MessageContext
 from design_patterns.event_stream.handlers.handlers import (

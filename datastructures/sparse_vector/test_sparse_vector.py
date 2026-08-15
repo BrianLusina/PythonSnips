@@ -1,6 +1,5 @@
 import unittest
-from typing import List
-from parameterized import parameterized, parameterized_class
+from parameterized import parameterized_class
 from datastructures.sparse_vector import SparseVector
 
 SPARSE_VECTOR_TEST_CASES = [([1, 0, 0, 2, 3], [0, 3, 0, 4, 0], 8)]

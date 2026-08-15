@@ -1,4 +1,4 @@
-from typing import Any, Optional, Generic, TypeVar
+from typing import Any, Optional, Generic
 from abc import ABCMeta
 from datastructures.linked_lists.types import T
 

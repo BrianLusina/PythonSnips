@@ -1,8 +1,11 @@
 name: Lint
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - '**'
+  pull_request:
+    types: [ opened, synchronize, reopened ]
 
 permissions:
   contents: read
@@ -12,8 +15,8 @@ jobs:
   lint-ruff:
     strategy:
       matrix:
-        python-version: [ '3.12' ]
-    name: Pylint
+        python-version: [ '3.14' ]
+    name: Ruff Check
     uses: SanctumLabs/ci-workflows/.github/workflows/python-lint-ruff.yml@main
     with:
       command: check
