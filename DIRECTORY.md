@@ -371,7 +371,7 @@
         * [Test Plates Between Candles](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/plates_between_candles/test_plates_between_candles.py)
       * Rotated Sorted Array
         * [Test Search Rotated Sorted Array](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/rotated_sorted_array/test_search_rotated_sorted_array.py)
-      * [Search 2D Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/search_2d_matrix/README.md)
+      * Search 2D Matrix
         * [Test Search 2D Matrix](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/search_2d_matrix/test_search_2d_matrix.py)
       * Search Range
         * [Test Search Range](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/search/binary_search/search_range/test_search_range.py)
