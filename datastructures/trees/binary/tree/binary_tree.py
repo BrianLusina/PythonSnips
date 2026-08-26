@@ -1103,3 +1103,215 @@ class BinaryTree(Tree):
             )
 
         return sum_of_node_depths_helper(self.root, 0)
+
+    def boundary(self) -> List[Any]:
+        """
+        Traverses the tree retrieving the boundary of the tree consisting of four parts concatenated in order:
+
+        - The root node
+        - The left boundary (excluding leaves)
+        - All leaf nodes from left to right
+        - The right boundary in reverse order (excluding leaves)
+
+        The following traversal rules are followed
+
+        Left Boundary Rules:
+
+        - Start with the root's left child (if it exists)
+        - For each node in the left boundary:
+            - If it has a left child, the left child is the next boundary node
+            - If it has no left child but has a right child, the right child is the next boundary node
+            - Stop when reaching a leaf (the leaf is not part of the left boundary)
+
+        Right Boundary Rules:
+
+        - Similar to left boundary but mirror image - start with root's right child
+        - Prefer right children over left children
+        - The rightmost leaf is not included in the right boundary
+        - The final right boundary values should be reversed when added to the result
+
+        Leaves:
+
+        - Nodes with no children
+        - Collected from left to right across the entire tree
+        - The root is never considered a leaf
+
+        Special Cases:
+
+        - If the root has no left child, the left boundary is empty
+        - If the root has no right child, the right boundary is empty
+        - If the tree has only one node (the root), return just that node's value
+        """
+        if self.root is None:
+            return []
+
+        def collect_boundary(
+            boundary_nodes: List[Any],
+            node: Optional[BinaryTreeNode],
+            boundary_type: int,
+        ) -> None:
+            """
+            Collect boundary nodes based on type:
+            0 - Left boundary (excluding leaves)
+            1 - All leaf nodes
+            2 - Right boundary (excluding leaves)
+            """
+            if node is None:
+                return
+
+            # Check if current node is a leaf
+            is_leaf = node.left is None and node.right is None
+
+            if boundary_type == 0:  # Left boundary
+                # Add non-leaf nodes to left boundary
+                if not is_leaf:
+                    boundary_nodes.append(node.data)
+                    # Prefer left child, otherwise take right child
+                    if node.left:
+                        collect_boundary(boundary_nodes, node.left, boundary_type)
+                    else:
+                        collect_boundary(boundary_nodes, node.right, boundary_type)
+
+            elif boundary_type == 1:  # Leaf nodes
+                if is_leaf:
+                    # Add leaf nodes
+                    boundary_nodes.append(node.data)
+                else:
+                    # Traverse both subtrees to find leaves
+                    collect_boundary(boundary_nodes, node.left, boundary_type)
+                    collect_boundary(boundary_nodes, node.right, boundary_type)
+
+            else:  # boundary_type == 2, Right boundary
+                # Add non-leaf nodes to right boundary
+                if not is_leaf:
+                    boundary_nodes.append(node.data)
+                    # Prefer right child, otherwise take left child
+                    if node.right:
+                        collect_boundary(boundary_nodes, node.right, boundary_type)
+                    else:
+                        collect_boundary(boundary_nodes, node.left, boundary_type)
+
+        # Start with root node
+        result = [self.root.data]
+
+        # If root is a leaf, return just the root
+        if self.root.left is None and self.root.right is None:
+            return result
+
+        # Collect three parts of the boundary
+        left_boundary = []
+        leaf_nodes = []
+        right_boundary = []
+
+        # Collect left boundary (starting from root's left child)
+        collect_boundary(left_boundary, self.root.left, 0)
+
+        # Collect all leaves from entire tree
+        collect_boundary(leaf_nodes, self.root, 1)
+
+        # Collect right boundary (starting from root's right child)
+        collect_boundary(right_boundary, self.root.right, 2)
+
+        # Combine all parts: root + left boundary + leaves + reversed right boundary
+        result.extend(left_boundary)
+        result.extend(leaf_nodes)
+        result.extend(reversed(right_boundary))
+
+        return result
+
+    def boundary_iterative(self) -> List[Any]:
+        """
+        Traverses the tree retrieving the boundary of the tree consisting of four parts concatenated in order:
+
+        - The root node
+        - The left boundary (excluding leaves)
+        - All leaf nodes from left to right
+        - The right boundary in reverse order (excluding leaves)
+
+        The following traversal rules are followed
+
+        Left Boundary Rules:
+
+        - Start with the root's left child (if it exists)
+        - For each node in the left boundary:
+            - If it has a left child, the left child is the next boundary node
+            - If it has no left child but has a right child, the right child is the next boundary node
+            - Stop when reaching a leaf (the leaf is not part of the left boundary)
+
+        Right Boundary Rules:
+
+        - Similar to left boundary but mirror image - start with root's right child
+        - Prefer right children over left children
+        - The rightmost leaf is not included in the right boundary
+        - The final right boundary values should be reversed when added to the result
+
+        Leaves:
+
+        - Nodes with no children
+        - Collected from left to right across the entire tree
+        - The root is never considered a leaf
+
+        Special Cases:
+
+        - If the root has no left child, the left boundary is empty
+        - If the root has no right child, the right boundary is empty
+        - If the tree has only one node (the root), return just that node's value
+        """
+        if self.root is None:
+            return []
+
+        # Helper: check if a node is a leaf (no children)
+        def is_leaf(node: BinaryTreeNode) -> bool:
+            return node.left is None and node.right is None
+
+        # Helper: collect left boundary nodes (non-leaf, top to bottom)
+        def add_left_boundary(node: BinaryTreeNode, left_boundary: List[Any]) -> None:
+            cur = node.left
+            while cur:
+                # Add only non-leaf nodes to left boundary
+                if not is_leaf(cur):
+                    left_boundary.append(cur.data)
+                # Prefer left child, fallback to right child
+                if cur.left:
+                    cur = cur.left
+                else:
+                    cur = cur.right
+
+        # Helper: collect all leaves left to right via DFS
+        def add_leaves(node: Optional[BinaryTreeNode], leaves: List[Any]) -> None:
+            if node is None:
+                return
+            # If leaf, add to result
+            if is_leaf(node):
+                leaves.append(node.data)
+                return
+            # Recurse left then right
+            add_leaves(node.left, leaves)
+            add_leaves(node.right, leaves)
+
+        # Helper: collect right boundary nodes (non-leaf, bottom to top)
+        def add_right_boundary(node: BinaryTreeNode, right_boundary: List[Any]):
+            cur = node.right
+            temp = []
+            while cur:
+                # Add only non-leaf nodes to temp
+                if not is_leaf(cur):
+                    temp.append(cur.data)
+                # Prefer right child, fallback to left child
+                if cur.right:
+                    cur = cur.right
+                else:
+                    cur = cur.left
+            # Reverse temp and extend result (bottom to top)
+            right_boundary.extend(temp[::-1])
+
+        # Start result with root value (root is never a leaf here)
+        result = [self.root.data]
+
+        # Add left boundary, leaves, right boundary
+        add_left_boundary(self.root, result)
+        add_leaves(self.root.left, result)
+        add_leaves(self.root.right, result)
+        add_right_boundary(self.root, result)
+
+        return result

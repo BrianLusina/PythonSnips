@@ -142,3 +142,28 @@ each node exactly once, connecting the left and right children as it moves throu
 
 The space complexity of the solution is O(1) because the algorithm uses only a constant amount of extra space,
 specifically the pointers current and last, regardless of the size of the tree.
+
+---
+
+## Boundary of Binary Tree
+
+Given the root of a binary tree, return the values of its boundary in order.
+
+The boundary is formed by concatenating the following four parts:
+
+1. The root node itself (the root is never considered a leaf in this problem).
+2. The left boundary: the path of non-leaf nodes starting from the root’s left child, always preferring the left child
+   at each step, and falling back to the right child only when no left child exists. If the root has no left child, the
+   left boundary is empty.
+3. The leaves: all nodes with no children, ordered from left to right. The root is excluded even if it has no children.
+4. The right boundary (in reverse order): the path of non-leaf nodes starting from the root’s right child, always
+   preferring the right child at each step, and falling back to the left child only when no right child exists,
+   collected in reverse (bottom to top). If the root has no right child, the right boundary is empty.
+
+> Note: A leaf node is any node with no left or right child. The root is never treated as a leaf for this problem. The
+> leftmost and rightmost leaves are not included in the left or right boundaries respectively, only in the leaves section.
+
+### Constraints
+
+- `1 <= number of nodes <= 10^4`
+- `-1000 <= Node.val <= 10^3`
