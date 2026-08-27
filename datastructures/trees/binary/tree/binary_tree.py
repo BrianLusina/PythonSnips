@@ -1315,3 +1315,66 @@ class BinaryTree(Tree):
         add_right_boundary(self.root, result)
 
         return result
+
+    def min_depth_recursive(self) -> int:
+        """
+        Retrieves the minimum depth of the tree. The minimum depth is the number of nodes along the shortest path from
+        the root node to the nearest leaf node.
+        """
+        if self.root is None:
+            return 0
+
+        def min_depth_helper(node: BinaryTreeNode | None) -> int:
+            """
+            Recursive helper that traverses subtrees of the tree finding the minimum depth of each subtree
+            Args:
+                node(BinaryTreeNode): root node of subtree
+            Returns:
+                int: minimum depth of subtree from this root
+            """
+            if node is None:
+                return 0
+
+            # If left subtree is empty, recurse only on the right subtree
+            # We must continue to a leaf node, so we can't stop at a node with one child
+            if node.left is None:
+                return 1 + min_depth_helper(node.right)
+
+            # If right subtree is empty, recurs only on left subtree
+            if node.right is None:
+                return 1 + min_depth_helper(node.left)
+
+            # If both children exist, find minimum depth between left and right subtrees. Add 1 to account for the current node
+            return 1 + min(min_depth_helper(node.left), min_depth_helper(node.right))
+
+        return min_depth_helper(self.root)
+
+    def min_depth_iterative(self) -> int:
+        """
+        Retrieves the minimum depth of the tree. The minimum depth is the number of nodes along the shortest path from
+        the root node to the nearest leaf node.
+        """
+        # Return 0 for empty tree
+        if self.root is None:
+            return 0
+
+        # Initialize BFS queue with (node, depth)
+        queue = deque([(self.root, 1)])
+
+        # Level-order traversal to find first leaf
+        while queue:
+            # Pop next node in BFS order
+            node, depth = queue.popleft()
+            # If node is a leaf, this is the minimum depth
+            if node.left is None and node.right is None:
+                return depth
+
+            # Add left child with incremented depth
+            if node.left is not None:
+                queue.append((node.left, depth + 1))
+
+            # Add right child with incremented depth
+            if node.right is not None:
+                queue.append((node.right, depth + 1))
+
+        return 0
