@@ -233,6 +233,8 @@
       * [Test Jewels And Stones](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/jewels_and_stones/test_jewels_and_stones.py)
     * Maxlen Contiguous Binary Subarray
       * [Test Maxlen Contiguous Binary Subarray](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/maxlen_contiguous_binary_subarray/test_maxlen_contiguous_binary_subarray.py)
+    * Number Of Black Blocks
+      * [Test Count Black Blocks](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/number_of_black_blocks/test_count_black_blocks.py)
     * Powerful Integers
       * [Test Powerful Integers](https://github.com/BrianLusina/PythonSnips/blob/master/algorithms/hash_table/powerful_integers/test_powerful_integers.py)
     * Ransom Note
@@ -768,6 +770,7 @@
         * [Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree.py)
         * [Binary Tree Utils](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/binary_tree_utils.py)
         * [Test Binary Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree.py)
+        * [Test Binary Tree Boundary](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_boundary.py)
         * [Test Binary Tree Deserialize](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_deserialize.py)
         * [Test Binary Tree Inorder Traversal](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_inorder_traversal.py)
         * [Test Binary Tree Invert Tree](https://github.com/BrianLusina/PythonSnips/blob/master/datastructures/trees/binary/tree/test_binary_tree_invert_tree.py)
@@ -887,6 +890,10 @@
     * [State Transition Config](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/event_stream/state_transition_config.py)
   * Linked List
     * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/linked_list/test_linked_list.py)
+  * Model
+    * [Bigram Model](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/bigram_model.py)
+    * [Test Bigram Model](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/test_bigram_model.py)
+    * [Word Counter](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/word_counter.py)
   * Oop
     * Alien Game
       * [Central Corridor](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/oop/alien_game/central_corridor.py)
