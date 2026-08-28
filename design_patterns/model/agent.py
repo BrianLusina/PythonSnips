@@ -2,7 +2,7 @@ from design_patterns.model.bigram_model import BigramModel
 
 
 class Agent:
-    def __init__(self, name:str, style: str):
+    def __init__(self, name: str, style: str):
         self.name = name
         self.style = style
         self.premium = False
