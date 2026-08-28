@@ -1,4 +1,4 @@
-from typing import List, Optional, Any
+from typing import List, Optional, Any, Deque
 from datastructures.trees.binary.node import BinaryTreeNode
 from collections import deque
 from itertools import chain
@@ -17,7 +17,7 @@ def create_tree_from_nodes(nodes: List[Any]) -> Optional[BinaryTreeNode]:
 
     root = BinaryTreeNode(nodes[0])
 
-    queue = deque([root])
+    queue: Deque[BinaryTreeNode | None] = deque([root])
 
     i = 1
     while i < len(nodes):
