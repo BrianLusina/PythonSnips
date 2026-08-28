@@ -891,6 +891,7 @@
   * Linked List
     * [Test Linked List](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/linked_list/test_linked_list.py)
   * Model
+    * [Agent](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/agent.py)
     * [Bigram Model](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/bigram_model.py)
     * [Test Bigram Model](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/test_bigram_model.py)
     * [Word Counter](https://github.com/BrianLusina/PythonSnips/blob/master/design_patterns/model/word_counter.py)
