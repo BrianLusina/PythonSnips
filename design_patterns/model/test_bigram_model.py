@@ -25,7 +25,7 @@ class BigramModelTestCase(unittest.TestCase):
         self.assertEqual(True, False)  # add assertion here
 
     # @parameterized.expand(BIGRAM_MODEL_TRAIN_TEST_CASES, name_func=custom_test_name_func)
-    def test_predict_next_word(self):
+    def test_predict_next_word(wself):
         text = "hey my kitten my kitten and hey my kitten my deary"
         bigram_model = BigramModel()
         bigram_model.train(text)
