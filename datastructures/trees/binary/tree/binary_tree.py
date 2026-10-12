@@ -1,5 +1,5 @@
 import math
-from typing import Optional, List, Any, Generator, Dict, Iterator, Tuple
+from typing import Optional, List, Any, Generator, Dict, Iterator, Tuple, DefaultDict
 from collections import defaultdict, deque
 from itertools import chain
 
@@ -1378,3 +1378,87 @@ class BinaryTree(Tree):
                 queue.append((node.right, depth + 1))
 
         return 0
+
+    def vertical_traversal(self) -> list[list[Any]]:
+        """
+        Returns a list of lists representing the vertical traversal of the binary tree.
+        Each inner list contains the values of nodes at the same vertical level.
+        """
+
+        def dfs(root: BinaryTreeNode | None, depth: int, offset: int) -> None:
+            """
+            Depth-first search to populate the column_values dictionary recording node positions
+
+            Args:
+                root: The current node being processed
+                depth: The current depth(row) of the node in the tree
+                offset: The column offset of the node or horizontal distance from root(negative for left, positive for right)
+            """
+            if root is None:
+                return
+
+            # Store the node value along with its depth in the column_values dictionary
+            column_values[offset].append((depth, root.data))
+
+            # Traverse left and right subtrees
+            # column/offset decreases by 1 when traversing the left and increases by 1 when traversing the right
+            dfs(root.left, depth + 1, offset - 1)
+            dfs(root.right, depth + 1, offset + 1)
+
+        # Group nodes by their column offset. Each entry in the dictionary maps a column offset to a list of
+        # (depth, node_value)
+        column_values: DefaultDict[int, list[Tuple[int, Any]]] = defaultdict(list)
+
+        # Start DFS from root at depth of 0 and column offset of 0
+        dfs(self.root, 0, 0)
+
+        result = []
+
+        # Sort columns from leftmost to rightmost.
+        for column_index in sorted(column_values.keys()):
+            nodes_in_column = column_values[column_index]
+
+            # Sort nodes within the same column by their depth (top to bottom)
+            nodes_in_column.sort(key=lambda x: x[0])
+
+            # Extract only the node values (discarding depth information
+            result.append([node_value for depth, node_value in nodes_in_column])
+
+        return result
+
+    def vertical_traversal_bfs(self) -> list[list[Any]]:
+        """
+        Returns a list of lists representing the vertical traversal of the binary tree.
+        Each inner list contains the values of nodes at the same vertical level.
+        """
+        if not self.root:
+            return []
+
+        # map from column index to list of node values
+        column_map = defaultdict(list)
+
+        # Breadth-first search stores (node, column) pairs in a queue; root starts at column 0
+        queue = deque([(self.root, 0)])
+
+        # Track min and max column to extract results in order
+        min_col, max_col = 0, 0
+
+        while queue:
+            node, col = queue.popleft()
+
+            # Append current node's value to its column bucket
+            column_map[col].append(node.data)
+
+            # Update column range
+            min_col = min(min_col, col)
+            max_col = max(max_col, col)
+
+            # Enqueue left child with column decremented by 1
+            if node.left:
+                queue.append((node.left, col - 1))
+
+            # Enqueue right child with column incremented by 1
+            if node.right:
+                queue.append((node.right, col + 1))
+
+        return [column_map[i] for i in range(min_col, max_col + 1)]
