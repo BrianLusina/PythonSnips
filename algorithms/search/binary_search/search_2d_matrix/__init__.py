@@ -67,3 +67,62 @@ def search_matrix_2(matrix: List[List[int]], target: int) -> bool:
         return False
     row, col = divmod(first_true_index, num_cols)
     return matrix[row][col] == target
+
+
+def search_matrix_ii(matrix: List[List[int]], target: int) -> bool:
+    """
+    Search for a target value in a 2D matrix.
+    Each row is searched using binary search template.
+
+    Args:
+        matrix: 2D list of integers
+        target: Integer value to search for
+
+    Returns:
+        True if target is found, False otherwise
+    """
+    n = len(matrix[0])
+
+    # Iterate through each row in the matrix
+    for row in matrix:
+        left, right = 0, n - 1
+        first_true_index = -1
+
+        # Binary search to find first true index where row[mid] => target
+        while left <= right:
+            mid = (left + right) // 2
+            if row[mid] >= target:
+                first_true_index = mid
+                right = mid - 1
+            else:
+                left = mid + 1
+
+        # Check if first_true_index points to the target
+        if first_true_index != -1 and row[first_true_index] == target:
+            return True
+
+    return False
+
+
+def search_matrix_ii_2(matrix: list[list[int]], target: int):
+    # Start from top-right corner
+    row = 0
+    col = len(matrix[0]) - 1
+
+    # Move left/down to eliminate a row or column each step
+    while row < len(matrix) and col >= 0:
+        # Check current value
+        cur_val = matrix[row][col]
+
+        # Found target
+        if cur_val == target:
+            return True
+        # Too large, move left
+        if cur_val > target:
+            col -= 1
+        # Too small, move down
+        else:
+            row += 1
+
+    # Target not found
+    return False
